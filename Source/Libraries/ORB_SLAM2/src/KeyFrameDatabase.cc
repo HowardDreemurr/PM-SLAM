@@ -20,7 +20,7 @@
 
 #include "KeyFrameDatabase.h"
 
-#include "DBoW2/BowVector.h"
+// #include "DBoW2/BowVector.h"
 #include "KeyFrame.h"
 
 #include <mutex>
@@ -31,24 +31,27 @@ using namespace ::std;
 
 namespace ORB_SLAM2 {
 
-KeyFrameDatabase::KeyFrameDatabase(const ORBVocabulary &voc) : mpVoc(&voc) {
-  mvInvertedFile.resize(voc.size());
+KeyFrameDatabase::KeyFrameDatabase(const FbowVocabulary &voc) : mpVoc(&voc) {
+  // mvInvertedFile.resize(voc.size());
 }
 
 //TO-DO add Ftype
 void KeyFrameDatabase::add(KeyFrame *pKF, const int Ftype) {
   unique_lock<mutex> lock(mMutex);
 
-  for (DBoW2::BowVector::const_iterator vit = pKF->Channels[Ftype].mBowVec.begin(), vend = pKF->Channels[Ftype].mBowVec.end(); vit != vend; vit++)
-    mvInvertedFile[vit->first].push_back(pKF);
+  // for (fbow::fBow::const_iterator vit = pKF->Channels[Ftype].mBowVec.begin(), vend = pKF->Channels[Ftype].mBowVec.end(); vit != vend; vit++)
+  //   mvInvertedFile[vit->first].push_back(pKF);
+  for (auto const& kv : pKF->Channels[Ftype].mBowVec)
+        mInvertedFile[kv.first].push_back(pKF);
 }
 
+/*
 //TO-DO add Ftype
 void KeyFrameDatabase::erase(KeyFrame *pKF, const int Ftype) {
   unique_lock<mutex> lock(mMutex);
 
   // Erase elements in the Inverse File for the entry
-  for (DBoW2::BowVector::const_iterator vit = pKF->Channels[Ftype].mBowVec.begin(), vend = pKF->Channels[Ftype].mBowVec.end(); vit != vend; vit++) {
+  for (fbow::fBow::const_iterator vit = pKF->Channels[Ftype].mBowVec.begin(), vend = pKF->Channels[Ftype].mBowVec.end(); vit != vend; vit++) {
     // List of keyframes that share the word
     std::list<KeyFrame *> &lKFs = mvInvertedFile[vit->first];
 
@@ -60,10 +63,28 @@ void KeyFrameDatabase::erase(KeyFrame *pKF, const int Ftype) {
     }
   }
 }
+*/
+void KeyFrameDatabase::erase(KeyFrame* pKF, int Ftype)
+{
+    std::unique_lock<std::mutex> lock(mMutex);
 
+    for (auto const& kv : pKF->Channels[Ftype].mBowVec) {
+        auto& lst = mInvertedFile[kv.first];
+        lst.remove(pKF);
+    }
+}
+
+/*
 void KeyFrameDatabase::clear() {
   mvInvertedFile.clear();
   mvInvertedFile.resize(mpVoc->size());
+}
+*/
+void KeyFrameDatabase::clear()
+{
+    std::unique_lock<std::mutex> lock(mMutex);
+    for (auto &kv : mInvertedFile)
+        kv.second.clear();
 }
 
 std::vector<KeyFrame *> KeyFrameDatabase::DetectLoopCandidates(KeyFrame *pKF, float minScore, const int Ftype) {
@@ -74,8 +95,9 @@ std::vector<KeyFrame *> KeyFrameDatabase::DetectLoopCandidates(KeyFrame *pKF, fl
   {
     unique_lock<mutex> lock(mMutex);
 
-    for (DBoW2::BowVector::const_iterator vit = pKF->Channels[Ftype].mBowVec.begin(), vend = pKF->Channels[Ftype].mBowVec.end(); vit != vend; vit++) {
-      std::list<KeyFrame *> &lKFs = mvInvertedFile[vit->first];
+    for (fbow::fBow::const_iterator vit = pKF->Channels[Ftype].mBowVec.begin(), vend = pKF->Channels[Ftype].mBowVec.end(); vit != vend; vit++) {
+      // std::list<KeyFrame *> &lKFs = mvInvertedFile[vit->first];
+      auto& lKFs = mInvertedFile[vit->first];
 
       for (std::list<KeyFrame *>::iterator lit = lKFs.begin(), lend = lKFs.end(); lit != lend; lit++) {
         KeyFrame *pKFi = *lit;
@@ -179,8 +201,9 @@ std::vector<KeyFrame *> KeyFrameDatabase::DetectRelocalizationCandidates(Frame *
   {
     unique_lock<mutex> lock(mMutex);
 
-    for (DBoW2::BowVector::const_iterator vit = F->Channels[Ftype].mBowVec.begin(), vend = F->Channels[Ftype].mBowVec.end(); vit != vend; vit++) {
-      std::list<KeyFrame *> &lKFs = mvInvertedFile[vit->first];
+    for (fbow::fBow::const_iterator vit = F->Channels[Ftype].mBowVec.begin(), vend = F->Channels[Ftype].mBowVec.end(); vit != vend; vit++) {
+      // std::list<KeyFrame *> &lKFs = mvInvertedFile[vit->first];
+      auto& lKFs = mInvertedFile[vit->first];
 
       for (std::list<KeyFrame *>::iterator lit = lKFs.begin(), lend = lKFs.end(); lit != lend; lit++) {
         KeyFrame *pKFi = *lit;
