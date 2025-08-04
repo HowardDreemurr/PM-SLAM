@@ -65,9 +65,9 @@ System::System(const string &strVocFile, const string &strSettingsFile,
   }
 
   // Load ORB Vocabulary
-  cout << endl << "Loading ORB Vocabulary. This could take a while..." << endl;
+  cout << endl << "Loading FBoW Vocabulary. This could take a while..." << endl;
   clock_t tStart = clock();
-  mpVocabulary = new ORBVocabulary();
+  mpVocabulary = new FbowVocabulary();
 
   bool bVocLoad = false;
 
@@ -78,9 +78,9 @@ System::System(const string &strVocFile, const string &strSettingsFile,
 
   // Create the binary file name
   if (lastTxtInstance == string::npos) {
-    strBinaryVocFile = strVocFile + ".bin";
+    strBinaryVocFile = strVocFile + ".fbow";
   } else {
-    strBinaryVocFile = strVocFile.substr(0, lastTxtInstance) + ".bin";
+    strBinaryVocFile = strVocFile.substr(0, lastTxtInstance) + ".fbow";
   }
 
   // Check if the binary file exists.
@@ -89,19 +89,8 @@ System::System(const string &strVocFile, const string &strSettingsFile,
   // If the binary file exists, load it. If the file exists but won't load,
   // pretend it isn't there to force text file load and binary save
   if (binaryVocFileExists) {
-    cout << "Using the binary cache file" << endl;
-    bVocLoad = mpVocabulary->loadFromBinaryFile(strBinaryVocFile);
-    if (!bVocLoad) {
-      cout << "Binary cache file load failed; trying text version" << endl;
-      binaryVocFileExists = false;
-    }
-  }
-
-  // Load the text file if necessary - happens if either the binary file does
-  // not exist, or it can't be loaded
-  if (!bVocLoad) {
-    cout << "Using the text file. This could take a while..." << endl;
-    bVocLoad = mpVocabulary->loadFromTextFile(strVocFile);
+    cout << "Using the '.fbow' file." << endl;
+    bVocLoad = mpVocabulary->load(strBinaryVocFile);
   }
 
   if (!bVocLoad) {
@@ -110,17 +99,7 @@ System::System(const string &strVocFile, const string &strSettingsFile,
     exit(-1);
   }
 
-  // If we loaded the vocabulary and the binary version doesn't exist, write it
-  // out.
-
-  if (!binaryVocFileExists) {
-    cout << "Saving the binary cache to " << strBinaryVocFile << endl;
-    if (!mpVocabulary->saveToBinaryFile(strBinaryVocFile)) {
-      cerr << "Cannot save the binary cache file" << endl;
-    }
-  }
-
-  printf("Vocabulary loaded in %.2fs\n",
+  printf("Vocabulary loaded in %.6fs\n",
          (double)(clock() - tStart) / CLOCKS_PER_SEC);
   // Create KeyFrame Database
   mpKeyFrameDatabase = new KeyFrameDatabase(*mpVocabulary);

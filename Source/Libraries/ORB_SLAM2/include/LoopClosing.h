@@ -24,7 +24,7 @@
 #include "KeyFrame.h"
 #include "LocalMapping.h"
 #include "Map.h"
-#include "ORBVocabulary.h"
+#include "FbowVocabulary.h"
 #include "Tracking.h"
 
 #include "KeyFrameDatabase.h"
@@ -48,7 +48,7 @@ public:
       KeyFrameAndPose;
 
 public:
-  LoopClosing(Map *pMap, KeyFrameDatabase *pDB, ORBVocabulary *pVoc,
+  LoopClosing(Map *pMap, KeyFrameDatabase *pDB, FbowVocabulary *pVoc,
               const bool bFixScale);
 
   void SetTracker(Tracking *pTracker);
@@ -105,7 +105,7 @@ protected:
   Tracking *mpTracker;
 
   KeyFrameDatabase *mpKeyFrameDB;
-  ORBVocabulary *mpORBVocabulary;
+  FbowVocabulary *mpVocabulary;
 
   LocalMapping *mpLocalMapper;
 

@@ -31,7 +31,7 @@
 #include "LoopClosing.h"
 #include "Map.h"
 #include "MapDrawer.h"
-#include "ORBVocabulary.h"
+#include "FbowVocabulary.h"
 #include "Tracking.h"
 #include "Viewer.h"
 
@@ -133,7 +133,7 @@ private:
   eSensor mSensor;
 
   // ORB vocabulary used for place recognition and feature matching.
-  ORBVocabulary *mpVocabulary;
+  FbowVocabulary *mpVocabulary;
 
   // KeyFrame database for place recognition (relocalization and loop
   // detection).

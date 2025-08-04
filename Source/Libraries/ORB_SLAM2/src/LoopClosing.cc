@@ -35,10 +35,10 @@ using namespace ::std;
 
 namespace ORB_SLAM2 {
 
-LoopClosing::LoopClosing(Map *pMap, KeyFrameDatabase *pDB, ORBVocabulary *pVoc,
+LoopClosing::LoopClosing(Map *pMap, KeyFrameDatabase *pDB, FbowVocabulary *pVoc,
                          const bool bFixScale)
     : mbResetRequested(false), mbFinishRequested(false), mbFinished(true),
-      mpMap(pMap), mpKeyFrameDB(pDB), mpORBVocabulary(pVoc), mpMatchedKF(NULL),
+      mpMap(pMap), mpKeyFrameDB(pDB), mpVocabulary(pVoc), mpMatchedKF(NULL),
       mLastLoopKFid(0), mbRunningGBA(false), mbFinishedGBA(true),
       mbStopGBA(false), mpThreadGBA(NULL), mbFixScale(bFixScale),
       mnFullBAIdx(0) {
@@ -114,15 +114,15 @@ bool LoopClosing::DetectLoop() {
   // We will impose loop candidates to have a higher similarity than this
   const vector<KeyFrame *> vpConnectedKeyFrames =
       mpCurrentKF->GetVectorCovisibleKeyFrames();
-  const DBoW2::BowVector &CurrentBowVec = mpCurrentKF->mBowVec;
+  const fbow::fBow &CurrentBowVec = mpCurrentKF->mBowVec;
   float minScore = 1;
   for (size_t i = 0; i < vpConnectedKeyFrames.size(); i++) {
     KeyFrame *pKF = vpConnectedKeyFrames[i];
     if (pKF->isBad())
       continue;
-    const DBoW2::BowVector &BowVec = pKF->mBowVec;
+    const fbow::fBow &BowVec = pKF->mBowVec;
 
-    float score = mpORBVocabulary->score(CurrentBowVec, BowVec);
+    float score = mpVocabulary->score(CurrentBowVec, BowVec);
 
     if (score < minScore)
       minScore = score;

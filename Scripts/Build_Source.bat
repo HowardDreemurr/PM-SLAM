@@ -1,11 +1,3 @@
-rem Check if the vocabulary file exists. If not, uncompress it
-
-if not exist %~dp0\..\Source\Vocabulary\ORBvoc.txt (
-
-   powershell -command "Expand-Archive -Force %~dp0..\Source\Vocabulary\ORBvoc.txt.zip %~dp0..\Source\Vocabulary"
-
-)
-
 rem Build
 
 echo Build type %build_type%

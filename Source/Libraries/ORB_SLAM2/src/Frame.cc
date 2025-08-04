@@ -37,7 +37,7 @@ Frame::Frame() {}
 
 // Copy Constructor
 Frame::Frame(const Frame &frame)
-    : mpORBvocabulary(frame.mpORBvocabulary),
+    : mpVocabulary(frame.mpVocabulary),
       mpORBextractorLeft(frame.mpORBextractorLeft),
       mpORBextractorRight(frame.mpORBextractorRight),
       mTimeStamp(frame.mTimeStamp), mK(frame.mK.clone()),
@@ -65,9 +65,9 @@ Frame::Frame(const Frame &frame)
 
 Frame::Frame(const cv::Mat &imLeft, const cv::Mat &imRight,
              const double &timeStamp, ORBextractor *extractorLeft,
-             ORBextractor *extractorRight, ORBVocabulary *voc, cv::Mat &K,
+             ORBextractor *extractorRight, FbowVocabulary *voc, cv::Mat &K,
              cv::Mat &distCoef, const float &bf, const float &thDepth)
-    : mpORBvocabulary(voc), mpORBextractorLeft(extractorLeft),
+    : mpVocabulary(voc), mpORBextractorLeft(extractorLeft),
       mpORBextractorRight(extractorRight), mTimeStamp(timeStamp), mK(K.clone()),
       mDistCoef(distCoef.clone()), mbf(bf), mThDepth(thDepth),
       mpReferenceKF(static_cast<KeyFrame *>(NULL)) {
@@ -128,9 +128,9 @@ Frame::Frame(const cv::Mat &imLeft, const cv::Mat &imRight,
 
 Frame::Frame(const cv::Mat &imGray, const cv::Mat &imDepth,
              const double &timeStamp, ORBextractor *extractor,
-             ORBVocabulary *voc, cv::Mat &K, cv::Mat &distCoef, const float &bf,
+             FbowVocabulary *voc, cv::Mat &K, cv::Mat &distCoef, const float &bf,
              const float &thDepth)
-    : mpORBvocabulary(voc), mpORBextractorLeft(extractor),
+    : mpVocabulary(voc), mpORBextractorLeft(extractor),
       mpORBextractorRight(static_cast<ORBextractor *>(NULL)),
       mTimeStamp(timeStamp), mK(K.clone()), mDistCoef(distCoef.clone()),
       mbf(bf), mThDepth(thDepth) {
@@ -187,9 +187,9 @@ Frame::Frame(const cv::Mat &imGray, const cv::Mat &imDepth,
 }
 
 Frame::Frame(const cv::Mat &imGray, const double &timeStamp,
-             ORBextractor *extractor, ORBVocabulary *voc, cv::Mat &K,
+             ORBextractor *extractor, FbowVocabulary *voc, cv::Mat &K,
              cv::Mat &distCoef, const float &bf, const float &thDepth)
-    : mpORBvocabulary(voc), mpORBextractorLeft(extractor),
+    : mpVocabulary(voc), mpORBextractorLeft(extractor),
       mpORBextractorRight(static_cast<ORBextractor *>(NULL)),
       mTimeStamp(timeStamp), mK(K.clone()), mDistCoef(distCoef.clone()),
       mbf(bf), mThDepth(thDepth) {
@@ -411,8 +411,7 @@ bool Frame::PosInGrid(const cv::KeyPoint &kp, int &posX, int &posY) {
 
 void Frame::ComputeBoW() {
   if (mBowVec.empty()) {
-    vector<cv::Mat> vCurrentDesc = Converter::toDescriptorVector(mDescriptors);
-    mpORBvocabulary->transform(vCurrentDesc, mBowVec, mFeatVec, 4);
+    mpVocabulary->transform(mDescriptors, mBowVec, mFeatVec, 4);
   }
 }
 

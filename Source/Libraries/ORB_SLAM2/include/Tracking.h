@@ -32,7 +32,7 @@
 #include "LoopClosing.h"
 #include "Map.h"
 #include "MapDrawer.h"
-#include "ORBVocabulary.h"
+#include "FbowVocabulary.h"
 #include "ORBextractor.h"
 #include "System.h"
 #include "Viewer.h"
@@ -51,7 +51,7 @@ class System;
 class Tracking {
 
 public:
-  Tracking(System *pSys, ORBVocabulary *pVoc, FrameDrawer *pFrameDrawer,
+  Tracking(System *pSys, FbowVocabulary *pVoc, FrameDrawer *pFrameDrawer,
            MapDrawer *pMapDrawer, Map *pMap, KeyFrameDatabase *pKFDB,
            const std::string &strSettingPath, const int sensor);
 
@@ -162,7 +162,7 @@ protected:
   ORBextractor *mpIniORBextractor;
 
   // BoW
-  ORBVocabulary *mpORBVocabulary;
+  FbowVocabulary *mpVocabulary;
   KeyFrameDatabase *mpKeyFrameDB;
 
   // Initalization (only for monocular)

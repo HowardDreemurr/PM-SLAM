@@ -41,11 +41,11 @@ using namespace ::std;
 
 namespace ORB_SLAM2 {
 
-Tracking::Tracking(System *pSys, ORBVocabulary *pVoc, FrameDrawer *pFrameDrawer,
+Tracking::Tracking(System *pSys, FbowVocabulary *pVoc, FrameDrawer *pFrameDrawer,
                    MapDrawer *pMapDrawer, Map *pMap, KeyFrameDatabase *pKFDB,
                    const string &strSettingPath, const int sensor)
     : mState(NO_IMAGES_YET), mSensor(sensor), mbOnlyTracking(false),
-      mbVO(false), mpORBVocabulary(pVoc), mpKeyFrameDB(pKFDB),
+      mbVO(false), mpVocabulary(pVoc), mpKeyFrameDB(pKFDB),
       mpInitializer(static_cast<Initializer *>(NULL)), mpSystem(pSys),
       mpViewer(NULL), mpFrameDrawer(pFrameDrawer), mpMapDrawer(pMapDrawer),
       mpMap(pMap), mnLastRelocFrameId(0) {
@@ -183,7 +183,7 @@ cv::Mat Tracking::GrabImageStereo(const cv::Mat &imRectLeft,
 
   mCurrentFrame =
       Frame(mImGray, imGrayRight, timestamp, mpORBextractorLeft,
-            mpORBextractorRight, mpORBVocabulary, mK, mDistCoef, mbf, mThDepth);
+            mpORBextractorRight, mpVocabulary, mK, mDistCoef, mbf, mThDepth);
 
   Track();
 
@@ -211,7 +211,7 @@ cv::Mat Tracking::GrabImageRGBD(const cv::Mat &imRGB, const cv::Mat &imD,
     imDepth.convertTo(imDepth, CV_32F, mDepthMapFactor);
 
   mCurrentFrame = Frame(mImGray, imDepth, timestamp, mpORBextractorLeft,
-                        mpORBVocabulary, mK, mDistCoef, mbf, mThDepth);
+                        mpVocabulary, mK, mDistCoef, mbf, mThDepth);
 
   Track();
 
@@ -236,10 +236,10 @@ cv::Mat Tracking::GrabImageMonocular(const cv::Mat &im,
 
   if (mState == NOT_INITIALIZED || mState == NO_IMAGES_YET)
     mCurrentFrame = Frame(mImGray, timestamp, mpIniORBextractor,
-                          mpORBVocabulary, mK, mDistCoef, mbf, mThDepth);
+                          mpVocabulary, mK, mDistCoef, mbf, mThDepth);
   else
     mCurrentFrame = Frame(mImGray, timestamp, mpORBextractorLeft,
-                          mpORBVocabulary, mK, mDistCoef, mbf, mThDepth);
+                          mpVocabulary, mK, mDistCoef, mbf, mThDepth);
 
   Track();
 

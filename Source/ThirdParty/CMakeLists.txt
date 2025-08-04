@@ -73,19 +73,20 @@ ExternalProject_Add(DLib
   CMAKE_ARGS "${dlib_cmake_args}"
 )
 
-# DBow2
-set(dbow2_cmake_args ${common_cmake_args})
+# FBoW
+set(fbow_cmake_args ${common_cmake_args})
 
-list(APPEND dbow2_cmake_args
-  -DBUILD_Demo=OFF
-  )
+list(APPEND fbow_cmake_args
+        -DBUILD_TESTS=OFF
+        -DBUILD_UTILS=OFF
+)
 
-ExternalProject_Add(DBoW2
-  SOURCE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/DBoW2/DBoW2-local
-  BINARY_DIR ${CMAKE_CURRENT_BINARY_DIR}/DBoW2/DBoW2-local
-  INSTALL_DIR ${BUILD_INSTALL_PREFIX}
-  CMAKE_ARGS ${dbow2_cmake_args}
-  )
+ExternalProject_Add(FBoW
+        SOURCE_DIR  ${CMAKE_CURRENT_SOURCE_DIR}/FBoW/fbow
+        BINARY_DIR  ${CMAKE_CURRENT_BINARY_DIR}/FBoW/fbow
+        INSTALL_DIR ${BUILD_INSTALL_PREFIX}
+        CMAKE_ARGS  ${fbow_cmake_args}
+)
 
 # Pangolin; most of the configuration settings disable stuff we don't need
 set(pangolin_cmake_args ${common_cmake_args})

@@ -25,7 +25,7 @@
 #include <opencv2/core/core.hpp>
 #include <opencv2/features2d/features2d.hpp>
 
-#include "DBoW2/FeatureVector.h"
+#include <fbow.h>
 
 #include <stdint.h>
 
@@ -164,7 +164,7 @@ int ORBmatcher::SearchByBoW(KeyFrame *pKF, Frame &F,
 
   vpMapPointMatches = vector<MapPoint *>(F.N, static_cast<MapPoint *>(NULL));
 
-  const DBoW2::FeatureVector &vFeatVecKF = pKF->mFeatVec;
+  const fbow::fBow2 &vFeatVecKF = pKF->mFeatVec;
 
   int nmatches = 0;
 
@@ -175,10 +175,10 @@ int ORBmatcher::SearchByBoW(KeyFrame *pKF, Frame &F,
 
   // We perform the matching over ORB that belong to the same vocabulary node
   // (at a certain level)
-  DBoW2::FeatureVector::const_iterator KFit = vFeatVecKF.begin();
-  DBoW2::FeatureVector::const_iterator Fit = F.mFeatVec.begin();
-  DBoW2::FeatureVector::const_iterator KFend = vFeatVecKF.end();
-  DBoW2::FeatureVector::const_iterator Fend = F.mFeatVec.end();
+  fbow::fBow2::const_iterator KFit = vFeatVecKF.begin();
+  fbow::fBow2::const_iterator Fit = F.mFeatVec.begin();
+  fbow::fBow2::const_iterator KFend = vFeatVecKF.end();
+  fbow::fBow2::const_iterator Fend = F.mFeatVec.end();
 
   while (KFit != KFend && Fit != Fend) {
     if (KFit->first == Fit->first) {
@@ -494,12 +494,12 @@ int ORBmatcher::SearchForInitialization(Frame &F1, Frame &F2,
 int ORBmatcher::SearchByBoW(KeyFrame *pKF1, KeyFrame *pKF2,
                             vector<MapPoint *> &vpMatches12) {
   const vector<cv::KeyPoint> &vKeysUn1 = pKF1->mvKeysUn;
-  const DBoW2::FeatureVector &vFeatVec1 = pKF1->mFeatVec;
+  const fbow::fBow2 &vFeatVec1 = pKF1->mFeatVec;
   const vector<MapPoint *> vpMapPoints1 = pKF1->GetMapPointMatches();
   const cv::Mat &Descriptors1 = pKF1->mDescriptors;
 
   const vector<cv::KeyPoint> &vKeysUn2 = pKF2->mvKeysUn;
-  const DBoW2::FeatureVector &vFeatVec2 = pKF2->mFeatVec;
+  const fbow::fBow2 &vFeatVec2 = pKF2->mFeatVec;
   const vector<MapPoint *> vpMapPoints2 = pKF2->GetMapPointMatches();
   const cv::Mat &Descriptors2 = pKF2->mDescriptors;
 
@@ -515,10 +515,10 @@ int ORBmatcher::SearchByBoW(KeyFrame *pKF1, KeyFrame *pKF2,
 
   int nmatches = 0;
 
-  DBoW2::FeatureVector::const_iterator f1it = vFeatVec1.begin();
-  DBoW2::FeatureVector::const_iterator f2it = vFeatVec2.begin();
-  DBoW2::FeatureVector::const_iterator f1end = vFeatVec1.end();
-  DBoW2::FeatureVector::const_iterator f2end = vFeatVec2.end();
+  fbow::fBow2::const_iterator f1it = vFeatVec1.begin();
+  fbow::fBow2::const_iterator f2it = vFeatVec2.begin();
+  fbow::fBow2::const_iterator f1end = vFeatVec1.end();
+  fbow::fBow2::const_iterator f2end = vFeatVec2.end();
 
   while (f1it != f1end && f2it != f2end) {
     if (f1it->first == f2it->first) {
@@ -614,8 +614,8 @@ int ORBmatcher::SearchByBoW(KeyFrame *pKF1, KeyFrame *pKF2,
 int ORBmatcher::SearchForTriangulation(
     KeyFrame *pKF1, KeyFrame *pKF2, cv::Mat F12,
     vector<pair<size_t, size_t>> &vMatchedPairs, const bool bOnlyStereo) {
-  const DBoW2::FeatureVector &vFeatVec1 = pKF1->mFeatVec;
-  const DBoW2::FeatureVector &vFeatVec2 = pKF2->mFeatVec;
+  const fbow::fBow2 &vFeatVec1 = pKF1->mFeatVec;
+  const fbow::fBow2 &vFeatVec2 = pKF2->mFeatVec;
 
   // Compute epipole in second image
   cv::Mat Cw = pKF1->GetCameraCenter();
@@ -640,10 +640,10 @@ int ORBmatcher::SearchForTriangulation(
 
   const float factor = 1.0f / HISTO_LENGTH;
 
-  DBoW2::FeatureVector::const_iterator f1it = vFeatVec1.begin();
-  DBoW2::FeatureVector::const_iterator f2it = vFeatVec2.begin();
-  DBoW2::FeatureVector::const_iterator f1end = vFeatVec1.end();
-  DBoW2::FeatureVector::const_iterator f2end = vFeatVec2.end();
+  fbow::fBow2::const_iterator f1it = vFeatVec1.begin();
+  fbow::fBow2::const_iterator f2it = vFeatVec2.begin();
+  fbow::fBow2::const_iterator f1end = vFeatVec1.end();
+  fbow::fBow2::const_iterator f2end = vFeatVec2.end();
 
   while (f1it != f1end && f2it != f2end) {
     if (f1it->first == f2it->first) {

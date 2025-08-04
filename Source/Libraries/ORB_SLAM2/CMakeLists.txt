@@ -17,7 +17,6 @@ add_library(${PROJECT_NAME} ${LIB_TYPE}
   src/LoopClosing.cc
   src/ORBextractor.cc
   src/ORBmatcher.cc
-  src/ORBVocabulary.cc
   src/FrameDrawer.cc
   src/Converter.cc
   src/MapPoint.cc
@@ -40,7 +39,7 @@ ${OpenCV_LIBS}
 Eigen3::Eigen
 pango_opengl
 pango_display
-${DBoW2_LIBS}
+fbow
 ${DLib_LIBS}
 g2o::types_sba
 g2o::types_sim3
@@ -57,6 +56,6 @@ endif()
 target_include_directories(${PROJECT_NAME} PUBLIC
   $<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}/include>
   $<INSTALL_INTERFACE:include>
-  $<BUILD_INTERFACE:${DBoW2_INCLUDE_DIR}>
+  $<BUILD_INTERFACE:${THIRD_PARTY_BUILT_LIBRARY_PREFIX}/include/fbow>
   $<BUILD_INTERFACE:${DLib_INCLUDE_DIR}>
   )

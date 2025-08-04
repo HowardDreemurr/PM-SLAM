@@ -27,7 +27,8 @@
 
 #include "Frame.h"
 #include "KeyFrame.h"
-#include "ORBVocabulary.h"
+#include "FbowVocabulary.h"
+#include <unordered_map>
 
 #include <mutex>
 
@@ -38,7 +39,7 @@ class Frame;
 
 class KeyFrameDatabase {
 public:
-  KeyFrameDatabase(const ORBVocabulary &voc);
+  KeyFrameDatabase(const FbowVocabulary &voc);
 
   void add(KeyFrame *pKF);
 
@@ -54,10 +55,10 @@ public:
 
 protected:
   // Associated vocabulary
-  const ORBVocabulary *mpVoc;
+  const FbowVocabulary *mpVoc;
 
   // Inverted file
-  std::vector<std::list<KeyFrame *>> mvInvertedFile;
+  std::unordered_map<uint32_t, std::list<KeyFrame*>> mInvertedFile;
 
   // Mutex
   std::mutex mMutex;

@@ -20,7 +20,7 @@
 
 #include "KeyFrameDatabase.h"
 
-#include "DBoW2/BowVector.h"
+#include <fbow.h>
 #include "KeyFrame.h"
 
 #include <mutex>
@@ -31,42 +31,29 @@ using namespace ::std;
 
 namespace ORB_SLAM2 {
 
-KeyFrameDatabase::KeyFrameDatabase(const ORBVocabulary &voc) : mpVoc(&voc) {
-  mvInvertedFile.resize(voc.size());
-}
+KeyFrameDatabase::KeyFrameDatabase(const FbowVocabulary &voc) : mpVoc(&voc) {}
 
 void KeyFrameDatabase::add(KeyFrame *pKF) {
   unique_lock<mutex> lock(mMutex);
 
-  for (DBoW2::BowVector::const_iterator vit = pKF->mBowVec.begin(),
-                                        vend = pKF->mBowVec.end();
-       vit != vend; vit++)
-    mvInvertedFile[vit->first].push_back(pKF);
+  for (auto const& kv : pKF->mBowVec)
+    mInvertedFile[kv.first].push_back(pKF);
 }
 
 void KeyFrameDatabase::erase(KeyFrame *pKF) {
   unique_lock<mutex> lock(mMutex);
 
   // Erase elements in the Inverse File for the entry
-  for (DBoW2::BowVector::const_iterator vit = pKF->mBowVec.begin(),
-                                        vend = pKF->mBowVec.end();
-       vit != vend; vit++) {
-    // List of keyframes that share the word
-    list<KeyFrame *> &lKFs = mvInvertedFile[vit->first];
-
-    for (list<KeyFrame *>::iterator lit = lKFs.begin(), lend = lKFs.end();
-         lit != lend; lit++) {
-      if (pKF == *lit) {
-        lKFs.erase(lit);
-        break;
-      }
-    }
+  for (auto const& kv : pKF->mBowVec) {
+    auto& lst = mInvertedFile[kv.first];
+    lst.remove(pKF);
   }
 }
 
 void KeyFrameDatabase::clear() {
-  mvInvertedFile.clear();
-  mvInvertedFile.resize(mpVoc->size());
+  std::unique_lock<std::mutex> lock(mMutex);
+  for (auto &kv : mInvertedFile)
+    kv.second.clear();
 }
 
 vector<KeyFrame *> KeyFrameDatabase::DetectLoopCandidates(KeyFrame *pKF,
@@ -79,10 +66,10 @@ vector<KeyFrame *> KeyFrameDatabase::DetectLoopCandidates(KeyFrame *pKF,
   {
     unique_lock<mutex> lock(mMutex);
 
-    for (DBoW2::BowVector::const_iterator vit = pKF->mBowVec.begin(),
+    for (fbow::fBow::const_iterator vit = pKF->mBowVec.begin(),
                                           vend = pKF->mBowVec.end();
          vit != vend; vit++) {
-      list<KeyFrame *> &lKFs = mvInvertedFile[vit->first];
+      auto& lKFs = mInvertedFile[vit->first];
 
       for (list<KeyFrame *>::iterator lit = lKFs.begin(), lend = lKFs.end();
            lit != lend; lit++) {
@@ -199,10 +186,10 @@ vector<KeyFrame *> KeyFrameDatabase::DetectRelocalizationCandidates(Frame *F) {
   {
     unique_lock<mutex> lock(mMutex);
 
-    for (DBoW2::BowVector::const_iterator vit = F->mBowVec.begin(),
+    for (fbow::fBow::const_iterator vit = F->mBowVec.begin(),
                                           vend = F->mBowVec.end();
          vit != vend; vit++) {
-      list<KeyFrame *> &lKFs = mvInvertedFile[vit->first];
+      auto& lKFs = mInvertedFile[vit->first];
 
       for (list<KeyFrame *>::iterator lit = lKFs.begin(), lend = lKFs.end();
            lit != lend; lit++) {
