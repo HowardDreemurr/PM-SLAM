@@ -35,12 +35,6 @@ bool has_suffix(const std::string &str, const std::string &suffix) {
 
 namespace ORB_SLAM2 {
 
-// ====================== HDF5 Key Point Output ======================== //
-void System::CloseLogFile() {
-    if (mpTracker) mpTracker->CloseLogFile();
-}
-// ====================== HDF5 Key Point Output ======================== //
-
 System::System(const string &strSettingsFile, const eSensor sensor, const bool bUseViewer)
     : mSensor(sensor), mpViewer(static_cast<Viewer *>(NULL)), mbReset(false),
       mbActivateLocalizationMode(false), mbDeactivateLocalizationMode(false) {

@@ -26,8 +26,6 @@ cmake_path(SET DEFAULT_RESOURCE_BASE "${BUILD_INSTALL_PREFIX}/var/lib/orbslam2")
 
 # Voc installation stuff
 set(DEFAULT_VOCABULARY_DIR "${DEFAULT_RESOURCE_BASE}/voc")
-# set(DEFAULT_ORB_VOCABULARY_DIR "${DEFAULT_RESOURCE_BASE}/voc")
-# set(DEFAULT_BINARY_ORB_VOCABULARY "${DEFAULT_ORB_VOCABULARY_DIR}/ORBvoc.bin")
 
 add_compile_definitions(DEFAULT_BINARY_ORB_VOCABULARY="${DEFAULT_BINARY_ORB_VOCABULARY}")
 
@@ -102,13 +100,9 @@ find_package(Boost REQUIRED COMPONENTS filesystem)
 # Find the required packages; these are from ThirdParty
 find_package(Pangolin REQUIRED HINTS "${THIRD_PARTY_BUILT_LIBRARY_PREFIX}" NO_DEFAULT_PATH)
 
-#find_package(DBoW2 REQUIRED)
 find_package(fbow REQUIRED)
 find_package(DLib REQUIRED)
 find_package(g2o REQUIRED HINTS "${THIRD_PARTY_BUILT_LIBRARY_PREFIX}" NO_DEFAULT_PATH)
-
-find_package(HDF5 COMPONENTS C HL REQUIRED)
-include_directories(${HDF5_INCLUDE_DIRS})
 
 # Add the libraries and examples
 add_subdirectory(Libraries)
