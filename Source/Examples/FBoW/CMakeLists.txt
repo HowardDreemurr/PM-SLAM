@@ -1,6 +1,6 @@
 find_package(OpenMP REQUIRED)
 
-add_executable(train_fbow train_fbow.cpp)
+add_executable(train_fbow train_fbow.cc)
 
 target_link_libraries(train_fbow
         fbow
