@@ -89,6 +89,10 @@ protected:
   bool ComputeSim3(const int Ftype);
   void CorrectLoop(const int Ftype);
 
+  // Multi Channel Loop Closing
+  bool DetectLoopMultiChannels();
+  bool SelectBestChannelByBoW(int& bestF);
+
   void SearchAndFuse(const KeyFrameAndPose &CorrectedPosesMap, const int Ftype);
 
   void ResetIfRequested();

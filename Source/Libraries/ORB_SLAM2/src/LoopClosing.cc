@@ -30,6 +30,9 @@
 
 #include <mutex>
 #include <thread>
+#include <unordered_set>
+#include <algorithm>
+
 
 using namespace ::std;
 
@@ -68,7 +71,8 @@ void LoopClosing::Run() {
   mbFinished = false;
 
   while (1) {
-    
+
+    /*
     // Check if there are keyframes in the queue
     if (CheckNewKeyFrames()) {
       // Detect loop candidates and check covisibility consistency
@@ -78,6 +82,18 @@ void LoopClosing::Run() {
         if (ComputeSim3(0)) {
           // Perform loop fusion and pose graph optimization
           CorrectLoop(0);
+        }
+      }
+    }
+    */
+
+    if (CheckNewKeyFrames()) {
+      if (DetectLoopMultiChannels()) {
+        int bestF = -1;
+        if (SelectBestChannelByBoW(bestF)) {
+          if (ComputeSim3(bestF)) {
+            CorrectLoop(bestF);
+          }
         }
       }
     }
@@ -269,6 +285,113 @@ bool LoopClosing::DetectLoop(const int Ftype) {
   return false;
 }
 
+bool LoopClosing::DetectLoopMultiChannels() {
+
+  // step 1 : get one keyframe from queue
+  {
+    unique_lock<mutex> lock(mMutexLoopQueue);
+    mpCurrentKF = mlpLoopKeyFrameQueue.front();
+    mlpLoopKeyFrameQueue.pop_front();
+    mpCurrentKF->SetNotErase();
+  }
+
+  // step 2 : If the map contains less than 10 KF or less than 10 KF have passed from last loop detection
+  if (mpCurrentKF->mnId < mLastLoopKFid + 10) {
+    for (int i=0;i<Ntype;i++) mpKeyFrameDB[i]->add(mpCurrentKF, i);
+    mpCurrentKF->SetErase();
+    return false;
+  }
+
+  // step 3 : Compute reference BoW similarity score. This is the lowest score to a connected keyframe in the covisibility graph
+  // We will impose loop candidates to have a higher similarity than this
+  const auto vConn = mpCurrentKF->GetVectorCovisibleKeyFrames();
+  std::vector<float> minScore(Ntype, 1.0f);
+  for (int f=0; f<Ntype; ++f) {
+    const fbow::fBow& cur = mpCurrentKF->Channels[f].mBowVec;
+    for (KeyFrame* pKF : vConn) {
+      if (!pKF || pKF->isBad()) continue;
+      float s = mpVocabulary[f]->score(cur, pKF->Channels[f].mBowVec);
+      if (s < minScore[f]) minScore[f] = s;
+    }
+  }
+
+  // step 4 : Query the database imposing the minimum score
+  std::vector<KeyFrame*> vpCandidateKFs;
+  vpCandidateKFs.reserve(64);
+  std::unordered_set<KeyFrame*> seen;
+  for (int f=0; f<Ntype; ++f) {
+    auto vCand = mpKeyFrameDB[f]->DetectLoopCandidates(mpCurrentKF, minScore[f], f);
+    for (auto* k : vCand) if (seen.insert(k).second) vpCandidateKFs.push_back(k);
+  }
+
+  if (vpCandidateKFs.empty()) {
+    for (int i=0;i<Ntype;i++) mpKeyFrameDB[i]->add(mpCurrentKF, i);
+    mvConsistentGroups.clear();
+    mpCurrentKF->SetErase();
+    return false;
+  }
+
+  mvpEnoughConsistentCandidates.clear();
+  std::vector<ConsistentGroup> vCurrentConsistentGroups;
+  std::vector<bool> vbConsistentGroup(mvConsistentGroups.size(), false);
+
+  for (KeyFrame* pCand : vpCandidateKFs) {
+    auto spGroup = pCand->GetConnectedKeyFrames();
+    spGroup.insert(pCand);
+    bool bEnough=false, bHitPrev=false;
+    for (size_t iG=0;iG<mvConsistentGroups.size(); ++iG) {
+      const auto& sPrev = mvConsistentGroups[iG].first;
+      bool bCons=false;
+      for (auto* k: spGroup) if (sPrev.count(k)) { bCons=true; bHitPrev=true; break; }
+      if (bCons) {
+        int nCur = mvConsistentGroups[iG].second + 1;
+        if (!vbConsistentGroup[iG]) {
+          vCurrentConsistentGroups.emplace_back(spGroup, nCur);
+          vbConsistentGroup[iG]=true;
+        }
+        if (nCur >= mnCovisibilityConsistencyTh && !bEnough) {
+          mvpEnoughConsistentCandidates.push_back(pCand);
+          bEnough = true;
+        }
+      }
+    }
+    if (!bHitPrev) vCurrentConsistentGroups.emplace_back(spGroup, 0);
+  }
+
+  // Update Covisibility Consistent Groups
+  mvConsistentGroups = std::move(vCurrentConsistentGroups);
+
+  // Add Current Keyframe to database
+  for (int i=0;i<Ntype;i++) mpKeyFrameDB[i]->add(mpCurrentKF, i);
+
+  if (mvpEnoughConsistentCandidates.empty()) {
+    mpCurrentKF->SetErase();
+    return false;
+  }
+  return true;
+}
+
+bool LoopClosing::SelectBestChannelByBoW(int& bestF) {
+  if (mvpEnoughConsistentCandidates.empty()) return false;
+
+  Associater associater(0.75, true);
+  int bestNm = -1; bestF = -1;
+
+  for (int f=0; f<Ntype; ++f) {
+    int maxNm_f = 0;
+    for (KeyFrame* pKF : mvpEnoughConsistentCandidates) {
+      if (!pKF || pKF->isBad()) continue;
+      std::vector<MapPoint*> tmp;
+      int nm = associater.SearchByBoW(mpCurrentKF, pKF, tmp, f);
+      if (nm > maxNm_f) maxNm_f = nm;
+    }
+    if (maxNm_f > bestNm) { bestNm = maxNm_f; bestF = f; }
+  }
+
+  return (bestF >= 0 && bestNm >= 20);
+}
+
+
 bool LoopClosing::ComputeSim3(const int Ftype) {
   // For each consistent loop candidate we try to compute a Sim3
 
@@ -361,6 +484,7 @@ bool LoopClosing::ComputeSim3(const int Ftype) {
           mg2oScw = gScm * gSmw;
           mScw = Converter::toCvMat(mg2oScw);
 
+          std::cout << "[LoopClosing] Sim3 choosed on channel " << Ftype << std::endl;
           mvpCurrentMatchedPoints = vpMapPointMatches;
           break;
         }
@@ -379,6 +503,7 @@ bool LoopClosing::ComputeSim3(const int Ftype) {
   std::vector<KeyFrame *> vpLoopConnectedKFs = mpMatchedKF->GetVectorCovisibleKeyFrames();
   vpLoopConnectedKFs.push_back(mpMatchedKF);
   mvpLoopMapPoints.clear();
+  /*
   for (std::vector<KeyFrame *>::iterator vit = vpLoopConnectedKFs.begin(); vit != vpLoopConnectedKFs.end(); vit++) {
     KeyFrame *pKF = *vit;
     std::vector<MapPoint *> vpMapPoints = pKF->GetMapPointMatches(Ftype);
@@ -389,6 +514,21 @@ bool LoopClosing::ComputeSim3(const int Ftype) {
           mvpLoopMapPoints.push_back(pMP);
           pMP->mnLoopPointForKF = mpCurrentKF->mnId;
         }
+      }
+    }
+  }
+  */
+  std::unordered_set<MapPoint*> seen;
+  seen.reserve(5000);
+
+  for (KeyFrame* pKF : vpLoopConnectedKFs) {
+    for (int f = 0; f < Ntype; ++f) {
+      const auto& v = pKF->GetMapPointMatches(f);
+      for (MapPoint* pMP : v) {
+        if (!pMP || pMP->isBad()) continue;
+        if (pMP->mnLoopPointForKF == mpCurrentKF->mnId) continue;
+        if (seen.insert(pMP).second) mvpLoopMapPoints.push_back(pMP);
+        pMP->mnLoopPointForKF = mpCurrentKF->mnId;
       }
     }
   }
@@ -486,7 +626,33 @@ void LoopClosing::CorrectLoop(const int Ftype) {
 
       g2o::Sim3 g2oSiw = NonCorrectedSim3[pKFi];
 
-      std::vector<MapPoint *> vpMPsi = pKFi->GetMapPointMatches(Ftype); // Multi channels ??
+      // std::vector<MapPoint *> vpMPsi = pKFi->GetMapPointMatches(Ftype); // Multi channels ??
+      std::unordered_set<MapPoint*> sAll;
+      sAll.reserve(2000);
+
+      // Collect the key points in all channels and remove duplicates
+      for (int f = 0; f < Ntype; ++f) {
+        auto v = pKFi->GetMapPointMatches(f);
+        for (auto* p : v) if (p && !p->isBad()) sAll.insert(p);
+      }
+
+      //Use Sim3 for geometric correction
+      for (MapPoint* pMPi : sAll) {
+        if (pMPi->mnCorrectedByKF == mpCurrentKF->mnId) continue;
+
+        cv::Mat P3Dw = pMPi->GetWorldPos();
+        Eigen::Vector3d eigP3Dw = Converter::toVector3d(P3Dw);
+
+        // Xw' = S_wi_corrected * (S_iw_noncorrected * Xw)
+        Eigen::Vector3d eigCorrectedP3Dw = g2oCorrectedSwi.map(g2oSiw.map(eigP3Dw));
+
+        pMPi->SetWorldPos(Converter::toCvMat(eigCorrectedP3Dw));
+        pMPi->mnCorrectedByKF = mpCurrentKF->mnId;
+        pMPi->mnCorrectedReference = pKFi->mnId;
+        pMPi->UpdateNormalAndDepth();
+      }
+
+      /*
       for (std::size_t iMP = 0, endMPi = vpMPsi.size(); iMP < endMPi; iMP++) {
         MapPoint *pMPi = vpMPsi[iMP];
         if (!pMPi)
@@ -507,6 +673,7 @@ void LoopClosing::CorrectLoop(const int Ftype) {
         pMPi->mnCorrectedReference = pKFi->mnId;
         pMPi->UpdateNormalAndDepth(); // Ftype will be deleted
       }
+      */
 
       // Update keyframe pose with corrected Sim3. First transform Sim3 to SE3 (scale translation)
       Eigen::Matrix3d eigR = g2oCorrectedSiw.rotation().toRotationMatrix();
@@ -542,7 +709,9 @@ void LoopClosing::CorrectLoop(const int Ftype) {
   // Project MapPoints observed in the neighborhood of the loop keyframe
   // into the current keyframe and neighbors using corrected poses.
   // Fuse duplications.
-  SearchAndFuse(CorrectedSim3, Ftype);
+  for (int f = 0; f < Ntype; ++f) {
+    SearchAndFuse(CorrectedSim3, f);
+  }
 
   // After the MapPoint fusion, new links in the covisibility graph will appear. attaching both sides of the loop
   map<KeyFrame *, set<KeyFrame *>> LoopConnections;
