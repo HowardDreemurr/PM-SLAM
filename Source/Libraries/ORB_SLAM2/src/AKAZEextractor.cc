@@ -53,7 +53,7 @@ namespace ORB_SLAM2 {
         FeatureExtractor::ComputePyramid(im);
         // Performance Compute
         {
-        ORB_SLAM2::Perf::Scoped __perf__("extract.AKAZE");
+        ORB_SLAM2::Perf::Scoped __perf__("AKAZE Extract");
         cv::Mat raw;
         mpAKAZE->detectAndCompute(image, FeatureExtractor::GetEdgedMask(EDGE_THRESHOLD, image, mask), keypoints, raw, false);
 

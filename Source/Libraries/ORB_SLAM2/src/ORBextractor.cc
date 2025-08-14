@@ -982,7 +982,7 @@ void ORBextractor::operator()(InputArray _image, InputArray _mask,
 
   // Performance Compute
   {
-  ORB_SLAM2::Perf::Scoped __perf__("extract.ORB");
+  ORB_SLAM2::Perf::Scoped __perf__("ORB Extract");
   vector<vector<KeyPoint>> allKeypoints;
   ComputeKeyPointsOctTree(allKeypoints);
   // ComputeKeyPointsOld(allKeypoints);

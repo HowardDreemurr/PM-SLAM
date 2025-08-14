@@ -34,7 +34,6 @@
 #include "PnPsolver.h"
 #include "CorrelationMatcher.h"
 
-// DEBUG
 #include <map>
 #include "CorrelationEdge.h"
 #include "MapPoint.h"
@@ -46,6 +45,16 @@
 #include <thread>
 
 using namespace ::std;
+
+namespace {
+  static bool s_init_wall_started  = false;
+  static bool s_init_wall_recorded = false;
+  static int s_init_failed_resets = 0;
+  static std::chrono::steady_clock::time_point   s_init_wall_t0;
+  inline double ms_since(std::chrono::steady_clock::time_point t0) {
+    return std::chrono::duration<double, std::milli>(std::chrono::steady_clock::now() - t0).count();
+  }
+}
 
 namespace ORB_SLAM2 {
 
@@ -211,7 +220,7 @@ void Tracking::SetViewer(Viewer *pViewer) { mpViewer = pViewer; }
 
 // Stereo
 cv::Mat Tracking::GrabImageStereo(const cv::Mat &imRectLeft, const cv::Mat &imRectRight, const double &timestamp) {
-  Perf::Scoped __perf__("frame.pipeline");
+  Perf::Scoped __perf__("Pipeline");
   mImGray = imRectLeft;
   cv::Mat imGrayRight = imRectRight;
 
@@ -248,7 +257,7 @@ cv::Mat Tracking::GrabImageStereo(const cv::Mat &imRectLeft, const cv::Mat &imRe
 
 // RGBD
 cv::Mat Tracking::GrabImageRGBD(const cv::Mat &imRGB, const cv::Mat &imD, const double &timestamp) {
-  Perf::Scoped __perf__("frame.pipeline");
+  Perf::Scoped __perf__("Pipeline");
   mImGray = imRGB;
   cv::Mat imDepth = imD;
 
@@ -281,7 +290,7 @@ cv::Mat Tracking::GrabImageRGBD(const cv::Mat &imRGB, const cv::Mat &imD, const 
 
 // MONO
 cv::Mat Tracking::GrabImageMonocular(const cv::Mat &im, const double &timestamp) {
-  Perf::Scoped __perf__("frame.pipeline");
+  Perf::Scoped __perf__("Pipeline");
   mImGray = im;
 
   if (mImGray.channels() == 3) {
@@ -324,6 +333,10 @@ void Tracking::Track() {
   unique_lock<mutex> lock(mpMap->mMutexMapUpdate);
 
   if (mState == NOT_INITIALIZED) {
+	if (!s_init_wall_started) {
+      s_init_wall_started = true;
+      s_init_wall_t0 = std::chrono::steady_clock::now();
+  	}
     if (mSensor == System::STEREO || mSensor == System::RGBD) {
       if (mCurrentFrame.mnId == 0) {
         mtStart = clock();
@@ -332,6 +345,14 @@ void Tracking::Track() {
       StereoInitializationMultiChannels();
 
       if (mState == OK) {
+		if (!s_init_wall_recorded) {
+          const double wall_ms = ms_since(s_init_wall_t0);
+		  const int writes = s_init_failed_resets + 1;
+          for (int i = 0; i < writes; ++i) {
+            ORB_SLAM2::Perf::record("Total Init", wall_ms);
+          }
+          s_init_wall_recorded = true;
+        }
         printf("Tracking Initlized in %.2fs\n", (double)(clock() - mtStart) / CLOCKS_PER_SEC);
         cout << "The initlized frame ID: " << mCurrentFrame.mnId << endl;
         mInitlizedID = mCurrentFrame.mnId;
@@ -344,6 +365,14 @@ void Tracking::Track() {
       MonocularInitializationMultiChannels();
 
       if (mState == OK) {
+		if (!s_init_wall_recorded) {
+    	  const double wall_ms = ms_since(s_init_wall_t0);
+		  const int writes = s_init_failed_resets + 1;
+          for (int i = 0; i < writes; ++i) {
+            ORB_SLAM2::Perf::record("Total Init", wall_ms);
+          }
+          s_init_wall_recorded = true;
+        }
         printf("Tracking Initlized in %.2fs\n", (double)(clock() - mtStart) / CLOCKS_PER_SEC);
         cout << "The initlized frame ID: " << mCurrentFrame.mnId << endl;
         mInitlizedID = mCurrentFrame.mnId;
@@ -356,7 +385,7 @@ void Tracking::Track() {
     if (mState != OK)
       return;
   } else {
-	Perf::Scoped __perf__("frame.track");
+	Perf::Scoped __perf__("Tracking");
 
     // System is initialized. Track Frame.
     bool bOK;
@@ -879,6 +908,9 @@ void Tracking::Reset() {
   Frame::nNextId = 0;
   mState = NO_IMAGES_YET;
 
+  if (s_init_wall_started && !s_init_wall_recorded) {
+    ++s_init_failed_resets;
+  }
 
   if (mpInitializer) {
     delete mpInitializer;

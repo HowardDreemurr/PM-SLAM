@@ -50,7 +50,7 @@ void KAZEextractor::operator()(cv::InputArray             image,
 
   // Performance Compute
   {
-  ORB_SLAM2::Perf::Scoped __perf__("extract.KAZE");
+  ORB_SLAM2::Perf::Scoped __perf__("KAZE Extract");
   cv::Mat raw;
   mpKAZE->detectAndCompute(image, FeatureExtractor::GetEdgedMask(EDGE_THRESHOLD, image, mask), keypoints, raw, false);
 

@@ -44,7 +44,7 @@ void BRISKextractor::operator()(cv::InputArray             image,
     FeatureExtractor::ComputePyramid(im);
     // Performance Compute
     {
-    ORB_SLAM2::Perf::Scoped __perf__("extract.BRISK");
+    ORB_SLAM2::Perf::Scoped __perf__("BRISK Extract");
     cv::Mat raw;
     mpBRISK->detectAndCompute(image, FeatureExtractor::GetEdgedMask(EDGE_THRESHOLD, image, mask), keypoints, raw, /*useProvidedKeypoints=*/false);
 

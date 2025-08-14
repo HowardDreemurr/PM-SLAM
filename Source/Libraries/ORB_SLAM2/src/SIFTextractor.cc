@@ -53,7 +53,7 @@ void SIFTextractor::operator()(cv::InputArray image, cv::InputArray mask,
 
     // Performance Compute
     {
-    ORB_SLAM2::Perf::Scoped __perf__("extract.SIFT");
+    ORB_SLAM2::Perf::Scoped __perf__("SIFT Extract");
     cv::Mat raw;
     mpSIFT->detectAndCompute(image, FeatureExtractor::GetEdgedMask(EDGE_THRESHOLD, image, mask), keypoints, raw, false);
 
