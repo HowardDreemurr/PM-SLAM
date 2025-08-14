@@ -18,8 +18,36 @@ read_config_lines() {
     mapfile -t LINES < "$cfg"
   else
     LINES=(
-       'name=fr1_xyz_orb seq=~/dataset/tum/fr1_xyz yaml=TUM1.yaml gt=~/dataset/tum/fr1_xyz/groundtruth.txt runs=1 exe=../Install/bin'
-       'name=fr3_nnf_orb seq=~/dataset/tum/fr3_nnf yaml=TUM3.yaml gt=~/dataset/tum/fr3_nnf/groundtruth.txt runs=1 exe=../Install/bin'
+       'name=fr1_xyz_akz        seq=~/dataset/tum/fr1_xyz yaml=../../../../Experiments/YAMLs/TUM1_AKZ.yaml        gt=~/dataset/tum/fr1_xyz/groundtruth.txt runs=1 exe=../Install/bin'
+       'name=fr1_xyz_akz_kaz    seq=~/dataset/tum/fr1_xyz yaml=../../../../Experiments/YAMLs/TUM1_AKZ_KAZ.yaml    gt=~/dataset/tum/fr1_xyz/groundtruth.txt runs=1 exe=../Install/bin'
+       'name=fr1_xyz_bsk        seq=~/dataset/tum/fr1_xyz yaml=../../../../Experiments/YAMLs/TUM1_BSK.yaml        gt=~/dataset/tum/fr1_xyz/groundtruth.txt runs=1 exe=../Install/bin'
+       'name=fr1_xyz_kaz        seq=~/dataset/tum/fr1_xyz yaml=../../../../Experiments/YAMLs/TUM1_KAZ.yaml        gt=~/dataset/tum/fr1_xyz/groundtruth.txt runs=1 exe=../Install/bin'
+       'name=fr1_xyz_orb        seq=~/dataset/tum/fr1_xyz yaml=../../../../Experiments/YAMLs/TUM1_ORB.yaml        gt=~/dataset/tum/fr1_xyz/groundtruth.txt runs=1 exe=../Install/bin'
+       'name=fr1_xyz_orb_akz    seq=~/dataset/tum/fr1_xyz yaml=../../../../Experiments/YAMLs/TUM1_ORB_AKZ.yaml    gt=~/dataset/tum/fr1_xyz/groundtruth.txt runs=1 exe=../Install/bin'
+       'name=fr1_xyz_orb_bsk    seq=~/dataset/tum/fr1_xyz yaml=../../../../Experiments/YAMLs/TUM1_ORB_BSK.yaml    gt=~/dataset/tum/fr1_xyz/groundtruth.txt runs=1 exe=../Install/bin'
+       'name=fr1_xyz_orb_sft    seq=~/dataset/tum/fr1_xyz yaml=../../../../Experiments/YAMLs/TUM1_ORB_SFT.yaml    gt=~/dataset/tum/fr1_xyz/groundtruth.txt runs=1 exe=../Install/bin'
+       'name=fr1_xyz_sft        seq=~/dataset/tum/fr1_xyz yaml=../../../../Experiments/YAMLs/TUM1_SFT.yaml        gt=~/dataset/tum/fr1_xyz/groundtruth.txt runs=1 exe=../Install/bin'
+
+       'name=fr2_xyz_akz        seq=~/dataset/tum/fr2_xyz yaml=../../../../Experiments/YAMLs/TUM2_AKZ.yaml        gt=~/dataset/tum/fr2_xyz/groundtruth.txt runs=1 exe=../Install/bin'
+       'name=fr2_xyz_akz_kaz    seq=~/dataset/tum/fr2_xyz yaml=../../../../Experiments/YAMLs/TUM2_AKZ_KAZ.yaml    gt=~/dataset/tum/fr2_xyz/groundtruth.txt runs=1 exe=../Install/bin'
+       'name=fr2_xyz_bsk        seq=~/dataset/tum/fr2_xyz yaml=../../../../Experiments/YAMLs/TUM2_BSK.yaml        gt=~/dataset/tum/fr2_xyz/groundtruth.txt runs=1 exe=../Install/bin'
+       'name=fr2_xyz_kaz        seq=~/dataset/tum/fr2_xyz yaml=../../../../Experiments/YAMLs/TUM2_KAZ.yaml        gt=~/dataset/tum/fr2_xyz/groundtruth.txt runs=1 exe=../Install/bin'
+       'name=fr2_xyz_orb        seq=~/dataset/tum/fr2_xyz yaml=../../../../Experiments/YAMLs/TUM2_ORB.yaml        gt=~/dataset/tum/fr2_xyz/groundtruth.txt runs=1 exe=../Install/bin'
+       'name=fr2_xyz_orb_akz    seq=~/dataset/tum/fr2_xyz yaml=../../../../Experiments/YAMLs/TUM2_ORB_AKZ.yaml    gt=~/dataset/tum/fr2_xyz/groundtruth.txt runs=1 exe=../Install/bin'
+       'name=fr2_xyz_orb_bsk    seq=~/dataset/tum/fr2_xyz yaml=../../../../Experiments/YAMLs/TUM2_ORB_BSK.yaml    gt=~/dataset/tum/fr2_xyz/groundtruth.txt runs=1 exe=../Install/bin'
+       'name=fr2_xyz_orb_sft    seq=~/dataset/tum/fr2_xyz yaml=../../../../Experiments/YAMLs/TUM2_ORB_SFT.yaml    gt=~/dataset/tum/fr2_xyz/groundtruth.txt runs=1 exe=../Install/bin'
+       'name=fr2_xyz_sft        seq=~/dataset/tum/fr2_xyz yaml=../../../../Experiments/YAMLs/TUM2_SFT.yaml        gt=~/dataset/tum/fr2_xyz/groundtruth.txt runs=1 exe=../Install/bin'
+
+       'name=fr3_nnf_akz        seq=~/dataset/tum/fr3_nnf yaml=../../../../Experiments/YAMLs/TUM3_AKZ.yaml        gt=~/dataset/tum/fr3_nnf/groundtruth.txt runs=1 exe=../Install/bin'
+       'name=fr3_nnf_akz_kaz    seq=~/dataset/tum/fr3_nnf yaml=../../../../Experiments/YAMLs/TUM3_AKZ_KAZ.yaml    gt=~/dataset/tum/fr3_nnf/groundtruth.txt runs=1 exe=../Install/bin'
+       'name=fr3_nnf_bsk        seq=~/dataset/tum/fr3_nnf yaml=../../../../Experiments/YAMLs/TUM3_BSK.yaml        gt=~/dataset/tum/fr3_nnf/groundtruth.txt runs=1 exe=../Install/bin'
+       'name=fr3_nnf_kaz        seq=~/dataset/tum/fr3_nnf yaml=../../../../Experiments/YAMLs/TUM3_KAZ.yaml        gt=~/dataset/tum/fr3_nnf/groundtruth.txt runs=1 exe=../Install/bin'
+       'name=fr3_nnf_orb        seq=~/dataset/tum/fr3_nnf yaml=../../../../Experiments/YAMLs/TUM3_ORB.yaml        gt=~/dataset/tum/fr3_nnf/groundtruth.txt runs=1 exe=../Install/bin'
+       'name=fr3_nnf_orb_akz    seq=~/dataset/tum/fr3_nnf yaml=../../../../Experiments/YAMLs/TUM3_ORB_AKZ.yaml    gt=~/dataset/tum/fr3_nnf/groundtruth.txt runs=1 exe=../Install/bin'
+       'name=fr3_nnf_orb_bsk    seq=~/dataset/tum/fr3_nnf yaml=../../../../Experiments/YAMLs/TUM3_ORB_BSK.yaml    gt=~/dataset/tum/fr3_nnf/groundtruth.txt runs=1 exe=../Install/bin'
+       'name=fr3_nnf_orb_sft    seq=~/dataset/tum/fr3_nnf yaml=../../../../Experiments/YAMLs/TUM3_ORB_SFT.yaml    gt=~/dataset/tum/fr3_nnf/groundtruth.txt runs=1 exe=../Install/bin'
+       'name=fr3_nnf_sft        seq=~/dataset/tum/fr3_nnf yaml=../../../../Experiments/YAMLs/TUM3_SFT.yaml        gt=~/dataset/tum/fr3_nnf/groundtruth.txt runs=1 exe=../Install/bin'
+
     )
   fi
 }
@@ -39,6 +67,9 @@ maybe_activate_venv() {
 }
 
 main() {
+  SECONDS=0
+  START_STR=$(date '+%F %T')
+
   read_config_lines "$@"
   require_file "./run_bench.sh"; require_file "./run_evo.sh"
   maybe_activate_venv
@@ -85,6 +116,12 @@ main() {
     if ! have evo_rpe; then echo "ERROR: 'evo_rpe' not found in PATH."; exit 5; fi
     bash ./run_evo.sh rpe "$poses_dir" "$gt" "$name" "${RPE_ARGS_DEFAULT[@]}" || true
   done
+
+  total_h=$(( SECONDS/3600 ))
+  total_m=$(( (SECONDS%3600)/60 ))
+  total_s=$(( SECONDS%60 ))
+  echo ""
+  echo "Total wall time: ${total_h}h ${total_m}m ${total_s}s  (since ${START_STR})"
 
   echo ""; echo "All experiments finished."
   echo "Performance -> ./Performances/<name>/<name>_pref.txt"
