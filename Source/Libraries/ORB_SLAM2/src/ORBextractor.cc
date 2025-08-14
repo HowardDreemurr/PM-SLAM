@@ -64,6 +64,8 @@
 
 #include <iostream>
 
+#include "Perf.h"
+
 using namespace cv;
 using namespace std;
 
@@ -978,6 +980,9 @@ void ORBextractor::operator()(InputArray _image, InputArray _mask,
   // Pre-compute the scale pyramid
   FeatureExtractor::ComputePyramid(image);
 
+  // Performance Compute
+  {
+  ORB_SLAM2::Perf::Scoped __perf__("extract.ORB");
   vector<vector<KeyPoint>> allKeypoints;
   ComputeKeyPointsOctTree(allKeypoints);
   // ComputeKeyPointsOld(allKeypoints);
@@ -1029,7 +1034,7 @@ void ORBextractor::operator()(InputArray _image, InputArray _mask,
   }
 
   // std::cout << "Using ORBextractor......" << std::endl;
-  
+  }
 }
 
  void ORBextractor::ForceLinking() {}
