@@ -56,8 +56,8 @@ Vocabularies:
 ORB:
   # Essential: Lower/Upper distance threshold for descriptor matching.
   # Matches with distance below this value are considered high-quality/too-weak.
-  TH_LOW: 300.0       # Low threshold for filtering out poor-quality matches.
-  TH_HIGH: 500.0      # High threshold for accepting confident matches.
+  TH_LOW: 50.0       # Low threshold for filtering out poor-quality matches.
+  TH_HIGH: 100.0      # High threshold for accepting confident matches.
 
   # Essential: Number of features per image
   nFeatures: 2000
@@ -82,8 +82,8 @@ ORB:
 AKAZE:
   # Essential: Lower/Upper distance threshold for descriptor matching.
   # Matches with distance below this value are considered high-quality/too-weak.
-  TH_LOW: 300.0       # Low threshold for filtering out poor-quality matches.
-  TH_HIGH: 500.0      # High threshold for accepting confident matches.
+  TH_LOW: 100.0       # Low threshold for filtering out poor-quality matches.
+  TH_HIGH: 200.0      # High threshold for accepting confident matches.
 
   # Essential: Number of features per image.
   # Maximum number of keypoints to retain after detection.
@@ -99,7 +99,7 @@ AKAZE:
 
   # AKAZE Extractor: Detector response threshold
   # The detector's response threshold determines which points are key points
-  threshold: 1e-3
+  threshold: 1e-4
 
   # AKAZE Extractor: Number of octaves
   # The number of "octaves" of the multi-scale pyramid (affects the image resolution range)
@@ -115,8 +115,8 @@ AKAZE:
 BRISK:
   # Essential: Lower/Upper distance threshold for descriptor matching.
   # Matches with distance below this value are considered high-quality/too-weak.
-  TH_LOW: 300.0       # Low threshold for filtering out poor-quality matches.
-  TH_HIGH: 500.0      # High threshold for accepting confident matches.
+  TH_LOW: 100.0       # Low threshold for filtering out poor-quality matches.
+  TH_HIGH: 200.0      # High threshold for accepting confident matches.
 
   # Essential: Number of features per image.
   # Maximum number of keypoints to retain after detection.
@@ -165,7 +165,7 @@ SIFT:
 
   # SIFT Extractor: Edge response threshold.
   # Suppresses edge-like keypoints; higher values allow more edge points.
-  edgeThreshold: 10
+  edgeThreshold: 5
 
   # SIFT Extractor: Number of octave layers.
   # Number of scale levels per octave for DoG (Difference of Gaussians).
@@ -173,7 +173,7 @@ SIFT:
 
   # SIFT Extractor: Contrast threshold.
   # Discards low-contrast keypoints; higher values yield fewer keypoints.
-  contrastThreshold: 0.1
+  contrastThreshold: 0.01
 
   # SIFT Extractor: Initial Gaussian blur sigma.
   # Applied to the base image before building the scale space.

@@ -38,6 +38,7 @@
 #include <map>
 #include "CorrelationEdge.h"
 #include "MapPoint.h"
+#include "Perf.h"
 
 #include <chrono>
 #include <iostream>
@@ -193,6 +194,9 @@ Tracking::Tracking(System *pSys, std::vector<FbowVocabulary *> pVoc, std::vector
     else
       mDepthMapFactor = 1.0f / mDepthMapFactor;
   }
+
+  // Initialize Performance Recorder
+  Perf::init(Ntype);
 }
 
 void Tracking::SetLocalMapper(LocalMapping *pLocalMapper) {
@@ -207,6 +211,7 @@ void Tracking::SetViewer(Viewer *pViewer) { mpViewer = pViewer; }
 
 // Stereo
 cv::Mat Tracking::GrabImageStereo(const cv::Mat &imRectLeft, const cv::Mat &imRectRight, const double &timestamp) {
+  Perf::Scoped __perf__("frame.pipeline");
   mImGray = imRectLeft;
   cv::Mat imGrayRight = imRectRight;
 
@@ -243,6 +248,7 @@ cv::Mat Tracking::GrabImageStereo(const cv::Mat &imRectLeft, const cv::Mat &imRe
 
 // RGBD
 cv::Mat Tracking::GrabImageRGBD(const cv::Mat &imRGB, const cv::Mat &imD, const double &timestamp) {
+  Perf::Scoped __perf__("frame.pipeline");
   mImGray = imRGB;
   cv::Mat imDepth = imD;
 
@@ -275,6 +281,7 @@ cv::Mat Tracking::GrabImageRGBD(const cv::Mat &imRGB, const cv::Mat &imD, const 
 
 // MONO
 cv::Mat Tracking::GrabImageMonocular(const cv::Mat &im, const double &timestamp) {
+  Perf::Scoped __perf__("frame.pipeline");
   mImGray = im;
 
   if (mImGray.channels() == 3) {
@@ -349,6 +356,7 @@ void Tracking::Track() {
     if (mState != OK)
       return;
   } else {
+	Perf::Scoped __perf__("frame.track");
 
     // System is initialized. Track Frame.
     bool bOK;
@@ -508,6 +516,8 @@ void Tracking::Track() {
       }
 
       // -------------------- Correlation ---------------------- //
+      {
+      ORB_SLAM2::Perf::Scoped __perf__("Correlation");
       // Correlation Matching
       const float th_px = 2.0f;  // Threshold
 
@@ -517,7 +527,7 @@ void Tracking::Track() {
             // std::cout << cRI << std::endl;
         }
       }
-
+      }
 
       /*
       // Debug Logging

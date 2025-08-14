@@ -112,7 +112,7 @@ System::System(const string &strSettingsFile, const eSensor sensor, const bool b
     }
     
     cout << ExtractorNames[i];
-    printf(" Vocabulary loaded in %.2fs\n", (double)(clock() - tStart) / CLOCKS_PER_SEC);
+    printf(" Vocabulary loaded in %.6fs\n", (double)(clock() - tStart) / CLOCKS_PER_SEC);
     cout << endl;
     // Create KeyFrame Database
     mpKeyFrameDatabase[i] = new KeyFrameDatabase(*mpVocabulary[i]);

@@ -2,6 +2,8 @@
 #include "FeatureExtractorFactory.h"
 #include <iostream>
 
+#include "Perf.h"
+
 namespace ORB_SLAM2 {
 
 void KAZEextractor::InfoConfigs() {
@@ -46,6 +48,9 @@ void KAZEextractor::operator()(cv::InputArray             image,
   cv::Mat im = image.getMat();
   FeatureExtractor::ComputePyramid(im);
 
+  // Performance Compute
+  {
+  ORB_SLAM2::Perf::Scoped __perf__("extract.KAZE");
   cv::Mat raw;
   mpKAZE->detectAndCompute(image, FeatureExtractor::GetEdgedMask(EDGE_THRESHOLD, image, mask), keypoints, raw, false);
 
@@ -71,7 +76,7 @@ void KAZEextractor::operator()(cv::InputArray             image,
   }
 
   raw.copyTo(descriptors);
-
+  }
 }
 
 void KAZEextractor::ForceLinking() {}

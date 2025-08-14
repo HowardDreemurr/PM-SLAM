@@ -39,6 +39,7 @@ src/System.cc
 src/Tracking.cc
 src/Viewer.cc
 src/CorrelationMatcher.cc
+src/Perf.cc
 )
 
 target_include_directories(${PROJECT_NAME} PUBLIC ${CMAKE_CURRENT_DIRECTORY})

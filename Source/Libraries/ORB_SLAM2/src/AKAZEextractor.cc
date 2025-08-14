@@ -2,6 +2,8 @@
 #include "FeatureExtractorFactory.h"
 #include <iostream>
 
+#include "Perf.h"
+
 namespace ORB_SLAM2 {
 
     void AKAZEextractor::InfoConfigs() {
@@ -49,7 +51,9 @@ namespace ORB_SLAM2 {
     {
         cv::Mat im = image.getMat();
         FeatureExtractor::ComputePyramid(im);
-
+        // Performance Compute
+        {
+        ORB_SLAM2::Perf::Scoped __perf__("extract.AKAZE");
         cv::Mat raw;
         mpAKAZE->detectAndCompute(image, FeatureExtractor::GetEdgedMask(EDGE_THRESHOLD, image, mask), keypoints, raw, false);
 
@@ -78,6 +82,7 @@ namespace ORB_SLAM2 {
         cv::Mat aligned(raw.rows, PAD, CV_8U, cv::Scalar(0));
         raw.copyTo(aligned.colRange(0, raw.cols));
         aligned.copyTo(descriptors);
+        }
     }
 
 void AKAZEextractor::ForceLinking() {}

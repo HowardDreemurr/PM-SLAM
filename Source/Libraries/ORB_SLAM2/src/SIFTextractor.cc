@@ -2,6 +2,8 @@
 #include "FeatureExtractorFactory.h"
 #include <iostream>
 
+#include "Perf.h"
+
 namespace ORB_SLAM2 {
 
 void SIFTextractor::InfoConfigs() {
@@ -49,6 +51,9 @@ void SIFTextractor::operator()(cv::InputArray image, cv::InputArray mask,
     cv::Mat im = image.getMat();
     FeatureExtractor::ComputePyramid(im);
 
+    // Performance Compute
+    {
+    ORB_SLAM2::Perf::Scoped __perf__("extract.SIFT");
     cv::Mat raw;
     mpSIFT->detectAndCompute(image, FeatureExtractor::GetEdgedMask(EDGE_THRESHOLD, image, mask), keypoints, raw, false);
 
@@ -74,6 +79,7 @@ void SIFTextractor::operator()(cv::InputArray image, cv::InputArray mask,
     }
 
     raw.copyTo(descriptors);   // SIFT descriptor: CV_32F 128 dim
+    }
 }
 
 void SIFTextractor::ForceLinking(){}
