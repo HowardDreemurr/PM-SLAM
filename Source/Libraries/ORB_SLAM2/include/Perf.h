@@ -10,18 +10,23 @@
 #include <mutex>
 #include <string>
 #include <unordered_map>
+#include <vector>
 
 namespace ORB_SLAM2 { namespace Perf {
 
     struct Stats {
         uint64_t n = 0;
         double   sum = 0.0;
+		double   sumsq = 0.0;
         double   minv = std::numeric_limits<double>::infinity();
         double   maxv = 0.0;
+		std::vector<double> samples;
+
         void add(double ms) {
-            ++n; sum += ms;
-            if (ms < minv) minv = ms;
-            if (ms > maxv) maxv = ms;
+            ++n; sum += ms; sumsq += ms * ms;
+    		if (ms < minv) minv = ms;
+    		if (ms > maxv) maxv = ms;
+    		samples.push_back(ms);
         }
     };
 
