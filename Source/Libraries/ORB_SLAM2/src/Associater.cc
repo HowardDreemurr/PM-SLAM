@@ -816,6 +816,7 @@ int Associater::SearchByNN(Frame &F, const vector<MapPoint *> &vpMapPoints) {
   vector<cv::Mat> MPdescriptors;
   MPdescriptors.resize(F.Ntype);
 
+  /*
   for (int Ftype = 0; Ftype < F.Ntype; Ftype++) {
     MPdescriptors[Ftype].create(MPdescriptorAll[Ftype].size(), MPdescriptorAll[Ftype][0].cols, MPdescriptorAll[Ftype][0].type());
   }
@@ -827,8 +828,8 @@ int Associater::SearchByNN(Frame &F, const vector<MapPoint *> &vpMapPoints) {
       }
     }
   }
+  */
 
-  /*
   for (int f = 0; f < F.Ntype; ++f) {
     if (MPdescriptorAll[f].empty()) continue;
 
@@ -840,7 +841,6 @@ int Associater::SearchByNN(Frame &F, const vector<MapPoint *> &vpMapPoints) {
     for (size_t i = 0; i < MPdescriptorAll[f].size(); ++i)
         MPdescriptorAll[f][i].copyTo(MPdescriptors[f].row((int)i));
   }
-*/
 
   vector<vector<cv::DMatch>> matches;
   matches.resize(F.Ntype);
