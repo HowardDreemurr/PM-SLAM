@@ -1,0 +1,81 @@
+Registering ORBextractor...
+Registering AKAZEextractor...
+Registering BRISKextractor...
+Registering SIFTextractor...
+Registering KAZEextractor...
+
+ORB-SLAM2 Copyright (C) 2014-2016 Raul Mur-Artal, University of Zaragoza.
+This program comes with ABSOLUTELY NO WARRANTY;
+This is free software, and you are welcome to redistribute it
+under certain conditions. See LICENSE.txt.
+
+Input sensor was set to: Monocular
+
+Loading Vocabulary : /home/howard/Refactored_ORB_SLAM2/Install/var/lib/orbslam2/voc/akaze_cv.fbow
+This could take a while...
+Loading AKAZE Vocabulary in FBoW.
+AKAZE Vocabulary loaded in 0.016639s
+
+
+Camera Parameters: 
+- fx: 535.4
+- fy: 539.2
+- cx: 320.1
+- cy: 247.6
+- k1: 0
+- k2: 0
+- p1: 0
+- p2: 0
+- fps: 30
+- color order: RGB (ignored if grayscale)
+
+[Feature 0] AKAZE Extractor Parameters: 
+ ( TH_LOW: 100, TH_HIGH: 200 )
+- Number of Features: 1000
+- Scale Levels: 4
+- Scale Factor: 1.2
+- Threshold: 1e-05
+- Num of Octaves: 4
+- Num of Octave Layers: 4
+
+-------
+Start processing sequence ...
+Images in the sequence: 474
+
+0
+New map created with 347 points for 0 Feature Type 
+Tracking Initlized in 6.62s
+The initlized frame ID: 29
+The lost frame ID: 99
+The lost frame ID: 100
+The lost frame ID: 101
+The lost frame ID: 103
+The lost frame ID: 107
+The lost frame ID: 108
+The lost frame ID: 119
+System::StopViewer()
+System::StopViewer() done
+Viewer thread finished.
+
+Saving correlation status...
+
+Correlation status saved!
+
+System Shutdown
+-------
+
+median tracking time: 0.021835
+mean tracking time: 0.024948
+
+Saving camera trajectory to result06.txt ...
+
+trajectory saved!
+All done
+
+========== Performance Summary (ms) ==========
+name                                mean      median        rmse         min         max       count
+Tracking                           2.834       2.185       1.360       1.007       6.000         444
+Total Init                      1996.678    1996.678       0.000    1996.678    1996.678           1
+Pipeline                          24.945      21.829      10.651      18.850      69.907         474
+Correlation                        0.000       0.000       0.000       0.000       0.001         437
+AKAZE Extract                     18.507      18.475       1.002      16.703      23.486         474

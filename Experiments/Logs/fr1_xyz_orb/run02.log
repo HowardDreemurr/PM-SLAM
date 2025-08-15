@@ -1,0 +1,74 @@
+Registering ORBextractor...
+Registering AKAZEextractor...
+Registering BRISKextractor...
+Registering SIFTextractor...
+Registering KAZEextractor...
+
+ORB-SLAM2 Copyright (C) 2014-2016 Raul Mur-Artal, University of Zaragoza.
+This program comes with ABSOLUTELY NO WARRANTY;
+This is free software, and you are welcome to redistribute it
+under certain conditions. See LICENSE.txt.
+
+Input sensor was set to: Monocular
+
+Loading Vocabulary : /home/howard/Refactored_ORB_SLAM2/Install/var/lib/orbslam2/voc/orb_mur.fbow
+This could take a while...
+Loading ORB Vocabulary in FBoW.
+ORB Vocabulary loaded in 0.010560s
+
+
+Camera Parameters: 
+- fx: 517.306
+- fy: 516.469
+- cx: 318.643
+- cy: 255.314
+- k1: 0.262383
+- k2: -0.953104
+- k3: 1.16331
+- p1: -0.005358
+- p2: 0.002628
+- fps: 30
+- color order: RGB (ignored if grayscale)
+
+[Feature 0] ORB Extractor Parameters: 
+ ( TH_LOW: 50, TH_HIGH: 100 )
+- Number of Features: 1000
+- Scale Levels: 8
+- Scale Factor: 1.2
+- Initial Fast Threshold: 20
+- Minimum Fast Threshold: 7
+
+-------
+Start processing sequence ...
+Images in the sequence: 798
+
+0
+New map created with 153 points for 0 Feature Type 
+Tracking Initlized in 6.05s
+The initlized frame ID: 177
+System::StopViewer()
+System::StopViewer() done
+Viewer thread finished.
+
+Saving correlation status...
+
+Correlation status saved!
+
+System Shutdown
+-------
+
+median tracking time: 0.00959197
+mean tracking time: 0.0104415
+
+Saving camera trajectory to result02.txt ...
+
+trajectory saved!
+All done
+
+========== Performance Summary (ms) ==========
+name                                mean      median        rmse         min         max       count
+Tracking                           3.246       3.284       0.480       1.297       4.363         620
+Correlation                        0.000       0.000       0.000       0.000       0.001         620
+Total Init                      6558.748    6558.748       0.000    6558.748    6558.748           1
+Pipeline                          10.438       9.587       2.490       6.626      21.780         798
+ORB Extract                        5.358       5.259       0.605       3.967       7.753         798

@@ -1,0 +1,111 @@
+Registering ORBextractor...
+Registering AKAZEextractor...
+Registering BRISKextractor...
+Registering SIFTextractor...
+Registering KAZEextractor...
+
+ORB-SLAM2 Copyright (C) 2014-2016 Raul Mur-Artal, University of Zaragoza.
+This program comes with ABSOLUTELY NO WARRANTY;
+This is free software, and you are welcome to redistribute it
+under certain conditions. See LICENSE.txt.
+
+Input sensor was set to: Monocular
+
+Loading Vocabulary : /home/howard/Refactored_ORB_SLAM2/Install/var/lib/orbslam2/voc/brisk_cv.fbow
+This could take a while...
+Loading BRISK Vocabulary in FBoW.
+BRISK Vocabulary loaded in 0.019587s
+
+
+Camera Parameters: 
+- fx: 535.4
+- fy: 539.2
+- cx: 320.1
+- cy: 247.6
+- k1: 0
+- k2: 0
+- p1: 0
+- p2: 0
+- fps: 30
+- color order: RGB (ignored if grayscale)
+
+[Feature 0] BRISK Extractor Parameters: 
+ ( TH_LOW: 100, TH_HIGH: 200 )
+- Number of Features: 1000
+- Scale Levels: 6
+- Scale Factor: 1.414
+- Threshold: 4
+- Num of Octaves: 3
+- Pattern Scale: 1
+
+-------
+Start processing sequence ...
+Images in the sequence: 474
+
+0
+New map created with 102 points for 0 Feature Type 
+Tracking Initlized in 2.29s
+The initlized frame ID: 32
+Track lost soon after initialisation, reseting...
+System Reseting
+Reseting Local Mapper... done
+Reseting Loop Closing... done
+Reseting Database... done
+0
+New map created with 93 points for 0 Feature Type 
+Wrong initialization, reseting...
+System Reseting
+Reseting Local Mapper... done
+Reseting Loop Closing... done
+Reseting Database... done
+0
+New map created with 57 points for 0 Feature Type 
+Wrong initialization, reseting...
+System Reseting
+Reseting Local Mapper... done
+Reseting Loop Closing... done
+Reseting Database... done
+0
+New map created with 78 points for 0 Feature Type 
+Wrong initialization, reseting...
+System Reseting
+Reseting Local Mapper... done
+Reseting Loop Closing... done
+Reseting Database... done
+0
+New map created with 82 points for 0 Feature Type 
+Wrong initialization, reseting...
+System Reseting
+Reseting Local Mapper... done
+Reseting Loop Closing... done
+Reseting Database... done
+0
+New map created with 107 points for 0 Feature Type 
+Tracking Initlized in 5.30s
+The initlized frame ID: 91
+System::StopViewer()
+System::StopViewer() done
+Viewer thread finished.
+
+Saving correlation status...
+
+Correlation status saved!
+
+System Shutdown
+-------
+
+median tracking time: 0.0466803
+mean tracking time: 0.0439717
+
+Saving camera trajectory to result10.txt ...
+
+trajectory saved!
+All done
+
+========== Performance Summary (ms) ==========
+name                                mean      median        rmse         min         max       count
+Correlation                        0.000       0.000       0.000       0.000       0.001          43
+Tracking                           1.853       1.990       0.421       0.926       2.380          44
+Total Init                      2218.165    2218.165       0.000    2218.165    2218.165           1
+Pipeline                          43.886      46.502      17.698       7.498      84.342         474
+BRISK Extract                     17.578      16.459       5.959       6.124      30.802         474

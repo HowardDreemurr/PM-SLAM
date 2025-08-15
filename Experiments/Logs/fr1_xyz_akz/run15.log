@@ -1,0 +1,75 @@
+Registering ORBextractor...
+Registering AKAZEextractor...
+Registering BRISKextractor...
+Registering SIFTextractor...
+Registering KAZEextractor...
+
+ORB-SLAM2 Copyright (C) 2014-2016 Raul Mur-Artal, University of Zaragoza.
+This program comes with ABSOLUTELY NO WARRANTY;
+This is free software, and you are welcome to redistribute it
+under certain conditions. See LICENSE.txt.
+
+Input sensor was set to: Monocular
+
+Loading Vocabulary : /home/howard/Refactored_ORB_SLAM2/Install/var/lib/orbslam2/voc/akaze_cv.fbow
+This could take a while...
+Loading AKAZE Vocabulary in FBoW.
+AKAZE Vocabulary loaded in 0.015245s
+
+
+Camera Parameters: 
+- fx: 517.306
+- fy: 516.469
+- cx: 318.643
+- cy: 255.314
+- k1: 0.262383
+- k2: -0.953104
+- k3: 1.16331
+- p1: -0.005358
+- p2: 0.002628
+- fps: 30
+- color order: RGB (ignored if grayscale)
+
+[Feature 0] AKAZE Extractor Parameters: 
+ ( TH_LOW: 100, TH_HIGH: 200 )
+- Number of Features: 1000
+- Scale Levels: 4
+- Scale Factor: 1.2
+- Threshold: 0.001
+- Num of Octaves: 4
+- Num of Octave Layers: 4
+
+-------
+Start processing sequence ...
+Images in the sequence: 798
+
+0
+New map created with 241 points for 0 Feature Type 
+Tracking Initlized in 4.82s
+The initlized frame ID: 24
+System::StopViewer()
+System::StopViewer() done
+Viewer thread finished.
+
+Saving correlation status...
+
+Correlation status saved!
+
+System Shutdown
+-------
+
+median tracking time: 0.0223007
+mean tracking time: 0.0231823
+
+Saving camera trajectory to result15.txt ...
+
+trajectory saved!
+All done
+
+========== Performance Summary (ms) ==========
+name                                mean      median        rmse         min         max       count
+Tracking                           3.929       4.106       0.882       1.860       5.906         773
+Total Init                      1245.875    1245.875       0.000    1245.875    1245.875           1
+Pipeline                          23.179      22.297       4.683      18.895      54.930         798
+Correlation                        0.000       0.000       0.000       0.000       0.013         773
+AKAZE Extract                     17.536      17.472       0.919      15.573      22.854         798

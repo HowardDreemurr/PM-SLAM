@@ -1,0 +1,105 @@
+Registering ORBextractor...
+Registering AKAZEextractor...
+Registering BRISKextractor...
+Registering SIFTextractor...
+Registering KAZEextractor...
+
+ORB-SLAM2 Copyright (C) 2014-2016 Raul Mur-Artal, University of Zaragoza.
+This program comes with ABSOLUTELY NO WARRANTY;
+This is free software, and you are welcome to redistribute it
+under certain conditions. See LICENSE.txt.
+
+Input sensor was set to: Monocular
+
+Loading Vocabulary : /home/howard/Refactored_ORB_SLAM2/Install/var/lib/orbslam2/voc/orb_mur.fbow
+This could take a while...
+Loading ORB Vocabulary in FBoW.
+ORB Vocabulary loaded in 0.009798s
+
+
+Loading Vocabulary : /home/howard/Refactored_ORB_SLAM2/Install/var/lib/orbslam2/voc/sift_cv.fbow
+This could take a while...
+Loading SIFT Vocabulary in FBoW.
+SIFT Vocabulary loaded in 0.088403s
+
+
+Camera Parameters: 
+- fx: 517.306
+- fy: 516.469
+- cx: 318.643
+- cy: 255.314
+- k1: 0.262383
+- k2: -0.953104
+- k3: 1.16331
+- p1: -0.005358
+- p2: 0.002628
+- fps: 30
+- color order: RGB (ignored if grayscale)
+
+[Feature 0] ORB Extractor Parameters: 
+ ( TH_LOW: 50, TH_HIGH: 100 )
+- Number of Features: 1000
+- Scale Levels: 8
+- Scale Factor: 1.2
+- Initial Fast Threshold: 20
+- Minimum Fast Threshold: 7
+
+[Feature 1] SIFT Extractor Parameters: 
+ ( TH_LOW: 300, TH_HIGH: 500 )
+- Number of Features  : 1000
+- Scale Levels        : 1
+- Scale Factor        : 1
+- Contrast Threshold  : 0.001
+- Edge Threshold      : 5
+- nOctaves            : 3
+- Sigma               : 1.6
+
+-------
+Start processing sequence ...
+Images in the sequence: 798
+
+0
+New map created with 69 points for 0 Feature Type 
+New map created with 551 points for 1 Feature Type 
+Tracking Initlized in 3.61s
+The initlized frame ID: 15
+System::StopViewer()
+System::StopViewer() done
+Viewer thread finished.
+
+Saving correlation status...
+
+========== Global Summary ==========
+Frames: 782
+avg_CorrEdges: 56.7519
+avg_match_A: 275.803
+avg_match_B: 342.362
+global_RI_MNR: 0.20577
+global_RI_GNR: 0.184688
+global_RI_DICE: 0.183614
+
+========== Per-Channel Summary ==========
+   chA   chB     avgCorr        avgA        avgB   avgRI_MNR   avgRI_GNR  avgRI_DICE
+     0     1     56.7519     275.803     342.362    0.193667    0.170114    0.168446
+
+Correlation status saved!
+
+System Shutdown
+-------
+
+median tracking time: 0.0279646
+mean tracking time: 0.0293806
+
+Saving camera trajectory to result03.txt ...
+
+trajectory saved!
+All done
+
+========== Performance Summary (ms) ==========
+name                                mean      median        rmse         min         max       count
+Tracking                           8.404       8.566       1.655       3.621      12.060         782
+Correlation                        0.275       0.280       0.075       0.108       0.455         782
+Total Init                      1369.980    1369.980       0.000    1369.980    1369.980           1
+Pipeline                          29.377      27.958       8.774      21.600     107.281         798
+SIFT Extract                      18.843      18.301       2.275      16.409      40.052         798
+ORB Extract                        5.292       5.304       0.446       4.199       7.940         798

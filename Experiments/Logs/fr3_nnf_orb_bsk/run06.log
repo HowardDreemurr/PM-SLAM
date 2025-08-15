@@ -1,0 +1,229 @@
+Registering ORBextractor...
+Registering AKAZEextractor...
+Registering BRISKextractor...
+Registering SIFTextractor...
+Registering KAZEextractor...
+
+ORB-SLAM2 Copyright (C) 2014-2016 Raul Mur-Artal, University of Zaragoza.
+This program comes with ABSOLUTELY NO WARRANTY;
+This is free software, and you are welcome to redistribute it
+under certain conditions. See LICENSE.txt.
+
+Input sensor was set to: Monocular
+
+Loading Vocabulary : /home/howard/Refactored_ORB_SLAM2/Install/var/lib/orbslam2/voc/brisk_cv.fbow
+This could take a while...
+Loading BRISK Vocabulary in FBoW.
+BRISK Vocabulary loaded in 0.016881s
+
+
+Loading Vocabulary : /home/howard/Refactored_ORB_SLAM2/Install/var/lib/orbslam2/voc/orb_mur.fbow
+This could take a while...
+Loading ORB Vocabulary in FBoW.
+ORB Vocabulary loaded in 0.009710s
+
+
+Camera Parameters: 
+- fx: 535.4
+- fy: 539.2
+- cx: 320.1
+- cy: 247.6
+- k1: 0
+- k2: 0
+- p1: 0
+- p2: 0
+- fps: 30
+- color order: RGB (ignored if grayscale)
+
+[Feature 0] BRISK Extractor Parameters: 
+ ( TH_LOW: 100, TH_HIGH: 200 )
+- Number of Features: 1000
+- Scale Levels: 6
+- Scale Factor: 1.414
+- Threshold: 4
+- Num of Octaves: 3
+- Pattern Scale: 1
+
+[Feature 1] ORB Extractor Parameters: 
+ ( TH_LOW: 50, TH_HIGH: 100 )
+- Number of Features: 1000
+- Scale Levels: 8
+- Scale Factor: 1.2
+- Initial Fast Threshold: 20
+- Minimum Fast Threshold: 7
+
+-------
+Start processing sequence ...
+Images in the sequence: 474
+
+0
+New map created with 113 points for 0 Feature Type 
+New map created with 6 points for 1 Feature Type 
+Tracking Initlized in 3.13s
+The initlized frame ID: 34
+The lost frame ID: 230
+The lost frame ID: 231
+The lost frame ID: 237
+The lost frame ID: 240
+The lost frame ID: 242
+The lost frame ID: 243
+The lost frame ID: 245
+The lost frame ID: 250
+The lost frame ID: 251
+The lost frame ID: 253
+The lost frame ID: 259
+The lost frame ID: 261
+The lost frame ID: 262
+The lost frame ID: 263
+The lost frame ID: 265
+The lost frame ID: 267
+The lost frame ID: 268
+The lost frame ID: 271
+The lost frame ID: 272
+The lost frame ID: 274
+The lost frame ID: 277
+The lost frame ID: 280
+The lost frame ID: 281
+The lost frame ID: 282
+The lost frame ID: 283
+The lost frame ID: 284
+The lost frame ID: 285
+The lost frame ID: 286
+The lost frame ID: 287
+The lost frame ID: 288
+The lost frame ID: 289
+The lost frame ID: 290
+The lost frame ID: 291
+The lost frame ID: 293
+The lost frame ID: 294
+The lost frame ID: 295
+The lost frame ID: 296
+The lost frame ID: 297
+The lost frame ID: 298
+The lost frame ID: 299
+The lost frame ID: 300
+The lost frame ID: 301
+The lost frame ID: 304
+The lost frame ID: 307
+The lost frame ID: 308
+The lost frame ID: 309
+The lost frame ID: 311
+The lost frame ID: 312
+The lost frame ID: 313
+The lost frame ID: 315
+The lost frame ID: 316
+The lost frame ID: 317
+The lost frame ID: 318
+The lost frame ID: 319
+The lost frame ID: 320
+The lost frame ID: 321
+The lost frame ID: 323
+The lost frame ID: 324
+The lost frame ID: 326
+The lost frame ID: 327
+The lost frame ID: 328
+The lost frame ID: 329
+The lost frame ID: 330
+The lost frame ID: 331
+The lost frame ID: 332
+The lost frame ID: 334
+The lost frame ID: 336
+The lost frame ID: 338
+The lost frame ID: 339
+The lost frame ID: 340
+The lost frame ID: 341
+The lost frame ID: 342
+The lost frame ID: 343
+The lost frame ID: 344
+The lost frame ID: 345
+The lost frame ID: 346
+The lost frame ID: 347
+The lost frame ID: 348
+The lost frame ID: 349
+The lost frame ID: 350
+The lost frame ID: 351
+The lost frame ID: 352
+The lost frame ID: 353
+The lost frame ID: 354
+The lost frame ID: 355
+The lost frame ID: 356
+The lost frame ID: 357
+The lost frame ID: 359
+The lost frame ID: 364
+The lost frame ID: 366
+The lost frame ID: 398
+The lost frame ID: 400
+The lost frame ID: 402
+The lost frame ID: 403
+The lost frame ID: 408
+The lost frame ID: 409
+The lost frame ID: 420
+The lost frame ID: 425
+The lost frame ID: 427
+The lost frame ID: 428
+The lost frame ID: 429
+The lost frame ID: 431
+The lost frame ID: 439
+The lost frame ID: 440
+The lost frame ID: 441
+The lost frame ID: 443
+The lost frame ID: 444
+The lost frame ID: 445
+The lost frame ID: 446
+The lost frame ID: 448
+The lost frame ID: 450
+The lost frame ID: 453
+The lost frame ID: 454
+The lost frame ID: 457
+The lost frame ID: 458
+The lost frame ID: 459
+The lost frame ID: 460
+The lost frame ID: 462
+The lost frame ID: 465
+The lost frame ID: 466
+The lost frame ID: 468
+The lost frame ID: 469
+The lost frame ID: 470
+The lost frame ID: 471
+The lost frame ID: 472
+The lost frame ID: 473
+System::StopViewer()
+System::StopViewer() done
+Viewer thread finished.
+
+Saving correlation status...
+
+========== Global Summary ==========
+Frames: 265
+avg_CorrEdges: 3.88679
+avg_match_A: 48.717
+avg_match_B: 15.4755
+global_RI_MNR: 0.251158
+global_RI_GNR: 0.141556
+global_RI_DICE: 0.121098
+
+========== Per-Channel Summary ==========
+   chA   chB     avgCorr        avgA        avgB   avgRI_MNR   avgRI_GNR  avgRI_DICE
+     0     1     3.88679      48.717     15.4755    0.171274   0.0804552   0.0622897
+
+Correlation status saved!
+
+System Shutdown
+-------
+
+median tracking time: 0.0212945
+mean tracking time: 0.0250228
+
+Saving camera trajectory to result06.txt ...
+
+trajectory saved!
+All done
+
+========== Performance Summary (ms) ==========
+name                                mean      median        rmse         min         max       count
+Tracking                           3.442       2.958       1.542       0.980       8.629         439
+Correlation                        0.051       0.045       0.036       0.003       0.153         312
+Total Init                      2424.182    2424.182       0.000    2424.182    2424.182           1
+Pipeline                          25.019      21.285      13.421       9.116      78.247         474
+BRISK Extract                     17.926      16.742       5.946       6.259      31.261         474
+ORB Extract                        2.534       2.507       0.277       1.836       3.909         474

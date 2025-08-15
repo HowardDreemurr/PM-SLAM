@@ -1,0 +1,83 @@
+Registering ORBextractor...
+Registering AKAZEextractor...
+Registering BRISKextractor...
+Registering SIFTextractor...
+Registering KAZEextractor...
+
+ORB-SLAM2 Copyright (C) 2014-2016 Raul Mur-Artal, University of Zaragoza.
+This program comes with ABSOLUTELY NO WARRANTY;
+This is free software, and you are welcome to redistribute it
+under certain conditions. See LICENSE.txt.
+
+Input sensor was set to: Monocular
+
+Loading Vocabulary : /home/howard/Refactored_ORB_SLAM2/Install/var/lib/orbslam2/voc/kaze_cv.fbow
+This could take a while...
+Loading KAZE Vocabulary in FBoW.
+KAZE Vocabulary loaded in 0.037074s
+
+
+Camera Parameters: 
+- fx: 535.4
+- fy: 539.2
+- cx: 320.1
+- cy: 247.6
+- k1: 0
+- k2: 0
+- p1: 0
+- p2: 0
+- fps: 30
+- color order: RGB (ignored if grayscale)
+
+[Feature 0] KAZE Extractor Parameters: 
+ ( TH_LOW: 0.5, TH_HIGH: 1 )
+- Number of Features : 1000
+- Scale Levels       : 4
+- Scale Factor       : 1.2
+- Threshold          : 1e-05
+- nOctaves           : 4
+- nOctaveLayers      : 4
+- Extended (128‑dim) : 0
+- Upright            : 0
+
+-------
+Start processing sequence ...
+Images in the sequence: 474
+
+0
+New map created with 315 points for 0 Feature Type 
+Tracking Initlized in 17.28s
+The initlized frame ID: 29
+The lost frame ID: 107
+The lost frame ID: 108
+The lost frame ID: 119
+The lost frame ID: 120
+The lost frame ID: 227
+The lost frame ID: 231
+The lost frame ID: 232
+System::StopViewer()
+System::StopViewer() done
+Viewer thread finished.
+
+Saving correlation status...
+
+Correlation status saved!
+
+System Shutdown
+-------
+
+median tracking time: 0.0822164
+mean tracking time: 0.083979
+
+Saving camera trajectory to result09.txt ...
+
+trajectory saved!
+All done
+
+========== Performance Summary (ms) ==========
+name                                mean      median        rmse         min         max       count
+Tracking                           2.265       2.344       0.893       0.640       8.378         444
+Correlation                        0.000       0.000       0.000       0.000       0.001         437
+Total Init                      3140.847    3140.847       0.000    3140.847    3140.847           1
+Pipeline                          83.976      82.212       7.413      73.225     126.374         474
+KAZE Extract                      79.587      78.748       5.067      69.395     105.501         474

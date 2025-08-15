@@ -1,0 +1,152 @@
+Registering ORBextractor...
+Registering AKAZEextractor...
+Registering BRISKextractor...
+Registering SIFTextractor...
+Registering KAZEextractor...
+
+ORB-SLAM2 Copyright (C) 2014-2016 Raul Mur-Artal, University of Zaragoza.
+This program comes with ABSOLUTELY NO WARRANTY;
+This is free software, and you are welcome to redistribute it
+under certain conditions. See LICENSE.txt.
+
+Input sensor was set to: Monocular
+
+Loading Vocabulary : /home/howard/Refactored_ORB_SLAM2/Install/var/lib/orbslam2/voc/brisk_cv.fbow
+This could take a while...
+Loading BRISK Vocabulary in FBoW.
+BRISK Vocabulary loaded in 0.017602s
+
+
+Loading Vocabulary : /home/howard/Refactored_ORB_SLAM2/Install/var/lib/orbslam2/voc/orb_mur.fbow
+This could take a while...
+Loading ORB Vocabulary in FBoW.
+ORB Vocabulary loaded in 0.009825s
+
+
+Camera Parameters: 
+- fx: 535.4
+- fy: 539.2
+- cx: 320.1
+- cy: 247.6
+- k1: 0
+- k2: 0
+- p1: 0
+- p2: 0
+- fps: 30
+- color order: RGB (ignored if grayscale)
+
+[Feature 0] BRISK Extractor Parameters: 
+ ( TH_LOW: 100, TH_HIGH: 200 )
+- Number of Features: 1000
+- Scale Levels: 6
+- Scale Factor: 1.414
+- Threshold: 4
+- Num of Octaves: 3
+- Pattern Scale: 1
+
+[Feature 1] ORB Extractor Parameters: 
+ ( TH_LOW: 50, TH_HIGH: 100 )
+- Number of Features: 1000
+- Scale Levels: 8
+- Scale Factor: 1.2
+- Initial Fast Threshold: 20
+- Minimum Fast Threshold: 7
+
+-------
+Start processing sequence ...
+Images in the sequence: 474
+
+0
+New map created with 113 points for 0 Feature Type 
+New map created with 6 points for 1 Feature Type 
+Tracking Initlized in 3.27s
+The initlized frame ID: 34
+The lost frame ID: 252
+The lost frame ID: 255
+The lost frame ID: 257
+The lost frame ID: 259
+The lost frame ID: 266
+The lost frame ID: 271
+The lost frame ID: 273
+The lost frame ID: 274
+The lost frame ID: 275
+The lost frame ID: 277
+The lost frame ID: 288
+The lost frame ID: 289
+The lost frame ID: 294
+The lost frame ID: 296
+The lost frame ID: 297
+The lost frame ID: 298
+The lost frame ID: 300
+The lost frame ID: 304
+The lost frame ID: 308
+The lost frame ID: 311
+The lost frame ID: 313
+The lost frame ID: 314
+The lost frame ID: 315
+The lost frame ID: 316
+The lost frame ID: 317
+The lost frame ID: 318
+The lost frame ID: 320
+The lost frame ID: 321
+The lost frame ID: 322
+The lost frame ID: 323
+The lost frame ID: 325
+The lost frame ID: 327
+The lost frame ID: 328
+The lost frame ID: 329
+The lost frame ID: 330
+The lost frame ID: 331
+The lost frame ID: 332
+The lost frame ID: 334
+The lost frame ID: 335
+The lost frame ID: 336
+The lost frame ID: 366
+The lost frame ID: 391
+The lost frame ID: 392
+The lost frame ID: 394
+The lost frame ID: 396
+The lost frame ID: 398
+The lost frame ID: 400
+The lost frame ID: 407
+The lost frame ID: 434
+System::StopViewer()
+System::StopViewer() done
+Viewer thread finished.
+
+Saving correlation status...
+
+========== Global Summary ==========
+Frames: 276
+avg_CorrEdges: 3.78261
+avg_match_A: 48.5
+avg_match_B: 10.3043
+global_RI_MNR: 0.367089
+global_RI_GNR: 0.169204
+global_RI_DICE: 0.128651
+
+========== Per-Channel Summary ==========
+   chA   chB     avgCorr        avgA        avgB   avgRI_MNR   avgRI_GNR  avgRI_DICE
+     0     1     3.78261        48.5     10.3043    0.151031   0.0655979   0.0487101
+
+Correlation status saved!
+
+System Shutdown
+-------
+
+median tracking time: 0.0214247
+mean tracking time: 0.0251461
+
+Saving camera trajectory to result01.txt ...
+
+trajectory saved!
+All done
+
+========== Performance Summary (ms) ==========
+name                                mean      median        rmse         min         max       count
+Tracking                           3.189       3.044       1.077       1.150       8.730         439
+Correlation                        0.042       0.036       0.039       0.002       0.235         390
+Total Init                      2443.030    2443.030       0.000    2443.030    2443.030           1
+Pipeline                          25.142      21.419      13.467       9.272      83.342         474
+BRISK Extract                     18.147      16.871       6.045       6.363      33.396         474
+ORB Extract                        2.537       2.514       0.293       1.809       4.641         474

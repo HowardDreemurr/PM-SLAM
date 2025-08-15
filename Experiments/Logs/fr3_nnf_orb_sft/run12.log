@@ -1,0 +1,138 @@
+Registering ORBextractor...
+Registering AKAZEextractor...
+Registering BRISKextractor...
+Registering SIFTextractor...
+Registering KAZEextractor...
+
+ORB-SLAM2 Copyright (C) 2014-2016 Raul Mur-Artal, University of Zaragoza.
+This program comes with ABSOLUTELY NO WARRANTY;
+This is free software, and you are welcome to redistribute it
+under certain conditions. See LICENSE.txt.
+
+Input sensor was set to: Monocular
+
+Loading Vocabulary : /home/howard/Refactored_ORB_SLAM2/Install/var/lib/orbslam2/voc/orb_mur.fbow
+This could take a while...
+Loading ORB Vocabulary in FBoW.
+ORB Vocabulary loaded in 0.009981s
+
+
+Loading Vocabulary : /home/howard/Refactored_ORB_SLAM2/Install/var/lib/orbslam2/voc/sift_cv.fbow
+This could take a while...
+Loading SIFT Vocabulary in FBoW.
+SIFT Vocabulary loaded in 0.088442s
+
+
+Camera Parameters: 
+- fx: 535.4
+- fy: 539.2
+- cx: 320.1
+- cy: 247.6
+- k1: 0
+- k2: 0
+- p1: 0
+- p2: 0
+- fps: 30
+- color order: RGB (ignored if grayscale)
+
+[Feature 0] ORB Extractor Parameters: 
+ ( TH_LOW: 50, TH_HIGH: 100 )
+- Number of Features: 1000
+- Scale Levels: 8
+- Scale Factor: 1.2
+- Initial Fast Threshold: 20
+- Minimum Fast Threshold: 7
+
+[Feature 1] SIFT Extractor Parameters: 
+ ( TH_LOW: 300, TH_HIGH: 500 )
+- Number of Features  : 1000
+- Scale Levels        : 1
+- Scale Factor        : 1
+- Contrast Threshold  : 0.001
+- Edge Threshold      : 30
+- nOctaves            : 3
+- Sigma               : 1.6
+
+-------
+Start processing sequence ...
+Images in the sequence: 474
+
+1
+New map created with 10 points for 0 Feature Type 
+New map created with 117 points for 1 Feature Type 
+Tracking Initlized in 7.30s
+The initlized frame ID: 36
+Track lost soon after initialisation, reseting...
+System Reseting
+Reseting Local Mapper... done
+Reseting Loop Closing... done
+Reseting Database... done
+1
+New map created with 7 points for 0 Feature Type 
+New map created with 73 points for 1 Feature Type 
+Wrong initialization, reseting...
+System Reseting
+Reseting Local Mapper... done
+Reseting Loop Closing... done
+Reseting Database... done
+1
+New map created with 3 points for 0 Feature Type 
+New map created with 71 points for 1 Feature Type 
+Wrong initialization, reseting...
+System Reseting
+Reseting Local Mapper... done
+Reseting Loop Closing... done
+Reseting Database... done
+1
+New map created with 5 points for 0 Feature Type 
+New map created with 72 points for 1 Feature Type 
+Wrong initialization, reseting...
+System Reseting
+Reseting Local Mapper... done
+Reseting Loop Closing... done
+Reseting Database... done
+1
+New map created with 15 points for 0 Feature Type 
+New map created with 129 points for 1 Feature Type 
+Tracking Initlized in 21.09s
+The initlized frame ID: 111
+System::StopViewer()
+System::StopViewer() done
+Viewer thread finished.
+
+Saving correlation status...
+
+========== Global Summary ==========
+Frames: 43
+avg_CorrEdges: 11.2558
+avg_match_A: 44.9302
+avg_match_B: 84.2558
+global_RI_MNR: 0.250518
+global_RI_GNR: 0.18294
+global_RI_DICE: 0.174257
+
+========== Per-Channel Summary ==========
+   chA   chB     avgCorr        avgA        avgB   avgRI_MNR   avgRI_GNR  avgRI_DICE
+     0     1     11.2558     44.9302     84.2558    0.234401    0.168779     0.15961
+
+Correlation status saved!
+
+System Shutdown
+-------
+
+median tracking time: 0.0610102
+mean tracking time: 0.0594974
+
+Saving camera trajectory to result12.txt ...
+
+trajectory saved!
+All done
+
+========== Performance Summary (ms) ==========
+name                                mean      median        rmse         min         max       count
+Correlation                        0.078       0.079       0.016       0.052       0.120          43
+Tracking                           1.907       1.682       1.164       1.141       7.418          44
+Total Init                      2803.848    2803.848       0.000    2803.848    2803.848           1
+Pipeline                          59.439      60.996      16.121      19.355     141.291         474
+SIFT Extract                      22.947      20.881       4.708      17.616      46.379         474
+ORB Extract                        2.621       2.603       0.311       1.968       4.035         474
