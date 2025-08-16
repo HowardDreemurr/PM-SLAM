@@ -32,12 +32,14 @@ int main(int argc, char **argv)
     int L  = std::stoi(argv[5]);
 
     /* ---------- 1) Create Extractor ---------- */
+    cv::FileStorage fs;
     cv::FileNode cfg;
     if (!yamlFile.empty()) {
-        cv::FileStorage fs(yamlFile, cv::FileStorage::READ);
+        fs.open(yamlFile, cv::FileStorage::READ);
         if (!fs.isOpened()) { std::cerr << "Cannot open " << yamlFile << "\n"; return 2; }
-        cfg = fs.root();
+        cfg = fs.root()[extName];
     }
+
     auto pExtractor = std::unique_ptr<FeatureExtractor>(
         FeatureExtractorFactory::Instance().Create(extName, cfg, true));
     if (!pExtractor) { std::cerr << "Extractor '" << extName << "' not registered.\n"; return 3; }
@@ -66,7 +68,7 @@ int main(int argc, char **argv)
             all_desc.push_back(desc);
         }
 
-        if (++idx % 100 == 0)
+        if (++idx % 10 == 0)
         {
             auto now = std::chrono::steady_clock::now();
             double secs = std::chrono::duration<double>(now - t0).count();

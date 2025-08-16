@@ -40,11 +40,13 @@ src/Tracking.cc
 src/Viewer.cc
 src/CorrelationMatcher.cc
 src/Perf.cc
+src/SuperPointLibTorch.cc
+src/SuperPointExtractor.cc
 )
 
 target_include_directories(${PROJECT_NAME} PUBLIC ${CMAKE_CURRENT_DIRECTORY})
 target_link_libraries(${PROJECT_NAME} PUBLIC
-
+${TORCH_LIBRARIES}
 ${OpenCV_LIBS}
 Eigen3::Eigen
 pango_opengl
@@ -64,6 +66,8 @@ if(APPLE)
 endif()
 
 target_include_directories(${PROJECT_NAME} PUBLIC
+  /opt/libtorch/include
+  /opt/libtorch/include/torch/csrc/api/include
   $<BUILD_INTERFACE:${THIRD_PARTY_BUILT_LIBRARY_PREFIX}/include/fbow>
   $<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}/include>
   $<INSTALL_INTERFACE:include>
