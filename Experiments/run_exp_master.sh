@@ -44,9 +44,31 @@ read_config_lines() {
 #       'name=fr3_nnf_kaz        seq=~/dataset/tum/fr3_nnf yaml=../../../../Experiments/YAMLs/TUM3_KAZ.yaml        gt=~/dataset/tum/fr3_nnf/groundtruth.txt runs=20 exe=../Install/bin'
 #       'name=fr3_nnf_orb        seq=~/dataset/tum/fr3_nnf yaml=../../../../Experiments/YAMLs/TUM3_ORB.yaml        gt=~/dataset/tum/fr3_nnf/groundtruth.txt runs=20 exe=../Install/bin'
 #       'name=fr3_nnf_orb_akz    seq=~/dataset/tum/fr3_nnf yaml=../../../../Experiments/YAMLs/TUM3_ORB_AKZ.yaml    gt=~/dataset/tum/fr3_nnf/groundtruth.txt runs=20 exe=../Install/bin'
-       'name=fr3_nnf_orb_bsk    seq=~/dataset/tum/fr3_nnf yaml=../../../../Experiments/YAMLs/TUM3_ORB_BSK.yaml    gt=~/dataset/tum/fr3_nnf/groundtruth.txt runs=20 exe=../Install/bin'
-       'name=fr3_nnf_orb_sft    seq=~/dataset/tum/fr3_nnf yaml=../../../../Experiments/YAMLs/TUM3_ORB_SFT.yaml    gt=~/dataset/tum/fr3_nnf/groundtruth.txt runs=20 exe=../Install/bin'
-       'name=fr3_nnf_sft        seq=~/dataset/tum/fr3_nnf yaml=../../../../Experiments/YAMLs/TUM3_SFT.yaml        gt=~/dataset/tum/fr3_nnf/groundtruth.txt runs=20 exe=../Install/bin'
+#       'name=fr3_nnf_orb_bsk    seq=~/dataset/tum/fr3_nnf yaml=../../../../Experiments/YAMLs/TUM3_ORB_BSK.yaml    gt=~/dataset/tum/fr3_nnf/groundtruth.txt runs=20 exe=../Install/bin'
+#       'name=fr3_nnf_orb_sft    seq=~/dataset/tum/fr3_nnf yaml=../../../../Experiments/YAMLs/TUM3_ORB_SFT.yaml    gt=~/dataset/tum/fr3_nnf/groundtruth.txt runs=20 exe=../Install/bin'
+#       'name=fr3_nnf_sft        seq=~/dataset/tum/fr3_nnf yaml=../../../../Experiments/YAMLs/TUM3_SFT.yaml        gt=~/dataset/tum/fr3_nnf/groundtruth.txt runs=20 exe=../Install/bin'
+
+        'name=fr1_xyz_orb_kaz    seq=~/dataset/tum/fr1_xyz yaml=../../../../Experiments/YAMLs/TUM1_ORB_KAZ.yaml    gt=~/dataset/tum/fr1_xyz/groundtruth.txt runs=20 exe=../Install/bin'
+        'name=fr1_xyz_akz_bsk    seq=~/dataset/tum/fr1_xyz yaml=../../../../Experiments/YAMLs/TUM1_AKZ_BSK.yaml    gt=~/dataset/tum/fr1_xyz/groundtruth.txt runs=20 exe=../Install/bin'
+        'name=fr1_xyz_akz_sft    seq=~/dataset/tum/fr1_xyz yaml=../../../../Experiments/YAMLs/TUM1_AKZ_SFT.yaml    gt=~/dataset/tum/fr1_xyz/groundtruth.txt runs=20 exe=../Install/bin'
+        'name=fr1_xyz_bsk_kaz    seq=~/dataset/tum/fr1_xyz yaml=../../../../Experiments/YAMLs/TUM1_BSK_KAZ.yaml    gt=~/dataset/tum/fr1_xyz/groundtruth.txt runs=20 exe=../Install/bin'
+        'name=fr1_xyz_bsk_sft    seq=~/dataset/tum/fr1_xyz yaml=../../../../Experiments/YAMLs/TUM1_BSK_SFT.yaml    gt=~/dataset/tum/fr1_xyz/groundtruth.txt runs=20 exe=../Install/bin'
+        'name=fr1_xyz_kaz_sft    seq=~/dataset/tum/fr1_xyz yaml=../../../../Experiments/YAMLs/TUM1_KAZ_SFT.yaml    gt=~/dataset/tum/fr1_xyz/groundtruth.txt runs=20 exe=../Install/bin'
+
+        'name=fr2_xyz_orb_kaz    seq=~/dataset/tum/fr2_xyz yaml=../../../../Experiments/YAMLs/TUM2_ORB_KAZ.yaml    gt=~/dataset/tum/fr2_xyz/groundtruth.txt runs=20 exe=../Install/bin'
+        'name=fr2_xyz_akz_bsk    seq=~/dataset/tum/fr2_xyz yaml=../../../../Experiments/YAMLs/TUM2_AKZ_BSK.yaml    gt=~/dataset/tum/fr2_xyz/groundtruth.txt runs=20 exe=../Install/bin'
+        'name=fr2_xyz_akz_sft    seq=~/dataset/tum/fr2_xyz yaml=../../../../Experiments/YAMLs/TUM2_AKZ_SFT.yaml    gt=~/dataset/tum/fr2_xyz/groundtruth.txt runs=20 exe=../Install/bin'
+        'name=fr2_xyz_bsk_kaz    seq=~/dataset/tum/fr2_xyz yaml=../../../../Experiments/YAMLs/TUM2_BSK_KAZ.yaml    gt=~/dataset/tum/fr2_xyz/groundtruth.txt runs=20 exe=../Install/bin'
+        'name=fr2_xyz_bsk_sft    seq=~/dataset/tum/fr2_xyz yaml=../../../../Experiments/YAMLs/TUM2_BSK_SFT.yaml    gt=~/dataset/tum/fr2_xyz/groundtruth.txt runs=20 exe=../Install/bin'
+        'name=fr2_xyz_kaz_sft    seq=~/dataset/tum/fr2_xyz yaml=../../../../Experiments/YAMLs/TUM2_KAZ_SFT.yaml    gt=~/dataset/tum/fr2_xyz/groundtruth.txt runs=20 exe=../Install/bin'
+
+        'name=fr3_nnf_orb_kaz    seq=~/dataset/tum/fr3_nnf yaml=../../../../Experiments/YAMLs/TUM3_ORB_KAZ.yaml    gt=~/dataset/tum/fr3_nnf/groundtruth.txt runs=20 exe=../Install/bin'
+        'name=fr3_nnf_akz_bsk    seq=~/dataset/tum/fr3_nnf yaml=../../../../Experiments/YAMLs/TUM3_AKZ_BSK.yaml    gt=~/dataset/tum/fr3_nnf/groundtruth.txt runs=20 exe=../Install/bin'
+        'name=fr3_nnf_akz_sft    seq=~/dataset/tum/fr3_nnf yaml=../../../../Experiments/YAMLs/TUM3_AKZ_SFT.yaml    gt=~/dataset/tum/fr3_nnf/groundtruth.txt runs=20 exe=../Install/bin'
+        'name=fr3_nnf_bsk_kaz    seq=~/dataset/tum/fr3_nnf yaml=../../../../Experiments/YAMLs/TUM3_BSK_KAZ.yaml    gt=~/dataset/tum/fr3_nnf/groundtruth.txt runs=20 exe=../Install/bin'
+        'name=fr3_nnf_bsk_sft    seq=~/dataset/tum/fr3_nnf yaml=../../../../Experiments/YAMLs/TUM3_BSK_SFT.yaml    gt=~/dataset/tum/fr3_nnf/groundtruth.txt runs=20 exe=../Install/bin'
+        'name=fr3_nnf_kaz_sft    seq=~/dataset/tum/fr3_nnf yaml=../../../../Experiments/YAMLs/TUM3_KAZ_SFT.yaml    gt=~/dataset/tum/fr3_nnf/groundtruth.txt runs=20 exe=../Install/bin'
+
 
     )
   fi
