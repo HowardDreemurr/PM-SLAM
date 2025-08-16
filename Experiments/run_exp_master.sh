@@ -68,8 +68,6 @@ read_config_lines() {
         'name=fr3_nnf_bsk_kaz    seq=~/dataset/tum/fr3_nnf yaml=../../../../Experiments/YAMLs/TUM3_BSK_KAZ.yaml    gt=~/dataset/tum/fr3_nnf/groundtruth.txt runs=20 exe=../Install/bin'
         'name=fr3_nnf_bsk_sft    seq=~/dataset/tum/fr3_nnf yaml=../../../../Experiments/YAMLs/TUM3_BSK_SFT.yaml    gt=~/dataset/tum/fr3_nnf/groundtruth.txt runs=20 exe=../Install/bin'
         'name=fr3_nnf_kaz_sft    seq=~/dataset/tum/fr3_nnf yaml=../../../../Experiments/YAMLs/TUM3_KAZ_SFT.yaml    gt=~/dataset/tum/fr3_nnf/groundtruth.txt runs=20 exe=../Install/bin'
-
-
     )
   fi
 }

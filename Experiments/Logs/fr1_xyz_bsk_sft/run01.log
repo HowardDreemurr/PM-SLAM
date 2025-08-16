@@ -11,16 +11,16 @@ under certain conditions. See LICENSE.txt.
 
 Input sensor was set to: Monocular
 
-Loading Vocabulary : /home/howard/Refactored_ORB_SLAM2/Install/var/lib/orbslam2/voc/brisk_cv.fbow
+Loading Vocabulary : /home/howard/Refactored_ORB_SLAM2/Install/var/lib/orbslam2/voc/orb_mur.fbow
 This could take a while...
-Loading BRISK Vocabulary in FBoW.
-BRISK Vocabulary loaded in 0.014977s
+Loading ORB Vocabulary in FBoW.
+ORB Vocabulary loaded in 0.009578s
 
 
-Loading Vocabulary : /home/howard/Refactored_ORB_SLAM2/Install/var/lib/orbslam2/voc/sift_cv.fbow
+Loading Vocabulary : /home/howard/Refactored_ORB_SLAM2/Install/var/lib/orbslam2/voc/akaze_cv.fbow
 This could take a while...
-Loading SIFT Vocabulary in FBoW.
-SIFT Vocabulary loaded in 0.114683s
+Loading AKAZE Vocabulary in FBoW.
+AKAZE Vocabulary loaded in 0.017802s
 
 
 Camera Parameters: 
@@ -36,31 +36,69 @@ Camera Parameters:
 - fps: 30
 - color order: RGB (ignored if grayscale)
 
-[Feature 0] BRISK Extractor Parameters: 
+[Feature 0] ORB Extractor Parameters: 
+ ( TH_LOW: 50, TH_HIGH: 100 )
+- Number of Features: 1000
+- Scale Levels: 8
+- Scale Factor: 1.2
+- Initial Fast Threshold: 20
+- Minimum Fast Threshold: 7
+
+[Feature 1] AKAZE Extractor Parameters: 
  ( TH_LOW: 100, TH_HIGH: 200 )
 - Number of Features: 1000
-- Scale Levels: 6
-- Scale Factor: 1.414
-- Threshold: 10
-- Num of Octaves: 3
-- Pattern Scale: 1
-
-[Feature 1] SIFT Extractor Parameters: 
- ( TH_LOW: 300, TH_HIGH: 500 )
-- Number of Features  : 1000
-- Scale Levels        : 1
-- Scale Factor        : 1
-- Contrast Threshold  : 0.001
-- Edge Threshold      : 5
-- nOctaves            : 3
-- Sigma               : 1.6
+- Scale Levels: 4
+- Scale Factor: 1.2
+- Threshold: 0.001
+- Num of Octaves: 4
+- Num of Octave Layers: 4
 
 -------
 Start processing sequence ...
 Images in the sequence: 798
 
 0
-New map created with 145 points for 0 Feature Type 
-New map created with 298 points for 1 Feature Type 
-Tracking Initlized in 6.51s
-The initlized frame ID: 24
+New map created with 69 points for 0 Feature Type 
+New map created with 394 points for 1 Feature Type 
+Tracking Initlized in 3.61s
+The initlized frame ID: 15
+System::StopViewer()
+System::StopViewer() done
+Viewer thread finished.
+
+Saving correlation status...
+
+========== Global Summary ==========
+Frames: 782
+avg_CorrEdges: 70.7673
+avg_match_A: 252.072
+avg_match_B: 407.343
+global_RI_MNR: 0.280743
+global_RI_GNR: 0.220846
+global_RI_DICE: 0.214637
+
+========== Per-Channel Summary ==========
+   chA   chB     avgCorr        avgA        avgB   avgRI_MNR   avgRI_GNR  avgRI_DICE
+     0     1     70.7673     252.072     407.343    0.270422     0.21424    0.207804
+
+Correlation status saved!
+
+System Shutdown
+-------
+
+median tracking time: 0.0274063
+mean tracking time: 0.0277487
+
+Saving camera trajectory to result01.txt ...
+
+trajectory saved!
+All done
+
+========== Performance Summary (ms) ==========
+name                                mean      median        rmse         min         max       count
+Tracking                           7.946       8.339       1.730       3.953      12.692         782
+Total Init                       944.323     944.323       0.000     944.323     944.323           1
+Pipeline                          27.745      27.398       5.057      22.093      69.874         798
+Correlation                        0.278       0.287       0.067       0.125       0.558         782
+AKAZE Extract                     18.102      18.001       1.290      15.990      38.169         798
+ORB Extract                        5.318       5.353       0.508       3.961       8.065         798
