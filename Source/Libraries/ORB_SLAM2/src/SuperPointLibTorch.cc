@@ -192,7 +192,7 @@ void SPDetector::detect(cv::Mat& img) {
   auto x = torch::from_blob(
               img_cont.data,
               {1, 1, img_cont.rows, img_cont.cols},
-              torch::TensorOptions().dtype(torch::kUInt8)  // 等价 torch::kByte
+              torch::TensorOptions().dtype(torch::kUInt8)
            ).clone();
 
   torch::NoGradGuard no_grad;
@@ -201,15 +201,16 @@ void SPDetector::detect(cv::Mat& img) {
   x = x.to(m_device, torch::kFloat).div_(255.0f);
 
   auto out = model->forward(x);
-  mProb = out[0].squeeze(0).contiguous();  // [H, W]
-  mDesc = out[1];                          // [1, 256, H/8, W/8]
+  mProb = out[0].squeeze(0).contiguous();          // [H, W] on device
+  mDesc = out[1];                                  // [1, 256, H/8, W/8] on device
+  mProbCPU = mProb.to(torch::kCPU).contiguous();   // cache CPU copy (one per level)
 }
 
 
 void SPDetector::getKeyPoints(float threshold, int iniX, int maxX, int iniY,
                               int maxY, std::vector<cv::KeyPoint>& keypoints,
                               bool nms) {
-  auto prob = mProb.slice(0, iniY, maxY).slice(1, iniX, maxX).to(torch::kCPU).contiguous();
+  auto prob = mProbCPU.slice(0, iniY, maxY).slice(1, iniX, maxX);
   auto kpts = (prob > threshold);
   kpts = torch::nonzero(kpts);  // [n_keypoints, 2]  (y, x)
 

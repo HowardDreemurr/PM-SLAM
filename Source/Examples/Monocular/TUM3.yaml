@@ -56,13 +56,13 @@ SuperPoint:
 
   # Essential: Number of levels in the scale pyramid.
   # Number of nonlinear diffusion pyramid levels for scale detection.
-  nLevels: 1
+  nLevels: 4
 
   # Essential: Scale factor between levels in the scale pyramid
   scaleFactor: 1.2
 
   # SuperPoint Extractor: Whether to use CUDA
-  use_cuda: 0
+  use_cuda: 1
 
   # SuperPoint Extractor: Whether to use NMS
   nms: 1
@@ -74,8 +74,8 @@ SuperPoint:
   # Image is divided in a grid. At each cell are extracted imposing a minimum response.
   # Firstly we impose iniTh. If no corners are detected we impose a lower value minTh
   # You can lower these values if your images have low contrast
-  iniTh: 0.08
-  minTh: 0.04
+  iniTh: 0.0024
+  minTh: 0.0012
 
 #--------------------------------------------------------------------------------------------
 # ORB Parameters

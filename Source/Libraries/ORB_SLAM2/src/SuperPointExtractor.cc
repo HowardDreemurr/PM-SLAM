@@ -64,6 +64,9 @@
 #include <stdexcept>
 #include <algorithm>
 
+#include "Perf.h"
+
+
 namespace ORB_SLAM2 {
 
 using SuperSLAM::SPDetector;
@@ -72,8 +75,8 @@ SuperPointExtractor::SuperPointExtractor(
     const cv::FileNode& cfg, bool init)
   : FeatureExtractor(cfg, init)
 {
-  iniTh        = cfg["iniTh"].empty()     ? 0.4f   : (float)cfg["iniTh"];
-  minTh        = cfg["minTh"].empty()     ? 0.2f   : (float)cfg["minTh"];
+  iniTh        = cfg["iniTh"].empty()     ? 0.08f   : (float)cfg["iniTh"];
+  minTh        = cfg["minTh"].empty()     ? 0.04f   : (float)cfg["minTh"];
   mUseCUDA     = cfg["use_cuda"].empty()  ? false  : ((int)cfg["use_cuda"] != 0);
   mUseNMS      = cfg["nms"].empty()       ? true   : ((int)cfg["nms"] != 0);
   mWeightsPath = cfg["weights"].empty()   ? std::string() : (std::string)cfg["weights"];
@@ -98,7 +101,6 @@ SuperPointExtractor::SuperPointExtractor(
   if (mUseCUDA) mModel->to(torch::kCUDA);
 
   mDetector = std::make_unique<SPDetector>(mModel, mUseCUDA);
-  std::cerr << "SPDetector ctor\n";
 }
 
 void SuperPointExtractor::InfoConfigs() {
@@ -243,6 +245,8 @@ void SuperPointExtractor::operator()(cv::InputArray image,
                                              std::vector<cv::KeyPoint>& keypoints,
                                              cv::OutputArray descriptors)
 {
+  ORB_SLAM2::Perf::Scoped __perf__("SuperPoint Extract");
+
   keypoints.clear();
   descriptors.release();
 

@@ -78,6 +78,7 @@ class SPDetector {
   torch::Tensor mProb;
   torch::Tensor mDesc;
   torch::DeviceType m_device;
+  torch::Tensor mProbCPU;
 };
 
 }  // namespace SuperSLAM
