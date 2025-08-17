@@ -30,7 +30,7 @@ Camera.RGB: 1
 # You can specify one or more extractors (e.g., [ ORB, AKAZE ])
 # The system will initialize and run each extractor in parallel
 
-Extractors: [ ORB, AKAZE ]
+Extractors: [ SuperPoint ]
 
 
 Vocabularies:
@@ -41,6 +41,42 @@ Vocabularies:
   BRISK: "/voc/brisk_cv.fbow"
   SIFT: "/voc/sift_cv.fbow"
   KAZE: "/voc/kaze_cv.fbow"
+  SuperPoint: "/voc/superpoint.fbow"
+
+#--------------------------------------------------------------------------------------------
+# SuperPoint Parameters
+#--------------------------------------------------------------------------------------------
+SuperPoint:
+  # Essential: Lower/Upper distance threshold for descriptor matching.
+  # Matches with distance below this value are considered high-quality/too-weak.
+  TH_LOW: 0.7       # Low threshold for filtering out poor-quality matches.
+  TH_HIGH: 0.9     # High threshold for accepting confident matches.
+
+  # Essential: Number of features per image
+  nFeatures: 1000
+
+  # Essential: Number of levels in the scale pyramid.
+  # Number of nonlinear diffusion pyramid levels for scale detection.
+  nLevels: 4
+
+  # Essential: Scale factor between levels in the scale pyramid
+  scaleFactor: 1.2
+
+  # SuperPoint Extractor: Whether to use CUDA
+  use_cuda: 1
+
+  # SuperPoint Extractor: Whether to use NMS
+  nms: 1
+
+  # Essential: SuperPoint Extractor: The path to the LibTorch DNN weights (.py)
+  weights: "../var/lib/orbslam2/superpoint_v1.pt"
+
+  # SuperPoint Extractor: Griding threshold
+  # Image is divided in a grid. At each cell are extracted imposing a minimum response.
+  # Firstly we impose iniTh. If no corners are detected we impose a lower value minTh
+  # You can lower these values if your images have low contrast
+  iniTh: 0.08
+  minTh: 0.04
 
 #--------------------------------------------------------------------------------------------
 # ORB Parameters
