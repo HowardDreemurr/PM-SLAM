@@ -32,61 +32,46 @@
 #include <string>
 #include <list>
 
-#pragma once
-
-#include "FeatureExtractor.h"
-#include "SuperPoint.h"
-#include "FeatureExtractorFactory.h"
-
-#include <list>
-#include <memory>
-#include <string>
-#include <vector>
-#include <opencv2/core.hpp>
-
 namespace ORB_SLAM2 {
 
-class SuperPointExtractor final : public FeatureExtractor {
-public:
-    SuperPointExtractor(const cv::FileNode& cfg, bool init);
+    class SuperPointExtractor : public FeatureExtractor {
+    public:
+        SuperPointExtractor(const cv::FileNode& cfg, bool init);
 
-    void InfoConfigs() override;
+        void InfoConfigs() override;
 
-    void operator()(cv::InputArray image,
-                    cv::InputArray mask,
-                    std::vector<cv::KeyPoint>& keypoints,
-                    cv::OutputArray descriptors) override;
+        void operator()(cv::InputArray image,
+                        cv::InputArray mask,
+                        std::vector<cv::KeyPoint>& keypoints,
+                        cv::OutputArray descriptors) override;
 
-    static void ForceLinking();
+        static void ForceLinking();
 
-private:
-    struct ExtractorNode {
-        std::vector<cv::KeyPoint> vKeys;
-        cv::Point2i UL, UR, BL, BR;
-        std::list<ExtractorNode>::iterator lit;
-        bool bNoMore = false;
-        void DivideNode(ExtractorNode& n1, ExtractorNode& n2,
-                        ExtractorNode& n3, ExtractorNode& n4);
+    private:
+        struct ExtractorNode {
+            std::vector<cv::KeyPoint> vKeys;
+            cv::Point2i UL, UR, BL, BR;
+            std::list<ExtractorNode>::iterator lit;
+            bool bNoMore = false;
+
+            void DivideNode(ExtractorNode& n1, ExtractorNode& n2,
+                            ExtractorNode& n3, ExtractorNode& n4);
+        };
+
+        std::vector<cv::KeyPoint> DistributeOctTree(
+            const std::vector<cv::KeyPoint>& vToDistributeKeys,
+            const int& minX, const int& maxX, const int& minY, const int& maxY,
+            const int& nFeatures, const int& level);
+
+    private:
+		std::unique_ptr<SuperSLAM::SPDetector> mDetector;
+        std::shared_ptr<SuperSLAM::SuperPoint> mModel;
+        float iniTh;
+        float minTh;
+        bool  mUseCUDA = false;
+        bool  mUseNMS = true;
+        std::string mWeightsPath;
     };
-
-    std::vector<cv::KeyPoint> DistributeOctTree(
-        const std::vector<cv::KeyPoint>& vToDistributeKeys,
-        const int& minX, const int& maxX,
-        const int& minY, const int& maxY,
-        const int& nFeatures, const int& level);
-
-    void ComputeKeyPointsSPStyle(
-        std::vector<std::vector<cv::KeyPoint>>& allKeypoints,
-        cv::Mat& outDesc);
-
-private:
-    std::shared_ptr<SuperSLAM::SuperPoint> mModel;
-    bool  mUseCUDA = false;
-    bool  mUseNMS  = true;
-    float mIniThFAST = 0.4f;   // same semantics as SPextractor::iniThFAST
-    float mMinThFAST = 0.2f;   // same semantics as SPextractor::minThFAST
-    std::string mWeightsPath;
-};
 
 } // namespace ORB_SLAM2
 

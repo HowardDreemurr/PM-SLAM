@@ -209,7 +209,7 @@ void SPDetector::detect(cv::Mat& img) {
 void SPDetector::getKeyPoints(float threshold, int iniX, int maxX, int iniY,
                               int maxY, std::vector<cv::KeyPoint>& keypoints,
                               bool nms) {
-  auto prob = mProb.slice(0, iniY, maxY).slice(1, iniX, maxX);  // [h, w]
+  auto prob = mProb.slice(0, iniY, maxY).slice(1, iniX, maxX).to(torch::kCPU).contiguous();
   auto kpts = (prob > threshold);
   kpts = torch::nonzero(kpts);  // [n_keypoints, 2]  (y, x)
 

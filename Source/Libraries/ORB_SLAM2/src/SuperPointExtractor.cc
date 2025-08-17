@@ -58,104 +58,98 @@
  */
 
 #include "SuperPointExtractor.h"
-
 #include <opencv2/imgproc.hpp>
 #include <torch/torch.h>
-#include <algorithm>
 #include <iostream>
 #include <stdexcept>
+#include <algorithm>
 
 namespace ORB_SLAM2 {
 
 using SuperSLAM::SPDetector;
 
-SuperPointExtractor::SuperPointExtractor(const cv::FileNode& cfg, bool init)
-    : FeatureExtractor(cfg, init)
+SuperPointExtractor::SuperPointExtractor(
+    const cv::FileNode& cfg, bool init)
+  : FeatureExtractor(cfg, init)
 {
-    mIniThFAST = !cfg["iniThFAST"].empty() ? float(cfg["iniThFAST"])
-                  : (!cfg["iniTh"].empty() ? float(cfg["iniTh"]) : 0.4f);
-    mMinThFAST = !cfg["minThFAST"].empty() ? float(cfg["minThFAST"])
-                  : (!cfg["minTh"].empty() ? float(cfg["minTh"]) : 0.2f);
-    mUseCUDA   = !cfg["use_cuda"].empty()  && int(cfg["use_cuda"]) != 0;
-    mUseNMS    =  cfg["nms"].empty() ? true : (int(cfg["nms"]) != 0);
-    if (!cfg["weights"].empty()) mWeightsPath = (std::string)cfg["weights"];
+  iniTh        = cfg["iniTh"].empty()     ? 0.4f   : (float)cfg["iniTh"];
+  minTh        = cfg["minTh"].empty()     ? 0.2f   : (float)cfg["minTh"];
+  mUseCUDA     = cfg["use_cuda"].empty()  ? false  : ((int)cfg["use_cuda"] != 0);
+  mUseNMS      = cfg["nms"].empty()       ? true   : ((int)cfg["nms"] != 0);
+  mWeightsPath = cfg["weights"].empty()   ? std::string() : (std::string)cfg["weights"];
 
-    mModel = std::make_shared<SuperSLAM::SuperPoint>();
-
+  mModel = std::make_shared<SuperSLAM::SuperPoint>();
+  if (!mWeightsPath.empty()) {
     try {
-        if (!mWeightsPath.empty()) {
-            try {
-                torch::load(mModel, mWeightsPath);
-            } catch (...) {
-                torch::serialize::InputArchive ar;
-                ar.load_from(mWeightsPath);
-                mModel->load(ar);
-            }
-        } else {
-            std::cerr << "[SuperPoint] WARNING: empty weights path; using random weights.\n";
-        }
+      try {
+        torch::load(mModel, mWeightsPath);
+      } catch (...) {
+        torch::serialize::InputArchive ar;
+        ar.load_from(mWeightsPath);
+        mModel->load(ar);
+      }
     } catch (const std::exception& e) {
-        throw std::runtime_error(std::string("[SuperPoint] load weights failed: ") + e.what());
+      throw std::runtime_error(std::string("[SuperPoint] load weights failed: ") + e.what());
     }
-    mModel->eval();
-    if (mUseCUDA) mModel->to(torch::kCUDA);
+  } else {
+    std::cerr << "[SuperPoint] WARNING: empty weights path, using random weights!\n";
+  }
+  mModel->eval();
+  if (mUseCUDA) mModel->to(torch::kCUDA);
+
+  mDetector = std::make_unique<SPDetector>(mModel, mUseCUDA);
+  std::cerr << "SPDetector ctor\n";
 }
 
 void SuperPointExtractor::InfoConfigs() {
-    std::cout << "- Number of Features: " << nfeatures << std::endl;
-    std::cout << "- Scale Levels: " << nlevels << std::endl;
-    std::cout << "- Scale Factor: " << scaleFactor << std::endl;
-    std::cout << "- Use CUDA: " << mUseCUDA << std::endl;
-    std::cout << "- Use NMS: " << mUseNMS << std::endl;
-    std::cout << "- iniThFAST: " << mIniThFAST << std::endl;
-    std::cout << "- minThFAST: " << mMinThFAST << std::endl;
+  std::cout << "- Number of Features: " << nfeatures << std::endl;
+  std::cout << "- Scale Levels: " << nlevels << std::endl;
+  std::cout << "- Scale Factor: " << scaleFactor << std::endl;
+  std::cout << "- Use CUDA: " << mUseCUDA << std::endl;
+  std::cout << "- Use NMS: " << mUseNMS << std::endl;
+  std::cout << "- iniTh: " << iniTh << std::endl;
+  std::cout << "- minTh: " << minTh << std::endl;
 }
 
 void SuperPointExtractor::ExtractorNode::DivideNode(
     ExtractorNode& n1, ExtractorNode& n2, ExtractorNode& n3, ExtractorNode& n4)
 {
-    const int halfX = std::ceil(static_cast<float>(UR.x - UL.x) / 2.f);
-    const int halfY = std::ceil(static_cast<float>(BR.y - UL.y) / 2.f);
+  const int halfX = (UR.x - UL.x) / 2;
+  const int halfY = (BR.y - UL.y) / 2;
 
-    n1.UL = UL;
-    n1.UR = cv::Point2i(UL.x + halfX, UL.y);
-    n1.BL = cv::Point2i(UL.x, UL.y + halfY);
-    n1.BR = cv::Point2i(UL.x + halfX, UL.y + halfY);
-    n1.vKeys.reserve(vKeys.size());
+  n1.UL = UL;
+  n1.UR = cv::Point2i(UL.x + halfX, UL.y);
+  n1.BL = cv::Point2i(UL.x, UL.y + halfY);
+  n1.BR = cv::Point2i(UL.x + halfX, UL.y + halfY);
 
-    n2.UL = n1.UR;
-    n2.UR = UR;
-    n2.BL = n1.BR;
-    n2.BR = cv::Point2i(UR.x, UL.y + halfY);
-    n2.vKeys.reserve(vKeys.size());
+  n2.UL = n1.UR;
+  n2.UR = UR;
+  n2.BL = n1.BR;
+  n2.BR = cv::Point2i(UR.x, UL.y + halfY);
 
-    n3.UL = n1.BL;
-    n3.UR = n1.BR;
-    n3.BL = BL;
-    n3.BR = cv::Point2i(n1.BR.x, BL.y);
-    n3.vKeys.reserve(vKeys.size());
+  n3.UL = n1.BL;
+  n3.UR = n1.BR;
+  n3.BL = BL;
+  n3.BR = cv::Point2i(UL.x + halfX, BL.y);
 
-    n4.UL = n3.UR;
-    n4.UR = n2.BR;
-    n4.BL = n3.BR;
-    n4.BR = BR;
-    n4.vKeys.reserve(vKeys.size());
+  n4.UL = n3.UR;
+  n4.UR = n2.BR;
+  n4.BL = n3.BR;
+  n4.BR = BR;
 
-    for (const auto& kp : vKeys) {
-        if (kp.pt.x < n1.UR.x) {
-            if (kp.pt.y < n1.BR.y) n1.vKeys.push_back(kp);
-            else                    n3.vKeys.push_back(kp);
-        } else if (kp.pt.y < n1.BR.y) {
-            n2.vKeys.push_back(kp);
-        } else {
-            n4.vKeys.push_back(kp);
-        }
+  for (const auto& kp : vKeys) {
+    if (kp.pt.x < n1.UR.x) {
+      if (kp.pt.y < n1.BR.y) n1.vKeys.push_back(kp);
+      else n3.vKeys.push_back(kp);
+    } else {
+      if (kp.pt.y < n1.BR.y) n2.vKeys.push_back(kp);
+      else                    n4.vKeys.push_back(kp);
     }
-
-    if (n1.vKeys.size() == 1) n1.bNoMore = true;
-    if (n2.vKeys.size() == 1) n2.bNoMore = true;
-    if (n3.vKeys.size() == 1) n3.bNoMore = true;
-    if (n4.vKeys.size() == 1) n4.bNoMore = true;
+  }
+  n1.bNoMore = (n1.vKeys.size() <= 1);
+  n2.bNoMore = (n2.vKeys.size() <= 1);
+  n3.bNoMore = (n3.vKeys.size() <= 1);
+  n4.bNoMore = (n4.vKeys.size() <= 1);
 }
 
 std::vector<cv::KeyPoint> SuperPointExtractor::DistributeOctTree(
@@ -163,301 +157,221 @@ std::vector<cv::KeyPoint> SuperPointExtractor::DistributeOctTree(
     const int& maxX, const int& minY, const int& maxY, const int& N,
     const int& level)
 {
-    // Compute how many initial nodes
-    int nIni = std::round(static_cast<float>(maxX - minX) / (maxY - minY));
-    nIni = std::max(1, nIni);
-    const float hX = static_cast<float>(maxX - minX) / nIni;
+  if ((int)vToDistributeKeys.size() <= N) return vToDistributeKeys;
 
-    std::list<ExtractorNode> lNodes;
-    std::vector<ExtractorNode*> vpIniNodes(nIni);
+  int nIni = std::round(static_cast<float>(maxX - minX) / (maxY - minY));
+  if (nIni < 1) nIni = 1;
+  const float hX = static_cast<float>(maxX - minX) / nIni;
 
-    for (int i = 0; i < nIni; i++) {
-        ExtractorNode ni;
-        ni.UL = cv::Point2i(hX * static_cast<float>(i), 0);
-        ni.UR = cv::Point2i(hX * static_cast<float>(i + 1), 0);
-        ni.BL = cv::Point2i(ni.UL.x, maxY - minY);
-        ni.BR = cv::Point2i(ni.UR.x, maxY - minY);
-        ni.vKeys.reserve(vToDistributeKeys.size());
-        lNodes.push_back(ni);
-        vpIniNodes[i] = &lNodes.back();
+  std::list<ExtractorNode> lNodes;
+  std::vector<ExtractorNode*> vpIniNodes; vpIniNodes.resize(nIni);
+
+  for (int i = 0; i < nIni; i++) {
+    ExtractorNode ni;
+    ni.UL = cv::Point2i(hX * static_cast<float>(i), 0);
+    ni.UR = cv::Point2i(hX * static_cast<float>(i + 1), 0);
+    ni.BL = cv::Point2i(ni.UL.x, maxY - minY);
+    ni.BR = cv::Point2i(ni.UR.x, maxY - minY);
+    ni.vKeys.reserve(vToDistributeKeys.size());
+    lNodes.push_back(ni);
+    vpIniNodes[i] = &lNodes.back();
+  }
+
+  for (const auto& kp : vToDistributeKeys) {
+    int idx = std::min((int)std::floor((kp.pt.x - minX) / hX), nIni - 1);
+    if (idx < 0) idx = 0;
+    if (idx >= nIni) idx = nIni - 1;
+    vpIniNodes[idx]->vKeys.push_back(kp);
+  }
+
+  auto it = lNodes.begin();
+  while (it != lNodes.end()) {
+    if (it->vKeys.size() == 1) { it->bNoMore = true; ++it; continue; }
+    if (it->vKeys.empty()) { it = lNodes.erase(it); continue; }
+    ++it;
+  }
+
+  bool bFinish = false;
+  int nNodes = (int)lNodes.size();
+  std::vector<std::pair<int, std::list<ExtractorNode>::iterator>> vSizeAndPointer;
+  vSizeAndPointer.reserve(lNodes.size() * 4);
+
+  while (!bFinish) {
+    int prevSize = (int)lNodes.size();
+    it = lNodes.begin();
+    vSizeAndPointer.clear();
+
+    while (it != lNodes.end()) {
+      if (it->bNoMore) { ++it; continue; }
+
+      ExtractorNode n1, n2, n3, n4;
+      it->DivideNode(n1, n2, n3, n4);
+
+      if (!n1.vKeys.empty()) { lNodes.push_front(n1); lNodes.begin()->lit = lNodes.begin(); }
+      if (!n2.vKeys.empty()) { lNodes.push_front(n2); lNodes.begin()->lit = lNodes.begin(); }
+      if (!n3.vKeys.empty()) { lNodes.push_front(n3); lNodes.begin()->lit = lNodes.begin(); }
+      if (!n4.vKeys.empty()) { lNodes.push_front(n4); lNodes.begin()->lit = lNodes.begin(); }
+
+      it = lNodes.erase(it);
+      if ((int)lNodes.size() >= N) break;
     }
 
-    for (const auto& kp : vToDistributeKeys) {
-        int idx = std::min(int((kp.pt.x - minX) / hX), nIni - 1);
-        idx = std::max(0, idx);
-        vpIniNodes[idx]->vKeys.push_back(kp);
+    if ((int)lNodes.size() >= N || (int)lNodes.size() == prevSize) {
+      bFinish = true;
     }
+  }
 
-    auto lit = lNodes.begin();
-    while (lit != lNodes.end()) {
-        if (lit->vKeys.size() == 1) { lit->bNoMore = true; ++lit; }
-        else if (lit->vKeys.empty()) { lit = lNodes.erase(lit); }
-        else { ++lit; }
-    }
+  std::vector<cv::KeyPoint> vResultKeys; vResultKeys.reserve(N);
+  for (auto lit = lNodes.begin(); lit != lNodes.end(); ++lit) {
+    auto& vNodeKeys = lit->vKeys;
+    if (vNodeKeys.empty()) continue;
+    auto kp = *std::max_element(vNodeKeys.begin(), vNodeKeys.end(),
+                                [](const cv::KeyPoint& a, const cv::KeyPoint& b){
+                                  return a.response < b.response;
+                                });
+    vResultKeys.push_back(kp);
+  }
 
-    bool bFinish = false;
-    std::vector<std::pair<int, ExtractorNode*>> vSizeAndPointerToNode;
-    vSizeAndPointerToNode.reserve(lNodes.size() * 4);
-
-    while (!bFinish) {
-        const int prevSize = (int)lNodes.size();
-        lit = lNodes.begin();
-        int nToExpand = 0;
-        vSizeAndPointerToNode.clear();
-
-        while (lit != lNodes.end()) {
-            if (lit->bNoMore) { ++lit; continue; }
-
-            ExtractorNode n1, n2, n3, n4;
-            lit->DivideNode(n1, n2, n3, n4);
-
-            if (!n1.vKeys.empty()) {
-                lNodes.push_front(n1);
-                if (n1.vKeys.size() > 1) {
-                    nToExpand++;
-                    vSizeAndPointerToNode.emplace_back((int)n1.vKeys.size(), &lNodes.front());
-                    lNodes.front().lit = lNodes.begin();
-                }
-            }
-            if (!n2.vKeys.empty()) {
-                lNodes.push_front(n2);
-                if (n2.vKeys.size() > 1) {
-                    nToExpand++;
-                    vSizeAndPointerToNode.emplace_back((int)n2.vKeys.size(), &lNodes.front());
-                    lNodes.front().lit = lNodes.begin();
-                }
-            }
-            if (!n3.vKeys.empty()) {
-                lNodes.push_front(n3);
-                if (n3.vKeys.size() > 1) {
-                    nToExpand++;
-                    vSizeAndPointerToNode.emplace_back((int)n3.vKeys.size(), &lNodes.front());
-                    lNodes.front().lit = lNodes.begin();
-                }
-            }
-            if (!n4.vKeys.empty()) {
-                lNodes.push_front(n4);
-                if (n4.vKeys.size() > 1) {
-                    nToExpand++;
-                    vSizeAndPointerToNode.emplace_back((int)n4.vKeys.size(), &lNodes.front());
-                    lNodes.front().lit = lNodes.begin();
-                }
-            }
-
-            lit = lNodes.erase(lit);
-            if ((int)lNodes.size() >= N) break;
-        }
-
-        if ((int)lNodes.size() >= N || (int)lNodes.size() == prevSize) {
-            bFinish = true;
-        } else if (((int)lNodes.size() + nToExpand * 3) > N) {
-            while (!bFinish) {
-                int prevSize2 = (int)lNodes.size();
-                auto vPrev = vSizeAndPointerToNode;
-                vSizeAndPointerToNode.clear();
-
-                std::sort(vPrev.begin(), vPrev.end());
-                for (int j = (int)vPrev.size() - 1; j >= 0; --j) {
-                    ExtractorNode n1, n2, n3, n4;
-                    vPrev[j].second->DivideNode(n1, n2, n3, n4);
-
-                    if (!n1.vKeys.empty()) {
-                        lNodes.push_front(n1);
-                        if (n1.vKeys.size() > 1) {
-                            vSizeAndPointerToNode.emplace_back((int)n1.vKeys.size(), &lNodes.front());
-                            lNodes.front().lit = lNodes.begin();
-                        }
-                    }
-                    if (!n2.vKeys.empty()) {
-                        lNodes.push_front(n2);
-                        if (n2.vKeys.size() > 1) {
-                            vSizeAndPointerToNode.emplace_back((int)n2.vKeys.size(), &lNodes.front());
-                            lNodes.front().lit = lNodes.begin();
-                        }
-                    }
-                    if (!n3.vKeys.empty()) {
-                        lNodes.push_front(n3);
-                        if (n3.vKeys.size() > 1) {
-                            vSizeAndPointerToNode.emplace_back((int)n3.vKeys.size(), &lNodes.front());
-                            lNodes.front().lit = lNodes.begin();
-                        }
-                    }
-                    if (!n4.vKeys.empty()) {
-                        lNodes.push_front(n4);
-                        if (n4.vKeys.size() > 1) {
-                            vSizeAndPointerToNode.emplace_back((int)n4.vKeys.size(), &lNodes.front());
-                            lNodes.front().lit = lNodes.begin();
-                        }
-                    }
-
-                    lNodes.erase(vPrev[j].second->lit);
-                    if ((int)lNodes.size() >= N) break;
-                }
-
-                if ((int)lNodes.size() >= N || (int)lNodes.size() == prevSize2)
-                    bFinish = true;
-            }
-        }
-    }
-
-    // Retain the best point in each node
-    std::vector<cv::KeyPoint> vResultKeys;
-    vResultKeys.reserve(N);
-    for (auto it = lNodes.begin(); it != lNodes.end(); ++it) {
-        auto& vNodeKeys = it->vKeys;
-        if (vNodeKeys.empty()) continue;
-        cv::KeyPoint* pKP = &vNodeKeys[0];
-        float maxResponse = pKP->response;
-        for (size_t k = 1; k < vNodeKeys.size(); ++k) {
-            if (vNodeKeys[k].response > maxResponse) {
-                pKP = &vNodeKeys[k];
-                maxResponse = vNodeKeys[k].response;
-            }
-        }
-        vResultKeys.push_back(*pKP);
-    }
-    return vResultKeys;
-}
-
-void SuperPointExtractor::ComputeKeyPointsSPStyle(
-    std::vector<std::vector<cv::KeyPoint>>& allKeypoints,
-    cv::Mat& outDesc)
-{
-    allKeypoints.clear();
-    allKeypoints.resize(nlevels);
-    std::vector<cv::Mat> vDesc; vDesc.reserve(nlevels);
-
-    SPDetector detector(mModel, mUseCUDA);
-    const float W = 30.f;
-
-    torch::NoGradGuard _no_grad;
-    for (int level = 0; level < nlevels; ++level) {
-        const cv::Mat& imL = mvImagePyramid[level];
-        detector.detect(const_cast<cv::Mat&>(imL));
-
-        // Valid area (coordinate system without borders)
-        const int minBorderX = EDGE_THRESHOLD - 3;
-        const int minBorderY = minBorderX;
-        const int maxBorderX = imL.cols - EDGE_THRESHOLD + 3;
-        const int maxBorderY = imL.rows - EDGE_THRESHOLD + 3;
-
-        const float width  = (maxBorderX - minBorderX);
-        const float height = (maxBorderY - minBorderY);
-
-        const int nCols = std::max(1, (int)std::floor(width  / W));
-        const int nRows = std::max(1, (int)std::floor(height / W));
-        const int wCell = std::max(1, (int)std::ceil(width  / nCols));
-        const int hCell = std::max(1, (int)std::ceil(height / nRows));
-
-        std::vector<cv::KeyPoint> vToDistributeKeys;
-        vToDistributeKeys.reserve(nfeatures * 10);
-
-        for (int i = 0; i < nRows; ++i) {
-            const float iniY = minBorderY + i * hCell;
-            float maxY = iniY + hCell + 6;
-            if (iniY >= maxBorderY - 3) continue;
-            if (maxY > maxBorderY) maxY = maxBorderY;
-
-            for (int j = 0; j < nCols; ++j) {
-                const float iniX = minBorderX + j * wCell;
-                float maxX = iniX + wCell + 6;
-                if (iniX >= maxBorderX - 6) continue;
-                if (maxX > maxBorderX) maxX = maxBorderX;
-
-                std::vector<cv::KeyPoint> vCell;
-                detector.getKeyPoints(mIniThFAST, iniX, maxX, iniY, maxY, vCell, mUseNMS);
-                if (vCell.empty())
-                    detector.getKeyPoints(mMinThFAST, iniX, maxX, iniY, maxY, vCell, mUseNMS);
-
-                for (auto& kp : vCell) {
-                    kp.pt.x += j * wCell;
-                    kp.pt.y += i * hCell;
-                    vToDistributeKeys.emplace_back(std::move(kp));
-                }
-            }
-        }
-
-        // Octree homogenization + limit number
-        auto& keypointsL = allKeypoints[level];
-        keypointsL.reserve(mnFeaturesPerLevel[level]);
-        keypointsL = DistributeOctTree(vToDistributeKeys,
-                                       minBorderX, maxBorderX,
-                                       minBorderY, maxBorderY,
-                                       mnFeaturesPerLevel[level], level);
-
-        const int scaledPatch = PATCH_SIZE * mvScaleFactor[level];
-        for (auto& kp : keypointsL) {
-            kp.pt.x += minBorderX;
-            kp.pt.y += minBorderY;
-            kp.octave = level;
-            kp.size   = (float)scaledPatch;
-            kp.angle  = 0.f;
-        }
-
-        cv::Mat descL;
-        detector.computeDescriptors(keypointsL, descL);
-        vDesc.emplace_back(std::move(descL));
-    }
-
-    if (!vDesc.empty()) cv::vconcat(vDesc, outDesc);
-    else outDesc.release();
+  if ((int)vResultKeys.size() > N) {
+    cv::KeyPointsFilter::retainBest(vResultKeys, N);
+  }
+  return vResultKeys;
 }
 
 void SuperPointExtractor::operator()(cv::InputArray image,
-                                     cv::InputArray mask,
-                                     std::vector<cv::KeyPoint>& keypoints,
-                                     cv::OutputArray descriptors)
+                                             cv::InputArray mask,
+                                             std::vector<cv::KeyPoint>& keypoints,
+                                             cv::OutputArray descriptors)
 {
-    keypoints.clear();
-    descriptors.release();
-    if (image.empty()) return;
+  keypoints.clear();
+  descriptors.release();
 
-    cv::Mat im = image.getMat();
-    cv::Mat gray;
-    if (im.channels() > 1) cv::cvtColor(im, gray, cv::COLOR_BGR2GRAY);
-    else gray = im;
-    // Base pyramid (consistent EDGE_THRESHOLD/PATCH_SIZE with ORB-SLAM2)
-    FeatureExtractor::ComputePyramid(gray);
+  if (image.empty()) return;
+  cv::Mat im = image.getMat();
+  cv::Mat gray;
+  if (im.channels() > 1) cv::cvtColor(im, gray, cv::COLOR_BGR2GRAY);
+  else gray = im;
 
-    std::vector<std::vector<cv::KeyPoint>> allKeypoints;
-    cv::Mat descAll;
-    ComputeKeyPointsSPStyle(allKeypoints, descAll);
+  FeatureExtractor::ComputePyramid(gray);
 
-    int total = 0;
-    for (int l = 0; l < nlevels; ++l) total += (int)allKeypoints[l].size();
-    if (total == 0) { descriptors.release(); keypoints.clear(); return; }
+  std::vector<std::vector<cv::KeyPoint>> allKeypoints(nlevels);
+  std::vector<cv::Mat> vDesc; vDesc.reserve(nlevels);
 
-    // copy descriptors
-    descriptors.create(total, descAll.cols, CV_32F);
-    descAll.copyTo(descriptors.getMat());
+  const float W = 30.f;
+  torch::NoGradGuard _no_grad;
 
-    // aggregate keypoints (rescale to original image)
-    keypoints.reserve(total);
-    for (int level = 0; level < nlevels; ++level) {
-        auto& vK = allKeypoints[level];
-        if (vK.empty()) continue;
-        if (level != 0) {
-            const float s = mvScaleFactor[level];
-            for (auto& kp : vK) kp.pt *= s;
+  for (int level = 0; level < nlevels; ++level)
+  {
+    const cv::Mat& imL = mvImagePyramid[level];
+
+    auto& detector = *mDetector;
+    detector.detect(const_cast<cv::Mat&>(imL));
+
+    // Valid area (coordinate system without borders)
+    const int minBorderX = EDGE_THRESHOLD - 3;
+    const int minBorderY = minBorderX;
+    const int maxBorderX = imL.cols - EDGE_THRESHOLD + 3;
+    const int maxBorderY = imL.rows - EDGE_THRESHOLD + 3;
+
+    const float width  = (maxBorderX - minBorderX);
+    const float height = (maxBorderY - minBorderY);
+
+    const int nCols = std::max(1, (int)std::floor(width  / W));
+    const int nRows = std::max(1, (int)std::floor(height / W));
+    const int wCell = std::max(1, (int)std::ceil(width  / nCols));
+    const int hCell = std::max(1, (int)std::ceil(height / nRows));
+
+    std::vector<cv::KeyPoint> vToDistributeKeys; vToDistributeKeys.reserve(nfeatures * 8);
+
+    // Take points by grid (first high threshold then low threshold)
+    for (int i = 0; i < nRows; ++i) {
+      const float iniY = minBorderY + i * hCell;
+      float maxY = iniY + hCell + 6;
+      if (iniY >= maxBorderY - 3) continue;
+      if (maxY > maxBorderY) maxY = maxBorderY;
+
+      for (int j = 0; j < nCols; ++j) {
+        const float iniX = minBorderX + j * wCell;
+        float maxX = iniX + wCell + 6;
+        if (iniX >= maxBorderX - 6) continue;
+        if (maxX > maxBorderX) maxX = maxBorderX;
+
+        std::vector<cv::KeyPoint> vCell;
+
+        detector.getKeyPoints(iniTh, iniX, maxX, iniY, maxY, vCell, mUseNMS);
+        if (vCell.empty())
+          detector.getKeyPoints(minTh, iniX, maxX, iniY, maxY, vCell, mUseNMS);
+
+        for (auto& kp : vCell) {
+          kp.pt.x += j * wCell;
+          kp.pt.y += i * hCell;
+          vToDistributeKeys.emplace_back(std::move(kp));
         }
-        keypoints.insert(keypoints.end(), vK.begin(), vK.end());
+      }
     }
+
+    // OctTree homogenization + limit number
+    auto& keypointsL = allKeypoints[level];
+    const int roiW = maxBorderX - minBorderX;
+    const int roiH = maxBorderY - minBorderY;
+    keypointsL = DistributeOctTree(vToDistributeKeys,
+                  0, roiW, 0, roiH,
+                  mnFeaturesPerLevel[level], level);
+
+    // Add back border offset, set octave/size
+    const int scaledPatch = PATCH_SIZE * mvScaleFactor[level];
+    for (auto& kp : keypointsL) {
+      kp.pt.x += minBorderX;
+      kp.pt.y += minBorderY;
+      kp.octave = level;
+      kp.size   = (float)scaledPatch;
+      kp.angle  = 0.f;
+    }
+
+    // Current layer's descriptors (order corresponds to keypointsL)
+    cv::Mat descL;
+    detector.computeDescriptors(keypointsL, descL);
+    vDesc.emplace_back(std::move(descL));
+  }
+
+  // Merge descriptors of all layers
+  cv::Mat descAll;
+  if (!vDesc.empty()) cv::vconcat(vDesc, descAll);
+
+  // Count the total features and return to the original scale coordinates
+  int total = 0;
+  for (int l = 0; l < nlevels; ++l) total += (int)allKeypoints[l].size();
+  if (total == 0) { descriptors.release(); keypoints.clear(); return; }
+
+  descriptors.create(total, descAll.cols, CV_32F);
+  descAll.copyTo(descriptors.getMat());
+
+  keypoints.clear(); keypoints.reserve(total);
+  for (int level = 0; level < nlevels; ++level) {
+    auto& vK = allKeypoints[level];
+    if (vK.empty()) continue;
+    if (level != 0) {
+      const float s = mvScaleFactor[level];
+      for (auto& kp : vK) kp.pt *= s;
+    }
+    keypoints.insert(keypoints.end(), vK.begin(), vK.end());
+  }
 }
 
 void SuperPointExtractor::ForceLinking() {}
 
 } // namespace ORB_SLAM2
 
-// ---------- Factory registrar ----------
+
 namespace {
 struct SuperPointRegister {
-    SuperPointRegister() {
-        std::cout << "Registering SuperPointExtractor..." << std::endl;
-        ORB_SLAM2::FeatureExtractorFactory::Instance().Register("SuperPoint",
-            [](const cv::FileNode& cfg, const bool init){
-                return new ORB_SLAM2::SuperPointExtractor(cfg, init);
-            });
-    }
+  SuperPointRegister() {
+    std::cout << "Registering SuperPointExtractor..." << std::endl;
+    ORB_SLAM2::FeatureExtractorFactory::Instance().Register("SuperPoint",
+      [](const cv::FileNode& cfg, const bool init){
+        return new ORB_SLAM2::SuperPointExtractor(cfg, init);
+      });
+  }
 };
-static SuperPointRegister g_registrar;
+SuperPointRegister SuperPointRegisterInstance;
 }
