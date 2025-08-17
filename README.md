@@ -1,3 +1,52 @@
+# Point-based Multi-feature SLAM
+
+PM-SLAM (Point-based Multi-feature SLAM) is a research-oriented extension of ORB-SLAM2 that supports 6 feature extractors running in parallel, and optimised pipline/structure for easier integration with new feature extractors. 
+
+* ORB
+* AKAZE
+* BRISK
+* KAZE
+* SIFT
+* SuperPoint
+
+The system integrates the multi-channel mapping and tracking architecture adapted from GCNv2_SLAM (https://github.com/JackieZJQ/GCNv2_SLAM/tree/dev).
+In addition, the SuperPoint feature extractor has been ported from SuperSLAM(https://github.com/adityamwagh/SuperSLAM) and optimized with CUDA for real-time performance.
+
+## Build instructions:
+
+You will need to clone this repository using `git clone https://github.com/HowardDreemurr/PM-SLAM.git`
+
+The build process follows the same steps as the original ORB-SLAM2 below.
+
+The main difference is that SuperPoint requires LibTorch support, download the LibTorch from the official PyTorch site (https://pytorch.org/get-started/locally/).
+
+**Install LibTorch (For CPU/CUDA):**
+
+* Extract it into "/opt/": `sudo unzip <Downloaded Torch ZIP> -d /opt/`
+* Add environment variables in ~/.bashrc:
+```bash
+echo 'export Torch_DIR=/opt/libtorch/share/cmake/Torch' >> ~/.bashrc
+echo 'export LD_LIBRARY_PATH=/opt/libtorch/lib:$LD_LIBRARY_PATH' >> ~/.bashrc
+source ~/.bashrc
+```
+
+**Install CUDA Toolkit (For CUDA only):**
+
+* If you do not know your supported CUDA version, use `nvidia-smi` to check the version.
+* Install the matching CUDA Toolkit (e.g. 12.9):
+```bash
+sudo apt install -y cuda-toolkit-12-9
+source ~/.bashrc
+```
+
+Afterwards, compile as usual:
+```bash
+cd PM-SLAM
+./Build.sh
+```
+
+---
+
 # ORB-SLAM2
 
 This is a refactoring of the ORB_SLAM2 repository. It uses up-to-date cmake, up-to-date DBoW2, g2o and Pangolin libraries, supports all static and all dynamic libraries (for debugging) and C++17 multi-platform support for sleep, threads, namespaces, etc.
@@ -38,9 +87,9 @@ The build instructions are deliberately designed to be similar on all supported 
 
 ### Linux (and WSL2) build instructions
 
-Install the dependencies:
+[Install the dependencies:
 
-`sudo apt install cmake build-essential libeigen3-dev libboost-dev libboost-filesystem-dev libblas-dev liblapack-dev libepoxy-dev libopencv-dev libglew-dev mesa-utils libgl1-mesa-glx unzip`
+`sudo apt install cmake build-essential libeigen3-dev libboost-dev libboost-filesystem-dev libblas-dev liblapack-dev libepoxy-dev libopencv-dev libglew-dev mesa-utils libgl1-mesa-glx unzip`](https://github.com/HowardDreemurr/PM-SLAM)
 
 The default (Release) version of the library is built by running:
 
