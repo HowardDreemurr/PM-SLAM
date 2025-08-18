@@ -323,7 +323,7 @@ void NMS2(std::vector<cv::KeyPoint> det, cv::Mat conf,
       for (int j = -dist_thresh; j < (dist_thresh + 1); j++) {
         if (j == 0 && k == 0) continue;
 
-        if (confidence.at<float>(vv + k, uu + j) < confidence.at<float>(vv, uu))
+        if (confidence.at<float>(vv + k - dist_thresh, uu + j - dist_thresh) < confidence.at<float>(vv - dist_thresh,   uu - dist_thresh))
           grid.at<char>(vv + k, uu + j) = 0;
       }
     grid.at<char>(vv, uu) = 2;
