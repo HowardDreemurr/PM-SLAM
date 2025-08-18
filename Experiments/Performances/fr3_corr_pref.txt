@@ -1,0 +1,260 @@
+========== 01 Performance Summary (ms) ==========
+name                                mean      median        rmse         min         max       count
+Tracking                           6.065       5.385       2.834       2.807      24.930         445
+Total Init                      8310.814    8310.814       0.000    8310.814    8310.814           1
+Pipeline                         134.616     122.918      41.499     101.321     336.674         474
+SuperPoint Extract                87.687      85.342      15.657      59.926     283.490         474
+KAZE Extract                     115.839     113.990      11.876      93.555     174.152         474
+SIFT Extract                      35.413      31.283      11.681      24.065      97.657         474
+Correlation                        0.359       0.236       0.319       0.064       1.855         445
+AKAZE Extract                     26.895      25.809       5.867      17.980      44.613         474
+BRISK Extract                     26.867      25.773       8.263       8.405      46.413         474
+ORB Extract                        4.067       3.979       0.829       2.158       9.166         474
+
+========== 02 Performance Summary (ms) ==========
+name                                mean      median        rmse         min         max       count
+Tracking                           6.550       5.068       4.384       1.826      27.051         445
+Total Init                      8145.916    8145.916       0.000    8145.916    8145.916           1
+Pipeline                         136.580     128.779      40.165      99.554     328.409         474
+SuperPoint Extract                84.785      81.922      15.531      61.040     279.087         474
+KAZE Extract                     117.760     119.259      10.403      92.830     156.799         474
+SIFT Extract                      36.523      33.435      11.098      23.321      93.648         474
+Correlation                        0.317       0.188       0.305       0.048       1.423         442
+AKAZE Extract                     26.690      25.540       5.848      17.364      44.511         474
+BRISK Extract                     26.650      25.390       8.562       7.375      47.861         474
+ORB Extract                        3.989       3.908       0.728       2.349       7.503         474
+
+========== 03 Performance Summary (ms) ==========
+name                                mean      median        rmse         min         max       count
+Tracking                          14.975       8.926      11.113       2.205      43.314         445
+Total Init                      8307.796    8307.796       0.000    8307.796    8307.796           1
+Pipeline                         147.926     138.301      40.470     103.354     336.663         474
+SuperPoint Extract                86.547      81.941      17.778      61.273     277.666         474
+KAZE Extract                     120.112     122.731      10.202      94.178     155.041         474
+SIFT Extract                      38.147      35.116      11.634      24.357      99.257         474
+Correlation                        0.339       0.175       0.355       0.041       1.812         323
+AKAZE Extract                     26.073      25.080       5.618      17.496      53.431         474
+BRISK Extract                     26.320      25.146       8.304       8.899      48.445         474
+ORB Extract                        3.859       3.756       0.737       2.307       6.855         474
+
+========== 04 Performance Summary (ms) ==========
+name                                mean      median        rmse         min         max       count
+Tracking                          14.508       8.403      10.533       3.575      39.695         445
+Total Init                      8140.799    8140.799       0.000    8140.799    8140.799           1
+Pipeline                         141.295     132.969      40.474     102.931     340.415         474
+SuperPoint Extract                88.645      84.294      17.092      59.115     281.347         474
+KAZE Extract                     113.894     110.882      11.017      95.026     164.471         474
+SIFT Extract                      37.554      32.026      11.628      24.138      85.312         474
+Correlation                        0.354       0.190       0.349       0.046       1.789         320
+AKAZE Extract                     27.726      26.803       6.303      16.855      51.131         474
+BRISK Extract                     26.919      25.866       8.494       8.071      47.018         474
+ORB Extract                        4.064       3.930       0.832       2.201      10.382         474
+
+========== 05 Performance Summary (ms) ==========
+name                                mean      median        rmse         min         max       count
+Tracking                          13.505       7.994       9.977       1.928      39.023         445
+Total Init                      8203.359    8203.359       0.000    8203.359    8203.359           1
+Pipeline                         143.412     135.100      40.546     104.275     310.973         474
+SuperPoint Extract                88.405      83.617      18.483      56.643     276.236         474
+KAZE Extract                     116.510     117.267      10.349      95.631     150.603         474
+SIFT Extract                      36.699      33.048      11.716      24.060     100.776         474
+Correlation                        0.322       0.207       0.340       0.015       1.530         355
+AKAZE Extract                     26.977      25.874       6.068      17.711      49.064         474
+BRISK Extract                     26.816      25.409       8.548       7.914      48.715         474
+ORB Extract                        4.052       3.982       0.800       2.348       8.832         474
+
+========== 06 Performance Summary (ms) ==========
+name                                mean      median        rmse         min         max       count
+Tracking                          15.298       9.272      10.826       3.565      38.386         445
+Total Init                      8301.166    8301.166       0.000    8301.166    8301.166           1
+Pipeline                         148.816     140.030      40.136     105.192     349.597         474
+SuperPoint Extract                87.632      83.695      17.303      63.861     290.305         474
+KAZE Extract                     120.608     121.476      10.482      95.720     157.555         474
+SIFT Extract                      36.871      33.787      10.256      23.759      84.895         474
+Correlation                        0.355       0.185       0.360       0.044       1.437         320
+AKAZE Extract                     26.831      25.703       5.837      18.099      48.925         474
+BRISK Extract                     26.747      25.361       8.616       8.841      48.905         474
+ORB Extract                        4.080       4.003       0.787       2.331       7.663         474
+
+========== 07 Performance Summary (ms) ==========
+name                                mean      median        rmse         min         max       count
+Tracking                          14.526       8.577      10.818       3.515      49.624         445
+Total Init                      8177.806    8177.806       0.000    8177.806    8177.806           1
+Pipeline                         153.457     143.503      40.972     104.712     330.592         474
+SuperPoint Extract               112.788     113.600      25.945      61.668     291.354         474
+KAZE Extract                     118.941     114.131      18.421      94.215     255.403         474
+SIFT Extract                      42.258      36.511      15.425      23.923     122.681         474
+Correlation                        0.377       0.186       0.448       0.042       4.227         339
+AKAZE Extract                     30.400      29.138       8.057      17.636      91.150         474
+BRISK Extract                     28.789      27.562       8.869      11.534      60.328         474
+ORB Extract                        4.364       4.205       0.878       2.261       9.835         474
+
+========== 08 Performance Summary (ms) ==========
+name                                mean      median        rmse         min         max       count
+Tracking                           6.017       5.097       2.832       2.745      23.993         445
+Total Init                      8286.306    8286.306       0.000    8286.306    8286.306           1
+Pipeline                         137.771     127.413      41.684     103.283     339.477         474
+SuperPoint Extract                91.362      88.877      17.762      55.537     291.210         474
+KAZE Extract                     118.612     117.181      12.793      93.772     171.717         474
+SIFT Extract                      40.506      36.227      12.894      24.318      82.973         474
+Correlation                        0.351       0.241       0.300       0.052       1.513         445
+AKAZE Extract                     28.470      27.876       6.394      17.329      49.183         474
+BRISK Extract                     27.467      26.478       8.697       9.748      48.603         474
+ORB Extract                        4.159       4.035       0.886       2.224      11.337         474
+
+========== 09 Performance Summary (ms) ==========
+name                                mean      median        rmse         min         max       count
+Tracking                          11.995      12.223       2.634       3.421      23.950         445
+Total Init                      8716.318    8716.318       0.000    8716.318    8716.318           1
+Pipeline                         146.950     138.093      43.038     106.566     353.018         474
+SuperPoint Extract               110.067     115.019      21.507      64.673     306.144         474
+KAZE Extract                     113.702     110.435      11.253      96.909     168.503         474
+SIFT Extract                      37.243      32.585      11.232      24.734      79.080         474
+Correlation                        1.142       1.143       0.292       0.128       2.776         445
+AKAZE Extract                     27.828      26.887       6.189      17.768      47.624         474
+BRISK Extract                     27.013      25.708       8.693       8.762      49.260         474
+ORB Extract                        4.227       4.154       0.897       2.257       7.940         474
+
+========== 10 Performance Summary (ms) ==========
+name                                mean      median        rmse         min         max       count
+Tracking                          11.241      11.120       2.419       4.329      21.627         445
+Total Init                      8193.768    8193.768       0.000    8193.768    8193.768           1
+Pipeline                         142.389     134.032      39.148     109.778     338.379         474
+SuperPoint Extract                86.255      82.637      16.123      61.686     270.907         474
+KAZE Extract                     118.659     119.873      10.240      97.298     149.409         474
+SIFT Extract                      36.989      33.908      11.298      23.811      91.828         474
+Correlation                        1.068       1.072       0.263       0.064       2.180         445
+AKAZE Extract                     26.698      25.723       5.612      17.956      46.308         474
+BRISK Extract                     26.743      25.868       8.532       9.398      46.638         474
+ORB Extract                        4.042       3.978       0.801       2.357       8.051         474
+
+========== 11 Performance Summary (ms) ==========
+name                                mean      median        rmse         min         max       count
+Tracking                           5.918       5.142       2.976       2.447      23.173         445
+Total Init                      8333.595    8333.595       0.000    8333.595    8333.595           1
+Pipeline                         136.860     125.921      42.610     104.183     364.984         474
+SuperPoint Extract                89.091      84.897      17.831      61.022     292.861         474
+KAZE Extract                     118.035     116.720      13.234      95.921     190.414         474
+SIFT Extract                      36.695      32.486      11.554      23.509      93.502         474
+Correlation                        0.340       0.237       0.286       0.057       1.581         445
+AKAZE Extract                     27.474      26.332       6.268      17.724      47.354         474
+BRISK Extract                     27.124      26.247       8.492      10.219      47.407         474
+ORB Extract                        4.100       4.041       0.821       2.397       8.241         474
+
+========== 12 Performance Summary (ms) ==========
+name                                mean      median        rmse         min         max       count
+Tracking                           5.568       4.599       3.434       1.782      25.325         445
+Total Init                      8620.014    8620.014       0.000    8620.014    8620.014           1
+Pipeline                         142.840     132.832      42.438     105.541     343.156         474
+SuperPoint Extract                86.231      82.374      17.662      59.697     287.947         474
+KAZE Extract                     123.721     125.027       8.992      98.643     168.604         474
+SIFT Extract                      37.226      35.360       9.868      23.160      99.295         474
+Correlation                        0.335       0.234       0.292       0.052       1.430         445
+AKAZE Extract                     25.529      24.054       5.521      17.403      44.832         474
+BRISK Extract                     26.512      25.119       8.501       8.554      47.108         474
+ORB Extract                        3.833       3.768       0.690       2.111       7.996         474
+
+========== 13 Performance Summary (ms) ==========
+name                                mean      median        rmse         min         max       count
+Tracking                           7.155       6.075       3.402       3.211      22.567         445
+Total Init                      8206.068    8206.068       0.000    8206.068    8206.068           1
+Pipeline                         138.692     132.699      40.575     101.895     343.331         474
+SuperPoint Extract                84.839      81.982      15.644      59.928     292.055         474
+KAZE Extract                     118.820     122.693      11.542      92.250     148.954         474
+SIFT Extract                      39.060      35.676      12.667      23.475      94.900         474
+Correlation                        0.449       0.293       0.351       0.062       1.752         445
+AKAZE Extract                     27.189      26.337       6.147      17.669      51.351         474
+BRISK Extract                     26.539      25.205       8.249       7.500      47.655         474
+ORB Extract                        3.975       3.891       0.768       2.157       9.188         474
+
+========== 14 Performance Summary (ms) ==========
+name                                mean      median        rmse         min         max       count
+Tracking                          13.489       8.175       9.388       3.595      39.345         445
+Total Init                      8296.461    8296.461       0.000    8296.461    8296.461           1
+Pipeline                         143.951     135.853      41.033     105.132     330.227         474
+SuperPoint Extract                88.297      83.831      18.231      59.792     287.120         474
+KAZE Extract                     117.137     115.533      11.347      95.518     155.448         474
+SIFT Extract                      37.932      34.878      11.788      24.702      95.041         474
+Correlation                        0.372       0.244       0.339       0.051       1.393         328
+AKAZE Extract                     27.286      26.126       6.087      18.027      50.973         474
+BRISK Extract                     26.623      25.482       8.431       9.513      47.014         474
+ORB Extract                        4.049       3.965       0.782       2.247       7.905         474
+
+========== 15 Performance Summary (ms) ==========
+name                                mean      median        rmse         min         max       count
+Tracking                           6.194       5.437       2.453       3.265      21.681         445
+Total Init                      7975.358    7975.358       0.000    7975.358    7975.358           1
+Pipeline                         135.038     126.340      40.476      99.989     384.432         474
+SuperPoint Extract                87.894      84.651      18.534      61.548     359.351         474
+KAZE Extract                     115.912     115.716      12.264      91.948     159.064         474
+SIFT Extract                      40.033      35.248      13.399      24.059      87.002         474
+Correlation                        0.391       0.298       0.287       0.060       1.534         445
+AKAZE Extract                     28.046      27.579       6.225      18.408      48.455         474
+BRISK Extract                     27.104      25.937       8.522       8.845      51.829         474
+ORB Extract                        4.041       3.970       0.776       2.569       9.065         474
+
+========== 16 Performance Summary (ms) ==========
+name                                mean      median        rmse         min         max       count
+Tracking                          14.940       9.260      10.657       3.622      37.397         445
+Total Init                      8320.528    8320.528       0.000    8320.528    8320.528           1
+Pipeline                         148.546     138.318      39.601     103.745     321.635         474
+SuperPoint Extract                86.569      82.322      17.998      56.830     297.181         474
+KAZE Extract                     120.922     121.733       8.334      96.566     157.828         474
+SIFT Extract                      34.335      32.344       9.010      24.272      94.158         474
+Correlation                        0.346       0.171       0.372       0.046       1.346         297
+AKAZE Extract                     26.102      25.243       5.968      17.621      45.842         474
+BRISK Extract                     26.412      25.160       8.268       9.125      47.478         474
+ORB Extract                        3.922       3.799       0.768       2.331       7.614         474
+
+========== 17 Performance Summary (ms) ==========
+name                                mean      median        rmse         min         max       count
+Tracking                           6.567       5.517       3.365       3.203      24.363         445
+Total Init                      8436.222    8436.222       0.000    8436.222    8436.222           1
+Pipeline                         140.182     132.149      41.768     104.661     352.014         474
+SuperPoint Extract                86.247      82.424      16.602      63.347     289.980         474
+KAZE Extract                     120.910     123.075      10.152      97.484     159.995         474
+SIFT Extract                      37.294      34.521      10.886      22.870      85.036         474
+Correlation                        0.349       0.252       0.285       0.062       1.463         445
+AKAZE Extract                     26.870      25.749       6.016      17.908      47.516         474
+BRISK Extract                     26.715      25.662       8.441       8.507      49.495         474
+ORB Extract                        3.902       3.838       0.704       2.474       6.879         474
+
+========== 18 Performance Summary (ms) ==========
+name                                mean      median        rmse         min         max       count
+Tracking                          11.183       7.562       7.316       2.457      32.647         445
+Total Init                      8359.088    8359.088       0.000    8359.088    8359.088           1
+Pipeline                         143.645     134.252      41.267     104.101     352.350         474
+SuperPoint Extract                86.506      81.968      18.115      63.525     327.357         474
+KAZE Extract                     119.334     122.231       9.920      96.161     153.634         474
+SIFT Extract                      37.343      34.342      11.776      22.391     107.912         474
+Correlation                        0.269       0.148       0.322       0.034       1.307         440
+AKAZE Extract                     26.613      25.565       5.754      17.618      46.304         474
+BRISK Extract                     26.515      25.544       8.316       8.728      47.132         474
+ORB Extract                        3.934       3.881       0.723       2.276       6.858         474
+
+========== 19 Performance Summary (ms) ==========
+name                                mean      median        rmse         min         max       count
+Tracking                           6.219       5.292       2.965       2.959      21.988         445
+Total Init                      8190.931    8190.931       0.000    8190.931    8190.931           1
+Pipeline                         142.700     133.111      38.158     118.443     341.693         474
+SuperPoint Extract                83.643      79.941      15.142      58.583     273.049         474
+KAZE Extract                     123.936     123.920       6.799      99.118     166.346         474
+SIFT Extract                      34.815      34.462       6.732      24.672      83.702         474
+Correlation                        0.360       0.267       0.277       0.053       1.363         445
+AKAZE Extract                     25.722      24.090       5.965      17.593      45.334         474
+BRISK Extract                     26.281      24.692       8.551       8.278      47.408         474
+ORB Extract                        3.816       3.722       0.679       2.228       6.010         474
+
+========== 20 Performance Summary (ms) ==========
+name                                mean      median        rmse         min         max       count
+Tracking                           6.024       5.125       2.691       2.895      21.319         445
+Total Init                      8231.961    8231.961       0.000    8231.961    8231.961           1
+Pipeline                         139.256     132.027      40.133     104.766     335.493         474
+SuperPoint Extract                85.683      82.290      15.787      58.474     280.913         474
+KAZE Extract                     120.549     123.279      10.432      97.481     151.052         474
+SIFT Extract                      38.312      35.506      12.030      24.469      94.296         474
+Correlation                        0.364       0.268       0.283       0.054       1.550         445
+AKAZE Extract                     27.230      26.096       6.217      17.893      49.037         474
+BRISK Extract                     26.750      25.544       8.536       8.408      50.265         474
+ORB Extract                        3.987       3.909       0.721       2.079       7.282         474
+

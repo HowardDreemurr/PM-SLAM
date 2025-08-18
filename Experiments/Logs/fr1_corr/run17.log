@@ -1,0 +1,191 @@
+Registering ORBextractor...
+Registering AKAZEextractor...
+Registering BRISKextractor...
+Registering SIFTextractor...
+Registering KAZEextractor...
+Registering SuperPointExtractor...
+
+ORB-SLAM2 Copyright (C) 2014-2016 Raul Mur-Artal, University of Zaragoza.
+This program comes with ABSOLUTELY NO WARRANTY;
+This is free software, and you are welcome to redistribute it
+under certain conditions. See LICENSE.txt.
+
+Input sensor was set to: Monocular
+
+Loading Vocabulary : /home/howard/Refactored_ORB_SLAM2/Install/var/lib/orbslam2/voc/orb_mur.fbow
+This could take a while...
+Loading ORB Vocabulary in FBoW.
+ORB Vocabulary loaded in 0.009212s
+
+
+Loading Vocabulary : /home/howard/Refactored_ORB_SLAM2/Install/var/lib/orbslam2/voc/akaze_cv.fbow
+This could take a while...
+Loading AKAZE Vocabulary in FBoW.
+AKAZE Vocabulary loaded in 0.002130s
+
+
+Loading Vocabulary : /home/howard/Refactored_ORB_SLAM2/Install/var/lib/orbslam2/voc/brisk_cv.fbow
+This could take a while...
+Loading BRISK Vocabulary in FBoW.
+BRISK Vocabulary loaded in 0.001683s
+
+
+Loading Vocabulary : /home/howard/Refactored_ORB_SLAM2/Install/var/lib/orbslam2/voc/kaze_cv.fbow
+This could take a while...
+Loading KAZE Vocabulary in FBoW.
+KAZE Vocabulary loaded in 0.006671s
+
+
+Loading Vocabulary : /home/howard/Refactored_ORB_SLAM2/Install/var/lib/orbslam2/voc/sift_cv.fbow
+This could take a while...
+Loading SIFT Vocabulary in FBoW.
+SIFT Vocabulary loaded in 0.012393s
+
+
+Loading Vocabulary : /home/howard/Refactored_ORB_SLAM2/Install/var/lib/orbslam2/voc/superpoint.fbow
+This could take a while...
+Loading SuperPoint Vocabulary in FBoW.
+SuperPoint Vocabulary loaded in 0.008608s
+
+
+Camera Parameters: 
+- fx: 517.306
+- fy: 516.469
+- cx: 318.643
+- cy: 255.314
+- k1: 0.262383
+- k2: -0.953104
+- k3: 1.16331
+- p1: -0.005358
+- p2: 0.002628
+- fps: 30
+- color order: RGB (ignored if grayscale)
+
+[Feature 0] ORB Extractor Parameters: 
+ ( TH_LOW: 50, TH_HIGH: 100 )
+- Number of Features: 1000
+- Scale Levels: 8
+- Scale Factor: 1.2
+- Initial Fast Threshold: 20
+- Minimum Fast Threshold: 7
+
+[Feature 1] AKAZE Extractor Parameters: 
+ ( TH_LOW: 100, TH_HIGH: 200 )
+- Number of Features: 1000
+- Scale Levels: 4
+- Scale Factor: 1.2
+- Threshold: 0.001
+- Num of Octaves: 4
+- Num of Octave Layers: 4
+
+[Feature 2] BRISK Extractor Parameters: 
+ ( TH_LOW: 100, TH_HIGH: 200 )
+- Number of Features: 1000
+- Scale Levels: 6
+- Scale Factor: 1.414
+- Threshold: 10
+- Num of Octaves: 3
+- Pattern Scale: 1
+
+[Feature 3] KAZE Extractor Parameters: 
+ ( TH_LOW: 0.5, TH_HIGH: 1 )
+- Number of Features : 1000
+- Scale Levels       : 4
+- Scale Factor       : 1.2
+- Threshold          : 0.0005
+- nOctaves           : 4
+- nOctaveLayers      : 4
+- Extended (128‑dim) : 0
+- Upright            : 0
+
+[Feature 4] SIFT Extractor Parameters: 
+ ( TH_LOW: 300, TH_HIGH: 500 )
+- Number of Features  : 1000
+- Scale Levels        : 1
+- Scale Factor        : 1
+- Contrast Threshold  : 0.001
+- Edge Threshold      : 5
+- nOctaves            : 3
+- Sigma               : 1.6
+
+[Feature 5] SuperPoint Extractor Parameters: 
+ ( TH_LOW: 0.7, TH_HIGH: 0.9 )
+- Number of Features: 1000
+- Scale Levels: 4
+- Scale Factor: 1.2
+- Use CUDA: 1
+- Use NMS: 1
+- iniTh: 0.08
+- minTh: 0.04
+
+-------
+Start processing sequence ...
+Images in the sequence: 798
+
+0
+New map created with 72 points for 0 Feature Type 
+New map created with 392 points for 1 Feature Type 
+New map created with 278 points for 2 Feature Type 
+New map created with 626 points for 3 Feature Type 
+New map created with 559 points for 4 Feature Type 
+New map created with 215 points for 5 Feature Type 
+Tracking Initlized in 28.80s
+The initlized frame ID: 15
+System::StopViewer()
+System::StopViewer() done
+Viewer thread finished.
+
+Saving correlation status...
+
+========== Global Summary ==========
+Frames: 11730
+avg_CorrEdges: 113.225
+avg_match_A: 363.823
+avg_match_B: 446.18
+global_RI_MNR: 0.311208
+global_RI_GNR: 0.281022
+global_RI_DICE: 0.279566
+
+========== Per-Channel Summary ==========
+   chA   chB     avgCorr        avgA        avgB   avgRI_MNR   avgRI_GNR  avgRI_DICE
+     0     1     76.1931     248.701     422.081    0.291922    0.225944    0.218021
+     0     2     141.054     248.701      380.94    0.536633     0.43311    0.422914
+     0     3     119.648     248.701     536.345    0.461781    0.314658    0.292694
+     0     4     51.4668     248.701      310.09    0.197184      0.1727    0.170899
+     0     5     63.0256     248.701     531.882    0.245777    0.167323    0.155551
+     1     2     138.266     422.081      380.94    0.347614    0.323256    0.322082
+     1     3     410.248     422.077     536.345    0.952716    0.832894    0.823248
+     1     4     117.046      422.07     310.086     0.36098    0.302972    0.297243
+     1     5     21.7366     422.069     531.873   0.0519163   0.0447781   0.0440966
+     2     3     197.225     380.928     536.341    0.487821    0.411834    0.405617
+     2     4     101.451     380.928     310.079    0.306647    0.274419    0.272139
+     2     5     49.1317     380.928     531.873    0.119565    0.101245   0.0997284
+     3     4     161.577     536.341     310.079    0.505035    0.379468    0.363586
+     3     5     27.9118     536.341     531.873   0.0538465   0.0519835   0.0519213
+     4     5     22.3887     310.079     531.873   0.0671656   0.0513973   0.0495371
+
+Correlation status saved!
+
+System Shutdown
+-------
+
+median tracking time: 0.183376
+mean tracking time: 0.187179
+
+Saving camera trajectory to result17.txt ...
+
+trajectory saved!
+All done
+
+========== Performance Summary (ms) ==========
+name                                mean      median        rmse         min         max       count
+Tracking                          44.078      45.317      11.031      18.496      79.216         782
+Total Init                      4746.740    4746.740       0.000    4746.740    4746.740           1
+Pipeline                         187.174     183.350      29.552     128.684     391.339         798
+SuperPoint Extract               128.634     131.675      23.795      73.957     299.421         798
+KAZE Extract                     122.864     124.398      14.428      94.738     185.290         798
+SIFT Extract                      38.000      34.311      12.765      22.222      85.225         798
+Correlation                        5.633       5.903       1.761       1.736      12.342         782
+AKAZE Extract                     27.448      27.043       5.751      17.074      44.271         798
+BRISK Extract                     49.695      49.387       9.024      21.528      72.635         798
+ORB Extract                        8.412       8.307       1.221       5.786      13.638         798

@@ -36,8 +36,8 @@ read_config_lines() {
   else
     LINES=(
         'name=fr1_corr         seq=~/dataset/tum/fr1_xyz yaml=../Install/etc/orbslam2/Monocular/TUM1.yaml gt=~/dataset/tum/fr1_xyz/groundtruth.txt runs=20 exe=../Install/bin features=[ORB,AKAZE,BRISK,KAZE,SIFT,SuperPoint]'
-        'name=fr2_corr         seq=~/dataset/tum/fr2_xyz yaml=../Install/etc/orbslam2/Monocular/TUM2.yaml gt=~/dataset/tum/fr1_xyz/groundtruth.txt runs=20 exe=../Install/bin features=[ORB,AKAZE,BRISK,KAZE,SIFT,SuperPoint]'
-        'name=fr3_corr         seq=~/dataset/tum/fr3_nnf yaml=../Install/etc/orbslam2/Monocular/TUM3.yaml gt=~/dataset/tum/fr1_xyz/groundtruth.txt runs=20 exe=../Install/bin features=[ORB,AKAZE,BRISK,KAZE,SIFT,SuperPoint]'
+        'name=fr2_corr         seq=~/dataset/tum/fr2_xyz yaml=../Install/etc/orbslam2/Monocular/TUM2.yaml gt=~/dataset/tum/fr2_xyz/groundtruth.txt runs=20 exe=../Install/bin features=[ORB,AKAZE,BRISK,KAZE,SIFT,SuperPoint]'
+        'name=fr3_corr         seq=~/dataset/tum/fr3_nnf yaml=../Install/etc/orbslam2/Monocular/TUM3.yaml gt=~/dataset/tum/fr3_nnf/groundtruth.txt runs=20 exe=../Install/bin features=[ORB,AKAZE,BRISK,KAZE,SIFT,SuperPoint]'
 
 #        'name=fr1_orb         seq=~/dataset/tum/fr1_xyz yaml=../Install/etc/orbslam2/Monocular/TUM1.yaml gt=~/dataset/tum/fr1_xyz/groundtruth.txt runs=20 exe=../Install/bin features=[ORB]'
 #        'name=fr1_akz         seq=~/dataset/tum/fr1_xyz yaml=../Install/etc/orbslam2/Monocular/TUM1.yaml gt=~/dataset/tum/fr1_xyz/groundtruth.txt runs=20 exe=../Install/bin features=[AKAZE]'
