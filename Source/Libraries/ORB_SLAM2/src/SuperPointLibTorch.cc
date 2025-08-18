@@ -296,6 +296,14 @@ void NMS2(std::vector<cv::KeyPoint> det, cv::Mat conf,
 
   cv::Mat confidence = cv::Mat(cv::Size(img_width, img_height), CV_32FC1);
 
+  cv::copyMakeBorder(confidence, confidence,
+                   dist_thresh, dist_thresh, dist_thresh, dist_thresh,
+                   cv::BORDER_CONSTANT, 0.0f);;
+
+  cv::copyMakeBorder(conf, conf,
+                   dist_thresh, dist_thresh, dist_thresh, dist_thresh,
+                   cv::BORDER_CONSTANT, 0.0f);
+
   grid.setTo(0);
   inds.setTo(0);
   confidence.setTo(0);
@@ -323,7 +331,7 @@ void NMS2(std::vector<cv::KeyPoint> det, cv::Mat conf,
       for (int j = -dist_thresh; j < (dist_thresh + 1); j++) {
         if (j == 0 && k == 0) continue;
 
-        if (confidence.at<float>(vv + k - dist_thresh, uu + j - dist_thresh) < confidence.at<float>(vv - dist_thresh,   uu - dist_thresh))
+        if (confidence.at<float>(vv + k, uu + j) < confidence.at<float>(vv, uu))
           grid.at<char>(vv + k, uu + j) = 0;
       }
     grid.at<char>(vv, uu) = 2;
@@ -379,6 +387,15 @@ void NMS(cv::Mat det, cv::Mat conf, cv::Mat desc,
   cv::Mat inds = cv::Mat(cv::Size(img_width, img_height), CV_16UC1);
 
   cv::Mat confidence = cv::Mat(cv::Size(img_width, img_height), CV_32FC1);
+
+    cv::copyMakeBorder(confidence, confidence,
+                   dist_thresh, dist_thresh, dist_thresh, dist_thresh,
+                   cv::BORDER_CONSTANT, 0.0f);;
+
+  cv::copyMakeBorder(conf, conf,
+                   dist_thresh, dist_thresh, dist_thresh, dist_thresh,
+                   cv::BORDER_CONSTANT, 0.0f);
+
 
   grid.setTo(0);
   inds.setTo(0);
