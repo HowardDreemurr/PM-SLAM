@@ -20,6 +20,18 @@ The build process follows the same steps as the original ORB-SLAM2 below.
 
 The main difference is that SuperPoint requires LibTorch support, download the LibTorch from the official PyTorch site (https://pytorch.org/get-started/locally/).
 
+### Auto Install Bash
+
+Simply run "Build_Torch.sh":
+```bash
+nvidia-smi # >> Check suitable CUDA version 
+sudo Build_Torch.sh <cu126/cu128/cu129>
+```
+
+### Manually Install
+
+If the auto build bash not working, please fall-back to the following steps:
+
 **Install LibTorch (For CPU/CUDA):**
 
 * Extract it into "/opt/": `sudo unzip <Downloaded Torch ZIP> -d /opt/`
@@ -36,6 +48,8 @@ source ~/.bashrc
 * Install the matching CUDA Toolkit (e.g. 12.9):
 ```bash
 sudo apt install -y cuda-toolkit-12-9
+echo 'export PATH=/usr/local/cuda-12.9/bin:$PATH' >> ~/.bashrc
+echo 'export LD_LIBRARY_PATH=/usr/local/cuda-12.9/lib64:$LD_LIBRARY_PATH' >> ~/.bashrc
 source ~/.bashrc
 ```
 
