@@ -15,13 +15,13 @@ Input sensor was set to: Monocular
 Loading Vocabulary : /home/howard/Refactored_ORB_SLAM2/Install/var/lib/orbslam2/voc/orb_mur.fbow
 This could take a while...
 Loading ORB Vocabulary in FBoW.
-ORB Vocabulary loaded in 0.008676s
+ORB Vocabulary loaded in 0.008126s
 
 
 Loading Vocabulary : /home/howard/Refactored_ORB_SLAM2/Install/var/lib/orbslam2/voc/superpoint.fbow
 This could take a while...
 Loading SuperPoint Vocabulary in FBoW.
-SuperPoint Vocabulary loaded in 0.007682s
+SuperPoint Vocabulary loaded in 0.007509s
 
 
 Camera Parameters: 
@@ -60,9 +60,9 @@ Start processing sequence ...
 Images in the sequence: 798
 
 0
-New map created with 69 points for 0 Feature Type 
+New map created with 70 points for 0 Feature Type 
 New map created with 217 points for 1 Feature Type 
-Tracking Initlized in 8.94s
+Tracking Initlized in 8.62s
 The initlized frame ID: 15
 System::StopViewer()
 System::StopViewer() done
@@ -72,24 +72,24 @@ Saving correlation status...
 
 ========== Global Summary ==========
 Frames: 782
-avg_CorrEdges: 65.8517
-avg_match_A: 268.137
-avg_match_B: 559.798
-global_RI_MNR: 0.24559
-global_RI_GNR: 0.16997
-global_RI_DICE: 0.159075
+avg_CorrEdges: 63.7737
+avg_match_A: 254.347
+avg_match_B: 537.531
+global_RI_MNR: 0.250735
+global_RI_GNR: 0.172475
+global_RI_DICE: 0.16107
 
 ========== Per-Channel Summary ==========
    chA   chB     avgCorr        avgA        avgB   avgRI_MNR   avgRI_GNR  avgRI_DICE
-     0     1     65.8517     268.137     559.798    0.238243     0.16479    0.154052
+     0     1     63.7737     254.347     537.531    0.243744    0.167617    0.156409
 
 Correlation status saved!
 
 System Shutdown
 -------
 
-median tracking time: 0.085729
-mean tracking time: 0.0862504
+median tracking time: 0.0675226
+mean tracking time: 0.0676876
 
 Saving camera trajectory to result08.txt ...
 
@@ -98,9 +98,9 @@ All done
 
 ========== Performance Summary (ms) ==========
 name                                mean      median        rmse         min         max       count
-Tracking                          12.393      12.665       2.698       4.743      19.945         782
-Correlation                        0.365       0.372       0.084       0.164       0.645         782
-Total Init                      1520.440    1520.440       0.000    1520.440    1520.440           1
-Pipeline                          86.247      85.716      10.444      61.205     260.787         798
-SuperPoint Extract                71.879      71.229       9.279      51.676     241.168         798
-ORB Extract                        7.066       6.972       0.854       5.045      11.574         798
+Tracking                           9.366       9.791       2.017       3.758      13.756         782
+Correlation                        0.282       0.291       0.061       0.134       0.547         782
+Total Init                      1222.663    1222.663       0.000    1222.663    1222.663           1
+Pipeline                          67.684      67.516       8.966      49.787     228.242         798
+SuperPoint Extract                56.673      56.330       7.744      41.302     212.042         798
+ORB Extract                        5.657       5.577       0.632       3.977       8.723         798

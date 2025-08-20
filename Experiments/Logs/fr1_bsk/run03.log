@@ -15,7 +15,7 @@ Input sensor was set to: Monocular
 Loading Vocabulary : /home/howard/Refactored_ORB_SLAM2/Install/var/lib/orbslam2/voc/brisk_cv.fbow
 This could take a while...
 Loading BRISK Vocabulary in FBoW.
-BRISK Vocabulary loaded in 0.001744s
+BRISK Vocabulary loaded in 0.001538s
 
 
 Camera Parameters: 
@@ -46,7 +46,7 @@ Images in the sequence: 798
 
 0
 New map created with 141 points for 0 Feature Type 
-Tracking Initlized in 3.32s
+Tracking Initlized in 3.07s
 The initlized frame ID: 25
 System::StopViewer()
 System::StopViewer() done
@@ -59,8 +59,8 @@ Correlation status saved!
 System Shutdown
 -------
 
-median tracking time: 0.0456835
-mean tracking time: 0.0458179
+median tracking time: 0.0376622
+mean tracking time: 0.0379088
 
 Saving camera trajectory to result03.txt ...
 
@@ -69,8 +69,8 @@ All done
 
 ========== Performance Summary (ms) ==========
 name                                mean      median        rmse         min         max       count
-Tracking                           4.834       4.976       0.864       1.860       6.685         772
-Correlation                        0.000       0.000       0.000       0.000       0.001         772
-Total Init                      2020.115    2020.115       0.000    2020.115    2020.115           1
-Pipeline                          45.814      45.645       9.632      23.001      88.366         798
-BRISK Extract                     39.066      39.718       7.752      17.620      57.515         798
+Tracking                           3.905       3.981       0.742       1.439       6.419         772
+Correlation                        0.000       0.000       0.000       0.000       0.002         772
+Total Init                      1676.093    1676.093       0.000    1676.093    1676.093           1
+Pipeline                          37.906      37.647       8.146      18.518      72.830         798
+BRISK Extract                     32.431      32.853       6.598      14.231      51.562         798

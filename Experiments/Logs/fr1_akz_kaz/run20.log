@@ -15,13 +15,13 @@ Input sensor was set to: Monocular
 Loading Vocabulary : /home/howard/Refactored_ORB_SLAM2/Install/var/lib/orbslam2/voc/akaze_cv.fbow
 This could take a while...
 Loading AKAZE Vocabulary in FBoW.
-AKAZE Vocabulary loaded in 0.001705s
+AKAZE Vocabulary loaded in 0.001627s
 
 
 Loading Vocabulary : /home/howard/Refactored_ORB_SLAM2/Install/var/lib/orbslam2/voc/kaze_cv.fbow
 This could take a while...
 Loading KAZE Vocabulary in FBoW.
-KAZE Vocabulary loaded in 0.005843s
+KAZE Vocabulary loaded in 0.005740s
 
 
 Camera Parameters: 
@@ -64,7 +64,7 @@ Images in the sequence: 798
 0
 New map created with 281 points for 0 Feature Type 
 New map created with 395 points for 1 Feature Type 
-Tracking Initlized in 23.04s
+Tracking Initlized in 22.67s
 The initlized frame ID: 24
 System::StopViewer()
 System::StopViewer() done
@@ -74,24 +74,24 @@ Saving correlation status...
 
 ========== Global Summary ==========
 Frames: 773
-avg_CorrEdges: 324.285
-avg_match_A: 359.224
-avg_match_B: 529.026
-global_RI_MNR: 0.902737
-global_RI_GNR: 0.743884
-global_RI_DICE: 0.730165
+avg_CorrEdges: 325.223
+avg_match_A: 355.934
+avg_match_B: 529.615
+global_RI_MNR: 0.913716
+global_RI_GNR: 0.749059
+global_RI_DICE: 0.734511
 
 ========== Per-Channel Summary ==========
    chA   chB     avgCorr        avgA        avgB   avgRI_MNR   avgRI_GNR  avgRI_DICE
-     0     1     324.285     359.224     529.026     0.88878    0.723087    0.706141
+     0     1     325.223     355.934     529.615    0.896081    0.725709    0.708025
 
 Correlation status saved!
 
 System Shutdown
 -------
 
-median tracking time: 0.109714
-mean tracking time: 0.111193
+median tracking time: 0.0906253
+mean tracking time: 0.0917859
 
 Saving camera trajectory to result20.txt ...
 
@@ -100,9 +100,9 @@ All done
 
 ========== Performance Summary (ms) ==========
 name                                mean      median        rmse         min         max       count
-Tracking                          12.144      12.758       2.415       5.275      16.828         773
-Total Init                      4103.271    4103.271       0.000    4103.271    4103.271           1
-Pipeline                         111.189     109.710      11.715      96.352     201.789         798
-KAZE Extract                      96.201      95.731       4.803      87.141     146.606         798
-Correlation                        0.546       0.581       0.146       0.202       1.011         773
-AKAZE Extract                     19.986      19.768       1.609      16.771      31.931         798
+Tracking                          10.095      10.574       2.127       4.114      14.473         773
+Total Init                      3639.703    3639.703       0.000    3639.703    3639.703           1
+Pipeline                          91.783      90.617      11.976      74.941     178.922         798
+KAZE Extract                      79.073      78.886       5.082      68.475     125.153         798
+Correlation                        0.445       0.476       0.125       0.170       0.829         773
+AKAZE Extract                     16.656      16.327       1.667      13.766      26.571         798

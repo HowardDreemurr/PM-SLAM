@@ -15,13 +15,13 @@ Input sensor was set to: Monocular
 Loading Vocabulary : /home/howard/Refactored_ORB_SLAM2/Install/var/lib/orbslam2/voc/orb_mur.fbow
 This could take a while...
 Loading ORB Vocabulary in FBoW.
-ORB Vocabulary loaded in 0.008382s
+ORB Vocabulary loaded in 0.008387s
 
 
 Loading Vocabulary : /home/howard/Refactored_ORB_SLAM2/Install/var/lib/orbslam2/voc/akaze_cv.fbow
 This could take a while...
 Loading AKAZE Vocabulary in FBoW.
-AKAZE Vocabulary loaded in 0.001671s
+AKAZE Vocabulary loaded in 0.001543s
 
 
 Camera Parameters: 
@@ -61,7 +61,7 @@ Images in the sequence: 798
 0
 New map created with 69 points for 0 Feature Type 
 New map created with 394 points for 1 Feature Type 
-Tracking Initlized in 4.00s
+Tracking Initlized in 3.98s
 The initlized frame ID: 15
 System::StopViewer()
 System::StopViewer() done
@@ -71,24 +71,24 @@ Saving correlation status...
 
 ========== Global Summary ==========
 Frames: 782
-avg_CorrEdges: 70.5537
-avg_match_A: 254.62
-avg_match_B: 408.621
-global_RI_MNR: 0.277094
-global_RI_GNR: 0.218732
-global_RI_DICE: 0.212754
+avg_CorrEdges: 74.7468
+avg_match_A: 256.425
+avg_match_B: 425.754
+global_RI_MNR: 0.291496
+global_RI_GNR: 0.226221
+global_RI_DICE: 0.219141
 
 ========== Per-Channel Summary ==========
    chA   chB     avgCorr        avgA        avgB   avgRI_MNR   avgRI_GNR  avgRI_DICE
-     0     1     70.5537      254.62     408.621    0.267461    0.212562    0.206418
+     0     1     74.7468     256.425     425.754    0.282142    0.219291    0.211829
 
 Correlation status saved!
 
 System Shutdown
 -------
 
-median tracking time: 0.0319209
-mean tracking time: 0.0322625
+median tracking time: 0.0256663
+mean tracking time: 0.026215
 
 Saving camera trajectory to result06.txt ...
 
@@ -97,9 +97,9 @@ All done
 
 ========== Performance Summary (ms) ==========
 name                                mean      median        rmse         min         max       count
-Tracking                           9.384       9.685       1.926       4.323      14.019         782
-Total Init                      1009.956    1009.956       0.000    1009.956    1009.956           1
-Pipeline                          32.259      31.912       5.239      24.996      70.291         798
-Correlation                        0.321       0.331       0.075       0.154       0.695         782
-AKAZE Extract                     20.892      20.754       1.135      17.692      27.204         798
-ORB Extract                        6.033       6.049       0.565       4.435       8.905         798
+Tracking                           7.749       7.882       1.758       3.570      11.887         782
+Total Init                       815.448     815.448       0.000     815.448     815.448           1
+Pipeline                          26.212      25.659       4.558      19.382      57.263         798
+Correlation                        0.266       0.275       0.067       0.119       0.524         782
+AKAZE Extract                     16.749      16.569       1.091      14.265      22.651         798
+ORB Extract                        4.911       4.934       0.485       3.666       7.733         798

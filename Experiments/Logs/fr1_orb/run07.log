@@ -15,7 +15,7 @@ Input sensor was set to: Monocular
 Loading Vocabulary : /home/howard/Refactored_ORB_SLAM2/Install/var/lib/orbslam2/voc/orb_mur.fbow
 This could take a while...
 Loading ORB Vocabulary in FBoW.
-ORB Vocabulary loaded in 0.007874s
+ORB Vocabulary loaded in 0.008218s
 
 
 Camera Parameters: 
@@ -44,16 +44,16 @@ Start processing sequence ...
 Images in the sequence: 798
 
 0
-New map created with 90 points for 0 Feature Type 
+New map created with 84 points for 0 Feature Type 
 Wrong initialization, reseting...
 System Reseting
 Reseting Local Mapper... done
 Reseting Loop Closing... done
 Reseting Database... done
 0
-New map created with 108 points for 0 Feature Type 
-Tracking Initlized in 0.87s
-The initlized frame ID: 16
+New map created with 122 points for 0 Feature Type 
+Tracking Initlized in 3.57s
+The initlized frame ID: 66
 System::StopViewer()
 System::StopViewer() done
 Viewer thread finished.
@@ -65,8 +65,8 @@ Correlation status saved!
 System Shutdown
 -------
 
-median tracking time: 0.0107418
-mean tracking time: 0.0117067
+median tracking time: 0.00907529
+mean tracking time: 0.00986002
 
 Saving camera trajectory to result07.txt ...
 
@@ -75,8 +75,8 @@ All done
 
 ========== Performance Summary (ms) ==========
 name                                mean      median        rmse         min         max       count
-Tracking                           3.680       3.693       0.623       1.496       5.787         564
-Correlation                        0.000       0.000       0.000       0.000       0.001         564
-Total Init                      8795.134    8795.134       0.000    8795.134    8795.134           2
-Pipeline                          11.702      10.739       3.007       7.211      43.291         798
-ORB Extract                        5.935       5.867       0.691       4.315       9.126         798
+Tracking                           3.091       3.150       0.537       1.429       4.194         533
+Correlation                        0.000       0.000       0.000       0.000       0.000         533
+Total Init                      9645.933    9645.933       0.000    9645.933    9645.933           2
+Pipeline                           9.857       9.072       2.749       5.554      50.149         798
+ORB Extract                        4.941       4.921       0.549       3.596       7.400         798

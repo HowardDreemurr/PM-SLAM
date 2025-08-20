@@ -15,13 +15,13 @@ Input sensor was set to: Monocular
 Loading Vocabulary : /home/howard/Refactored_ORB_SLAM2/Install/var/lib/orbslam2/voc/orb_mur.fbow
 This could take a while...
 Loading ORB Vocabulary in FBoW.
-ORB Vocabulary loaded in 0.008810s
+ORB Vocabulary loaded in 0.008133s
 
 
 Loading Vocabulary : /home/howard/Refactored_ORB_SLAM2/Install/var/lib/orbslam2/voc/sift_cv.fbow
 This could take a while...
 Loading SIFT Vocabulary in FBoW.
-SIFT Vocabulary loaded in 0.011841s
+SIFT Vocabulary loaded in 0.010602s
 
 
 Camera Parameters: 
@@ -60,9 +60,9 @@ Start processing sequence ...
 Images in the sequence: 798
 
 0
-New map created with 70 points for 0 Feature Type 
-New map created with 556 points for 1 Feature Type 
-Tracking Initlized in 3.10s
+New map created with 69 points for 0 Feature Type 
+New map created with 552 points for 1 Feature Type 
+Tracking Initlized in 4.06s
 The initlized frame ID: 15
 System::StopViewer()
 System::StopViewer() done
@@ -72,24 +72,24 @@ Saving correlation status...
 
 ========== Global Summary ==========
 Frames: 782
-avg_CorrEdges: 56.7123
-avg_match_A: 272.831
-avg_match_B: 342.261
-global_RI_MNR: 0.207866
-global_RI_GNR: 0.185589
-global_RI_DICE: 0.184403
+avg_CorrEdges: 58.7941
+avg_match_A: 278.758
+avg_match_B: 357.32
+global_RI_MNR: 0.210914
+global_RI_GNR: 0.186291
+global_RI_DICE: 0.184864
 
 ========== Per-Channel Summary ==========
    chA   chB     avgCorr        avgA        avgB   avgRI_MNR   avgRI_GNR  avgRI_DICE
-     0     1     56.7123     272.831     342.261    0.197783    0.173711    0.171983
+     0     1     58.7941     278.758      357.32    0.200234    0.174511    0.172599
 
 Correlation status saved!
 
 System Shutdown
 -------
 
-median tracking time: 0.029461
-mean tracking time: 0.031248
+median tracking time: 0.0259003
+mean tracking time: 0.0269081
 
 Saving camera trajectory to result03.txt ...
 
@@ -98,9 +98,9 @@ All done
 
 ========== Performance Summary (ms) ==========
 name                                mean      median        rmse         min         max       count
-Tracking                           8.776       8.880       1.747       4.130      12.641         782
-Correlation                        0.292       0.299       0.079       0.129       0.559         782
-Total Init                      1393.930    1393.930       0.000    1393.930    1393.930           1
-Pipeline                          31.245      29.453       8.912      24.050     111.101         798
-SIFT Extract                      20.107      18.971       2.735      17.248      35.567         798
-ORB Extract                        5.661       5.674       0.468       4.348       7.886         798
+Tracking                           7.683       7.800       1.431       3.227      10.924         782
+Correlation                        0.253       0.256       0.063       0.119       0.496         782
+Total Init                      1139.450    1139.450       0.000    1139.450    1139.450           1
+Pipeline                          26.905      25.896       7.177      18.258      90.591         798
+SIFT Extract                      17.249      17.042       1.876      14.474      32.580         798
+ORB Extract                        4.791       4.776       0.397       3.860       6.740         798

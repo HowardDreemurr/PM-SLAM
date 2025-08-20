@@ -15,7 +15,7 @@ Input sensor was set to: Monocular
 Loading Vocabulary : /home/howard/Refactored_ORB_SLAM2/Install/var/lib/orbslam2/voc/sift_cv.fbow
 This could take a while...
 Loading SIFT Vocabulary in FBoW.
-SIFT Vocabulary loaded in 0.018983s
+SIFT Vocabulary loaded in 0.016179s
 
 
 Camera Parameters: 
@@ -47,7 +47,7 @@ Images in the sequence: 798
 
 0
 New map created with 370 points for 0 Feature Type 
-Tracking Initlized in 5.78s
+Tracking Initlized in 5.74s
 The initlized frame ID: 25
 System::StopViewer()
 System::StopViewer() done
@@ -60,8 +60,8 @@ Correlation status saved!
 System Shutdown
 -------
 
-median tracking time: 0.0270763
-mean tracking time: 0.0286394
+median tracking time: 0.022552
+mean tracking time: 0.0238126
 
 Saving camera trajectory to result01.txt ...
 
@@ -70,8 +70,8 @@ All done
 
 ========== Performance Summary (ms) ==========
 name                                mean      median        rmse         min         max       count
-Tracking                           4.518       4.549       0.945       1.515       6.667         772
-Correlation                        0.000       0.000       0.000       0.000       0.001         772
-Total Init                      1991.399    1991.399       0.000    1991.399    1991.399           1
-Pipeline                          28.635      27.059       9.011      20.729      89.401         798
-SIFT Extract                      21.644      21.814       2.223      17.910      43.891         798
+Tracking                           3.680       3.727       0.761       1.374       5.349         772
+Correlation                        0.000       0.000       0.003       0.000       0.072         772
+Total Init                      1677.340    1677.340       0.000    1677.340    1677.340           1
+Pipeline                          23.810      22.549       7.826      17.123      89.430         798
+SIFT Extract                      18.038      18.158       2.169      14.778      37.208         798

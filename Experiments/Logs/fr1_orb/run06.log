@@ -15,7 +15,7 @@ Input sensor was set to: Monocular
 Loading Vocabulary : /home/howard/Refactored_ORB_SLAM2/Install/var/lib/orbslam2/voc/orb_mur.fbow
 This could take a while...
 Loading ORB Vocabulary in FBoW.
-ORB Vocabulary loaded in 0.008012s
+ORB Vocabulary loaded in 0.008435s
 
 
 Camera Parameters: 
@@ -44,9 +44,44 @@ Start processing sequence ...
 Images in the sequence: 798
 
 0
-New map created with 105 points for 0 Feature Type 
-Tracking Initlized in 10.26s
-The initlized frame ID: 179
+New map created with 89 points for 0 Feature Type 
+Wrong initialization, reseting...
+System Reseting
+Reseting Local Mapper... done
+Reseting Loop Closing... done
+Reseting Database... done
+0
+New map created with 98 points for 0 Feature Type 
+Wrong initialization, reseting...
+System Reseting
+Reseting Local Mapper... done
+Reseting Loop Closing... done
+Reseting Database... done
+0
+New map created with 89 points for 0 Feature Type 
+Wrong initialization, reseting...
+System Reseting
+Reseting Local Mapper... done
+Reseting Loop Closing... done
+Reseting Database... done
+0
+New map created with 76 points for 0 Feature Type 
+Wrong initialization, reseting...
+System Reseting
+Reseting Local Mapper... done
+Reseting Loop Closing... done
+Reseting Database... done
+0
+New map created with 85 points for 0 Feature Type 
+Wrong initialization, reseting...
+System Reseting
+Reseting Local Mapper... done
+Reseting Loop Closing... done
+Reseting Database... done
+0
+New map created with 106 points for 0 Feature Type 
+Tracking Initlized in 0.99s
+The initlized frame ID: 18
 System::StopViewer()
 System::StopViewer() done
 Viewer thread finished.
@@ -58,8 +93,8 @@ Correlation status saved!
 System Shutdown
 -------
 
-median tracking time: 0.0107782
-mean tracking time: 0.0116892
+median tracking time: 0.00870586
+mean tracking time: 0.00985079
 
 Saving camera trajectory to result06.txt ...
 
@@ -68,8 +103,8 @@ All done
 
 ========== Performance Summary (ms) ==========
 name                                mean      median        rmse         min         max       count
-Tracking                           3.755       3.676       0.722       0.889       7.500         618
-Correlation                        0.000       0.000       0.000       0.000       0.001         618
-Total Init                      6741.408    6741.408       0.000    6741.408    6741.408           1
-Pipeline                          11.685      10.773       2.722       7.465      27.511         798
-ORB Extract                        5.920       5.849       0.715       4.365       9.306         798
+Tracking                           2.831       2.903       0.497       1.131       5.201         551
+Correlation                        0.000       0.000       0.000       0.000       0.001         551
+Total Init                      9111.649    9111.649       0.000    9111.649    9111.649           6
+Pipeline                           9.848       8.702       4.759       5.891      69.963         798
+ORB Extract                        4.905       4.852       0.564       3.537       7.017         798

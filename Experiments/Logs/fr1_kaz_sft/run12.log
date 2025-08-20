@@ -15,13 +15,13 @@ Input sensor was set to: Monocular
 Loading Vocabulary : /home/howard/Refactored_ORB_SLAM2/Install/var/lib/orbslam2/voc/kaze_cv.fbow
 This could take a while...
 Loading KAZE Vocabulary in FBoW.
-KAZE Vocabulary loaded in 0.006412s
+KAZE Vocabulary loaded in 0.005694s
 
 
 Loading Vocabulary : /home/howard/Refactored_ORB_SLAM2/Install/var/lib/orbslam2/voc/sift_cv.fbow
 This could take a while...
 Loading SIFT Vocabulary in FBoW.
-SIFT Vocabulary loaded in 0.012494s
+SIFT Vocabulary loaded in 0.010970s
 
 
 Camera Parameters: 
@@ -63,10 +63,10 @@ Start processing sequence ...
 Images in the sequence: 798
 
 0
-New map created with 481 points for 0 Feature Type 
-New map created with 423 points for 1 Feature Type 
-Tracking Initlized in 16.29s
-The initlized frame ID: 20
+New map created with 434 points for 0 Feature Type 
+New map created with 411 points for 1 Feature Type 
+Tracking Initlized in 19.75s
+The initlized frame ID: 22
 System::StopViewer()
 System::StopViewer() done
 Viewer thread finished.
@@ -74,25 +74,25 @@ Viewer thread finished.
 Saving correlation status...
 
 ========== Global Summary ==========
-Frames: 777
-avg_CorrEdges: 123.807
-avg_match_A: 447.144
-avg_match_B: 355.327
-global_RI_MNR: 0.348431
-global_RI_GNR: 0.310604
-global_RI_DICE: 0.308564
+Frames: 775
+avg_CorrEdges: 121.991
+avg_match_A: 438.821
+avg_match_B: 349.036
+global_RI_MNR: 0.349508
+global_RI_GNR: 0.311709
+global_RI_DICE: 0.309678
 
 ========== Per-Channel Summary ==========
    chA   chB     avgCorr        avgA        avgB   avgRI_MNR   avgRI_GNR  avgRI_DICE
-     0     1     123.807     447.144     355.327    0.336428    0.296622    0.293217
+     0     1     121.991     438.821     349.036    0.338492    0.298258    0.294738
 
 Correlation status saved!
 
 System Shutdown
 -------
 
-median tracking time: 0.108518
-mean tracking time: 0.111011
+median tracking time: 0.088119
+mean tracking time: 0.0901229
 
 Saving camera trajectory to result12.txt ...
 
@@ -101,9 +101,9 @@ All done
 
 ========== Performance Summary (ms) ==========
 name                                mean      median        rmse         min         max       count
-Tracking                          11.991      12.126       2.524       5.474      23.400         777
-Correlation                        0.461       0.481       0.123       0.156       0.890         777
-Total Init                      3849.390    3849.390       0.000    3849.390    3849.390           1
-Pipeline                         111.008     108.486      14.902      89.940     241.239         798
-KAZE Extract                      95.680      95.050       7.313      75.307     151.441         798
-SIFT Extract                      28.457      23.489       9.297      19.374      89.176         798
+Tracking                           9.599       9.692       1.825       4.316      13.700         775
+Correlation                        0.365       0.377       0.092       0.139       0.733         775
+Total Init                      3368.618    3368.618       0.000    3368.618    3368.618           1
+Pipeline                          90.120      88.113      12.412      72.940     179.217         798
+KAZE Extract                      77.101      76.630       5.532      63.483     106.119         798
+SIFT Extract                      22.599      18.850       7.386      16.216      55.118         798

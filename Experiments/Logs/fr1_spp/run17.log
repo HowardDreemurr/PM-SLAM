@@ -15,7 +15,7 @@ Input sensor was set to: Monocular
 Loading Vocabulary : /home/howard/Refactored_ORB_SLAM2/Install/var/lib/orbslam2/voc/superpoint.fbow
 This could take a while...
 Loading SuperPoint Vocabulary in FBoW.
-SuperPoint Vocabulary loaded in 0.007941s
+SuperPoint Vocabulary loaded in 0.007489s
 
 
 Camera Parameters: 
@@ -47,7 +47,7 @@ Images in the sequence: 798
 
 0
 New map created with 180 points for 0 Feature Type 
-Tracking Initlized in 9.29s
+Tracking Initlized in 9.16s
 The initlized frame ID: 17
 System::StopViewer()
 System::StopViewer() done
@@ -60,8 +60,8 @@ Correlation status saved!
 System Shutdown
 -------
 
-median tracking time: 0.0742762
-mean tracking time: 0.0749576
+median tracking time: 0.0604762
+mean tracking time: 0.0611293
 
 Saving camera trajectory to result17.txt ...
 
@@ -70,8 +70,8 @@ All done
 
 ========== Performance Summary (ms) ==========
 name                                mean      median        rmse         min         max       count
-Tracking                           4.965       5.017       0.874       2.724       9.942         780
-Correlation                        0.000       0.000       0.000       0.000       0.001         780
-Total Init                      1540.759    1540.759       0.000    1540.759    1540.759           1
-Pipeline                          74.954      74.268      10.578      54.563     269.617         798
-SuperPoint Extract                68.177      67.134       9.830      50.117     249.473         798
+Tracking                           4.050       4.086       0.698       2.103       8.207         780
+Correlation                        0.000       0.000       0.000       0.000       0.002         780
+Total Init                      1271.985    1271.985       0.000    1271.985    1271.985           1
+Pipeline                          61.127      60.465       8.398      46.583     220.505         798
+SuperPoint Extract                55.556      54.927       7.662      42.425     204.439         798

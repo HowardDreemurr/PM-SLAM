@@ -15,13 +15,13 @@ Input sensor was set to: Monocular
 Loading Vocabulary : /home/howard/Refactored_ORB_SLAM2/Install/var/lib/orbslam2/voc/sift_cv.fbow
 This could take a while...
 Loading SIFT Vocabulary in FBoW.
-SIFT Vocabulary loaded in 0.012911s
+SIFT Vocabulary loaded in 0.011387s
 
 
 Loading Vocabulary : /home/howard/Refactored_ORB_SLAM2/Install/var/lib/orbslam2/voc/superpoint.fbow
 This could take a while...
 Loading SuperPoint Vocabulary in FBoW.
-SuperPoint Vocabulary loaded in 0.008483s
+SuperPoint Vocabulary loaded in 0.007753s
 
 
 Camera Parameters: 
@@ -64,7 +64,7 @@ Images in the sequence: 798
 1
 New map created with 413 points for 0 Feature Type 
 New map created with 133 points for 1 Feature Type 
-Tracking Initlized in 17.27s
+Tracking Initlized in 16.80s
 The initlized frame ID: 22
 Track lost soon after initialisation, reseting...
 System Reseting
@@ -74,7 +74,7 @@ Reseting Database... done
 1
 New map created with 316 points for 0 Feature Type 
 New map created with 138 points for 1 Feature Type 
-Tracking Initlized in 5.51s
+Tracking Initlized in 5.33s
 The initlized frame ID: 7
 System::StopViewer()
 System::StopViewer() done
@@ -84,24 +84,24 @@ Saving correlation status...
 
 ========== Global Summary ==========
 Frames: 766
-avg_CorrEdges: 6.5
-avg_match_A: 306.696
-avg_match_B: 172.996
-global_RI_MNR: 0.0375731
-global_RI_GNR: 0.028219
-global_RI_DICE: 0.0271007
+avg_CorrEdges: 6.78982
+avg_match_A: 321.727
+avg_match_B: 176.747
+global_RI_MNR: 0.0384155
+global_RI_GNR: 0.0284733
+global_RI_DICE: 0.0272424
 
 ========== Per-Channel Summary ==========
    chA   chB     avgCorr        avgA        avgB   avgRI_MNR   avgRI_GNR  avgRI_DICE
-     0     1         6.5     306.696     172.996   0.0347741   0.0258373   0.0247014
+     0     1     6.78982     321.727     176.747   0.0354383   0.0259256    0.024667
 
 Correlation status saved!
 
 System Shutdown
 -------
 
-median tracking time: 0.0862388
-mean tracking time: 0.088906
+median tracking time: 0.0718363
+mean tracking time: 0.0736669
 
 Saving camera trajectory to result05.txt ...
 
@@ -110,9 +110,9 @@ All done
 
 ========== Performance Summary (ms) ==========
 name                                mean      median        rmse         min         max       count
-Correlation                        0.244       0.244       0.071       0.069       0.778         766
-Tracking                           7.839       7.960       1.660       2.755      14.826         767
-Total Init                      3404.798    3404.798       0.000    3404.798    3404.798           1
-Pipeline                          88.848      86.212      16.181      67.358     281.730         798
-SuperPoint Extract                76.770      76.116       9.488      60.050     259.955         798
-SIFT Extract                      29.928      29.185       3.727      24.212      54.187         798
+Correlation                        0.211       0.210       0.061       0.056       0.484         766
+Tracking                           6.608       6.751       1.433       2.235      11.392         767
+Total Init                      2766.210    2766.210       0.000    2766.210    2766.210           1
+Pipeline                          73.622      71.783      13.123      51.504     228.703         798
+SuperPoint Extract                63.699      63.208       8.220      45.234     212.135         798
+SIFT Extract                      24.654      24.046       3.513      16.014      50.210         798

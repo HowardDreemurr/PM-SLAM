@@ -15,7 +15,7 @@ Input sensor was set to: Monocular
 Loading Vocabulary : /home/howard/Refactored_ORB_SLAM2/Install/var/lib/orbslam2/voc/akaze_cv.fbow
 This could take a while...
 Loading AKAZE Vocabulary in FBoW.
-AKAZE Vocabulary loaded in 0.001873s
+AKAZE Vocabulary loaded in 0.001540s
 
 
 Camera Parameters: 
@@ -46,7 +46,7 @@ Images in the sequence: 798
 
 0
 New map created with 281 points for 0 Feature Type 
-Tracking Initlized in 7.68s
+Tracking Initlized in 5.62s
 The initlized frame ID: 24
 System::StopViewer()
 System::StopViewer() done
@@ -59,8 +59,8 @@ Correlation status saved!
 System Shutdown
 -------
 
-median tracking time: 0.0346096
-mean tracking time: 0.0380531
+median tracking time: 0.0216131
+mean tracking time: 0.0222678
 
 Saving camera trajectory to result07.txt ...
 
@@ -69,8 +69,8 @@ All done
 
 ========== Performance Summary (ms) ==========
 name                                mean      median        rmse         min         max       count
-Tracking                           5.117       5.262       1.299       2.361       8.994         773
-Total Init                      1648.515    1648.515       0.000    1648.515    1648.515           1
-Pipeline                          38.049      34.539      11.225      22.538     104.035         798
-Correlation                        0.000       0.000       0.000       0.000       0.003         773
-AKAZE Extract                     30.609      27.369       9.875      18.561      99.018         798
+Tracking                           3.834       3.992       0.899       1.857       6.229         773
+Total Init                      1168.146    1168.146       0.000    1168.146    1168.146           1
+Pipeline                          22.265      21.610       4.376      18.186      52.948         798
+Correlation                        0.000       0.000       0.000       0.000       0.001         773
+AKAZE Extract                     16.766      16.685       0.835      14.673      20.792         798

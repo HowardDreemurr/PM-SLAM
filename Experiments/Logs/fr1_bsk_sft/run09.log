@@ -15,13 +15,13 @@ Input sensor was set to: Monocular
 Loading Vocabulary : /home/howard/Refactored_ORB_SLAM2/Install/var/lib/orbslam2/voc/brisk_cv.fbow
 This could take a while...
 Loading BRISK Vocabulary in FBoW.
-BRISK Vocabulary loaded in 0.001711s
+BRISK Vocabulary loaded in 0.001688s
 
 
 Loading Vocabulary : /home/howard/Refactored_ORB_SLAM2/Install/var/lib/orbslam2/voc/sift_cv.fbow
 This could take a while...
 Loading SIFT Vocabulary in FBoW.
-SIFT Vocabulary loaded in 0.011734s
+SIFT Vocabulary loaded in 0.010943s
 
 
 Camera Parameters: 
@@ -63,7 +63,7 @@ Images in the sequence: 798
 1
 New map created with 145 points for 0 Feature Type 
 New map created with 313 points for 1 Feature Type 
-Tracking Initlized in 8.40s
+Tracking Initlized in 8.01s
 The initlized frame ID: 24
 System::StopViewer()
 System::StopViewer() done
@@ -73,24 +73,24 @@ Saving correlation status...
 
 ========== Global Summary ==========
 Frames: 773
-avg_CorrEdges: 91.7012
-avg_match_A: 366.256
-avg_match_B: 341.677
-global_RI_MNR: 0.268386
-global_RI_GNR: 0.259224
-global_RI_DICE: 0.259067
+avg_CorrEdges: 90.652
+avg_match_A: 365.736
+avg_match_B: 340.354
+global_RI_MNR: 0.266346
+global_RI_GNR: 0.256938
+global_RI_DICE: 0.256772
 
 ========== Per-Channel Summary ==========
    chA   chB     avgCorr        avgA        avgB   avgRI_MNR   avgRI_GNR  avgRI_DICE
-     0     1     91.7012     366.256     341.677     0.25774    0.242063    0.241109
+     0     1      90.652     365.736     340.354    0.255449    0.240807    0.239899
 
 Correlation status saved!
 
 System Shutdown
 -------
 
-median tracking time: 0.0544434
-mean tracking time: 0.055778
+median tracking time: 0.0445425
+mean tracking time: 0.0459491
 
 Saving camera trajectory to result09.txt ...
 
@@ -99,9 +99,9 @@ All done
 
 ========== Performance Summary (ms) ==========
 name                                mean      median        rmse         min         max       count
-Tracking                          10.942      11.386       2.348       4.167      16.333         773
-Correlation                        0.406       0.422       0.122       0.130       0.869         773
-Total Init                      3227.533    3227.533       0.000    3227.533    3227.533           1
-Pipeline                          55.774      54.427      15.725      29.896     151.200         798
-BRISK Extract                     41.176      41.660       7.696      20.174      61.854         798
-SIFT Extract                      21.160      20.260       2.786      18.265      43.696         798
+Tracking                           8.848       8.998       1.776       3.610      13.516         773
+Correlation                        0.314       0.318       0.084       0.116       0.598         773
+Total Init                      2712.142    2712.142       0.000    2712.142    2712.142           1
+Pipeline                          45.946      44.511      13.300      24.767     125.389         798
+BRISK Extract                     34.078      34.438       6.398      14.876      52.631         798
+SIFT Extract                      17.114      16.538       1.845      14.521      30.996         798

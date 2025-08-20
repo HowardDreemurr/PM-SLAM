@@ -15,13 +15,13 @@ Input sensor was set to: Monocular
 Loading Vocabulary : /home/howard/Refactored_ORB_SLAM2/Install/var/lib/orbslam2/voc/akaze_cv.fbow
 This could take a while...
 Loading AKAZE Vocabulary in FBoW.
-AKAZE Vocabulary loaded in 0.001674s
+AKAZE Vocabulary loaded in 0.001632s
 
 
 Loading Vocabulary : /home/howard/Refactored_ORB_SLAM2/Install/var/lib/orbslam2/voc/sift_cv.fbow
 This could take a while...
 Loading SIFT Vocabulary in FBoW.
-SIFT Vocabulary loaded in 0.011794s
+SIFT Vocabulary loaded in 0.011068s
 
 
 Camera Parameters: 
@@ -60,10 +60,10 @@ Camera Parameters:
 Start processing sequence ...
 Images in the sequence: 798
 
-0
-New map created with 281 points for 0 Feature Type 
-New map created with 307 points for 1 Feature Type 
-Tracking Initlized in 10.97s
+1
+New map created with 279 points for 0 Feature Type 
+New map created with 309 points for 1 Feature Type 
+Tracking Initlized in 10.40s
 The initlized frame ID: 24
 System::StopViewer()
 System::StopViewer() done
@@ -73,24 +73,24 @@ Saving correlation status...
 
 ========== Global Summary ==========
 Frames: 773
-avg_CorrEdges: 98.784
-avg_match_A: 361.951
-avg_match_B: 314.204
-global_RI_MNR: 0.314394
-global_RI_GNR: 0.292924
-global_RI_DICE: 0.292193
+avg_CorrEdges: 98.489
+avg_match_A: 366.776
+avg_match_B: 326.455
+global_RI_MNR: 0.301692
+global_RI_GNR: 0.284626
+global_RI_DICE: 0.284145
 
 ========== Per-Channel Summary ==========
    chA   chB     avgCorr        avgA        avgB   avgRI_MNR   avgRI_GNR  avgRI_DICE
-     0     1      98.784     361.951     314.204    0.303839    0.271865    0.269455
+     0     1      98.489     366.776     326.455    0.291787    0.262481    0.260382
 
 Correlation status saved!
 
 System Shutdown
 -------
 
-median tracking time: 0.037476
-mean tracking time: 0.0401057
+median tracking time: 0.0298639
+mean tracking time: 0.0322572
 
 Saving camera trajectory to result17.txt ...
 
@@ -99,9 +99,9 @@ All done
 
 ========== Performance Summary (ms) ==========
 name                                mean      median        rmse         min         max       count
-Tracking                          10.315      10.693       2.450       4.251      16.127         773
-Total Init                      2892.000    2892.000       0.000    2892.000    2892.000           1
-Pipeline                          40.102      37.466      14.302      28.627     143.224         798
-SIFT Extract                      25.468      24.321       3.465      20.899      49.732         798
-Correlation                        0.379       0.388       0.135       0.104       0.929         773
-AKAZE Extract                     19.029      16.909       4.417      14.083      35.180         798
+Tracking                           8.588       8.775       1.914       3.596      12.891         773
+Total Init                      2381.866    2381.866       0.000    2381.866    2381.866           1
+Pipeline                          32.254      29.858      11.781      24.211     108.572         798
+SIFT Extract                      19.889      19.228       2.357      16.775      34.327         798
+Correlation                        0.312       0.321       0.108       0.095       0.782         773
+AKAZE Extract                     15.624      13.726       3.730      11.406      25.612         798

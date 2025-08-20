@@ -15,7 +15,7 @@ Input sensor was set to: Monocular
 Loading Vocabulary : /home/howard/Refactored_ORB_SLAM2/Install/var/lib/orbslam2/voc/kaze_cv.fbow
 This could take a while...
 Loading KAZE Vocabulary in FBoW.
-KAZE Vocabulary loaded in 0.005920s
+KAZE Vocabulary loaded in 0.005630s
 
 
 Camera Parameters: 
@@ -48,7 +48,7 @@ Images in the sequence: 798
 
 0
 New map created with 435 points for 0 Feature Type 
-Tracking Initlized in 16.63s
+Tracking Initlized in 16.21s
 The initlized frame ID: 23
 System::StopViewer()
 System::StopViewer() done
@@ -61,8 +61,8 @@ Correlation status saved!
 System Shutdown
 -------
 
-median tracking time: 0.0956095
-mean tracking time: 0.0962278
+median tracking time: 0.0769985
+mean tracking time: 0.0786209
 
 Saving camera trajectory to result13.txt ...
 
@@ -71,8 +71,8 @@ All done
 
 ========== Performance Summary (ms) ==========
 name                                mean      median        rmse         min         max       count
-Tracking                           5.186       5.325       0.752       2.716       6.878         774
-Correlation                        0.000       0.000       0.000       0.000       0.001         774
-Total Init                      3003.052    3003.052       0.000    3003.052    3003.052           1
-Pipeline                          96.225      95.577       7.379      81.784     156.305         798
-KAZE Extract                      89.042      88.867       4.835      76.607     131.674         798
+Tracking                           4.306       4.391       0.683       2.248       6.667         774
+Correlation                        0.000       0.000       0.000       0.000       0.002         774
+Total Init                      2523.792    2523.792       0.000    2523.792    2523.792           1
+Pipeline                          78.618      76.985       7.371      64.662     134.117         798
+KAZE Extract                      72.693      71.740       5.029      60.394     113.584         798
