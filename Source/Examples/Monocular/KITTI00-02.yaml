@@ -29,7 +29,7 @@ Camera.RGB: 1
 # You can specify one or more extractors (e.g., [ ORB, AKAZE ])
 # The system will initialize and run each extractor in parallel
 
-Extractors: [ SuperPoint ]
+Extractors: [ GCN ]
 
 
 Vocabularies:
@@ -41,6 +41,20 @@ Vocabularies:
   SIFT: "/voc/sift_cv.fbow"
   KAZE: "/voc/kaze_cv.fbow"
   SuperPoint: "/voc/superpoint.fbow"
+  GCN: "/voc/orb_mur.fbow"
+
+
+GCN:
+  TH_LOW: 50       # Low threshold for filtering out poor-quality matches.
+  TH_HIGH: 100     # High threshold for accepting confident matches.
+  nFeatures:   2000
+  nLevels:     1
+  scaleFactor: 1.2
+  use_cuda:    1          # 0/1
+  weights:     "../var/lib/orbslam2/gcn2_320x240_ts.pt"  # 留空则走默认/环境变量
+  input_width: 320        # 或 640
+  input_height: 240       # 或 480
+
 
 #--------------------------------------------------------------------------------------------
 # SuperPoint Parameters

@@ -42,6 +42,7 @@ src/CorrelationMatcher.cc
 src/Perf.cc
 src/SuperPointLibTorch.cc
 src/SuperPointExtractor.cc
+src/GCNextractor.cc
 )
 
 target_include_directories(${PROJECT_NAME} PUBLIC ${CMAKE_CURRENT_DIRECTORY})
