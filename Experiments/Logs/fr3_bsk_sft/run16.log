@@ -1,0 +1,156 @@
+Registering ORBextractor...
+Registering AKAZEextractor...
+Registering BRISKextractor...
+Registering SIFTextractor...
+Registering KAZEextractor...
+Registering SuperPointExtractor...
+
+ORB-SLAM2 Copyright (C) 2014-2016 Raul Mur-Artal, University of Zaragoza.
+This program comes with ABSOLUTELY NO WARRANTY;
+This is free software, and you are welcome to redistribute it
+under certain conditions. See LICENSE.txt.
+
+Input sensor was set to: Monocular
+
+Loading Vocabulary : /home/howard/Refactored_ORB_SLAM2/Install/var/lib/orbslam2/voc/brisk_cv.fbow
+This could take a while...
+Loading BRISK Vocabulary in FBoW.
+BRISK Vocabulary loaded in 0.001704s
+
+
+Loading Vocabulary : /home/howard/Refactored_ORB_SLAM2/Install/var/lib/orbslam2/voc/sift_cv.fbow
+This could take a while...
+Loading SIFT Vocabulary in FBoW.
+SIFT Vocabulary loaded in 0.011928s
+
+
+Camera Parameters: 
+- fx: 535.4
+- fy: 539.2
+- cx: 320.1
+- cy: 247.6
+- k1: 0
+- k2: 0
+- p1: 0
+- p2: 0
+- fps: 30
+- color order: RGB (ignored if grayscale)
+
+[Feature 0] BRISK Extractor Parameters: 
+ ( TH_LOW: 100, TH_HIGH: 200 )
+- Number of Features: 1000
+- Scale Levels: 6
+- Scale Factor: 1.414
+- Threshold: 4
+- Num of Octaves: 3
+- Pattern Scale: 1
+
+[Feature 1] SIFT Extractor Parameters: 
+ ( TH_LOW: 300, TH_HIGH: 500 )
+- Number of Features  : 1000
+- Scale Levels        : 1
+- Scale Factor        : 1
+- Contrast Threshold  : 0.001
+- Edge Threshold      : 10
+- nOctaves            : 3
+- Sigma               : 1.6
+
+-------
+Start processing sequence ...
+Images in the sequence: 474
+
+0
+New map created with 99 points for 0 Feature Type 
+New map created with 91 points for 1 Feature Type 
+Tracking Initlized in 8.90s
+The initlized frame ID: 28
+The lost frame ID: 261
+The lost frame ID: 267
+The lost frame ID: 269
+The lost frame ID: 272
+The lost frame ID: 273
+The lost frame ID: 274
+The lost frame ID: 278
+The lost frame ID: 282
+The lost frame ID: 287
+The lost frame ID: 290
+The lost frame ID: 291
+The lost frame ID: 292
+The lost frame ID: 293
+The lost frame ID: 294
+The lost frame ID: 295
+The lost frame ID: 296
+The lost frame ID: 297
+The lost frame ID: 298
+The lost frame ID: 299
+The lost frame ID: 300
+The lost frame ID: 301
+The lost frame ID: 302
+The lost frame ID: 303
+The lost frame ID: 304
+The lost frame ID: 305
+The lost frame ID: 306
+The lost frame ID: 307
+The lost frame ID: 308
+The lost frame ID: 315
+The lost frame ID: 317
+The lost frame ID: 319
+The lost frame ID: 320
+The lost frame ID: 321
+The lost frame ID: 322
+The lost frame ID: 323
+The lost frame ID: 324
+The lost frame ID: 325
+The lost frame ID: 326
+The lost frame ID: 327
+The lost frame ID: 328
+The lost frame ID: 331
+The lost frame ID: 332
+The lost frame ID: 333
+The lost frame ID: 334
+The lost frame ID: 336
+The lost frame ID: 345
+The lost frame ID: 352
+The lost frame ID: 354
+The lost frame ID: 358
+The lost frame ID: 365
+System::StopViewer()
+System::StopViewer() done
+Viewer thread finished.
+
+Saving correlation status...
+
+========== Global Summary ==========
+Frames: 393
+avg_CorrEdges: 5.83461
+avg_match_A: 64.2494
+avg_match_B: 38.7176
+global_RI_MNR: 0.150697
+global_RI_GNR: 0.116983
+global_RI_DICE: 0.11333
+
+========== Per-Channel Summary ==========
+   chA   chB     avgCorr        avgA        avgB   avgRI_MNR   avgRI_GNR  avgRI_DICE
+     0     1     5.83461     64.2494     38.7176    0.086912   0.0652281   0.0620988
+
+Correlation status saved!
+
+System Shutdown
+-------
+
+median tracking time: 0.0266816
+mean tracking time: 0.0320484
+
+Saving camera trajectory to result16.txt ...
+
+trajectory saved!
+All done
+
+========== Performance Summary (ms) ==========
+name                                mean      median        rmse         min         max       count
+Tracking                           5.798       6.222       3.263       1.340      15.850         445
+Correlation                        0.073       0.064       0.044       0.003       0.194         395
+Total Init                      3144.095    3144.095       0.000    3144.095    3144.095           1
+Pipeline                          32.045      26.676      19.885      19.683     120.808         474
+BRISK Extract                     18.417      17.961       6.398       6.091      36.529         474
+SIFT Extract                      18.172      17.575       2.036      16.329      32.912         474

@@ -1,0 +1,141 @@
+Registering ORBextractor...
+Registering AKAZEextractor...
+Registering BRISKextractor...
+Registering SIFTextractor...
+Registering KAZEextractor...
+Registering SuperPointExtractor...
+
+ORB-SLAM2 Copyright (C) 2014-2016 Raul Mur-Artal, University of Zaragoza.
+This program comes with ABSOLUTELY NO WARRANTY;
+This is free software, and you are welcome to redistribute it
+under certain conditions. See LICENSE.txt.
+
+Input sensor was set to: Monocular
+
+Loading Vocabulary : /home/howard/Refactored_ORB_SLAM2/Install/var/lib/orbslam2/voc/kaze_cv.fbow
+This could take a while...
+Loading KAZE Vocabulary in FBoW.
+KAZE Vocabulary loaded in 0.008955s
+
+
+Loading Vocabulary : /home/howard/Refactored_ORB_SLAM2/Install/var/lib/orbslam2/voc/sift_cv.fbow
+This could take a while...
+Loading SIFT Vocabulary in FBoW.
+SIFT Vocabulary loaded in 0.016380s
+
+
+Camera Parameters: 
+- fx: 535.4
+- fy: 539.2
+- cx: 320.1
+- cy: 247.6
+- k1: 0
+- k2: 0
+- p1: 0
+- p2: 0
+- fps: 30
+- color order: RGB (ignored if grayscale)
+
+[Feature 0] KAZE Extractor Parameters: 
+ ( TH_LOW: 0.5, TH_HIGH: 1 )
+- Number of Features : 1000
+- Scale Levels       : 4
+- Scale Factor       : 1.4
+- Threshold          : 1e-05
+- nOctaves           : 4
+- nOctaveLayers      : 4
+- Extended (128‑dim) : 0
+- Upright            : 0
+
+[Feature 1] SIFT Extractor Parameters: 
+ ( TH_LOW: 300, TH_HIGH: 500 )
+- Number of Features  : 1000
+- Scale Levels        : 1
+- Scale Factor        : 1
+- Contrast Threshold  : 0.001
+- Edge Threshold      : 10
+- nOctaves            : 3
+- Sigma               : 1.6
+
+-------
+Start processing sequence ...
+Images in the sequence: 474
+
+0
+New map created with 252 points for 0 Feature Type 
+New map created with 84 points for 1 Feature Type 
+Tracking Initlized in 24.58s
+The initlized frame ID: 28
+The lost frame ID: 303
+The lost frame ID: 305
+The lost frame ID: 307
+The lost frame ID: 308
+The lost frame ID: 309
+The lost frame ID: 310
+The lost frame ID: 311
+The lost frame ID: 312
+The lost frame ID: 313
+The lost frame ID: 314
+The lost frame ID: 315
+The lost frame ID: 316
+The lost frame ID: 317
+The lost frame ID: 318
+The lost frame ID: 319
+The lost frame ID: 320
+The lost frame ID: 321
+The lost frame ID: 322
+The lost frame ID: 323
+The lost frame ID: 324
+The lost frame ID: 325
+The lost frame ID: 326
+The lost frame ID: 327
+The lost frame ID: 328
+The lost frame ID: 329
+The lost frame ID: 330
+The lost frame ID: 331
+The lost frame ID: 332
+The lost frame ID: 333
+The lost frame ID: 340
+The lost frame ID: 342
+The lost frame ID: 405
+The lost frame ID: 422
+System::StopViewer()
+System::StopViewer() done
+Viewer thread finished.
+
+Saving correlation status...
+
+========== Global Summary ==========
+Frames: 403
+avg_CorrEdges: 8.71464
+avg_match_A: 103.702
+avg_match_B: 25.598
+global_RI_MNR: 0.340442
+global_RI_GNR: 0.169142
+global_RI_DICE: 0.134797
+
+========== Per-Channel Summary ==========
+   chA   chB     avgCorr        avgA        avgB   avgRI_MNR   avgRI_GNR  avgRI_DICE
+     0     1     8.71464     103.702      25.598    0.116234   0.0571437   0.0454593
+
+Correlation status saved!
+
+System Shutdown
+-------
+
+median tracking time: 0.0903528
+mean tracking time: 0.0959181
+
+Saving camera trajectory to result01.txt ...
+
+trajectory saved!
+All done
+
+========== Performance Summary (ms) ==========
+name                                mean      median        rmse         min         max       count
+Tracking                           6.264       5.983       3.757       1.340      19.880         445
+Correlation                        0.087       0.054       0.086       0.002       0.347         411
+Total Init                      4389.646    4389.646       0.000    4389.646    4389.646           1
+Pipeline                          95.915      90.349      17.474      80.089     210.935         474
+KAZE Extract                      84.853      83.393       7.875      70.806     144.183         474
+SIFT Extract                      25.036      20.854       9.048      18.504      99.682         474

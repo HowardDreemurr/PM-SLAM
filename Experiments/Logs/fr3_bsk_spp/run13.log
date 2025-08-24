@@ -1,0 +1,132 @@
+Registering ORBextractor...
+Registering AKAZEextractor...
+Registering BRISKextractor...
+Registering SIFTextractor...
+Registering KAZEextractor...
+Registering SuperPointExtractor...
+
+ORB-SLAM2 Copyright (C) 2014-2016 Raul Mur-Artal, University of Zaragoza.
+This program comes with ABSOLUTELY NO WARRANTY;
+This is free software, and you are welcome to redistribute it
+under certain conditions. See LICENSE.txt.
+
+Input sensor was set to: Monocular
+
+Loading Vocabulary : /home/howard/Refactored_ORB_SLAM2/Install/var/lib/orbslam2/voc/brisk_cv.fbow
+This could take a while...
+Loading BRISK Vocabulary in FBoW.
+BRISK Vocabulary loaded in 0.001926s
+
+
+Loading Vocabulary : /home/howard/Refactored_ORB_SLAM2/Install/var/lib/orbslam2/voc/superpoint.fbow
+This could take a while...
+Loading SuperPoint Vocabulary in FBoW.
+SuperPoint Vocabulary loaded in 0.008197s
+
+
+Camera Parameters: 
+- fx: 535.4
+- fy: 539.2
+- cx: 320.1
+- cy: 247.6
+- k1: 0
+- k2: 0
+- p1: 0
+- p2: 0
+- fps: 30
+- color order: RGB (ignored if grayscale)
+
+[Feature 0] BRISK Extractor Parameters: 
+ ( TH_LOW: 100, TH_HIGH: 200 )
+- Number of Features: 1000
+- Scale Levels: 6
+- Scale Factor: 1.414
+- Threshold: 4
+- Num of Octaves: 3
+- Pattern Scale: 1
+
+[Feature 1] SuperPoint Extractor Parameters: 
+ ( TH_LOW: 0.7, TH_HIGH: 0.9 )
+- Number of Features: 1000
+- Scale Levels: 4
+- Scale Factor: 1.2
+- Use CUDA: 1
+- Use NMS: 1
+- iniTh: 0.0024
+- minTh: 0.0012
+
+-------
+Start processing sequence ...
+Images in the sequence: 474
+
+0
+New map created with 109 points for 0 Feature Type 
+New map created with 1 points for 1 Feature Type 
+Tracking Initlized in 19.81s
+The initlized frame ID: 33
+Track lost soon after initialisation, reseting...
+System Reseting
+Reseting Local Mapper... done
+Reseting Loop Closing... done
+Reseting Database... done
+0
+New map created with 96 points for 0 Feature Type 
+New map created with 2 points for 1 Feature Type 
+Wrong initialization, reseting...
+System Reseting
+Reseting Local Mapper... done
+Reseting Loop Closing... done
+Reseting Database... done
+0
+New map created with 60 points for 0 Feature Type 
+New map created with 2 points for 1 Feature Type 
+Wrong initialization, reseting...
+System Reseting
+Reseting Local Mapper... done
+Reseting Loop Closing... done
+Reseting Database... done
+0
+New map created with 109 points for 0 Feature Type 
+New map created with 2 points for 1 Feature Type 
+Tracking Initlized in 110.81s
+The initlized frame ID: 191
+System::StopViewer()
+System::StopViewer() done
+Viewer thread finished.
+
+Saving correlation status...
+
+========== Global Summary ==========
+Frames: 37
+avg_CorrEdges: 8.72973
+avg_match_A: 90.2162
+avg_match_B: 160.73
+global_RI_MNR: 0.0967645
+global_RI_GNR: 0.0724954
+global_RI_DICE: 0.0695746
+
+========== Per-Channel Summary ==========
+   chA   chB     avgCorr        avgA        avgB   avgRI_MNR   avgRI_GNR  avgRI_DICE
+     0     1     8.72973     90.2162      160.73   0.0976756   0.0708287   0.0671699
+
+Correlation status saved!
+
+System Shutdown
+-------
+
+median tracking time: 0.08702
+mean tracking time: 0.0827895
+
+Saving camera trajectory to result13.txt ...
+
+trajectory saved!
+All done
+
+========== Performance Summary (ms) ==========
+name                                mean      median        rmse         min         max       count
+Correlation                        0.115       0.112       0.025       0.072       0.192          37
+Tracking                           5.722       5.439       1.476       3.098      10.933          38
+Total Init                      3227.119    3227.119       0.000    3227.119    3227.119           1
+Pipeline                          82.698      86.846      18.256      41.821     238.220         474
+SuperPoint Extract                50.883      49.965       9.221      40.157     219.734         474
+BRISK Extract                     18.068      16.786       6.055       7.241      35.464         474

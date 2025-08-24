@@ -1,0 +1,121 @@
+Registering ORBextractor...
+Registering AKAZEextractor...
+Registering BRISKextractor...
+Registering SIFTextractor...
+Registering KAZEextractor...
+Registering SuperPointExtractor...
+
+ORB-SLAM2 Copyright (C) 2014-2016 Raul Mur-Artal, University of Zaragoza.
+This program comes with ABSOLUTELY NO WARRANTY;
+This is free software, and you are welcome to redistribute it
+under certain conditions. See LICENSE.txt.
+
+Input sensor was set to: Monocular
+
+Loading Vocabulary : /home/howard/Refactored_ORB_SLAM2/Install/var/lib/orbslam2/voc/brisk_cv.fbow
+This could take a while...
+Loading BRISK Vocabulary in FBoW.
+BRISK Vocabulary loaded in 0.001727s
+
+
+Loading Vocabulary : /home/howard/Refactored_ORB_SLAM2/Install/var/lib/orbslam2/voc/sift_cv.fbow
+This could take a while...
+Loading SIFT Vocabulary in FBoW.
+SIFT Vocabulary loaded in 0.013142s
+
+
+Camera Parameters: 
+- fx: 535.4
+- fy: 539.2
+- cx: 320.1
+- cy: 247.6
+- k1: 0
+- k2: 0
+- p1: 0
+- p2: 0
+- fps: 30
+- color order: RGB (ignored if grayscale)
+
+[Feature 0] BRISK Extractor Parameters: 
+ ( TH_LOW: 100, TH_HIGH: 200 )
+- Number of Features: 1000
+- Scale Levels: 6
+- Scale Factor: 1.414
+- Threshold: 4
+- Num of Octaves: 3
+- Pattern Scale: 1
+
+[Feature 1] SIFT Extractor Parameters: 
+ ( TH_LOW: 300, TH_HIGH: 500 )
+- Number of Features  : 1000
+- Scale Levels        : 1
+- Scale Factor        : 1
+- Contrast Threshold  : 0.001
+- Edge Threshold      : 10
+- nOctaves            : 3
+- Sigma               : 1.6
+
+-------
+Start processing sequence ...
+Images in the sequence: 474
+
+0
+New map created with 99 points for 0 Feature Type 
+New map created with 91 points for 1 Feature Type 
+Tracking Initlized in 9.57s
+The initlized frame ID: 28
+The lost frame ID: 248
+The lost frame ID: 251
+The lost frame ID: 259
+The lost frame ID: 263
+The lost frame ID: 264
+The lost frame ID: 267
+The lost frame ID: 268
+The lost frame ID: 272
+The lost frame ID: 273
+The lost frame ID: 275
+The lost frame ID: 277
+The lost frame ID: 295
+The lost frame ID: 297
+The lost frame ID: 301
+The lost frame ID: 304
+System::StopViewer()
+System::StopViewer() done
+Viewer thread finished.
+
+Saving correlation status...
+
+========== Global Summary ==========
+Frames: 419
+avg_CorrEdges: 1.36277
+avg_match_A: 31.58
+avg_match_B: 14.0692
+global_RI_MNR: 0.0968617
+global_RI_GNR: 0.0646519
+global_RI_DICE: 0.0597062
+
+========== Per-Channel Summary ==========
+   chA   chB     avgCorr        avgA        avgB   avgRI_MNR   avgRI_GNR  avgRI_DICE
+     0     1     1.36277       31.58     14.0692   0.0528777   0.0317796   0.0279667
+
+Correlation status saved!
+
+System Shutdown
+-------
+
+median tracking time: 0.0277342
+mean tracking time: 0.0334388
+
+Saving camera trajectory to result02.txt ...
+
+trajectory saved!
+All done
+
+========== Performance Summary (ms) ==========
+name                                mean      median        rmse         min         max       count
+Tracking                           6.384       6.773       1.996       1.351      14.108         445
+Correlation                        0.047       0.039       0.025       0.002       0.168         430
+Total Init                      3212.020    3212.020       0.000    3212.020    3212.020           1
+Pipeline                          33.435      27.685      20.055      19.169     126.117         474
+BRISK Extract                     18.890      18.585       6.617       6.279      40.834         474
+SIFT Extract                      18.850      18.240       2.336      16.140      34.418         474

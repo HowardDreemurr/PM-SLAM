@@ -1,0 +1,266 @@
+Registering ORBextractor...
+Registering AKAZEextractor...
+Registering BRISKextractor...
+Registering SIFTextractor...
+Registering KAZEextractor...
+Registering SuperPointExtractor...
+
+ORB-SLAM2 Copyright (C) 2014-2016 Raul Mur-Artal, University of Zaragoza.
+This program comes with ABSOLUTELY NO WARRANTY;
+This is free software, and you are welcome to redistribute it
+under certain conditions. See LICENSE.txt.
+
+Input sensor was set to: Monocular
+
+Loading Vocabulary : /home/howard/Refactored_ORB_SLAM2/Install/var/lib/orbslam2/voc/kaze_cv.fbow
+This could take a while...
+Loading KAZE Vocabulary in FBoW.
+KAZE Vocabulary loaded in 0.007330s
+
+
+Loading Vocabulary : /home/howard/Refactored_ORB_SLAM2/Install/var/lib/orbslam2/voc/sift_cv.fbow
+This could take a while...
+Loading SIFT Vocabulary in FBoW.
+SIFT Vocabulary loaded in 0.014936s
+
+
+Camera Parameters: 
+- fx: 535.4
+- fy: 539.2
+- cx: 320.1
+- cy: 247.6
+- k1: 0
+- k2: 0
+- p1: 0
+- p2: 0
+- fps: 30
+- color order: RGB (ignored if grayscale)
+
+[Feature 0] KAZE Extractor Parameters: 
+ ( TH_LOW: 0.5, TH_HIGH: 1 )
+- Number of Features : 1000
+- Scale Levels       : 4
+- Scale Factor       : 1.4
+- Threshold          : 1e-05
+- nOctaves           : 4
+- nOctaveLayers      : 4
+- Extended (128‑dim) : 0
+- Upright            : 0
+
+[Feature 1] SIFT Extractor Parameters: 
+ ( TH_LOW: 300, TH_HIGH: 500 )
+- Number of Features  : 1000
+- Scale Levels        : 1
+- Scale Factor        : 1
+- Contrast Threshold  : 0.001
+- Edge Threshold      : 10
+- nOctaves            : 3
+- Sigma               : 1.6
+
+-------
+Start processing sequence ...
+Images in the sequence: 474
+
+0
+New map created with 252 points for 0 Feature Type 
+New map created with 84 points for 1 Feature Type 
+Tracking Initlized in 24.51s
+The initlized frame ID: 28
+The lost frame ID: 302
+The lost frame ID: 303
+The lost frame ID: 306
+The lost frame ID: 308
+The lost frame ID: 309
+The lost frame ID: 310
+The lost frame ID: 311
+The lost frame ID: 312
+The lost frame ID: 313
+The lost frame ID: 314
+The lost frame ID: 315
+The lost frame ID: 316
+The lost frame ID: 317
+The lost frame ID: 318
+The lost frame ID: 319
+The lost frame ID: 320
+The lost frame ID: 321
+The lost frame ID: 322
+The lost frame ID: 323
+The lost frame ID: 324
+The lost frame ID: 325
+The lost frame ID: 326
+The lost frame ID: 327
+The lost frame ID: 329
+The lost frame ID: 330
+The lost frame ID: 331
+The lost frame ID: 332
+The lost frame ID: 333
+The lost frame ID: 334
+The lost frame ID: 335
+The lost frame ID: 336
+The lost frame ID: 337
+The lost frame ID: 338
+The lost frame ID: 339
+The lost frame ID: 340
+The lost frame ID: 341
+The lost frame ID: 342
+The lost frame ID: 343
+The lost frame ID: 344
+The lost frame ID: 345
+The lost frame ID: 346
+The lost frame ID: 347
+The lost frame ID: 348
+The lost frame ID: 349
+The lost frame ID: 350
+The lost frame ID: 351
+The lost frame ID: 352
+The lost frame ID: 353
+The lost frame ID: 354
+The lost frame ID: 355
+The lost frame ID: 356
+The lost frame ID: 357
+The lost frame ID: 358
+The lost frame ID: 359
+The lost frame ID: 360
+The lost frame ID: 361
+The lost frame ID: 362
+The lost frame ID: 363
+The lost frame ID: 364
+The lost frame ID: 365
+The lost frame ID: 366
+The lost frame ID: 367
+The lost frame ID: 368
+The lost frame ID: 369
+The lost frame ID: 370
+The lost frame ID: 371
+The lost frame ID: 372
+The lost frame ID: 373
+The lost frame ID: 374
+The lost frame ID: 375
+The lost frame ID: 376
+The lost frame ID: 377
+The lost frame ID: 378
+The lost frame ID: 379
+The lost frame ID: 380
+The lost frame ID: 381
+The lost frame ID: 382
+The lost frame ID: 383
+The lost frame ID: 384
+The lost frame ID: 385
+The lost frame ID: 386
+The lost frame ID: 387
+The lost frame ID: 388
+The lost frame ID: 389
+The lost frame ID: 390
+The lost frame ID: 391
+The lost frame ID: 392
+The lost frame ID: 393
+The lost frame ID: 394
+The lost frame ID: 395
+The lost frame ID: 396
+The lost frame ID: 397
+The lost frame ID: 398
+The lost frame ID: 399
+The lost frame ID: 400
+The lost frame ID: 401
+The lost frame ID: 402
+The lost frame ID: 403
+The lost frame ID: 404
+The lost frame ID: 405
+The lost frame ID: 406
+The lost frame ID: 407
+The lost frame ID: 408
+The lost frame ID: 409
+The lost frame ID: 410
+The lost frame ID: 411
+The lost frame ID: 412
+The lost frame ID: 413
+The lost frame ID: 414
+The lost frame ID: 415
+The lost frame ID: 416
+The lost frame ID: 417
+The lost frame ID: 418
+The lost frame ID: 419
+The lost frame ID: 420
+The lost frame ID: 421
+The lost frame ID: 422
+The lost frame ID: 423
+The lost frame ID: 424
+The lost frame ID: 425
+The lost frame ID: 426
+The lost frame ID: 427
+The lost frame ID: 428
+The lost frame ID: 429
+The lost frame ID: 430
+The lost frame ID: 431
+The lost frame ID: 432
+The lost frame ID: 433
+The lost frame ID: 434
+The lost frame ID: 435
+The lost frame ID: 436
+The lost frame ID: 437
+The lost frame ID: 438
+The lost frame ID: 439
+The lost frame ID: 440
+The lost frame ID: 442
+The lost frame ID: 443
+The lost frame ID: 444
+The lost frame ID: 445
+The lost frame ID: 446
+The lost frame ID: 447
+The lost frame ID: 448
+The lost frame ID: 449
+The lost frame ID: 450
+The lost frame ID: 451
+The lost frame ID: 452
+The lost frame ID: 453
+The lost frame ID: 454
+The lost frame ID: 455
+The lost frame ID: 456
+The lost frame ID: 457
+The lost frame ID: 458
+The lost frame ID: 459
+The lost frame ID: 460
+The lost frame ID: 461
+The lost frame ID: 462
+The lost frame ID: 463
+The lost frame ID: 464
+System::StopViewer()
+System::StopViewer() done
+Viewer thread finished.
+
+Saving correlation status...
+
+========== Global Summary ==========
+Frames: 287
+avg_CorrEdges: 11.8014
+avg_match_A: 133.669
+avg_match_B: 36.2718
+global_RI_MNR: 0.32536
+global_RI_GNR: 0.169486
+global_RI_DICE: 0.138888
+
+========== Per-Channel Summary ==========
+   chA   chB     avgCorr        avgA        avgB   avgRI_MNR   avgRI_GNR  avgRI_DICE
+     0     1     11.8014     133.669     36.2718    0.153743   0.0826859   0.0691678
+
+Correlation status saved!
+
+System Shutdown
+-------
+
+median tracking time: 0.0970854
+mean tracking time: 0.103991
+
+Saving camera trajectory to result02.txt ...
+
+trajectory saved!
+All done
+
+========== Performance Summary (ms) ==========
+name                                mean      median        rmse         min         max       count
+Tracking                          11.853       6.518      10.120       1.863      31.488         445
+Correlation                        0.112       0.069       0.096       0.029       0.399         287
+Total Init                      4325.440    4325.440       0.000    4325.440    4325.440           1
+Pipeline                         103.988      97.022      16.725      82.162     183.634         474
+KAZE Extract                      87.765      87.622       5.512      74.105     124.529         474
+SIFT Extract                      23.563      21.061       7.265      17.800      85.209         474

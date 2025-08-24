@@ -1,0 +1,143 @@
+Registering ORBextractor...
+Registering AKAZEextractor...
+Registering BRISKextractor...
+Registering SIFTextractor...
+Registering KAZEextractor...
+Registering SuperPointExtractor...
+
+ORB-SLAM2 Copyright (C) 2014-2016 Raul Mur-Artal, University of Zaragoza.
+This program comes with ABSOLUTELY NO WARRANTY;
+This is free software, and you are welcome to redistribute it
+under certain conditions. See LICENSE.txt.
+
+Input sensor was set to: Monocular
+
+Loading Vocabulary : /home/howard/Refactored_ORB_SLAM2/Install/var/lib/orbslam2/voc/brisk_cv.fbow
+This could take a while...
+Loading BRISK Vocabulary in FBoW.
+BRISK Vocabulary loaded in 0.001666s
+
+
+Loading Vocabulary : /home/howard/Refactored_ORB_SLAM2/Install/var/lib/orbslam2/voc/sift_cv.fbow
+This could take a while...
+Loading SIFT Vocabulary in FBoW.
+SIFT Vocabulary loaded in 0.012680s
+
+
+Camera Parameters: 
+- fx: 535.4
+- fy: 539.2
+- cx: 320.1
+- cy: 247.6
+- k1: 0
+- k2: 0
+- p1: 0
+- p2: 0
+- fps: 30
+- color order: RGB (ignored if grayscale)
+
+[Feature 0] BRISK Extractor Parameters: 
+ ( TH_LOW: 100, TH_HIGH: 200 )
+- Number of Features: 1000
+- Scale Levels: 6
+- Scale Factor: 1.414
+- Threshold: 4
+- Num of Octaves: 3
+- Pattern Scale: 1
+
+[Feature 1] SIFT Extractor Parameters: 
+ ( TH_LOW: 300, TH_HIGH: 500 )
+- Number of Features  : 1000
+- Scale Levels        : 1
+- Scale Factor        : 1
+- Contrast Threshold  : 0.001
+- Edge Threshold      : 10
+- nOctaves            : 3
+- Sigma               : 1.6
+
+-------
+Start processing sequence ...
+Images in the sequence: 474
+
+0
+New map created with 99 points for 0 Feature Type 
+New map created with 91 points for 1 Feature Type 
+Tracking Initlized in 9.08s
+The initlized frame ID: 28
+The lost frame ID: 210
+The lost frame ID: 228
+The lost frame ID: 243
+The lost frame ID: 245
+The lost frame ID: 248
+The lost frame ID: 250
+The lost frame ID: 253
+The lost frame ID: 257
+The lost frame ID: 259
+The lost frame ID: 260
+The lost frame ID: 263
+The lost frame ID: 264
+The lost frame ID: 266
+The lost frame ID: 268
+The lost frame ID: 269
+The lost frame ID: 272
+The lost frame ID: 273
+The lost frame ID: 274
+The lost frame ID: 275
+The lost frame ID: 276
+The lost frame ID: 277
+The lost frame ID: 279
+The lost frame ID: 282
+The lost frame ID: 283
+The lost frame ID: 284
+The lost frame ID: 287
+The lost frame ID: 288
+The lost frame ID: 289
+The lost frame ID: 290
+The lost frame ID: 291
+The lost frame ID: 293
+The lost frame ID: 294
+The lost frame ID: 296
+The lost frame ID: 297
+The lost frame ID: 298
+The lost frame ID: 299
+The lost frame ID: 300
+System::StopViewer()
+System::StopViewer() done
+Viewer thread finished.
+
+Saving correlation status...
+
+========== Global Summary ==========
+Frames: 408
+avg_CorrEdges: 1.85294
+avg_match_A: 32.9877
+avg_match_B: 20.9681
+global_RI_MNR: 0.0883694
+global_RI_GNR: 0.070454
+global_RI_DICE: 0.0686836
+
+========== Per-Channel Summary ==========
+   chA   chB     avgCorr        avgA        avgB   avgRI_MNR   avgRI_GNR  avgRI_DICE
+     0     1     1.85294     32.9877     20.9681   0.0504628   0.0350959   0.0326377
+
+Correlation status saved!
+
+System Shutdown
+-------
+
+median tracking time: 0.0260809
+mean tracking time: 0.03174
+
+Saving camera trajectory to result07.txt ...
+
+trajectory saved!
+All done
+
+========== Performance Summary (ms) ==========
+name                                mean      median        rmse         min         max       count
+Tracking                           5.364       6.177       2.728       1.199      14.273         445
+Correlation                        0.050       0.039       0.024       0.027       0.133         408
+Total Init                      3165.090    3165.090       0.000    3165.090    3165.090           1
+Pipeline                          31.737      26.076      20.037      19.041     122.466         474
+BRISK Extract                     18.566      18.221       6.507       5.973      35.675         474
+SIFT Extract                      18.176      17.644       2.070      16.056      33.090         474

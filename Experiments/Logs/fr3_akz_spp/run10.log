@@ -1,0 +1,105 @@
+Registering ORBextractor...
+Registering AKAZEextractor...
+Registering BRISKextractor...
+Registering SIFTextractor...
+Registering KAZEextractor...
+Registering SuperPointExtractor...
+
+ORB-SLAM2 Copyright (C) 2014-2016 Raul Mur-Artal, University of Zaragoza.
+This program comes with ABSOLUTELY NO WARRANTY;
+This is free software, and you are welcome to redistribute it
+under certain conditions. See LICENSE.txt.
+
+Input sensor was set to: Monocular
+
+Loading Vocabulary : /home/howard/Refactored_ORB_SLAM2/Install/var/lib/orbslam2/voc/akaze_cv.fbow
+This could take a while...
+Loading AKAZE Vocabulary in FBoW.
+AKAZE Vocabulary loaded in 0.001694s
+
+
+Loading Vocabulary : /home/howard/Refactored_ORB_SLAM2/Install/var/lib/orbslam2/voc/superpoint.fbow
+This could take a while...
+Loading SuperPoint Vocabulary in FBoW.
+SuperPoint Vocabulary loaded in 0.007303s
+
+
+Camera Parameters: 
+- fx: 535.4
+- fy: 539.2
+- cx: 320.1
+- cy: 247.6
+- k1: 0
+- k2: 0
+- p1: 0
+- p2: 0
+- fps: 30
+- color order: RGB (ignored if grayscale)
+
+[Feature 0] AKAZE Extractor Parameters: 
+ ( TH_LOW: 100, TH_HIGH: 200 )
+- Number of Features: 1000
+- Scale Levels: 4
+- Scale Factor: 1.4
+- Threshold: 1e-05
+- Num of Octaves: 4
+- Num of Octave Layers: 4
+
+[Feature 1] SuperPoint Extractor Parameters: 
+ ( TH_LOW: 0.7, TH_HIGH: 0.9 )
+- Number of Features: 1000
+- Scale Levels: 4
+- Scale Factor: 1.2
+- Use CUDA: 1
+- Use NMS: 1
+- iniTh: 0.0024
+- minTh: 0.0012
+
+-------
+Start processing sequence ...
+Images in the sequence: 474
+
+0
+New map created with 352 points for 0 Feature Type 
+New map created with 0 points for 1 Feature Type 
+Tracking Initlized in 21.92s
+The initlized frame ID: 29
+The lost frame ID: 99
+The lost frame ID: 100
+The lost frame ID: 107
+The lost frame ID: 108
+The lost frame ID: 119
+The lost frame ID: 120
+The lost frame ID: 121
+The lost frame ID: 123
+The lost frame ID: 124
+The lost frame ID: 125
+The lost frame ID: 126
+The lost frame ID: 127
+System::StopViewer()
+System::StopViewer() done
+Viewer thread finished.
+
+Saving correlation status...
+
+Correlation status saved!
+
+System Shutdown
+-------
+
+median tracking time: 0.0608262
+mean tracking time: 0.0641835
+
+Saving camera trajectory to result10.txt ...
+
+trajectory saved!
+All done
+
+========== Performance Summary (ms) ==========
+name                                mean      median        rmse         min         max       count
+Tracking                           4.001       3.779       1.325       2.023      11.029         444
+Total Init                      3189.514    3189.514       0.000    3189.514    3189.514           1
+Pipeline                          64.181      60.808      15.170      45.600     249.480         474
+SuperPoint Extract                55.812      54.932       9.733      41.133     231.147         474
+Correlation                        0.022       0.022       0.008       0.003       0.079         432
+AKAZE Extract                     20.170      19.913       1.549      17.393      34.918         474
