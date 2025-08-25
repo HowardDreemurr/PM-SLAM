@@ -12,6 +12,18 @@ PM-SLAM (Point-based Multi-feature SLAM) is a research-oriented extension of ORB
 The system integrates the multi-channel mapping and tracking architecture adapted from GCNv2_SLAM (https://github.com/JackieZJQ/GCNv2_SLAM/tree/dev).
 In addition, the SuperPoint feature extractor has been ported from SuperSLAM(https://github.com/adityamwagh/SuperSLAM) and optimized with CUDA for real-time performance.
 
+## Recommended Environment
+
+* **OS:** Ubuntu 24.04 LTS (preferred)  
+* **CMake:** 3.22–3.28 (avoid 4.x due to Pangolin issues)  
+* **OpenCV:** 4.6.0 (from source, with contrib)  
+  - If a feature module fails to compile and you don’t need it, simply remove:  
+    - Its `.cc` file from `CMakeLists.txt`  
+    - Its registration in the feature extractor factory  
+* **CUDA:** Match your `nvidia-smi` version (e.g. 12.9)  
+* **LibTorch:** Matching C++ build for your CUDA version (cu118/.../cu128/cu129) 
+
+
 ## Build instructions:
 
 You will need to clone this repository using `git clone https://github.com/HowardDreemurr/PM-SLAM.git`
