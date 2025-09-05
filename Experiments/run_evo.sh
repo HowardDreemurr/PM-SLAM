@@ -46,6 +46,50 @@ while [[ $i -lt ${#USER_ARGS[@]} ]]; do
     i=$((i+2)); continue
   fi
   norm_args+=("$arg"); i=$((i+1))
+
+# ---------- Reference format override & minimal auto-detect ----------
+REF_FMT="${EVO_REF_FORMAT:-auto}"
+
+# Allow CLI override like: --ref-format euroc  or  --ref-format=euroc
+clean_args=()
+i=0
+while [[ $i -lt ${#norm_args[@]} ]]; do
+  arg="${norm_args[$i]}"
+  if [[ "$arg" == "--ref-format" && $((i+1)) -lt ${#norm_args[@]} ]]; then
+    REF_FMT="${norm_args[$((i+1))]}"; i=$((i+2)); continue
+  elif [[ "$arg" == --ref-format=* ]]; then
+    REF_FMT="${arg#--ref-format=}"; i=$((i+1)); continue
+  else
+    clean_args+=("$arg"); i=$((i+1))
+  fi
+done
+norm_args=("${clean_args[@]}")
+
+# Auto-detect if not set
+if [[ -z "$REF_FMT" || "$REF_FMT" == "auto" ]]; then
+  if [[ "$GT" == *.csv ]]; then
+    REF_FMT="euroc"
+  elif [[ "$GT" == */poses/* ]] || [[ "$(basename "$GT")" =~ ^[0-9]{2}\.txt$ ]]; then
+    REF_FMT="kitti"
+  else
+    REF_FMT="tum"
+  fi
+fi
+
+# Prepare GT and per-run EST format handling
+GT_PREP="$GT"
+GT_CLEANUP_DIR=""
+if [[ "$REF_FMT" == "euroc" ]]; then
+  # Convert EuRoC CSV -> TUM with AWK (timestamp ns -> s, quaternion wxyz -> xyzw)
+  GT_CLEANUP_DIR="$(mktemp -d -t evo_gt_XXXX)"
+  GT_PREP="${GT_CLEANUP_DIR}/gt_euroc_as_tum.txt"
+  awk -F, 'NR==1{next} /^[[:space:]]*#/ {next} NF>=8 { \
+      t=$1/1e9; \
+      printf("%.9f %s %s %s %s %s %s %s\n", t, $2, $3, $4, $6, $7, $8, $5); \
+    }' "$GT" > "$GT_PREP"
+  REF_FMT="tum"
+fi
+
 done
 
 EVO_BIN="evo_${MODE}"
@@ -78,8 +122,31 @@ echo "" >> "$TMP_OUT"
 
 for f in "${FILES[@]}"; do
   base=$(basename "$f")
+
+  # Prepare EST format if needed (KITTI needs kitti format)
+  EST_IN="$f"
+  EST_TMP_DIR=""
+  if [[ "$REF_FMT" == "kitti" ]]; then
+    if ! command -v evo_traj >/dev/null 2>&1; then
+      echo "ERROR: evo_traj not found for KITTI est conversion." >&2
+      exit 3
+    fi
+    EST_TMP_DIR="$(mktemp -d -t evo_est_XXXX)"
+    cp -f "$f" "${EST_TMP_DIR}/traj.tum"
+    (cd "$EST_TMP_DIR" && evo_traj tum ./traj.tum --save_as_kitti >/dev/null 2>&1)
+    if [[ -f "${EST_TMP_DIR}/traj.kitti" ]]; then
+      EST_IN="${EST_TMP_DIR}/traj.kitti"
+    else
+      EST_IN="$(ls -1 "${EST_TMP_DIR}"/*.kitti 2>/dev/null | head -n1)"
+    fi
+    if [[ -z "$EST_IN" || ! -f "$EST_IN" ]]; then
+      echo "ERROR: failed to convert EST to KITTI for ${base}." >&2
+      exit 3
+    fi
+  fi
+
   # Capture evo output and show it to user; then parse numeric block
-  out="$("$EVO_BIN" tum "$GT" "$f" "${norm_args[@]}" 2>&1)"
+  out="$("$EVO_BIN" ${REF_FMT} "$GT_PREP" "$EST_IN" "${norm_args[@]}" 2>&1)"
   echo "$out" >&2
   block="$(printf "%s\n" "$out" | awk '
     BEGIN{capture=0}
@@ -97,7 +164,13 @@ for f in "${FILES[@]}"; do
   else
     echo "[WARN] No numeric metrics parsed for ${base}; skipping." >&2
   fi
+
+  # cleanup per-run est tmp
+  if [[ -n "$EST_TMP_DIR" ]]; then rm -rf "$EST_TMP_DIR"; fi
 done
+
+# cleanup GT tmp
+if [[ -n "$GT_CLEANUP_DIR" ]]; then rm -rf "$GT_CLEANUP_DIR"; fi
 
 if [[ $any -eq 1 ]]; then
   mv -f "$TMP_OUT" "$OUT_FILE"

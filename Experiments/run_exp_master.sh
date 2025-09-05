@@ -1,10 +1,14 @@
 #!/usr/bin/env bash
-# Master experiment runner (always pass ../../../../Experiments/<file>.yaml to mono_tum)
+# Master experiment runner (always pass ../../../../Experiments/<file>.yaml to mono_tum/mono_euroc)
 # Flags:
 #   --withCorr  : also collect Correlation artifacts via run_bench.sh
 #   --noEvo     : skip evo_ape / evo_rpe analysis
 #
 # Per-line config supports 'features=' (e.g., features=[ORB,AKAZE]).
+# Optional dataset controls:
+#   mode= tum | euroc | kitti
+#   times= <path_to_times_file>
+#
 # If features present: create ./<name>.yaml (in Experiments), then pass "../../../../Experiments/<name>.yaml".
 # If no features: ensure ./<basename>.yaml exists (copy from base yaml if needed), and pass "../../../../Experiments/<basename>.yaml".
 #
@@ -104,6 +108,38 @@ read_config_lines() {
 #        'name=fr3_kaz_sft   seq=~/dataset/tum/fr3_nnf yaml=../Install/etc/orbslam2/Monocular/TUM3.yaml gt=~/dataset/tum/fr3_nnf/groundtruth.txt runs=20 exe=../Install/bin features=[KAZE,SIFT]'
 #        'name=fr3_kaz_spp   seq=~/dataset/tum/fr3_nnf yaml=../Install/etc/orbslam2/Monocular/TUM3.yaml gt=~/dataset/tum/fr3_nnf/groundtruth.txt runs=20 exe=../Install/bin features=[KAZE,SuperPoint]'
 #        'name=fr3_sft_spp   seq=~/dataset/tum/fr3_nnf yaml=../Install/etc/orbslam2/Monocular/TUM3.yaml gt=~/dataset/tum/fr3_nnf/groundtruth.txt runs=20 exe=../Install/bin features=[SIFT,SuperPoint]'
+
+         'name=mh01_corr       seq=~/dataset/euroc/MH_01/cam0/data yaml=../Install/etc/orbslam2/Monocular/EuRoC.yaml gt=~/dataset/euroc/MH_01/state_groundtruth_estimate0/data.csv runs=20 exe=../Install/bin mode=euroc features=[ORB,AKAZE,BRISK,KAZE,SIFT,SuperPoint] times=MH01.txt'
+
+         'name=mh01_orb        seq=~/dataset/euroc/MH_01/cam0/data yaml=../Install/etc/orbslam2/Monocular/EuRoC.yaml gt=~/dataset/euroc/MH_01/state_groundtruth_estimate0/data.csv runs=20 exe=../Install/bin mode=euroc features=[ORB] times=MH01.txt'
+         'name=mh01_akz        seq=~/dataset/euroc/MH_01/cam0/data yaml=../Install/etc/orbslam2/Monocular/EuRoC.yaml gt=~/dataset/euroc/MH_01/state_groundtruth_estimate0/data.csv runs=20 exe=../Install/bin mode=euroc features=[AKAZE] times=MH01.txt'
+         'name=mh01_bsk        seq=~/dataset/euroc/MH_01/cam0/data yaml=../Install/etc/orbslam2/Monocular/EuRoC.yaml gt=~/dataset/euroc/MH_01/state_groundtruth_estimate0/data.csv runs=20 exe=../Install/bin mode=euroc features=[BRISK] times=MH01.txt'
+         'name=mh01_kaz        seq=~/dataset/euroc/MH_01/cam0/data yaml=../Install/etc/orbslam2/Monocular/EuRoC.yaml gt=~/dataset/euroc/MH_01/state_groundtruth_estimate0/data.csv runs=20 exe=../Install/bin mode=euroc features=[KAZE] times=MH01.txt'
+         'name=mh01_sft        seq=~/dataset/euroc/MH_01/cam0/data yaml=../Install/etc/orbslam2/Monocular/EuRoC.yaml gt=~/dataset/euroc/MH_01/state_groundtruth_estimate0/data.csv runs=20 exe=../Install/bin mode=euroc features=[SIFT] times=MH01.txt'
+         'name=mh01_spp        seq=~/dataset/euroc/MH_01/cam0/data yaml=../Install/etc/orbslam2/Monocular/EuRoC.yaml gt=~/dataset/euroc/MH_01/state_groundtruth_estimate0/data.csv runs=20 exe=../Install/bin mode=euroc features=[SuperPoint] times=MH01.txt'
+
+         'name=mh01_orb_akz    seq=~/dataset/euroc/MH_01/cam0/data yaml=../Install/etc/orbslam2/Monocular/EuRoC.yaml gt=~/dataset/euroc/MH_01/state_groundtruth_estimate0/data.csv runs=20 exe=../Install/bin mode=euroc features=[ORB,AKAZE] times=MH01.txt'
+         'name=mh01_orb_bsk    seq=~/dataset/euroc/MH_01/cam0/data yaml=../Install/etc/orbslam2/Monocular/EuRoC.yaml gt=~/dataset/euroc/MH_01/state_groundtruth_estimate0/data.csv runs=20 exe=../Install/bin mode=euroc features=[ORB,BRISK] times=MH01.txt'
+         'name=mh01_orb_kaz    seq=~/dataset/euroc/MH_01/cam0/data yaml=../Install/etc/orbslam2/Monocular/EuRoC.yaml gt=~/dataset/euroc/MH_01/state_groundtruth_estimate0/data.csv runs=20 exe=../Install/bin mode=euroc features=[ORB,KAZE] times=MH01.txt'
+         'name=mh01_orb_sft    seq=~/dataset/euroc/MH_01/cam0/data yaml=../Install/etc/orbslam2/Monocular/EuRoC.yaml gt=~/dataset/euroc/MH_01/state_groundtruth_estimate0/data.csv runs=20 exe=../Install/bin mode=euroc features=[ORB,SIFT] times=MH01.txt'
+         'name=mh01_orb_spp    seq=~/dataset/euroc/MH_01/cam0/data yaml=../Install/etc/orbslam2/Monocular/EuRoC.yaml gt=~/dataset/euroc/MH_01/state_groundtruth_estimate0/data.csv runs=20 exe=../Install/bin mode=euroc features=[ORB,SuperPoint] times=MH01.txt'
+         'name=mh01_akz_bsk    seq=~/dataset/euroc/MH_01/cam0/data yaml=../Install/etc/orbslam2/Monocular/EuRoC.yaml gt=~/dataset/euroc/MH_01/state_groundtruth_estimate0/data.csv runs=20 exe=../Install/bin mode=euroc features=[AKAZE,BRISK] times=MH01.txt'
+         'name=mh01_akz_kaz    seq=~/dataset/euroc/MH_01/cam0/data yaml=../Install/etc/orbslam2/Monocular/EuRoC.yaml gt=~/dataset/euroc/MH_01/state_groundtruth_estimate0/data.csv runs=20 exe=../Install/bin mode=euroc features=[AKAZE,KAZE] times=MH01.txt'
+         'name=mh01_akz_sft    seq=~/dataset/euroc/MH_01/cam0/data yaml=../Install/etc/orbslam2/Monocular/EuRoC.yaml gt=~/dataset/euroc/MH_01/state_groundtruth_estimate0/data.csv runs=20 exe=../Install/bin mode=euroc features=[AKAZE,SIFT] times=MH01.txt'
+         'name=mh01_akz_spp    seq=~/dataset/euroc/MH_01/cam0/data yaml=../Install/etc/orbslam2/Monocular/EuRoC.yaml gt=~/dataset/euroc/MH_01/state_groundtruth_estimate0/data.csv runs=20 exe=../Install/bin mode=euroc features=[AKAZE,SuperPoint] times=MH01.txt'
+         'name=mh01_bsk_kaz    seq=~/dataset/euroc/MH_01/cam0/data yaml=../Install/etc/orbslam2/Monocular/EuRoC.yaml gt=~/dataset/euroc/MH_01/state_groundtruth_estimate0/data.csv runs=20 exe=../Install/bin mode=euroc features=[BRISK,KAZE] times=MH01.txt'
+         'name=mh01_bsk_sft    seq=~/dataset/euroc/MH_01/cam0/data yaml=../Install/etc/orbslam2/Monocular/EuRoC.yaml gt=~/dataset/euroc/MH_01/state_groundtruth_estimate0/data.csv runs=20 exe=../Install/bin mode=euroc features=[BRISK,SIFT] times=MH01.txt'
+         'name=mh01_bsk_spp    seq=~/dataset/euroc/MH_01/cam0/data yaml=../Install/etc/orbslam2/Monocular/EuRoC.yaml gt=~/dataset/euroc/MH_01/state_groundtruth_estimate0/data.csv runs=20 exe=../Install/bin mode=euroc features=[BRISK,SuperPoint] times=MH01.txt'
+         'name=mh01_kaz_sft    seq=~/dataset/euroc/MH_01/cam0/data yaml=../Install/etc/orbslam2/Monocular/EuRoC.yaml gt=~/dataset/euroc/MH_01/state_groundtruth_estimate0/data.csv runs=20 exe=../Install/bin mode=euroc features=[KAZE,SIFT] times=MH01.txt'
+         'name=mh01_kaz_spp    seq=~/dataset/euroc/MH_01/cam0/data yaml=../Install/etc/orbslam2/Monocular/EuRoC.yaml gt=~/dataset/euroc/MH_01/state_groundtruth_estimate0/data.csv runs=20 exe=../Install/bin mode=euroc features=[KAZE,SuperPoint] times=MH01.txt'
+         'name=mh01_sft_spp    seq=~/dataset/euroc/MH_01/cam0/data yaml=../Install/etc/orbslam2/Monocular/EuRoC.yaml gt=~/dataset/euroc/MH_01/state_groundtruth_estimate0/data.csv runs=20 exe=../Install/bin mode=euroc features=[SIFT,SuperPoint] times=MH01.txt'
+
+
+# Example (KITTI):
+# 'name=kitti_00 seq=~/dataset/kitti/sequences/00 yaml=../Install/etc/orbslam2/Monocular/KITTI00-02.yaml gt=~/dataset/kitti/poses/00.txt runs=5 exe=../Install/bin features=[ORB,AKAZE] mode=kitti'
+#
+# Example (EuRoC):
+# 'name=MH_01 seq=~/dataset/euroc/MH_01/cam0/data yaml=../Install/etc/orbslam2/Monocular/EuRoC.yaml gt=~/dataset/euroc/MH_01/state_groundtruth_estimate0/data.csv runs=1 exe=../Install/bin mode=euroc features=[ORB,SuperPoint] times=MH01.txt'
     )
   fi
 }
@@ -153,7 +189,7 @@ main() {
   for line in "${LINES[@]}"; do
     [[ -z "${line// }" || "$line" =~ ^# ]] && continue
 
-    local name="" seq="" yaml="" gt="" runs="20" exe="../Install/bin" res_prefix="result" features=""
+    local name="" seq="" yaml="" gt="" runs="20" exe="../Install/bin" res_prefix="result" features="" mode="" times=""
     for kv in $line; do
       local k="${kv%%=*}"; local v="${kv#*=}"
       case "$k" in
@@ -165,10 +201,13 @@ main() {
         exe)  exe="$v"  ;;
         res_prefix) res_prefix="$v" ;;
         features) features="$v" ;;
+        mode) mode="$v" ;;
+        times) times="$v" ;;
       esac
     done
 
     seq=$(expand_path "$seq"); gt=$(expand_path "$gt"); exe=$(expand_path "$exe"); yaml=$(expand_path "$yaml")
+    [[ -n "$times" ]] && times=$(expand_path "$times")
 
     local yaml_name yaml_rel temp_created=""
     yaml_name="$(basename "$yaml")"
@@ -189,12 +228,8 @@ main() {
     fi
 
     echo ""; echo "===== RUN: ${name} ====="
-    echo "[bench] seq=$seq  yaml=${yaml_rel}  runs=$runs  exe_dir=$exe"
-    if [[ $WITH_CORR -eq 1 ]]; then
-      bash ./run_bench.sh --withCorr "$name" "$seq" "$runs" "$yaml_rel" "$exe" "$res_prefix"
-    else
-      bash ./run_bench.sh "$name" "$seq" "$runs" "$yaml_rel" "$exe" "$res_prefix"
-    fi
+    echo "[bench] seq=$seq  yaml=${yaml_rel}  runs=$runs  exe_dir=$exe  mode=${mode:-tum} times=${times}"
+    bash ./run_bench.sh ${WITH_CORR:+--withCorr} "$name" "$seq" "$runs" "$yaml_rel" "$exe" "$res_prefix" "${mode:-}" "${times:-}"
 
     if [[ -n "$temp_created" && -f "$temp_created" && "${KEEP_TMP_YAML:-0}" -eq 0 ]]; then
       rm -f "$temp_created"

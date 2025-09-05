@@ -5,13 +5,15 @@ usage() {
   cat >&2 <<'USAGE'
 Usage:
   # Mode A (explicit name):
-  bash run_bench.sh [--withCorr] <name> <seq_dir> [runs=20] [yaml=TUM1.yaml] [exe_dir=../Install/bin] [res_prefix=result]
+  bash run_bench.sh [--withCorr] <name> <seq_dir> [runs=20] [yaml=TUM1.yaml] [exe_dir=../Install/bin] [res_prefix=result] [mode=tum] [times_file]
 
   # Mode B (infer name from seq_dir basename):
-  bash run_bench.sh [--withCorr] <seq_dir> [runs=20] [yaml=TUM1.yaml] [exe_dir=../Install/bin] [res_prefix=result]
+  bash run_bench.sh [--withCorr] <seq_dir> [runs=20] [yaml=TUM1.yaml] [exe_dir=../Install/bin] [res_prefix=result] [mode=tum] [times_file]
 
 Notes:
-  - Runs ./mono_tum inside <exe_dir> (default: ../Install/bin)
+  - mode=tum (default) and mode=kitti : run ./mono_tum inside <exe_dir> (ARGs: YAML, SEQ, RESULT_FILE)
+  - mode=euroc                       : run ./mono_euroc inside <exe_dir> (ARGs: YAML, SEQ, TIMES_FILE)
+
   - Moves resultXX.txt to ./Poses/<name>/
   - Saves per-run logs to ./Logs/<name>/runXX.log
   - Writes ONLY the 'Performance Summary (ms)' blocks to ./Performances/<name>/<name>_pref.txt
@@ -21,6 +23,16 @@ Notes:
     * Appends 'Per-Channel Summary' (with run index header) to ./Correlations/corr_exp_<name>.txt
     * Env override for filename: CORR_SRC_NAME=<filename>
   - Run index is zero-padded to 2 digits (01..20) by default
+
+Examples:
+  # TUM
+  bash run_bench.sh fr1_xyz ~/dataset/tum/fr1_xyz 20 ../Install/etc/orbslam2/Monocular/TUM1.yaml ../Install/bin result
+
+  # KITTI
+  bash run_bench.sh kitti_00 ~/dataset/kitti/sequences/00 10 ../Install/etc/orbslam2/Monocular/KITTI00-02.yaml ../Install/bin result kitti
+
+  # EuRoC
+  bash run_bench.sh MH_01 ~/dataset/euroc/MH_01_easy/mav0/cam0/data 5 ../Install/etc/orbslam2/Monocular/EuRoC.yaml ../Install/bin result euroc ~/dataset/euroc/MH_01_easy/mav0/cam0/data.csv
 USAGE
 }
 
@@ -51,6 +63,13 @@ RUNS=${1:-20}
 YAML=${2:-TUM1.yaml}
 EXE_DIR=${3:-../Install/bin}
 RES_PREFIX=${4:-result}
+
+# 新增：模式与（欧若克）时间戳文件
+MODE_RAW=${5:-tum}
+[[ -z "${MODE_RAW}" ]] && MODE_RAW="tum"
+# 统一为小写
+MODE="$(echo "${MODE_RAW}" | tr '[:upper:]' '[:lower:]')"
+TIMES=${6:-}  # 仅当 mode=euroc 时使用
 
 PAD=2  # two-digit zero padding by default
 CORR_SRC_NAME="${CORR_SRC_NAME:-CorrelationStatus.txt}"
@@ -85,10 +104,20 @@ if [[ $WITH_CORR -eq 1 ]]; then
   any_corr=0
 fi
 
-# ---------- Resolve mono_tum ----------
+# ---------- Resolve executable ----------
 EXE_DIR_ABS="$(cd "$EXE_DIR" 2>/dev/null && pwd || true)"
-EXE="${EXE_DIR_ABS}/mono_tum"
-if [[ -z "${EXE_DIR_ABS}" || ! -x "$EXE" ]]; then
+if [[ -z "${EXE_DIR_ABS}" ]]; then
+  echo "ERROR: exe_dir not found: ${EXE_DIR}" >&2
+  exit 2
+fi
+
+if [[ "$MODE" == "euroc" ]]; then
+  EXE="${EXE_DIR_ABS}/mono_euroc"
+else
+  EXE="${EXE_DIR_ABS}/mono_tum"
+fi
+
+if [[ ! -x "$EXE" ]]; then
   echo "ERROR: Executable not found or not executable: ${EXE}" >&2
   echo "       (exe_dir resolved from: '${EXE_DIR}')" >&2
   rm -f "$TMP_SUMMARY"
@@ -96,7 +125,7 @@ if [[ -z "${EXE_DIR_ABS}" || ! -x "$EXE" ]]; then
   exit 2
 fi
 
-echo "[INFO] name=${NAME_BASE}  seq=${SEQ}  runs=${RUNS}  yaml=${YAML}  withCorr=${WITH_CORR}"
+echo "[INFO] name=${NAME_BASE}  seq=${SEQ}  runs=${RUNS}  yaml=${YAML}  withCorr=${WITH_CORR}  mode=${MODE}  times=${TIMES}"
 
 # ---------- Run loop ----------
 for ((i=1;i<=RUNS;i++)); do
@@ -109,13 +138,28 @@ for ((i=1;i<=RUNS;i++)); do
   pushd "$EXE_DIR_ABS" >/dev/null
 
   if command -v stdbuf >/dev/null 2>&1; then
-    stdbuf -oL -eL "./mono_tum" "$YAML" "$SEQ" "$RESULT_FILE" | tee "$LOG_FILE"
+    if [[ "$MODE" == "euroc" ]]; then
+      stdbuf -oL -eL "./$(basename "$EXE")" "$YAML" "$SEQ" "$TIMES" | tee "$LOG_FILE"
+    else
+      stdbuf -oL -eL "./$(basename "$EXE")" "$YAML" "$SEQ" "$RESULT_FILE" | tee "$LOG_FILE"
+    fi
   else
-    "./mono_tum" "$YAML" "$SEQ" "$RESULT_FILE" | tee "$LOG_FILE"
+    if [[ "$MODE" == "euroc" ]]; then
+      "./$(basename "$EXE")" "$YAML" "$SEQ" "$TIMES" | tee "$LOG_FILE"
+    else
+      "./$(basename "$EXE")" "$YAML" "$SEQ" "$RESULT_FILE" | tee "$LOG_FILE"
+    fi
   fi
   status=${PIPESTATUS[0]}
 
   # Move trajectory to Poses/<name>/
+  if [[ "$MODE" == "euroc" ]]; then
+    # 欧若克默认导出 KeyFrameTrajectory.txt -> 重命名为 RESULT_FILE 再移动
+    if [[ -f "KeyFrameTrajectory.txt" ]]; then
+      mv -f "KeyFrameTrajectory.txt" "$RESULT_FILE"
+    fi
+  fi
+
   if [[ -f "$RESULT_FILE" ]]; then
     mv -f "$RESULT_FILE" "${POSE_DIR_ABS}/"
   fi
