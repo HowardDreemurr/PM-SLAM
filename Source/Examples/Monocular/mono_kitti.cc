@@ -35,7 +35,7 @@ void LoadImages(const string &strSequence, vector<string> &vstrImageFilenames,
                 vector<double> &vTimestamps);
 
 int main(int argc, char **argv) {
-  if (argc != 3) {
+  if (argc != 4) {
     cerr << endl
          << "Usage: ./mono_kitti path_to_settings path_to_sequence results_file" << endl;
     return 1;
