@@ -37,7 +37,7 @@ void LoadImages(const string &strSequence, vector<string> &vstrImageFilenames,
 int main(int argc, char **argv) {
   if (argc != 3) {
     cerr << endl
-         << "Usage: ./mono_kitti path_to_settings path_to_sequence" << endl;
+         << "Usage: ./mono_kitti path_to_settings path_to_sequence results_file" << endl;
     return 1;
   }
 
@@ -83,10 +83,16 @@ int main(int argc, char **argv) {
       if (im.empty()) {
         cerr << endl
              << "Failed to load image at: " << vstrImageFilenames[ni] << endl;
-        return 1;
+        main_error = 1;
+        break;
       }
 
       if (SLAM.isFinished() == true) {
+        break;
+      }
+
+      if (SLAM.tempStop == true) {
+        main_error = 1;
         break;
       }
 
@@ -118,6 +124,7 @@ int main(int argc, char **argv) {
 
   cout << "Viewer started, waiting for thread." << endl;
   runthread.join();
+  SLAM.StopViewer();
   if (main_error != 0)
     return main_error;
   cout << "Tracking thread joined..." << endl;
@@ -136,7 +143,8 @@ int main(int argc, char **argv) {
   cout << "mean tracking time: " << totaltime / nImages << endl;
 
   // Save camera trajectory
-  SLAM.SaveKeyFrameTrajectoryTUM("KeyFrameTrajectory.txt");
+  //SLAM.SaveKeyFrameTrajectoryTUM("KeyFrameTrajectory.txt");
+  SLAM.SaveTrajectoryTUM(string(argv[3]));
 
   return 0;
 }
