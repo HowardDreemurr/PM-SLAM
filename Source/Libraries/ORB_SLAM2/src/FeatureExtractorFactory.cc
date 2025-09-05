@@ -15,7 +15,7 @@ FeatureExtractorFactory& FeatureExtractorFactory::Instance() {
     BRISKextractor::ForceLinking();
     SIFTextractor::ForceLinking();
     KAZEextractor::ForceLinking();
-    SuperPointExtractor::ForceLinking();
+    //SuperPointExtractor::ForceLinking();
     static FeatureExtractorFactory instance;
     return instance;
 }

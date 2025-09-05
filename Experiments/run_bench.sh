@@ -64,12 +64,10 @@ YAML=${2:-TUM1.yaml}
 EXE_DIR=${3:-../Install/bin}
 RES_PREFIX=${4:-result}
 
-# 新增：模式与（欧若克）时间戳文件
 MODE_RAW=${5:-tum}
 [[ -z "${MODE_RAW}" ]] && MODE_RAW="tum"
-# 统一为小写
 MODE="$(echo "${MODE_RAW}" | tr '[:upper:]' '[:lower:]')"
-TIMES=${6:-}  # 仅当 mode=euroc 时使用
+TIMES=${6:-}
 
 PAD=2  # two-digit zero padding by default
 CORR_SRC_NAME="${CORR_SRC_NAME:-CorrelationStatus.txt}"
@@ -113,6 +111,8 @@ fi
 
 if [[ "$MODE" == "euroc" ]]; then
   EXE="${EXE_DIR_ABS}/mono_euroc"
+elif [[ "$MODE" == "kitti" ]]; then
+  EXE="${EXE_DIR_ABS}/mono_kitti"
 else
   EXE="${EXE_DIR_ABS}/mono_tum"
 fi
@@ -154,9 +154,8 @@ for ((i=1;i<=RUNS;i++)); do
 
   # Move trajectory to Poses/<name>/
   if [[ "$MODE" == "euroc" ]]; then
-    # 欧若克默认导出 KeyFrameTrajectory.txt -> 重命名为 RESULT_FILE 再移动
-    if [[ -f "KeyFrameTrajectory.txt" ]]; then
-      mv -f "KeyFrameTrajectory.txt" "$RESULT_FILE"
+    if [[ -f "Trajectory.txt" ]]; then
+      mv -f "Trajectory.txt" "$RESULT_FILE"
     fi
   fi
 

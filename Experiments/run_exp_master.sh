@@ -38,6 +38,10 @@ read_config_lines() {
     local cfg="$1"; [[ -f "$cfg" ]] || { echo "ERROR: config file not found: $cfg" >&2; exit 1; }
     mapfile -t LINES < "$cfg"
   else
+    SEQ_MH01="$HOME/dataset/euroc/MH_01/cam0/data"
+    SEQ_MH03="$HOME/dataset/euroc/MH_03/cam0/data"
+    SEQ_MH05="$HOME/dataset/euroc/MH_05/cam0/data"
+    SEQ_KT00="$HOME/dataset/kitti/00"
     LINES=(
 #        'name=fr1_corr         seq=~/dataset/tum/fr1_xyz yaml=../Install/etc/orbslam2/Monocular/TUM1.yaml gt=~/dataset/tum/fr1_xyz/groundtruth.txt runs=20 exe=../Install/bin features=[ORB,AKAZE,BRISK,KAZE,SIFT,SuperPoint]'
 #        'name=fr2_corr         seq=~/dataset/tum/fr2_xyz yaml=../Install/etc/orbslam2/Monocular/TUM2.yaml gt=~/dataset/tum/fr2_xyz/groundtruth.txt runs=20 exe=../Install/bin features=[ORB,AKAZE,BRISK,KAZE,SIFT,SuperPoint]'
@@ -109,37 +113,98 @@ read_config_lines() {
 #        'name=fr3_kaz_spp   seq=~/dataset/tum/fr3_nnf yaml=../Install/etc/orbslam2/Monocular/TUM3.yaml gt=~/dataset/tum/fr3_nnf/groundtruth.txt runs=20 exe=../Install/bin features=[KAZE,SuperPoint]'
 #        'name=fr3_sft_spp   seq=~/dataset/tum/fr3_nnf yaml=../Install/etc/orbslam2/Monocular/TUM3.yaml gt=~/dataset/tum/fr3_nnf/groundtruth.txt runs=20 exe=../Install/bin features=[SIFT,SuperPoint]'
 
-#         'name=mh01_corr       seq=~/dataset/euroc/MH_01/cam0/data yaml=../Install/etc/orbslam2/Monocular/EuRoC.yaml gt=~/dataset/euroc/MH_01/state_groundtruth_estimate0/data.csv runs=20 exe=../Install/bin mode=euroc features=[ORB,AKAZE,BRISK,KAZE,SIFT,SuperPoint] times=MH01.txt'
+#         'name=mh01_corr       seq=${SEQ_MH01} yaml=../Install/etc/orbslam2/Monocular/EuRoC.yaml  runs=20 exe=../Install/bin mode=euroc features=[ORB,AKAZE,BRISK,KAZE,SIFT,SuperPoint] times=MH01.txt'
 
-         'name=mh01_orb        seq=~/dataset/euroc/MH_01/cam0/data yaml=../Install/etc/orbslam2/Monocular/EuRoC.yaml gt=~/dataset/euroc/MH_01/state_groundtruth_estimate0/data.csv runs=20 exe=../Install/bin mode=euroc features=[ORB] times=MH01.txt'
-         'name=mh01_akz        seq=~/dataset/euroc/MH_01/cam0/data yaml=../Install/etc/orbslam2/Monocular/EuRoC.yaml gt=~/dataset/euroc/MH_01/state_groundtruth_estimate0/data.csv runs=20 exe=../Install/bin mode=euroc features=[AKAZE] times=MH01.txt'
-         'name=mh01_bsk        seq=~/dataset/euroc/MH_01/cam0/data yaml=../Install/etc/orbslam2/Monocular/EuRoC.yaml gt=~/dataset/euroc/MH_01/state_groundtruth_estimate0/data.csv runs=20 exe=../Install/bin mode=euroc features=[BRISK] times=MH01.txt'
-         'name=mh01_kaz        seq=~/dataset/euroc/MH_01/cam0/data yaml=../Install/etc/orbslam2/Monocular/EuRoC.yaml gt=~/dataset/euroc/MH_01/state_groundtruth_estimate0/data.csv runs=20 exe=../Install/bin mode=euroc features=[KAZE] times=MH01.txt'
-         'name=mh01_sft        seq=~/dataset/euroc/MH_01/cam0/data yaml=../Install/etc/orbslam2/Monocular/EuRoC.yaml gt=~/dataset/euroc/MH_01/state_groundtruth_estimate0/data.csv runs=20 exe=../Install/bin mode=euroc features=[SIFT] times=MH01.txt'
-#         'name=mh01_spp        seq=~/dataset/euroc/MH_01/cam0/data yaml=../Install/etc/orbslam2/Monocular/EuRoC.yaml gt=~/dataset/euroc/MH_01/state_groundtruth_estimate0/data.csv runs=20 exe=../Install/bin mode=euroc features=[SuperPoint] times=MH01.txt'
+         'name=mh01_orb        seq=${SEQ_MH01} yaml=../Install/etc/orbslam2/Monocular/EuRoC.yaml runs=20 exe=../Install/bin mode=euroc features=[ORB] times=MH01.txt'
+         'name=mh01_akz        seq=${SEQ_MH01} yaml=../Install/etc/orbslam2/Monocular/EuRoC.yaml runs=20 exe=../Install/bin mode=euroc features=[AKAZE] times=MH01.txt'
+         'name=mh01_bsk        seq=${SEQ_MH01} yaml=../Install/etc/orbslam2/Monocular/EuRoC.yaml runs=20 exe=../Install/bin mode=euroc features=[BRISK] times=MH01.txt'
+         'name=mh01_kaz        seq=${SEQ_MH01} yaml=../Install/etc/orbslam2/Monocular/EuRoC.yaml runs=20 exe=../Install/bin mode=euroc features=[KAZE] times=MH01.txt'
+         'name=mh01_sft        seq=${SEQ_MH01} yaml=../Install/etc/orbslam2/Monocular/EuRoC.yaml runs=20 exe=../Install/bin mode=euroc features=[SIFT] times=MH01.txt'
+#         'name=mh01_spp        seq=${SEQ_MH01} yaml=../Install/etc/orbslam2/Monocular/EuRoC.yaml runs=20 exe=../Install/bin mode=euroc features=[SuperPoint] times=MH01.txt'
+         'name=mh01_orb_akz    seq=${SEQ_MH01} yaml=../Install/etc/orbslam2/Monocular/EuRoC.yaml runs=20 exe=../Install/bin mode=euroc features=[ORB,AKAZE] times=MH01.txt'
+         'name=mh01_orb_bsk    seq=${SEQ_MH01} yaml=../Install/etc/orbslam2/Monocular/EuRoC.yaml runs=20 exe=../Install/bin mode=euroc features=[ORB,BRISK] times=MH01.txt'
+         'name=mh01_orb_kaz    seq=${SEQ_MH01} yaml=../Install/etc/orbslam2/Monocular/EuRoC.yaml runs=20 exe=../Install/bin mode=euroc features=[ORB,KAZE] times=MH01.txt'
+         'name=mh01_orb_sft    seq=${SEQ_MH01} yaml=../Install/etc/orbslam2/Monocular/EuRoC.yaml runs=20 exe=../Install/bin mode=euroc features=[ORB,SIFT] times=MH01.txt'
+#         'name=mh01_orb_spp    seq=${SEQ_MH01} yaml=../Install/etc/orbslam2/Monocular/EuRoC.yaml runs=20 exe=../Install/bin mode=euroc features=[ORB,SuperPoint] times=MH01.txt'
+         'name=mh01_akz_bsk    seq=${SEQ_MH01} yaml=../Install/etc/orbslam2/Monocular/EuRoC.yaml runs=20 exe=../Install/bin mode=euroc features=[AKAZE,BRISK] times=MH01.txt'
+         'name=mh01_akz_kaz    seq=${SEQ_MH01} yaml=../Install/etc/orbslam2/Monocular/EuRoC.yaml runs=20 exe=../Install/bin mode=euroc features=[AKAZE,KAZE] times=MH01.txt'
+         'name=mh01_akz_sft    seq=${SEQ_MH01} yaml=../Install/etc/orbslam2/Monocular/EuRoC.yaml runs=20 exe=../Install/bin mode=euroc features=[AKAZE,SIFT] times=MH01.txt'
+#         'name=mh01_akz_spp    seq=${SEQ_MH01} yaml=../Install/etc/orbslam2/Monocular/EuRoC.yaml runs=20 exe=../Install/bin mode=euroc features=[AKAZE,SuperPoint] times=MH01.txt'
+         'name=mh01_bsk_kaz    seq=${SEQ_MH01} yaml=../Install/etc/orbslam2/Monocular/EuRoC.yaml runs=20 exe=../Install/bin mode=euroc features=[BRISK,KAZE] times=MH01.txt'
+         'name=mh01_bsk_sft    seq=${SEQ_MH01} yaml=../Install/etc/orbslam2/Monocular/EuRoC.yaml runs=20 exe=../Install/bin mode=euroc features=[BRISK,SIFT] times=MH01.txt'
+#         'name=mh01_bsk_spp    seq=${SEQ_MH01} yaml=../Install/etc/orbslam2/Monocular/EuRoC.yaml runs=20 exe=../Install/bin mode=euroc features=[BRISK,SuperPoint] times=MH01.txt'
+         'name=mh01_kaz_sft    seq=${SEQ_MH01} yaml=../Install/etc/orbslam2/Monocular/EuRoC.yaml runs=20 exe=../Install/bin mode=euroc features=[KAZE,SIFT] times=MH01.txt'
+#         'name=mh01_kaz_spp    seq=${SEQ_MH01} yaml=../Install/etc/orbslam2/Monocular/EuRoC.yaml runs=20 exe=../Install/bin mode=euroc features=[KAZE,SuperPoint] times=MH01.txt'
+#         'name=mh01_sft_spp    seq=${SEQ_MH01} yaml=../Install/etc/orbslam2/Monocular/EuRoC.yaml runs=20 exe=../Install/bin mode=euroc features=[SIFT,SuperPoint] times=MH01.txt'
 
-         'name=mh01_orb_akz    seq=~/dataset/euroc/MH_01/cam0/data yaml=../Install/etc/orbslam2/Monocular/EuRoC.yaml gt=~/dataset/euroc/MH_01/state_groundtruth_estimate0/data.csv runs=20 exe=../Install/bin mode=euroc features=[ORB,AKAZE] times=MH01.txt'
-         'name=mh01_orb_bsk    seq=~/dataset/euroc/MH_01/cam0/data yaml=../Install/etc/orbslam2/Monocular/EuRoC.yaml gt=~/dataset/euroc/MH_01/state_groundtruth_estimate0/data.csv runs=20 exe=../Install/bin mode=euroc features=[ORB,BRISK] times=MH01.txt'
-         'name=mh01_orb_kaz    seq=~/dataset/euroc/MH_01/cam0/data yaml=../Install/etc/orbslam2/Monocular/EuRoC.yaml gt=~/dataset/euroc/MH_01/state_groundtruth_estimate0/data.csv runs=20 exe=../Install/bin mode=euroc features=[ORB,KAZE] times=MH01.txt'
-         'name=mh01_orb_sft    seq=~/dataset/euroc/MH_01/cam0/data yaml=../Install/etc/orbslam2/Monocular/EuRoC.yaml gt=~/dataset/euroc/MH_01/state_groundtruth_estimate0/data.csv runs=20 exe=../Install/bin mode=euroc features=[ORB,SIFT] times=MH01.txt'
-#         'name=mh01_orb_spp    seq=~/dataset/euroc/MH_01/cam0/data yaml=../Install/etc/orbslam2/Monocular/EuRoC.yaml gt=~/dataset/euroc/MH_01/state_groundtruth_estimate0/data.csv runs=20 exe=../Install/bin mode=euroc features=[ORB,SuperPoint] times=MH01.txt'
-         'name=mh01_akz_bsk    seq=~/dataset/euroc/MH_01/cam0/data yaml=../Install/etc/orbslam2/Monocular/EuRoC.yaml gt=~/dataset/euroc/MH_01/state_groundtruth_estimate0/data.csv runs=20 exe=../Install/bin mode=euroc features=[AKAZE,BRISK] times=MH01.txt'
-         'name=mh01_akz_kaz    seq=~/dataset/euroc/MH_01/cam0/data yaml=../Install/etc/orbslam2/Monocular/EuRoC.yaml gt=~/dataset/euroc/MH_01/state_groundtruth_estimate0/data.csv runs=20 exe=../Install/bin mode=euroc features=[AKAZE,KAZE] times=MH01.txt'
-         'name=mh01_akz_sft    seq=~/dataset/euroc/MH_01/cam0/data yaml=../Install/etc/orbslam2/Monocular/EuRoC.yaml gt=~/dataset/euroc/MH_01/state_groundtruth_estimate0/data.csv runs=20 exe=../Install/bin mode=euroc features=[AKAZE,SIFT] times=MH01.txt'
-#         'name=mh01_akz_spp    seq=~/dataset/euroc/MH_01/cam0/data yaml=../Install/etc/orbslam2/Monocular/EuRoC.yaml gt=~/dataset/euroc/MH_01/state_groundtruth_estimate0/data.csv runs=20 exe=../Install/bin mode=euroc features=[AKAZE,SuperPoint] times=MH01.txt'
-         'name=mh01_bsk_kaz    seq=~/dataset/euroc/MH_01/cam0/data yaml=../Install/etc/orbslam2/Monocular/EuRoC.yaml gt=~/dataset/euroc/MH_01/state_groundtruth_estimate0/data.csv runs=20 exe=../Install/bin mode=euroc features=[BRISK,KAZE] times=MH01.txt'
-         'name=mh01_bsk_sft    seq=~/dataset/euroc/MH_01/cam0/data yaml=../Install/etc/orbslam2/Monocular/EuRoC.yaml gt=~/dataset/euroc/MH_01/state_groundtruth_estimate0/data.csv runs=20 exe=../Install/bin mode=euroc features=[BRISK,SIFT] times=MH01.txt'
-#         'name=mh01_bsk_spp    seq=~/dataset/euroc/MH_01/cam0/data yaml=../Install/etc/orbslam2/Monocular/EuRoC.yaml gt=~/dataset/euroc/MH_01/state_groundtruth_estimate0/data.csv runs=20 exe=../Install/bin mode=euroc features=[BRISK,SuperPoint] times=MH01.txt'
-         'name=mh01_kaz_sft    seq=~/dataset/euroc/MH_01/cam0/data yaml=../Install/etc/orbslam2/Monocular/EuRoC.yaml gt=~/dataset/euroc/MH_01/state_groundtruth_estimate0/data.csv runs=20 exe=../Install/bin mode=euroc features=[KAZE,SIFT] times=MH01.txt'
-#         'name=mh01_kaz_spp    seq=~/dataset/euroc/MH_01/cam0/data yaml=../Install/etc/orbslam2/Monocular/EuRoC.yaml gt=~/dataset/euroc/MH_01/state_groundtruth_estimate0/data.csv runs=20 exe=../Install/bin mode=euroc features=[KAZE,SuperPoint] times=MH01.txt'
-#         'name=mh01_sft_spp    seq=~/dataset/euroc/MH_01/cam0/data yaml=../Install/etc/orbslam2/Monocular/EuRoC.yaml gt=~/dataset/euroc/MH_01/state_groundtruth_estimate0/data.csv runs=20 exe=../Install/bin mode=euroc features=[SIFT,SuperPoint] times=MH01.txt'
+        'name=mh03_orb        seq=${SEQ_MH03} yaml=../Install/etc/orbslam2/Monocular/EuRoC.yaml runs=20 exe=../Install/bin mode=euroc features=[ORB] times=MH03.txt'
+        'name=mh03_akz        seq=${SEQ_MH03} yaml=../Install/etc/orbslam2/Monocular/EuRoC.yaml runs=20 exe=../Install/bin mode=euroc features=[AKAZE] times=MH03.txt'
+        'name=mh03_bsk        seq=${SEQ_MH03} yaml=../Install/etc/orbslam2/Monocular/EuRoC.yaml runs=20 exe=../Install/bin mode=euroc features=[BRISK] times=MH03.txt'
+        'name=mh03_kaz        seq=${SEQ_MH03} yaml=../Install/etc/orbslam2/Monocular/EuRoC.yaml runs=20 exe=../Install/bin mode=euroc features=[KAZE] times=MH03.txt'
+        'name=mh03_sft        seq=${SEQ_MH03} yaml=../Install/etc/orbslam2/Monocular/EuRoC.yaml runs=20 exe=../Install/bin mode=euroc features=[SIFT] times=MH03.txt'
+    #   'name=mh03_spp        seq=${SEQ_MH03} yaml=../Install/etc/orbslam2/Monocular/EuRoC.yaml runs=20 exe=../Install/bin mode=euroc features=[SuperPoint] times=MH03.txt'
+        'name=mh03_orb_akz    seq=${SEQ_MH03} yaml=../Install/etc/orbslam2/Monocular/EuRoC.yaml runs=20 exe=../Install/bin mode=euroc features=[ORB,AKAZE] times=MH03.txt'
+        'name=mh03_orb_bsk    seq=${SEQ_MH03} yaml=../Install/etc/orbslam2/Monocular/EuRoC.yaml runs=20 exe=../Install/bin mode=euroc features=[ORB,BRISK] times=MH03.txt'
+        'name=mh03_orb_kaz    seq=${SEQ_MH03} yaml=../Install/etc/orbslam2/Monocular/EuRoC.yaml runs=20 exe=../Install/bin mode=euroc features=[ORB,KAZE] times=MH03.txt'
+        'name=mh03_orb_sft    seq=${SEQ_MH03} yaml=../Install/etc/orbslam2/Monocular/EuRoC.yaml runs=20 exe=../Install/bin mode=euroc features=[ORB,SIFT] times=MH03.txt'
+    #   'name=mh03_orb_spp    seq=${SEQ_MH03} yaml=../Install/etc/orbslam2/Monocular/EuRoC.yaml runs=20 exe=../Install/bin mode=euroc features=[ORB,SuperPoint] times=MH03.txt'
+        'name=mh03_akz_bsk    seq=${SEQ_MH03} yaml=../Install/etc/orbslam2/Monocular/EuRoC.yaml runs=20 exe=../Install/bin mode=euroc features=[AKAZE,BRISK] times=MH03.txt'
+        'name=mh03_akz_kaz    seq=${SEQ_MH03} yaml=../Install/etc/orbslam2/Monocular/EuRoC.yaml runs=20 exe=../Install/bin mode=euroc features=[AKAZE,KAZE] times=MH03.txt'
+        'name=mh03_akz_sft    seq=${SEQ_MH03} yaml=../Install/etc/orbslam2/Monocular/EuRoC.yaml runs=20 exe=../Install/bin mode=euroc features=[AKAZE,SIFT] times=MH03.txt'
+    #   'name=mh03_akz_spp    seq=${SEQ_MH03} yaml=../Install/etc/orbslam2/Monocular/EuRoC.yaml runs=20 exe=../Install/bin mode=euroc features=[AKAZE,SuperPoint] times=MH03.txt'
+        'name=mh03_bsk_kaz    seq=${SEQ_MH03} yaml=../Install/etc/orbslam2/Monocular/EuRoC.yaml runs=20 exe=../Install/bin mode=euroc features=[BRISK,KAZE] times=MH03.txt'
+        'name=mh03_bsk_sft    seq=${SEQ_MH03} yaml=../Install/etc/orbslam2/Monocular/EuRoC.yaml runs=20 exe=../Install/bin mode=euroc features=[BRISK,SIFT] times=MH03.txt'
+    #   'name=mh03_bsk_spp    seq=${SEQ_MH03} yaml=../Install/etc/orbslam2/Monocular/EuRoC.yaml runs=20 exe=../Install/bin mode=euroc features=[BRISK,SuperPoint] times=MH03.txt'
+        'name=mh03_kaz_sft    seq=${SEQ_MH03} yaml=../Install/etc/orbslam2/Monocular/EuRoC.yaml runs=20 exe=../Install/bin mode=euroc features=[KAZE,SIFT] times=MH03.txt'
+    #   'name=mh03_kaz_spp    seq=${SEQ_MH03} yaml=../Install/etc/orbslam2/Monocular/EuRoC.yaml runs=20 exe=../Install/bin mode=euroc features=[KAZE,SuperPoint] times=MH03.txt'
+    #   'name=mh03_sft_spp    seq=${SEQ_MH03} yaml=../Install/etc/orbslam2/Monocular/EuRoC.yaml runs=20 exe=../Install/bin mode=euroc features=[SIFT,SuperPoint] times=MH03.txt'
+
+
+        'name=mh05_orb        seq=${SEQ_MH05} yaml=../Install/etc/orbslam2/Monocular/EuRoC.yaml runs=20 exe=../Install/bin mode=euroc features=[ORB] times=MH05.txt'
+        'name=mh05_akz        seq=${SEQ_MH05} yaml=../Install/etc/orbslam2/Monocular/EuRoC.yaml runs=20 exe=../Install/bin mode=euroc features=[AKAZE] times=MH05.txt'
+        'name=mh05_bsk        seq=${SEQ_MH05} yaml=../Install/etc/orbslam2/Monocular/EuRoC.yaml runs=20 exe=../Install/bin mode=euroc features=[BRISK] times=MH05.txt'
+        'name=mh05_kaz        seq=${SEQ_MH05} yaml=../Install/etc/orbslam2/Monocular/EuRoC.yaml runs=20 exe=../Install/bin mode=euroc features=[KAZE] times=MH05.txt'
+        'name=mh05_sft        seq=${SEQ_MH05} yaml=../Install/etc/orbslam2/Monocular/EuRoC.yaml runs=20 exe=../Install/bin mode=euroc features=[SIFT] times=MH05.txt'
+    #   'name=mh05_spp        seq=${SEQ_MH05} yaml=../Install/etc/orbslam2/Monocular/EuRoC.yaml runs=20 exe=../Install/bin mode=euroc features=[SuperPoint] times=MH05.txt'
+        'name=mh05_orb_akz    seq=${SEQ_MH05} yaml=../Install/etc/orbslam2/Monocular/EuRoC.yaml runs=20 exe=../Install/bin mode=euroc features=[ORB,AKAZE] times=MH05.txt'
+        'name=mh05_orb_bsk    seq=${SEQ_MH05} yaml=../Install/etc/orbslam2/Monocular/EuRoC.yaml runs=20 exe=../Install/bin mode=euroc features=[ORB,BRISK] times=MH05.txt'
+        'name=mh05_orb_kaz    seq=${SEQ_MH05} yaml=../Install/etc/orbslam2/Monocular/EuRoC.yaml runs=20 exe=../Install/bin mode=euroc features=[ORB,KAZE] times=MH05.txt'
+        'name=mh05_orb_sft    seq=${SEQ_MH05} yaml=../Install/etc/orbslam2/Monocular/EuRoC.yaml runs=20 exe=../Install/bin mode=euroc features=[ORB,SIFT] times=MH05.txt'
+    #   'name=mh05_orb_spp    seq=${SEQ_MH05} yaml=../Install/etc/orbslam2/Monocular/EuRoC.yaml runs=20 exe=../Install/bin mode=euroc features=[ORB,SuperPoint] times=MH05.txt'
+        'name=mh05_akz_bsk    seq=${SEQ_MH05} yaml=../Install/etc/orbslam2/Monocular/EuRoC.yaml runs=20 exe=../Install/bin mode=euroc features=[AKAZE,BRISK] times=MH05.txt'
+        'name=mh05_akz_kaz    seq=${SEQ_MH05} yaml=../Install/etc/orbslam2/Monocular/EuRoC.yaml runs=20 exe=../Install/bin mode=euroc features=[AKAZE,KAZE] times=MH05.txt'
+        'name=mh05_akz_sft    seq=${SEQ_MH05} yaml=../Install/etc/orbslam2/Monocular/EuRoC.yaml runs=20 exe=../Install/bin mode=euroc features=[AKAZE,SIFT] times=MH05.txt'
+    #   'name=mh05_akz_spp    seq=${SEQ_MH05} yaml=../Install/etc/orbslam2/Monocular/EuRoC.yaml runs=20 exe=../Install/bin mode=euroc features=[AKAZE,SuperPoint] times=MH05.txt'
+        'name=mh05_bsk_kaz    seq=${SEQ_MH05} yaml=../Install/etc/orbslam2/Monocular/EuRoC.yaml runs=20 exe=../Install/bin mode=euroc features=[BRISK,KAZE] times=MH05.txt'
+        'name=mh05_bsk_sft    seq=${SEQ_MH05} yaml=../Install/etc/orbslam2/Monocular/EuRoC.yaml runs=20 exe=../Install/bin mode=euroc features=[BRISK,SIFT] times=MH05.txt'
+    #   'name=mh05_bsk_spp    seq=${SEQ_MH05} yaml=../Install/etc/orbslam2/Monocular/EuRoC.yaml runs=20 exe=../Install/bin mode=euroc features=[BRISK,SuperPoint] times=MH05.txt'
+        'name=mh05_kaz_sft    seq=${SEQ_MH05} yaml=../Install/etc/orbslam2/Monocular/EuRoC.yaml runs=20 exe=../Install/bin mode=euroc features=[KAZE,SIFT] times=MH05.txt'
+    #   'name=mh05_kaz_spp    seq=${SEQ_MH05} yaml=../Install/etc/orbslam2/Monocular/EuRoC.yaml runs=20 exe=../Install/bin mode=euroc features=[KAZE,SuperPoint] times=MH05.txt'
+    #   'name=mh05_sft_spp    seq=${SEQ_MH05} yaml=../Install/etc/orbslam2/Monocular/EuRoC.yaml runs=20 exe=../Install/bin mode=euroc features=[SIFT,SuperPoint] times=MH05.txt'
+
+
+        "name=kt00_orb        seq=${SEQ_KT00} yaml=../Install/etc/orbslam2/Monocular/KITTI00-02.yaml runs=20 exe=../Install/bin mode=kitti features=[ORB]"
+        "name=kt00_akz        seq=${SEQ_KT00} yaml=../Install/etc/orbslam2/Monocular/KITTI00-02.yaml runs=20 exe=../Install/bin mode=kitti features=[AKAZE]"
+        "name=kt00_bsk        seq=${SEQ_KT00} yaml=../Install/etc/orbslam2/Monocular/KITTI00-02.yaml runs=20 exe=../Install/bin mode=kitti features=[BRISK]"
+        "name=kt00_kaz        seq=${SEQ_KT00} yaml=../Install/etc/orbslam2/Monocular/KITTI00-02.yaml runs=20 exe=../Install/bin mode=kitti features=[KAZE]"
+        "name=kt00_sft        seq=${SEQ_KT00} yaml=../Install/etc/orbslam2/Monocular/KITTI00-02.yaml runs=20 exe=../Install/bin mode=kitti features=[SIFT]"
+        "name=kt00_orb_akz    seq=${SEQ_KT00} yaml=../Install/etc/orbslam2/Monocular/KITTI00-02.yaml runs=20 exe=../Install/bin mode=kitti features=[ORB,AKAZE]"
+        "name=kt00_orb_bsk    seq=${SEQ_KT00} yaml=../Install/etc/orbslam2/Monocular/KITTI00-02.yaml runs=20 exe=../Install/bin mode=kitti features=[ORB,BRISK]"
+        "name=kt00_orb_kaz    seq=${SEQ_KT00} yaml=../Install/etc/orbslam2/Monocular/KITTI00-02.yaml runs=20 exe=../Install/bin mode=kitti features=[ORB,KAZE]"
+        "name=kt00_orb_sft    seq=${SEQ_KT00} yaml=../Install/etc/orbslam2/Monocular/KITTI00-02.yaml runs=20 exe=../Install/bin mode=kitti features=[ORB,SIFT]"
+        "name=kt00_akz_bsk    seq=${SEQ_KT00} yaml=../Install/etc/orbslam2/Monocular/KITTI00-02.yaml runs=20 exe=../Install/bin mode=kitti features=[AKAZE,BRISK]"
+        "name=kt00_akz_kaz    seq=${SEQ_KT00} yaml=../Install/etc/orbslam2/Monocular/KITTI00-02.yaml runs=20 exe=../Install/bin mode=kitti features=[AKAZE,KAZE]"
+        "name=kt00_akz_sft    seq=${SEQ_KT00} yaml=../Install/etc/orbslam2/Monocular/KITTI00-02.yaml runs=20 exe=../Install/bin mode=kitti features=[AKAZE,SIFT]"
+        "name=kt00_bsk_kaz    seq=${SEQ_KT00} yaml=../Install/etc/orbslam2/Monocular/KITTI00-02.yaml runs=20 exe=../Install/bin mode=kitti features=[BRISK,KAZE]"
+        "name=kt00_bsk_sft    seq=${SEQ_KT00} yaml=../Install/etc/orbslam2/Monocular/KITTI00-02.yaml runs=20 exe=../Install/bin mode=kitti features=[BRISK,SIFT]"
+        "name=kt00_kaz_sft    seq=${SEQ_KT00} yaml=../Install/etc/orbslam2/Monocular/KITTI00-02.yaml runs=20 exe=../Install/bin mode=kitti features=[KAZE,SIFT]"
 
 
 # Example (KITTI):
 # 'name=kitti_00 seq=~/dataset/kitti/sequences/00 yaml=../Install/etc/orbslam2/Monocular/KITTI00-02.yaml gt=~/dataset/kitti/poses/00.txt runs=5 exe=../Install/bin features=[ORB,AKAZE] mode=kitti'
 #
 # Example (EuRoC):
-# 'name=MH_01 seq=~/dataset/euroc/MH_01/cam0/data yaml=../Install/etc/orbslam2/Monocular/EuRoC.yaml gt=~/dataset/euroc/MH_01/state_groundtruth_estimate0/data.csv runs=1 exe=../Install/bin mode=euroc features=[ORB,SuperPoint] times=MH01.txt'
+# 'name=MH_01 seq=${SEQ_MH01} yaml=../Install/etc/orbslam2/Monocular/EuRoC.yaml  runs=1 exe=../Install/bin mode=euroc features=[ORB,SuperPoint] times=MH01.txt'
     )
   fi
 }
