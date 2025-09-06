@@ -1,0 +1,176 @@
+Registering ORBextractor...
+Registering AKAZEextractor...
+Registering BRISKextractor...
+Registering SIFTextractor...
+Registering KAZEextractor...
+Registering SuperPointExtractor...
+
+ORB-SLAM2 Copyright (C) 2014-2016 Raul Mur-Artal, University of Zaragoza.
+This program comes with ABSOLUTELY NO WARRANTY;
+This is free software, and you are welcome to redistribute it
+under certain conditions. See LICENSE.txt.
+
+Input sensor was set to: Monocular
+
+Loading Vocabulary : /home/howard/Refactored_ORB_SLAM2/Install/var/lib/orbslam2/voc/sift_cv.fbow
+This could take a while...
+Loading SIFT Vocabulary in FBoW.
+SIFT Vocabulary loaded in 0.011864s
+
+
+Loading Vocabulary : /home/howard/Refactored_ORB_SLAM2/Install/var/lib/orbslam2/voc/superpoint.fbow
+This could take a while...
+Loading SuperPoint Vocabulary in FBoW.
+SuperPoint Vocabulary loaded in 0.007497s
+
+
+Camera Parameters: 
+- fx: 707.091
+- fy: 707.091
+- cx: 601.887
+- cy: 183.11
+- k1: 0
+- k2: 0
+- p1: 0
+- p2: 0
+- fps: 10
+- color order: RGB (ignored if grayscale)
+
+[Feature 0] SIFT Extractor Parameters: 
+ ( TH_LOW: 300, TH_HIGH: 500 )
+- Number of Features  : 2000
+- Scale Levels        : 1
+- Scale Factor        : 1
+- Contrast Threshold  : 0.01
+- Edge Threshold      : 5
+- nOctaves            : 3
+- Sigma               : 1.6
+
+[Feature 1] SuperPoint Extractor Parameters: 
+ ( TH_LOW: 0.7, TH_HIGH: 0.9 )
+- Number of Features: 2000
+- Scale Levels: 4
+- Scale Factor: 1.2
+- Use CUDA: 1
+- Use NMS: 1
+- iniTh: 0.08
+- minTh: 0.04
+
+-------
+Start processing sequence ...
+Images in the sequence: 271
+
+0
+New map created with 1083 points for 0 Feature Type 
+New map created with 238 points for 1 Feature Type 
+Tracking Initlized in 1.03s
+The initlized frame ID: 1
+The lost frame ID: 200
+The lost frame ID: 201
+The lost frame ID: 202
+The lost frame ID: 204
+The lost frame ID: 205
+The lost frame ID: 208
+The lost frame ID: 210
+The lost frame ID: 211
+The lost frame ID: 212
+The lost frame ID: 213
+The lost frame ID: 214
+The lost frame ID: 215
+The lost frame ID: 216
+The lost frame ID: 217
+The lost frame ID: 218
+The lost frame ID: 219
+The lost frame ID: 220
+The lost frame ID: 221
+The lost frame ID: 222
+The lost frame ID: 223
+The lost frame ID: 224
+The lost frame ID: 225
+The lost frame ID: 226
+The lost frame ID: 227
+The lost frame ID: 228
+The lost frame ID: 229
+The lost frame ID: 230
+The lost frame ID: 231
+The lost frame ID: 232
+The lost frame ID: 233
+The lost frame ID: 234
+The lost frame ID: 235
+The lost frame ID: 236
+The lost frame ID: 237
+The lost frame ID: 238
+The lost frame ID: 239
+The lost frame ID: 240
+The lost frame ID: 241
+The lost frame ID: 242
+The lost frame ID: 243
+The lost frame ID: 244
+The lost frame ID: 245
+The lost frame ID: 246
+The lost frame ID: 247
+The lost frame ID: 248
+The lost frame ID: 249
+The lost frame ID: 250
+The lost frame ID: 251
+The lost frame ID: 252
+The lost frame ID: 253
+The lost frame ID: 254
+The lost frame ID: 255
+The lost frame ID: 256
+The lost frame ID: 257
+The lost frame ID: 258
+The lost frame ID: 259
+The lost frame ID: 260
+The lost frame ID: 261
+The lost frame ID: 262
+The lost frame ID: 263
+The lost frame ID: 264
+The lost frame ID: 265
+The lost frame ID: 266
+The lost frame ID: 267
+The lost frame ID: 268
+The lost frame ID: 269
+The lost frame ID: 270
+System::StopViewer()
+System::StopViewer() done
+Viewer thread finished.
+Viewer started, waiting for thread.
+System::StopViewer()
+System::StopViewer() done
+Tracking thread joined...
+
+Saving correlation status...
+
+========== Global Summary ==========
+Frames: 200
+avg_CorrEdges: 0.07
+avg_match_A: 169.985
+avg_match_B: 59.595
+global_RI_MNR: 0.0011746
+global_RI_GNR: 0.000695485
+global_RI_DICE: 0.000609809
+
+========== Per-Channel Summary ==========
+   chA   chB     avgCorr        avgA        avgB   avgRI_MNR   avgRI_GNR  avgRI_DICE
+     0     1        0.07     169.985      59.595  0.00131296 0.000733545 0.000625319
+
+Correlation status saved!
+
+-------
+
+median tracking time: 0.0828
+mean tracking time: 0.0904956
+
+Saving camera trajectory to result04.txt ...
+
+trajectory saved!
+
+========== Performance Summary (ms) ==========
+name                                mean      median        rmse         min         max       count
+Tracking                          12.547       5.004      12.750       2.867      44.683         269
+Correlation                        0.117       0.114       0.038       0.003       0.246         201
+Total Init                       318.588     318.588       0.000     318.588     318.588           1
+Pipeline                          90.491      82.797      23.379      68.242     315.485         271
+SuperPoint Extract                75.713      73.950      12.812      62.794     265.625         271
+SIFT Extract                      36.688      36.663       4.650      25.381      70.454         271
