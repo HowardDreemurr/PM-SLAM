@@ -21,17 +21,45 @@ set -euo pipefail
 
 expand_path() { eval echo "$1"; }
 
+# defaults
+START=0
+SKIP=1
 WITH_CORR=0
 NO_EVO=0
+
+# keep leftover args here
 args=()
-for a in "$@"; do
-  case "$a" in
-    --withCorr) WITH_CORR=1 ;;
-    --noEvo)    NO_EVO=1 ;;
-    *) args+=("$a") ;;
-  esac
+
+# --- parse arguments ---
+while [[ $# -gt 0 ]]; do
+    case "$1" in
+        --start)
+            START="$2"
+            shift 2
+            ;;
+        --skip)
+            SKIP="$2"
+            shift 2
+            ;;
+        --withCorr)
+            WITH_CORR=1
+            shift
+            ;;
+        --noEvo)
+            NO_EVO=1
+            shift
+            ;;
+        --) # end of our options
+            shift
+            args+=("$@")
+            break
+            ;;
+        *)  # everything else is forwarded
+            args+=("$1")
+            shift
+            ;;
+    esac
 done
-set -- "${args[@]}"
 
 read_config_lines() {
   if [[ $# -gt 0 ]]; then
@@ -270,10 +298,18 @@ main() {
   [[ -f "./run_evo.sh"   ]] || { echo "ERROR: missing run_evo.sh"   >&2; exit 2; }
   maybe_activate_venv
 
-  echo ">>> Experiments to run: ${#LINES[@]} (withCorr=${WITH_CORR}, noEvo=${NO_EVO})"
-  [[ ${#LINES[@]} -eq 0 ]] && { echo "No experiments configured."; exit 1; }
 
-  for line in "${LINES[@]}"; do
+  numLines=${#LINES[@]}
+  echo numLines=${numLines}
+  
+  echo ">>> Experiments to run: ${numLines} (withCorr=${WITH_CORR}, noEvo=${NO_EVO}, start=${START},skip=${SKIP})"
+  [[ $numLines -eq 0 ]] && { echo "No experiments configured."; exit 1; }
+
+  lineNo=$START
+
+  while (( lineNo < $numLines )); do
+      line="${LINES[$lineNo]}"
+      echo line=${line}
     [[ -z "${line// }" || "$line" =~ ^# ]] && continue
 
     local name="" seq="" yaml="" gt="" runs="20" exe="../Install/bin" res_prefix="result" features="" mode="" times=""
@@ -338,6 +374,8 @@ main() {
 
     echo "[evo-rpe] $name"
     bash ./run_evo.sh rpe "$poses_dir" "$gt" "$name" "${RPE_ARGS_DEFAULT[@]}" || true
+
+    lineNo=$((lineNo + SKIP))
   done
 
   local h=$(( SECONDS/3600 )); local m=$(( (SECONDS%3600)/60 )); local s=$(( SECONDS%60 ))
