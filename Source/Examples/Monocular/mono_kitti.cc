@@ -109,6 +109,7 @@ int main(int argc, char **argv) {
       vTimesTrack[ni] = ttrack;
 
       // Wait to load the next frame
+      #if 0
       double T = 0;
       if (ni < nImages - 1)
         T = vTimestamps[ni + 1] - tframe;
@@ -117,6 +118,7 @@ int main(int argc, char **argv) {
 
       if (ttrack < T)
         this_thread::sleep_for(chrono::duration<double>(T - ttrack));
+      #endif
     }
     SLAM.StopViewer();
   });
