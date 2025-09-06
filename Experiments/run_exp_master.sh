@@ -21,27 +21,67 @@ set -euo pipefail
 
 expand_path() { eval echo "$1"; }
 
+# defaults
+START=0
+SKIP=1
 WITH_CORR=0
 NO_EVO=0
+
+# keep leftover args here
 args=()
-for a in "$@"; do
-  case "$a" in
-    --withCorr) WITH_CORR=1 ;;
-    --noEvo)    NO_EVO=1 ;;
-    *) args+=("$a") ;;
-  esac
+
+# --- parse arguments ---
+while [[ $# -gt 0 ]]; do
+    case "$1" in
+        --start)
+            START="$2"
+            shift 2
+            ;;
+        --skip)
+            SKIP="$2"
+            shift 2
+            ;;
+        --withCorr)
+            WITH_CORR=1
+            shift
+            ;;
+        --noEvo)
+            NO_EVO=1
+            shift
+            ;;
+        --) # end of our options
+            shift
+            args+=("$@")
+            break
+            ;;
+        *)  # everything else is forwarded
+            args+=("$1")
+            shift
+            ;;
+    esac
 done
-set -- "${args[@]}"
 
 read_config_lines() {
   if [[ $# -gt 0 ]]; then
     local cfg="$1"; [[ -f "$cfg" ]] || { echo "ERROR: config file not found: $cfg" >&2; exit 1; }
     mapfile -t LINES < "$cfg"
   else
-    SEQ_MH01="$HOME/dataset/euroc/MH_01/cam0/data"
-    SEQ_MH03="$HOME/dataset/euroc/MH_03/cam0/data"
-    SEQ_MH05="$HOME/dataset/euroc/MH_05/cam0/data"
-    SEQ_KT00="$HOME/dataset/kitti/00"
+      # Horrible temporary hack to map file names for different users
+      if [[ "$USER" == "ucacsjj" ]]
+      then
+    SLAM_DATASET_ROOT="$HOME/Proj/Other/SLAM/SLAM_Datasets"
+    SEQ_MH01="${SLAM_DATASET_ROOT}/EuRoC/MH_01_easy/mav0/cam0/data"
+    SEQ_MH03="${SLAM_DATASET_ROOT}/EuRoC/MH_03_medium/mav0/cam0/data"
+    SEQ_MH05="${SLAM_DATASET_ROOT}/EuRoC/MH_05_difficult/mav0/cam0/data"
+    SEQ_KT00="${SLAM_DATASET_ROOT}/KITTI/dataset_odometry_gray/dataset/sequences/00"
+      else
+    SLAM_DATASET_ROOT="$HOME/dataset"
+    SEQ_MH01="${SLAM_DATASET_ROOT}/euroc/MH_01/cam0/data"
+    SEQ_MH03="${SLAM_DATASET_ROOT}/euroc/MH_03/cam0/data"
+    SEQ_MH05="${SLAM_DATASET_ROOT}/euroc/MH_05/cam0/data"
+    SEQ_KT00="${SLAM_DATASET_ROOT}/kitt/00"
+      fi
+      
     LINES=(
 #        'name=fr1_corr         seq=~/dataset/tum/fr1_xyz yaml=../Install/etc/orbslam2/Monocular/TUM1.yaml gt=~/dataset/tum/fr1_xyz/groundtruth.txt runs=20 exe=../Install/bin features=[ORB,AKAZE,BRISK,KAZE,SIFT,SuperPoint]'
 #        'name=fr2_corr         seq=~/dataset/tum/fr2_xyz yaml=../Install/etc/orbslam2/Monocular/TUM2.yaml gt=~/dataset/tum/fr2_xyz/groundtruth.txt runs=20 exe=../Install/bin features=[ORB,AKAZE,BRISK,KAZE,SIFT,SuperPoint]'
@@ -248,10 +288,18 @@ main() {
   [[ -f "./run_evo.sh"   ]] || { echo "ERROR: missing run_evo.sh"   >&2; exit 2; }
   maybe_activate_venv
 
-  echo ">>> Experiments to run: ${#LINES[@]} (withCorr=${WITH_CORR}, noEvo=${NO_EVO})"
-  [[ ${#LINES[@]} -eq 0 ]] && { echo "No experiments configured."; exit 1; }
 
-  for line in "${LINES[@]}"; do
+  numLines=${#LINES[@]}
+  echo numLines=${numLines}
+  
+  echo ">>> Experiments to run: ${numLines} (withCorr=${WITH_CORR}, noEvo=${NO_EVO}, start=${START},skip=${SKIP})"
+  [[ $numLines -eq 0 ]] && { echo "No experiments configured."; exit 1; }
+
+  lineNo=$START
+
+  while (( lineNo < $numLines )); do
+      line="${LINES[$lineNo]}"
+      echo line=${line}
     [[ -z "${line// }" || "$line" =~ ^# ]] && continue
 
     local name="" seq="" yaml="" gt="" runs="20" exe="../Install/bin" res_prefix="result" features="" mode="" times=""
@@ -316,6 +364,8 @@ main() {
 
     echo "[evo-rpe] $name"
     bash ./run_evo.sh rpe "$poses_dir" "$gt" "$name" "${RPE_ARGS_DEFAULT[@]}" || true
+
+    lineNo=$((lineNo + SKIP))
   done
 
   local h=$(( SECONDS/3600 )); local m=$(( (SECONDS%3600)/60 )); local s=$(( SECONDS%60 ))
