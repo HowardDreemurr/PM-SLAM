@@ -1,0 +1,147 @@
+Registering ORBextractor...
+Registering AKAZEextractor...
+Registering BRISKextractor...
+Registering SIFTextractor...
+Registering KAZEextractor...
+Registering SuperPointExtractor...
+
+ORB-SLAM2 Copyright (C) 2014-2016 Raul Mur-Artal, University of Zaragoza.
+This program comes with ABSOLUTELY NO WARRANTY;
+This is free software, and you are welcome to redistribute it
+under certain conditions. See LICENSE.txt.
+
+Input sensor was set to: Monocular
+
+Loading Vocabulary : /home/howard/PM-SLAM/Install/var/lib/orbslam2/voc/akaze_cv.fbow
+This could take a while...
+Loading AKAZE Vocabulary in FBoW.
+AKAZE Vocabulary loaded in 0.001977s
+
+
+Loading Vocabulary : /home/howard/PM-SLAM/Install/var/lib/orbslam2/voc/brisk_cv.fbow
+This could take a while...
+Loading BRISK Vocabulary in FBoW.
+BRISK Vocabulary loaded in 0.001981s
+
+
+Camera Parameters: 
+- fx: 718.856
+- fy: 718.856
+- cx: 607.193
+- cy: 185.216
+- k1: 0
+- k2: 0
+- p1: 0
+- p2: 0
+- fps: 10
+- color order: RGB (ignored if grayscale)
+
+[Feature 0] AKAZE Extractor Parameters: 
+ ( TH_LOW: 100, TH_HIGH: 200 )
+- Number of Features: 2000
+- Scale Levels: 4
+- Scale Factor: 1.2
+- Threshold: 0.0001
+- Num of Octaves: 4
+- Num of Octave Layers: 4
+
+[Feature 1] BRISK Extractor Parameters: 
+ ( TH_LOW: 150, TH_HIGH: 250 )
+- Number of Features: 2000
+- Scale Levels: 6
+- Scale Factor: 1.414
+- Threshold: 50
+- Num of Octaves: 3
+- Pattern Scale: 1
+
+-------
+Start processing sequence ...
+Images in the sequence: 1101
+
+0
+New map created with 755 points for 0 Feature Type 
+New map created with 55 points for 1 Feature Type 
+Tracking Initlized in 0.65s
+The initlized frame ID: 1
+The lost frame ID: 1058
+The lost frame ID: 1059
+The lost frame ID: 1060
+The lost frame ID: 1061
+The lost frame ID: 1062
+The lost frame ID: 1063
+The lost frame ID: 1064
+The lost frame ID: 1065
+The lost frame ID: 1066
+The lost frame ID: 1067
+The lost frame ID: 1068
+The lost frame ID: 1069
+The lost frame ID: 1070
+The lost frame ID: 1071
+The lost frame ID: 1072
+The lost frame ID: 1074
+The lost frame ID: 1075
+The lost frame ID: 1078
+The lost frame ID: 1079
+The lost frame ID: 1080
+The lost frame ID: 1081
+The lost frame ID: 1082
+The lost frame ID: 1083
+The lost frame ID: 1084
+The lost frame ID: 1085
+The lost frame ID: 1086
+The lost frame ID: 1087
+The lost frame ID: 1088
+The lost frame ID: 1089
+The lost frame ID: 1090
+The lost frame ID: 1091
+The lost frame ID: 1092
+The lost frame ID: 1093
+The lost frame ID: 1094
+The lost frame ID: 1095
+The lost frame ID: 1096
+The lost frame ID: 1097
+The lost frame ID: 1098
+The lost frame ID: 1099
+The lost frame ID: 1100
+System::StopViewer()
+System::StopViewer() done
+Viewer thread finished.
+Viewer started, waiting for thread.
+System::StopViewer()
+System::StopViewer() done
+Tracking thread joined...
+
+Saving correlation status...
+
+========== Global Summary ==========
+Frames: 1058
+avg_CorrEdges: 1.60113
+avg_match_A: 110.543
+avg_match_B: 59.0529
+global_RI_MNR: 0.0271135
+global_RI_GNR: 0.0198171
+global_RI_DICE: 0.0188817
+
+========== Per-Channel Summary ==========
+   chA   chB     avgCorr        avgA        avgB   avgRI_MNR   avgRI_GNR  avgRI_DICE
+     0     1     1.60113     110.543     59.0529   0.0299869   0.0190099   0.0170812
+
+Correlation status saved!
+
+-------
+
+median tracking time: 0.0549384
+mean tracking time: 0.0594455
+
+Saving camera trajectory to result15.txt ...
+
+trajectory saved!
+
+========== Performance Summary (ms) ==========
+name                                mean      median        rmse         min         max       count
+Tracking                           6.867       6.472       4.346       2.488      59.728        1099
+Total Init                       266.033     266.033       0.000     266.033     266.033           1
+Pipeline                          59.438      54.932      14.994      39.080     261.287        1101
+Correlation                        0.139       0.136       0.051       0.030       0.509        1058
+AKAZE Extract                     50.685      46.442      12.564      32.333      95.043        1101
+BRISK Extract                     12.402       8.914       9.658       3.975      75.157        1101

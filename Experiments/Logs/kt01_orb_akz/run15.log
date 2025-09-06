@@ -1,0 +1,106 @@
+Registering ORBextractor...
+Registering AKAZEextractor...
+Registering BRISKextractor...
+Registering SIFTextractor...
+Registering KAZEextractor...
+Registering SuperPointExtractor...
+
+ORB-SLAM2 Copyright (C) 2014-2016 Raul Mur-Artal, University of Zaragoza.
+This program comes with ABSOLUTELY NO WARRANTY;
+This is free software, and you are welcome to redistribute it
+under certain conditions. See LICENSE.txt.
+
+Input sensor was set to: Monocular
+
+Loading Vocabulary : /home/howard/PM-SLAM/Install/var/lib/orbslam2/voc/orb_mur.fbow
+This could take a while...
+Loading ORB Vocabulary in FBoW.
+ORB Vocabulary loaded in 0.008779s
+
+
+Loading Vocabulary : /home/howard/PM-SLAM/Install/var/lib/orbslam2/voc/akaze_cv.fbow
+This could take a while...
+Loading AKAZE Vocabulary in FBoW.
+AKAZE Vocabulary loaded in 0.001946s
+
+
+Camera Parameters: 
+- fx: 718.856
+- fy: 718.856
+- cx: 607.193
+- cy: 185.216
+- k1: 0
+- k2: 0
+- p1: 0
+- p2: 0
+- fps: 10
+- color order: RGB (ignored if grayscale)
+
+[Feature 0] ORB Extractor Parameters: 
+ ( TH_LOW: 50, TH_HIGH: 100 )
+- Number of Features: 2000
+- Scale Levels: 8
+- Scale Factor: 1.2
+- Initial Fast Threshold: 20
+- Minimum Fast Threshold: 7
+
+[Feature 1] AKAZE Extractor Parameters: 
+ ( TH_LOW: 100, TH_HIGH: 200 )
+- Number of Features: 2000
+- Scale Levels: 4
+- Scale Factor: 1.2
+- Threshold: 0.0001
+- Num of Octaves: 4
+- Num of Octave Layers: 4
+
+-------
+Start processing sequence ...
+Images in the sequence: 1101
+
+1
+New map created with 74 points for 0 Feature Type 
+New map created with 742 points for 1 Feature Type 
+Tracking Initlized in 0.60s
+The initlized frame ID: 1
+System::StopViewer()
+System::StopViewer() done
+Viewer thread finished.
+Viewer started, waiting for thread.
+System::StopViewer()
+System::StopViewer() done
+Tracking thread joined...
+
+Saving correlation status...
+
+========== Global Summary ==========
+Frames: 1099
+avg_CorrEdges: 2.86806
+avg_match_A: 93.3339
+avg_match_B: 122.308
+global_RI_MNR: 0.030729
+global_RI_GNR: 0.0268436
+global_RI_DICE: 0.0266002
+
+========== Per-Channel Summary ==========
+   chA   chB     avgCorr        avgA        avgB   avgRI_MNR   avgRI_GNR  avgRI_DICE
+     0     1     2.86806     93.3339     122.308   0.0303456    0.025463   0.0249854
+
+Correlation status saved!
+
+-------
+
+median tracking time: 0.0603154
+mean tracking time: 0.0631856
+
+Saving camera trajectory to result15.txt ...
+
+trajectory saved!
+
+========== Performance Summary (ms) ==========
+name                                mean      median        rmse         min         max       count
+Tracking                           8.458       8.326       3.708       2.158      20.816        1099
+Total Init                       256.083     256.083       0.000     256.083     256.083           1
+Pipeline                          63.178      60.309      14.097      36.959     250.185        1101
+Correlation                        0.152       0.151       0.059       0.050       0.881        1099
+AKAZE Extract                     52.435      48.113      13.088      31.949      97.191        1101
+ORB Extract                       14.676      11.288       6.853       8.624      43.662        1101

@@ -1,0 +1,83 @@
+Registering ORBextractor...
+Registering AKAZEextractor...
+Registering BRISKextractor...
+Registering SIFTextractor...
+Registering KAZEextractor...
+Registering SuperPointExtractor...
+
+ORB-SLAM2 Copyright (C) 2014-2016 Raul Mur-Artal, University of Zaragoza.
+This program comes with ABSOLUTELY NO WARRANTY;
+This is free software, and you are welcome to redistribute it
+under certain conditions. See LICENSE.txt.
+
+Input sensor was set to: Monocular
+
+Loading Vocabulary : /home/howard/PM-SLAM/Install/var/lib/orbslam2/voc/orb_mur.fbow
+This could take a while...
+Loading ORB Vocabulary in FBoW.
+ORB Vocabulary loaded in 0.017610s
+
+
+Camera Parameters: 
+- fx: 718.856
+- fy: 718.856
+- cx: 607.193
+- cy: 185.216
+- k1: 0
+- k2: 0
+- p1: 0
+- p2: 0
+- fps: 10
+- color order: RGB (ignored if grayscale)
+
+[Feature 0] ORB Extractor Parameters: 
+ ( TH_LOW: 50, TH_HIGH: 100 )
+- Number of Features: 2000
+- Scale Levels: 8
+- Scale Factor: 1.2
+- Initial Fast Threshold: 20
+- Minimum Fast Threshold: 7
+
+-------
+Start processing sequence ...
+Images in the sequence: 1101
+
+0
+New map created with 86 points for 0 Feature Type 
+Wrong initialization, reseting...
+System Reseting
+Reseting Local Mapper... done
+Reseting Loop Closing... done
+Reseting Database... done
+0
+New map created with 112 points for 0 Feature Type 
+Tracking Initlized in 0.60s
+The initlized frame ID: 7
+System::StopViewer()
+System::StopViewer() done
+Viewer thread finished.
+Viewer started, waiting for thread.
+System::StopViewer()
+System::StopViewer() done
+Tracking thread joined...
+
+Saving correlation status...
+
+Correlation status saved!
+
+-------
+
+median tracking time: 0.0200275
+mean tracking time: 0.0241637
+
+Saving camera trajectory to result10.txt ...
+
+trajectory saved!
+
+========== Performance Summary (ms) ==========
+name                                mean      median        rmse         min         max       count
+Tracking                           6.236       6.170       2.780       1.505      18.897        1060
+Correlation                        0.000       0.000       0.001       0.000       0.018        1060
+Total Init                      4551.592    4551.592       0.000    4551.592    4551.592           2
+Pipeline                          24.156      20.021       9.675      12.292     111.470        1101
+ORB Extract                       15.549      11.648       7.313       8.590      53.760        1101

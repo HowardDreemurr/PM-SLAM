@@ -182,6 +182,30 @@ read_config_lines() {
 #         'name=kt07_kaz_spp  seq=~/dataset/kitti/07 yaml=../Install/etc/orbslam2/Monocular/KITTI04-12.yaml runs=20 exe=../Install/bin mode=kitti features=[KAZE,SuperPoint]'
 #         'name=kt07_sft_spp  seq=~/dataset/kitti/07 yaml=../Install/etc/orbslam2/Monocular/KITTI04-12.yaml runs=20 exe=../Install/bin mode=kitti features=[SIFT,SuperPoint]'
 
+#         'name=kt01_orb      seq=~/dataset/kitti/01 yaml=../Install/etc/orbslam2/Monocular/KITTI00-02.yaml runs=20 exe=../Install/bin mode=kitti features=[ORB]'
+#         'name=kt01_akz      seq=~/dataset/kitti/01 yaml=../Install/etc/orbslam2/Monocular/KITTI00-02.yaml runs=20 exe=../Install/bin mode=kitti features=[AKAZE]'
+#         'name=kt01_bsk      seq=~/dataset/kitti/01 yaml=../Install/etc/orbslam2/Monocular/KITTI00-02.yaml runs=20 exe=../Install/bin mode=kitti features=[BRISK]'
+#         'name=kt01_kaz      seq=~/dataset/kitti/01 yaml=../Install/etc/orbslam2/Monocular/KITTI00-02.yaml runs=20 exe=../Install/bin mode=kitti features=[KAZE]'
+#         'name=kt01_sft      seq=~/dataset/kitti/01 yaml=../Install/etc/orbslam2/Monocular/KITTI00-02.yaml runs=20 exe=../Install/bin mode=kitti features=[SIFT]'
+#         'name=kt01_spp      seq=~/dataset/kitti/01 yaml=../Install/etc/orbslam2/Monocular/KITTI00-02.yaml runs=20 exe=../Install/bin mode=kitti features=[SuperPoint]'
+#
+#         'name=kt01_orb_akz  seq=~/dataset/kitti/01 yaml=../Install/etc/orbslam2/Monocular/KITTI00-02.yaml runs=20 exe=../Install/bin mode=kitti features=[ORB,AKAZE]'
+#         'name=kt01_orb_bsk  seq=~/dataset/kitti/01 yaml=../Install/etc/orbslam2/Monocular/KITTI00-02.yaml runs=20 exe=../Install/bin mode=kitti features=[ORB,BRISK]'
+#         'name=kt01_orb_kaz  seq=~/dataset/kitti/01 yaml=../Install/etc/orbslam2/Monocular/KITTI00-02.yaml runs=20 exe=../Install/bin mode=kitti features=[ORB,KAZE]'
+#         'name=kt01_orb_sft  seq=~/dataset/kitti/01 yaml=../Install/etc/orbslam2/Monocular/KITTI00-02.yaml runs=20 exe=../Install/bin mode=kitti features=[ORB,SIFT]'
+#         'name=kt01_orb_spp  seq=~/dataset/kitti/01 yaml=../Install/etc/orbslam2/Monocular/KITTI00-02.yaml runs=20 exe=../Install/bin mode=kitti features=[ORB,SuperPoint]'
+#         'name=kt01_akz_bsk  seq=~/dataset/kitti/01 yaml=../Install/etc/orbslam2/Monocular/KITTI00-02.yaml runs=20 exe=../Install/bin mode=kitti features=[AKAZE,BRISK]'
+#         'name=kt01_akz_kaz  seq=~/dataset/kitti/01 yaml=../Install/etc/orbslam2/Monocular/KITTI00-02.yaml runs=20 exe=../Install/bin mode=kitti features=[AKAZE,KAZE]'
+#         'name=kt01_akz_sft  seq=~/dataset/kitti/01 yaml=../Install/etc/orbslam2/Monocular/KITTI00-02.yaml runs=20 exe=../Install/bin mode=kitti features=[AKAZE,SIFT]'
+#         'name=kt01_akz_spp  seq=~/dataset/kitti/01 yaml=../Install/etc/orbslam2/Monocular/KITTI00-02.yaml runs=20 exe=../Install/bin mode=kitti features=[AKAZE,SuperPoint]'
+#         'name=kt01_bsk_kaz  seq=~/dataset/kitti/01 yaml=../Install/etc/orbslam2/Monocular/KITTI00-02.yaml runs=20 exe=../Install/bin mode=kitti features=[BRISK,KAZE]'
+#         'name=kt01_bsk_sft  seq=~/dataset/kitti/01 yaml=../Install/etc/orbslam2/Monocular/KITTI00-02.yaml runs=20 exe=../Install/bin mode=kitti features=[BRISK,SIFT]'
+#         'name=kt01_bsk_spp  seq=~/dataset/kitti/01 yaml=../Install/etc/orbslam2/Monocular/KITTI00-02.yaml runs=20 exe=../Install/bin mode=kitti features=[BRISK,SuperPoint]'
+#         'name=kt01_kaz_sft  seq=~/dataset/kitti/01 yaml=../Install/etc/orbslam2/Monocular/KITTI00-02.yaml runs=20 exe=../Install/bin mode=kitti features=[KAZE,SIFT]'
+#         'name=kt01_kaz_spp  seq=~/dataset/kitti/01 yaml=../Install/etc/orbslam2/Monocular/KITTI00-02.yaml runs=20 exe=../Install/bin mode=kitti features=[KAZE,SuperPoint]'
+#         'name=kt01_sft_spp  seq=~/dataset/kitti/01 yaml=../Install/etc/orbslam2/Monocular/KITTI00-02.yaml runs=20 exe=../Install/bin mode=kitti features=[SIFT,SuperPoint]'
+
+
 
 
 # Example (KITTI):

@@ -1,0 +1,106 @@
+Registering ORBextractor...
+Registering AKAZEextractor...
+Registering BRISKextractor...
+Registering SIFTextractor...
+Registering KAZEextractor...
+Registering SuperPointExtractor...
+
+ORB-SLAM2 Copyright (C) 2014-2016 Raul Mur-Artal, University of Zaragoza.
+This program comes with ABSOLUTELY NO WARRANTY;
+This is free software, and you are welcome to redistribute it
+under certain conditions. See LICENSE.txt.
+
+Input sensor was set to: Monocular
+
+Loading Vocabulary : /home/howard/PM-SLAM/Install/var/lib/orbslam2/voc/orb_mur.fbow
+This could take a while...
+Loading ORB Vocabulary in FBoW.
+ORB Vocabulary loaded in 0.007830s
+
+
+Loading Vocabulary : /home/howard/PM-SLAM/Install/var/lib/orbslam2/voc/brisk_cv.fbow
+This could take a while...
+Loading BRISK Vocabulary in FBoW.
+BRISK Vocabulary loaded in 0.002132s
+
+
+Camera Parameters: 
+- fx: 718.856
+- fy: 718.856
+- cx: 607.193
+- cy: 185.216
+- k1: 0
+- k2: 0
+- p1: 0
+- p2: 0
+- fps: 10
+- color order: RGB (ignored if grayscale)
+
+[Feature 0] ORB Extractor Parameters: 
+ ( TH_LOW: 50, TH_HIGH: 100 )
+- Number of Features: 2000
+- Scale Levels: 8
+- Scale Factor: 1.2
+- Initial Fast Threshold: 20
+- Minimum Fast Threshold: 7
+
+[Feature 1] BRISK Extractor Parameters: 
+ ( TH_LOW: 150, TH_HIGH: 250 )
+- Number of Features: 2000
+- Scale Levels: 6
+- Scale Factor: 1.414
+- Threshold: 50
+- Num of Octaves: 3
+- Pattern Scale: 1
+
+-------
+Start processing sequence ...
+Images in the sequence: 1101
+
+1
+New map created with 24 points for 0 Feature Type 
+New map created with 149 points for 1 Feature Type 
+Tracking Initlized in 0.56s
+The initlized frame ID: 4
+System::StopViewer()
+System::StopViewer() done
+Viewer thread finished.
+Viewer started, waiting for thread.
+System::StopViewer()
+System::StopViewer() done
+Tracking thread joined...
+
+Saving correlation status...
+
+========== Global Summary ==========
+Frames: 1096
+avg_CorrEdges: 12.8038
+avg_match_A: 101.611
+avg_match_B: 60.6861
+global_RI_MNR: 0.210984
+global_RI_GNR: 0.163051
+global_RI_DICE: 0.157782
+
+========== Per-Channel Summary ==========
+   chA   chB     avgCorr        avgA        avgB   avgRI_MNR   avgRI_GNR  avgRI_DICE
+     0     1     12.8038     101.611     60.6861    0.251394    0.170187    0.156563
+
+Correlation status saved!
+
+-------
+
+median tracking time: 0.0223944
+mean tracking time: 0.0254921
+
+Saving camera trajectory to result02.txt ...
+
+trajectory saved!
+
+========== Performance Summary (ms) ==========
+name                                mean      median        rmse         min         max       count
+Tracking                           7.703       7.687       3.022       2.234      25.425        1096
+Correlation                        0.162       0.155       0.069       0.063       1.577        1096
+Total Init                       476.650     476.650       0.000     476.650     476.650           1
+Pipeline                          25.484      22.388       8.740      12.526      72.389        1101
+ORB Extract                       14.636      11.465       6.413       8.538      46.035        1101
+BRISK Extract                     12.606      10.064       7.596       4.360      43.786        1101

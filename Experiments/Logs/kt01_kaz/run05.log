@@ -1,0 +1,119 @@
+Registering ORBextractor...
+Registering AKAZEextractor...
+Registering BRISKextractor...
+Registering SIFTextractor...
+Registering KAZEextractor...
+Registering SuperPointExtractor...
+
+ORB-SLAM2 Copyright (C) 2014-2016 Raul Mur-Artal, University of Zaragoza.
+This program comes with ABSOLUTELY NO WARRANTY;
+This is free software, and you are welcome to redistribute it
+under certain conditions. See LICENSE.txt.
+
+Input sensor was set to: Monocular
+
+Loading Vocabulary : /home/howard/PM-SLAM/Install/var/lib/orbslam2/voc/kaze_cv.fbow
+This could take a while...
+Loading KAZE Vocabulary in FBoW.
+KAZE Vocabulary loaded in 0.006445s
+
+
+Camera Parameters: 
+- fx: 718.856
+- fy: 718.856
+- cx: 607.193
+- cy: 185.216
+- k1: 0
+- k2: 0
+- p1: 0
+- p2: 0
+- fps: 10
+- color order: RGB (ignored if grayscale)
+
+[Feature 0] KAZE Extractor Parameters: 
+ ( TH_LOW: 0.5, TH_HIGH: 1 )
+- Number of Features : 2000
+- Scale Levels       : 4
+- Scale Factor       : 1.2
+- Threshold          : 0.001
+- nOctaves           : 4
+- nOctaveLayers      : 4
+- Extended (128‑dim) : 0
+- Upright            : 0
+
+-------
+Start processing sequence ...
+Images in the sequence: 1101
+
+0
+New map created with 265 points for 0 Feature Type 
+Tracking Initlized in 16.30s
+The initlized frame ID: 19
+The lost frame ID: 1053
+The lost frame ID: 1055
+The lost frame ID: 1056
+The lost frame ID: 1057
+The lost frame ID: 1058
+The lost frame ID: 1059
+The lost frame ID: 1060
+The lost frame ID: 1061
+The lost frame ID: 1062
+The lost frame ID: 1063
+The lost frame ID: 1064
+The lost frame ID: 1065
+The lost frame ID: 1066
+The lost frame ID: 1067
+The lost frame ID: 1069
+The lost frame ID: 1070
+The lost frame ID: 1071
+The lost frame ID: 1072
+The lost frame ID: 1073
+The lost frame ID: 1074
+The lost frame ID: 1075
+The lost frame ID: 1076
+The lost frame ID: 1077
+The lost frame ID: 1079
+The lost frame ID: 1080
+The lost frame ID: 1081
+The lost frame ID: 1082
+The lost frame ID: 1083
+The lost frame ID: 1084
+The lost frame ID: 1086
+The lost frame ID: 1088
+The lost frame ID: 1089
+The lost frame ID: 1091
+The lost frame ID: 1093
+The lost frame ID: 1094
+The lost frame ID: 1095
+The lost frame ID: 1096
+The lost frame ID: 1098
+The lost frame ID: 1099
+The lost frame ID: 1100
+System::StopViewer()
+System::StopViewer() done
+Viewer thread finished.
+Viewer started, waiting for thread.
+System::StopViewer()
+System::StopViewer() done
+Tracking thread joined...
+
+Saving correlation status...
+
+Correlation status saved!
+
+-------
+
+median tracking time: 0.172806
+mean tracking time: 0.174086
+
+Saving camera trajectory to result05.txt ...
+
+trajectory saved!
+
+========== Performance Summary (ms) ==========
+name                                mean      median        rmse         min         max       count
+Tracking                           4.731       4.767       1.576       1.166      16.706        1081
+Correlation                        0.000       0.000       0.000       0.000       0.011        1040
+Total Init                      3832.642    3832.642       0.000    3832.642    3832.642           1
+Pipeline                         174.082     172.802      11.981     148.895     256.707        1101
+KAZE Extract                     167.773     166.480      11.087     146.104     245.898        1101

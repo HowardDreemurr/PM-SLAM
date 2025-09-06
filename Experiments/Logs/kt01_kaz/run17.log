@@ -1,0 +1,225 @@
+Registering ORBextractor...
+Registering AKAZEextractor...
+Registering BRISKextractor...
+Registering SIFTextractor...
+Registering KAZEextractor...
+Registering SuperPointExtractor...
+
+ORB-SLAM2 Copyright (C) 2014-2016 Raul Mur-Artal, University of Zaragoza.
+This program comes with ABSOLUTELY NO WARRANTY;
+This is free software, and you are welcome to redistribute it
+under certain conditions. See LICENSE.txt.
+
+Input sensor was set to: Monocular
+
+Loading Vocabulary : /home/howard/PM-SLAM/Install/var/lib/orbslam2/voc/kaze_cv.fbow
+This could take a while...
+Loading KAZE Vocabulary in FBoW.
+KAZE Vocabulary loaded in 0.006012s
+
+
+Camera Parameters: 
+- fx: 718.856
+- fy: 718.856
+- cx: 607.193
+- cy: 185.216
+- k1: 0
+- k2: 0
+- p1: 0
+- p2: 0
+- fps: 10
+- color order: RGB (ignored if grayscale)
+
+[Feature 0] KAZE Extractor Parameters: 
+ ( TH_LOW: 0.5, TH_HIGH: 1 )
+- Number of Features : 2000
+- Scale Levels       : 4
+- Scale Factor       : 1.2
+- Threshold          : 0.001
+- nOctaves           : 4
+- nOctaveLayers      : 4
+- Extended (128‑dim) : 0
+- Upright            : 0
+
+-------
+Start processing sequence ...
+Images in the sequence: 1101
+
+0
+New map created with 265 points for 0 Feature Type 
+Tracking Initlized in 17.13s
+The initlized frame ID: 19
+The lost frame ID: 901
+The lost frame ID: 911
+The lost frame ID: 926
+The lost frame ID: 927
+The lost frame ID: 928
+The lost frame ID: 929
+The lost frame ID: 930
+The lost frame ID: 931
+The lost frame ID: 932
+The lost frame ID: 933
+The lost frame ID: 934
+The lost frame ID: 935
+The lost frame ID: 936
+The lost frame ID: 937
+The lost frame ID: 938
+The lost frame ID: 939
+The lost frame ID: 940
+The lost frame ID: 941
+The lost frame ID: 942
+The lost frame ID: 943
+The lost frame ID: 944
+The lost frame ID: 945
+The lost frame ID: 946
+The lost frame ID: 947
+The lost frame ID: 949
+The lost frame ID: 950
+The lost frame ID: 951
+The lost frame ID: 952
+The lost frame ID: 953
+The lost frame ID: 954
+The lost frame ID: 955
+The lost frame ID: 956
+The lost frame ID: 957
+The lost frame ID: 958
+The lost frame ID: 959
+The lost frame ID: 960
+The lost frame ID: 961
+The lost frame ID: 962
+The lost frame ID: 963
+The lost frame ID: 964
+The lost frame ID: 965
+The lost frame ID: 966
+The lost frame ID: 967
+The lost frame ID: 968
+The lost frame ID: 969
+The lost frame ID: 970
+The lost frame ID: 971
+The lost frame ID: 972
+The lost frame ID: 973
+The lost frame ID: 974
+The lost frame ID: 975
+The lost frame ID: 976
+The lost frame ID: 977
+The lost frame ID: 978
+The lost frame ID: 979
+The lost frame ID: 980
+The lost frame ID: 981
+The lost frame ID: 982
+The lost frame ID: 983
+The lost frame ID: 984
+The lost frame ID: 985
+The lost frame ID: 986
+The lost frame ID: 987
+The lost frame ID: 988
+The lost frame ID: 989
+The lost frame ID: 990
+The lost frame ID: 991
+The lost frame ID: 992
+The lost frame ID: 993
+The lost frame ID: 994
+The lost frame ID: 995
+The lost frame ID: 996
+The lost frame ID: 997
+The lost frame ID: 998
+The lost frame ID: 999
+The lost frame ID: 1000
+The lost frame ID: 1001
+The lost frame ID: 1002
+The lost frame ID: 1003
+The lost frame ID: 1004
+The lost frame ID: 1005
+The lost frame ID: 1006
+The lost frame ID: 1007
+The lost frame ID: 1008
+The lost frame ID: 1009
+The lost frame ID: 1010
+The lost frame ID: 1011
+The lost frame ID: 1012
+The lost frame ID: 1013
+The lost frame ID: 1014
+The lost frame ID: 1015
+The lost frame ID: 1016
+The lost frame ID: 1017
+The lost frame ID: 1018
+The lost frame ID: 1019
+The lost frame ID: 1020
+The lost frame ID: 1021
+The lost frame ID: 1022
+The lost frame ID: 1023
+The lost frame ID: 1024
+The lost frame ID: 1025
+The lost frame ID: 1026
+The lost frame ID: 1027
+The lost frame ID: 1028
+The lost frame ID: 1029
+The lost frame ID: 1030
+The lost frame ID: 1031
+The lost frame ID: 1032
+The lost frame ID: 1033
+The lost frame ID: 1034
+The lost frame ID: 1035
+The lost frame ID: 1036
+The lost frame ID: 1037
+The lost frame ID: 1038
+The lost frame ID: 1039
+The lost frame ID: 1040
+The lost frame ID: 1041
+The lost frame ID: 1042
+The lost frame ID: 1043
+The lost frame ID: 1044
+The lost frame ID: 1045
+The lost frame ID: 1046
+The lost frame ID: 1047
+The lost frame ID: 1048
+The lost frame ID: 1049
+The lost frame ID: 1050
+The lost frame ID: 1051
+The lost frame ID: 1052
+The lost frame ID: 1053
+The lost frame ID: 1054
+The lost frame ID: 1055
+The lost frame ID: 1056
+The lost frame ID: 1057
+The lost frame ID: 1058
+The lost frame ID: 1059
+The lost frame ID: 1060
+The lost frame ID: 1061
+The lost frame ID: 1062
+The lost frame ID: 1063
+The lost frame ID: 1064
+The lost frame ID: 1065
+The lost frame ID: 1066
+The lost frame ID: 1067
+The lost frame ID: 1068
+The lost frame ID: 1070
+The lost frame ID: 1089
+System::StopViewer()
+System::StopViewer() done
+Viewer thread finished.
+Viewer started, waiting for thread.
+System::StopViewer()
+System::StopViewer() done
+Tracking thread joined...
+
+Saving correlation status...
+
+Correlation status saved!
+
+-------
+
+median tracking time: 0.179128
+mean tracking time: 0.183464
+
+Saving camera trajectory to result17.txt ...
+
+trajectory saved!
+
+========== Performance Summary (ms) ==========
+name                                mean      median        rmse         min         max       count
+Tracking                           6.154       4.995       4.343       1.747      45.229        1081
+Correlation                        0.000       0.000       0.000       0.000       0.001         935
+Total Init                      3915.212    3915.212       0.000    3915.212    3915.212           1
+Pipeline                         183.460     179.124      19.228     149.516     284.026        1101
+KAZE Extract                     175.847     172.018      17.056     143.881     273.955        1101

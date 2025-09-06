@@ -1,0 +1,132 @@
+Registering ORBextractor...
+Registering AKAZEextractor...
+Registering BRISKextractor...
+Registering SIFTextractor...
+Registering KAZEextractor...
+Registering SuperPointExtractor...
+
+ORB-SLAM2 Copyright (C) 2014-2016 Raul Mur-Artal, University of Zaragoza.
+This program comes with ABSOLUTELY NO WARRANTY;
+This is free software, and you are welcome to redistribute it
+under certain conditions. See LICENSE.txt.
+
+Input sensor was set to: Monocular
+
+Loading Vocabulary : /home/howard/PM-SLAM/Install/var/lib/orbslam2/voc/sift_cv.fbow
+This could take a while...
+Loading SIFT Vocabulary in FBoW.
+SIFT Vocabulary loaded in 0.020467s
+
+
+Loading Vocabulary : /home/howard/PM-SLAM/Install/var/lib/orbslam2/voc/superpoint.fbow
+This could take a while...
+Loading SuperPoint Vocabulary in FBoW.
+SuperPoint Vocabulary loaded in 0.010737s
+
+
+Camera Parameters: 
+- fx: 718.856
+- fy: 718.856
+- cx: 607.193
+- cy: 185.216
+- k1: 0
+- k2: 0
+- p1: 0
+- p2: 0
+- fps: 10
+- color order: RGB (ignored if grayscale)
+
+[Feature 0] SIFT Extractor Parameters: 
+ ( TH_LOW: 300, TH_HIGH: 500 )
+- Number of Features  : 2000
+- Scale Levels        : 1
+- Scale Factor        : 1
+- Contrast Threshold  : 0.01
+- Edge Threshold      : 5
+- nOctaves            : 3
+- Sigma               : 1.6
+
+[Feature 1] SuperPoint Extractor Parameters: 
+ ( TH_LOW: 0.7, TH_HIGH: 0.9 )
+- Number of Features: 2000
+- Scale Levels: 4
+- Scale Factor: 1.2
+- Use CUDA: 1
+- Use NMS: 1
+- iniTh: 0.08
+- minTh: 0.04
+
+-------
+Start processing sequence ...
+Images in the sequence: 1101
+
+0
+New map created with 631 points for 0 Feature Type 
+New map created with 33 points for 1 Feature Type 
+Tracking Initlized in 1.19s
+The initlized frame ID: 1
+The lost frame ID: 1078
+The lost frame ID: 1079
+The lost frame ID: 1080
+The lost frame ID: 1081
+The lost frame ID: 1082
+The lost frame ID: 1083
+The lost frame ID: 1084
+The lost frame ID: 1085
+The lost frame ID: 1086
+The lost frame ID: 1087
+The lost frame ID: 1088
+The lost frame ID: 1089
+The lost frame ID: 1090
+The lost frame ID: 1091
+The lost frame ID: 1092
+The lost frame ID: 1093
+The lost frame ID: 1094
+The lost frame ID: 1095
+The lost frame ID: 1096
+The lost frame ID: 1097
+The lost frame ID: 1098
+The lost frame ID: 1099
+The lost frame ID: 1100
+System::StopViewer()
+System::StopViewer() done
+Viewer thread finished.
+Viewer started, waiting for thread.
+System::StopViewer()
+System::StopViewer() done
+Tracking thread joined...
+
+Saving correlation status...
+
+========== Global Summary ==========
+Frames: 1075
+avg_CorrEdges: 0.306047
+avg_match_A: 115.516
+avg_match_B: 52.0344
+global_RI_MNR: 0.00588162
+global_RI_GNR: 0.00394748
+global_RI_DICE: 0.00365318
+
+========== Per-Channel Summary ==========
+   chA   chB     avgCorr        avgA        avgB   avgRI_MNR   avgRI_GNR  avgRI_DICE
+     0     1    0.306047     115.516     52.0344  0.00511322  0.00350952  0.00325442
+
+Correlation status saved!
+
+-------
+
+median tracking time: 0.125388
+mean tracking time: 0.128181
+
+Saving camera trajectory to result18.txt ...
+
+trajectory saved!
+
+========== Performance Summary (ms) ==========
+name                                mean      median        rmse         min         max       count
+Tracking                           6.537       5.684       4.629       2.170      44.566        1099
+Correlation                        0.134       0.126       0.047       0.030       0.402        1075
+Total Init                       394.695     394.695       0.000     394.695     394.695           1
+Pipeline                         128.174     125.382      17.148     102.943     437.832        1101
+SuperPoint Extract               119.954     118.248      13.407      97.135     418.788        1101
+SIFT Extract                      55.023      54.314       8.567      37.678     120.025        1101

@@ -1,0 +1,119 @@
+Registering ORBextractor...
+Registering AKAZEextractor...
+Registering BRISKextractor...
+Registering SIFTextractor...
+Registering KAZEextractor...
+Registering SuperPointExtractor...
+
+ORB-SLAM2 Copyright (C) 2014-2016 Raul Mur-Artal, University of Zaragoza.
+This program comes with ABSOLUTELY NO WARRANTY;
+This is free software, and you are welcome to redistribute it
+under certain conditions. See LICENSE.txt.
+
+Input sensor was set to: Monocular
+
+Loading Vocabulary : /home/howard/PM-SLAM/Install/var/lib/orbslam2/voc/superpoint.fbow
+This could take a while...
+Loading SuperPoint Vocabulary in FBoW.
+SuperPoint Vocabulary loaded in 0.008786s
+
+
+Camera Parameters: 
+- fx: 718.856
+- fy: 718.856
+- cx: 607.193
+- cy: 185.216
+- k1: 0
+- k2: 0
+- p1: 0
+- p2: 0
+- fps: 10
+- color order: RGB (ignored if grayscale)
+
+[Feature 0] SuperPoint Extractor Parameters: 
+ ( TH_LOW: 0.7, TH_HIGH: 0.9 )
+- Number of Features: 2000
+- Scale Levels: 4
+- Scale Factor: 1.2
+- Use CUDA: 1
+- Use NMS: 1
+- iniTh: 0.08
+- minTh: 0.04
+
+-------
+Start processing sequence ...
+Images in the sequence: 1101
+
+0
+New map created with 108 points for 0 Feature Type 
+Tracking Initlized in 54.45s
+The initlized frame ID: 90
+The lost frame ID: 1059
+The lost frame ID: 1060
+The lost frame ID: 1062
+The lost frame ID: 1063
+The lost frame ID: 1064
+The lost frame ID: 1065
+The lost frame ID: 1066
+The lost frame ID: 1067
+The lost frame ID: 1068
+The lost frame ID: 1069
+The lost frame ID: 1070
+The lost frame ID: 1071
+The lost frame ID: 1072
+The lost frame ID: 1073
+The lost frame ID: 1074
+The lost frame ID: 1075
+The lost frame ID: 1076
+The lost frame ID: 1077
+The lost frame ID: 1078
+The lost frame ID: 1079
+The lost frame ID: 1080
+The lost frame ID: 1081
+The lost frame ID: 1082
+The lost frame ID: 1083
+The lost frame ID: 1084
+The lost frame ID: 1085
+The lost frame ID: 1086
+The lost frame ID: 1087
+The lost frame ID: 1088
+The lost frame ID: 1089
+The lost frame ID: 1090
+The lost frame ID: 1091
+The lost frame ID: 1092
+The lost frame ID: 1093
+The lost frame ID: 1094
+The lost frame ID: 1095
+The lost frame ID: 1096
+The lost frame ID: 1097
+The lost frame ID: 1098
+The lost frame ID: 1099
+The lost frame ID: 1100
+System::StopViewer()
+System::StopViewer() done
+Viewer thread finished.
+Viewer started, waiting for thread.
+System::StopViewer()
+System::StopViewer() done
+Tracking thread joined...
+
+Saving correlation status...
+
+Correlation status saved!
+
+-------
+
+median tracking time: 0.111353
+mean tracking time: 0.113968
+
+Saving camera trajectory to result12.txt ...
+
+trajectory saved!
+
+========== Performance Summary (ms) ==========
+name                                mean      median        rmse         min         max       count
+Tracking                           6.233       5.501       3.872       1.411      33.293        1010
+Correlation                        0.000       0.000       0.000       0.000       0.002         968
+Total Init                     12053.024   12053.024       0.000   12053.024   12053.024           1
+Pipeline                         113.961     111.347      14.456      87.999     372.051        1101
+SuperPoint Extract               105.155     103.815      11.694      87.018     353.786        1101
