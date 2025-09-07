@@ -69,8 +69,8 @@ norm_args=("${clean_args[@]}")
 if [[ -z "$REF_FMT" || "$REF_FMT" == "auto" ]]; then
   if [[ "$GT" == *.csv ]]; then
     REF_FMT="euroc"
-  elif [[ "$GT" == */poses/* ]] || [[ "$(basename "$GT")" =~ ^[0-9]{2}\.txt$ ]]; then
-    REF_FMT="kitti"
+  #elif [[ "$GT" == */poses/* ]] || [[ "$(basename "$GT")" =~ ^[0-9]{2}\.txt$ ]]; then
+  #  REF_FMT="kitti"
   else
     REF_FMT="tum"
   fi
