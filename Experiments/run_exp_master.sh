@@ -25,7 +25,7 @@ expand_path() { eval echo "$1"; }
 START=0
 SKIP=1
 WITH_CORR=0
-NO_EVO=0
+NO_EVO=1
 
 # keep leftover args here
 args=()
@@ -79,7 +79,7 @@ read_config_lines() {
     SEQ_MH01="${SLAM_DATASET_ROOT}/euroc/MH_01/cam0/data"
     SEQ_MH03="${SLAM_DATASET_ROOT}/euroc/MH_03/cam0/data"
     SEQ_MH05="${SLAM_DATASET_ROOT}/euroc/MH_05/cam0/data"
-    SEQ_KT00="${SLAM_DATASET_ROOT}/kitt/00"
+    SEQ_KT00="${SLAM_DATASET_ROOT}/kitti/00"
       fi
       
     LINES=(
@@ -244,7 +244,7 @@ read_config_lines() {
 # 'name=kitti_00 seq=~/dataset/kitti/sequences/00 yaml=../Install/etc/orbslam2/Monocular/KITTI00-02.yaml gt=~/dataset/kitti/poses/00.txt runs=5 exe=../Install/bin features=[ORB,AKAZE] mode=kitti'
 #
 # Example (EuRoC):
-# 'name=MH_01 seq=${SEQ_MH01} yaml=../Install/etc/orbslam2/Monocular/EuRoC.yaml  runs=1 exe=../Install/bin mode=euroc features=[ORB,SuperPoint] times=MH01.txt'
+# 'name=MH_01 seq=${SEQ_MH01} yaml=../Install/etc/orbslam2/Monocular/EuRoC.yaml  runs=20 exe=../Install/bin mode=euroc features=[ORB,SuperPoint] times=MH01.txt'
     )
   fi
 }
@@ -350,12 +350,14 @@ main() {
 
     if [[ $NO_EVO -eq 1 ]]; then
       echo "[SKIP] --noEvo set; skip APE/RPE for '${name}'."
+      lineNo=$((lineNo + SKIP))
       continue
     fi
 
     local poses_dir="./Poses/${name}"
     if [[ ! -d "$poses_dir" ]] || ! ls "$poses_dir"/result*.txt >/dev/null 2>&1; then
       echo "[SKIP] No poses found for '${name}' -> skip APE/RPE."
+      lineNo=$((lineNo + SKIP))
       continue
     fi
 
