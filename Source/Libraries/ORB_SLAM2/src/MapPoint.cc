@@ -202,6 +202,10 @@ void MapPoint::Replace(MapPoint *pMP) {
   if (pMP->mnId == this->mnId)
     return;
 
+  if (pMP->GetFeatureType() != this->GetFeatureType()) {
+    return;
+  }
+
   int nvisible, nfound, Ftype;
   map<KeyFrame *, std::size_t> obs;
   {
@@ -273,11 +277,15 @@ void MapPoint::ComputeDistinctiveDescriptors() {
 
   vDescriptors.reserve(observations.size());
 
-  for (map<KeyFrame *, std::size_t>::iterator mit = observations.begin(), mend = observations.end(); mit != mend; mit++) {
+  for (auto mit = observations.begin(), mend = observations.end(); mit != mend; ++mit) {
     KeyFrame *pKF = mit->first;
-
-    if (!pKF->isBad())
-      vDescriptors.push_back(pKF->Channels[mFtype].mDescriptors.row(mit->second));
+    if (pKF && !pKF->isBad()) {
+      const auto& desc = pKF->Channels[mFtype].mDescriptors;
+      const size_t idx = mit->second;
+      if (desc.rows > 0 && idx < static_cast<size_t>(desc.rows)) {
+        vDescriptors.push_back(desc.row(static_cast<int>(idx)));
+      }
+    }
   }
 
   if (vDescriptors.empty())

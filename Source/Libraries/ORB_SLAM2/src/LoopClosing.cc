@@ -694,10 +694,13 @@ void LoopClosing::CorrectLoop(const int Ftype) {
     for (std::size_t i = 0; i < mvpCurrentMatchedPoints.size(); i++) {
       if (mvpCurrentMatchedPoints[i]) {
         MapPoint *pLoopMP = mvpCurrentMatchedPoints[i];
-        MapPoint *pCurMP = mpCurrentKF->GetMapPoint(i, Ftype);
-        if (pCurMP)
-          pCurMP->Replace(pLoopMP);
-        else {
+        MapPoint *pCurMP  = mpCurrentKF->GetMapPoint(i, Ftype);
+        if (pCurMP) {
+          if (!pCurMP->isBad() && !pLoopMP->isBad() &&
+              pCurMP->GetFeatureType() == pLoopMP->GetFeatureType()) {
+            pCurMP->Replace(pLoopMP);
+              }
+        } else {
           mpCurrentKF->AddMapPoint(pLoopMP, i, Ftype);
           pLoopMP->AddObservation(mpCurrentKF, i);
           pLoopMP->ComputeDistinctiveDescriptors();
@@ -769,10 +772,14 @@ void LoopClosing::SearchAndFuse(const KeyFrameAndPose &CorrectedPosesMap, const 
     unique_lock<mutex> lock(mpMap->mMutexMapUpdate);
     const int nLP = mvpLoopMapPoints.size();
     for (int i = 0; i < nLP; i++) {
-      MapPoint *pRep = vpReplacePoints[i];
-      if (pRep) {
-        pRep->Replace(mvpLoopMapPoints[i]);
-      }
+      MapPoint *pRep   = vpReplacePoints[i];
+      MapPoint *pLoop  = mvpLoopMapPoints[i];
+
+      if (!pRep || !pLoop) continue;
+      if (pRep->isBad() || pLoop->isBad()) continue;
+      if (pRep->GetFeatureType() != pLoop->GetFeatureType()) continue;
+
+      pRep->Replace(pLoop);
     }
   }
 }
