@@ -441,11 +441,20 @@ bool Frame::PosInGrid(const cv::KeyPoint &kp, int &posX, int &posY) {
 }
 
 void Frame::ComputeBoW(const int Ftype) {
-  if (Channels[Ftype].mBowVec.empty()) {
-    // vector<cv::Mat> vCurrentDesc = Converter::toDescriptorVector(Channels[Ftype].mDescriptors);
-    mpVocabulary[Ftype]->transform(Channels[Ftype].mDescriptors, Channels[Ftype].mBowVec, Channels[Ftype].mFeatVec, 4);
+  if (!Channels[Ftype].mBowVec.empty()) return;
+
+  if (Channels[Ftype].mDescriptors.empty() || Channels[Ftype].mDescriptors.rows == 0) {
+    Channels[Ftype].mBowVec.clear();
+    Channels[Ftype].mFeatVec.clear();
+    return;
   }
+
+  mpVocabulary[Ftype]->transform (
+      Channels[Ftype].mDescriptors,
+      Channels[Ftype].mBowVec,
+      Channels[Ftype].mFeatVec, 4);
 }
+
 
 void Frame::UndistortKeyPoints(const int Ftype) {
   if (mDistCoef.at<float>(0) == 0.0) {
@@ -725,8 +734,15 @@ void Frame::ComputeFeaturesRGBD(const int Ftype, const cv::Mat &imGray, const cv
 
   Channels[Ftype].N = Channels[Ftype].mvKeys.size();
   
-  if (Channels[Ftype].mvKeys.empty())
+  if (Channels[Ftype].mvKeys.empty()) {
+    Channels[Ftype].mvKeysUn.clear();
+    Channels[Ftype].mvuRight.clear();
+    Channels[Ftype].mvDepth.clear();
+    Channels[Ftype].mvpMapPoints.clear();
+    Channels[Ftype].mvbOutlier.clear();
+    AssignFeaturesToGrid(Ftype);
     return;
+  }
 
   
   // mvKeysUn, Left image
@@ -762,8 +778,15 @@ void Frame::ComputeFeaturesStereo(const int Ftype, const cv::Mat &imLeft, const 
 
   Channels[Ftype].N = Channels[Ftype].mvKeys.size();
   
-  if (Channels[Ftype].mvKeys.empty())
+  if (Channels[Ftype].mvKeys.empty()) {
+    Channels[Ftype].mvKeysUn.clear();
+    Channels[Ftype].mvuRight.clear();
+    Channels[Ftype].mvDepth.clear();
+    Channels[Ftype].mvpMapPoints.clear();
+    Channels[Ftype].mvbOutlier.clear();
+    AssignFeaturesToGrid(Ftype);
     return;
+  }
 
   // mvKeysUn, Left image
   UndistortKeyPoints(Ftype);
@@ -786,8 +809,15 @@ void Frame::ComputeFeaturesMono(const int Ftype, const cv::Mat &imGray) {
 
   Channels[Ftype].N = Channels[Ftype].mvKeys.size();
   
-  if (Channels[Ftype].mvKeys.empty())
+  if (Channels[Ftype].mvKeys.empty()) {
+    Channels[Ftype].mvKeysUn.clear();
+    Channels[Ftype].mvuRight.clear();
+    Channels[Ftype].mvDepth.clear();
+    Channels[Ftype].mvpMapPoints.clear();
+    Channels[Ftype].mvbOutlier.clear();
+    AssignFeaturesToGrid(Ftype);
     return;
+  }
 
   // mvKeysUn, Left image
   UndistortKeyPoints(Ftype);

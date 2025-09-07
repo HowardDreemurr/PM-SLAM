@@ -35,7 +35,7 @@ KeyFrameDatabase::KeyFrameDatabase(const FbowVocabulary &voc) : mpVoc(&voc) {
   // mvInvertedFile.resize(voc.size());
 }
 
-//TO-DO add Ftype
+
 void KeyFrameDatabase::add(KeyFrame *pKF, const int Ftype) {
   unique_lock<mutex> lock(mMutex);
 

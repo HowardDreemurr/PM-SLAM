@@ -103,13 +103,20 @@ void KeyFrame::ComputeBoW(const int Ftype) {
 */
 
 void KeyFrame::ComputeBoW(const int Ftype) {
-  if (Channels[Ftype].mBowVec.empty() || Channels[Ftype].mFeatVec.empty()) {
-    mpVocabulary[Ftype]->transform (
-        Channels[Ftype].mDescriptors,
-        Channels[Ftype].mBowVec,
-        Channels[Ftype].mFeatVec, 4);
+  if (!Channels[Ftype].mBowVec.empty() && !Channels[Ftype].mFeatVec.empty()) return;
+
+  if (Channels[Ftype].mDescriptors.empty() || Channels[Ftype].mDescriptors.rows == 0) {
+    Channels[Ftype].mBowVec.clear();
+    Channels[Ftype].mFeatVec.clear();
+    return;
   }
+
+  mpVocabulary[Ftype]->transform (
+      Channels[Ftype].mDescriptors,
+      Channels[Ftype].mBowVec,
+      Channels[Ftype].mFeatVec, 4);
 }
+
 
 void KeyFrame::SetPose(const cv::Mat &Tcw_) {
   unique_lock<mutex> lock(mMutexPose);
