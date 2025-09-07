@@ -18,13 +18,13 @@ Input sensor was set to: Monocular
 Loading Vocabulary : /home/howard/Refactored_ORB_SLAM2/Install/var/lib/orbslam2/voc/akaze_cv.fbow
 This could take a while...
 Loading AKAZE Vocabulary in FBoW.
-AKAZE Vocabulary loaded in 0.001629s
+AKAZE Vocabulary loaded in 0.002435s
 
 
 Loading Vocabulary : /home/howard/Refactored_ORB_SLAM2/Install/var/lib/orbslam2/voc/superpoint.fbow
 This could take a while...
 Loading SuperPoint Vocabulary in FBoW.
-SuperPoint Vocabulary loaded in 0.007443s
+SuperPoint Vocabulary loaded in 0.009367s
 
 
 Camera Parameters: 
@@ -65,7 +65,7 @@ Images in the sequence: 3682
 0
 New map created with 534 points for 0 Feature Type 
 New map created with 147 points for 1 Feature Type 
-Tracking Initlized in 1.67s
+Tracking Initlized in 1.78s
 The initlized frame ID: 2
 System::StopViewer()
 System::StopViewer() done
@@ -77,33 +77,33 @@ Saving correlation status...
 
 ========== Global Summary ==========
 Frames: 3679
-avg_CorrEdges: 6.15412
-avg_match_A: 241.406
-avg_match_B: 347.148
-global_RI_MNR: 0.0254928
-global_RI_GNR: 0.0212586
-global_RI_DICE: 0.0209126
+avg_CorrEdges: 6.50476
+avg_match_A: 242.781
+avg_match_B: 349.504
+global_RI_MNR: 0.0267927
+global_RI_GNR: 0.0223305
+global_RI_DICE: 0.021965
 
 ========== Per-Channel Summary ==========
    chA   chB     avgCorr        avgA        avgB   avgRI_MNR   avgRI_GNR  avgRI_DICE
-     0     1     6.15412     241.406     347.148    0.026722   0.0211115    0.020441
+     0     1     6.50476     242.781     349.504   0.0276862   0.0220793   0.0214299
 
 Correlation status saved!
 
 -------
 
-median tracking time: 0.102237
-mean tracking time: 0.101432
+median tracking time: 0.108748
+mean tracking time: 0.108411
 
-Saving keyframe trajectory to KeyFrameTrajectory.txt ...
+Saving camera trajectory to Trajectory.txt ...
 
 trajectory saved!
 
 ========== Performance Summary (ms) ==========
 name                                mean      median        rmse         min         max       count
-Tracking                          16.254      13.250       8.082       2.823      37.559        3679
-Total Init                       326.738     326.738       0.000     326.738     326.738           1
-Pipeline                         101.429     102.231      18.760      63.916     264.174        3682
-SuperPoint Extract                82.865      84.519      11.337      55.191     261.236        3682
-Correlation                        0.216       0.208       0.050       0.033       0.626        3679
-AKAZE Extract                     19.993      20.441       2.394      15.386      31.058        3682
+Tracking                          17.179      14.214       8.182       3.120      38.681        3679
+Total Init                       383.622     383.622       0.000     383.622     383.622           1
+Pipeline                         108.408     108.745      18.900      66.044     297.051        3682
+SuperPoint Extract                88.780      89.516      11.963      54.687     292.278        3682
+Correlation                        0.234       0.226       0.054       0.091       0.596        3679
+AKAZE Extract                     21.496      21.593       3.054      14.398      38.002        3682

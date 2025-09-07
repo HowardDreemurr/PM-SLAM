@@ -1,0 +1,108 @@
+Registering ORBextractor...
+Registering AKAZEextractor...
+Registering BRISKextractor...
+Registering SIFTextractor...
+Registering KAZEextractor...
+Registering SuperPointExtractor...
+Loading images...
+Loaded 2700 images.
+Creating SLAM system...
+
+ORB-SLAM2 Copyright (C) 2014-2016 Raul Mur-Artal, University of Zaragoza.
+This program comes with ABSOLUTELY NO WARRANTY;
+This is free software, and you are welcome to redistribute it
+under certain conditions. See LICENSE.txt.
+
+Input sensor was set to: Monocular
+
+Loading Vocabulary : /home/howard/Refactored_ORB_SLAM2/Install/var/lib/orbslam2/voc/orb_mur.fbow
+This could take a while...
+Loading ORB Vocabulary in FBoW.
+ORB Vocabulary loaded in 0.008737s
+
+
+Loading Vocabulary : /home/howard/Refactored_ORB_SLAM2/Install/var/lib/orbslam2/voc/superpoint.fbow
+This could take a while...
+Loading SuperPoint Vocabulary in FBoW.
+SuperPoint Vocabulary loaded in 0.008132s
+
+
+Camera Parameters: 
+- fx: 458.654
+- fy: 457.296
+- cx: 367.215
+- cy: 248.375
+- k1: -0.283408
+- k2: 0.0739591
+- p1: 0.00019359
+- p2: 1.76187e-05
+- fps: 20
+- color order: RGB (ignored if grayscale)
+
+[Feature 0] ORB Extractor Parameters: 
+ ( TH_LOW: 50, TH_HIGH: 100 )
+- Number of Features: 1000
+- Scale Levels: 8
+- Scale Factor: 1.2
+- Initial Fast Threshold: 20
+- Minimum Fast Threshold: 7
+
+[Feature 1] SuperPoint Extractor Parameters: 
+ ( TH_LOW: 0.7, TH_HIGH: 0.9 )
+- Number of Features: 1000
+- Scale Levels: 4
+- Scale Factor: 1.2
+- Use CUDA: 1
+- Use NMS: 1
+- iniTh: 0.08
+- minTh: 0.04
+
+-------
+Start processing sequence ...
+Images in the sequence: 2700
+
+0
+New map created with 165 points for 0 Feature Type 
+New map created with 368 points for 1 Feature Type 
+Tracking Initlized in 29.91s
+The initlized frame ID: 53
+System::StopViewer()
+System::StopViewer() done
+Viewer thread finished.
+Viewer started, waiting for thread.
+Tracking thread joined...
+
+Saving correlation status...
+
+========== Global Summary ==========
+Frames: 2646
+avg_CorrEdges: 28.1444
+avg_match_A: 168.235
+avg_match_B: 333.347
+global_RI_MNR: 0.167292
+global_RI_GNR: 0.118846
+global_RI_DICE: 0.112222
+
+========== Per-Channel Summary ==========
+   chA   chB     avgCorr        avgA        avgB   avgRI_MNR   avgRI_GNR  avgRI_DICE
+     0     1     28.1444     168.235     333.347    0.158571    0.112936    0.106582
+
+Correlation status saved!
+
+-------
+
+median tracking time: 0.0870235
+mean tracking time: 0.0874337
+
+Saving camera trajectory to Trajectory.txt ...
+
+trajectory saved!
+
+========== Performance Summary (ms) ==========
+name                                mean      median        rmse         min         max       count
+Tracking                          11.193      11.816       3.355       4.309      19.553        2646
+Correlation                        0.196       0.193       0.046       0.076       0.421        2646
+Total Init                      4980.243    4980.243       0.000    4980.243    4980.243           1
+Pipeline                          87.430      87.018      11.986      60.233     247.595        2700
+SuperPoint Extract                74.243      73.223      10.707      52.430     244.924        2700
+ORB Extract                        8.057       7.981       1.474       4.924      17.068        2700

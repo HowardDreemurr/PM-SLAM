@@ -1,0 +1,156 @@
+Registering ORBextractor...
+Registering AKAZEextractor...
+Registering BRISKextractor...
+Registering SIFTextractor...
+Registering KAZEextractor...
+Registering SuperPointExtractor...
+Loading images...
+Loaded 2700 images.
+Creating SLAM system...
+
+ORB-SLAM2 Copyright (C) 2014-2016 Raul Mur-Artal, University of Zaragoza.
+This program comes with ABSOLUTELY NO WARRANTY;
+This is free software, and you are welcome to redistribute it
+under certain conditions. See LICENSE.txt.
+
+Input sensor was set to: Monocular
+
+Loading Vocabulary : /home/howard/Refactored_ORB_SLAM2/Install/var/lib/orbslam2/voc/sift_cv.fbow
+This could take a while...
+Loading SIFT Vocabulary in FBoW.
+SIFT Vocabulary loaded in 0.016601s
+
+
+Loading Vocabulary : /home/howard/Refactored_ORB_SLAM2/Install/var/lib/orbslam2/voc/superpoint.fbow
+This could take a while...
+Loading SuperPoint Vocabulary in FBoW.
+SuperPoint Vocabulary loaded in 0.009263s
+
+
+Camera Parameters: 
+- fx: 458.654
+- fy: 457.296
+- cx: 367.215
+- cy: 248.375
+- k1: -0.283408
+- k2: 0.0739591
+- p1: 0.00019359
+- p2: 1.76187e-05
+- fps: 20
+- color order: RGB (ignored if grayscale)
+
+[Feature 0] SIFT Extractor Parameters: 
+ ( TH_LOW: 300, TH_HIGH: 500 )
+- Number of Features  : 1000
+- Scale Levels        : 1
+- Scale Factor        : 1
+- Contrast Threshold  : 0.001
+- Edge Threshold      : 5
+- nOctaves            : 3
+- Sigma               : 1.6
+
+[Feature 1] SuperPoint Extractor Parameters: 
+ ( TH_LOW: 0.7, TH_HIGH: 0.9 )
+- Number of Features: 1000
+- Scale Levels: 4
+- Scale Factor: 1.2
+- Use CUDA: 1
+- Use NMS: 1
+- iniTh: 0.08
+- minTh: 0.04
+
+-------
+Start processing sequence ...
+Images in the sequence: 2700
+
+0
+New map created with 721 points for 0 Feature Type 
+New map created with 131 points for 1 Feature Type 
+Tracking Initlized in 42.41s
+The initlized frame ID: 54
+The lost frame ID: 1002
+The lost frame ID: 1003
+The lost frame ID: 1004
+The lost frame ID: 1005
+The lost frame ID: 1006
+The lost frame ID: 1007
+The lost frame ID: 1008
+The lost frame ID: 1009
+The lost frame ID: 1010
+The lost frame ID: 1011
+The lost frame ID: 1012
+The lost frame ID: 1013
+The lost frame ID: 1015
+The lost frame ID: 1016
+The lost frame ID: 1017
+The lost frame ID: 1018
+The lost frame ID: 1019
+The lost frame ID: 1020
+The lost frame ID: 1021
+The lost frame ID: 1022
+The lost frame ID: 1023
+The lost frame ID: 1024
+The lost frame ID: 1025
+The lost frame ID: 1026
+The lost frame ID: 1027
+The lost frame ID: 1028
+The lost frame ID: 1029
+The lost frame ID: 1030
+The lost frame ID: 1032
+The lost frame ID: 1033
+The lost frame ID: 1034
+The lost frame ID: 1035
+The lost frame ID: 1036
+The lost frame ID: 1037
+The lost frame ID: 1038
+The lost frame ID: 1039
+The lost frame ID: 1040
+The lost frame ID: 1041
+The lost frame ID: 1042
+The lost frame ID: 1043
+The lost frame ID: 1044
+The lost frame ID: 1045
+The lost frame ID: 1046
+The lost frame ID: 1047
+The lost frame ID: 1048
+The lost frame ID: 1049
+System::StopViewer()
+System::StopViewer() done
+Viewer thread finished.
+Viewer started, waiting for thread.
+Tracking thread joined...
+
+Saving correlation status...
+
+========== Global Summary ==========
+Frames: 2596
+avg_CorrEdges: 2.38136
+avg_match_A: 252.352
+avg_match_B: 100.845
+global_RI_MNR: 0.023614
+global_RI_GNR: 0.0149277
+global_RI_DICE: 0.0134846
+
+========== Per-Channel Summary ==========
+   chA   chB     avgCorr        avgA        avgB   avgRI_MNR   avgRI_GNR  avgRI_DICE
+     0     1     2.38136     252.352     100.845   0.0214975    0.014028   0.0127988
+
+Correlation status saved!
+
+-------
+
+median tracking time: 0.0963257
+mean tracking time: 0.098485
+
+Saving camera trajectory to Trajectory.txt ...
+
+trajectory saved!
+
+========== Performance Summary (ms) ==========
+name                                mean      median        rmse         min         max       count
+Tracking                          10.253      10.573       4.159       1.759      51.469        2645
+Correlation                        0.175       0.173       0.055       0.002       0.417        2599
+Total Init                      8735.666    8735.666       0.000    8735.666    8735.666           1
+Pipeline                          98.481      96.317      16.323      67.814     276.594        2700
+SuperPoint Extract                84.712      83.287      11.597      60.642     273.819        2700
+SIFT Extract                      31.100      31.129       4.282      20.646      57.954        2700

@@ -1,0 +1,121 @@
+Registering ORBextractor...
+Registering AKAZEextractor...
+Registering BRISKextractor...
+Registering SIFTextractor...
+Registering KAZEextractor...
+Registering SuperPointExtractor...
+Loading images...
+Loaded 2273 images.
+Creating SLAM system...
+
+ORB-SLAM2 Copyright (C) 2014-2016 Raul Mur-Artal, University of Zaragoza.
+This program comes with ABSOLUTELY NO WARRANTY;
+This is free software, and you are welcome to redistribute it
+under certain conditions. See LICENSE.txt.
+
+Input sensor was set to: Monocular
+
+Loading Vocabulary : /home/howard/Refactored_ORB_SLAM2/Install/var/lib/orbslam2/voc/kaze_cv.fbow
+This could take a while...
+Loading KAZE Vocabulary in FBoW.
+KAZE Vocabulary loaded in 0.009032s
+
+
+Loading Vocabulary : /home/howard/Refactored_ORB_SLAM2/Install/var/lib/orbslam2/voc/superpoint.fbow
+This could take a while...
+Loading SuperPoint Vocabulary in FBoW.
+SuperPoint Vocabulary loaded in 0.008190s
+
+
+Camera Parameters: 
+- fx: 458.654
+- fy: 457.296
+- cx: 367.215
+- cy: 248.375
+- k1: -0.283408
+- k2: 0.0739591
+- p1: 0.00019359
+- p2: 1.76187e-05
+- fps: 20
+- color order: RGB (ignored if grayscale)
+
+[Feature 0] KAZE Extractor Parameters: 
+ ( TH_LOW: 0.5, TH_HIGH: 1 )
+- Number of Features : 1000
+- Scale Levels       : 4
+- Scale Factor       : 1.2
+- Threshold          : 0.0005
+- nOctaves           : 4
+- nOctaveLayers      : 4
+- Extended (128‑dim) : 0
+- Upright            : 0
+
+[Feature 1] SuperPoint Extractor Parameters: 
+ ( TH_LOW: 0.7, TH_HIGH: 0.9 )
+- Number of Features: 1000
+- Scale Levels: 4
+- Scale Factor: 1.2
+- Use CUDA: 1
+- Use NMS: 1
+- iniTh: 0.08
+- minTh: 0.04
+
+-------
+Start processing sequence ...
+Images in the sequence: 2273
+
+1
+New map created with 49 points for 0 Feature Type 
+New map created with 62 points for 1 Feature Type 
+Tracking Initlized in 124.71s
+The initlized frame ID: 100
+[LoopClosing] Sim3 choosed on channel 0
+Loop detected!
+Local Mapping STOP
+Local Mapping RELEASE
+Starting Global Bundle Adjustment
+Global Bundle Adjustment finished
+Updating map ...
+Local Mapping STOP
+Local Mapping RELEASE
+Map updated!
+System::StopViewer()
+System::StopViewer() done
+Viewer thread finished.
+Viewer started, waiting for thread.
+Tracking thread joined...
+
+Saving correlation status...
+
+========== Global Summary ==========
+Frames: 2172
+avg_CorrEdges: 6.48941
+avg_match_A: 202.485
+avg_match_B: 330.116
+global_RI_MNR: 0.0320489
+global_RI_GNR: 0.0251001
+global_RI_DICE: 0.0243688
+
+========== Per-Channel Summary ==========
+   chA   chB     avgCorr        avgA        avgB   avgRI_MNR   avgRI_GNR  avgRI_DICE
+     0     1     6.48941     202.485     330.116   0.0440203   0.0274212   0.0243409
+
+Correlation status saved!
+
+-------
+
+median tracking time: 0.136883
+mean tracking time: 0.139709
+
+Saving camera trajectory to Trajectory.txt ...
+
+trajectory saved!
+
+========== Performance Summary (ms) ==========
+name                                mean      median        rmse         min         max       count
+Tracking                          12.091      11.189       6.647       1.376      31.197        2172
+Correlation                        0.215       0.206       0.092       0.051       0.628        2172
+Total Init                     16173.129   16173.129       0.000   16173.129   16173.129           1
+Pipeline                         139.705     136.879      13.527     104.560     285.465        2273
+SuperPoint Extract                90.040      91.156      16.807      58.877     282.719        2273
+KAZE Extract                     120.964     120.522       8.351      86.053     203.600        2273

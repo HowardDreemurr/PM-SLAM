@@ -18,13 +18,13 @@ Input sensor was set to: Monocular
 Loading Vocabulary : /home/howard/Refactored_ORB_SLAM2/Install/var/lib/orbslam2/voc/sift_cv.fbow
 This could take a while...
 Loading SIFT Vocabulary in FBoW.
-SIFT Vocabulary loaded in 0.013787s
+SIFT Vocabulary loaded in 0.017766s
 
 
 Loading Vocabulary : /home/howard/Refactored_ORB_SLAM2/Install/var/lib/orbslam2/voc/superpoint.fbow
 This could take a while...
 Loading SuperPoint Vocabulary in FBoW.
-SuperPoint Vocabulary loaded in 0.008311s
+SuperPoint Vocabulary loaded in 0.009097s
 
 
 Camera Parameters: 
@@ -66,8 +66,101 @@ Images in the sequence: 3682
 0
 New map created with 532 points for 0 Feature Type 
 New map created with 127 points for 1 Feature Type 
-Tracking Initlized in 0.88s
+Tracking Initlized in 0.87s
 The initlized frame ID: 1
+The lost frame ID: 3589
+The lost frame ID: 3590
+The lost frame ID: 3591
+The lost frame ID: 3592
+The lost frame ID: 3593
+The lost frame ID: 3594
+The lost frame ID: 3595
+The lost frame ID: 3596
+The lost frame ID: 3597
+The lost frame ID: 3598
+The lost frame ID: 3599
+The lost frame ID: 3600
+The lost frame ID: 3601
+The lost frame ID: 3602
+The lost frame ID: 3603
+The lost frame ID: 3604
+The lost frame ID: 3605
+The lost frame ID: 3606
+The lost frame ID: 3607
+The lost frame ID: 3608
+The lost frame ID: 3609
+The lost frame ID: 3610
+The lost frame ID: 3611
+The lost frame ID: 3612
+The lost frame ID: 3613
+The lost frame ID: 3614
+The lost frame ID: 3615
+The lost frame ID: 3616
+The lost frame ID: 3617
+The lost frame ID: 3618
+The lost frame ID: 3619
+The lost frame ID: 3620
+The lost frame ID: 3621
+The lost frame ID: 3622
+The lost frame ID: 3623
+The lost frame ID: 3624
+The lost frame ID: 3625
+The lost frame ID: 3626
+The lost frame ID: 3627
+The lost frame ID: 3628
+The lost frame ID: 3629
+The lost frame ID: 3630
+The lost frame ID: 3631
+The lost frame ID: 3632
+The lost frame ID: 3633
+The lost frame ID: 3634
+The lost frame ID: 3635
+The lost frame ID: 3636
+The lost frame ID: 3637
+The lost frame ID: 3638
+The lost frame ID: 3639
+The lost frame ID: 3640
+The lost frame ID: 3641
+The lost frame ID: 3642
+The lost frame ID: 3643
+The lost frame ID: 3644
+The lost frame ID: 3645
+The lost frame ID: 3646
+The lost frame ID: 3647
+The lost frame ID: 3648
+The lost frame ID: 3649
+The lost frame ID: 3650
+The lost frame ID: 3651
+The lost frame ID: 3652
+The lost frame ID: 3653
+The lost frame ID: 3654
+The lost frame ID: 3655
+The lost frame ID: 3656
+The lost frame ID: 3657
+The lost frame ID: 3658
+The lost frame ID: 3659
+The lost frame ID: 3660
+The lost frame ID: 3661
+The lost frame ID: 3662
+The lost frame ID: 3663
+The lost frame ID: 3664
+The lost frame ID: 3665
+The lost frame ID: 3666
+The lost frame ID: 3667
+The lost frame ID: 3668
+The lost frame ID: 3669
+The lost frame ID: 3670
+The lost frame ID: 3671
+The lost frame ID: 3672
+The lost frame ID: 3673
+The lost frame ID: 3674
+The lost frame ID: 3675
+The lost frame ID: 3676
+The lost frame ID: 3677
+The lost frame ID: 3678
+The lost frame ID: 3679
+The lost frame ID: 3680
+The lost frame ID: 3681
 System::StopViewer()
 System::StopViewer() done
 Viewer thread finished.
@@ -77,34 +170,34 @@ Tracking thread joined...
 Saving correlation status...
 
 ========== Global Summary ==========
-Frames: 3679
-avg_CorrEdges: 2.12096
-avg_match_A: 266.97
-avg_match_B: 91.3207
-global_RI_MNR: 0.0232254
-global_RI_GNR: 0.0135836
-global_RI_DICE: 0.0118393
+Frames: 3586
+avg_CorrEdges: 2.20441
+avg_match_A: 254.707
+avg_match_B: 87.6294
+global_RI_MNR: 0.025156
+global_RI_GNR: 0.0147552
+global_RI_DICE: 0.0128786
 
 ========== Per-Channel Summary ==========
    chA   chB     avgCorr        avgA        avgB   avgRI_MNR   avgRI_GNR  avgRI_DICE
-     0     1     2.12096      266.97     91.3207   0.0230464   0.0134268   0.0116755
+     0     1     2.20441     254.707     87.6294   0.0238358   0.0140556   0.0122933
 
 Correlation status saved!
 
 -------
 
-median tracking time: 0.105095
-mean tracking time: 0.103402
+median tracking time: 0.0968645
+mean tracking time: 0.0960783
 
-Saving keyframe trajectory to KeyFrameTrajectory.txt ...
+Saving camera trajectory to Trajectory.txt ...
 
 trajectory saved!
 
 ========== Performance Summary (ms) ==========
 name                                mean      median        rmse         min         max       count
-Tracking                          11.396       9.622       5.391       1.962      26.045        3680
-Correlation                        0.186       0.184       0.040       0.004       0.502        3680
-Total Init                       208.959     208.959       0.000     208.959     208.959           1
-Pipeline                         103.398     105.090      16.464      70.704     293.709        3682
-SuperPoint Extract                89.778      91.710      11.741      61.348     289.798        3682
-SIFT Extract                      30.485      31.395       4.449      21.416      54.590        3682
+Tracking                          10.303       8.624       5.167       1.713      23.952        3680
+Correlation                        0.167       0.169       0.046       0.028       0.621        3586
+Total Init                       192.516     192.516       0.000     192.516     192.516           1
+Pipeline                          96.075      96.861      15.711      63.127     270.071        3682
+SuperPoint Extract                83.616      84.450      11.115      57.494     267.610        3682
+SIFT Extract                      28.017      28.929       4.005      20.053      45.827        3682

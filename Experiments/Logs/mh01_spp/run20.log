@@ -18,7 +18,7 @@ Input sensor was set to: Monocular
 Loading Vocabulary : /home/howard/Refactored_ORB_SLAM2/Install/var/lib/orbslam2/voc/superpoint.fbow
 This could take a while...
 Loading SuperPoint Vocabulary in FBoW.
-SuperPoint Vocabulary loaded in 0.009046s
+SuperPoint Vocabulary loaded in 0.008847s
 
 
 Camera Parameters: 
@@ -49,7 +49,7 @@ Images in the sequence: 3682
 
 0
 New map created with 243 points for 0 Feature Type 
-Tracking Initlized in 1.15s
+Tracking Initlized in 1.17s
 The initlized frame ID: 2
 System::StopViewer()
 System::StopViewer() done
@@ -63,17 +63,17 @@ Correlation status saved!
 
 -------
 
-median tracking time: 0.0854399
-mean tracking time: 0.0845265
+median tracking time: 0.100589
+mean tracking time: 0.0990829
 
-Saving keyframe trajectory to KeyFrameTrajectory.txt ...
+Saving camera trajectory to Trajectory.txt ...
 
 trajectory saved!
 
 ========== Performance Summary (ms) ==========
 name                                mean      median        rmse         min         max       count
-Tracking                           8.123       6.856       4.127       1.922      20.063        3679
-Correlation                        0.000       0.000       0.000       0.000       0.001        3679
-Total Init                       203.698     203.698       0.000     203.698     203.698           1
-Pipeline                          84.523      85.427      14.149      52.121     256.629        3682
-SuperPoint Extract                74.554      75.424      10.575      47.734     254.696        3682
+Tracking                           9.539       7.903       4.898       2.027      36.118        3679
+Correlation                        0.000       0.000       0.003       0.000       0.152        3679
+Total Init                       241.967     241.967       0.000     241.967     241.967           1
+Pipeline                          99.079     100.584      19.084      60.467     362.325        3682
+SuperPoint Extract                87.578      88.155      15.607      54.178     360.219        3682

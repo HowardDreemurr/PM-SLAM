@@ -18,13 +18,13 @@ Input sensor was set to: Monocular
 Loading Vocabulary : /home/howard/Refactored_ORB_SLAM2/Install/var/lib/orbslam2/voc/sift_cv.fbow
 This could take a while...
 Loading SIFT Vocabulary in FBoW.
-SIFT Vocabulary loaded in 0.013686s
+SIFT Vocabulary loaded in 0.019057s
 
 
 Loading Vocabulary : /home/howard/Refactored_ORB_SLAM2/Install/var/lib/orbslam2/voc/superpoint.fbow
 This could take a while...
 Loading SuperPoint Vocabulary in FBoW.
-SuperPoint Vocabulary loaded in 0.008265s
+SuperPoint Vocabulary loaded in 0.010381s
 
 
 Camera Parameters: 
@@ -66,7 +66,7 @@ Images in the sequence: 3682
 0
 New map created with 532 points for 0 Feature Type 
 New map created with 127 points for 1 Feature Type 
-Tracking Initlized in 0.87s
+Tracking Initlized in 0.90s
 The initlized frame ID: 1
 System::StopViewer()
 System::StopViewer() done
@@ -77,34 +77,34 @@ Tracking thread joined...
 Saving correlation status...
 
 ========== Global Summary ==========
-Frames: 3672
-avg_CorrEdges: 2.14107
-avg_match_A: 254.833
-avg_match_B: 84.4251
-global_RI_MNR: 0.0253606
-global_RI_GNR: 0.0145971
-global_RI_DICE: 0.0126221
+Frames: 3680
+avg_CorrEdges: 2.48152
+avg_match_A: 270.528
+avg_match_B: 97.5098
+global_RI_MNR: 0.025449
+global_RI_GNR: 0.0152788
+global_RI_DICE: 0.0134852
 
 ========== Per-Channel Summary ==========
    chA   chB     avgCorr        avgA        avgB   avgRI_MNR   avgRI_GNR  avgRI_DICE
-     0     1     2.14107     254.833     84.4251   0.0249573   0.0144095   0.0124806
+     0     1     2.48152     270.528     97.5098   0.0248116   0.0150884   0.0133845
 
 Correlation status saved!
 
 -------
 
-median tracking time: 0.103583
-mean tracking time: 0.102568
+median tracking time: 0.0984182
+mean tracking time: 0.0972871
 
-Saving keyframe trajectory to KeyFrameTrajectory.txt ...
+Saving camera trajectory to Trajectory.txt ...
 
 trajectory saved!
 
 ========== Performance Summary (ms) ==========
 name                                mean      median        rmse         min         max       count
-Tracking                          10.978       9.022       5.274       1.870      25.150        3680
-Correlation                        0.178       0.172       0.043       0.002       0.385        3680
-Total Init                       209.949     209.949       0.000     209.949     209.949           1
-Pipeline                         102.564     103.565      16.196      67.301     289.230        3682
-SuperPoint Extract                89.452      91.039      11.697      60.326     286.605        3682
-SIFT Extract                      30.812      31.859       4.391      21.322      55.622        3682
+Tracking                          10.374       8.634       5.015       1.712      23.394        3680
+Correlation                        0.176       0.172       0.040       0.043       0.395        3680
+Total Init                       200.603     200.603       0.000     200.603     200.603           1
+Pipeline                          97.284      98.399      15.778      64.503     275.212        3682
+SuperPoint Extract                84.728      85.885      11.179      57.291     272.635        3682
+SIFT Extract                      28.057      29.293       4.228      19.806      52.253        3682

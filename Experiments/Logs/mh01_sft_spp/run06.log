@@ -18,13 +18,13 @@ Input sensor was set to: Monocular
 Loading Vocabulary : /home/howard/Refactored_ORB_SLAM2/Install/var/lib/orbslam2/voc/sift_cv.fbow
 This could take a while...
 Loading SIFT Vocabulary in FBoW.
-SIFT Vocabulary loaded in 0.013514s
+SIFT Vocabulary loaded in 0.017088s
 
 
 Loading Vocabulary : /home/howard/Refactored_ORB_SLAM2/Install/var/lib/orbslam2/voc/superpoint.fbow
 This could take a while...
 Loading SuperPoint Vocabulary in FBoW.
-SuperPoint Vocabulary loaded in 0.008186s
+SuperPoint Vocabulary loaded in 0.008875s
 
 
 Camera Parameters: 
@@ -66,8 +66,9 @@ Images in the sequence: 3682
 0
 New map created with 532 points for 0 Feature Type 
 New map created with 127 points for 1 Feature Type 
-Tracking Initlized in 0.87s
+Tracking Initlized in 0.90s
 The initlized frame ID: 1
+The lost frame ID: 3666
 System::StopViewer()
 System::StopViewer() done
 Viewer thread finished.
@@ -77,34 +78,34 @@ Tracking thread joined...
 Saving correlation status...
 
 ========== Global Summary ==========
-Frames: 3680
-avg_CorrEdges: 2.03098
-avg_match_A: 255.658
-avg_match_B: 87.9228
-global_RI_MNR: 0.0230996
-global_RI_GNR: 0.0135464
-global_RI_DICE: 0.0118224
+Frames: 3678
+avg_CorrEdges: 2.04812
+avg_match_A: 245.558
+avg_match_B: 83.3608
+global_RI_MNR: 0.0245694
+global_RI_GNR: 0.0143152
+global_RI_DICE: 0.0124537
 
 ========== Per-Channel Summary ==========
    chA   chB     avgCorr        avgA        avgB   avgRI_MNR   avgRI_GNR  avgRI_DICE
-     0     1     2.03098     255.658     87.9228    0.022676   0.0133815   0.0117082
+     0     1     2.04812     245.558     83.3608   0.0239496   0.0138397   0.0119891
 
 Correlation status saved!
 
 -------
 
-median tracking time: 0.105895
-mean tracking time: 0.105205
+median tracking time: 0.104391
+mean tracking time: 0.10186
 
-Saving keyframe trajectory to KeyFrameTrajectory.txt ...
+Saving camera trajectory to Trajectory.txt ...
 
 trajectory saved!
 
 ========== Performance Summary (ms) ==========
 name                                mean      median        rmse         min         max       count
-Tracking                          11.263       9.421       5.325       1.983      29.373        3680
-Correlation                        0.180       0.181       0.044       0.060       0.456        3680
-Total Init                       207.466     207.466       0.000     207.466     207.466           1
-Pipeline                         105.202     105.890      17.863      69.821     284.482        3682
-SuperPoint Extract                91.470      93.013      12.588      61.475     281.804        3682
-SIFT Extract                      30.568      31.659       4.538      21.787      53.165        3682
+Tracking                          10.453       9.056       5.778       1.615      29.781        3680
+Correlation                        0.169       0.170       0.051       0.004       0.861        3679
+Total Init                       197.357     197.357       0.000     197.357     197.357           1
+Pipeline                         101.856     104.368      18.799      60.436     253.827        3682
+SuperPoint Extract                89.230      90.644      13.560      57.251     251.376        3682
+SIFT Extract                      29.410      30.103       4.255      19.316      52.745        3682

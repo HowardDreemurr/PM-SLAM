@@ -18,13 +18,13 @@ Input sensor was set to: Monocular
 Loading Vocabulary : /home/howard/Refactored_ORB_SLAM2/Install/var/lib/orbslam2/voc/sift_cv.fbow
 This could take a while...
 Loading SIFT Vocabulary in FBoW.
-SIFT Vocabulary loaded in 0.015237s
+SIFT Vocabulary loaded in 0.016796s
 
 
 Loading Vocabulary : /home/howard/Refactored_ORB_SLAM2/Install/var/lib/orbslam2/voc/superpoint.fbow
 This could take a while...
 Loading SuperPoint Vocabulary in FBoW.
-SuperPoint Vocabulary loaded in 0.009757s
+SuperPoint Vocabulary loaded in 0.008931s
 
 
 Camera Parameters: 
@@ -66,18 +66,8 @@ Images in the sequence: 3682
 0
 New map created with 532 points for 0 Feature Type 
 New map created with 127 points for 1 Feature Type 
-Tracking Initlized in 0.88s
+Tracking Initlized in 0.89s
 The initlized frame ID: 1
-[LoopClosing] Sim3 choosed on channel 0
-Loop detected!
-Local Mapping STOP
-Local Mapping RELEASE
-Starting Global Bundle Adjustment
-Global Bundle Adjustment finished
-Updating map ...
-Local Mapping STOP
-Local Mapping RELEASE
-Map updated!
 System::StopViewer()
 System::StopViewer() done
 Viewer thread finished.
@@ -87,34 +77,34 @@ Tracking thread joined...
 Saving correlation status...
 
 ========== Global Summary ==========
-Frames: 3664
-avg_CorrEdges: 1.77893
-avg_match_A: 242.421
-avg_match_B: 89.2022
-global_RI_MNR: 0.0199427
-global_RI_GNR: 0.0120972
-global_RI_DICE: 0.0107286
+Frames: 3680
+avg_CorrEdges: 1.70598
+avg_match_A: 226.605
+avg_match_B: 80.3152
+global_RI_MNR: 0.021241
+global_RI_GNR: 0.0126456
+global_RI_DICE: 0.0111167
 
 ========== Per-Channel Summary ==========
    chA   chB     avgCorr        avgA        avgB   avgRI_MNR   avgRI_GNR  avgRI_DICE
-     0     1     1.77893     242.421     89.2022   0.0184195   0.0111939   0.0099284
+     0     1     1.70598     226.605     80.3152   0.0230764   0.0135393   0.0118148
 
 Correlation status saved!
 
 -------
 
-median tracking time: 0.106762
-mean tracking time: 0.105616
+median tracking time: 0.0989085
+mean tracking time: 0.0979614
 
-Saving keyframe trajectory to KeyFrameTrajectory.txt ...
+Saving camera trajectory to Trajectory.txt ...
 
 trajectory saved!
 
 ========== Performance Summary (ms) ==========
 name                                mean      median        rmse         min         max       count
-Tracking                          10.855       9.527       4.906       1.888      26.468        3680
-Correlation                        0.174       0.167       0.046       0.003       0.466        3680
-Total Init                       203.992     203.992       0.000     203.992     203.992           1
-Pipeline                         105.613     106.755      18.052      69.594     411.011        3682
-SuperPoint Extract                92.361      94.073      12.802      62.137     293.688        3682
-SIFT Extract                      30.292      31.404       4.605      21.437      59.331        3682
+Tracking                          10.139       8.514       4.955       1.724      22.406        3680
+Correlation                        0.152       0.150       0.039       0.065       0.316        3680
+Total Init                       202.431     202.431       0.000     202.431     202.431           1
+Pipeline                          97.958      98.897      16.369      63.092     286.075        3682
+SuperPoint Extract                85.526      86.454      11.801      55.808     283.258        3682
+SIFT Extract                      28.213      29.415       3.982      19.833      49.681        3682

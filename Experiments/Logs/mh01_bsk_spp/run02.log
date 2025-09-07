@@ -18,13 +18,13 @@ Input sensor was set to: Monocular
 Loading Vocabulary : /home/howard/Refactored_ORB_SLAM2/Install/var/lib/orbslam2/voc/brisk_cv.fbow
 This could take a while...
 Loading BRISK Vocabulary in FBoW.
-BRISK Vocabulary loaded in 0.001608s
+BRISK Vocabulary loaded in 0.002719s
 
 
 Loading Vocabulary : /home/howard/Refactored_ORB_SLAM2/Install/var/lib/orbslam2/voc/superpoint.fbow
 This could take a while...
 Loading SuperPoint Vocabulary in FBoW.
-SuperPoint Vocabulary loaded in 0.007595s
+SuperPoint Vocabulary loaded in 0.008978s
 
 
 Camera Parameters: 
@@ -65,7 +65,7 @@ Images in the sequence: 3682
 0
 New map created with 416 points for 0 Feature Type 
 New map created with 285 points for 1 Feature Type 
-Tracking Initlized in 1.40s
+Tracking Initlized in 1.51s
 The initlized frame ID: 2
 System::StopViewer()
 System::StopViewer() done
@@ -77,33 +77,33 @@ Saving correlation status...
 
 ========== Global Summary ==========
 Frames: 3679
-avg_CorrEdges: 19.5529
-avg_match_A: 241.596
-avg_match_B: 350.283
-global_RI_MNR: 0.0809321
-global_RI_GNR: 0.0672134
-global_RI_DICE: 0.0660705
+avg_CorrEdges: 19.857
+avg_match_A: 245.499
+avg_match_B: 354.243
+global_RI_MNR: 0.0808845
+global_RI_GNR: 0.0673348
+global_RI_DICE: 0.0662187
 
 ========== Per-Channel Summary ==========
    chA   chB     avgCorr        avgA        avgB   avgRI_MNR   avgRI_GNR  avgRI_DICE
-     0     1     19.5529     241.596     350.283   0.0805987   0.0664727   0.0650457
+     0     1      19.857     245.499     354.243   0.0801817   0.0665079   0.0651426
 
 Correlation status saved!
 
 -------
 
-median tracking time: 0.105458
-mean tracking time: 0.105916
+median tracking time: 0.109878
+mean tracking time: 0.109655
 
-Saving keyframe trajectory to KeyFrameTrajectory.txt ...
+Saving camera trajectory to Trajectory.txt ...
 
 trajectory saved!
 
 ========== Performance Summary (ms) ==========
 name                                mean      median        rmse         min         max       count
-Tracking                          15.739      12.909       7.187       3.874      32.854        3679
-Correlation                        0.235       0.231       0.046       0.090       0.582        3679
-Total Init                       287.160     287.160       0.000     287.160     287.160           1
-Pipeline                         105.912     105.445      16.021      64.007     270.700        3682
-SuperPoint Extract                82.562      84.669      12.002      52.911     267.646        3682
-BRISK Extract                     77.117      77.194      16.518      19.582     136.579        3682
+Tracking                          16.539      13.838       7.608       3.890      35.047        3679
+Correlation                        0.248       0.243       0.049       0.100       0.737        3679
+Total Init                       290.586     290.586       0.000     290.586     290.586           1
+Pipeline                         109.651     109.871      16.289      66.419     268.877        3682
+SuperPoint Extract                86.412      87.446      11.923      56.087     266.228        3682
+BRISK Extract                     79.232      79.636      16.564      21.183     128.688        3682

@@ -18,13 +18,13 @@ Input sensor was set to: Monocular
 Loading Vocabulary : /home/howard/Refactored_ORB_SLAM2/Install/var/lib/orbslam2/voc/akaze_cv.fbow
 This could take a while...
 Loading AKAZE Vocabulary in FBoW.
-AKAZE Vocabulary loaded in 0.001649s
+AKAZE Vocabulary loaded in 0.002605s
 
 
 Loading Vocabulary : /home/howard/Refactored_ORB_SLAM2/Install/var/lib/orbslam2/voc/superpoint.fbow
 This could take a while...
 Loading SuperPoint Vocabulary in FBoW.
-SuperPoint Vocabulary loaded in 0.007448s
+SuperPoint Vocabulary loaded in 0.008616s
 
 
 Camera Parameters: 
@@ -65,9 +65,8 @@ Images in the sequence: 3682
 0
 New map created with 534 points for 0 Feature Type 
 New map created with 147 points for 1 Feature Type 
-Tracking Initlized in 1.68s
+Tracking Initlized in 1.76s
 The initlized frame ID: 2
-The lost frame ID: 3665
 System::StopViewer()
 System::StopViewer() done
 Viewer thread finished.
@@ -77,34 +76,34 @@ Tracking thread joined...
 Saving correlation status...
 
 ========== Global Summary ==========
-Frames: 3678
-avg_CorrEdges: 6.54105
-avg_match_A: 243.454
-avg_match_B: 348.367
-global_RI_MNR: 0.0268677
-global_RI_GNR: 0.0224606
-global_RI_DICE: 0.0221048
+Frames: 3679
+avg_CorrEdges: 6.42946
+avg_match_A: 244.229
+avg_match_B: 347.992
+global_RI_MNR: 0.0263256
+global_RI_GNR: 0.0220542
+global_RI_DICE: 0.0217131
 
 ========== Per-Channel Summary ==========
    chA   chB     avgCorr        avgA        avgB   avgRI_MNR   avgRI_GNR  avgRI_DICE
-     0     1     6.54105     243.454     348.367    0.028289   0.0226044   0.0219535
+     0     1     6.42946     244.229     347.992   0.0270955    0.021764   0.0211684
 
 Correlation status saved!
 
 -------
 
-median tracking time: 0.10059
-mean tracking time: 0.0998995
+median tracking time: 0.10635
+mean tracking time: 0.106126
 
-Saving keyframe trajectory to KeyFrameTrajectory.txt ...
+Saving camera trajectory to Trajectory.txt ...
 
 trajectory saved!
 
 ========== Performance Summary (ms) ==========
 name                                mean      median        rmse         min         max       count
-Tracking                          16.394      13.470       8.027       2.842      35.748        3679
-Total Init                       325.444     325.444       0.000     325.444     325.444           1
-Pipeline                          99.896     100.586      18.537      63.166     253.401        3682
-SuperPoint Extract                81.148      82.483      10.894      52.183     250.777        3682
-Correlation                        0.218       0.212       0.049       0.084       0.609        3678
-AKAZE Extract                     19.774      19.725       2.343      14.870      29.050        3682
+Tracking                          17.138      14.137       8.802       2.885      41.053        3679
+Total Init                       351.025     351.025       0.000     351.025     351.025           1
+Pipeline                         106.123     106.346      20.983      63.955     270.781        3682
+SuperPoint Extract                86.504      87.098      12.616      54.332     267.854        3682
+Correlation                        0.233       0.232       0.055       0.088       0.627        3679
+AKAZE Extract                     21.284      21.140       2.595      16.193      39.614        3682

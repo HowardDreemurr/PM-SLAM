@@ -18,7 +18,7 @@ Input sensor was set to: Monocular
 Loading Vocabulary : /home/howard/Refactored_ORB_SLAM2/Install/var/lib/orbslam2/voc/superpoint.fbow
 This could take a while...
 Loading SuperPoint Vocabulary in FBoW.
-SuperPoint Vocabulary loaded in 0.007692s
+SuperPoint Vocabulary loaded in 0.010492s
 
 
 Camera Parameters: 
@@ -49,9 +49,8 @@ Images in the sequence: 3682
 
 0
 New map created with 243 points for 0 Feature Type 
-Tracking Initlized in 1.17s
+Tracking Initlized in 1.19s
 The initlized frame ID: 2
-The lost frame ID: 3665
 System::StopViewer()
 System::StopViewer() done
 Viewer thread finished.
@@ -64,17 +63,17 @@ Correlation status saved!
 
 -------
 
-median tracking time: 0.0871287
-mean tracking time: 0.0858882
+median tracking time: 0.100089
+mean tracking time: 0.0986199
 
-Saving keyframe trajectory to KeyFrameTrajectory.txt ...
+Saving camera trajectory to Trajectory.txt ...
 
 trajectory saved!
 
 ========== Performance Summary (ms) ==========
 name                                mean      median        rmse         min         max       count
-Tracking                           8.459       6.923       4.384       1.864      20.938        3679
-Correlation                        0.000       0.000       0.000       0.000       0.001        3678
-Total Init                       221.945     221.945       0.000     221.945     221.945           1
-Pipeline                          85.885      87.122      14.639      53.957     255.587        3682
-SuperPoint Extract                75.543      76.955      10.886      49.026     253.756        3682
+Tracking                           9.662       7.895       4.995       2.045      22.471        3679
+Correlation                        0.000       0.000       0.000       0.000       0.001        3679
+Total Init                       248.053     248.053       0.000     248.053     248.053           1
+Pipeline                          98.617     100.081      16.871      59.548     289.129        3682
+SuperPoint Extract                86.786      88.792      12.395      54.900     286.109        3682
