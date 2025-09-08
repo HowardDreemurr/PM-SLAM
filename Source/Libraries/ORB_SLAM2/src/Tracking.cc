@@ -44,6 +44,10 @@
 #include <mutex>
 #include <thread>
 
+#include <unistd.h>
+#include <sstream>
+#include <iomanip>
+
 using namespace ::std;
 
 namespace {
@@ -57,6 +61,7 @@ namespace {
 
   static int  s_lost_streak = 0;
   static bool s_first_loss_dumped = false;
+  static int  s_seg_counter = 0;  // segment index per process
 }
 
 namespace ORB_SLAM2 {
@@ -623,10 +628,19 @@ void Tracking::Track() {
       }
 
       if (s_lost_streak >= 10) {
-        if (!s_first_loss_dumped) {
-          mpSystem->SaveTrajectoryTUM("TrajectoryBeforeReset.txt");
-          s_first_loss_dumped = true;
-        }
+        // Save trajectory segment before reset with a unique filename
+        const char* tag = ::getenv("RUN_TAG");
+        if (!tag) tag = "untagged";
+        ++s_seg_counter;
+        std::ostringstream oss;
+        auto now = std::chrono::system_clock::now();
+        auto ms  = std::chrono::duration_cast<std::chrono::milliseconds>(now.time_since_epoch()).count();
+        oss << "TrajectoryBeforeReset_" << tag
+            << "_seg" << std::setw(2) << std::setfill('0') << s_seg_counter
+            << "_pid" << ::getpid()
+            << "_" << ms << ".txt";
+        mpSystem->SaveTrajectoryTUM(oss.str());
+        std::cout << "[Tracking] wrote pre-reset trajectory to " << oss.str() << std::endl;
         cout << "[Tracking] LOST for " << s_lost_streak << " consecutive frames -> reset" << endl;
         mpSystem->Reset();
         ORB_SLAM2::Perf::record("Lost Count", 1.0);

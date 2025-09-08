@@ -1,12 +1,3 @@
-numLines=21
->>> Experiments to run: 21 (withCorr=0, noEvo=1, start=1,skip=6)
-line=name=oxf_akz seq=~/dataset/tum/oxf_car yaml=../Install/etc/orbslam2/Monocular/TUM_OC.yaml runs=20 exe=../Install/bin features=[AKAZE]
-[INFO] YAML for oxf_akz: TUM_OC.yaml -> oxf_akz.yaml  [AKAZE]
-
-===== RUN: oxf_akz =====
-[bench] seq=/home/howard/dataset/tum/oxf_car  yaml=../../../../Experiments/oxf_akz.yaml  runs=20  exe_dir=../Install/bin  mode=tum times=
-[INFO] name=oxf_akz  seq=/home/howard/dataset/tum/oxf_car  runs=20  yaml=../../../../Experiments/oxf_akz.yaml  withCorr=1  mode=tum  times=
-[RUN 01/20] 2025-09-08 12:51:22
 Registering ORBextractor...
 Registering AKAZEextractor...
 Registering BRISKextractor...

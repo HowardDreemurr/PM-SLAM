@@ -133,6 +133,7 @@ for ((i=1;i<=RUNS;i++)); do
   num=$(printf "%0${PAD}d" "$i")
   RESULT_FILE="${RES_PREFIX}${num}.txt"
   LOG_FILE="${LOG_DIR_ABS}/run${num}.log"
+  export RUN_TAG="${NAME_BASE}_r${num}"
 
   echo "[RUN ${num}/${RUNS}] $(date '+%F %T')"
 
@@ -160,9 +161,9 @@ for ((i=1;i<=RUNS;i++)); do
     fi
   fi
 
-  if [[ -f "TrajectoryBeforeReset.txt" && ! -f "$RESULT_FILE" ]]; then
-      mv -f "TrajectoryBeforeReset.txt" "$RESULT_FILE"
-  fi
+#  if [[ -f "TrajectoryBeforeReset.txt" && ! -f "$RESULT_FILE" ]]; then
+#      mv -f "TrajectoryBeforeReset.txt" "$RESULT_FILE"
+#  fi
 
   if [[ -f "$RESULT_FILE" ]]; then
     mv -f "$RESULT_FILE" "${POSE_DIR_ABS}/"
@@ -179,6 +180,16 @@ for ((i=1;i<=RUNS;i++)); do
   fi
 
   popd >/dev/null
+
+  # --- Collect pre-reset segments (if any) ---
+  shopt -s nullglob
+  for segfile in "${EXE_DIR_ABS}/TrajectoryBeforeReset_${NAME_BASE}_r${num}_seg"*.txt; do
+    base=$(basename "$segfile")
+
+    if [[ "$base" =~ _seg([0-9]+) ]]; then seg="${BASH_REMATCH[1]}"; else seg="00"; fi
+    mv -f "$segfile" "${POSE_DIR_ABS}/result${num}_seg${seg}.txt"
+  done
+  shopt -u nullglob
 
   # Extract ONLY the Performance Summary block and append to TEMP summary
   if grep -q "^========== Performance Summary (ms) ==========$" "$LOG_FILE"; then
