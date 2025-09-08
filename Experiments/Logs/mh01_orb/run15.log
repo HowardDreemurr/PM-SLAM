@@ -1,0 +1,91 @@
+Registering ORBextractor...
+Registering AKAZEextractor...
+Registering BRISKextractor...
+Registering SIFTextractor...
+Registering KAZEextractor...
+Loading images...
+Loaded 3682 images.
+Creating SLAM system...
+
+ORB-SLAM2 Copyright (C) 2014-2016 Raul Mur-Artal, University of Zaragoza.
+This program comes with ABSOLUTELY NO WARRANTY;
+This is free software, and you are welcome to redistribute it
+under certain conditions. See LICENSE.txt.
+
+Input sensor was set to: Monocular
+
+Loading Vocabulary : /home/ucacsjj/Proj/UCL/Projects/PM-SLAM/Install/var/lib/orbslam2/voc/orb_mur.fbow
+This could take a while...
+Loading ORB Vocabulary in FBoW.
+ORB Vocabulary loaded in 0.022167s
+
+
+Camera Parameters: 
+- fx: 458.654
+- fy: 457.296
+- cx: 367.215
+- cy: 248.375
+- k1: -0.283408
+- k2: 0.0739591
+- p1: 0.00019359
+- p2: 1.76187e-05
+- fps: 20
+- color order: RGB (ignored if grayscale)
+
+[Feature 0] ORB Extractor Parameters: 
+ ( TH_LOW: 50, TH_HIGH: 100 )
+- Number of Features: 1000
+- Scale Levels: 8
+- Scale Factor: 1.2
+- Initial Fast Threshold: 20
+- Minimum Fast Threshold: 7
+
+-------
+Start processing sequence ...
+Images in the sequence: 3682
+
+Viewer started, waiting for thread.
+0
+New map created with 129 points for 0 Feature Type 
+Tracking Initlized in 0.67s
+The initlized frame ID: 6
+The lost frame ID: 3663
+The lost frame ID: 3664
+The lost frame ID: 3668
+The lost frame ID: 3669
+The lost frame ID: 3670
+The lost frame ID: 3671
+The lost frame ID: 3672
+The lost frame ID: 3673
+The lost frame ID: 3674
+The lost frame ID: 3675
+The lost frame ID: 3676
+The lost frame ID: 3677
+The lost frame ID: 3678
+The lost frame ID: 3679
+The lost frame ID: 3680
+The lost frame ID: 3681
+System::StopViewer()
+System::StopViewer() done
+Tracking thread joined...
+
+Saving correlation status...
+
+Correlation status saved!
+
+-------
+
+median tracking time: 0.0328231
+mean tracking time: 0.0351609
+
+Saving camera trajectory to Trajectory.txt ...
+
+trajectory saved!
+
+========== Performance Summary (ms) ==========
+name                                mean      median        rmse         min         max       count
+Tracking                          11.588      10.228       5.946       2.793      38.209        3675
+Correlation                        0.000       0.000       0.000       0.000       0.010        3658
+Total Init                       295.769     295.769       0.000     295.769     295.769           1
+Pipeline                          35.156      32.816      11.572      17.070     141.594        3682
+ORB Extract                       20.449      19.064       5.503      10.852      44.087        3682
