@@ -65,28 +65,38 @@ cv::Mat FrameDrawer::DrawFrame() {
     }
   } // destroy scoped mutex -> release mutex
 
+  if (im.empty())
+    im = cv::Mat(480, 640, CV_8UC3, cv::Scalar(0, 0, 0));
+
   if (im.channels() < 3) // this should be always true
     cvtColor(im, im, cv::COLOR_GRAY2BGR);
 
   // Draw
   if (state == Tracking::NOT_INITIALIZED) { // INITIALIZING
-    for (unsigned int i = 0; i < vMatches.size(); i++) {
-      if (vMatches[i] >= 0) {
-        cv::line(im, vIniKeys[i].pt, vCurrentKeys[vMatches[i]].pt, cv::Scalar(0, 255, 0));
+    const size_t Nmatch = vMatches.size();
+    const size_t Nini   = vIniKeys.size();
+    const size_t Ncur   = vCurrentKeys.size();
+    const size_t Nsafe  = std::min(Nmatch, Nini);
+    for (size_t i = 0; i < Nsafe; ++i) {
+      int mi = vMatches[i];
+      if (mi >= 0 && static_cast<size_t>(mi) < Ncur) {
+        cv::line(im, vIniKeys[i].pt, vCurrentKeys[mi].pt, cv::Scalar(0, 255, 0));
       }
     }
   } else if (state == Tracking::OK) { // TRACKING
     mnTracked = 0;
     mnTrackedVO = 0;
     const float r = 5;
-    const int n = vCurrentKeys.size();
+    int n = static_cast<int>(vCurrentKeys.size());
+    if (static_cast<int>(vbVO.size())  < n) n = static_cast<int>(vbVO.size());
+    if (static_cast<int>(vbMap.size()) < n) n = static_cast<int>(vbMap.size());
     for (int i = 0; i < n; i++) {
       if (vbVO[i] || vbMap[i]) {
-        cv::Point2f pt1, pt2;
-        pt1.x = vCurrentKeys[i].pt.x - r;
-        pt1.y = vCurrentKeys[i].pt.y - r;
-        pt2.x = vCurrentKeys[i].pt.x + r;
-        pt2.y = vCurrentKeys[i].pt.y + r;
+        const cv::Point2f &kp = vCurrentKeys[i].pt;
+        if (!std::isfinite(kp.x) || !std::isfinite(kp.y)) continue;
+
+        cv::Point2f pt1(kp.x - r, kp.y - r);
+        cv::Point2f pt2(kp.x + r, kp.y + r);
 
         // This is a match to a MapPoint in the map
         if (vbMap[i]) {

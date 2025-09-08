@@ -54,6 +54,9 @@ namespace {
   inline double ms_since(std::chrono::steady_clock::time_point t0) {
     return std::chrono::duration<double, std::milli>(std::chrono::steady_clock::now() - t0).count();
   }
+
+  static int  s_lost_streak = 0;
+  static bool s_first_loss_dumped = false;
 }
 
 namespace ORB_SLAM2 {
@@ -324,7 +327,7 @@ void Tracking::Track() {
     mState = NOT_INITIALIZED;
   }
 
-  if (mState == LOST) 
+  if (mState == LOST)
     cout << "The lost frame ID: " << mCurrentFrame.mnId << endl;
 
   mLastProcessedState = mState;
@@ -610,17 +613,29 @@ void Tracking::Track() {
       mLastPose = mCurrentFrame.mTcw.clone();
     }
 
-    // Reset if the camera get lost soon after initialization
     if (mState == LOST) {
+      ++s_lost_streak;
+
       if (mpMap->KeyFramesInMap() <= 5) {
         cout << "Track lost soon after initialisation, reseting..." << endl;
         mpSystem->Reset();
         return;
       }
-      // Uncomment this if reseting is needed on the fly
-      // cout << "Track lost, reseting..." << endl;
-      // mpSystem->Reset();
+
+      if (s_lost_streak >= 10) {
+        if (!s_first_loss_dumped) {
+          mpSystem->SaveTrajectoryTUM("TrajectoryBeforeReset.txt");
+          s_first_loss_dumped = true;
+        }
+        cout << "[Tracking] LOST for " << s_lost_streak << " consecutive frames -> reset" << endl;
+        mpSystem->Reset();
+        ORB_SLAM2::Perf::record("Lost Count", 1.0);
+        return;
+      }
+    } else {
+      s_lost_streak = 0;
     }
+
 
     if (!mCurrentFrame.mpReferenceKF)
       mCurrentFrame.mpReferenceKF = mpReferenceKF;
@@ -879,6 +894,10 @@ void Tracking::StereoInitialization(const int Ftype) {
 void Tracking::Reset() {
 
   cout << "System Reseting" << endl;
+
+  ORB_SLAM2::Perf::record("Reset Count", 1.0);
+  s_lost_streak = 0;
+
   if (mpViewer) {
     mpViewer->RequestStop();
     while (!mpViewer->isStopped())

@@ -160,6 +160,10 @@ for ((i=1;i<=RUNS;i++)); do
     fi
   fi
 
+  if [[ -f "TrajectoryBeforeReset.txt" && ! -f "$RESULT_FILE" ]]; then
+      mv -f "TrajectoryBeforeReset.txt" "$RESULT_FILE"
+  fi
+
   if [[ -f "$RESULT_FILE" ]]; then
     mv -f "$RESULT_FILE" "${POSE_DIR_ABS}/"
   fi
