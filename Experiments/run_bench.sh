@@ -135,6 +135,16 @@ for ((i=1;i<=RUNS;i++)); do
   LOG_FILE="${LOG_DIR_ABS}/run${num}.log"
   export RUN_TAG="${NAME_BASE}_r${num}"
 
+  # --- Resume: skip this run if result already exists and looks valid ---
+  RESUME="${RESUME:-1}"   # set RESUME=0 to disable
+  EXISTING="${POSE_DIR_ABS}/${RESULT_FILE}"
+  if [[ "$RESUME" -eq 1 && -s "$EXISTING" ]]; then
+    if [[ $(wc -l < "$EXISTING") -ge 10 ]]; then
+      echo "[RESUME] Skip run ${num}; found ${EXISTING}"
+      continue
+    fi
+  fi
+
   echo "[RUN ${num}/${RUNS}] $(date '+%F %T')"
 
   pushd "$EXE_DIR_ABS" >/dev/null
