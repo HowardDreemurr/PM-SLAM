@@ -1,0 +1,97 @@
+Registering ORBextractor...
+Registering AKAZEextractor...
+Registering BRISKextractor...
+Registering SIFTextractor...
+Registering KAZEextractor...
+Loading images...
+Loaded 3682 images.
+Creating SLAM system...
+
+ORB-SLAM2 Copyright (C) 2014-2016 Raul Mur-Artal, University of Zaragoza.
+This program comes with ABSOLUTELY NO WARRANTY;
+This is free software, and you are welcome to redistribute it
+under certain conditions. See LICENSE.txt.
+
+Input sensor was set to: Monocular
+
+Loading Vocabulary : /home/ucacsjj/Proj/UCL/Projects/PM-SLAM/Install/var/lib/orbslam2/voc/orb_mur.fbow
+This could take a while...
+Loading ORB Vocabulary in FBoW.
+ORB Vocabulary loaded in 0.076734s
+
+
+Camera Parameters: 
+- fx: 458.654
+- fy: 457.296
+- cx: 367.215
+- cy: 248.375
+- k1: -0.283408
+- k2: 0.0739591
+- p1: 0.00019359
+- p2: 1.76187e-05
+- fps: 20
+- color order: RGB (ignored if grayscale)
+
+[Feature 0] ORB Extractor Parameters: 
+ ( TH_LOW: 50, TH_HIGH: 100 )
+- Number of Features: 1000
+- Scale Levels: 8
+- Scale Factor: 1.2
+- Initial Fast Threshold: 20
+- Minimum Fast Threshold: 7
+
+-------
+Start processing sequence ...
+Images in the sequence: 3682
+
+Viewer started, waiting for thread.
+0
+New map created with 60 points for 0 Feature Type 
+Wrong initialization, reseting...
+System Reseting
+Reseting Local Mapper... done
+Reseting Loop Closing... done
+Reseting Database... done
+0
+New map created with 100 points for 0 Feature Type 
+Tracking Initlized in 2.46s
+The initlized frame ID: 20
+The lost frame ID: 3659
+The lost frame ID: 3661
+The lost frame ID: 3662
+The lost frame ID: 3663
+The lost frame ID: 3664
+The lost frame ID: 3665
+The lost frame ID: 3666
+The lost frame ID: 3667
+The lost frame ID: 3668
+The lost frame ID: 3669
+The lost frame ID: 3670
+The lost frame ID: 3671
+The lost frame ID: 3672
+The lost frame ID: 3673
+The lost frame ID: 3674
+System::StopViewer()
+System::StopViewer() done
+Tracking thread joined...
+
+Saving correlation status...
+
+Correlation status saved!
+
+-------
+
+median tracking time: 0.0336533
+mean tracking time: 0.0358583
+
+Saving camera trajectory to Trajectory.txt ...
+
+trajectory saved!
+
+========== Performance Summary (ms) ==========
+name                                mean      median        rmse         min         max       count
+Tracking                          11.762      10.543       5.857       1.986      38.975        3654
+Correlation                        0.000       0.000       0.000       0.000       0.009        3638
+Total Init                      1464.794    1464.794       0.000    1464.794    1464.794           2
+Pipeline                          35.853      33.648      11.426      16.912     131.959        3682
+ORB Extract                       20.887      19.350       5.811      10.418      56.291        3682
