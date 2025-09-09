@@ -87,7 +87,13 @@ mkdir -p "$PERF_DIR"
 PERF_DIR_ABS="$(cd "$PERF_DIR" && pwd)"
 SUMMARY_FILE="${PERF_DIR_ABS}/${NAME_BASE}_pref.txt"
 TMP_SUMMARY="${SUMMARY_FILE}.tmp"
-: > "$TMP_SUMMARY"
+if [[ -s "$TMP_SUMMARY" ]]; then
+  echo "[RESUME] Reusing existing tmp summary: $TMP_SUMMARY"
+elif [[ -s "$SUMMARY_FILE" ]]; then
+  cp -f "$SUMMARY_FILE" "$TMP_SUMMARY"
+else
+  : > "$TMP_SUMMARY"
+fi
 any_block=0
 
 # Correlation (only if requested)
@@ -267,7 +273,7 @@ done
 
 # ---------- Finalize ----------
 # Performance
-if [[ $any_block -eq 1 ]] && [[ -s "$TMP_SUMMARY" ]]; then
+if [[ -s "$TMP_SUMMARY" ]]; then
   mv -f "$TMP_SUMMARY" "$SUMMARY_FILE"
   echo "[DONE] Summary: ${SUMMARY_FILE}"
 else
