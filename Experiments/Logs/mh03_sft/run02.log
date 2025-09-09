@@ -1,0 +1,93 @@
+Registering ORBextractor...
+Registering AKAZEextractor...
+Registering BRISKextractor...
+Registering SIFTextractor...
+Registering KAZEextractor...
+Loading images...
+Loaded 2700 images.
+Creating SLAM system...
+
+ORB-SLAM2 Copyright (C) 2014-2016 Raul Mur-Artal, University of Zaragoza.
+This program comes with ABSOLUTELY NO WARRANTY;
+This is free software, and you are welcome to redistribute it
+under certain conditions. See LICENSE.txt.
+
+Input sensor was set to: Monocular
+
+Loading Vocabulary : /home/ucacsjj/Proj/UCL/Projects/PM-SLAM/Install/var/lib/orbslam2/voc/sift_cv.fbow
+This could take a while...
+Loading SIFT Vocabulary in FBoW.
+SIFT Vocabulary loaded in 0.027624s
+
+
+Camera Parameters: 
+- fx: 458.654
+- fy: 457.296
+- cx: 367.215
+- cy: 248.375
+- k1: -0.283408
+- k2: 0.0739591
+- p1: 0.00019359
+- p2: 1.76187e-05
+- fps: 20
+- color order: RGB (ignored if grayscale)
+
+[Feature 0] SIFT Extractor Parameters: 
+ ( TH_LOW: 300, TH_HIGH: 500 )
+- Number of Features  : 1000
+- Scale Levels        : 1
+- Scale Factor        : 1
+- Contrast Threshold  : 0.001
+- Edge Threshold      : 5
+- nOctaves            : 3
+- Sigma               : 1.6
+
+-------
+Start processing sequence ...
+Images in the sequence: 2700
+
+Viewer started, waiting for thread.
+0
+New map created with 663 points for 0 Feature Type 
+Tracking Initlized in 34.83s
+The initlized frame ID: 54
+The lost frame ID: 1389
+The lost frame ID: 1390
+The lost frame ID: 1391
+The lost frame ID: 1392
+The lost frame ID: 1393
+The lost frame ID: 1394
+The lost frame ID: 1395
+The lost frame ID: 1396
+The lost frame ID: 1397
+The lost frame ID: 1398
+The lost frame ID: 1399
+The lost frame ID: 1400
+The lost frame ID: 2024
+The lost frame ID: 2025
+The lost frame ID: 2026
+The lost frame ID: 2027
+System::StopViewer()
+System::StopViewer() done
+Tracking thread joined...
+
+Saving correlation status...
+
+Correlation status saved!
+
+-------
+
+median tracking time: 0.0917517
+mean tracking time: 0.0960398
+
+Saving camera trajectory to Trajectory.txt ...
+
+trajectory saved!
+
+========== Performance Summary (ms) ==========
+name                                mean      median        rmse         min         max       count
+Tracking                          16.639      16.283       7.681       2.510      78.070        2645
+Correlation                        0.000       0.000       0.000       0.000       0.008        2629
+Total Init                     16835.243   16835.243       0.000   16835.243   16835.243           1
+Pipeline                          96.035      91.748      37.472      48.392     357.503        2700
+SIFT Extract                      72.278      71.799      15.970      40.412     136.791        2700
