@@ -17,7 +17,7 @@ Input sensor was set to: Monocular
 Loading Vocabulary : /home/ucacsjj/Proj/UCL/Projects/PM-SLAM/Install/var/lib/orbslam2/voc/brisk_cv.fbow
 This could take a while...
 Loading BRISK Vocabulary in FBoW.
-BRISK Vocabulary loaded in 0.005108s
+BRISK Vocabulary loaded in 0.004844s
 
 
 Camera Parameters: 
@@ -55,8 +55,9 @@ Reseting Loop Closing... done
 Reseting Database... done
 0
 New map created with 323 points for 0 Feature Type 
-Tracking Initlized in 0.16s
+Tracking Initlized in 0.17s
 The initlized frame ID: 1
+The lost frame ID: 2169
 System::StopViewer()
 System::StopViewer() done
 Tracking thread joined...
@@ -67,8 +68,8 @@ Correlation status saved!
 
 -------
 
-median tracking time: 0.143587
-mean tracking time: 0.146739
+median tracking time: 0.143246
+mean tracking time: 0.1451
 
 Saving camera trajectory to Trajectory.txt ...
 
@@ -76,8 +77,8 @@ trajectory saved!
 
 ========== Performance Summary (ms) ==========
 name                                mean      median        rmse         min         max       count
-Tracking                          14.977      13.887       7.637       2.629      44.755        2187
-Correlation                        0.000       0.000       0.000       0.000       0.003        2187
-Total Init                     29772.969   29772.969       0.000   29772.969   29772.969           2
-Pipeline                         146.733     143.583      72.199      20.535     406.090        2273
-BRISK Extract                    122.056     128.965      56.043      13.432     294.599        2273
+Tracking                          13.242      12.436       5.850       2.854      36.606        2187
+Correlation                        0.000       0.000       0.000       0.000       0.008        2186
+Total Init                     29702.173   29702.173       0.000   29702.173   29702.173           2
+Pipeline                         145.094     143.238      71.260      20.853     386.904        2273
+BRISK Extract                    122.471     130.445      56.055      13.398     262.770        2273
