@@ -17,7 +17,13 @@ Input sensor was set to: Monocular
 Loading Vocabulary : /home/ucacsjj/Proj/UCL/Projects/PM-SLAM/Install/var/lib/orbslam2/voc/kaze_cv.fbow
 This could take a while...
 Loading KAZE Vocabulary in FBoW.
-KAZE Vocabulary loaded in 0.020685s
+KAZE Vocabulary loaded in 0.016426s
+
+
+Loading Vocabulary : /home/ucacsjj/Proj/UCL/Projects/PM-SLAM/Install/var/lib/orbslam2/voc/sift_cv.fbow
+This could take a while...
+Loading SIFT Vocabulary in FBoW.
+SIFT Vocabulary loaded in 0.030258s
 
 
 Camera Parameters: 
@@ -43,36 +49,18 @@ Camera Parameters:
 - Extended (128‑dim) : 0
 - Upright            : 0
 
+[Feature 1] SIFT Extractor Parameters: 
+ ( TH_LOW: 300, TH_HIGH: 500 )
+- Number of Features  : 1000
+- Scale Levels        : 1
+- Scale Factor        : 1
+- Contrast Threshold  : 0.001
+- Edge Threshold      : 5
+- nOctaves            : 3
+- Sigma               : 1.6
+
 -------
 Start processing sequence ...
 Images in the sequence: 2700
 
 Viewer started, waiting for thread.
-0
-New map created with 297 points for 0 Feature Type 
-Tracking Initlized in 107.11s
-The initlized frame ID: 56
-System::StopViewer()
-System::StopViewer() done
-Tracking thread joined...
-
-Saving correlation status...
-
-Correlation status saved!
-
--------
-
-median tracking time: 0.266666
-mean tracking time: 0.271893
-
-Saving camera trajectory to Trajectory.txt ...
-
-trajectory saved!
-
-========== Performance Summary (ms) ==========
-name                                mean      median        rmse         min         max       count
-Tracking                          18.047      18.699       6.983       2.836      48.784        2643
-Correlation                        0.000       0.000       0.000       0.000       0.013        2643
-Total Init                     24548.993   24548.993       0.000   24548.993   24548.993           1
-Pipeline                         271.888     266.654      38.055     192.481     518.752        2700
-KAZE Extract                     247.106     246.606      25.631     180.339     369.639        2700

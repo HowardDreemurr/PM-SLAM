@@ -17,13 +17,13 @@ Input sensor was set to: Monocular
 Loading Vocabulary : /home/ucacsjj/Proj/UCL/Projects/PM-SLAM/Install/var/lib/orbslam2/voc/orb_mur.fbow
 This could take a while...
 Loading ORB Vocabulary in FBoW.
-ORB Vocabulary loaded in 0.028178s
+ORB Vocabulary loaded in 0.023883s
 
 
 Loading Vocabulary : /home/ucacsjj/Proj/UCL/Projects/PM-SLAM/Install/var/lib/orbslam2/voc/brisk_cv.fbow
 This could take a while...
 Loading BRISK Vocabulary in FBoW.
-BRISK Vocabulary loaded in 0.004937s
+BRISK Vocabulary loaded in 0.004186s
 
 
 Camera Parameters: 
@@ -63,8 +63,18 @@ Viewer started, waiting for thread.
 0
 New map created with 90 points for 0 Feature Type 
 New map created with 378 points for 1 Feature Type 
-Tracking Initlized in 38.40s
+Tracking Initlized in 37.67s
 The initlized frame ID: 81
+[LoopClosing] Sim3 choosed on channel 1
+Loop detected!
+Local Mapping STOP
+Local Mapping RELEASE
+Starting Global Bundle Adjustment
+Global Bundle Adjustment finished
+Updating map ...
+Local Mapping STOP
+Local Mapping RELEASE
+Map updated!
 System::StopViewer()
 System::StopViewer() done
 Tracking thread joined...
@@ -73,23 +83,23 @@ Saving correlation status...
 
 ========== Global Summary ==========
 Frames: 2191
-avg_CorrEdges: 66.3546
-avg_match_A: 148.907
-avg_match_B: 187.721
-global_RI_MNR: 0.44561
-global_RI_GNR: 0.396878
-global_RI_DICE: 0.394231
+avg_CorrEdges: 65.2319
+avg_match_A: 147.862
+avg_match_B: 192.311
+global_RI_MNR: 0.441167
+global_RI_GNR: 0.386838
+global_RI_DICE: 0.383522
 
 ========== Per-Channel Summary ==========
    chA   chB     avgCorr        avgA        avgB   avgRI_MNR   avgRI_GNR  avgRI_DICE
-     0     1     66.3546     148.907     187.721    0.450109    0.386091    0.380403
+     0     1     65.2319     147.862     192.311    0.445643    0.379418     0.37349
 
 Correlation status saved!
 
 -------
 
-median tracking time: 0.149767
-mean tracking time: 0.155187
+median tracking time: 0.149254
+mean tracking time: 0.155275
 
 Saving camera trajectory to Trajectory.txt ...
 
@@ -97,9 +107,9 @@ trajectory saved!
 
 ========== Performance Summary (ms) ==========
 name                                mean      median        rmse         min         max       count
-Tracking                          22.201      19.740      11.385       3.289      61.746        2191
-Correlation                        0.533       0.476       0.328       0.083       8.804        2191
-Total Init                     30544.569   30544.569       0.000   30544.569   30544.569           1
-Pipeline                         155.180     149.762      72.391      30.156     424.609        2273
-BRISK Extract                    123.017     130.689      56.119      14.056     289.576        2273
-ORB Extract                       18.858      18.204       4.490       8.666      40.599        2273
+Tracking                          21.733      19.504      10.631       2.577      58.507        2191
+Correlation                        0.532       0.493       0.256       0.046       4.587        2191
+Total Init                     30468.787   30468.787       0.000   30468.787   30468.787           1
+Pipeline                         155.267     149.249      72.471      28.715     468.971        2273
+BRISK Extract                    123.184     129.811      55.766      14.580     264.823        2273
+ORB Extract                       18.792      18.291       4.202       9.115      39.476        2273
