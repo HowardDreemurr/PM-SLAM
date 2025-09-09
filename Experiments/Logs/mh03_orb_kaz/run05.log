@@ -17,13 +17,13 @@ Input sensor was set to: Monocular
 Loading Vocabulary : /home/ucacsjj/Proj/UCL/Projects/PM-SLAM/Install/var/lib/orbslam2/voc/orb_mur.fbow
 This could take a while...
 Loading ORB Vocabulary in FBoW.
-ORB Vocabulary loaded in 0.024342s
+ORB Vocabulary loaded in 0.019741s
 
 
 Loading Vocabulary : /home/ucacsjj/Proj/UCL/Projects/PM-SLAM/Install/var/lib/orbslam2/voc/kaze_cv.fbow
 This could take a while...
 Loading KAZE Vocabulary in FBoW.
-KAZE Vocabulary loaded in 0.015555s
+KAZE Vocabulary loaded in 0.013567s
 
 
 Camera Parameters: 
@@ -65,7 +65,7 @@ Viewer started, waiting for thread.
 0
 New map created with 167 points for 0 Feature Type 
 New map created with 902 points for 1 Feature Type 
-Tracking Initlized in 108.44s
+Tracking Initlized in 113.40s
 The initlized frame ID: 54
 System::StopViewer()
 System::StopViewer() done
@@ -75,23 +75,23 @@ Saving correlation status...
 
 ========== Global Summary ==========
 Frames: 2645
-avg_CorrEdges: 43.9327
-avg_match_A: 175.489
-avg_match_B: 322.999
-global_RI_MNR: 0.250344
-global_RI_GNR: 0.184528
-global_RI_DICE: 0.176264
+avg_CorrEdges: 42.1943
+avg_match_A: 175.521
+avg_match_B: 320.868
+global_RI_MNR: 0.240395
+global_RI_GNR: 0.177798
+global_RI_DICE: 0.170005
 
 ========== Per-Channel Summary ==========
    chA   chB     avgCorr        avgA        avgB   avgRI_MNR   avgRI_GNR  avgRI_DICE
-     0     1     43.9327     175.489     322.999    0.240694    0.178357    0.169797
+     0     1     42.1943     175.521     320.868    0.226512    0.168959    0.161211
 
 Correlation status saved!
 
 -------
 
-median tracking time: 0.285267
-mean tracking time: 0.29352
+median tracking time: 0.297003
+mean tracking time: 0.307166
 
 Saving camera trajectory to Trajectory.txt ...
 
@@ -99,9 +99,9 @@ trajectory saved!
 
 ========== Performance Summary (ms) ==========
 name                                mean      median        rmse         min         max       count
-Tracking                          30.625      32.115      10.519       7.899      63.277        2645
-Correlation                        0.590       0.536       0.243       0.104       2.667        2645
-Total Init                     27670.085   27670.085       0.000   27670.085   27670.085           1
-Pipeline                         293.514     285.185      45.788     202.370     594.854        2700
-KAZE Extract                     254.525     247.775      34.226     182.487     383.274        2700
-ORB Extract                       20.252      19.664       4.931      10.174      48.105        2700
+Tracking                          31.271      31.834      10.978       8.106      87.538        2645
+Correlation                        0.592       0.531       0.310       0.059       4.934        2645
+Total Init                     28151.306   28151.306       0.000   28151.306   28151.306           1
+Pipeline                         307.160     296.982      50.127     209.019     585.249        2700
+KAZE Extract                     266.490     256.951      42.946     179.206     415.380        2700
+ORB Extract                       20.728      20.027       5.354       9.621      50.903        2700
