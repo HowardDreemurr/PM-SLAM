@@ -17,13 +17,13 @@ Input sensor was set to: Monocular
 Loading Vocabulary : /home/ucacsjj/Proj/UCL/Projects/PM-SLAM/Install/var/lib/orbslam2/voc/orb_mur.fbow
 This could take a while...
 Loading ORB Vocabulary in FBoW.
-ORB Vocabulary loaded in 0.025293s
+ORB Vocabulary loaded in 0.024619s
 
 
 Loading Vocabulary : /home/ucacsjj/Proj/UCL/Projects/PM-SLAM/Install/var/lib/orbslam2/voc/akaze_cv.fbow
 This could take a while...
 Loading AKAZE Vocabulary in FBoW.
-AKAZE Vocabulary loaded in 0.007124s
+AKAZE Vocabulary loaded in 0.004623s
 
 
 Camera Parameters: 
@@ -60,11 +60,13 @@ Start processing sequence ...
 Images in the sequence: 2273
 
 Viewer started, waiting for thread.
-0
-New map created with 89 points for 0 Feature Type 
-New map created with 443 points for 1 Feature Type 
-Tracking Initlized in 44.68s
-The initlized frame ID: 81
+1
+New map created with 79 points for 0 Feature Type 
+New map created with 231 points for 1 Feature Type 
+Tracking Initlized in 50.91s
+The initlized frame ID: 99
+The lost frame ID: 2253
+The lost frame ID: 2254
 System::StopViewer()
 System::StopViewer() done
 Tracking thread joined...
@@ -72,24 +74,24 @@ Tracking thread joined...
 Saving correlation status...
 
 ========== Global Summary ==========
-Frames: 2191
-avg_CorrEdges: 20.2163
-avg_match_A: 146.044
-avg_match_B: 174.21
-global_RI_MNR: 0.138427
-global_RI_GNR: 0.126743
-global_RI_DICE: 0.126252
+Frames: 2170
+avg_CorrEdges: 21.1323
+avg_match_A: 157.741
+avg_match_B: 183.543
+global_RI_MNR: 0.133968
+global_RI_GNR: 0.124195
+global_RI_DICE: 0.12384
 
 ========== Per-Channel Summary ==========
    chA   chB     avgCorr        avgA        avgB   avgRI_MNR   avgRI_GNR  avgRI_DICE
-     0     1     20.2163     146.044      174.21    0.171214    0.128572    0.122339
+     0     1     21.1323     157.741     183.543    0.174616    0.131198    0.124839
 
 Correlation status saved!
 
 -------
 
-median tracking time: 0.0846292
-mean tracking time: 0.0894397
+median tracking time: 0.0873939
+mean tracking time: 0.0924799
 
 Saving camera trajectory to Trajectory.txt ...
 
@@ -97,9 +99,9 @@ trajectory saved!
 
 ========== Performance Summary (ms) ==========
 name                                mean      median        rmse         min         max       count
-Tracking                          17.891      16.312       7.218       5.331      48.373        2191
-Total Init                     13772.677   13772.677       0.000   13772.677   13772.677           1
-Pipeline                          89.433      84.620      19.905      58.468     201.909        2273
-Correlation                        0.442       0.413       0.231       0.055       4.751        2191
-AKAZE Extract                     65.480      64.977       6.989      47.034      92.358        2273
-ORB Extract                       19.025      18.550       4.557       8.766      44.290        2273
+Tracking                          20.290      17.498      10.099       5.211      63.808        2173
+Total Init                     16012.714   16012.714       0.000   16012.714   16012.714           1
+Pipeline                          92.473      87.388      21.118      59.884     209.296        2273
+Correlation                        0.465       0.426       0.228       0.005       4.537        2171
+AKAZE Extract                     65.688      65.139       7.094      47.228      91.472        2273
+ORB Extract                       18.857      18.292       4.264       9.357      37.870        2273
