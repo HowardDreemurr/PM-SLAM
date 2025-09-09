@@ -17,13 +17,13 @@ Input sensor was set to: Monocular
 Loading Vocabulary : /home/ucacsjj/Proj/UCL/Projects/PM-SLAM/Install/var/lib/orbslam2/voc/akaze_cv.fbow
 This could take a while...
 Loading AKAZE Vocabulary in FBoW.
-AKAZE Vocabulary loaded in 0.004476s
+AKAZE Vocabulary loaded in 0.005963s
 
 
 Loading Vocabulary : /home/ucacsjj/Proj/UCL/Projects/PM-SLAM/Install/var/lib/orbslam2/voc/brisk_cv.fbow
 This could take a while...
 Loading BRISK Vocabulary in FBoW.
-BRISK Vocabulary loaded in 0.005135s
+BRISK Vocabulary loaded in 0.010707s
 
 
 Camera Parameters: 
@@ -64,14 +64,39 @@ Viewer started, waiting for thread.
 1
 New map created with 223 points for 0 Feature Type 
 New map created with 107 points for 1 Feature Type 
-Tracking Initlized in 66.38s
+Tracking Initlized in 65.46s
 The initlized frame ID: 82
+The lost frame ID: 101
+The lost frame ID: 102
+The lost frame ID: 103
+The lost frame ID: 104
 The lost frame ID: 105
 The lost frame ID: 106
 The lost frame ID: 107
 The lost frame ID: 108
 The lost frame ID: 109
 The lost frame ID: 110
+The lost frame ID: 111
+The lost frame ID: 112
+The lost frame ID: 113
+The lost frame ID: 132
+The lost frame ID: 133
+The lost frame ID: 134
+The lost frame ID: 135
+The lost frame ID: 136
+The lost frame ID: 137
+The lost frame ID: 138
+The lost frame ID: 139
+The lost frame ID: 140
+The lost frame ID: 141
+The lost frame ID: 142
+The lost frame ID: 143
+The lost frame ID: 144
+The lost frame ID: 145
+The lost frame ID: 146
+The lost frame ID: 147
+The lost frame ID: 148
+The lost frame ID: 149
 [LoopClosing] Sim3 choosed on channel 0
 Loop detected!
 Local Mapping STOP
@@ -82,7 +107,6 @@ Updating map ...
 Local Mapping STOP
 Local Mapping RELEASE
 Map updated!
-The lost frame ID: 2253
 System::StopViewer()
 System::StopViewer() done
 Tracking thread joined...
@@ -90,24 +114,24 @@ Tracking thread joined...
 Saving correlation status...
 
 ========== Global Summary ==========
-Frames: 2182
-avg_CorrEdges: 19.9065
-avg_match_A: 147.515
-avg_match_B: 171.811
-global_RI_MNR: 0.134946
-global_RI_GNR: 0.125041
-global_RI_DICE: 0.124679
+Frames: 2159
+avg_CorrEdges: 20.0227
+avg_match_A: 153.279
+avg_match_B: 182.851
+global_RI_MNR: 0.130629
+global_RI_GNR: 0.1196
+global_RI_DICE: 0.119137
 
 ========== Per-Channel Summary ==========
    chA   chB     avgCorr        avgA        avgB   avgRI_MNR   avgRI_GNR  avgRI_DICE
-     0     1     19.9065     147.515     171.811    0.143611     0.11833    0.114649
+     0     1     20.0227     153.279     182.851    0.137401    0.111943    0.108352
 
 Correlation status saved!
 
 -------
 
-median tracking time: 0.152026
-mean tracking time: 0.161737
+median tracking time: 0.152435
+mean tracking time: 0.164844
 
 Saving camera trajectory to Trajectory.txt ...
 
@@ -115,9 +139,9 @@ trajectory saved!
 
 ========== Performance Summary (ms) ==========
 name                                mean      median        rmse         min         max       count
-Tracking                          20.319      17.594       8.935       4.019      58.263        2190
-Total Init                     35986.770   35986.770       0.000   35986.770   35986.770           1
-Pipeline                         161.731     152.021      74.459      56.184     478.994        2273
-BRISK Extract                    124.122     132.565      55.133      15.291     258.500        2273
-Correlation                        0.481       0.430       0.371       0.006       8.671        2183
-AKAZE Extract                     63.102      64.632      10.596      31.988     124.836        2273
+Tracking                          22.723      19.129      11.306       3.639      64.552        2190
+Total Init                     35560.736   35560.736       0.000   35560.736   35560.736           1
+Pipeline                         164.838     152.430      76.551      63.307     473.184        2273
+BRISK Extract                    123.992     131.700      55.214      12.224     261.194        2273
+Correlation                        0.500       0.456       0.327       0.049       6.416        2159
+AKAZE Extract                     62.203      63.221      10.040      31.783     100.599        2273
