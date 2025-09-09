@@ -1,0 +1,842 @@
+Registering ORBextractor...
+Registering AKAZEextractor...
+Registering BRISKextractor...
+Registering SIFTextractor...
+Registering KAZEextractor...
+Registering SuperPointExtractor...
+
+ORB-SLAM2 Copyright (C) 2014-2016 Raul Mur-Artal, University of Zaragoza.
+This program comes with ABSOLUTELY NO WARRANTY;
+This is free software, and you are welcome to redistribute it
+under certain conditions. See LICENSE.txt.
+
+Input sensor was set to: Monocular
+
+Loading Vocabulary : /home/howard/Refactored_ORB_SLAM2/Install/var/lib/orbslam2/voc/orb_mur.fbow
+This could take a while...
+Loading ORB Vocabulary in FBoW.
+ORB Vocabulary loaded in 0.044702s
+
+
+Loading Vocabulary : /home/howard/Refactored_ORB_SLAM2/Install/var/lib/orbslam2/voc/superpoint.fbow
+This could take a while...
+Loading SuperPoint Vocabulary in FBoW.
+SuperPoint Vocabulary loaded in 0.015334s
+
+
+Camera Parameters: 
+- fx: 983.044
+- fy: 983.044
+- cx: 643.647
+- cy: 493.379
+- k1: 0
+- k2: 0
+- p1: 0
+- p2: 0
+- fps: 16
+- color order: RGB (ignored if grayscale)
+
+[Feature 0] ORB Extractor Parameters: 
+ ( TH_LOW: 50, TH_HIGH: 100 )
+- Number of Features: 2000
+- Scale Levels: 8
+- Scale Factor: 1.2
+- Initial Fast Threshold: 20
+- Minimum Fast Threshold: 7
+
+[Feature 1] SuperPoint Extractor Parameters: 
+ ( TH_LOW: 0.3, TH_HIGH: 0.7 )
+- Number of Features: 2000
+- Scale Levels: 4
+- Scale Factor: 1.2
+- Use CUDA: 1
+- Use NMS: 1
+- iniTh: 0.08
+- minTh: 0.04
+
+-------
+Start processing sequence ...
+Images in the sequence: 7513
+
+0
+New map created with 113 points for 0 Feature Type 
+New map created with 311 points for 1 Feature Type 
+Tracking Initlized in 131.88s
+The initlized frame ID: 149
+The lost frame ID: 636
+The lost frame ID: 647
+The lost frame ID: 648
+The lost frame ID: 649
+The lost frame ID: 650
+The lost frame ID: 651
+The lost frame ID: 652
+The lost frame ID: 653
+The lost frame ID: 654
+The lost frame ID: 655
+
+Saving camera trajectory to TrajectoryBeforeReset_oxf_orb_spp_r14_seg01_pid3199729_1757416452767.txt ...
+
+trajectory saved!
+[Tracking] wrote pre-reset trajectory to TrajectoryBeforeReset_oxf_orb_spp_r14_seg01_pid3199729_1757416452767.txt
+[Tracking] LOST for 10 consecutive frames -> reset
+System Reseting
+Reseting Local Mapper... done
+Reseting Loop Closing... done
+Reseting Database... done
+1
+New map created with 73 points for 0 Feature Type 
+New map created with 277 points for 1 Feature Type 
+Tracking Initlized in 3.03s
+The initlized frame ID: 3
+The lost frame ID: 103
+The lost frame ID: 104
+The lost frame ID: 105
+The lost frame ID: 106
+The lost frame ID: 107
+The lost frame ID: 108
+The lost frame ID: 109
+The lost frame ID: 110
+The lost frame ID: 111
+
+Saving camera trajectory to TrajectoryBeforeReset_oxf_orb_spp_r14_seg02_pid3199729_1757416484863.txt ...
+
+trajectory saved!
+[Tracking] wrote pre-reset trajectory to TrajectoryBeforeReset_oxf_orb_spp_r14_seg02_pid3199729_1757416484863.txt
+[Tracking] LOST for 10 consecutive frames -> reset
+System Reseting
+Reseting Local Mapper... done
+Reseting Loop Closing... done
+Reseting Database... done
+1
+New map created with 115 points for 0 Feature Type 
+New map created with 483 points for 1 Feature Type 
+Tracking Initlized in 2.08s
+The initlized frame ID: 2
+The lost frame ID: 57
+The lost frame ID: 58
+The lost frame ID: 59
+The lost frame ID: 60
+The lost frame ID: 61
+The lost frame ID: 62
+The lost frame ID: 63
+The lost frame ID: 64
+The lost frame ID: 65
+
+Saving camera trajectory to TrajectoryBeforeReset_oxf_orb_spp_r14_seg03_pid3199729_1757416503712.txt ...
+
+trajectory saved!
+[Tracking] wrote pre-reset trajectory to TrajectoryBeforeReset_oxf_orb_spp_r14_seg03_pid3199729_1757416503712.txt
+[Tracking] LOST for 10 consecutive frames -> reset
+System Reseting
+Reseting Local Mapper... done
+Reseting Loop Closing... done
+Reseting Database... done
+1
+New map created with 105 points for 0 Feature Type 
+New map created with 370 points for 1 Feature Type 
+Tracking Initlized in 6.51s
+The initlized frame ID: 8
+The lost frame ID: 54
+The lost frame ID: 633
+The lost frame ID: 634
+The lost frame ID: 635
+The lost frame ID: 636
+The lost frame ID: 637
+The lost frame ID: 638
+The lost frame ID: 639
+The lost frame ID: 640
+The lost frame ID: 641
+
+Saving camera trajectory to TrajectoryBeforeReset_oxf_orb_spp_r14_seg04_pid3199729_1757416672290.txt ...
+
+trajectory saved!
+[Tracking] wrote pre-reset trajectory to TrajectoryBeforeReset_oxf_orb_spp_r14_seg04_pid3199729_1757416672290.txt
+[Tracking] LOST for 10 consecutive frames -> reset
+System Reseting
+Reseting Local Mapper... done
+Reseting Loop Closing... done
+Reseting Database... done
+1
+New map created with 43 points for 0 Feature Type 
+New map created with 149 points for 1 Feature Type 
+Tracking Initlized in 11.90s
+The initlized frame ID: 13
+The lost frame ID: 1284
+The lost frame ID: 1285
+The lost frame ID: 1286
+The lost frame ID: 1287
+The lost frame ID: 1288
+The lost frame ID: 1289
+The lost frame ID: 1290
+The lost frame ID: 1291
+The lost frame ID: 1292
+
+Saving camera trajectory to TrajectoryBeforeReset_oxf_orb_spp_r14_seg05_pid3199729_1757417010027.txt ...
+
+trajectory saved!
+[Tracking] wrote pre-reset trajectory to TrajectoryBeforeReset_oxf_orb_spp_r14_seg05_pid3199729_1757417010027.txt
+[Tracking] LOST for 10 consecutive frames -> reset
+System Reseting
+Reseting Local Mapper... done
+Reseting Loop Closing... done
+Reseting Database... done
+1
+New map created with 103 points for 0 Feature Type 
+New map created with 316 points for 1 Feature Type 
+Tracking Initlized in 0.97s
+The initlized frame ID: 1
+The lost frame ID: 27
+The lost frame ID: 28
+The lost frame ID: 29
+The lost frame ID: 30
+The lost frame ID: 31
+The lost frame ID: 32
+The lost frame ID: 33
+The lost frame ID: 34
+The lost frame ID: 35
+
+Saving camera trajectory to TrajectoryBeforeReset_oxf_orb_spp_r14_seg06_pid3199729_1757417020976.txt ...
+
+trajectory saved!
+[Tracking] wrote pre-reset trajectory to TrajectoryBeforeReset_oxf_orb_spp_r14_seg06_pid3199729_1757417020976.txt
+[Tracking] LOST for 10 consecutive frames -> reset
+System Reseting
+Reseting Local Mapper... done
+Reseting Loop Closing... done
+Reseting Database... done
+1
+New map created with 89 points for 0 Feature Type 
+New map created with 286 points for 1 Feature Type 
+Tracking Initlized in 0.87s
+The initlized frame ID: 1
+The lost frame ID: 20
+The lost frame ID: 21
+The lost frame ID: 22
+The lost frame ID: 23
+The lost frame ID: 24
+The lost frame ID: 25
+The lost frame ID: 26
+The lost frame ID: 27
+The lost frame ID: 28
+
+Saving camera trajectory to TrajectoryBeforeReset_oxf_orb_spp_r14_seg07_pid3199729_1757417029666.txt ...
+
+trajectory saved!
+[Tracking] wrote pre-reset trajectory to TrajectoryBeforeReset_oxf_orb_spp_r14_seg07_pid3199729_1757417029666.txt
+[Tracking] LOST for 10 consecutive frames -> reset
+System Reseting
+Reseting Local Mapper... done
+Reseting Loop Closing... done
+Reseting Database... done
+1
+New map created with 85 points for 0 Feature Type 
+New map created with 262 points for 1 Feature Type 
+Tracking Initlized in 1.02s
+The initlized frame ID: 1
+Track lost soon after initialisation, reseting...
+System Reseting
+Reseting Local Mapper... done
+Reseting Loop Closing... done
+Reseting Database... done
+1
+New map created with 91 points for 0 Feature Type 
+New map created with 285 points for 1 Feature Type 
+Tracking Initlized in 1.21s
+The initlized frame ID: 1
+The lost frame ID: 66
+The lost frame ID: 67
+The lost frame ID: 68
+The lost frame ID: 69
+The lost frame ID: 70
+The lost frame ID: 71
+The lost frame ID: 72
+The lost frame ID: 73
+The lost frame ID: 74
+
+Saving camera trajectory to TrajectoryBeforeReset_oxf_orb_spp_r14_seg08_pid3199729_1757417053680.txt ...
+
+trajectory saved!
+[Tracking] wrote pre-reset trajectory to TrajectoryBeforeReset_oxf_orb_spp_r14_seg08_pid3199729_1757417053680.txt
+[Tracking] LOST for 10 consecutive frames -> reset
+System Reseting
+Reseting Local Mapper... done
+Reseting Loop Closing... done
+Reseting Database... done
+1
+New map created with 37 points for 0 Feature Type 
+New map created with 179 points for 1 Feature Type 
+Tracking Initlized in 0.89s
+The initlized frame ID: 1
+Track lost soon after initialisation, reseting...
+System Reseting
+Reseting Local Mapper... done
+Reseting Loop Closing... done
+Reseting Database... done
+1
+New map created with 74 points for 0 Feature Type 
+New map created with 268 points for 1 Feature Type 
+Tracking Initlized in 0.93s
+The initlized frame ID: 1
+The lost frame ID: 28
+The lost frame ID: 29
+The lost frame ID: 30
+The lost frame ID: 31
+The lost frame ID: 32
+The lost frame ID: 33
+The lost frame ID: 34
+The lost frame ID: 35
+The lost frame ID: 36
+
+Saving camera trajectory to TrajectoryBeforeReset_oxf_orb_spp_r14_seg09_pid3199729_1757417067448.txt ...
+
+trajectory saved!
+[Tracking] wrote pre-reset trajectory to TrajectoryBeforeReset_oxf_orb_spp_r14_seg09_pid3199729_1757417067448.txt
+[Tracking] LOST for 10 consecutive frames -> reset
+System Reseting
+Reseting Local Mapper... done
+Reseting Loop Closing... done
+Reseting Database... done
+1
+New map created with 93 points for 0 Feature Type 
+New map created with 262 points for 1 Feature Type 
+Tracking Initlized in 1.35s
+The initlized frame ID: 1
+The lost frame ID: 43
+The lost frame ID: 44
+The lost frame ID: 45
+The lost frame ID: 46
+The lost frame ID: 47
+The lost frame ID: 48
+The lost frame ID: 49
+The lost frame ID: 50
+The lost frame ID: 51
+
+Saving camera trajectory to TrajectoryBeforeReset_oxf_orb_spp_r14_seg10_pid3199729_1757417083994.txt ...
+
+trajectory saved!
+[Tracking] wrote pre-reset trajectory to TrajectoryBeforeReset_oxf_orb_spp_r14_seg10_pid3199729_1757417083994.txt
+[Tracking] LOST for 10 consecutive frames -> reset
+System Reseting
+Reseting Local Mapper... done
+Reseting Loop Closing... done
+Reseting Database... done
+1
+New map created with 109 points for 0 Feature Type 
+New map created with 322 points for 1 Feature Type 
+Tracking Initlized in 0.92s
+The initlized frame ID: 1
+The lost frame ID: 41
+The lost frame ID: 42
+The lost frame ID: 43
+The lost frame ID: 44
+The lost frame ID: 45
+The lost frame ID: 46
+The lost frame ID: 47
+The lost frame ID: 48
+The lost frame ID: 49
+
+Saving camera trajectory to TrajectoryBeforeReset_oxf_orb_spp_r14_seg11_pid3199729_1757417101422.txt ...
+
+trajectory saved!
+[Tracking] wrote pre-reset trajectory to TrajectoryBeforeReset_oxf_orb_spp_r14_seg11_pid3199729_1757417101422.txt
+[Tracking] LOST for 10 consecutive frames -> reset
+System Reseting
+Reseting Local Mapper... done
+Reseting Loop Closing... done
+Reseting Database... done
+0
+New map created with 123 points for 0 Feature Type 
+New map created with 362 points for 1 Feature Type 
+Tracking Initlized in 0.99s
+The initlized frame ID: 1
+The lost frame ID: 38
+The lost frame ID: 39
+The lost frame ID: 40
+The lost frame ID: 41
+The lost frame ID: 42
+The lost frame ID: 43
+The lost frame ID: 44
+The lost frame ID: 45
+The lost frame ID: 46
+
+Saving camera trajectory to TrajectoryBeforeReset_oxf_orb_spp_r14_seg12_pid3199729_1757417117400.txt ...
+
+trajectory saved!
+[Tracking] wrote pre-reset trajectory to TrajectoryBeforeReset_oxf_orb_spp_r14_seg12_pid3199729_1757417117400.txt
+[Tracking] LOST for 10 consecutive frames -> reset
+System Reseting
+Reseting Local Mapper... done
+Reseting Loop Closing... done
+Reseting Database... done
+0
+New map created with 129 points for 0 Feature Type 
+New map created with 380 points for 1 Feature Type 
+Tracking Initlized in 1.09s
+The initlized frame ID: 1
+The lost frame ID: 32
+The lost frame ID: 36
+The lost frame ID: 37
+The lost frame ID: 38
+The lost frame ID: 39
+The lost frame ID: 40
+The lost frame ID: 41
+The lost frame ID: 42
+The lost frame ID: 43
+The lost frame ID: 44
+
+Saving camera trajectory to TrajectoryBeforeReset_oxf_orb_spp_r14_seg13_pid3199729_1757417133577.txt ...
+
+trajectory saved!
+[Tracking] wrote pre-reset trajectory to TrajectoryBeforeReset_oxf_orb_spp_r14_seg13_pid3199729_1757417133577.txt
+[Tracking] LOST for 10 consecutive frames -> reset
+System Reseting
+Reseting Local Mapper... done
+Reseting Loop Closing... done
+Reseting Database... done
+0
+New map created with 149 points for 0 Feature Type 
+New map created with 381 points for 1 Feature Type 
+Tracking Initlized in 0.98s
+The initlized frame ID: 1
+The lost frame ID: 35
+The lost frame ID: 36
+The lost frame ID: 37
+The lost frame ID: 38
+The lost frame ID: 39
+The lost frame ID: 40
+The lost frame ID: 41
+The lost frame ID: 42
+The lost frame ID: 43
+
+Saving camera trajectory to TrajectoryBeforeReset_oxf_orb_spp_r14_seg14_pid3199729_1757417147523.txt ...
+
+trajectory saved!
+[Tracking] wrote pre-reset trajectory to TrajectoryBeforeReset_oxf_orb_spp_r14_seg14_pid3199729_1757417147523.txt
+[Tracking] LOST for 10 consecutive frames -> reset
+System Reseting
+Reseting Local Mapper... done
+Reseting Loop Closing... done
+Reseting Database... done
+1
+New map created with 100 points for 0 Feature Type 
+New map created with 274 points for 1 Feature Type 
+Tracking Initlized in 1.38s
+The initlized frame ID: 1
+The lost frame ID: 67
+The lost frame ID: 68
+The lost frame ID: 69
+The lost frame ID: 70
+The lost frame ID: 71
+The lost frame ID: 72
+The lost frame ID: 73
+The lost frame ID: 74
+The lost frame ID: 75
+
+Saving camera trajectory to TrajectoryBeforeReset_oxf_orb_spp_r14_seg15_pid3199729_1757417172810.txt ...
+
+trajectory saved!
+[Tracking] wrote pre-reset trajectory to TrajectoryBeforeReset_oxf_orb_spp_r14_seg15_pid3199729_1757417172810.txt
+[Tracking] LOST for 10 consecutive frames -> reset
+System Reseting
+Reseting Local Mapper... done
+Reseting Loop Closing... done
+Reseting Database... done
+1
+New map created with 97 points for 0 Feature Type 
+New map created with 299 points for 1 Feature Type 
+Tracking Initlized in 2.37s
+The initlized frame ID: 2
+The lost frame ID: 59
+The lost frame ID: 60
+The lost frame ID: 61
+The lost frame ID: 62
+The lost frame ID: 63
+The lost frame ID: 64
+The lost frame ID: 65
+The lost frame ID: 66
+The lost frame ID: 67
+
+Saving camera trajectory to TrajectoryBeforeReset_oxf_orb_spp_r14_seg16_pid3199729_1757417194830.txt ...
+
+trajectory saved!
+[Tracking] wrote pre-reset trajectory to TrajectoryBeforeReset_oxf_orb_spp_r14_seg16_pid3199729_1757417194830.txt
+[Tracking] LOST for 10 consecutive frames -> reset
+System Reseting
+Reseting Local Mapper... done
+Reseting Loop Closing... done
+Reseting Database... done
+1
+New map created with 93 points for 0 Feature Type 
+New map created with 258 points for 1 Feature Type 
+Tracking Initlized in 1.15s
+The initlized frame ID: 1
+The lost frame ID: 56
+The lost frame ID: 57
+The lost frame ID: 58
+The lost frame ID: 59
+The lost frame ID: 60
+The lost frame ID: 61
+The lost frame ID: 62
+The lost frame ID: 63
+The lost frame ID: 64
+
+Saving camera trajectory to TrajectoryBeforeReset_oxf_orb_spp_r14_seg17_pid3199729_1757417217032.txt ...
+
+trajectory saved!
+[Tracking] wrote pre-reset trajectory to TrajectoryBeforeReset_oxf_orb_spp_r14_seg17_pid3199729_1757417217032.txt
+[Tracking] LOST for 10 consecutive frames -> reset
+System Reseting
+Reseting Local Mapper... done
+Reseting Loop Closing... done
+Reseting Database... done
+1
+New map created with 125 points for 0 Feature Type 
+New map created with 337 points for 1 Feature Type 
+Tracking Initlized in 1.08s
+The initlized frame ID: 1
+The lost frame ID: 39
+The lost frame ID: 40
+The lost frame ID: 41
+The lost frame ID: 42
+The lost frame ID: 43
+The lost frame ID: 44
+The lost frame ID: 45
+The lost frame ID: 46
+The lost frame ID: 47
+
+Saving camera trajectory to TrajectoryBeforeReset_oxf_orb_spp_r14_seg18_pid3199729_1757417233997.txt ...
+
+trajectory saved!
+[Tracking] wrote pre-reset trajectory to TrajectoryBeforeReset_oxf_orb_spp_r14_seg18_pid3199729_1757417233997.txt
+[Tracking] LOST for 10 consecutive frames -> reset
+System Reseting
+Reseting Local Mapper... done
+Reseting Loop Closing... done
+Reseting Database... done
+0
+New map created with 113 points for 0 Feature Type 
+New map created with 362 points for 1 Feature Type 
+Tracking Initlized in 1.14s
+The initlized frame ID: 1
+The lost frame ID: 29
+The lost frame ID: 30
+The lost frame ID: 31
+The lost frame ID: 32
+The lost frame ID: 33
+The lost frame ID: 34
+The lost frame ID: 35
+The lost frame ID: 36
+The lost frame ID: 37
+
+Saving camera trajectory to TrajectoryBeforeReset_oxf_orb_spp_r14_seg19_pid3199729_1757417244969.txt ...
+
+trajectory saved!
+[Tracking] wrote pre-reset trajectory to TrajectoryBeforeReset_oxf_orb_spp_r14_seg19_pid3199729_1757417244969.txt
+[Tracking] LOST for 10 consecutive frames -> reset
+System Reseting
+Reseting Local Mapper... done
+Reseting Loop Closing... done
+Reseting Database... done
+1
+New map created with 116 points for 0 Feature Type 
+New map created with 364 points for 1 Feature Type 
+Tracking Initlized in 1.68s
+The initlized frame ID: 2
+The lost frame ID: 41
+The lost frame ID: 42
+The lost frame ID: 43
+The lost frame ID: 44
+The lost frame ID: 45
+The lost frame ID: 46
+The lost frame ID: 47
+The lost frame ID: 48
+The lost frame ID: 49
+
+Saving camera trajectory to TrajectoryBeforeReset_oxf_orb_spp_r14_seg20_pid3199729_1757417261308.txt ...
+
+trajectory saved!
+[Tracking] wrote pre-reset trajectory to TrajectoryBeforeReset_oxf_orb_spp_r14_seg20_pid3199729_1757417261308.txt
+[Tracking] LOST for 10 consecutive frames -> reset
+System Reseting
+Reseting Local Mapper... done
+Reseting Loop Closing... done
+Reseting Database... done
+1
+New map created with 86 points for 0 Feature Type 
+New map created with 297 points for 1 Feature Type 
+Tracking Initlized in 1.19s
+The initlized frame ID: 1
+The lost frame ID: 9
+The lost frame ID: 10
+The lost frame ID: 11
+The lost frame ID: 12
+The lost frame ID: 13
+The lost frame ID: 14
+The lost frame ID: 15
+The lost frame ID: 16
+The lost frame ID: 17
+
+Saving camera trajectory to TrajectoryBeforeReset_oxf_orb_spp_r14_seg21_pid3199729_1757417266337.txt ...
+
+trajectory saved!
+[Tracking] wrote pre-reset trajectory to TrajectoryBeforeReset_oxf_orb_spp_r14_seg21_pid3199729_1757417266337.txt
+[Tracking] LOST for 10 consecutive frames -> reset
+System Reseting
+Reseting Local Mapper... done
+Reseting Loop Closing... done
+Reseting Database... done
+1
+New map created with 110 points for 0 Feature Type 
+New map created with 282 points for 1 Feature Type 
+Tracking Initlized in 3.77s
+The initlized frame ID: 4
+The lost frame ID: 50
+The lost frame ID: 62
+The lost frame ID: 63
+The lost frame ID: 64
+The lost frame ID: 65
+The lost frame ID: 66
+The lost frame ID: 67
+The lost frame ID: 70
+The lost frame ID: 71
+The lost frame ID: 72
+The lost frame ID: 73
+The lost frame ID: 74
+The lost frame ID: 75
+The lost frame ID: 76
+The lost frame ID: 77
+The lost frame ID: 78
+
+Saving camera trajectory to TrajectoryBeforeReset_oxf_orb_spp_r14_seg22_pid3199729_1757417289755.txt ...
+
+trajectory saved!
+[Tracking] wrote pre-reset trajectory to TrajectoryBeforeReset_oxf_orb_spp_r14_seg22_pid3199729_1757417289755.txt
+[Tracking] LOST for 10 consecutive frames -> reset
+System Reseting
+Reseting Local Mapper... done
+Reseting Loop Closing... done
+Reseting Database... done
+1
+New map created with 108 points for 0 Feature Type 
+New map created with 342 points for 1 Feature Type 
+Tracking Initlized in 0.92s
+The initlized frame ID: 1
+The lost frame ID: 65
+The lost frame ID: 66
+The lost frame ID: 1333
+The lost frame ID: 1334
+The lost frame ID: 1335
+The lost frame ID: 1336
+The lost frame ID: 1337
+The lost frame ID: 1338
+The lost frame ID: 1339
+The lost frame ID: 1340
+The lost frame ID: 1341
+
+Saving camera trajectory to TrajectoryBeforeReset_oxf_orb_spp_r14_seg23_pid3199729_1757417646082.txt ...
+
+trajectory saved!
+[Tracking] wrote pre-reset trajectory to TrajectoryBeforeReset_oxf_orb_spp_r14_seg23_pid3199729_1757417646082.txt
+[Tracking] LOST for 10 consecutive frames -> reset
+System Reseting
+Reseting Local Mapper... done
+Reseting Loop Closing... done
+Reseting Database... done
+1
+New map created with 168 points for 0 Feature Type 
+New map created with 421 points for 1 Feature Type 
+Tracking Initlized in 1.35s
+The initlized frame ID: 1
+The lost frame ID: 39
+The lost frame ID: 40
+The lost frame ID: 41
+The lost frame ID: 42
+The lost frame ID: 43
+The lost frame ID: 44
+The lost frame ID: 45
+The lost frame ID: 46
+The lost frame ID: 47
+
+Saving camera trajectory to TrajectoryBeforeReset_oxf_orb_spp_r14_seg24_pid3199729_1757417660049.txt ...
+
+trajectory saved!
+[Tracking] wrote pre-reset trajectory to TrajectoryBeforeReset_oxf_orb_spp_r14_seg24_pid3199729_1757417660049.txt
+[Tracking] LOST for 10 consecutive frames -> reset
+System Reseting
+Reseting Local Mapper... done
+Reseting Loop Closing... done
+Reseting Database... done
+0
+New map created with 113 points for 0 Feature Type 
+New map created with 260 points for 1 Feature Type 
+Tracking Initlized in 0.88s
+The initlized frame ID: 1
+The lost frame ID: 46
+The lost frame ID: 47
+The lost frame ID: 48
+The lost frame ID: 49
+The lost frame ID: 50
+The lost frame ID: 51
+The lost frame ID: 52
+The lost frame ID: 53
+The lost frame ID: 54
+
+Saving camera trajectory to TrajectoryBeforeReset_oxf_orb_spp_r14_seg25_pid3199729_1757417676396.txt ...
+
+trajectory saved!
+[Tracking] wrote pre-reset trajectory to TrajectoryBeforeReset_oxf_orb_spp_r14_seg25_pid3199729_1757417676396.txt
+[Tracking] LOST for 10 consecutive frames -> reset
+System Reseting
+Reseting Local Mapper... done
+Reseting Loop Closing... done
+Reseting Database... done
+0
+New map created with 152 points for 0 Feature Type 
+New map created with 362 points for 1 Feature Type 
+Tracking Initlized in 1.11s
+The initlized frame ID: 1
+The lost frame ID: 62
+The lost frame ID: 63
+The lost frame ID: 64
+The lost frame ID: 65
+The lost frame ID: 66
+The lost frame ID: 67
+The lost frame ID: 68
+The lost frame ID: 69
+The lost frame ID: 70
+
+Saving camera trajectory to TrajectoryBeforeReset_oxf_orb_spp_r14_seg26_pid3199729_1757417698164.txt ...
+
+trajectory saved!
+[Tracking] wrote pre-reset trajectory to TrajectoryBeforeReset_oxf_orb_spp_r14_seg26_pid3199729_1757417698164.txt
+[Tracking] LOST for 10 consecutive frames -> reset
+System Reseting
+Reseting Local Mapper... done
+Reseting Loop Closing... done
+Reseting Database... done
+0
+New map created with 185 points for 0 Feature Type 
+New map created with 462 points for 1 Feature Type 
+Tracking Initlized in 0.88s
+The initlized frame ID: 1
+The lost frame ID: 45
+The lost frame ID: 46
+The lost frame ID: 47
+The lost frame ID: 48
+The lost frame ID: 49
+The lost frame ID: 50
+The lost frame ID: 51
+The lost frame ID: 52
+The lost frame ID: 53
+
+Saving camera trajectory to TrajectoryBeforeReset_oxf_orb_spp_r14_seg27_pid3199729_1757417715057.txt ...
+
+trajectory saved!
+[Tracking] wrote pre-reset trajectory to TrajectoryBeforeReset_oxf_orb_spp_r14_seg27_pid3199729_1757417715057.txt
+[Tracking] LOST for 10 consecutive frames -> reset
+System Reseting
+Reseting Local Mapper... done
+Reseting Loop Closing... done
+Reseting Database... done
+1
+New map created with 132 points for 0 Feature Type 
+New map created with 356 points for 1 Feature Type 
+Tracking Initlized in 1.27s
+The initlized frame ID: 1
+The lost frame ID: 50
+The lost frame ID: 51
+The lost frame ID: 52
+The lost frame ID: 53
+The lost frame ID: 54
+The lost frame ID: 55
+The lost frame ID: 56
+The lost frame ID: 57
+The lost frame ID: 58
+
+Saving camera trajectory to TrajectoryBeforeReset_oxf_orb_spp_r14_seg28_pid3199729_1757417733672.txt ...
+
+trajectory saved!
+[Tracking] wrote pre-reset trajectory to TrajectoryBeforeReset_oxf_orb_spp_r14_seg28_pid3199729_1757417733672.txt
+[Tracking] LOST for 10 consecutive frames -> reset
+System Reseting
+Reseting Local Mapper... done
+Reseting Loop Closing... done
+Reseting Database... done
+1
+New map created with 158 points for 0 Feature Type 
+New map created with 392 points for 1 Feature Type 
+Tracking Initlized in 0.92s
+The initlized frame ID: 1
+The lost frame ID: 43
+The lost frame ID: 44
+The lost frame ID: 45
+The lost frame ID: 46
+The lost frame ID: 47
+The lost frame ID: 48
+The lost frame ID: 49
+The lost frame ID: 50
+The lost frame ID: 51
+
+Saving camera trajectory to TrajectoryBeforeReset_oxf_orb_spp_r14_seg29_pid3199729_1757417748779.txt ...
+
+trajectory saved!
+[Tracking] wrote pre-reset trajectory to TrajectoryBeforeReset_oxf_orb_spp_r14_seg29_pid3199729_1757417748779.txt
+[Tracking] LOST for 10 consecutive frames -> reset
+System Reseting
+Reseting Local Mapper... done
+Reseting Loop Closing... done
+Reseting Database... done
+0
+New map created with 158 points for 0 Feature Type 
+New map created with 472 points for 1 Feature Type 
+Tracking Initlized in 1.20s
+The initlized frame ID: 1
+The lost frame ID: 52
+The lost frame ID: 60
+The lost frame ID: 61
+The lost frame ID: 62
+The lost frame ID: 63
+The lost frame ID: 64
+The lost frame ID: 65
+The lost frame ID: 66
+The lost frame ID: 67
+The lost frame ID: 68
+
+Saving camera trajectory to TrajectoryBeforeReset_oxf_orb_spp_r14_seg30_pid3199729_1757417769692.txt ...
+
+trajectory saved!
+[Tracking] wrote pre-reset trajectory to TrajectoryBeforeReset_oxf_orb_spp_r14_seg30_pid3199729_1757417769692.txt
+[Tracking] LOST for 10 consecutive frames -> reset
+System Reseting
+Reseting Local Mapper... done
+Reseting Loop Closing... done
+Reseting Database... done
+1
+New map created with 150 points for 0 Feature Type 
+New map created with 370 points for 1 Feature Type 
+Tracking Initlized in 2.09s
+The initlized frame ID: 2
+The lost frame ID: 1836
+The lost frame ID: 1837
+The lost frame ID: 1838
+The lost frame ID: 1839
+The lost frame ID: 1840
+The lost frame ID: 1841
+The lost frame ID: 1842
+The lost frame ID: 1843
+The lost frame ID: 1844
+
+Saving camera trajectory to TrajectoryBeforeReset_oxf_orb_spp_r14_seg31_pid3199729_1757418271681.txt ...
+
+trajectory saved!
+[Tracking] wrote pre-reset trajectory to TrajectoryBeforeReset_oxf_orb_spp_r14_seg31_pid3199729_1757418271681.txt
+[Tracking] LOST for 10 consecutive frames -> reset
+System Reseting
+Reseting Local Mapper... done
+Reseting Loop Closing... done
+Reseting Database... done
+1
+New map created with 76 points for 0 Feature Type 
+New map created with 217 points for 1 Feature Type 
+Tracking Initlized in 7.08s
+The initlized frame ID: 8
