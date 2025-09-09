@@ -17,13 +17,13 @@ Input sensor was set to: Monocular
 Loading Vocabulary : /home/ucacsjj/Proj/UCL/Projects/PM-SLAM/Install/var/lib/orbslam2/voc/kaze_cv.fbow
 This could take a while...
 Loading KAZE Vocabulary in FBoW.
-KAZE Vocabulary loaded in 0.017934s
+KAZE Vocabulary loaded in 0.016343s
 
 
 Loading Vocabulary : /home/ucacsjj/Proj/UCL/Projects/PM-SLAM/Install/var/lib/orbslam2/voc/sift_cv.fbow
 This could take a while...
 Loading SIFT Vocabulary in FBoW.
-SIFT Vocabulary loaded in 0.046843s
+SIFT Vocabulary loaded in 0.031917s
 
 
 Camera Parameters: 
@@ -67,7 +67,7 @@ Viewer started, waiting for thread.
 1
 New map created with 346 points for 0 Feature Type 
 New map created with 690 points for 1 Feature Type 
-Tracking Initlized in 132.24s
+Tracking Initlized in 132.49s
 The initlized frame ID: 55
 System::StopViewer()
 System::StopViewer() done
@@ -77,23 +77,23 @@ Saving correlation status...
 
 ========== Global Summary ==========
 Frames: 2644
-avg_CorrEdges: 56.9187
-avg_match_A: 270.985
-avg_match_B: 231.807
-global_RI_MNR: 0.245544
-global_RI_GNR: 0.227101
-global_RI_DICE: 0.22641
+avg_CorrEdges: 58.6233
+avg_match_A: 279.853
+avg_match_B: 239.256
+global_RI_MNR: 0.245024
+global_RI_GNR: 0.226555
+global_RI_DICE: 0.225861
 
 ========== Per-Channel Summary ==========
    chA   chB     avgCorr        avgA        avgB   avgRI_MNR   avgRI_GNR  avgRI_DICE
-     0     1     56.9187     270.985     231.807    0.235048    0.211036    0.209044
+     0     1     58.6233     279.853     239.256    0.239739    0.214902     0.21294
 
 Correlation status saved!
 
 -------
 
-median tracking time: 0.351543
-mean tracking time: 0.350658
+median tracking time: 0.359082
+mean tracking time: 0.364936
 
 Saving camera trajectory to Trajectory.txt ...
 
@@ -101,9 +101,9 @@ trajectory saved!
 
 ========== Performance Summary (ms) ==========
 name                                mean      median        rmse         min         max       count
-Tracking                          35.440      37.230      13.267       5.629      72.285        2644
-Correlation                        0.729       0.672       0.348       0.087       4.326        2644
-Total Init                     36849.881   36849.881       0.000   36849.881   36849.881           1
-Pipeline                         350.652     351.522      67.691     217.928     751.734        2700
-KAZE Extract                     299.753     304.140      40.368     204.374     431.340        2700
-SIFT Extract                      72.876      62.341      29.713      41.491     226.434        2700
+Tracking                          35.615      36.580      13.307       4.367      81.310        2644
+Correlation                        0.732       0.666       0.338       0.108       3.706        2644
+Total Init                     36918.849   36918.849       0.000   36918.849   36918.849           1
+Pipeline                         364.930     359.037      59.106     249.839     757.679        2700
+KAZE Extract                     310.831     310.779      29.756     216.591     416.348        2700
+SIFT Extract                      64.272      60.986      14.160      42.532     222.147        2700

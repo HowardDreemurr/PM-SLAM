@@ -17,13 +17,13 @@ Input sensor was set to: Monocular
 Loading Vocabulary : /home/ucacsjj/Proj/UCL/Projects/PM-SLAM/Install/var/lib/orbslam2/voc/akaze_cv.fbow
 This could take a while...
 Loading AKAZE Vocabulary in FBoW.
-AKAZE Vocabulary loaded in 0.004573s
+AKAZE Vocabulary loaded in 0.007380s
 
 
 Loading Vocabulary : /home/ucacsjj/Proj/UCL/Projects/PM-SLAM/Install/var/lib/orbslam2/voc/brisk_cv.fbow
 This could take a while...
 Loading BRISK Vocabulary in FBoW.
-BRISK Vocabulary loaded in 0.004815s
+BRISK Vocabulary loaded in 0.004417s
 
 
 Camera Parameters: 
@@ -64,7 +64,7 @@ Viewer started, waiting for thread.
 1
 New map created with 223 points for 0 Feature Type 
 New map created with 107 points for 1 Feature Type 
-Tracking Initlized in 66.12s
+Tracking Initlized in 67.69s
 The initlized frame ID: 82
 The lost frame ID: 105
 The lost frame ID: 106
@@ -83,7 +83,9 @@ Updating map ...
 Local Mapping STOP
 Local Mapping RELEASE
 Map updated!
+The lost frame ID: 2248
 The lost frame ID: 2253
+The lost frame ID: 2254
 System::StopViewer()
 System::StopViewer() done
 Tracking thread joined...
@@ -91,24 +93,24 @@ Tracking thread joined...
 Saving correlation status...
 
 ========== Global Summary ==========
-Frames: 2182
-avg_CorrEdges: 21.7924
-avg_match_A: 144.724
-avg_match_B: 163.731
-global_RI_MNR: 0.150579
-global_RI_GNR: 0.141569
-global_RI_DICE: 0.1413
+Frames: 2180
+avg_CorrEdges: 18.2592
+avg_match_A: 137.385
+avg_match_B: 148.589
+global_RI_MNR: 0.132905
+global_RI_GNR: 0.127796
+global_RI_DICE: 0.127698
 
 ========== Per-Channel Summary ==========
    chA   chB     avgCorr        avgA        avgB   avgRI_MNR   avgRI_GNR  avgRI_DICE
-     0     1     21.7924     144.724     163.731    0.156523    0.130702    0.127294
+     0     1     18.2592     137.385     148.589    0.135801    0.115239    0.112603
 
 Correlation status saved!
 
 -------
 
-median tracking time: 0.150167
-mean tracking time: 0.15979
+median tracking time: 0.151699
+mean tracking time: 0.158868
 
 Saving camera trajectory to Trajectory.txt ...
 
@@ -116,9 +118,9 @@ trajectory saved!
 
 ========== Performance Summary (ms) ==========
 name                                mean      median        rmse         min         max       count
-Tracking                          18.654      16.362       8.307       3.454      51.785        2190
-Total Init                     35550.281   35550.281       0.000   35550.281   35550.281           1
-Pipeline                         159.784     150.164      74.028      53.219     485.879        2273
-BRISK Extract                    124.309     132.599      55.941      13.761     270.485        2273
-Correlation                        0.450       0.372       0.337       0.027       4.779        2182
-AKAZE Extract                     61.796      63.353      10.589      30.595      94.296        2273
+Tracking                          18.089      15.883       8.953       2.542      88.379        2190
+Total Init                     35841.561   35841.561       0.000   35841.561   35841.561           1
+Pipeline                         158.862     151.693      75.041      59.738     479.713        2273
+BRISK Extract                    124.043     130.836      55.956      13.631     255.464        2273
+Correlation                        0.423       0.380       0.284       0.030       3.763        2180
+AKAZE Extract                     65.132      64.862       7.397      43.765     117.085        2273
