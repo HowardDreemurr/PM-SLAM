@@ -67,3 +67,41 @@ New map created with 253 points for 0 Feature Type
 New map created with 690 points for 1 Feature Type 
 Tracking Initlized in 57.20s
 The initlized frame ID: 55
+System::StopViewer()
+System::StopViewer() done
+Tracking thread joined...
+
+Saving correlation status...
+
+========== Global Summary ==========
+Frames: 2644
+avg_CorrEdges: 35.2303
+avg_match_A: 204.745
+avg_match_B: 194.632
+global_RI_MNR: 0.18101
+global_RI_GNR: 0.176483
+global_RI_DICE: 0.176426
+
+========== Per-Channel Summary ==========
+   chA   chB     avgCorr        avgA        avgB   avgRI_MNR   avgRI_GNR  avgRI_DICE
+     0     1     35.2303     204.745     194.632    0.182077    0.164969    0.163815
+
+Correlation status saved!
+
+-------
+
+median tracking time: 0.186446
+mean tracking time: 0.202435
+
+Saving camera trajectory to Trajectory.txt ...
+
+trajectory saved!
+
+========== Performance Summary (ms) ==========
+name                                mean      median        rmse         min         max       count
+Tracking                          27.582      28.150       9.457       4.734      61.199        2644
+Correlation                        0.603       0.556       0.295       0.059       5.140        2644
+Total Init                     36670.628   36670.628       0.000   36670.628   36670.628           1
+Pipeline                         202.428     186.382      93.389      61.449     739.834        2700
+BRISK Extract                    162.989     152.365      65.831      35.854     314.667        2700
+SIFT Extract                      64.549      62.533      10.420      43.453     131.522        2700

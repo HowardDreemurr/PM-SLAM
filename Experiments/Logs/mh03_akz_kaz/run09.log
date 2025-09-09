@@ -17,13 +17,13 @@ Input sensor was set to: Monocular
 Loading Vocabulary : /home/ucacsjj/Proj/UCL/Projects/PM-SLAM/Install/var/lib/orbslam2/voc/akaze_cv.fbow
 This could take a while...
 Loading AKAZE Vocabulary in FBoW.
-AKAZE Vocabulary loaded in 0.003879s
+AKAZE Vocabulary loaded in 0.004439s
 
 
 Loading Vocabulary : /home/ucacsjj/Proj/UCL/Projects/PM-SLAM/Install/var/lib/orbslam2/voc/kaze_cv.fbow
 This could take a while...
 Loading KAZE Vocabulary in FBoW.
-KAZE Vocabulary loaded in 0.016853s
+KAZE Vocabulary loaded in 0.014344s
 
 
 Camera Parameters: 
@@ -66,43 +66,5 @@ Viewer started, waiting for thread.
 0
 New map created with 849 points for 0 Feature Type 
 New map created with 855 points for 1 Feature Type 
-Tracking Initlized in 135.83s
+Tracking Initlized in 134.28s
 The initlized frame ID: 55
-System::StopViewer()
-System::StopViewer() done
-Tracking thread joined...
-
-Saving correlation status...
-
-========== Global Summary ==========
-Frames: 2644
-avg_CorrEdges: 141.213
-avg_match_A: 208.034
-avg_match_B: 333.675
-global_RI_MNR: 0.678797
-global_RI_GNR: 0.535975
-global_RI_DICE: 0.52136
-
-========== Per-Channel Summary ==========
-   chA   chB     avgCorr        avgA        avgB   avgRI_MNR   avgRI_GNR  avgRI_DICE
-     0     1     141.213     208.034     333.675    0.677498    0.517323    0.496054
-
-Correlation status saved!
-
--------
-
-median tracking time: 0.287674
-mean tracking time: 0.297309
-
-Saving camera trajectory to Trajectory.txt ...
-
-trajectory saved!
-
-========== Performance Summary (ms) ==========
-name                                mean      median        rmse         min         max       count
-Tracking                          33.241      34.037      10.976       8.499      82.837        2644
-Total Init                     33952.455   33952.455       0.000   33952.455   33952.455           1
-Pipeline                         297.303     287.667      58.196     208.749     740.545        2700
-KAZE Extract                     252.861     247.302      30.840     189.290     390.572        2700
-Correlation                        0.749       0.685       0.387       0.122       5.696        2644
-AKAZE Extract                     52.830      50.556      11.360      30.498     124.516        2700
