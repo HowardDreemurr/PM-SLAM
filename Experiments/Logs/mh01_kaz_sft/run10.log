@@ -4,7 +4,7 @@ Registering BRISKextractor...
 Registering SIFTextractor...
 Registering KAZEextractor...
 Loading images...
-Loaded 2700 images.
+Loaded 3682 images.
 Creating SLAM system...
 
 ORB-SLAM2 Copyright (C) 2014-2016 Raul Mur-Artal, University of Zaragoza.
@@ -14,16 +14,16 @@ under certain conditions. See LICENSE.txt.
 
 Input sensor was set to: Monocular
 
-Loading Vocabulary : /home/ucacsjj/Proj/UCL/Projects/PM-SLAM/Install/var/lib/orbslam2/voc/brisk_cv.fbow
+Loading Vocabulary : /home/ucacsjj/Proj/UCL/Projects/PM-SLAM/Install/var/lib/orbslam2/voc/kaze_cv.fbow
 This could take a while...
-Loading BRISK Vocabulary in FBoW.
-BRISK Vocabulary loaded in 0.003694s
+Loading KAZE Vocabulary in FBoW.
+KAZE Vocabulary loaded in 0.014571s
 
 
 Loading Vocabulary : /home/ucacsjj/Proj/UCL/Projects/PM-SLAM/Install/var/lib/orbslam2/voc/sift_cv.fbow
 This could take a while...
 Loading SIFT Vocabulary in FBoW.
-SIFT Vocabulary loaded in 0.037258s
+SIFT Vocabulary loaded in 0.035407s
 
 
 Camera Parameters: 
@@ -38,14 +38,16 @@ Camera Parameters:
 - fps: 20
 - color order: RGB (ignored if grayscale)
 
-[Feature 0] BRISK Extractor Parameters: 
- ( TH_LOW: 100, TH_HIGH: 200 )
-- Number of Features: 1000
-- Scale Levels: 6
-- Scale Factor: 1.414
-- Threshold: 10
-- Num of Octaves: 3
-- Pattern Scale: 1
+[Feature 0] KAZE Extractor Parameters: 
+ ( TH_LOW: 0.5, TH_HIGH: 1 )
+- Number of Features : 1000
+- Scale Levels       : 4
+- Scale Factor       : 1.2
+- Threshold          : 0.0005
+- nOctaves           : 4
+- nOctaveLayers      : 4
+- Extended (128‑dim) : 0
+- Upright            : 0
 
 [Feature 1] SIFT Extractor Parameters: 
  ( TH_LOW: 300, TH_HIGH: 500 )
@@ -59,14 +61,14 @@ Camera Parameters:
 
 -------
 Start processing sequence ...
-Images in the sequence: 2700
+Images in the sequence: 3682
 
 Viewer started, waiting for thread.
-1
-New map created with 253 points for 0 Feature Type 
-New map created with 690 points for 1 Feature Type 
-Tracking Initlized in 58.58s
-The initlized frame ID: 55
+0
+New map created with 506 points for 0 Feature Type 
+New map created with 633 points for 1 Feature Type 
+Tracking Initlized in 2.44s
+The initlized frame ID: 1
 System::StopViewer()
 System::StopViewer() done
 Tracking thread joined...
@@ -74,24 +76,24 @@ Tracking thread joined...
 Saving correlation status...
 
 ========== Global Summary ==========
-Frames: 2644
-avg_CorrEdges: 36.8022
-avg_match_A: 211.049
-avg_match_B: 200.745
-global_RI_MNR: 0.183328
-global_RI_GNR: 0.178797
-global_RI_DICE: 0.178741
+Frames: 3680
+avg_CorrEdges: 69.0601
+avg_match_A: 302.209
+avg_match_B: 270.402
+global_RI_MNR: 0.255397
+global_RI_GNR: 0.241584
+global_RI_DICE: 0.241211
 
 ========== Per-Channel Summary ==========
    chA   chB     avgCorr        avgA        avgB   avgRI_MNR   avgRI_GNR  avgRI_DICE
-     0     1     36.8022     211.049     200.745     0.18368    0.166932    0.165847
+     0     1     69.0601     302.209     270.402    0.272332    0.240246    0.237384
 
 Correlation status saved!
 
 -------
 
-median tracking time: 0.184977
-mean tracking time: 0.199486
+median tracking time: 0.326886
+mean tracking time: 0.332779
 
 Saving camera trajectory to Trajectory.txt ...
 
@@ -99,9 +101,9 @@ trajectory saved!
 
 ========== Performance Summary (ms) ==========
 name                                mean      median        rmse         min         max       count
-Tracking                          28.029      27.461      10.147       4.237      66.784        2644
-Correlation                        0.570       0.491       0.332       0.055       4.865        2644
-Total Init                     35855.185   35855.185       0.000   35855.185   35855.185           1
-Pipeline                         199.480     184.954      91.698      54.757     739.496        2700
-BRISK Extract                    160.134     153.533      64.761      32.501     317.424        2700
-SIFT Extract                      60.892      59.623       9.982      41.633     114.278        2700
+Tracking                          39.609      34.910      18.585       8.591      97.077        3680
+Correlation                        0.769       0.673       0.340       0.226       3.282        3680
+Total Init                       599.404     599.404       0.000     599.404     599.404           1
+Pipeline                         332.773     326.860      47.263     236.285     694.098        3682
+KAZE Extract                     283.414     287.785      38.006     202.211     388.129        3682
+SIFT Extract                      72.707      63.748      25.528      42.247     206.185        3682

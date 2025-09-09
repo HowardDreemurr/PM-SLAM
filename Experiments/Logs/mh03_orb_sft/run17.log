@@ -14,16 +14,16 @@ under certain conditions. See LICENSE.txt.
 
 Input sensor was set to: Monocular
 
-Loading Vocabulary : /home/ucacsjj/Proj/UCL/Projects/PM-SLAM/Install/var/lib/orbslam2/voc/brisk_cv.fbow
+Loading Vocabulary : /home/ucacsjj/Proj/UCL/Projects/PM-SLAM/Install/var/lib/orbslam2/voc/orb_mur.fbow
 This could take a while...
-Loading BRISK Vocabulary in FBoW.
-BRISK Vocabulary loaded in 0.003694s
+Loading ORB Vocabulary in FBoW.
+ORB Vocabulary loaded in 0.024021s
 
 
 Loading Vocabulary : /home/ucacsjj/Proj/UCL/Projects/PM-SLAM/Install/var/lib/orbslam2/voc/sift_cv.fbow
 This could take a while...
 Loading SIFT Vocabulary in FBoW.
-SIFT Vocabulary loaded in 0.037258s
+SIFT Vocabulary loaded in 0.042185s
 
 
 Camera Parameters: 
@@ -38,14 +38,13 @@ Camera Parameters:
 - fps: 20
 - color order: RGB (ignored if grayscale)
 
-[Feature 0] BRISK Extractor Parameters: 
- ( TH_LOW: 100, TH_HIGH: 200 )
+[Feature 0] ORB Extractor Parameters: 
+ ( TH_LOW: 50, TH_HIGH: 100 )
 - Number of Features: 1000
-- Scale Levels: 6
-- Scale Factor: 1.414
-- Threshold: 10
-- Num of Octaves: 3
-- Pattern Scale: 1
+- Scale Levels: 8
+- Scale Factor: 1.2
+- Initial Fast Threshold: 20
+- Minimum Fast Threshold: 7
 
 [Feature 1] SIFT Extractor Parameters: 
  ( TH_LOW: 300, TH_HIGH: 500 )
@@ -62,11 +61,11 @@ Start processing sequence ...
 Images in the sequence: 2700
 
 Viewer started, waiting for thread.
-1
-New map created with 253 points for 0 Feature Type 
-New map created with 690 points for 1 Feature Type 
-Tracking Initlized in 58.58s
-The initlized frame ID: 55
+0
+New map created with 167 points for 0 Feature Type 
+New map created with 1140 points for 1 Feature Type 
+Tracking Initlized in 41.03s
+The initlized frame ID: 54
 System::StopViewer()
 System::StopViewer() done
 Tracking thread joined...
@@ -74,24 +73,24 @@ Tracking thread joined...
 Saving correlation status...
 
 ========== Global Summary ==========
-Frames: 2644
-avg_CorrEdges: 36.8022
-avg_match_A: 211.049
-avg_match_B: 200.745
-global_RI_MNR: 0.183328
-global_RI_GNR: 0.178797
-global_RI_DICE: 0.178741
+Frames: 2645
+avg_CorrEdges: 24.2423
+avg_match_A: 155.811
+avg_match_B: 193.064
+global_RI_MNR: 0.155589
+global_RI_GNR: 0.139774
+global_RI_DICE: 0.138975
 
 ========== Per-Channel Summary ==========
    chA   chB     avgCorr        avgA        avgB   avgRI_MNR   avgRI_GNR  avgRI_DICE
-     0     1     36.8022     211.049     200.745     0.18368    0.166932    0.165847
+     0     1     24.2423     155.811     193.064    0.156883    0.132958    0.130463
 
 Correlation status saved!
 
 -------
 
-median tracking time: 0.184977
-mean tracking time: 0.199486
+median tracking time: 0.0932976
+mean tracking time: 0.0994973
 
 Saving camera trajectory to Trajectory.txt ...
 
@@ -99,9 +98,9 @@ trajectory saved!
 
 ========== Performance Summary (ms) ==========
 name                                mean      median        rmse         min         max       count
-Tracking                          28.029      27.461      10.147       4.237      66.784        2644
-Correlation                        0.570       0.491       0.332       0.055       4.865        2644
-Total Init                     35855.185   35855.185       0.000   35855.185   35855.185           1
-Pipeline                         199.480     184.954      91.698      54.757     739.496        2700
-BRISK Extract                    160.134     153.533      64.761      32.501     317.424        2700
-SIFT Extract                      60.892      59.623       9.982      41.633     114.278        2700
+Tracking                          21.660      21.631       6.877       5.192      47.267        2645
+Correlation                        0.437       0.401       0.194       0.085       2.221        2645
+Total Init                     19990.157   19990.157       0.000   19990.157   19990.157           1
+Pipeline                          99.491      93.290      42.534      51.447     430.646        2700
+SIFT Extract                      70.590      68.299      14.772      41.819     128.930        2700
+ORB Extract                       20.382      19.554       5.393      10.097      49.723        2700

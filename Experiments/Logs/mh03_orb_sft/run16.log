@@ -14,16 +14,16 @@ under certain conditions. See LICENSE.txt.
 
 Input sensor was set to: Monocular
 
-Loading Vocabulary : /home/ucacsjj/Proj/UCL/Projects/PM-SLAM/Install/var/lib/orbslam2/voc/brisk_cv.fbow
+Loading Vocabulary : /home/ucacsjj/Proj/UCL/Projects/PM-SLAM/Install/var/lib/orbslam2/voc/orb_mur.fbow
 This could take a while...
-Loading BRISK Vocabulary in FBoW.
-BRISK Vocabulary loaded in 0.003694s
+Loading ORB Vocabulary in FBoW.
+ORB Vocabulary loaded in 0.024585s
 
 
 Loading Vocabulary : /home/ucacsjj/Proj/UCL/Projects/PM-SLAM/Install/var/lib/orbslam2/voc/sift_cv.fbow
 This could take a while...
 Loading SIFT Vocabulary in FBoW.
-SIFT Vocabulary loaded in 0.037258s
+SIFT Vocabulary loaded in 0.029459s
 
 
 Camera Parameters: 
@@ -38,14 +38,13 @@ Camera Parameters:
 - fps: 20
 - color order: RGB (ignored if grayscale)
 
-[Feature 0] BRISK Extractor Parameters: 
- ( TH_LOW: 100, TH_HIGH: 200 )
+[Feature 0] ORB Extractor Parameters: 
+ ( TH_LOW: 50, TH_HIGH: 100 )
 - Number of Features: 1000
-- Scale Levels: 6
-- Scale Factor: 1.414
-- Threshold: 10
-- Num of Octaves: 3
-- Pattern Scale: 1
+- Scale Levels: 8
+- Scale Factor: 1.2
+- Initial Fast Threshold: 20
+- Minimum Fast Threshold: 7
 
 [Feature 1] SIFT Extractor Parameters: 
  ( TH_LOW: 300, TH_HIGH: 500 )
@@ -62,11 +61,11 @@ Start processing sequence ...
 Images in the sequence: 2700
 
 Viewer started, waiting for thread.
-1
-New map created with 253 points for 0 Feature Type 
-New map created with 690 points for 1 Feature Type 
-Tracking Initlized in 58.58s
-The initlized frame ID: 55
+0
+New map created with 167 points for 0 Feature Type 
+New map created with 1140 points for 1 Feature Type 
+Tracking Initlized in 40.79s
+The initlized frame ID: 54
 System::StopViewer()
 System::StopViewer() done
 Tracking thread joined...
@@ -74,24 +73,24 @@ Tracking thread joined...
 Saving correlation status...
 
 ========== Global Summary ==========
-Frames: 2644
-avg_CorrEdges: 36.8022
-avg_match_A: 211.049
-avg_match_B: 200.745
-global_RI_MNR: 0.183328
-global_RI_GNR: 0.178797
-global_RI_DICE: 0.178741
+Frames: 2645
+avg_CorrEdges: 25.5289
+avg_match_A: 159.816
+avg_match_B: 194.159
+global_RI_MNR: 0.15974
+global_RI_GNR: 0.144925
+global_RI_DICE: 0.144242
 
 ========== Per-Channel Summary ==========
    chA   chB     avgCorr        avgA        avgB   avgRI_MNR   avgRI_GNR  avgRI_DICE
-     0     1     36.8022     211.049     200.745     0.18368    0.166932    0.165847
+     0     1     25.5289     159.816     194.159    0.159932    0.136859    0.134605
 
 Correlation status saved!
 
 -------
 
-median tracking time: 0.184977
-mean tracking time: 0.199486
+median tracking time: 0.0952546
+mean tracking time: 0.101512
 
 Saving camera trajectory to Trajectory.txt ...
 
@@ -99,9 +98,9 @@ trajectory saved!
 
 ========== Performance Summary (ms) ==========
 name                                mean      median        rmse         min         max       count
-Tracking                          28.029      27.461      10.147       4.237      66.784        2644
-Correlation                        0.570       0.491       0.332       0.055       4.865        2644
-Total Init                     35855.185   35855.185       0.000   35855.185   35855.185           1
-Pipeline                         199.480     184.954      91.698      54.757     739.496        2700
-BRISK Extract                    160.134     153.533      64.761      32.501     317.424        2700
-SIFT Extract                      60.892      59.623       9.982      41.633     114.278        2700
+Tracking                          21.787      21.422       7.663       6.593      53.488        2645
+Correlation                        0.448       0.397       0.247       0.071       4.967        2645
+Total Init                     20265.679   20265.679       0.000   20265.679   20265.679           1
+Pipeline                         101.506      95.248      43.761      56.414     430.962        2700
+SIFT Extract                      72.086      70.002      14.140      44.980     131.654        2700
+ORB Extract                       20.690      19.722       5.632       9.828      46.451        2700

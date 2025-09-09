@@ -1,0 +1,36 @@
+========== 01 Performance Summary (ms) ==========
+name                                mean      median        rmse         min         max       count
+Tracking                          32.529      33.159      11.024       9.260      86.121        2644
+Total Init                     33264.205   33264.205       0.000   33264.205   33264.205           1
+Pipeline                         304.271     292.927      58.902     208.411     723.128        2700
+KAZE Extract                     260.199     253.303      36.541     192.759     413.277        2700
+Correlation                        0.718       0.634       0.383       0.068       4.874        2644
+AKAZE Extract                     51.587      49.792      10.149      31.532     112.189        2700
+
+========== 02 Performance Summary (ms) ==========
+name                                mean      median        rmse         min         max       count
+Tracking                          33.742      34.559      11.933       7.743      74.172        2644
+Total Init                     35267.073   35267.073       0.000   35267.073   35267.073           1
+Pipeline                         338.923     339.084      68.064     207.765     718.791        2700
+KAZE Extract                     289.691     299.224      44.715     192.111     405.322        2700
+Correlation                        0.726       0.642       0.378       0.105       4.787        2644
+AKAZE Extract                     50.986      49.545       9.967      30.743     122.987        2700
+
+========== 03 Performance Summary (ms) ==========
+name                                mean      median        rmse         min         max       count
+Tracking                          34.468      34.980      12.315       8.621      81.276        2644
+Total Init                     34753.204   34753.204       0.000   34753.204   34753.204           1
+Pipeline                         319.271     309.835      61.702     214.356     767.475        2700
+KAZE Extract                     271.752     262.325      40.260     193.037     397.159        2700
+Correlation                        0.745       0.669       0.377       0.097       5.714        2644
+AKAZE Extract                     50.678      49.202       9.349      31.944     113.907        2700
+
+========== 04 Performance Summary (ms) ==========
+name                                mean      median        rmse         min         max       count
+Tracking                          34.777      35.956      11.738       8.566      76.355        2644
+Total Init                     34231.109   34231.109       0.000   34231.109   34231.109           1
+Pipeline                         338.397     337.759      64.197     207.516     704.768        2700
+KAZE Extract                     289.454     298.510      45.022     184.448     404.659        2700
+Correlation                        0.757       0.687       0.396       0.092       5.499        2644
+AKAZE Extract                     51.072      49.639       9.683      32.002     116.333        2700
+

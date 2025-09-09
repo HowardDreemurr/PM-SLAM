@@ -17,13 +17,13 @@ Input sensor was set to: Monocular
 Loading Vocabulary : /home/ucacsjj/Proj/UCL/Projects/PM-SLAM/Install/var/lib/orbslam2/voc/kaze_cv.fbow
 This could take a while...
 Loading KAZE Vocabulary in FBoW.
-KAZE Vocabulary loaded in 0.012488s
+KAZE Vocabulary loaded in 0.019720s
 
 
 Loading Vocabulary : /home/ucacsjj/Proj/UCL/Projects/PM-SLAM/Install/var/lib/orbslam2/voc/sift_cv.fbow
 This could take a while...
 Loading SIFT Vocabulary in FBoW.
-SIFT Vocabulary loaded in 0.027470s
+SIFT Vocabulary loaded in 0.031350s
 
 
 Camera Parameters: 
@@ -67,43 +67,5 @@ Viewer started, waiting for thread.
 0
 New map created with 506 points for 0 Feature Type 
 New map created with 633 points for 1 Feature Type 
-Tracking Initlized in 2.72s
+Tracking Initlized in 2.50s
 The initlized frame ID: 1
-System::StopViewer()
-System::StopViewer() done
-Tracking thread joined...
-
-Saving correlation status...
-
-========== Global Summary ==========
-Frames: 3680
-avg_CorrEdges: 71.1486
-avg_match_A: 302.424
-avg_match_B: 274.839
-global_RI_MNR: 0.258874
-global_RI_GNR: 0.246785
-global_RI_DICE: 0.246503
-
-========== Per-Channel Summary ==========
-   chA   chB     avgCorr        avgA        avgB   avgRI_MNR   avgRI_GNR  avgRI_DICE
-     0     1     71.1486     302.424     274.839     0.27619     0.24592    0.243588
-
-Correlation status saved!
-
--------
-
-median tracking time: 0.353858
-mean tracking time: 0.347676
-
-Saving camera trajectory to Trajectory.txt ...
-
-trajectory saved!
-
-========== Performance Summary (ms) ==========
-name                                mean      median        rmse         min         max       count
-Tracking                          41.031      35.457      20.233       6.628     106.527        3680
-Correlation                        0.704       0.605       0.336       0.167       4.056        3680
-Total Init                       634.031     634.031       0.000     634.031     634.031           1
-Pipeline                         347.672     353.835      52.235     235.198     772.967        3682
-KAZE Extract                     296.428     309.606      50.372     197.265     415.594        3682
-SIFT Extract                      70.053      62.795      22.704      41.398     223.566        3682
