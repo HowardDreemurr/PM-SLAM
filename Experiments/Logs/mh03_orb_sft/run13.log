@@ -17,13 +17,13 @@ Input sensor was set to: Monocular
 Loading Vocabulary : /home/ucacsjj/Proj/UCL/Projects/PM-SLAM/Install/var/lib/orbslam2/voc/orb_mur.fbow
 This could take a while...
 Loading ORB Vocabulary in FBoW.
-ORB Vocabulary loaded in 0.023636s
+ORB Vocabulary loaded in 0.025272s
 
 
 Loading Vocabulary : /home/ucacsjj/Proj/UCL/Projects/PM-SLAM/Install/var/lib/orbslam2/voc/sift_cv.fbow
 This could take a while...
 Loading SIFT Vocabulary in FBoW.
-SIFT Vocabulary loaded in 0.027431s
+SIFT Vocabulary loaded in 0.029084s
 
 
 Camera Parameters: 
@@ -64,43 +64,5 @@ Viewer started, waiting for thread.
 0
 New map created with 167 points for 0 Feature Type 
 New map created with 1140 points for 1 Feature Type 
-Tracking Initlized in 44.19s
+Tracking Initlized in 43.52s
 The initlized frame ID: 54
-System::StopViewer()
-System::StopViewer() done
-Tracking thread joined...
-
-Saving correlation status...
-
-========== Global Summary ==========
-Frames: 2645
-avg_CorrEdges: 27.0019
-avg_match_A: 161.211
-avg_match_B: 200.426
-global_RI_MNR: 0.167494
-global_RI_GNR: 0.150217
-global_RI_DICE: 0.149331
-
-========== Per-Channel Summary ==========
-   chA   chB     avgCorr        avgA        avgB   avgRI_MNR   avgRI_GNR  avgRI_DICE
-     0     1     27.0019     161.211     200.426    0.168632    0.142922    0.140294
-
-Correlation status saved!
-
--------
-
-median tracking time: 0.103604
-mean tracking time: 0.10738
-
-Saving camera trajectory to Trajectory.txt ...
-
-trajectory saved!
-
-========== Performance Summary (ms) ==========
-name                                mean      median        rmse         min         max       count
-Tracking                          22.295      21.574       8.113       6.935      56.998        2645
-Correlation                        0.427       0.370       0.216       0.085       1.752        2645
-Total Init                     19861.301   19861.301       0.000   19861.301   19861.301           1
-Pipeline                         107.374     103.594      43.882      50.432     441.332        2700
-SIFT Extract                      77.657      78.016      16.732      41.670     136.483        2700
-ORB Extract                       23.075      22.121       7.298      10.174      51.880        2700

@@ -17,13 +17,13 @@ Input sensor was set to: Monocular
 Loading Vocabulary : /home/ucacsjj/Proj/UCL/Projects/PM-SLAM/Install/var/lib/orbslam2/voc/orb_mur.fbow
 This could take a while...
 Loading ORB Vocabulary in FBoW.
-ORB Vocabulary loaded in 0.023790s
+ORB Vocabulary loaded in 0.026067s
 
 
 Loading Vocabulary : /home/ucacsjj/Proj/UCL/Projects/PM-SLAM/Install/var/lib/orbslam2/voc/brisk_cv.fbow
 This could take a while...
 Loading BRISK Vocabulary in FBoW.
-BRISK Vocabulary loaded in 0.003347s
+BRISK Vocabulary loaded in 0.003588s
 
 
 Camera Parameters: 
@@ -61,11 +61,10 @@ Images in the sequence: 2700
 
 Viewer started, waiting for thread.
 0
-New map created with 167 points for 0 Feature Type 
-New map created with 633 points for 1 Feature Type 
-Tracking Initlized in 30.58s
-The initlized frame ID: 54
-The lost frame ID: 2641
+New map created with 130 points for 0 Feature Type 
+New map created with 606 points for 1 Feature Type 
+Tracking Initlized in 30.65s
+The initlized frame ID: 55
 System::StopViewer()
 System::StopViewer() done
 Tracking thread joined...
@@ -74,23 +73,23 @@ Saving correlation status...
 
 ========== Global Summary ==========
 Frames: 2644
-avg_CorrEdges: 76.3294
-avg_match_A: 165.328
-avg_match_B: 223.931
-global_RI_MNR: 0.461686
-global_RI_GNR: 0.3967
-global_RI_DICE: 0.392178
+avg_CorrEdges: 77.823
+avg_match_A: 166.064
+avg_match_B: 224.542
+global_RI_MNR: 0.468632
+global_RI_GNR: 0.403015
+global_RI_DICE: 0.398472
 
 ========== Per-Channel Summary ==========
    chA   chB     avgCorr        avgA        avgB   avgRI_MNR   avgRI_GNR  avgRI_DICE
-     0     1     76.3294     165.328     223.931    0.455077    0.380629    0.372598
+     0     1      77.823     166.064     224.542    0.463774    0.388305    0.379998
 
 Correlation status saved!
 
 -------
 
-median tracking time: 0.182292
-mean tracking time: 0.19291
+median tracking time: 0.183956
+mean tracking time: 0.194219
 
 Saving camera trajectory to Trajectory.txt ...
 
@@ -98,9 +97,9 @@ trajectory saved!
 
 ========== Performance Summary (ms) ==========
 name                                mean      median        rmse         min         max       count
-Tracking                          26.189      25.433       9.779       5.650      62.866        2645
-Correlation                        0.527       0.462       0.266       0.026       2.770        2644
-Total Init                     23996.083   23996.083       0.000   23996.083   23996.083           1
-Pipeline                         192.904     182.253      75.336      52.885     521.340        2700
-BRISK Extract                    159.927     151.387      66.931      30.501     341.507        2700
-ORB Extract                       22.995      22.016       7.156       9.820      51.985        2700
+Tracking                          26.288      25.728       9.597       6.073      66.208        2644
+Correlation                        0.536       0.464       0.279       0.080       2.734        2644
+Total Init                     24008.470   24008.470       0.000   24008.470   24008.470           1
+Pipeline                         194.213     183.941      74.700      53.703     528.563        2700
+BRISK Extract                    160.913     153.663      66.509      30.729     348.318        2700
+ORB Extract                       23.670      22.702       7.503       9.681      52.339        2700
