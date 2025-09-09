@@ -17,13 +17,13 @@ Input sensor was set to: Monocular
 Loading Vocabulary : /home/ucacsjj/Proj/UCL/Projects/PM-SLAM/Install/var/lib/orbslam2/voc/orb_mur.fbow
 This could take a while...
 Loading ORB Vocabulary in FBoW.
-ORB Vocabulary loaded in 0.019441s
+ORB Vocabulary loaded in 0.028314s
 
 
 Loading Vocabulary : /home/ucacsjj/Proj/UCL/Projects/PM-SLAM/Install/var/lib/orbslam2/voc/kaze_cv.fbow
 This could take a while...
 Loading KAZE Vocabulary in FBoW.
-KAZE Vocabulary loaded in 0.012950s
+KAZE Vocabulary loaded in 0.018184s
 
 
 Camera Parameters: 
@@ -62,11 +62,21 @@ Start processing sequence ...
 Images in the sequence: 2273
 
 Viewer started, waiting for thread.
-1
-New map created with 86 points for 0 Feature Type 
-New map created with 356 points for 1 Feature Type 
-Tracking Initlized in 446.21s
-The initlized frame ID: 196
+0
+New map created with 112 points for 0 Feature Type 
+New map created with 504 points for 1 Feature Type 
+Tracking Initlized in 188.60s
+The initlized frame ID: 81
+[LoopClosing] Sim3 choosed on channel 1
+Loop detected!
+Local Mapping STOP
+Local Mapping RELEASE
+Starting Global Bundle Adjustment
+Global Bundle Adjustment finished
+Updating map ...
+Local Mapping STOP
+Local Mapping RELEASE
+Map updated!
 [LoopClosing] Sim3 choosed on channel 1
 Loop detected!
 Local Mapping STOP
@@ -84,24 +94,24 @@ Tracking thread joined...
 Saving correlation status...
 
 ========== Global Summary ==========
-Frames: 2076
-avg_CorrEdges: 41.0164
-avg_match_A: 179.241
-avg_match_B: 291.613
-global_RI_MNR: 0.228834
-global_RI_GNR: 0.179405
-global_RI_DICE: 0.174221
+Frames: 2191
+avg_CorrEdges: 41.382
+avg_match_A: 170.398
+avg_match_B: 301.563
+global_RI_MNR: 0.242854
+global_RI_GNR: 0.182553
+global_RI_DICE: 0.175362
 
 ========== Per-Channel Summary ==========
    chA   chB     avgCorr        avgA        avgB   avgRI_MNR   avgRI_GNR  avgRI_DICE
-     0     1     41.0164     179.241     291.613    0.244766    0.186059    0.178464
+     0     1      41.382     170.398     301.563    0.251292    0.182571    0.172622
 
 Correlation status saved!
 
 -------
 
-median tracking time: 0.320756
-mean tracking time: 0.331432
+median tracking time: 0.350671
+mean tracking time: 0.356271
 
 Saving camera trajectory to Trajectory.txt ...
 
@@ -109,9 +119,9 @@ trajectory saved!
 
 ========== Performance Summary (ms) ==========
 name                                mean      median        rmse         min         max       count
-Tracking                          25.523      23.796      11.770       4.496      71.326        2076
-Correlation                        0.479       0.417       0.229       0.043       2.025        2076
-Total Init                     83443.236   83443.236       0.000   83443.236   83443.236           1
-Pipeline                         331.427     320.751      51.523     233.235     592.840        2273
-KAZE Extract                     294.729     284.956      41.812     215.960     423.270        2273
-ORB Extract                       21.609      21.142       6.620       9.208      43.784        2273
+Tracking                          25.093      23.565       9.558       6.079      62.981        2191
+Correlation                        0.477       0.426       0.207       0.055       2.008        2191
+Total Init                     37516.424   37516.424       0.000   37516.424   37516.424           1
+Pipeline                         356.266     350.666      41.993     257.318     536.419        2273
+KAZE Extract                     319.331     317.792      32.516     229.447     421.010        2273
+ORB Extract                       21.831      21.939       6.434       9.039      42.618        2273
