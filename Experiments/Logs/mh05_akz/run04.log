@@ -1,0 +1,177 @@
+Registering ORBextractor...
+Registering AKAZEextractor...
+Registering BRISKextractor...
+Registering SIFTextractor...
+Registering KAZEextractor...
+Loading images...
+Loaded 2273 images.
+Creating SLAM system...
+
+ORB-SLAM2 Copyright (C) 2014-2016 Raul Mur-Artal, University of Zaragoza.
+This program comes with ABSOLUTELY NO WARRANTY;
+This is free software, and you are welcome to redistribute it
+under certain conditions. See LICENSE.txt.
+
+Input sensor was set to: Monocular
+
+Loading Vocabulary : /home/ucacsjj/Proj/UCL/Projects/PM-SLAM/Install/var/lib/orbslam2/voc/akaze_cv.fbow
+This could take a while...
+Loading AKAZE Vocabulary in FBoW.
+AKAZE Vocabulary loaded in 0.004004s
+
+
+Camera Parameters: 
+- fx: 458.654
+- fy: 457.296
+- cx: 367.215
+- cy: 248.375
+- k1: -0.283408
+- k2: 0.0739591
+- p1: 0.00019359
+- p2: 1.76187e-05
+- fps: 20
+- color order: RGB (ignored if grayscale)
+
+[Feature 0] AKAZE Extractor Parameters: 
+ ( TH_LOW: 100, TH_HIGH: 200 )
+- Number of Features: 1000
+- Scale Levels: 4
+- Scale Factor: 1.2
+- Threshold: 0.001
+- Num of Octaves: 4
+- Num of Octave Layers: 4
+
+-------
+Start processing sequence ...
+Images in the sequence: 2273
+
+Viewer started, waiting for thread.
+0
+New map created with 67 points for 0 Feature Type 
+Wrong initialization, reseting...
+System Reseting
+Reseting Local Mapper... done
+Reseting Loop Closing... done
+Reseting Database... done
+0
+New map created with 307 points for 0 Feature Type 
+Tracking Initlized in 0.44s
+The initlized frame ID: 1
+[LoopClosing] Sim3 choosed on channel 0
+Loop detected!
+Local Mapping STOP
+Local Mapping RELEASE
+Starting Global Bundle Adjustment
+Global Bundle Adjustment finished
+Updating map ...
+Local Mapping STOP
+Local Mapping RELEASE
+Map updated!
+The lost frame ID: 1866
+The lost frame ID: 1867
+The lost frame ID: 1868
+The lost frame ID: 1869
+The lost frame ID: 1870
+The lost frame ID: 1871
+The lost frame ID: 1872
+The lost frame ID: 1873
+The lost frame ID: 1874
+The lost frame ID: 1875
+The lost frame ID: 1876
+The lost frame ID: 1877
+The lost frame ID: 1878
+The lost frame ID: 1879
+The lost frame ID: 1880
+The lost frame ID: 1881
+The lost frame ID: 1882
+The lost frame ID: 1883
+The lost frame ID: 1884
+The lost frame ID: 1885
+The lost frame ID: 1886
+The lost frame ID: 1887
+The lost frame ID: 1888
+The lost frame ID: 1889
+The lost frame ID: 1890
+The lost frame ID: 1891
+The lost frame ID: 1892
+The lost frame ID: 1893
+The lost frame ID: 1894
+The lost frame ID: 1895
+The lost frame ID: 1896
+The lost frame ID: 1897
+The lost frame ID: 1898
+The lost frame ID: 1899
+The lost frame ID: 1900
+The lost frame ID: 1901
+The lost frame ID: 1902
+The lost frame ID: 1903
+The lost frame ID: 1904
+The lost frame ID: 1905
+The lost frame ID: 1906
+The lost frame ID: 1907
+The lost frame ID: 1908
+The lost frame ID: 1909
+The lost frame ID: 1910
+The lost frame ID: 1911
+The lost frame ID: 1912
+The lost frame ID: 1913
+The lost frame ID: 1914
+The lost frame ID: 1915
+The lost frame ID: 1916
+The lost frame ID: 1917
+The lost frame ID: 1918
+The lost frame ID: 1919
+The lost frame ID: 1920
+The lost frame ID: 1921
+The lost frame ID: 1922
+The lost frame ID: 1923
+The lost frame ID: 1924
+The lost frame ID: 1925
+The lost frame ID: 1926
+The lost frame ID: 1927
+The lost frame ID: 1928
+The lost frame ID: 1929
+The lost frame ID: 1930
+The lost frame ID: 1931
+The lost frame ID: 1932
+The lost frame ID: 1933
+The lost frame ID: 1934
+[LoopClosing] Sim3 choosed on channel 0
+Loop detected!
+Local Mapping STOP
+Local Mapping RELEASE
+Starting Global Bundle Adjustment
+Global Bundle Adjustment finished
+Updating map ...
+Local Mapping STOP
+Local Mapping RELEASE
+Map updated!
+The lost frame ID: 2157
+The lost frame ID: 2159
+The lost frame ID: 2164
+The lost frame ID: 2165
+The lost frame ID: 2166
+System::StopViewer()
+System::StopViewer() done
+Tracking thread joined...
+
+Saving correlation status...
+
+Correlation status saved!
+
+-------
+
+median tracking time: 0.0755431
+mean tracking time: 0.0792971
+
+Saving camera trajectory to Trajectory.txt ...
+
+trajectory saved!
+
+========== Performance Summary (ms) ==========
+name                                mean      median        rmse         min         max       count
+Tracking                           9.531       8.489       5.756       1.669      47.821        2182
+Total Init                     13531.797   13531.797       0.000   13531.797   13531.797           2
+Pipeline                          79.292      75.538      18.758      49.791     228.614        2273
+Correlation                        0.000       0.000       0.000       0.000       0.011        2108
+AKAZE Extract                     64.220      64.367       7.586      41.195      94.502        2273
