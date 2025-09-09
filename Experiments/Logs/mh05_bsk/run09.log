@@ -17,7 +17,7 @@ Input sensor was set to: Monocular
 Loading Vocabulary : /home/ucacsjj/Proj/UCL/Projects/PM-SLAM/Install/var/lib/orbslam2/voc/brisk_cv.fbow
 This could take a while...
 Loading BRISK Vocabulary in FBoW.
-BRISK Vocabulary loaded in 0.005108s
+BRISK Vocabulary loaded in 0.005637s
 
 
 Camera Parameters: 
@@ -57,6 +57,16 @@ Reseting Database... done
 New map created with 323 points for 0 Feature Type 
 Tracking Initlized in 0.16s
 The initlized frame ID: 1
+[LoopClosing] Sim3 choosed on channel 0
+Loop detected!
+Local Mapping STOP
+Local Mapping RELEASE
+Starting Global Bundle Adjustment
+Global Bundle Adjustment finished
+Updating map ...
+Local Mapping STOP
+Local Mapping RELEASE
+Map updated!
 System::StopViewer()
 System::StopViewer() done
 Tracking thread joined...
@@ -67,8 +77,8 @@ Correlation status saved!
 
 -------
 
-median tracking time: 0.143587
-mean tracking time: 0.146739
+median tracking time: 0.141926
+mean tracking time: 0.145412
 
 Saving camera trajectory to Trajectory.txt ...
 
@@ -76,8 +86,8 @@ trajectory saved!
 
 ========== Performance Summary (ms) ==========
 name                                mean      median        rmse         min         max       count
-Tracking                          14.977      13.887       7.637       2.629      44.755        2187
-Correlation                        0.000       0.000       0.000       0.000       0.003        2187
-Total Init                     29772.969   29772.969       0.000   29772.969   29772.969           2
-Pipeline                         146.733     143.583      72.199      20.535     406.090        2273
-BRISK Extract                    122.056     128.965      56.043      13.432     294.599        2273
+Tracking                          14.336      12.881       7.703       2.489      47.199        2187
+Correlation                        0.000       0.000       0.000       0.000       0.013        2187
+Total Init                     29657.281   29657.281       0.000   29657.281   29657.281           2
+Pipeline                         145.406     141.921      71.871      20.722     398.106        2273
+BRISK Extract                    121.857     128.932      56.099      12.429     273.672        2273
