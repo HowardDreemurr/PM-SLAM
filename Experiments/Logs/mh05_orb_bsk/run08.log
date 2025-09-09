@@ -1,0 +1,122 @@
+Registering ORBextractor...
+Registering AKAZEextractor...
+Registering BRISKextractor...
+Registering SIFTextractor...
+Registering KAZEextractor...
+Loading images...
+Loaded 2273 images.
+Creating SLAM system...
+
+ORB-SLAM2 Copyright (C) 2014-2016 Raul Mur-Artal, University of Zaragoza.
+This program comes with ABSOLUTELY NO WARRANTY;
+This is free software, and you are welcome to redistribute it
+under certain conditions. See LICENSE.txt.
+
+Input sensor was set to: Monocular
+
+Loading Vocabulary : /home/ucacsjj/Proj/UCL/Projects/PM-SLAM/Install/var/lib/orbslam2/voc/orb_mur.fbow
+This could take a while...
+Loading ORB Vocabulary in FBoW.
+ORB Vocabulary loaded in 0.025540s
+
+
+Loading Vocabulary : /home/ucacsjj/Proj/UCL/Projects/PM-SLAM/Install/var/lib/orbslam2/voc/brisk_cv.fbow
+This could take a while...
+Loading BRISK Vocabulary in FBoW.
+BRISK Vocabulary loaded in 0.005412s
+
+
+Camera Parameters: 
+- fx: 458.654
+- fy: 457.296
+- cx: 367.215
+- cy: 248.375
+- k1: -0.283408
+- k2: 0.0739591
+- p1: 0.00019359
+- p2: 1.76187e-05
+- fps: 20
+- color order: RGB (ignored if grayscale)
+
+[Feature 0] ORB Extractor Parameters: 
+ ( TH_LOW: 50, TH_HIGH: 100 )
+- Number of Features: 1000
+- Scale Levels: 8
+- Scale Factor: 1.2
+- Initial Fast Threshold: 20
+- Minimum Fast Threshold: 7
+
+[Feature 1] BRISK Extractor Parameters: 
+ ( TH_LOW: 100, TH_HIGH: 200 )
+- Number of Features: 1000
+- Scale Levels: 6
+- Scale Factor: 1.414
+- Threshold: 10
+- Num of Octaves: 3
+- Pattern Scale: 1
+
+-------
+Start processing sequence ...
+Images in the sequence: 2273
+
+Viewer started, waiting for thread.
+0
+New map created with 89 points for 0 Feature Type 
+New map created with 379 points for 1 Feature Type 
+Tracking Initlized in 37.44s
+The initlized frame ID: 81
+The lost frame ID: 2248
+The lost frame ID: 2253
+The lost frame ID: 2254
+The lost frame ID: 2255
+The lost frame ID: 2256
+The lost frame ID: 2257
+The lost frame ID: 2258
+The lost frame ID: 2259
+The lost frame ID: 2260
+The lost frame ID: 2261
+The lost frame ID: 2262
+The lost frame ID: 2263
+The lost frame ID: 2264
+The lost frame ID: 2265
+The lost frame ID: 2266
+The lost frame ID: 2267
+The lost frame ID: 2268
+System::StopViewer()
+System::StopViewer() done
+Tracking thread joined...
+
+Saving correlation status...
+
+========== Global Summary ==========
+Frames: 2174
+avg_CorrEdges: 60.8882
+avg_match_A: 141.799
+avg_match_B: 181.792
+global_RI_MNR: 0.429398
+global_RI_GNR: 0.379236
+global_RI_DICE: 0.376329
+
+========== Per-Channel Summary ==========
+   chA   chB     avgCorr        avgA        avgB   avgRI_MNR   avgRI_GNR  avgRI_DICE
+     0     1     60.8882     141.799     181.792    0.437965    0.375164    0.369576
+
+Correlation status saved!
+
+-------
+
+median tracking time: 0.1481
+mean tracking time: 0.151814
+
+Saving camera trajectory to Trajectory.txt ...
+
+trajectory saved!
+
+========== Performance Summary (ms) ==========
+name                                mean      median        rmse         min         max       count
+Tracking                          19.566      18.368       8.317       3.481      53.838        2191
+Correlation                        0.506       0.457       0.310       0.038       5.479        2174
+Total Init                     29488.316   29488.316       0.000   29488.316   29488.316           1
+Pipeline                         151.807     148.095      70.225      26.638     405.550        2273
+BRISK Extract                    122.489     129.082      56.241      15.439     274.080        2273
+ORB Extract                       19.064      18.177       5.012       9.109      45.051        2273
