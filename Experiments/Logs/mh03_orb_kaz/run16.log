@@ -4,7 +4,7 @@ Registering BRISKextractor...
 Registering SIFTextractor...
 Registering KAZEextractor...
 Loading images...
-Loaded 2273 images.
+Loaded 2700 images.
 Creating SLAM system...
 
 ORB-SLAM2 Copyright (C) 2014-2016 Raul Mur-Artal, University of Zaragoza.
@@ -14,16 +14,16 @@ under certain conditions. See LICENSE.txt.
 
 Input sensor was set to: Monocular
 
+Loading Vocabulary : /home/ucacsjj/Proj/UCL/Projects/PM-SLAM/Install/var/lib/orbslam2/voc/orb_mur.fbow
+This could take a while...
+Loading ORB Vocabulary in FBoW.
+ORB Vocabulary loaded in 0.024694s
+
+
 Loading Vocabulary : /home/ucacsjj/Proj/UCL/Projects/PM-SLAM/Install/var/lib/orbslam2/voc/kaze_cv.fbow
 This could take a while...
 Loading KAZE Vocabulary in FBoW.
-KAZE Vocabulary loaded in 0.014955s
-
-
-Loading Vocabulary : /home/ucacsjj/Proj/UCL/Projects/PM-SLAM/Install/var/lib/orbslam2/voc/sift_cv.fbow
-This could take a while...
-Loading SIFT Vocabulary in FBoW.
-SIFT Vocabulary loaded in 0.041950s
+KAZE Vocabulary loaded in 0.014682s
 
 
 Camera Parameters: 
@@ -38,7 +38,15 @@ Camera Parameters:
 - fps: 20
 - color order: RGB (ignored if grayscale)
 
-[Feature 0] KAZE Extractor Parameters: 
+[Feature 0] ORB Extractor Parameters: 
+ ( TH_LOW: 50, TH_HIGH: 100 )
+- Number of Features: 1000
+- Scale Levels: 8
+- Scale Factor: 1.2
+- Initial Fast Threshold: 20
+- Minimum Fast Threshold: 7
+
+[Feature 1] KAZE Extractor Parameters: 
  ( TH_LOW: 0.5, TH_HIGH: 1 )
 - Number of Features : 1000
 - Scale Levels       : 4
@@ -49,28 +57,13 @@ Camera Parameters:
 - Extended (128‑dim) : 0
 - Upright            : 0
 
-[Feature 1] SIFT Extractor Parameters: 
- ( TH_LOW: 300, TH_HIGH: 500 )
-- Number of Features  : 1000
-- Scale Levels        : 1
-- Scale Factor        : 1
-- Contrast Threshold  : 0.001
-- Edge Threshold      : 5
-- nOctaves            : 3
-- Sigma               : 1.6
-
 -------
 Start processing sequence ...
-Images in the sequence: 2273
+Images in the sequence: 2700
 
 Viewer started, waiting for thread.
-1
-New map created with 185 points for 0 Feature Type 
-New map created with 179 points for 1 Feature Type 
-Tracking Initlized in 197.82s
-The initlized frame ID: 82
-[LoopClosing] Sim3 choosed on channel 0
-Loop detected!
-Local Mapping STOP
-Local Mapping RELEASE
-Starting Global Bundle Adjustment
+0
+New map created with 167 points for 0 Feature Type 
+New map created with 902 points for 1 Feature Type 
+Tracking Initlized in 122.73s
+The initlized frame ID: 54
