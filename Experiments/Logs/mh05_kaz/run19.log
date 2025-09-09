@@ -17,7 +17,7 @@ Input sensor was set to: Monocular
 Loading Vocabulary : /home/ucacsjj/Proj/UCL/Projects/PM-SLAM/Install/var/lib/orbslam2/voc/kaze_cv.fbow
 This could take a while...
 Loading KAZE Vocabulary in FBoW.
-KAZE Vocabulary loaded in 0.012695s
+KAZE Vocabulary loaded in 0.013504s
 
 
 Camera Parameters: 
@@ -50,8 +50,18 @@ Images in the sequence: 2273
 Viewer started, waiting for thread.
 0
 New map created with 441 points for 0 Feature Type 
-Tracking Initlized in 153.53s
+Tracking Initlized in 169.69s
 The initlized frame ID: 81
+[LoopClosing] Sim3 choosed on channel 0
+Loop detected!
+Local Mapping STOP
+Local Mapping RELEASE
+Starting Global Bundle Adjustment
+Global Bundle Adjustment finished
+Updating map ...
+Local Mapping STOP
+Local Mapping RELEASE
+Map updated!
 System::StopViewer()
 System::StopViewer() done
 Tracking thread joined...
@@ -62,8 +72,8 @@ Correlation status saved!
 
 -------
 
-median tracking time: 0.317464
-mean tracking time: 0.325423
+median tracking time: 0.328237
+mean tracking time: 0.33108
 
 Saving camera trajectory to Trajectory.txt ...
 
@@ -71,8 +81,8 @@ trajectory saved!
 
 ========== Performance Summary (ms) ==========
 name                                mean      median        rmse         min         max       count
-Tracking                          15.715      14.519       6.338       4.515      44.137        2191
-Correlation                        0.000       0.000       0.000       0.000       0.001        2191
-Total Init                     29946.222   29946.222       0.000   29946.222   29946.222           1
-Pipeline                         325.419     317.460      60.487     196.140     499.669        2273
-KAZE Extract                     303.585     294.089      56.363     186.614     475.048        2273
+Tracking                          14.516      13.841       5.166       4.435      36.923        2191
+Correlation                        0.000       0.000       0.000       0.000       0.005        2191
+Total Init                     33727.775   33727.775       0.000   33727.775   33727.775           1
+Pipeline                         331.075     328.234      40.554     235.174     509.546        2273
+KAZE Extract                     305.961     304.432      31.986     226.847     420.384        2273
