@@ -17,13 +17,13 @@ Input sensor was set to: Monocular
 Loading Vocabulary : /home/ucacsjj/Proj/UCL/Projects/PM-SLAM/Install/var/lib/orbslam2/voc/orb_mur.fbow
 This could take a while...
 Loading ORB Vocabulary in FBoW.
-ORB Vocabulary loaded in 0.021344s
+ORB Vocabulary loaded in 0.038297s
 
 
 Loading Vocabulary : /home/ucacsjj/Proj/UCL/Projects/PM-SLAM/Install/var/lib/orbslam2/voc/kaze_cv.fbow
 This could take a while...
 Loading KAZE Vocabulary in FBoW.
-KAZE Vocabulary loaded in 0.016901s
+KAZE Vocabulary loaded in 0.019501s
 
 
 Camera Parameters: 
@@ -62,10 +62,10 @@ Start processing sequence ...
 Images in the sequence: 2700
 
 Viewer started, waiting for thread.
-0
-New map created with 130 points for 0 Feature Type 
-New map created with 860 points for 1 Feature Type 
-Tracking Initlized in 115.94s
+1
+New map created with 62 points for 0 Feature Type 
+New map created with 309 points for 1 Feature Type 
+Tracking Initlized in 110.79s
 The initlized frame ID: 55
 System::StopViewer()
 System::StopViewer() done
@@ -75,23 +75,23 @@ Saving correlation status...
 
 ========== Global Summary ==========
 Frames: 2644
-avg_CorrEdges: 43.7538
-avg_match_A: 176.766
-avg_match_B: 326.857
-global_RI_MNR: 0.247523
-global_RI_GNR: 0.182027
-global_RI_DICE: 0.173756
+avg_CorrEdges: 40.5208
+avg_match_A: 163.86
+avg_match_B: 303.42
+global_RI_MNR: 0.247289
+global_RI_GNR: 0.181727
+global_RI_DICE: 0.173433
 
 ========== Per-Channel Summary ==========
    chA   chB     avgCorr        avgA        avgB   avgRI_MNR   avgRI_GNR  avgRI_DICE
-     0     1     43.7538     176.766     326.857    0.238761    0.175593     0.16682
+     0     1     40.5208      163.86      303.42    0.232527    0.170416    0.161714
 
 Correlation status saved!
 
 -------
 
-median tracking time: 0.307159
-mean tracking time: 0.310572
+median tracking time: 0.338865
+mean tracking time: 0.334717
 
 Saving camera trajectory to Trajectory.txt ...
 
@@ -99,9 +99,9 @@ trajectory saved!
 
 ========== Performance Summary (ms) ==========
 name                                mean      median        rmse         min         max       count
-Tracking                          30.734      31.804      11.025       6.777      72.288        2644
-Correlation                        0.587       0.536       0.265       0.118       4.647        2644
-Total Init                     27736.286   27736.286       0.000   27736.286   27736.286           1
-Pipeline                         310.565     307.151      46.947     204.391     605.551        2700
-KAZE Extract                     269.898     269.887      34.203     186.294     405.678        2700
-ORB Extract                       20.875      20.162       5.354      10.350      49.099        2700
+Tracking                          30.264      31.438      12.425       3.233      74.064        2644
+Correlation                        0.557       0.505       0.281       0.067       4.518        2644
+Total Init                     28815.775   28815.775       0.000   28815.775   28815.775           1
+Pipeline                         334.710     338.819      55.067     219.336     586.186        2700
+KAZE Extract                     291.489     303.995      45.897     180.913     401.841        2700
+ORB Extract                       20.766      19.997       5.390      10.043      50.818        2700

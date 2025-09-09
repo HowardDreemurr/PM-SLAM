@@ -17,7 +17,13 @@ Input sensor was set to: Monocular
 Loading Vocabulary : /home/ucacsjj/Proj/UCL/Projects/PM-SLAM/Install/var/lib/orbslam2/voc/kaze_cv.fbow
 This could take a while...
 Loading KAZE Vocabulary in FBoW.
-KAZE Vocabulary loaded in 0.018427s
+KAZE Vocabulary loaded in 0.015009s
+
+
+Loading Vocabulary : /home/ucacsjj/Proj/UCL/Projects/PM-SLAM/Install/var/lib/orbslam2/voc/sift_cv.fbow
+This could take a while...
+Loading SIFT Vocabulary in FBoW.
+SIFT Vocabulary loaded in 0.030708s
 
 
 Camera Parameters: 
@@ -43,36 +49,36 @@ Camera Parameters:
 - Extended (128‑dim) : 0
 - Upright            : 0
 
+[Feature 1] SIFT Extractor Parameters: 
+ ( TH_LOW: 300, TH_HIGH: 500 )
+- Number of Features  : 1000
+- Scale Levels        : 1
+- Scale Factor        : 1
+- Contrast Threshold  : 0.001
+- Edge Threshold      : 5
+- nOctaves            : 3
+- Sigma               : 1.6
+
 -------
 Start processing sequence ...
 Images in the sequence: 2273
 
 Viewer started, waiting for thread.
-0
-New map created with 441 points for 0 Feature Type 
-Tracking Initlized in 136.63s
-The initlized frame ID: 81
-System::StopViewer()
-System::StopViewer() done
-Tracking thread joined...
-
-Saving correlation status...
-
-Correlation status saved!
-
--------
-
-median tracking time: 0.279254
-mean tracking time: 0.282047
-
-Saving camera trajectory to Trajectory.txt ...
-
-trajectory saved!
-
-========== Performance Summary (ms) ==========
-name                                mean      median        rmse         min         max       count
-Tracking                          14.739      14.159       5.200       4.471      37.946        2191
-Correlation                        0.000       0.000       0.001       0.000       0.012        2191
-Total Init                     28803.120   28803.120       0.000   28803.120   28803.120           1
-Pipeline                         282.042     279.249      35.322     205.274     459.167        2273
-KAZE Extract                     258.874     260.340      29.136     183.350     375.283        2273
+1
+New map created with 185 points for 0 Feature Type 
+New map created with 179 points for 1 Feature Type 
+Tracking Initlized in 194.72s
+The initlized frame ID: 82
+[LoopClosing] Sim3 choosed on channel 0
+Loop detected!
+Local Mapping STOP
+Local Mapping RELEASE
+Starting Global Bundle Adjustment
+Global Bundle Adjustment finished
+Updating map ...
+Local Mapping STOP
+Local Mapping RELEASE
+Map updated!
+[LoopClosing] Sim3 choosed on channel 1
+Loop detected!
+Local Mapping STOP
