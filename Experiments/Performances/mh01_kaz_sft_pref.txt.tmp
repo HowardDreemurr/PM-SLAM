@@ -1,0 +1,54 @@
+========== 01 Performance Summary (ms) ==========
+name                                mean      median        rmse         min         max       count
+Tracking                          37.090      33.999      16.564       6.491     109.655        3680
+Correlation                        0.675       0.599       0.294       0.235       3.788        3680
+Total Init                       648.808     648.808       0.000     648.808     648.808           1
+Pipeline                         338.596     332.681      45.748     237.948     642.065        3682
+KAZE Extract                     292.969     289.296      41.344     195.930     421.981        3682
+SIFT Extract                      77.571      67.352      30.413      40.753     228.310        3682
+
+========== 02 Performance Summary (ms) ==========
+name                                mean      median        rmse         min         max       count
+Tracking                          37.934      35.186      17.583       8.198      94.884        3680
+Correlation                        0.672       0.598       0.283       0.234       2.912        3680
+Total Init                       675.140     675.140       0.000     675.140     675.140           1
+Pipeline                         354.315     351.290      51.828     236.839     704.127        3682
+KAZE Extract                     306.943     307.353      38.167     200.068     455.243        3682
+SIFT Extract                      63.700      58.250      19.384      40.559     229.588        3682
+
+========== 03 Performance Summary (ms) ==========
+name                                mean      median        rmse         min         max       count
+Tracking                          37.862      34.867      16.687       7.284      95.165        3680
+Correlation                        0.657       0.581       0.288       0.233       3.083        3680
+Total Init                       750.773     750.773       0.000     750.773     750.773           1
+Pipeline                         346.215     341.111      49.810     243.344     746.429        3682
+KAZE Extract                     300.293     300.280      44.124     208.838     423.663        3682
+SIFT Extract                      69.710      61.876      23.373      40.914     201.318        3682
+
+========== 04 Performance Summary (ms) ==========
+name                                mean      median        rmse         min         max       count
+Tracking                          37.826      34.037      17.438       6.710     104.049        3680
+Correlation                        0.657       0.596       0.265       0.221       3.851        3680
+Total Init                       671.251     671.251       0.000     671.251     671.251           1
+Pipeline                         363.139     360.748      54.282     236.252     718.377        3682
+KAZE Extract                     316.147     316.966      37.722     203.613     434.792        3682
+SIFT Extract                      61.299      58.101      16.660      41.697     199.110        3682
+
+========== 05 Performance Summary (ms) ==========
+name                                mean      median        rmse         min         max       count
+Tracking                          38.155      34.854      16.856       7.454      99.715        3680
+Correlation                        0.660       0.588       0.286       0.142       3.367        3680
+Total Init                       653.986     653.986       0.000     653.986     653.986           1
+Pipeline                         363.801     364.816      47.840     254.253     676.148        3682
+KAZE Extract                     318.506     316.909      39.620     219.350     444.900        3682
+SIFT Extract                      68.191      59.991      27.281      41.396     239.032        3682
+
+========== 06 Performance Summary (ms) ==========
+name                                mean      median        rmse         min         max       count
+Tracking                          37.962      34.860      15.995       6.439      98.539        3680
+Correlation                        0.651       0.573       0.306       0.216       3.610        3680
+Total Init                       667.748     667.748       0.000     667.748     667.748           1
+Pipeline                         357.865     357.301      78.175     245.029    4183.598        3682
+KAZE Extract                     312.426     314.048      79.079     202.665    4123.475        3682
+SIFT Extract                      83.434      74.217      70.973      42.053    3979.205        3682
+
