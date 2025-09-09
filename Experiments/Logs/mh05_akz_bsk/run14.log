@@ -17,13 +17,13 @@ Input sensor was set to: Monocular
 Loading Vocabulary : /home/ucacsjj/Proj/UCL/Projects/PM-SLAM/Install/var/lib/orbslam2/voc/akaze_cv.fbow
 This could take a while...
 Loading AKAZE Vocabulary in FBoW.
-AKAZE Vocabulary loaded in 0.005178s
+AKAZE Vocabulary loaded in 0.005688s
 
 
-Loading Vocabulary : /home/ucacsjj/Proj/UCL/Projects/PM-SLAM/Install/var/lib/orbslam2/voc/kaze_cv.fbow
+Loading Vocabulary : /home/ucacsjj/Proj/UCL/Projects/PM-SLAM/Install/var/lib/orbslam2/voc/brisk_cv.fbow
 This could take a while...
-Loading KAZE Vocabulary in FBoW.
-KAZE Vocabulary loaded in 0.019590s
+Loading BRISK Vocabulary in FBoW.
+BRISK Vocabulary loaded in 0.004928s
 
 
 Camera Parameters: 
@@ -47,16 +47,14 @@ Camera Parameters:
 - Num of Octaves: 4
 - Num of Octave Layers: 4
 
-[Feature 1] KAZE Extractor Parameters: 
- ( TH_LOW: 0.5, TH_HIGH: 1 )
-- Number of Features : 1000
-- Scale Levels       : 4
-- Scale Factor       : 1.2
-- Threshold          : 0.0005
-- nOctaves           : 4
-- nOctaveLayers      : 4
-- Extended (128‑dim) : 0
-- Upright            : 0
+[Feature 1] BRISK Extractor Parameters: 
+ ( TH_LOW: 100, TH_HIGH: 200 )
+- Number of Features: 1000
+- Scale Levels: 6
+- Scale Factor: 1.414
+- Threshold: 10
+- Num of Octaves: 3
+- Pattern Scale: 1
 
 -------
 Start processing sequence ...
@@ -64,19 +62,13 @@ Images in the sequence: 2273
 
 Viewer started, waiting for thread.
 1
-New map created with 31 points for 0 Feature Type 
-New map created with 50 points for 1 Feature Type 
-Wrong initialization, reseting...
-System Reseting
-Reseting Local Mapper... done
-Reseting Loop Closing... done
-Reseting Database... done
-0
-New map created with 473 points for 0 Feature Type 
-New map created with 641 points for 1 Feature Type 
-Tracking Initlized in 345.71s
-The initlized frame ID: 165
-[LoopClosing] Sim3 choosed on channel 1
+New map created with 223 points for 0 Feature Type 
+New map created with 107 points for 1 Feature Type 
+Tracking Initlized in 66.80s
+The initlized frame ID: 82
+The lost frame ID: 109
+The lost frame ID: 110
+[LoopClosing] Sim3 choosed on channel 0
 Loop detected!
 Local Mapping STOP
 Local Mapping RELEASE
@@ -93,24 +85,24 @@ Tracking thread joined...
 Saving correlation status...
 
 ========== Global Summary ==========
-Frames: 1787
-avg_CorrEdges: 121.925
-avg_match_A: 200.691
-avg_match_B: 319.111
-global_RI_MNR: 0.607526
-global_RI_GNR: 0.48179
-global_RI_DICE: 0.469121
+Frames: 2187
+avg_CorrEdges: 21.5016
+avg_match_A: 146.525
+avg_match_B: 163
+global_RI_MNR: 0.146744
+global_RI_GNR: 0.13913
+global_RI_DICE: 0.138933
 
 ========== Per-Channel Summary ==========
    chA   chB     avgCorr        avgA        avgB   avgRI_MNR   avgRI_GNR  avgRI_DICE
-     0     1     121.925     200.691     319.111    0.646925    0.468656    0.441769
+     0     1     21.5016     146.525         163    0.137277    0.114413    0.111531
 
 Correlation status saved!
 
 -------
 
-median tracking time: 0.28156
-mean tracking time: 0.292486
+median tracking time: 0.153437
+mean tracking time: 0.159861
 
 Saving camera trajectory to Trajectory.txt ...
 
@@ -118,9 +110,9 @@ trajectory saved!
 
 ========== Performance Summary (ms) ==========
 name                                mean      median        rmse         min         max       count
-Tracking                          26.234      24.824      10.818       7.085      73.907        1787
-Total Init                    178366.352  178366.352       0.000  178366.352  178366.352           2
-Pipeline                         292.480     281.556      56.541     208.080     547.663        2273
-KAZE Extract                     247.101     241.903      28.225     194.317     359.922        2273
-Correlation                        0.695       0.643       0.464       0.058       5.061        1787
-AKAZE Extract                     54.005      52.061      10.249      32.729     118.392        2273
+Tracking                          18.724      17.736      10.116       1.893      55.960        2190
+Total Init                     36413.377   36413.377       0.000   36413.377   36413.377           1
+Pipeline                         159.855     153.432      77.423      56.730     490.514        2273
+BRISK Extract                    123.941     132.605      55.239      13.780     269.909        2273
+Correlation                        0.452       0.416       0.328       0.009       2.988        2188
+AKAZE Extract                     64.890      64.523       7.281      41.796      97.928        2273

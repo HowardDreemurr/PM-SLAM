@@ -17,13 +17,13 @@ Input sensor was set to: Monocular
 Loading Vocabulary : /home/ucacsjj/Proj/UCL/Projects/PM-SLAM/Install/var/lib/orbslam2/voc/akaze_cv.fbow
 This could take a while...
 Loading AKAZE Vocabulary in FBoW.
-AKAZE Vocabulary loaded in 0.004476s
+AKAZE Vocabulary loaded in 0.004882s
 
 
 Loading Vocabulary : /home/ucacsjj/Proj/UCL/Projects/PM-SLAM/Install/var/lib/orbslam2/voc/brisk_cv.fbow
 This could take a while...
 Loading BRISK Vocabulary in FBoW.
-BRISK Vocabulary loaded in 0.005135s
+BRISK Vocabulary loaded in 0.004362s
 
 
 Camera Parameters: 
@@ -64,8 +64,12 @@ Viewer started, waiting for thread.
 1
 New map created with 223 points for 0 Feature Type 
 New map created with 107 points for 1 Feature Type 
-Tracking Initlized in 66.38s
+Tracking Initlized in 68.12s
 The initlized frame ID: 82
+The lost frame ID: 101
+The lost frame ID: 102
+The lost frame ID: 103
+The lost frame ID: 104
 The lost frame ID: 105
 The lost frame ID: 106
 The lost frame ID: 107
@@ -82,32 +86,44 @@ Updating map ...
 Local Mapping STOP
 Local Mapping RELEASE
 Map updated!
-The lost frame ID: 2253
+[LoopClosing] Sim3 choosed on channel 0
+Loop detected!
+Local Mapping STOP
+Local Mapping RELEASE
+Starting Global Bundle Adjustment
+[LoopClosing] Sim3 choosed on channel 0
+Loop detected!
+Local Mapping STOP
+Local Mapping RELEASE
+Starting Global Bundle Adjustment
 System::StopViewer()
 System::StopViewer() done
 Tracking thread joined...
+Global Bundle Adjustment finished
+Updating map ...
+Map updated!
 
 Saving correlation status...
 
 ========== Global Summary ==========
-Frames: 2182
-avg_CorrEdges: 19.9065
-avg_match_A: 147.515
-avg_match_B: 171.811
-global_RI_MNR: 0.134946
-global_RI_GNR: 0.125041
-global_RI_DICE: 0.124679
+Frames: 2180
+avg_CorrEdges: 21.4124
+avg_match_A: 159.748
+avg_match_B: 191.501
+global_RI_MNR: 0.134039
+global_RI_GNR: 0.122423
+global_RI_DICE: 0.121922
 
 ========== Per-Channel Summary ==========
    chA   chB     avgCorr        avgA        avgB   avgRI_MNR   avgRI_GNR  avgRI_DICE
-     0     1     19.9065     147.515     171.811    0.143611     0.11833    0.114649
+     0     1     21.4124     159.748     191.501     0.13511    0.109198    0.105491
 
 Correlation status saved!
 
 -------
 
-median tracking time: 0.152026
-mean tracking time: 0.161737
+median tracking time: 0.155829
+mean tracking time: 0.162997
 
 Saving camera trajectory to Trajectory.txt ...
 
@@ -115,9 +131,9 @@ trajectory saved!
 
 ========== Performance Summary (ms) ==========
 name                                mean      median        rmse         min         max       count
-Tracking                          20.319      17.594       8.935       4.019      58.263        2190
-Total Init                     35986.770   35986.770       0.000   35986.770   35986.770           1
-Pipeline                         161.731     152.021      74.459      56.184     478.994        2273
-BRISK Extract                    124.122     132.565      55.133      15.291     258.500        2273
-Correlation                        0.481       0.430       0.371       0.006       8.671        2183
-AKAZE Extract                     63.102      64.632      10.596      31.988     124.836        2273
+Tracking                          21.435      18.871      10.302       4.136      61.762        2190
+Total Init                     35772.725   35772.725       0.000   35772.725   35772.725           1
+Pipeline                         162.991     155.825      76.711      57.911     556.408        2273
+BRISK Extract                    123.383     131.655      55.274      14.183     256.737        2273
+Correlation                        0.505       0.457       0.338       0.033       5.342        2180
+AKAZE Extract                     61.707      62.532       9.884      35.519      97.824        2273

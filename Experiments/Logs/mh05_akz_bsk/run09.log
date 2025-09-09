@@ -1,0 +1,240 @@
+Registering ORBextractor...
+Registering AKAZEextractor...
+Registering BRISKextractor...
+Registering SIFTextractor...
+Registering KAZEextractor...
+Loading images...
+Loaded 2273 images.
+Creating SLAM system...
+
+ORB-SLAM2 Copyright (C) 2014-2016 Raul Mur-Artal, University of Zaragoza.
+This program comes with ABSOLUTELY NO WARRANTY;
+This is free software, and you are welcome to redistribute it
+under certain conditions. See LICENSE.txt.
+
+Input sensor was set to: Monocular
+
+Loading Vocabulary : /home/ucacsjj/Proj/UCL/Projects/PM-SLAM/Install/var/lib/orbslam2/voc/akaze_cv.fbow
+This could take a while...
+Loading AKAZE Vocabulary in FBoW.
+AKAZE Vocabulary loaded in 0.004578s
+
+
+Loading Vocabulary : /home/ucacsjj/Proj/UCL/Projects/PM-SLAM/Install/var/lib/orbslam2/voc/brisk_cv.fbow
+This could take a while...
+Loading BRISK Vocabulary in FBoW.
+BRISK Vocabulary loaded in 0.004563s
+
+
+Camera Parameters: 
+- fx: 458.654
+- fy: 457.296
+- cx: 367.215
+- cy: 248.375
+- k1: -0.283408
+- k2: 0.0739591
+- p1: 0.00019359
+- p2: 1.76187e-05
+- fps: 20
+- color order: RGB (ignored if grayscale)
+
+[Feature 0] AKAZE Extractor Parameters: 
+ ( TH_LOW: 100, TH_HIGH: 200 )
+- Number of Features: 1000
+- Scale Levels: 4
+- Scale Factor: 1.2
+- Threshold: 0.001
+- Num of Octaves: 4
+- Num of Octave Layers: 4
+
+[Feature 1] BRISK Extractor Parameters: 
+ ( TH_LOW: 100, TH_HIGH: 200 )
+- Number of Features: 1000
+- Scale Levels: 6
+- Scale Factor: 1.414
+- Threshold: 10
+- Num of Octaves: 3
+- Pattern Scale: 1
+
+-------
+Start processing sequence ...
+Images in the sequence: 2273
+
+Viewer started, waiting for thread.
+1
+New map created with 223 points for 0 Feature Type 
+New map created with 107 points for 1 Feature Type 
+Tracking Initlized in 66.32s
+The initlized frame ID: 82
+The lost frame ID: 101
+The lost frame ID: 102
+The lost frame ID: 103
+The lost frame ID: 104
+The lost frame ID: 105
+The lost frame ID: 106
+The lost frame ID: 107
+The lost frame ID: 108
+The lost frame ID: 109
+The lost frame ID: 110
+The lost frame ID: 1516
+The lost frame ID: 1517
+The lost frame ID: 1518
+The lost frame ID: 1519
+The lost frame ID: 1520
+The lost frame ID: 1521
+The lost frame ID: 1522
+The lost frame ID: 1523
+The lost frame ID: 1524
+The lost frame ID: 1525
+The lost frame ID: 1526
+The lost frame ID: 1527
+The lost frame ID: 1528
+The lost frame ID: 1529
+The lost frame ID: 1530
+The lost frame ID: 1531
+The lost frame ID: 1532
+The lost frame ID: 1533
+The lost frame ID: 1534
+The lost frame ID: 1535
+The lost frame ID: 1536
+The lost frame ID: 1537
+The lost frame ID: 1538
+The lost frame ID: 1539
+The lost frame ID: 1540
+The lost frame ID: 1541
+The lost frame ID: 1542
+The lost frame ID: 1543
+The lost frame ID: 1544
+The lost frame ID: 1545
+The lost frame ID: 1546
+The lost frame ID: 1547
+The lost frame ID: 1548
+The lost frame ID: 1549
+The lost frame ID: 1550
+The lost frame ID: 1551
+The lost frame ID: 1552
+The lost frame ID: 1553
+The lost frame ID: 1554
+The lost frame ID: 1555
+The lost frame ID: 1556
+The lost frame ID: 1557
+The lost frame ID: 1558
+The lost frame ID: 1559
+The lost frame ID: 1560
+The lost frame ID: 1561
+The lost frame ID: 1562
+The lost frame ID: 1563
+The lost frame ID: 1564
+The lost frame ID: 1565
+The lost frame ID: 1566
+The lost frame ID: 1567
+The lost frame ID: 1568
+The lost frame ID: 1569
+The lost frame ID: 1570
+The lost frame ID: 1571
+The lost frame ID: 1572
+The lost frame ID: 1573
+The lost frame ID: 1574
+The lost frame ID: 1575
+The lost frame ID: 1576
+The lost frame ID: 1577
+The lost frame ID: 1578
+The lost frame ID: 1579
+The lost frame ID: 1580
+The lost frame ID: 1581
+The lost frame ID: 1582
+The lost frame ID: 1583
+The lost frame ID: 1584
+The lost frame ID: 1585
+The lost frame ID: 1586
+The lost frame ID: 1587
+The lost frame ID: 1588
+The lost frame ID: 1589
+The lost frame ID: 1590
+The lost frame ID: 1591
+The lost frame ID: 1592
+The lost frame ID: 1593
+The lost frame ID: 1594
+The lost frame ID: 1595
+The lost frame ID: 1596
+The lost frame ID: 1597
+The lost frame ID: 1598
+The lost frame ID: 1599
+The lost frame ID: 1600
+The lost frame ID: 1601
+The lost frame ID: 1602
+The lost frame ID: 1603
+The lost frame ID: 1604
+The lost frame ID: 1605
+The lost frame ID: 1606
+The lost frame ID: 1607
+The lost frame ID: 1608
+The lost frame ID: 1609
+The lost frame ID: 1610
+The lost frame ID: 1611
+The lost frame ID: 1612
+The lost frame ID: 1613
+The lost frame ID: 1614
+The lost frame ID: 1615
+The lost frame ID: 1616
+The lost frame ID: 1617
+The lost frame ID: 1618
+The lost frame ID: 1619
+The lost frame ID: 1620
+The lost frame ID: 1621
+The lost frame ID: 1622
+The lost frame ID: 1623
+The lost frame ID: 1624
+The lost frame ID: 1625
+The lost frame ID: 1626
+The lost frame ID: 1627
+The lost frame ID: 1628
+The lost frame ID: 1629
+The lost frame ID: 1630
+The lost frame ID: 1631
+The lost frame ID: 1632
+The lost frame ID: 1633
+The lost frame ID: 1634
+The lost frame ID: 1635
+The lost frame ID: 1636
+The lost frame ID: 1637
+The lost frame ID: 1638
+The lost frame ID: 1639
+System::StopViewer()
+System::StopViewer() done
+Tracking thread joined...
+
+Saving correlation status...
+
+========== Global Summary ==========
+Frames: 2056
+avg_CorrEdges: 19.7699
+avg_match_A: 143.898
+avg_match_B: 166.757
+global_RI_MNR: 0.137389
+global_RI_GNR: 0.127625
+global_RI_DICE: 0.127279
+
+========== Per-Channel Summary ==========
+   chA   chB     avgCorr        avgA        avgB   avgRI_MNR   avgRI_GNR  avgRI_DICE
+     0     1     19.7699     143.898     166.757    0.142811    0.115836    0.111798
+
+Correlation status saved!
+
+-------
+
+median tracking time: 0.15237
+mean tracking time: 0.160592
+
+Saving camera trajectory to Trajectory.txt ...
+
+trajectory saved!
+
+========== Performance Summary (ms) ==========
+name                                mean      median        rmse         min         max       count
+Tracking                          19.642      17.335       9.257       3.012      65.772        2190
+Total Init                     35864.707   35864.707       0.000   35864.707   35864.707           1
+Pipeline                         160.586     152.364      75.149      61.782     504.393        2273
+BRISK Extract                    123.841     132.555      55.416      14.892     258.757        2273
+Correlation                        0.463       0.405       0.326       0.035       5.666        2056
+AKAZE Extract                     64.800      64.351       7.440      41.645      98.028        2273
