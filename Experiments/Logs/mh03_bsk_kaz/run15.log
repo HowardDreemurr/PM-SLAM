@@ -14,16 +14,16 @@ under certain conditions. See LICENSE.txt.
 
 Input sensor was set to: Monocular
 
-Loading Vocabulary : /home/ucacsjj/Proj/UCL/Projects/PM-SLAM/Install/var/lib/orbslam2/voc/akaze_cv.fbow
+Loading Vocabulary : /home/ucacsjj/Proj/UCL/Projects/PM-SLAM/Install/var/lib/orbslam2/voc/brisk_cv.fbow
 This could take a while...
-Loading AKAZE Vocabulary in FBoW.
-AKAZE Vocabulary loaded in 0.007348s
+Loading BRISK Vocabulary in FBoW.
+BRISK Vocabulary loaded in 0.003958s
 
 
 Loading Vocabulary : /home/ucacsjj/Proj/UCL/Projects/PM-SLAM/Install/var/lib/orbslam2/voc/kaze_cv.fbow
 This could take a while...
 Loading KAZE Vocabulary in FBoW.
-KAZE Vocabulary loaded in 0.016596s
+KAZE Vocabulary loaded in 0.015806s
 
 
 Camera Parameters: 
@@ -38,14 +38,14 @@ Camera Parameters:
 - fps: 20
 - color order: RGB (ignored if grayscale)
 
-[Feature 0] AKAZE Extractor Parameters: 
+[Feature 0] BRISK Extractor Parameters: 
  ( TH_LOW: 100, TH_HIGH: 200 )
 - Number of Features: 1000
-- Scale Levels: 4
-- Scale Factor: 1.2
-- Threshold: 0.001
-- Num of Octaves: 4
-- Num of Octave Layers: 4
+- Scale Levels: 6
+- Scale Factor: 1.414
+- Threshold: 10
+- Num of Octaves: 3
+- Pattern Scale: 1
 
 [Feature 1] KAZE Extractor Parameters: 
  ( TH_LOW: 0.5, TH_HIGH: 1 )
@@ -63,10 +63,10 @@ Start processing sequence ...
 Images in the sequence: 2700
 
 Viewer started, waiting for thread.
-0
-New map created with 849 points for 0 Feature Type 
-New map created with 855 points for 1 Feature Type 
-Tracking Initlized in 137.98s
+1
+New map created with 240 points for 0 Feature Type 
+New map created with 309 points for 1 Feature Type 
+Tracking Initlized in 129.69s
 The initlized frame ID: 55
 System::StopViewer()
 System::StopViewer() done
@@ -76,23 +76,23 @@ Saving correlation status...
 
 ========== Global Summary ==========
 Frames: 2644
-avg_CorrEdges: 144.528
-avg_match_A: 217.502
-avg_match_B: 345.649
-global_RI_MNR: 0.664491
-global_RI_GNR: 0.527113
-global_RI_DICE: 0.513285
+avg_CorrEdges: 46.6585
+avg_match_A: 204.192
+avg_match_B: 312.814
+global_RI_MNR: 0.228503
+global_RI_GNR: 0.184616
+global_RI_DICE: 0.180495
 
 ========== Per-Channel Summary ==========
    chA   chB     avgCorr        avgA        avgB   avgRI_MNR   avgRI_GNR  avgRI_DICE
-     0     1     144.528     217.502     345.649    0.671129    0.514913    0.494286
+     0     1     46.6585     204.192     312.814    0.220509    0.176362     0.17164
 
 Correlation status saved!
 
 -------
 
-median tracking time: 0.281165
-mean tracking time: 0.290947
+median tracking time: 0.276904
+mean tracking time: 0.287131
 
 Saving camera trajectory to Trajectory.txt ...
 
@@ -100,9 +100,9 @@ trajectory saved!
 
 ========== Performance Summary (ms) ==========
 name                                mean      median        rmse         min         max       count
-Tracking                          33.465      33.647      12.008       7.773      81.290        2644
-Total Init                     34831.046   34831.046       0.000   34831.046   34831.046           1
-Pipeline                         290.942     281.136      60.440     206.494     746.027        2700
-KAZE Extract                     246.105     242.661      27.707     189.620     398.242        2700
-Correlation                        0.738       0.669       0.372       0.114       4.916        2644
-AKAZE Extract                     50.798      49.256       9.927      29.815     123.783        2700
+Tracking                          31.038      32.443      10.784       3.512      65.576        2644
+Correlation                        0.638       0.583       0.293       0.081       4.766        2644
+Total Init                     35510.859   35510.859       0.000   35510.859   35510.859           1
+Pipeline                         287.125     276.845      60.602     201.199     727.195        2700
+KAZE Extract                     243.712     238.321      30.928     185.942     381.745        2700
+BRISK Extract                    164.230     155.235      67.996      33.290     337.452        2700

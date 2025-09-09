@@ -17,13 +17,13 @@ Input sensor was set to: Monocular
 Loading Vocabulary : /home/ucacsjj/Proj/UCL/Projects/PM-SLAM/Install/var/lib/orbslam2/voc/brisk_cv.fbow
 This could take a while...
 Loading BRISK Vocabulary in FBoW.
-BRISK Vocabulary loaded in 0.004553s
+BRISK Vocabulary loaded in 0.005989s
 
 
 Loading Vocabulary : /home/ucacsjj/Proj/UCL/Projects/PM-SLAM/Install/var/lib/orbslam2/voc/kaze_cv.fbow
 This could take a while...
 Loading KAZE Vocabulary in FBoW.
-KAZE Vocabulary loaded in 0.013085s
+KAZE Vocabulary loaded in 0.023006s
 
 
 Camera Parameters: 
@@ -66,43 +66,5 @@ Viewer started, waiting for thread.
 1
 New map created with 240 points for 0 Feature Type 
 New map created with 309 points for 1 Feature Type 
-Tracking Initlized in 128.16s
+Tracking Initlized in 128.24s
 The initlized frame ID: 55
-System::StopViewer()
-System::StopViewer() done
-Tracking thread joined...
-
-Saving correlation status...
-
-========== Global Summary ==========
-Frames: 2644
-avg_CorrEdges: 49.2481
-avg_match_A: 214.363
-avg_match_B: 313.76
-global_RI_MNR: 0.229741
-global_RI_GNR: 0.189896
-global_RI_DICE: 0.186502
-
-========== Per-Channel Summary ==========
-   chA   chB     avgCorr        avgA        avgB   avgRI_MNR   avgRI_GNR  avgRI_DICE
-     0     1     49.2481     214.363      313.76    0.219671    0.180418     0.17659
-
-Correlation status saved!
-
--------
-
-median tracking time: 0.282077
-mean tracking time: 0.292586
-
-Saving camera trajectory to Trajectory.txt ...
-
-trajectory saved!
-
-========== Performance Summary (ms) ==========
-name                                mean      median        rmse         min         max       count
-Tracking                          32.203      33.745      11.278       4.113      62.488        2644
-Correlation                        0.673       0.607       0.344       0.089       6.659        2644
-Total Init                     34810.089   34810.089       0.000   34810.089   34810.089           1
-Pipeline                         292.578     282.050      58.722     199.319     735.131        2700
-KAZE Extract                     248.815     240.997      33.504     179.880     392.250        2700
-BRISK Extract                    164.611     155.277      67.605      35.736     320.091        2700

@@ -17,7 +17,7 @@ Input sensor was set to: Monocular
 Loading Vocabulary : /home/ucacsjj/Proj/UCL/Projects/PM-SLAM/Install/var/lib/orbslam2/voc/brisk_cv.fbow
 This could take a while...
 Loading BRISK Vocabulary in FBoW.
-BRISK Vocabulary loaded in 0.004579s
+BRISK Vocabulary loaded in 0.006940s
 
 
 Camera Parameters: 
@@ -55,28 +55,8 @@ Reseting Loop Closing... done
 Reseting Database... done
 0
 New map created with 323 points for 0 Feature Type 
-Tracking Initlized in 0.16s
+Tracking Initlized in 0.17s
 The initlized frame ID: 1
-[LoopClosing] Sim3 choosed on channel 0
-Loop detected!
-Local Mapping STOP
-Local Mapping RELEASE
-Starting Global Bundle Adjustment
-Global Bundle Adjustment finished
-Updating map ...
-Local Mapping STOP
-Local Mapping RELEASE
-Map updated!
-[LoopClosing] Sim3 choosed on channel 0
-Loop detected!
-Local Mapping STOP
-Local Mapping RELEASE
-Starting Global Bundle Adjustment
-Global Bundle Adjustment finished
-Updating map ...
-Local Mapping STOP
-Local Mapping RELEASE
-Map updated!
 System::StopViewer()
 System::StopViewer() done
 Tracking thread joined...
@@ -87,8 +67,8 @@ Correlation status saved!
 
 -------
 
-median tracking time: 0.141471
-mean tracking time: 0.1456
+median tracking time: 0.142669
+mean tracking time: 0.146017
 
 Saving camera trajectory to Trajectory.txt ...
 
@@ -96,8 +76,8 @@ trajectory saved!
 
 ========== Performance Summary (ms) ==========
 name                                mean      median        rmse         min         max       count
-Tracking                          13.734      12.027       7.596       2.822      51.980        2187
+Tracking                          14.591      12.995       7.609       2.775      44.861        2187
 Correlation                        0.000       0.000       0.000       0.000       0.002        2187
-Total Init                     29805.269   29805.269       0.000   29805.269   29805.269           2
-Pipeline                         145.594     141.465      72.482      21.381     438.289        2273
-BRISK Extract                    122.425     130.380      56.268      13.137     296.551        2273
+Total Init                     29571.007   29571.007       0.000   29571.007   29571.007           2
+Pipeline                         146.011     142.664      71.529      22.598     410.300        2273
+BRISK Extract                    122.236     129.870      55.922      12.571     259.357        2273
