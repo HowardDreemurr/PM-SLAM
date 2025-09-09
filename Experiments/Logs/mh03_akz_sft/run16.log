@@ -17,13 +17,13 @@ Input sensor was set to: Monocular
 Loading Vocabulary : /home/ucacsjj/Proj/UCL/Projects/PM-SLAM/Install/var/lib/orbslam2/voc/akaze_cv.fbow
 This could take a while...
 Loading AKAZE Vocabulary in FBoW.
-AKAZE Vocabulary loaded in 0.003652s
+AKAZE Vocabulary loaded in 0.007414s
 
 
 Loading Vocabulary : /home/ucacsjj/Proj/UCL/Projects/PM-SLAM/Install/var/lib/orbslam2/voc/sift_cv.fbow
 This could take a while...
 Loading SIFT Vocabulary in FBoW.
-SIFT Vocabulary loaded in 0.028548s
+SIFT Vocabulary loaded in 0.030699s
 
 
 Camera Parameters: 
@@ -65,8 +65,43 @@ Viewer started, waiting for thread.
 0
 New map created with 849 points for 0 Feature Type 
 New map created with 1072 points for 1 Feature Type 
-Tracking Initlized in 72.54s
+Tracking Initlized in 73.48s
 The initlized frame ID: 55
-[LoopClosing] Sim3 choosed on channel 1
-Loop detected!
-Local Mapping STOP
+System::StopViewer()
+System::StopViewer() done
+Tracking thread joined...
+
+Saving correlation status...
+
+========== Global Summary ==========
+Frames: 2644
+avg_CorrEdges: 48.8385
+avg_match_A: 210.398
+avg_match_B: 221.702
+global_RI_MNR: 0.232124
+global_RI_GNR: 0.22613
+global_RI_DICE: 0.226052
+
+========== Per-Channel Summary ==========
+   chA   chB     avgCorr        avgA        avgB   avgRI_MNR   avgRI_GNR  avgRI_DICE
+     0     1     48.8385     210.398     221.702    0.228845    0.204598     0.20254
+
+Correlation status saved!
+
+-------
+
+median tracking time: 0.111988
+mean tracking time: 0.120888
+
+Saving camera trajectory to Trajectory.txt ...
+
+trajectory saved!
+
+========== Performance Summary (ms) ==========
+name                                mean      median        rmse         min         max       count
+Tracking                          27.750      26.277      11.755       5.474      85.613        2644
+Total Init                     27049.490   27049.490       0.000   27049.490   27049.490           1
+Pipeline                         120.883     111.962      59.366      60.965     608.183        2700
+SIFT Extract                      80.105      79.169      15.881      45.593     145.734        2700
+Correlation                        0.532       0.443       0.352       0.078       2.526        2644
+AKAZE Extract                     57.103      54.181      14.834      29.991     141.689        2700
