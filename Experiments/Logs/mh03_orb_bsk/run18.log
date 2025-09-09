@@ -17,13 +17,13 @@ Input sensor was set to: Monocular
 Loading Vocabulary : /home/ucacsjj/Proj/UCL/Projects/PM-SLAM/Install/var/lib/orbslam2/voc/orb_mur.fbow
 This could take a while...
 Loading ORB Vocabulary in FBoW.
-ORB Vocabulary loaded in 0.023790s
+ORB Vocabulary loaded in 0.022842s
 
 
 Loading Vocabulary : /home/ucacsjj/Proj/UCL/Projects/PM-SLAM/Install/var/lib/orbslam2/voc/brisk_cv.fbow
 This could take a while...
 Loading BRISK Vocabulary in FBoW.
-BRISK Vocabulary loaded in 0.003347s
+BRISK Vocabulary loaded in 0.003899s
 
 
 Camera Parameters: 
@@ -63,9 +63,8 @@ Viewer started, waiting for thread.
 0
 New map created with 167 points for 0 Feature Type 
 New map created with 633 points for 1 Feature Type 
-Tracking Initlized in 30.58s
+Tracking Initlized in 30.04s
 The initlized frame ID: 54
-The lost frame ID: 2641
 System::StopViewer()
 System::StopViewer() done
 Tracking thread joined...
@@ -73,24 +72,24 @@ Tracking thread joined...
 Saving correlation status...
 
 ========== Global Summary ==========
-Frames: 2644
-avg_CorrEdges: 76.3294
-avg_match_A: 165.328
-avg_match_B: 223.931
-global_RI_MNR: 0.461686
-global_RI_GNR: 0.3967
-global_RI_DICE: 0.392178
+Frames: 2645
+avg_CorrEdges: 73.0318
+avg_match_A: 164.032
+avg_match_B: 220.082
+global_RI_MNR: 0.445229
+global_RI_GNR: 0.384375
+global_RI_DICE: 0.380261
 
 ========== Per-Channel Summary ==========
    chA   chB     avgCorr        avgA        avgB   avgRI_MNR   avgRI_GNR  avgRI_DICE
-     0     1     76.3294     165.328     223.931    0.455077    0.380629    0.372598
+     0     1     73.0318     164.032     220.082    0.444184    0.372814    0.365237
 
 Correlation status saved!
 
 -------
 
-median tracking time: 0.182292
-mean tracking time: 0.19291
+median tracking time: 0.181932
+mean tracking time: 0.191614
 
 Saving camera trajectory to Trajectory.txt ...
 
@@ -98,9 +97,9 @@ trajectory saved!
 
 ========== Performance Summary (ms) ==========
 name                                mean      median        rmse         min         max       count
-Tracking                          26.189      25.433       9.779       5.650      62.866        2645
-Correlation                        0.527       0.462       0.266       0.026       2.770        2644
-Total Init                     23996.083   23996.083       0.000   23996.083   23996.083           1
-Pipeline                         192.904     182.253      75.336      52.885     521.340        2700
-BRISK Extract                    159.927     151.387      66.931      30.501     341.507        2700
-ORB Extract                       22.995      22.016       7.156       9.820      51.985        2700
+Tracking                          26.230      25.429       9.496       6.051      59.758        2645
+Correlation                        0.523       0.458       0.269       0.057       5.481        2645
+Total Init                     23630.530   23630.530       0.000   23630.530   23630.530           1
+Pipeline                         191.607     181.863      73.147      55.479     540.889        2700
+BRISK Extract                    158.709     152.578      65.284      37.840     324.847        2700
+ORB Extract                       23.620      22.800       7.301      10.535      53.747        2700

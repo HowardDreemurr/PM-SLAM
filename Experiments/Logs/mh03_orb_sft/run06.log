@@ -17,13 +17,13 @@ Input sensor was set to: Monocular
 Loading Vocabulary : /home/ucacsjj/Proj/UCL/Projects/PM-SLAM/Install/var/lib/orbslam2/voc/orb_mur.fbow
 This could take a while...
 Loading ORB Vocabulary in FBoW.
-ORB Vocabulary loaded in 0.023790s
+ORB Vocabulary loaded in 0.021756s
 
 
-Loading Vocabulary : /home/ucacsjj/Proj/UCL/Projects/PM-SLAM/Install/var/lib/orbslam2/voc/brisk_cv.fbow
+Loading Vocabulary : /home/ucacsjj/Proj/UCL/Projects/PM-SLAM/Install/var/lib/orbslam2/voc/sift_cv.fbow
 This could take a while...
-Loading BRISK Vocabulary in FBoW.
-BRISK Vocabulary loaded in 0.003347s
+Loading SIFT Vocabulary in FBoW.
+SIFT Vocabulary loaded in 0.027487s
 
 
 Camera Parameters: 
@@ -46,14 +46,15 @@ Camera Parameters:
 - Initial Fast Threshold: 20
 - Minimum Fast Threshold: 7
 
-[Feature 1] BRISK Extractor Parameters: 
- ( TH_LOW: 100, TH_HIGH: 200 )
-- Number of Features: 1000
-- Scale Levels: 6
-- Scale Factor: 1.414
-- Threshold: 10
-- Num of Octaves: 3
-- Pattern Scale: 1
+[Feature 1] SIFT Extractor Parameters: 
+ ( TH_LOW: 300, TH_HIGH: 500 )
+- Number of Features  : 1000
+- Scale Levels        : 1
+- Scale Factor        : 1
+- Contrast Threshold  : 0.001
+- Edge Threshold      : 5
+- nOctaves            : 3
+- Sigma               : 1.6
 
 -------
 Start processing sequence ...
@@ -62,10 +63,9 @@ Images in the sequence: 2700
 Viewer started, waiting for thread.
 0
 New map created with 167 points for 0 Feature Type 
-New map created with 633 points for 1 Feature Type 
-Tracking Initlized in 30.58s
+New map created with 1140 points for 1 Feature Type 
+Tracking Initlized in 44.65s
 The initlized frame ID: 54
-The lost frame ID: 2641
 System::StopViewer()
 System::StopViewer() done
 Tracking thread joined...
@@ -73,24 +73,24 @@ Tracking thread joined...
 Saving correlation status...
 
 ========== Global Summary ==========
-Frames: 2644
-avg_CorrEdges: 76.3294
-avg_match_A: 165.328
-avg_match_B: 223.931
-global_RI_MNR: 0.461686
-global_RI_GNR: 0.3967
-global_RI_DICE: 0.392178
+Frames: 2645
+avg_CorrEdges: 25.5868
+avg_match_A: 164.099
+avg_match_B: 202.119
+global_RI_MNR: 0.155923
+global_RI_GNR: 0.140494
+global_RI_DICE: 0.139735
 
 ========== Per-Channel Summary ==========
    chA   chB     avgCorr        avgA        avgB   avgRI_MNR   avgRI_GNR  avgRI_DICE
-     0     1     76.3294     165.328     223.931    0.455077    0.380629    0.372598
+     0     1     25.5868     164.099     202.119    0.157696    0.133561    0.131047
 
 Correlation status saved!
 
 -------
 
-median tracking time: 0.182292
-mean tracking time: 0.19291
+median tracking time: 0.103384
+mean tracking time: 0.108334
 
 Saving camera trajectory to Trajectory.txt ...
 
@@ -98,9 +98,9 @@ trajectory saved!
 
 ========== Performance Summary (ms) ==========
 name                                mean      median        rmse         min         max       count
-Tracking                          26.189      25.433       9.779       5.650      62.866        2645
-Correlation                        0.527       0.462       0.266       0.026       2.770        2644
-Total Init                     23996.083   23996.083       0.000   23996.083   23996.083           1
-Pipeline                         192.904     182.253      75.336      52.885     521.340        2700
-BRISK Extract                    159.927     151.387      66.931      30.501     341.507        2700
-ORB Extract                       22.995      22.016       7.156       9.820      51.985        2700
+Tracking                          22.889      22.453       8.303       6.005      55.744        2645
+Correlation                        0.431       0.374       0.228       0.057       2.372        2645
+Total Init                     19999.277   19999.277       0.000   19999.277   19999.277           1
+Pipeline                         108.328     103.348      44.280      53.548     430.682        2700
+SIFT Extract                      77.931      77.179      17.342      42.002     139.084        2700
+ORB Extract                       23.067      21.906       7.273       9.944      53.155        2700
