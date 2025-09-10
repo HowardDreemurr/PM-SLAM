@@ -1,0 +1,491 @@
+Registering ORBextractor...
+Registering AKAZEextractor...
+Registering BRISKextractor...
+Registering SIFTextractor...
+Registering KAZEextractor...
+Registering SuperPointExtractor...
+
+ORB-SLAM2 Copyright (C) 2014-2016 Raul Mur-Artal, University of Zaragoza.
+This program comes with ABSOLUTELY NO WARRANTY;
+This is free software, and you are welcome to redistribute it
+under certain conditions. See LICENSE.txt.
+
+Input sensor was set to: Monocular
+
+Loading Vocabulary : /home/howard/Refactored_ORB_SLAM2/Install/var/lib/orbslam2/voc/brisk_cv.fbow
+This could take a while...
+Loading BRISK Vocabulary in FBoW.
+BRISK Vocabulary loaded in 0.003930s
+
+
+Camera Parameters: 
+- fx: 983.044
+- fy: 983.044
+- cx: 643.647
+- cy: 493.379
+- k1: 0
+- k2: 0
+- p1: 0
+- p2: 0
+- fps: 16
+- color order: RGB (ignored if grayscale)
+
+[Feature 0] BRISK Extractor Parameters: 
+ ( TH_LOW: 150, TH_HIGH: 250 )
+- Number of Features: 2000
+- Scale Levels: 6
+- Scale Factor: 1.414
+- Threshold: 50
+- Num of Octaves: 3
+- Pattern Scale: 1
+
+-------
+Start processing sequence ...
+Images in the sequence: 7513
+
+0
+New map created with 305 points for 0 Feature Type 
+Tracking Initlized in 19.01s
+The initlized frame ID: 143
+The lost frame ID: 831
+The lost frame ID: 832
+The lost frame ID: 833
+The lost frame ID: 834
+The lost frame ID: 835
+The lost frame ID: 836
+The lost frame ID: 837
+The lost frame ID: 838
+The lost frame ID: 1249
+The lost frame ID: 1297
+The lost frame ID: 1467
+The lost frame ID: 1481
+The lost frame ID: 1483
+The lost frame ID: 1484
+The lost frame ID: 1485
+The lost frame ID: 1486
+The lost frame ID: 1487
+The lost frame ID: 1488
+The lost frame ID: 1489
+The lost frame ID: 1490
+The lost frame ID: 1493
+The lost frame ID: 1495
+The lost frame ID: 1497
+The lost frame ID: 1498
+The lost frame ID: 1499
+The lost frame ID: 1500
+The lost frame ID: 1501
+The lost frame ID: 1502
+The lost frame ID: 1503
+The lost frame ID: 1504
+The lost frame ID: 1505
+
+Saving camera trajectory to TrajectoryBeforeReset_oxf_bsk_r12_seg01_pid1004864_1757440372154.txt ...
+
+trajectory saved!
+[Tracking] wrote pre-reset trajectory to TrajectoryBeforeReset_oxf_bsk_r12_seg01_pid1004864_1757440372154.txt
+[Tracking] LOST for 10 consecutive frames -> reset
+System Reseting
+Reseting Local Mapper... done
+Reseting Loop Closing... done
+Reseting Database... done
+0
+New map created with 480 points for 0 Feature Type 
+Tracking Initlized in 0.60s
+The initlized frame ID: 3
+The lost frame ID: 234
+The lost frame ID: 235
+The lost frame ID: 1254
+The lost frame ID: 1256
+The lost frame ID: 1262
+The lost frame ID: 1264
+The lost frame ID: 1272
+The lost frame ID: 1275
+The lost frame ID: 1276
+The lost frame ID: 1286
+The lost frame ID: 1289
+The lost frame ID: 1292
+The lost frame ID: 1293
+The lost frame ID: 1298
+The lost frame ID: 1299
+The lost frame ID: 1301
+The lost frame ID: 1302
+The lost frame ID: 1303
+The lost frame ID: 1304
+The lost frame ID: 1305
+The lost frame ID: 1306
+The lost frame ID: 1307
+The lost frame ID: 1308
+The lost frame ID: 1310
+The lost frame ID: 1311
+The lost frame ID: 1312
+The lost frame ID: 1314
+The lost frame ID: 1316
+The lost frame ID: 1317
+The lost frame ID: 1318
+The lost frame ID: 1323
+The lost frame ID: 1325
+The lost frame ID: 1326
+The lost frame ID: 1327
+The lost frame ID: 1328
+The lost frame ID: 1332
+The lost frame ID: 1334
+The lost frame ID: 1337
+The lost frame ID: 1338
+The lost frame ID: 1341
+The lost frame ID: 1342
+The lost frame ID: 1344
+The lost frame ID: 1345
+The lost frame ID: 1349
+The lost frame ID: 1350
+The lost frame ID: 1351
+The lost frame ID: 1352
+The lost frame ID: 1353
+The lost frame ID: 1358
+The lost frame ID: 1360
+The lost frame ID: 1361
+The lost frame ID: 1363
+The lost frame ID: 1364
+The lost frame ID: 1366
+The lost frame ID: 1367
+The lost frame ID: 1368
+The lost frame ID: 1371
+The lost frame ID: 1373
+The lost frame ID: 1374
+The lost frame ID: 1375
+The lost frame ID: 1376
+The lost frame ID: 1377
+The lost frame ID: 1378
+The lost frame ID: 1379
+The lost frame ID: 1380
+The lost frame ID: 1382
+The lost frame ID: 1383
+The lost frame ID: 1384
+The lost frame ID: 1385
+The lost frame ID: 1386
+The lost frame ID: 1387
+The lost frame ID: 1389
+The lost frame ID: 1391
+The lost frame ID: 1392
+The lost frame ID: 1393
+The lost frame ID: 1394
+The lost frame ID: 1395
+The lost frame ID: 1397
+The lost frame ID: 1398
+The lost frame ID: 1399
+The lost frame ID: 1400
+The lost frame ID: 1402
+The lost frame ID: 1407
+The lost frame ID: 1409
+The lost frame ID: 1413
+The lost frame ID: 1414
+The lost frame ID: 1416
+The lost frame ID: 1422
+The lost frame ID: 1423
+The lost frame ID: 1425
+The lost frame ID: 1430
+The lost frame ID: 1447
+The lost frame ID: 1448
+The lost frame ID: 1460
+The lost frame ID: 1463
+The lost frame ID: 1464
+The lost frame ID: 1465
+The lost frame ID: 1466
+The lost frame ID: 1471
+The lost frame ID: 1475
+The lost frame ID: 1482
+The lost frame ID: 1487
+The lost frame ID: 1491
+The lost frame ID: 1492
+The lost frame ID: 1493
+The lost frame ID: 1495
+The lost frame ID: 1499
+The lost frame ID: 1500
+The lost frame ID: 1505
+The lost frame ID: 1507
+The lost frame ID: 1509
+The lost frame ID: 1511
+The lost frame ID: 1512
+The lost frame ID: 1514
+The lost frame ID: 1517
+The lost frame ID: 1520
+The lost frame ID: 1522
+The lost frame ID: 1527
+The lost frame ID: 1531
+The lost frame ID: 1532
+The lost frame ID: 1538
+The lost frame ID: 1539
+The lost frame ID: 1552
+The lost frame ID: 1558
+The lost frame ID: 1559
+The lost frame ID: 1564
+The lost frame ID: 1569
+The lost frame ID: 1571
+The lost frame ID: 1575
+The lost frame ID: 1577
+The lost frame ID: 1583
+The lost frame ID: 1590
+The lost frame ID: 1592
+The lost frame ID: 1593
+The lost frame ID: 1596
+The lost frame ID: 1598
+The lost frame ID: 1603
+The lost frame ID: 1605
+The lost frame ID: 1606
+The lost frame ID: 1607
+The lost frame ID: 1609
+The lost frame ID: 1612
+The lost frame ID: 1613
+The lost frame ID: 1615
+The lost frame ID: 1616
+The lost frame ID: 1617
+The lost frame ID: 1619
+The lost frame ID: 1621
+The lost frame ID: 1627
+The lost frame ID: 1628
+The lost frame ID: 1632
+The lost frame ID: 1640
+The lost frame ID: 1642
+The lost frame ID: 1643
+The lost frame ID: 1645
+The lost frame ID: 1652
+The lost frame ID: 1653
+The lost frame ID: 1655
+The lost frame ID: 1656
+The lost frame ID: 1663
+The lost frame ID: 1666
+The lost frame ID: 1672
+The lost frame ID: 1673
+The lost frame ID: 1676
+The lost frame ID: 1678
+The lost frame ID: 1679
+The lost frame ID: 1680
+The lost frame ID: 1685
+The lost frame ID: 1690
+The lost frame ID: 1693
+The lost frame ID: 1694
+The lost frame ID: 1695
+The lost frame ID: 1702
+The lost frame ID: 1703
+The lost frame ID: 1704
+The lost frame ID: 1706
+The lost frame ID: 1707
+The lost frame ID: 1710
+The lost frame ID: 1717
+The lost frame ID: 1724
+The lost frame ID: 1726
+The lost frame ID: 1755
+The lost frame ID: 1788
+The lost frame ID: 1802
+The lost frame ID: 1805
+The lost frame ID: 1864
+The lost frame ID: 2043
+The lost frame ID: 2045
+The lost frame ID: 2046
+The lost frame ID: 2047
+The lost frame ID: 2048
+The lost frame ID: 2049
+The lost frame ID: 2050
+The lost frame ID: 2051
+The lost frame ID: 2052
+The lost frame ID: 2065
+The lost frame ID: 2089
+The lost frame ID: 2098
+The lost frame ID: 2099
+The lost frame ID: 2103
+The lost frame ID: 2105
+The lost frame ID: 2125
+The lost frame ID: 2126
+The lost frame ID: 2134
+The lost frame ID: 2135
+The lost frame ID: 2138
+The lost frame ID: 2140
+The lost frame ID: 2142
+The lost frame ID: 2148
+The lost frame ID: 2149
+The lost frame ID: 2155
+The lost frame ID: 2164
+The lost frame ID: 2165
+The lost frame ID: 2166
+The lost frame ID: 2168
+The lost frame ID: 2170
+The lost frame ID: 2173
+The lost frame ID: 2175
+The lost frame ID: 2187
+The lost frame ID: 2189
+The lost frame ID: 2191
+The lost frame ID: 2194
+The lost frame ID: 2198
+The lost frame ID: 2207
+The lost frame ID: 2209
+The lost frame ID: 2213
+The lost frame ID: 2216
+The lost frame ID: 2218
+The lost frame ID: 2220
+The lost frame ID: 2225
+The lost frame ID: 2227
+The lost frame ID: 2267
+The lost frame ID: 2268
+The lost frame ID: 2272
+The lost frame ID: 2273
+The lost frame ID: 2275
+The lost frame ID: 2276
+The lost frame ID: 2282
+The lost frame ID: 2284
+The lost frame ID: 2287
+The lost frame ID: 2289
+The lost frame ID: 2291
+The lost frame ID: 2293
+The lost frame ID: 2295
+The lost frame ID: 2299
+The lost frame ID: 2301
+The lost frame ID: 2308
+The lost frame ID: 2311
+The lost frame ID: 2325
+The lost frame ID: 2327
+The lost frame ID: 2534
+The lost frame ID: 2535
+The lost frame ID: 2536
+The lost frame ID: 2537
+The lost frame ID: 2538
+The lost frame ID: 2540
+The lost frame ID: 2541
+The lost frame ID: 2542
+The lost frame ID: 2543
+The lost frame ID: 2544
+The lost frame ID: 2545
+The lost frame ID: 2546
+The lost frame ID: 2547
+The lost frame ID: 2548
+
+Saving camera trajectory to TrajectoryBeforeReset_oxf_bsk_r12_seg02_pid1004864_1757440638927.txt ...
+
+trajectory saved!
+[Tracking] wrote pre-reset trajectory to TrajectoryBeforeReset_oxf_bsk_r12_seg02_pid1004864_1757440638927.txt
+[Tracking] LOST for 10 consecutive frames -> reset
+System Reseting
+Reseting Local Mapper... done
+Reseting Loop Closing... done
+Reseting Database... done
+0
+New map created with 128 points for 0 Feature Type 
+Tracking Initlized in 1.93s
+The initlized frame ID: 30
+The lost frame ID: 909
+The lost frame ID: 910
+The lost frame ID: 911
+The lost frame ID: 912
+The lost frame ID: 913
+The lost frame ID: 914
+The lost frame ID: 915
+The lost frame ID: 916
+The lost frame ID: 917
+
+Saving camera trajectory to TrajectoryBeforeReset_oxf_bsk_r12_seg03_pid1004864_1757440713497.txt ...
+
+trajectory saved!
+[Tracking] wrote pre-reset trajectory to TrajectoryBeforeReset_oxf_bsk_r12_seg03_pid1004864_1757440713497.txt
+[Tracking] LOST for 10 consecutive frames -> reset
+System Reseting
+Reseting Local Mapper... done
+Reseting Loop Closing... done
+Reseting Database... done
+0
+New map created with 162 points for 0 Feature Type 
+Tracking Initlized in 0.48s
+The initlized frame ID: 8
+Track lost soon after initialisation, reseting...
+System Reseting
+Reseting Local Mapper... done
+Reseting Loop Closing... done
+Reseting Database... done
+0
+New map created with 131 points for 0 Feature Type 
+Tracking Initlized in 0.18s
+The initlized frame ID: 2
+The lost frame ID: 2239
+The lost frame ID: 2240
+The lost frame ID: 2241
+The lost frame ID: 2242
+The lost frame ID: 2243
+The lost frame ID: 2244
+The lost frame ID: 2245
+The lost frame ID: 2246
+The lost frame ID: 2247
+
+Saving camera trajectory to TrajectoryBeforeReset_oxf_bsk_r12_seg04_pid1004864_1757440882801.txt ...
+
+trajectory saved!
+[Tracking] wrote pre-reset trajectory to TrajectoryBeforeReset_oxf_bsk_r12_seg04_pid1004864_1757440882801.txt
+[Tracking] LOST for 10 consecutive frames -> reset
+System Reseting
+Reseting Local Mapper... done
+Reseting Loop Closing... done
+Reseting Database... done
+0
+New map created with 73 points for 0 Feature Type 
+Wrong initialization, reseting...
+System Reseting
+Reseting Local Mapper... done
+Reseting Loop Closing... done
+Reseting Database... done
+0
+New map created with 93 points for 0 Feature Type 
+Wrong initialization, reseting...
+System Reseting
+Reseting Local Mapper... done
+Reseting Loop Closing... done
+Reseting Database... done
+0
+New map created with 202 points for 0 Feature Type 
+Tracking Initlized in 0.39s
+The initlized frame ID: 2
+The lost frame ID: 139
+The lost frame ID: 140
+The lost frame ID: 141
+The lost frame ID: 142
+The lost frame ID: 143
+The lost frame ID: 144
+The lost frame ID: 145
+The lost frame ID: 146
+The lost frame ID: 147
+
+Saving camera trajectory to TrajectoryBeforeReset_oxf_bsk_r12_seg05_pid1004864_1757440905207.txt ...
+
+trajectory saved!
+[Tracking] wrote pre-reset trajectory to TrajectoryBeforeReset_oxf_bsk_r12_seg05_pid1004864_1757440905207.txt
+[Tracking] LOST for 10 consecutive frames -> reset
+System Reseting
+Reseting Local Mapper... done
+Reseting Loop Closing... done
+Reseting Database... done
+0
+New map created with 181 points for 0 Feature Type 
+Tracking Initlized in 0.42s
+The initlized frame ID: 2
+System::StopViewer()
+System::StopViewer() done
+
+Saving correlation status...
+
+Correlation status saved!
+
+System Shutdown
+-------
+
+median tracking time: 0.0586226
+mean tracking time: 0.0687223
+
+Saving camera trajectory to result12.txt ...
+
+trajectory saved!
+All done
+
+========== Performance Summary (ms) ==========
+name                                mean      median        rmse         min         max       count
+Lost Count                         1.000       1.000       0.000       1.000       1.000           5
+Tracking                           8.557       7.143       9.066       1.131     394.429        7301
+Reset Count                        1.000       1.000       0.000       1.000       1.000           8
+Correlation                        0.001       0.001       0.002       0.000       0.105        6973
+Total Init                     18117.806   18117.806       0.000   18117.806   18117.806           1
+Pipeline                          68.399      58.566      33.497       6.888     463.756        7513
+BRISK Extract                     54.029      44.321      29.702       3.664     166.525        7513

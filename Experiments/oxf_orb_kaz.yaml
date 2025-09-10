@@ -48,8 +48,8 @@ Vocabularies:
 SuperPoint:
   # Essential: Lower/Upper distance threshold for descriptor matching.
   # Matches with distance below this value are considered high-quality/too-weak.
-  TH_LOW: 0.3      # Low threshold for filtering out poor-quality matches.
-  TH_HIGH: 0.7     # High threshold for accepting confident matches.
+  TH_LOW: 0.7       # Low threshold for filtering out poor-quality matches.
+  TH_HIGH: 0.9     # High threshold for accepting confident matches.
 
   # Essential: Number of features per image
   nFeatures: 2000
@@ -114,7 +114,7 @@ AKAZE:
 
   # Essential: Number of features per image.
   # Maximum number of keypoints to retain after detection.
-  nFeatures: 1000
+  nFeatures: 2000
 
   # Essential: Number of levels in the scale pyramid.
   # Number of nonlinear diffusion pyramid levels for scale detection.
@@ -126,7 +126,7 @@ AKAZE:
 
   # AKAZE Extractor: Detector response threshold
   # The detector's response threshold determines which points are key points
-  threshold: 1e-3
+  threshold: 1e-4
 
   # AKAZE Extractor: Number of octaves
   # The number of "octaves" of the multi-scale pyramid (affects the image resolution range)
@@ -142,12 +142,12 @@ AKAZE:
 BRISK:
   # Essential: Lower/Upper distance threshold for descriptor matching.
   # Matches with distance below this value are considered high-quality/too-weak.
-  TH_LOW: 100.0       # Low threshold for filtering out poor-quality matches.
-  TH_HIGH: 200.0      # High threshold for accepting confident matches.
+  TH_LOW: 150.0       # Low threshold for filtering out poor-quality matches.
+  TH_HIGH: 250.0      # High threshold for accepting confident matches.
 
   # Essential: Number of features per image.
   # Maximum number of keypoints to retain after detection.
-  nFeatures: 1000
+  nFeatures: 2000
 
   # Essential: Number of levels in the scale pyramid.
   # Number of nonlinear diffusion pyramid levels for scale detection.
@@ -159,7 +159,7 @@ BRISK:
 
   # BRISK Extractor: Detector response threshold
   # The detector's response threshold determines which points are accepted as keypoints.
-  threshold: 10
+  threshold: 50
 
   # BRISK Extractor: Number of octaves
   # The number of pyramid layers for scale-invariance (controls detection resolution range)
@@ -180,7 +180,7 @@ SIFT:
 
   # Essential: Number of features per image.
   # Maximum number of keypoints to retain after detection.
-  nFeatures: 1000
+  nFeatures: 2000
 
   # Essential: Number of levels in the scale pyramid.
   # Number of nonlinear diffusion pyramid levels for scale detection.
@@ -200,7 +200,7 @@ SIFT:
 
   # SIFT Extractor: Contrast threshold.
   # Discards low-contrast keypoints; higher values yield fewer keypoints.
-  contrastThreshold: 0.001
+  contrastThreshold: 0.01
 
   # SIFT Extractor: Initial Gaussian blur sigma.
   # Applied to the base image before building the scale space.
@@ -218,7 +218,7 @@ KAZE:
 
   # Essential: Number of features per image.
   # Maximum number of keypoints retained after detection.
-  nFeatures: 1000
+  nFeatures: 2000
 
   # Essential: Number of levels in the scale pyramid.
   # Number of nonlinear diffusion pyramid levels for scale detection.
@@ -230,7 +230,7 @@ KAZE:
 
   # KAZE Extractor: Detector threshold.
   # Sensitivity threshold for feature detection (based on Hessian response).
-  threshold: 5e-4
+  threshold: 1e-3
 
   # KAZE Extractor: Number of octaves.
   # Controls the overall scale range covered by the pyramid.
