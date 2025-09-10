@@ -1,0 +1,45 @@
+========== 01 Performance Summary (ms) ==========
+name                                mean      median        rmse         min         max       count
+Tracking                          21.463      19.530      10.277       2.057     119.394        2190
+Correlation                        0.406       0.355       0.201       0.028       1.911        2169
+Total Init                     31844.797   31844.797       0.000   31844.797   31844.797           1
+Pipeline                         113.168     101.254      60.147      50.118     454.221        2273
+SIFT Extract                      79.645      77.336      21.167      42.284     159.745        2273
+ORB Extract                       23.659      24.227       7.322       8.906      50.529        2273
+
+========== 02 Performance Summary (ms) ==========
+name                                mean      median        rmse         min         max       count
+Tracking                          19.476      18.364       9.689       2.921     136.047        2191
+Correlation                        0.361       0.317       0.211       0.007       2.002        2188
+Total Init                     32064.126   32064.126       0.000   32064.126   32064.126           1
+Pipeline                         110.101      98.254      61.566      47.945     504.319        2273
+SIFT Extract                      78.460      76.043      20.483      41.708     165.302        2273
+ORB Extract                       23.366      23.657       7.169       9.051      48.065        2273
+
+========== 04 Performance Summary (ms) ==========
+name                                mean      median        rmse         min         max       count
+Tracking                          18.865      17.563       9.151       3.657      94.721        2191
+Correlation                        0.368       0.321       0.228       0.004       4.559        2188
+Total Init                     32453.156   32453.156       0.000   32453.156   32453.156           1
+Pipeline                         109.481      96.831      62.043      47.589     502.912        2273
+SIFT Extract                      78.542      76.270      20.696      42.205     160.263        2273
+ORB Extract                       23.415      23.794       7.387       9.033      48.740        2273
+
+========== 05 Performance Summary (ms) ==========
+name                                mean      median        rmse         min         max       count
+Tracking                          19.886      18.500       9.580       2.503     160.864        2190
+Correlation                        0.409       0.350       0.217       0.076       1.625        2186
+Total Init                     32921.528   32921.528       0.000   32921.528   32921.528           1
+Pipeline                         110.422      97.808      62.137      46.301     507.961        2273
+SIFT Extract                      78.272      75.777      20.200      42.364     159.012        2273
+ORB Extract                       23.532      23.807       7.202       8.658      49.039        2273
+
+========== 06 Performance Summary (ms) ==========
+name                                mean      median        rmse         min         max       count
+Tracking                          20.743      19.287      12.030       3.605     312.321        2191
+Correlation                        0.404       0.353       0.208       0.081       1.628        2178
+Total Init                     32915.345   32915.345       0.000   32915.345   32915.345           1
+Pipeline                         113.406      99.864      61.966      54.986     481.092        2273
+SIFT Extract                      80.212      77.698      21.178      43.380     164.877        2273
+ORB Extract                       23.289      23.368       7.357       9.100      47.851        2273
+

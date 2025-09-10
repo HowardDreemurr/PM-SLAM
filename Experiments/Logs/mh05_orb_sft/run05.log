@@ -17,13 +17,13 @@ Input sensor was set to: Monocular
 Loading Vocabulary : /home/ucacsjj/Proj/UCL/Projects/PM-SLAM/Install/var/lib/orbslam2/voc/orb_mur.fbow
 This could take a while...
 Loading ORB Vocabulary in FBoW.
-ORB Vocabulary loaded in 0.019879s
+ORB Vocabulary loaded in 0.020842s
 
 
-Loading Vocabulary : /home/ucacsjj/Proj/UCL/Projects/PM-SLAM/Install/var/lib/orbslam2/voc/kaze_cv.fbow
+Loading Vocabulary : /home/ucacsjj/Proj/UCL/Projects/PM-SLAM/Install/var/lib/orbslam2/voc/sift_cv.fbow
 This could take a while...
-Loading KAZE Vocabulary in FBoW.
-KAZE Vocabulary loaded in 0.012983s
+Loading SIFT Vocabulary in FBoW.
+SIFT Vocabulary loaded in 0.026936s
 
 
 Camera Parameters: 
@@ -46,16 +46,15 @@ Camera Parameters:
 - Initial Fast Threshold: 20
 - Minimum Fast Threshold: 7
 
-[Feature 1] KAZE Extractor Parameters: 
- ( TH_LOW: 0.5, TH_HIGH: 1 )
-- Number of Features : 1000
-- Scale Levels       : 4
-- Scale Factor       : 1.2
-- Threshold          : 0.0005
-- nOctaves           : 4
-- nOctaveLayers      : 4
-- Extended (128‑dim) : 0
-- Upright            : 0
+[Feature 1] SIFT Extractor Parameters: 
+ ( TH_LOW: 300, TH_HIGH: 500 )
+- Number of Features  : 1000
+- Scale Levels        : 1
+- Scale Factor        : 1
+- Contrast Threshold  : 0.001
+- Edge Threshold      : 5
+- nOctaves            : 3
+- Sigma               : 1.6
 
 -------
 Start processing sequence ...
@@ -63,10 +62,10 @@ Images in the sequence: 2273
 
 Viewer started, waiting for thread.
 1
-New map created with 86 points for 0 Feature Type 
-New map created with 356 points for 1 Feature Type 
-Tracking Initlized in 483.84s
-The initlized frame ID: 196
+New map created with 30 points for 0 Feature Type 
+New map created with 179 points for 1 Feature Type 
+Tracking Initlized in 71.78s
+The initlized frame ID: 82
 [LoopClosing] Sim3 choosed on channel 1
 Loop detected!
 Local Mapping STOP
@@ -77,6 +76,10 @@ Updating map ...
 Local Mapping STOP
 Local Mapping RELEASE
 Map updated!
+The lost frame ID: 2247
+The lost frame ID: 2248
+The lost frame ID: 2253
+The lost frame ID: 2254
 System::StopViewer()
 System::StopViewer() done
 Tracking thread joined...
@@ -84,24 +87,24 @@ Tracking thread joined...
 Saving correlation status...
 
 ========== Global Summary ==========
-Frames: 2076
-avg_CorrEdges: 40.3266
-avg_match_A: 179.026
-avg_match_B: 289.456
-global_RI_MNR: 0.225256
-global_RI_GNR: 0.177151
-global_RI_DICE: 0.172159
+Frames: 2186
+avg_CorrEdges: 18.849
+avg_match_A: 143.288
+avg_match_B: 165.913
+global_RI_MNR: 0.131547
+global_RI_GNR: 0.122249
+global_RI_DICE: 0.121921
 
 ========== Per-Channel Summary ==========
    chA   chB     avgCorr        avgA        avgB   avgRI_MNR   avgRI_GNR  avgRI_DICE
-     0     1     40.3266     179.026     289.456    0.240813    0.183912    0.176665
+     0     1      18.849     143.288     165.913    0.151945      0.1202    0.116405
 
 Correlation status saved!
 
 -------
 
-median tracking time: 0.357895
-mean tracking time: 0.359403
+median tracking time: 0.0978119
+mean tracking time: 0.110428
 
 Saving camera trajectory to Trajectory.txt ...
 
@@ -109,9 +112,9 @@ trajectory saved!
 
 ========== Performance Summary (ms) ==========
 name                                mean      median        rmse         min         max       count
-Tracking                          26.570      25.777      10.978       4.475      61.642        2076
-Correlation                        0.454       0.425       0.184       0.115       2.208        2076
-Total Init                     87029.690   87029.690       0.000   87029.690   87029.690           1
-Pipeline                         359.397     357.889      46.405     264.800     554.880        2273
-KAZE Extract                     320.878     318.312      37.556     238.878     421.963        2273
-ORB Extract                       23.443      24.462       6.161       9.036      46.358        2273
+Tracking                          19.886      18.500       9.580       2.503     160.864        2190
+Correlation                        0.409       0.350       0.217       0.076       1.625        2186
+Total Init                     32921.528   32921.528       0.000   32921.528   32921.528           1
+Pipeline                         110.422      97.808      62.137      46.301     507.961        2273
+SIFT Extract                      78.272      75.777      20.200      42.364     159.012        2273
+ORB Extract                       23.532      23.807       7.202       8.658      49.039        2273
