@@ -1,0 +1,137 @@
+Registering ORBextractor...
+Registering AKAZEextractor...
+Registering BRISKextractor...
+Registering SIFTextractor...
+Registering KAZEextractor...
+Loading images...
+Loaded 2273 images.
+Creating SLAM system...
+
+ORB-SLAM2 Copyright (C) 2014-2016 Raul Mur-Artal, University of Zaragoza.
+This program comes with ABSOLUTELY NO WARRANTY;
+This is free software, and you are welcome to redistribute it
+under certain conditions. See LICENSE.txt.
+
+Input sensor was set to: Monocular
+
+Loading Vocabulary : /home/ucacsjj/Proj/UCL/Projects/PM-SLAM/Install/var/lib/orbslam2/voc/orb_mur.fbow
+This could take a while...
+Loading ORB Vocabulary in FBoW.
+ORB Vocabulary loaded in 0.050769s
+
+
+Loading Vocabulary : /home/ucacsjj/Proj/UCL/Projects/PM-SLAM/Install/var/lib/orbslam2/voc/sift_cv.fbow
+This could take a while...
+Loading SIFT Vocabulary in FBoW.
+SIFT Vocabulary loaded in 0.041873s
+
+
+Camera Parameters: 
+- fx: 458.654
+- fy: 457.296
+- cx: 367.215
+- cy: 248.375
+- k1: -0.283408
+- k2: 0.0739591
+- p1: 0.00019359
+- p2: 1.76187e-05
+- fps: 20
+- color order: RGB (ignored if grayscale)
+
+[Feature 0] ORB Extractor Parameters: 
+ ( TH_LOW: 50, TH_HIGH: 100 )
+- Number of Features: 1000
+- Scale Levels: 8
+- Scale Factor: 1.2
+- Initial Fast Threshold: 20
+- Minimum Fast Threshold: 7
+
+[Feature 1] SIFT Extractor Parameters: 
+ ( TH_LOW: 300, TH_HIGH: 500 )
+- Number of Features  : 1000
+- Scale Levels        : 1
+- Scale Factor        : 1
+- Contrast Threshold  : 0.001
+- Edge Threshold      : 5
+- nOctaves            : 3
+- Sigma               : 1.6
+
+-------
+Start processing sequence ...
+Images in the sequence: 2273
+
+Viewer started, waiting for thread.
+1
+New map created with 30 points for 0 Feature Type 
+New map created with 179 points for 1 Feature Type 
+Tracking Initlized in 70.20s
+The initlized frame ID: 82
+[LoopClosing] Sim3 choosed on channel 1
+Loop detected!
+Local Mapping STOP
+Local Mapping RELEASE
+Starting Global Bundle Adjustment
+Global Bundle Adjustment finished
+Updating map ...
+Local Mapping STOP
+Local Mapping RELEASE
+Map updated!
+The lost frame ID: 2249
+The lost frame ID: 2253
+The lost frame ID: 2254
+The lost frame ID: 2255
+The lost frame ID: 2256
+The lost frame ID: 2257
+The lost frame ID: 2258
+The lost frame ID: 2259
+The lost frame ID: 2260
+The lost frame ID: 2261
+The lost frame ID: 2262
+The lost frame ID: 2263
+The lost frame ID: 2264
+The lost frame ID: 2265
+The lost frame ID: 2266
+The lost frame ID: 2267
+The lost frame ID: 2268
+The lost frame ID: 2269
+The lost frame ID: 2270
+The lost frame ID: 2271
+The lost frame ID: 2272
+System::StopViewer()
+System::StopViewer() done
+Tracking thread joined...
+
+Saving correlation status...
+
+========== Global Summary ==========
+Frames: 2169
+avg_CorrEdges: 20.8128
+avg_match_A: 149.31
+avg_match_B: 185.406
+global_RI_MNR: 0.139393
+global_RI_GNR: 0.125091
+global_RI_DICE: 0.124361
+
+========== Per-Channel Summary ==========
+   chA   chB     avgCorr        avgA        avgB   avgRI_MNR   avgRI_GNR  avgRI_DICE
+     0     1     20.8128      149.31     185.406    0.149206    0.120848    0.117726
+
+Correlation status saved!
+
+-------
+
+median tracking time: 0.101258
+mean tracking time: 0.113174
+
+Saving camera trajectory to Trajectory.txt ...
+
+trajectory saved!
+
+========== Performance Summary (ms) ==========
+name                                mean      median        rmse         min         max       count
+Tracking                          21.463      19.530      10.277       2.057     119.394        2190
+Correlation                        0.406       0.355       0.201       0.028       1.911        2169
+Total Init                     31844.797   31844.797       0.000   31844.797   31844.797           1
+Pipeline                         113.168     101.254      60.147      50.118     454.221        2273
+SIFT Extract                      79.645      77.336      21.167      42.284     159.745        2273
+ORB Extract                       23.659      24.227       7.322       8.906      50.529        2273

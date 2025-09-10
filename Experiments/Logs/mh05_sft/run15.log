@@ -17,7 +17,7 @@ Input sensor was set to: Monocular
 Loading Vocabulary : /home/ucacsjj/Proj/UCL/Projects/PM-SLAM/Install/var/lib/orbslam2/voc/sift_cv.fbow
 This could take a while...
 Loading SIFT Vocabulary in FBoW.
-SIFT Vocabulary loaded in 0.027341s
+SIFT Vocabulary loaded in 0.048666s
 
 
 Camera Parameters: 
@@ -56,9 +56,8 @@ Reseting Loop Closing... done
 Reseting Database... done
 0
 New map created with 786 points for 0 Feature Type 
-Tracking Initlized in 0.66s
+Tracking Initlized in 0.61s
 The initlized frame ID: 1
-The lost frame ID: 1164
 [LoopClosing] Sim3 choosed on channel 0
 Loop detected!
 Local Mapping STOP
@@ -69,8 +68,19 @@ Updating map ...
 Local Mapping STOP
 Local Mapping RELEASE
 Map updated!
-The lost frame ID: 2163
+[LoopClosing] Sim3 choosed on channel 0
+Loop detected!
+Local Mapping STOP
+Local Mapping RELEASE
+Starting Global Bundle Adjustment
+Global Bundle Adjustment finished
+Updating map ...
+Local Mapping STOP
+Local Mapping RELEASE
+Map updated!
+The lost frame ID: 2164
 The lost frame ID: 2169
+The lost frame ID: 2170
 System::StopViewer()
 System::StopViewer() done
 Tracking thread joined...
@@ -81,8 +91,8 @@ Correlation status saved!
 
 -------
 
-median tracking time: 0.0785952
-mean tracking time: 0.0910675
+median tracking time: 0.0816969
+mean tracking time: 0.0934696
 
 Saving camera trajectory to Trajectory.txt ...
 
@@ -90,8 +100,8 @@ trajectory saved!
 
 ========== Performance Summary (ms) ==========
 name                                mean      median        rmse         min         max       count
-Tracking                          12.513      11.649       5.673       2.315      39.578        2187
-Correlation                        0.000       0.000       0.000       0.000       0.008        2184
-Total Init                     30764.874   30764.874       0.000   30764.874   30764.874           2
-Pipeline                          91.063      78.592      56.654      45.744     432.930        2273
-SIFT Extract                      66.493      63.164      15.431      40.401     132.837        2273
+Tracking                          12.840      12.126       5.810       2.645      44.294        2187
+Correlation                        0.000       0.000       0.000       0.000       0.001        2184
+Total Init                     30210.797   30210.797       0.000   30210.797   30210.797           2
+Pipeline                          93.465      81.693      55.492      46.911     464.194        2273
+SIFT Extract                      68.567      65.545      16.254      40.853     141.377        2273
