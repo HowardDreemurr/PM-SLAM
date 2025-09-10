@@ -1,0 +1,394 @@
+Registering ORBextractor...
+Registering AKAZEextractor...
+Registering BRISKextractor...
+Registering SIFTextractor...
+Registering KAZEextractor...
+Registering SuperPointExtractor...
+
+ORB-SLAM2 Copyright (C) 2014-2016 Raul Mur-Artal, University of Zaragoza.
+This program comes with ABSOLUTELY NO WARRANTY;
+This is free software, and you are welcome to redistribute it
+under certain conditions. See LICENSE.txt.
+
+Input sensor was set to: Monocular
+
+Loading Vocabulary : /home/howard/Refactored_ORB_SLAM2/Install/var/lib/orbslam2/voc/orb_mur.fbow
+This could take a while...
+Loading ORB Vocabulary in FBoW.
+ORB Vocabulary loaded in 0.037247s
+
+
+Loading Vocabulary : /home/howard/Refactored_ORB_SLAM2/Install/var/lib/orbslam2/voc/kaze_cv.fbow
+This could take a while...
+Loading KAZE Vocabulary in FBoW.
+KAZE Vocabulary loaded in 0.026926s
+
+
+Camera Parameters: 
+- fx: 983.044
+- fy: 983.044
+- cx: 643.647
+- cy: 493.379
+- k1: 0
+- k2: 0
+- p1: 0
+- p2: 0
+- fps: 16
+- color order: RGB (ignored if grayscale)
+
+[Feature 0] ORB Extractor Parameters: 
+ ( TH_LOW: 50, TH_HIGH: 100 )
+- Number of Features: 2000
+- Scale Levels: 8
+- Scale Factor: 1.2
+- Initial Fast Threshold: 20
+- Minimum Fast Threshold: 7
+
+[Feature 1] KAZE Extractor Parameters: 
+ ( TH_LOW: 0.5, TH_HIGH: 1 )
+- Number of Features : 2000
+- Scale Levels       : 4
+- Scale Factor       : 1.2
+- Threshold          : 0.001
+- nOctaves           : 4
+- nOctaveLayers      : 4
+- Extended (128‑dim) : 0
+- Upright            : 0
+
+-------
+Start processing sequence ...
+Images in the sequence: 7513
+
+1
+New map created with 24 points for 0 Feature Type 
+New map created with 243 points for 1 Feature Type 
+Tracking Initlized in 371.46s
+The initlized frame ID: 141
+The lost frame ID: 831
+The lost frame ID: 832
+The lost frame ID: 833
+The lost frame ID: 834
+The lost frame ID: 835
+The lost frame ID: 836
+The lost frame ID: 837
+The lost frame ID: 1478
+The lost frame ID: 1479
+The lost frame ID: 1481
+The lost frame ID: 1486
+The lost frame ID: 1488
+The lost frame ID: 1489
+The lost frame ID: 1490
+The lost frame ID: 1491
+The lost frame ID: 1492
+The lost frame ID: 1493
+The lost frame ID: 1494
+The lost frame ID: 1495
+The lost frame ID: 1496
+
+Saving camera trajectory to TrajectoryBeforeReset_oxf_orb_kaz_r03_seg01_pid3821554_1757475499950.txt ...
+
+trajectory saved!
+[Tracking] wrote pre-reset trajectory to TrajectoryBeforeReset_oxf_orb_kaz_r03_seg01_pid3821554_1757475499950.txt
+[Tracking] LOST for 10 consecutive frames -> reset
+System Reseting
+Reseting Local Mapper... done
+Reseting Loop Closing... done
+Reseting Database... done
+1
+New map created with 105 points for 0 Feature Type 
+New map created with 746 points for 1 Feature Type 
+Tracking Initlized in 11.13s
+The initlized frame ID: 4
+The lost frame ID: 1265
+The lost frame ID: 1270
+The lost frame ID: 1278
+The lost frame ID: 1285
+The lost frame ID: 1288
+The lost frame ID: 1291
+The lost frame ID: 1292
+The lost frame ID: 1293
+The lost frame ID: 1295
+The lost frame ID: 1296
+The lost frame ID: 1298
+The lost frame ID: 1299
+The lost frame ID: 1301
+The lost frame ID: 1302
+The lost frame ID: 1303
+The lost frame ID: 1304
+The lost frame ID: 1307
+The lost frame ID: 1308
+The lost frame ID: 1309
+The lost frame ID: 1310
+The lost frame ID: 1313
+The lost frame ID: 1314
+The lost frame ID: 1315
+The lost frame ID: 1316
+The lost frame ID: 1317
+The lost frame ID: 1318
+The lost frame ID: 1319
+The lost frame ID: 1320
+The lost frame ID: 1321
+
+Saving camera trajectory to TrajectoryBeforeReset_oxf_orb_kaz_r03_seg02_pid3821554_1757476487728.txt ...
+
+trajectory saved!
+[Tracking] wrote pre-reset trajectory to TrajectoryBeforeReset_oxf_orb_kaz_r03_seg02_pid3821554_1757476487728.txt
+[Tracking] LOST for 10 consecutive frames -> reset
+System Reseting
+Reseting Local Mapper... done
+Reseting Loop Closing... done
+Reseting Database... done
+1
+New map created with 102 points for 0 Feature Type 
+New map created with 530 points for 1 Feature Type 
+Tracking Initlized in 2.74s
+The initlized frame ID: 1
+The lost frame ID: 130
+The lost frame ID: 131
+The lost frame ID: 132
+The lost frame ID: 137
+The lost frame ID: 143
+The lost frame ID: 145
+The lost frame ID: 150
+The lost frame ID: 151
+The lost frame ID: 152
+The lost frame ID: 155
+The lost frame ID: 158
+The lost frame ID: 160
+The lost frame ID: 161
+The lost frame ID: 162
+The lost frame ID: 166
+The lost frame ID: 167
+The lost frame ID: 169
+The lost frame ID: 170
+The lost frame ID: 173
+The lost frame ID: 175
+The lost frame ID: 179
+The lost frame ID: 181
+The lost frame ID: 183
+The lost frame ID: 185
+The lost frame ID: 187
+The lost frame ID: 190
+The lost frame ID: 194
+The lost frame ID: 196
+The lost frame ID: 197
+The lost frame ID: 199
+The lost frame ID: 201
+The lost frame ID: 202
+The lost frame ID: 205
+The lost frame ID: 206
+The lost frame ID: 207
+The lost frame ID: 209
+The lost frame ID: 216
+The lost frame ID: 217
+The lost frame ID: 218
+The lost frame ID: 219
+The lost frame ID: 220
+The lost frame ID: 221
+The lost frame ID: 223
+The lost frame ID: 225
+The lost frame ID: 226
+The lost frame ID: 227
+The lost frame ID: 228
+The lost frame ID: 232
+The lost frame ID: 233
+The lost frame ID: 234
+The lost frame ID: 237
+The lost frame ID: 239
+The lost frame ID: 243
+The lost frame ID: 244
+The lost frame ID: 245
+The lost frame ID: 247
+The lost frame ID: 248
+The lost frame ID: 249
+The lost frame ID: 250
+The lost frame ID: 254
+The lost frame ID: 256
+The lost frame ID: 257
+The lost frame ID: 259
+The lost frame ID: 260
+The lost frame ID: 261
+The lost frame ID: 270
+The lost frame ID: 271
+The lost frame ID: 273
+The lost frame ID: 275
+The lost frame ID: 276
+The lost frame ID: 278
+The lost frame ID: 281
+The lost frame ID: 285
+The lost frame ID: 286
+The lost frame ID: 289
+The lost frame ID: 290
+The lost frame ID: 291
+The lost frame ID: 293
+The lost frame ID: 294
+The lost frame ID: 295
+The lost frame ID: 296
+The lost frame ID: 297
+The lost frame ID: 298
+The lost frame ID: 299
+The lost frame ID: 300
+The lost frame ID: 301
+
+Saving camera trajectory to TrajectoryBeforeReset_oxf_orb_kaz_r03_seg03_pid3821554_1757476725970.txt ...
+
+trajectory saved!
+[Tracking] wrote pre-reset trajectory to TrajectoryBeforeReset_oxf_orb_kaz_r03_seg03_pid3821554_1757476725970.txt
+[Tracking] LOST for 10 consecutive frames -> reset
+System Reseting
+Reseting Local Mapper... done
+Reseting Loop Closing... done
+Reseting Database... done
+0
+New map created with 100 points for 0 Feature Type 
+New map created with 543 points for 1 Feature Type 
+Tracking Initlized in 2.95s
+The initlized frame ID: 1
+The lost frame ID: 431
+The lost frame ID: 432
+The lost frame ID: 433
+The lost frame ID: 434
+The lost frame ID: 435
+The lost frame ID: 437
+The lost frame ID: 438
+The lost frame ID: 439
+The lost frame ID: 440
+The lost frame ID: 441
+The lost frame ID: 442
+The lost frame ID: 443
+The lost frame ID: 444
+The lost frame ID: 445
+
+Saving camera trajectory to TrajectoryBeforeReset_oxf_orb_kaz_r03_seg04_pid3821554_1757477052125.txt ...
+
+trajectory saved!
+[Tracking] wrote pre-reset trajectory to TrajectoryBeforeReset_oxf_orb_kaz_r03_seg04_pid3821554_1757477052125.txt
+[Tracking] LOST for 10 consecutive frames -> reset
+System Reseting
+Reseting Local Mapper... done
+Reseting Loop Closing... done
+Reseting Database... done
+1
+New map created with 103 points for 0 Feature Type 
+New map created with 534 points for 1 Feature Type 
+Tracking Initlized in 2.58s
+The initlized frame ID: 1
+The lost frame ID: 1404
+The lost frame ID: 1405
+The lost frame ID: 1406
+The lost frame ID: 1407
+The lost frame ID: 1408
+The lost frame ID: 1409
+The lost frame ID: 1411
+The lost frame ID: 1412
+The lost frame ID: 1413
+The lost frame ID: 1414
+The lost frame ID: 1415
+The lost frame ID: 1416
+The lost frame ID: 1417
+The lost frame ID: 1418
+The lost frame ID: 1419
+
+Saving camera trajectory to TrajectoryBeforeReset_oxf_orb_kaz_r03_seg05_pid3821554_1757478044296.txt ...
+
+trajectory saved!
+[Tracking] wrote pre-reset trajectory to TrajectoryBeforeReset_oxf_orb_kaz_r03_seg05_pid3821554_1757478044296.txt
+[Tracking] LOST for 10 consecutive frames -> reset
+System Reseting
+Reseting Local Mapper... done
+Reseting Loop Closing... done
+Reseting Database... done
+0
+New map created with 135 points for 0 Feature Type 
+New map created with 365 points for 1 Feature Type 
+Tracking Initlized in 5.39s
+The initlized frame ID: 2
+The lost frame ID: 2235
+The lost frame ID: 2236
+The lost frame ID: 2237
+The lost frame ID: 2238
+The lost frame ID: 2239
+The lost frame ID: 2240
+The lost frame ID: 2241
+The lost frame ID: 2242
+The lost frame ID: 2243
+
+Saving camera trajectory to TrajectoryBeforeReset_oxf_orb_kaz_r03_seg06_pid3821554_1757479628008.txt ...
+
+trajectory saved!
+[Tracking] wrote pre-reset trajectory to TrajectoryBeforeReset_oxf_orb_kaz_r03_seg06_pid3821554_1757479628008.txt
+[Tracking] LOST for 10 consecutive frames -> reset
+System Reseting
+Reseting Local Mapper... done
+Reseting Loop Closing... done
+Reseting Database... done
+1
+New map created with 88 points for 0 Feature Type 
+New map created with 570 points for 1 Feature Type 
+Tracking Initlized in 24.60s
+The initlized frame ID: 10
+The lost frame ID: 156
+The lost frame ID: 157
+The lost frame ID: 158
+The lost frame ID: 159
+The lost frame ID: 160
+The lost frame ID: 161
+The lost frame ID: 162
+The lost frame ID: 163
+The lost frame ID: 164
+
+Saving camera trajectory to TrajectoryBeforeReset_oxf_orb_kaz_r03_seg07_pid3821554_1757479764491.txt ...
+
+trajectory saved!
+[Tracking] wrote pre-reset trajectory to TrajectoryBeforeReset_oxf_orb_kaz_r03_seg07_pid3821554_1757479764491.txt
+[Tracking] LOST for 10 consecutive frames -> reset
+System Reseting
+Reseting Local Mapper... done
+Reseting Loop Closing... done
+Reseting Database... done
+0
+New map created with 99 points for 0 Feature Type 
+New map created with 620 points for 1 Feature Type 
+Tracking Initlized in 2.83s
+The initlized frame ID: 1
+System::StopViewer()
+System::StopViewer() done
+
+Saving correlation status...
+
+========== Global Summary ==========
+Frames: 7102
+avg_CorrEdges: 7.73134
+avg_match_A: 88.5449
+avg_match_B: 202.355
+global_RI_MNR: 0.0873155
+global_RI_GNR: 0.0577586
+global_RI_DICE: 0.0531547
+
+========== Per-Channel Summary ==========
+   chA   chB     avgCorr        avgA        avgB   avgRI_MNR   avgRI_GNR  avgRI_DICE
+     0     1     7.73134     88.5449     202.355   0.0787419   0.0524256   0.0481653
+
+Correlation status saved!
+
+System Shutdown
+-------
+
+median tracking time: 0.730509
+mean tracking time: 0.733765
+
+Saving camera trajectory to result03.txt ...
+
+trajectory saved!
+All done
+
+========== Performance Summary (ms) ==========
+name                                mean      median        rmse         min         max       count
+Lost Count                         1.000       1.000       0.000       1.000       1.000           7
+Tracking                          18.284      16.032      10.815       1.843     178.987        7344
+Reset Count                        1.000       1.000       0.000       1.000       1.000           7
+Correlation                        0.326       0.259       0.415       0.004      12.600        7155
+Total Init                    116835.994  116835.994       0.000  116835.994  116835.994           1
+Pipeline                         732.355     730.456     103.007     461.156    5821.287        7513
+KAZE Extract                     705.829     705.332     100.396     439.676    5764.806        7513
+ORB Extract                       39.873      37.956      10.379      10.550     117.011        7513

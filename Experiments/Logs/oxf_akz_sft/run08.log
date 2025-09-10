@@ -1,0 +1,151 @@
+Registering ORBextractor...
+Registering AKAZEextractor...
+Registering BRISKextractor...
+Registering SIFTextractor...
+Registering KAZEextractor...
+Registering SuperPointExtractor...
+
+ORB-SLAM2 Copyright (C) 2014-2016 Raul Mur-Artal, University of Zaragoza.
+This program comes with ABSOLUTELY NO WARRANTY;
+This is free software, and you are welcome to redistribute it
+under certain conditions. See LICENSE.txt.
+
+Input sensor was set to: Monocular
+
+Loading Vocabulary : /home/howard/Refactored_ORB_SLAM2/Install/var/lib/orbslam2/voc/akaze_cv.fbow
+This could take a while...
+Loading AKAZE Vocabulary in FBoW.
+AKAZE Vocabulary loaded in 0.024460s
+
+
+Loading Vocabulary : /home/howard/Refactored_ORB_SLAM2/Install/var/lib/orbslam2/voc/sift_cv.fbow
+This could take a while...
+Loading SIFT Vocabulary in FBoW.
+SIFT Vocabulary loaded in 0.071684s
+
+
+Camera Parameters: 
+- fx: 983.044
+- fy: 983.044
+- cx: 643.647
+- cy: 493.379
+- k1: 0
+- k2: 0
+- p1: 0
+- p2: 0
+- fps: 16
+- color order: RGB (ignored if grayscale)
+
+[Feature 0] AKAZE Extractor Parameters: 
+ ( TH_LOW: 100, TH_HIGH: 200 )
+- Number of Features: 2000
+- Scale Levels: 4
+- Scale Factor: 1.2
+- Threshold: 0.0001
+- Num of Octaves: 4
+- Num of Octave Layers: 4
+
+[Feature 1] SIFT Extractor Parameters: 
+ ( TH_LOW: 300, TH_HIGH: 500 )
+- Number of Features  : 2000
+- Scale Levels        : 1
+- Scale Factor        : 1
+- Contrast Threshold  : 0.01
+- Edge Threshold      : 5
+- nOctaves            : 3
+- Sigma               : 1.6
+
+-------
+Start processing sequence ...
+Images in the sequence: 7513
+
+0
+New map created with 878 points for 0 Feature Type 
+New map created with 982 points for 1 Feature Type 
+Tracking Initlized in 212.45s
+The initlized frame ID: 151
+The lost frame ID: 831
+The lost frame ID: 832
+The lost frame ID: 833
+The lost frame ID: 834
+The lost frame ID: 835
+The lost frame ID: 836
+The lost frame ID: 837
+The lost frame ID: 838
+The lost frame ID: 839
+The lost frame ID: 843
+The lost frame ID: 846
+The lost frame ID: 848
+The lost frame ID: 854
+The lost frame ID: 856
+The lost frame ID: 858
+The lost frame ID: 859
+The lost frame ID: 861
+The lost frame ID: 863
+The lost frame ID: 864
+The lost frame ID: 865
+The lost frame ID: 866
+The lost frame ID: 867
+The lost frame ID: 868
+The lost frame ID: 869
+The lost frame ID: 870
+The lost frame ID: 871
+
+Saving camera trajectory to TrajectoryBeforeReset_oxf_akz_sft_r08_seg01_pid132687_1757480947402.txt ...
+
+trajectory saved!
+[Tracking] wrote pre-reset trajectory to TrajectoryBeforeReset_oxf_akz_sft_r08_seg01_pid132687_1757480947402.txt
+[Tracking] LOST for 10 consecutive frames -> reset
+System Reseting
+Reseting Local Mapper... done
+Reseting Loop Closing... done
+Reseting Database... done
+0
+New map created with 900 points for 0 Feature Type 
+New map created with 1069 points for 1 Feature Type 
+Tracking Initlized in 1.74s
+The initlized frame ID: 1
+The lost frame ID: 605
+The lost frame ID: 606
+The lost frame ID: 607
+The lost frame ID: 608
+The lost frame ID: 609
+The lost frame ID: 610
+The lost frame ID: 611
+The lost frame ID: 612
+The lost frame ID: 613
+
+Saving camera trajectory to TrajectoryBeforeReset_oxf_akz_sft_r08_seg02_pid132687_1757481119799.txt ...
+
+trajectory saved!
+[Tracking] wrote pre-reset trajectory to TrajectoryBeforeReset_oxf_akz_sft_r08_seg02_pid132687_1757481119799.txt
+[Tracking] LOST for 10 consecutive frames -> reset
+System Reseting
+Reseting Local Mapper... done
+Reseting Loop Closing... done
+Reseting Database... done
+0
+New map created with 429 points for 0 Feature Type 
+New map created with 517 points for 1 Feature Type 
+Tracking Initlized in 6.16s
+The initlized frame ID: 4
+Track lost soon after initialisation, reseting...
+System Reseting
+Reseting Local Mapper... done
+Reseting Loop Closing... done
+Reseting Database... done
+0
+New map created with 833 points for 0 Feature Type 
+New map created with 941 points for 1 Feature Type 
+Tracking Initlized in 5.31s
+The initlized frame ID: 3
+Track lost soon after initialisation, reseting...
+System Reseting
+Reseting Local Mapper... done
+Reseting Loop Closing... done
+Reseting Database... done
+0
+New map created with 1083 points for 0 Feature Type 
+New map created with 1336 points for 1 Feature Type 
+Tracking Initlized in 6.68s
+The initlized frame ID: 4
