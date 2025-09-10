@@ -35,6 +35,8 @@ POSES_DIR="${ROOT}/Poses"
 #GT_PATHS=(~/datasets/tum/fr1/groundtruth.txt ~/datasets/tum/fr2/groundtruth.txt ~/datasets/tum/fr3/groundtruth.txt ~/datasets/euroc/MH_01/state_groundtruth_estimate0/data.csv)
 DATASETS=(kt01 kt04 kt07)
 GT_PATHS=(${POSES_DIR}/kitti_gt/01_tum.txt ${POSES_DIR}/kitti_gt/04_tum.txt ${POSES_DIR}/kitti_gt/07_tum.txt)
+#DATASETS=(mh01)
+#GT_PATHS=(~/dataset/euroc/MH_01/state_groundtruth_estimate0/data.csv)
 # --------------- helpers ---------------
 
 maybe_activate_venv() {
