@@ -1,21 +1,74 @@
 numLines=15
 >>> Experiments to run: 15 (withCorr=0, noEvo=1, start=0,skip=6)
-line=name=oxf_kaz seq=~/dataset/tum/oxf_car yaml=../Install/etc/orbslam2/Monocular/TUM_OC.yaml runs=20 exe=../Install/bin features=[KAZE]
-[INFO] YAML for oxf_kaz: TUM_OC.yaml -> oxf_kaz.yaml  [KAZE]
+line=name=kt07_orb_akz seq=~/dataset/kitti/07 yaml=../Install/etc/orbslam2/Monocular/KITTI04-12.yaml runs=20 exe=../Install/bin mode=kitti features=[ORB,AKAZE]
+[INFO] YAML for kt07_orb_akz: KITTI04-12.yaml -> kt07_orb_akz.yaml  [ORB AKAZE]
 
-===== RUN: oxf_kaz =====
-[bench] seq=/home/howard/dataset/tum/oxf_car  yaml=../../../../Experiments/oxf_kaz.yaml  runs=20  exe_dir=../Install/bin  mode=tum times=
-[RESUME] Reusing existing tmp summary: /home/howard/Refactored_ORB_SLAM2/Experiments/Performances/oxf_kaz_pref.txt.tmp
-[INFO] name=oxf_kaz  seq=/home/howard/dataset/tum/oxf_car  runs=20  yaml=../../../../Experiments/oxf_kaz.yaml  withCorr=1  mode=tum  times=
-[RESUME] Skip run 01; found /home/howard/Refactored_ORB_SLAM2/Experiments/Poses/oxf_kaz/result01.txt
-[RESUME] Skip run 02; found /home/howard/Refactored_ORB_SLAM2/Experiments/Poses/oxf_kaz/result02.txt
-[RESUME] Skip run 03; found /home/howard/Refactored_ORB_SLAM2/Experiments/Poses/oxf_kaz/result03.txt
-[RESUME] Skip run 04; found /home/howard/Refactored_ORB_SLAM2/Experiments/Poses/oxf_kaz/result04.txt
-[RESUME] Skip run 05; found /home/howard/Refactored_ORB_SLAM2/Experiments/Poses/oxf_kaz/result05.txt
-[RESUME] Skip run 06; found /home/howard/Refactored_ORB_SLAM2/Experiments/Poses/oxf_kaz/result06.txt
-[RESUME] Skip run 07; found /home/howard/Refactored_ORB_SLAM2/Experiments/Poses/oxf_kaz/result07.txt
-[RESUME] Skip run 08; found /home/howard/Refactored_ORB_SLAM2/Experiments/Poses/oxf_kaz/result08.txt
-[RUN 09/20] 2025-09-10 02:58:32
+===== RUN: kt07_orb_akz =====
+[bench] seq=/home/howard/dataset/kitti/07  yaml=../../../../Experiments/kt07_orb_akz.yaml  runs=20  exe_dir=../Install/bin  mode=kitti times=
+[INFO] name=kt07_orb_akz  seq=/home/howard/dataset/kitti/07  runs=20  yaml=../../../../Experiments/kt07_orb_akz.yaml  withCorr=1  mode=kitti  times=
+[RESUME] Skip run 01; found /home/howard/PM-SLAM/Experiments/Poses/kt07_orb_akz/result01.txt
+[RESUME] Skip run 02; found /home/howard/PM-SLAM/Experiments/Poses/kt07_orb_akz/result02.txt
+[RESUME] Skip run 03; found /home/howard/PM-SLAM/Experiments/Poses/kt07_orb_akz/result03.txt
+[RESUME] Skip run 04; found /home/howard/PM-SLAM/Experiments/Poses/kt07_orb_akz/result04.txt
+[RESUME] Skip run 05; found /home/howard/PM-SLAM/Experiments/Poses/kt07_orb_akz/result05.txt
+[RESUME] Skip run 06; found /home/howard/PM-SLAM/Experiments/Poses/kt07_orb_akz/result06.txt
+[RESUME] Skip run 07; found /home/howard/PM-SLAM/Experiments/Poses/kt07_orb_akz/result07.txt
+[RESUME] Skip run 08; found /home/howard/PM-SLAM/Experiments/Poses/kt07_orb_akz/result08.txt
+[RESUME] Skip run 09; found /home/howard/PM-SLAM/Experiments/Poses/kt07_orb_akz/result09.txt
+[RESUME] Skip run 10; found /home/howard/PM-SLAM/Experiments/Poses/kt07_orb_akz/result10.txt
+[RESUME] Skip run 11; found /home/howard/PM-SLAM/Experiments/Poses/kt07_orb_akz/result11.txt
+[RESUME] Skip run 12; found /home/howard/PM-SLAM/Experiments/Poses/kt07_orb_akz/result12.txt
+[RESUME] Skip run 13; found /home/howard/PM-SLAM/Experiments/Poses/kt07_orb_akz/result13.txt
+[RESUME] Skip run 14; found /home/howard/PM-SLAM/Experiments/Poses/kt07_orb_akz/result14.txt
+[RESUME] Skip run 15; found /home/howard/PM-SLAM/Experiments/Poses/kt07_orb_akz/result15.txt
+[RESUME] Skip run 16; found /home/howard/PM-SLAM/Experiments/Poses/kt07_orb_akz/result16.txt
+[RESUME] Skip run 17; found /home/howard/PM-SLAM/Experiments/Poses/kt07_orb_akz/result17.txt
+[RESUME] Skip run 18; found /home/howard/PM-SLAM/Experiments/Poses/kt07_orb_akz/result18.txt
+[RESUME] Skip run 19; found /home/howard/PM-SLAM/Experiments/Poses/kt07_orb_akz/result19.txt
+[RESUME] Skip run 20; found /home/howard/PM-SLAM/Experiments/Poses/kt07_orb_akz/result20.txt
+[DONE] Summary: /home/howard/PM-SLAM/Experiments/Performances/kt07_orb_akz_pref.txt
+[SKIP] No Per-Channel summaries captured; no correlation files created.
+[DONE] Logs:    /home/howard/PM-SLAM/Experiments/Logs/kt07_orb_akz
+[DONE] Results: /home/howard/PM-SLAM/Experiments/Poses/kt07_orb_akz
+[SKIP] --noEvo set; skip APE/RPE for 'kt07_orb_akz'.
+line=name=kt07_akz_kaz seq=~/dataset/kitti/07 yaml=../Install/etc/orbslam2/Monocular/KITTI04-12.yaml runs=20 exe=../Install/bin mode=kitti features=[AKAZE,KAZE]
+[INFO] YAML for kt07_akz_kaz: KITTI04-12.yaml -> kt07_akz_kaz.yaml  [AKAZE KAZE]
+
+===== RUN: kt07_akz_kaz =====
+[bench] seq=/home/howard/dataset/kitti/07  yaml=../../../../Experiments/kt07_akz_kaz.yaml  runs=20  exe_dir=../Install/bin  mode=kitti times=
+[INFO] name=kt07_akz_kaz  seq=/home/howard/dataset/kitti/07  runs=20  yaml=../../../../Experiments/kt07_akz_kaz.yaml  withCorr=1  mode=kitti  times=
+[RESUME] Skip run 01; found /home/howard/PM-SLAM/Experiments/Poses/kt07_akz_kaz/result01.txt
+[RESUME] Skip run 02; found /home/howard/PM-SLAM/Experiments/Poses/kt07_akz_kaz/result02.txt
+[RESUME] Skip run 03; found /home/howard/PM-SLAM/Experiments/Poses/kt07_akz_kaz/result03.txt
+[RESUME] Skip run 04; found /home/howard/PM-SLAM/Experiments/Poses/kt07_akz_kaz/result04.txt
+[RESUME] Skip run 05; found /home/howard/PM-SLAM/Experiments/Poses/kt07_akz_kaz/result05.txt
+[RESUME] Skip run 06; found /home/howard/PM-SLAM/Experiments/Poses/kt07_akz_kaz/result06.txt
+[RESUME] Skip run 07; found /home/howard/PM-SLAM/Experiments/Poses/kt07_akz_kaz/result07.txt
+[RESUME] Skip run 08; found /home/howard/PM-SLAM/Experiments/Poses/kt07_akz_kaz/result08.txt
+[RESUME] Skip run 09; found /home/howard/PM-SLAM/Experiments/Poses/kt07_akz_kaz/result09.txt
+[RESUME] Skip run 10; found /home/howard/PM-SLAM/Experiments/Poses/kt07_akz_kaz/result10.txt
+[RESUME] Skip run 11; found /home/howard/PM-SLAM/Experiments/Poses/kt07_akz_kaz/result11.txt
+[RESUME] Skip run 12; found /home/howard/PM-SLAM/Experiments/Poses/kt07_akz_kaz/result12.txt
+[RESUME] Skip run 13; found /home/howard/PM-SLAM/Experiments/Poses/kt07_akz_kaz/result13.txt
+[RESUME] Skip run 14; found /home/howard/PM-SLAM/Experiments/Poses/kt07_akz_kaz/result14.txt
+[RESUME] Skip run 15; found /home/howard/PM-SLAM/Experiments/Poses/kt07_akz_kaz/result15.txt
+[RESUME] Skip run 16; found /home/howard/PM-SLAM/Experiments/Poses/kt07_akz_kaz/result16.txt
+[RESUME] Skip run 17; found /home/howard/PM-SLAM/Experiments/Poses/kt07_akz_kaz/result17.txt
+[RESUME] Skip run 18; found /home/howard/PM-SLAM/Experiments/Poses/kt07_akz_kaz/result18.txt
+[RESUME] Skip run 19; found /home/howard/PM-SLAM/Experiments/Poses/kt07_akz_kaz/result19.txt
+[RESUME] Skip run 20; found /home/howard/PM-SLAM/Experiments/Poses/kt07_akz_kaz/result20.txt
+[DONE] Summary: /home/howard/PM-SLAM/Experiments/Performances/kt07_akz_kaz_pref.txt
+[SKIP] No Per-Channel summaries captured; no correlation files created.
+[DONE] Logs:    /home/howard/PM-SLAM/Experiments/Logs/kt07_akz_kaz
+[DONE] Results: /home/howard/PM-SLAM/Experiments/Poses/kt07_akz_kaz
+[SKIP] --noEvo set; skip APE/RPE for 'kt07_akz_kaz'.
+line=name=kt07_kaz_sft seq=~/dataset/kitti/07 yaml=../Install/etc/orbslam2/Monocular/KITTI04-12.yaml runs=20 exe=../Install/bin mode=kitti features=[KAZE,SIFT]
+[INFO] YAML for kt07_kaz_sft: KITTI04-12.yaml -> kt07_kaz_sft.yaml  [KAZE SIFT]
+
+===== RUN: kt07_kaz_sft =====
+[bench] seq=/home/howard/dataset/kitti/07  yaml=../../../../Experiments/kt07_kaz_sft.yaml  runs=20  exe_dir=../Install/bin  mode=kitti times=
+[INFO] name=kt07_kaz_sft  seq=/home/howard/dataset/kitti/07  runs=20  yaml=../../../../Experiments/kt07_kaz_sft.yaml  withCorr=1  mode=kitti  times=
+[RUN 01/20] 2025-09-10 23:18:50
 Registering ORBextractor...
 Registering AKAZEextractor...
 Registering BRISKextractor...
@@ -30,22 +83,28 @@ under certain conditions. See LICENSE.txt.
 
 Input sensor was set to: Monocular
 
-Loading Vocabulary : /home/howard/Refactored_ORB_SLAM2/Install/var/lib/orbslam2/voc/kaze_cv.fbow
+Loading Vocabulary : /home/howard/PM-SLAM/Install/var/lib/orbslam2/voc/kaze_cv.fbow
 This could take a while...
 Loading KAZE Vocabulary in FBoW.
-KAZE Vocabulary loaded in 0.020917s
+KAZE Vocabulary loaded in 0.027637s
+
+
+Loading Vocabulary : /home/howard/PM-SLAM/Install/var/lib/orbslam2/voc/sift_cv.fbow
+This could take a while...
+Loading SIFT Vocabulary in FBoW.
+SIFT Vocabulary loaded in 0.034439s
 
 
 Camera Parameters: 
-- fx: 983.044
-- fy: 983.044
-- cx: 643.647
-- cy: 493.379
+- fx: 707.091
+- fy: 707.091
+- cx: 601.887
+- cy: 183.11
 - k1: 0
 - k2: 0
 - p1: 0
 - p2: 0
-- fps: 16
+- fps: 10
 - color order: RGB (ignored if grayscale)
 
 [Feature 0] KAZE Extractor Parameters: 
@@ -59,222 +118,1037 @@ Camera Parameters:
 - Extended (128‑dim) : 0
 - Upright            : 0
 
+[Feature 1] SIFT Extractor Parameters: 
+ ( TH_LOW: 300, TH_HIGH: 500 )
+- Number of Features  : 2000
+- Scale Levels        : 1
+- Scale Factor        : 1
+- Contrast Threshold  : 0.01
+- Edge Threshold      : 5
+- nOctaves            : 3
+- Sigma               : 1.6
+
 -------
 Start processing sequence ...
-Images in the sequence: 7513
+Images in the sequence: 1101
 
-0
-New map created with 885 points for 0 Feature Type 
-Tracking Initlized in 349.90s
-The initlized frame ID: 153
-The lost frame ID: 831
-The lost frame ID: 832
-The lost frame ID: 833
-The lost frame ID: 834
-The lost frame ID: 835
-The lost frame ID: 836
-The lost frame ID: 837
-The lost frame ID: 838
-The lost frame ID: 839
-The lost frame ID: 2814
-The lost frame ID: 2951
-The lost frame ID: 2962
-The lost frame ID: 2969
-The lost frame ID: 2970
-The lost frame ID: 2973
-The lost frame ID: 2981
-The lost frame ID: 2985
-The lost frame ID: 2986
-The lost frame ID: 2987
-The lost frame ID: 2989
-The lost frame ID: 2991
-The lost frame ID: 2993
-The lost frame ID: 2994
-The lost frame ID: 2997
-The lost frame ID: 2999
-The lost frame ID: 3000
-The lost frame ID: 3003
-The lost frame ID: 3004
-The lost frame ID: 3005
-The lost frame ID: 3006
-The lost frame ID: 3007
-The lost frame ID: 3008
-The lost frame ID: 3009
-The lost frame ID: 3010
-The lost frame ID: 3012
-The lost frame ID: 3013
-The lost frame ID: 3016
-The lost frame ID: 3017
-The lost frame ID: 3019
-The lost frame ID: 3020
-The lost frame ID: 3021
-The lost frame ID: 3022
-The lost frame ID: 3023
-The lost frame ID: 3024
-The lost frame ID: 3025
-The lost frame ID: 3026
-The lost frame ID: 3027
-
-Saving camera trajectory to TrajectoryBeforeReset_oxf_kaz_r09_seg01_pid3412038_1757471767025.txt ...
-
-trajectory saved!
-[Tracking] wrote pre-reset trajectory to TrajectoryBeforeReset_oxf_kaz_r09_seg01_pid3412038_1757471767025.txt
-[Tracking] LOST for 10 consecutive frames -> reset
-System Reseting
-Reseting Local Mapper... done
-Reseting Loop Closing... done
-Reseting Database... done
-0
-New map created with 749 points for 0 Feature Type 
-Tracking Initlized in 2.62s
-The initlized frame ID: 1
-The lost frame ID: 521
-The lost frame ID: 523
-The lost frame ID: 524
-The lost frame ID: 525
-The lost frame ID: 526
-The lost frame ID: 527
-The lost frame ID: 528
-The lost frame ID: 529
-The lost frame ID: 530
-The lost frame ID: 531
-
-Saving camera trajectory to TrajectoryBeforeReset_oxf_kaz_r09_seg02_pid3412038_1757472203247.txt ...
-
-trajectory saved!
-[Tracking] wrote pre-reset trajectory to TrajectoryBeforeReset_oxf_kaz_r09_seg02_pid3412038_1757472203247.txt
-[Tracking] LOST for 10 consecutive frames -> reset
-System Reseting
-Reseting Local Mapper... done
-Reseting Loop Closing... done
-Reseting Database... done
-0
-New map created with 655 points for 0 Feature Type 
-Tracking Initlized in 5.40s
-The initlized frame ID: 2
-The lost frame ID: 1409
-The lost frame ID: 1410
-The lost frame ID: 1411
-The lost frame ID: 1412
-The lost frame ID: 1413
-The lost frame ID: 1414
-The lost frame ID: 1415
-The lost frame ID: 1417
-The lost frame ID: 1418
-The lost frame ID: 1419
-The lost frame ID: 1420
-The lost frame ID: 1421
-The lost frame ID: 1422
-The lost frame ID: 1423
-The lost frame ID: 1424
-The lost frame ID: 1425
-
-Saving camera trajectory to TrajectoryBeforeReset_oxf_kaz_r09_seg03_pid3412038_1757473302243.txt ...
-
-trajectory saved!
-[Tracking] wrote pre-reset trajectory to TrajectoryBeforeReset_oxf_kaz_r09_seg03_pid3412038_1757473302243.txt
-[Tracking] LOST for 10 consecutive frames -> reset
-System Reseting
-Reseting Local Mapper... done
-Reseting Loop Closing... done
-Reseting Database... done
-0
-New map created with 362 points for 0 Feature Type 
-Tracking Initlized in 4.34s
-The initlized frame ID: 2
-Track lost soon after initialisation, reseting...
-System Reseting
-Reseting Local Mapper... done
-Reseting Loop Closing... done
-Reseting Database... done
-0
-New map created with 315 points for 0 Feature Type 
-Tracking Initlized in 2.78s
-The initlized frame ID: 1
-Track lost soon after initialisation, reseting...
-System Reseting
-Reseting Local Mapper... done
-Reseting Loop Closing... done
-Reseting Database... done
-0
-New map created with 447 points for 0 Feature Type 
-Tracking Initlized in 2.20s
-The initlized frame ID: 1
-The lost frame ID: 2229
-The lost frame ID: 2230
-The lost frame ID: 2231
-The lost frame ID: 2232
-The lost frame ID: 2233
-The lost frame ID: 2234
-The lost frame ID: 2235
-The lost frame ID: 2236
-The lost frame ID: 2237
-
-Saving camera trajectory to TrajectoryBeforeReset_oxf_kaz_r09_seg04_pid3412038_1757474883103.txt ...
-
-trajectory saved!
-[Tracking] wrote pre-reset trajectory to TrajectoryBeforeReset_oxf_kaz_r09_seg04_pid3412038_1757474883103.txt
-[Tracking] LOST for 10 consecutive frames -> reset
-System Reseting
-Reseting Local Mapper... done
-Reseting Loop Closing... done
-Reseting Database... done
-0
-New map created with 359 points for 0 Feature Type 
-Tracking Initlized in 24.02s
-The initlized frame ID: 10
-The lost frame ID: 154
-The lost frame ID: 155
-The lost frame ID: 156
-The lost frame ID: 157
-The lost frame ID: 158
-The lost frame ID: 159
-The lost frame ID: 160
-The lost frame ID: 161
-The lost frame ID: 162
-
-Saving camera trajectory to TrajectoryBeforeReset_oxf_kaz_r09_seg05_pid3412038_1757475014073.txt ...
-
-trajectory saved!
-[Tracking] wrote pre-reset trajectory to TrajectoryBeforeReset_oxf_kaz_r09_seg05_pid3412038_1757475014073.txt
-[Tracking] LOST for 10 consecutive frames -> reset
-System Reseting
-Reseting Local Mapper... done
-Reseting Loop Closing... done
-Reseting Database... done
-0
-New map created with 630 points for 0 Feature Type 
-Tracking Initlized in 2.97s
-The initlized frame ID: 1
+Viewer started, waiting for thread.
+1
+New map created with 235 points for 0 Feature Type 
+New map created with 804 points for 1 Feature Type 
+Tracking Initlized in 7.73s
+The initlized frame ID: 3
+[LoopClosing] Sim3 choosed on channel 0
+Loop detected!
+Local Mapping STOP
+Local Mapping RELEASE
+Starting Global Bundle Adjustment
+Global Bundle Adjustment finished
+Updating map ...
+Local Mapping STOP
+Local Mapping RELEASE
+Map updated!
 System::StopViewer()
 System::StopViewer() done
+System::StopViewer()
+System::StopViewer() done
+Tracking thread joined...
 
 Saving correlation status...
 
+========== Global Summary ==========
+Frames: 1097
+avg_CorrEdges: 12.9991
+avg_match_A: 208.805
+avg_match_B: 170.295
+global_RI_MNR: 0.0763326
+global_RI_GNR: 0.0689352
+global_RI_DICE: 0.0685786
+
+========== Per-Channel Summary ==========
+   chA   chB     avgCorr        avgA        avgB   avgRI_MNR   avgRI_GNR  avgRI_DICE
+     0     1     12.9991     208.805     170.295   0.0718399   0.0618409   0.0609242
+
 Correlation status saved!
 
-System Shutdown
 -------
 
-median tracking time: 0.749739
-mean tracking time: 0.755395
+median tracking time: 0.264375
+mean tracking time: 0.309683
+
+Saving camera trajectory to result01.txt ...
+
+trajectory saved!
+
+========== Performance Summary (ms) ==========
+name                                mean      median        rmse         min         max       count
+Tracking                          15.715      14.023       6.423       6.476      60.905        1097
+Correlation                        0.395       0.345       0.241       0.084       3.936        1097
+Total Init                      2559.998    2559.998       0.000    2559.998    2559.998           1
+Pipeline                         309.672     264.367     111.395     191.384    1385.595        1101
+KAZE Extract                     289.221     245.976     102.067     181.791    1085.395        1101
+SIFT Extract                      88.131      73.557      40.057      40.207     438.090        1101
+[RUN 02/20] 2025-09-10 23:24:40
+Registering ORBextractor...
+Registering AKAZEextractor...
+Registering BRISKextractor...
+Registering SIFTextractor...
+Registering KAZEextractor...
+Registering SuperPointExtractor...
+
+ORB-SLAM2 Copyright (C) 2014-2016 Raul Mur-Artal, University of Zaragoza.
+This program comes with ABSOLUTELY NO WARRANTY;
+This is free software, and you are welcome to redistribute it
+under certain conditions. See LICENSE.txt.
+
+Input sensor was set to: Monocular
+
+Loading Vocabulary : /home/howard/PM-SLAM/Install/var/lib/orbslam2/voc/kaze_cv.fbow
+This could take a while...
+Loading KAZE Vocabulary in FBoW.
+KAZE Vocabulary loaded in 0.014650s
+
+
+Loading Vocabulary : /home/howard/PM-SLAM/Install/var/lib/orbslam2/voc/sift_cv.fbow
+This could take a while...
+Loading SIFT Vocabulary in FBoW.
+SIFT Vocabulary loaded in 0.030585s
+
+
+Camera Parameters: 
+- fx: 707.091
+- fy: 707.091
+- cx: 601.887
+- cy: 183.11
+- k1: 0
+- k2: 0
+- p1: 0
+- p2: 0
+- fps: 10
+- color order: RGB (ignored if grayscale)
+
+[Feature 0] KAZE Extractor Parameters: 
+ ( TH_LOW: 0.5, TH_HIGH: 1 )
+- Number of Features : 2000
+- Scale Levels       : 4
+- Scale Factor       : 1.2
+- Threshold          : 0.001
+- nOctaves           : 4
+- nOctaveLayers      : 4
+- Extended (128‑dim) : 0
+- Upright            : 0
+
+[Feature 1] SIFT Extractor Parameters: 
+ ( TH_LOW: 300, TH_HIGH: 500 )
+- Number of Features  : 2000
+- Scale Levels        : 1
+- Scale Factor        : 1
+- Contrast Threshold  : 0.01
+- Edge Threshold      : 5
+- nOctaves            : 3
+- Sigma               : 1.6
+
+-------
+Start processing sequence ...
+Images in the sequence: 1101
+
+Viewer started, waiting for thread.
+1
+New map created with 235 points for 0 Feature Type 
+New map created with 804 points for 1 Feature Type 
+Tracking Initlized in 5.25s
+The initlized frame ID: 3
+[LoopClosing] Sim3 choosed on channel 0
+Loop detected!
+Local Mapping STOP
+Local Mapping RELEASE
+Starting Global Bundle Adjustment
+Global Bundle Adjustment finished
+Updating map ...
+Local Mapping STOP
+Local Mapping RELEASE
+Map updated!
+System::StopViewer()
+System::StopViewer() done
+System::StopViewer()
+System::StopViewer() done
+Tracking thread joined...
+
+Saving correlation status...
+
+========== Global Summary ==========
+Frames: 1097
+avg_CorrEdges: 13.8769
+avg_match_A: 213.259
+avg_match_B: 168.345
+global_RI_MNR: 0.0824313
+global_RI_GNR: 0.0732385
+global_RI_DICE: 0.0727294
+
+========== Per-Channel Summary ==========
+   chA   chB     avgCorr        avgA        avgB   avgRI_MNR   avgRI_GNR  avgRI_DICE
+     0     1     13.8769     213.259     168.345   0.0757662   0.0635901     0.06239
+
+Correlation status saved!
+
+-------
+
+median tracking time: 0.242046
+mean tracking time: 0.249884
+
+Saving camera trajectory to result02.txt ...
+
+trajectory saved!
+
+========== Performance Summary (ms) ==========
+name                                mean      median        rmse         min         max       count
+Tracking                          13.093      11.923       4.994       5.276      42.013        1097
+Correlation                        0.333       0.305       0.181       0.077       1.894        1097
+Total Init                      1622.013    1622.013       0.000    1622.013    1622.013           1
+Pipeline                         249.875     242.033      45.216     176.255     581.580        1101
+KAZE Extract                     233.467     225.594      38.411     164.609     462.180        1101
+SIFT Extract                      67.549      59.595      26.718      40.075     247.048        1101
+[RUN 03/20] 2025-09-10 23:29:26
+Registering ORBextractor...
+Registering AKAZEextractor...
+Registering BRISKextractor...
+Registering SIFTextractor...
+Registering KAZEextractor...
+Registering SuperPointExtractor...
+
+ORB-SLAM2 Copyright (C) 2014-2016 Raul Mur-Artal, University of Zaragoza.
+This program comes with ABSOLUTELY NO WARRANTY;
+This is free software, and you are welcome to redistribute it
+under certain conditions. See LICENSE.txt.
+
+Input sensor was set to: Monocular
+
+Loading Vocabulary : /home/howard/PM-SLAM/Install/var/lib/orbslam2/voc/kaze_cv.fbow
+This could take a while...
+Loading KAZE Vocabulary in FBoW.
+KAZE Vocabulary loaded in 0.008200s
+
+
+Loading Vocabulary : /home/howard/PM-SLAM/Install/var/lib/orbslam2/voc/sift_cv.fbow
+This could take a while...
+Loading SIFT Vocabulary in FBoW.
+SIFT Vocabulary loaded in 0.016273s
+
+
+Camera Parameters: 
+- fx: 707.091
+- fy: 707.091
+- cx: 601.887
+- cy: 183.11
+- k1: 0
+- k2: 0
+- p1: 0
+- p2: 0
+- fps: 10
+- color order: RGB (ignored if grayscale)
+
+[Feature 0] KAZE Extractor Parameters: 
+ ( TH_LOW: 0.5, TH_HIGH: 1 )
+- Number of Features : 2000
+- Scale Levels       : 4
+- Scale Factor       : 1.2
+- Threshold          : 0.001
+- nOctaves           : 4
+- nOctaveLayers      : 4
+- Extended (128‑dim) : 0
+- Upright            : 0
+
+[Feature 1] SIFT Extractor Parameters: 
+ ( TH_LOW: 300, TH_HIGH: 500 )
+- Number of Features  : 2000
+- Scale Levels        : 1
+- Scale Factor        : 1
+- Contrast Threshold  : 0.01
+- Edge Threshold      : 5
+- nOctaves            : 3
+- Sigma               : 1.6
+
+-------
+Start processing sequence ...
+Images in the sequence: 1101
+
+Viewer started, waiting for thread.
+1
+New map created with 235 points for 0 Feature Type 
+New map created with 804 points for 1 Feature Type 
+Tracking Initlized in 4.36s
+The initlized frame ID: 3
+[LoopClosing] Sim3 choosed on channel 0
+Loop detected!
+Local Mapping STOP
+Local Mapping RELEASE
+Starting Global Bundle Adjustment
+Global Bundle Adjustment finished
+Updating map ...
+Local Mapping STOP
+Local Mapping RELEASE
+Map updated!
+System::StopViewer()
+System::StopViewer() done
+System::StopViewer()
+System::StopViewer() done
+Tracking thread joined...
+
+Saving correlation status...
+
+========== Global Summary ==========
+Frames: 1097
+avg_CorrEdges: 14.3318
+avg_match_A: 214.623
+avg_match_B: 171.848
+global_RI_MNR: 0.0833983
+global_RI_GNR: 0.0746262
+global_RI_DICE: 0.0741677
+
+========== Per-Channel Summary ==========
+   chA   chB     avgCorr        avgA        avgB   avgRI_MNR   avgRI_GNR  avgRI_DICE
+     0     1     14.3318     214.623     171.848   0.0722744   0.0621911   0.0612729
+
+Correlation status saved!
+
+-------
+
+median tracking time: 0.221517
+mean tracking time: 0.225526
+
+Saving camera trajectory to result03.txt ...
+
+trajectory saved!
+
+========== Performance Summary (ms) ==========
+name                                mean      median        rmse         min         max       count
+Tracking                          11.750      10.839       4.206       4.341      31.874        1097
+Correlation                        0.293       0.268       0.124       0.072       0.913        1097
+Total Init                      1131.116    1131.116       0.000    1131.116    1131.116           1
+Pipeline                         225.518     221.510      24.126     169.516     554.785        1101
+KAZE Extract                     210.756     207.949      18.465     161.144     320.525        1101
+SIFT Extract                      62.640      55.057      21.364      39.551     248.747        1101
+[RUN 04/20] 2025-09-10 23:33:43
+Registering ORBextractor...
+Registering AKAZEextractor...
+Registering BRISKextractor...
+Registering SIFTextractor...
+Registering KAZEextractor...
+Registering SuperPointExtractor...
+
+ORB-SLAM2 Copyright (C) 2014-2016 Raul Mur-Artal, University of Zaragoza.
+This program comes with ABSOLUTELY NO WARRANTY;
+This is free software, and you are welcome to redistribute it
+under certain conditions. See LICENSE.txt.
+
+Input sensor was set to: Monocular
+
+Loading Vocabulary : /home/howard/PM-SLAM/Install/var/lib/orbslam2/voc/kaze_cv.fbow
+This could take a while...
+Loading KAZE Vocabulary in FBoW.
+KAZE Vocabulary loaded in 0.008970s
+
+
+Loading Vocabulary : /home/howard/PM-SLAM/Install/var/lib/orbslam2/voc/sift_cv.fbow
+This could take a while...
+Loading SIFT Vocabulary in FBoW.
+SIFT Vocabulary loaded in 0.019669s
+
+
+Camera Parameters: 
+- fx: 707.091
+- fy: 707.091
+- cx: 601.887
+- cy: 183.11
+- k1: 0
+- k2: 0
+- p1: 0
+- p2: 0
+- fps: 10
+- color order: RGB (ignored if grayscale)
+
+[Feature 0] KAZE Extractor Parameters: 
+ ( TH_LOW: 0.5, TH_HIGH: 1 )
+- Number of Features : 2000
+- Scale Levels       : 4
+- Scale Factor       : 1.2
+- Threshold          : 0.001
+- nOctaves           : 4
+- nOctaveLayers      : 4
+- Extended (128‑dim) : 0
+- Upright            : 0
+
+[Feature 1] SIFT Extractor Parameters: 
+ ( TH_LOW: 300, TH_HIGH: 500 )
+- Number of Features  : 2000
+- Scale Levels        : 1
+- Scale Factor        : 1
+- Contrast Threshold  : 0.01
+- Edge Threshold      : 5
+- nOctaves            : 3
+- Sigma               : 1.6
+
+-------
+Start processing sequence ...
+Images in the sequence: 1101
+
+Viewer started, waiting for thread.
+1
+New map created with 235 points for 0 Feature Type 
+New map created with 804 points for 1 Feature Type 
+Tracking Initlized in 4.68s
+The initlized frame ID: 3
+[LoopClosing] Sim3 choosed on channel 0
+Loop detected!
+Local Mapping STOP
+Local Mapping RELEASE
+Starting Global Bundle Adjustment
+Global Bundle Adjustment finished
+Updating map ...
+Local Mapping STOP
+Local Mapping RELEASE
+Map updated!
+System::StopViewer()
+System::StopViewer() done
+System::StopViewer()
+System::StopViewer() done
+Tracking thread joined...
+
+Saving correlation status...
+
+========== Global Summary ==========
+Frames: 1097
+avg_CorrEdges: 11.5196
+avg_match_A: 203.311
+avg_match_B: 163.375
+global_RI_MNR: 0.0705103
+global_RI_GNR: 0.0632069
+global_RI_DICE: 0.0628309
+
+========== Per-Channel Summary ==========
+   chA   chB     avgCorr        avgA        avgB   avgRI_MNR   avgRI_GNR  avgRI_DICE
+     0     1     11.5196     203.311     163.375   0.0674327   0.0575041    0.056563
+
+Correlation status saved!
+
+-------
+
+median tracking time: 0.229177
+mean tracking time: 0.232551
+
+Saving camera trajectory to result04.txt ...
+
+trajectory saved!
+
+========== Performance Summary (ms) ==========
+name                                mean      median        rmse         min         max       count
+Tracking                          11.500      10.998       3.563       4.503      28.388        1097
+Correlation                        0.281       0.261       0.116       0.081       1.132        1097
+Total Init                      1213.366    1213.366       0.000    1213.366    1213.366           1
+Pipeline                         232.542     229.169      26.511     179.711     472.688        1101
+KAZE Extract                     218.357     215.412      23.744     171.609     322.367        1101
+SIFT Extract                      61.061      55.077      20.828      38.584     218.288        1101
+[RUN 05/20] 2025-09-10 23:38:09
+Registering ORBextractor...
+Registering AKAZEextractor...
+Registering BRISKextractor...
+Registering SIFTextractor...
+Registering KAZEextractor...
+Registering SuperPointExtractor...
+
+ORB-SLAM2 Copyright (C) 2014-2016 Raul Mur-Artal, University of Zaragoza.
+This program comes with ABSOLUTELY NO WARRANTY;
+This is free software, and you are welcome to redistribute it
+under certain conditions. See LICENSE.txt.
+
+Input sensor was set to: Monocular
+
+Loading Vocabulary : /home/howard/PM-SLAM/Install/var/lib/orbslam2/voc/kaze_cv.fbow
+This could take a while...
+Loading KAZE Vocabulary in FBoW.
+KAZE Vocabulary loaded in 0.009985s
+
+
+Loading Vocabulary : /home/howard/PM-SLAM/Install/var/lib/orbslam2/voc/sift_cv.fbow
+This could take a while...
+Loading SIFT Vocabulary in FBoW.
+SIFT Vocabulary loaded in 0.018451s
+
+
+Camera Parameters: 
+- fx: 707.091
+- fy: 707.091
+- cx: 601.887
+- cy: 183.11
+- k1: 0
+- k2: 0
+- p1: 0
+- p2: 0
+- fps: 10
+- color order: RGB (ignored if grayscale)
+
+[Feature 0] KAZE Extractor Parameters: 
+ ( TH_LOW: 0.5, TH_HIGH: 1 )
+- Number of Features : 2000
+- Scale Levels       : 4
+- Scale Factor       : 1.2
+- Threshold          : 0.001
+- nOctaves           : 4
+- nOctaveLayers      : 4
+- Extended (128‑dim) : 0
+- Upright            : 0
+
+[Feature 1] SIFT Extractor Parameters: 
+ ( TH_LOW: 300, TH_HIGH: 500 )
+- Number of Features  : 2000
+- Scale Levels        : 1
+- Scale Factor        : 1
+- Contrast Threshold  : 0.01
+- Edge Threshold      : 5
+- nOctaves            : 3
+- Sigma               : 1.6
+
+-------
+Start processing sequence ...
+Images in the sequence: 1101
+
+Viewer started, waiting for thread.
+1
+New map created with 235 points for 0 Feature Type 
+New map created with 804 points for 1 Feature Type 
+Tracking Initlized in 4.59s
+The initlized frame ID: 3
+[LoopClosing] Sim3 choosed on channel 0
+Loop detected!
+Local Mapping STOP
+Local Mapping RELEASE
+Starting Global Bundle Adjustment
+Global Bundle Adjustment finished
+Updating map ...
+Local Mapping STOP
+Local Mapping RELEASE
+Map updated!
+System::StopViewer()
+System::StopViewer() done
+System::StopViewer()
+System::StopViewer() done
+Tracking thread joined...
+
+Saving correlation status...
+
+========== Global Summary ==========
+Frames: 1097
+avg_CorrEdges: 16.7457
+avg_match_A: 222.957
+avg_match_B: 179.884
+global_RI_MNR: 0.0930914
+global_RI_GNR: 0.0836171
+global_RI_DICE: 0.0831378
+
+========== Per-Channel Summary ==========
+   chA   chB     avgCorr        avgA        avgB   avgRI_MNR   avgRI_GNR  avgRI_DICE
+     0     1     16.7457     222.957     179.884   0.0763511   0.0655456   0.0645734
+
+Correlation status saved!
+
+-------
+
+median tracking time: 0.229804
+mean tracking time: 0.233474
+
+Saving camera trajectory to result05.txt ...
+
+trajectory saved!
+
+========== Performance Summary (ms) ==========
+name                                mean      median        rmse         min         max       count
+Tracking                          11.832      10.808       4.142       4.823      34.350        1097
+Correlation                        0.304       0.266       0.144       0.079       1.041        1097
+Total Init                      1229.868    1229.868       0.000    1229.868    1229.868           1
+Pipeline                         233.465     229.797      31.195     168.564     646.974        1101
+KAZE Extract                     218.616     215.697      25.558     161.526     329.006        1101
+SIFT Extract                      57.383      52.308      17.626      38.371     199.654        1101
+[RUN 06/20] 2025-09-10 23:42:35
+Registering ORBextractor...
+Registering AKAZEextractor...
+Registering BRISKextractor...
+Registering SIFTextractor...
+Registering KAZEextractor...
+Registering SuperPointExtractor...
+
+ORB-SLAM2 Copyright (C) 2014-2016 Raul Mur-Artal, University of Zaragoza.
+This program comes with ABSOLUTELY NO WARRANTY;
+This is free software, and you are welcome to redistribute it
+under certain conditions. See LICENSE.txt.
+
+Input sensor was set to: Monocular
+
+Loading Vocabulary : /home/howard/PM-SLAM/Install/var/lib/orbslam2/voc/kaze_cv.fbow
+This could take a while...
+Loading KAZE Vocabulary in FBoW.
+KAZE Vocabulary loaded in 0.009535s
+
+
+Loading Vocabulary : /home/howard/PM-SLAM/Install/var/lib/orbslam2/voc/sift_cv.fbow
+This could take a while...
+Loading SIFT Vocabulary in FBoW.
+SIFT Vocabulary loaded in 0.020661s
+
+
+Camera Parameters: 
+- fx: 707.091
+- fy: 707.091
+- cx: 601.887
+- cy: 183.11
+- k1: 0
+- k2: 0
+- p1: 0
+- p2: 0
+- fps: 10
+- color order: RGB (ignored if grayscale)
+
+[Feature 0] KAZE Extractor Parameters: 
+ ( TH_LOW: 0.5, TH_HIGH: 1 )
+- Number of Features : 2000
+- Scale Levels       : 4
+- Scale Factor       : 1.2
+- Threshold          : 0.001
+- nOctaves           : 4
+- nOctaveLayers      : 4
+- Extended (128‑dim) : 0
+- Upright            : 0
+
+[Feature 1] SIFT Extractor Parameters: 
+ ( TH_LOW: 300, TH_HIGH: 500 )
+- Number of Features  : 2000
+- Scale Levels        : 1
+- Scale Factor        : 1
+- Contrast Threshold  : 0.01
+- Edge Threshold      : 5
+- nOctaves            : 3
+- Sigma               : 1.6
+
+-------
+Start processing sequence ...
+Images in the sequence: 1101
+
+Viewer started, waiting for thread.
+1
+New map created with 235 points for 0 Feature Type 
+New map created with 804 points for 1 Feature Type 
+Tracking Initlized in 4.21s
+The initlized frame ID: 3
+[LoopClosing] Sim3 choosed on channel 0
+Loop detected!
+Local Mapping STOP
+Local Mapping RELEASE
+Starting Global Bundle Adjustment
+Global Bundle Adjustment finished
+Updating map ...
+Local Mapping STOP
+Local Mapping RELEASE
+Map updated!
+System::StopViewer()
+System::StopViewer() done
+System::StopViewer()
+System::StopViewer() done
+Tracking thread joined...
+
+Saving correlation status...
+
+========== Global Summary ==========
+Frames: 1097
+avg_CorrEdges: 16.876
+avg_match_A: 220.902
+avg_match_B: 177.44
+global_RI_MNR: 0.0951082
+global_RI_GNR: 0.0852401
+global_RI_DICE: 0.0847312
+
+========== Per-Channel Summary ==========
+   chA   chB     avgCorr        avgA        avgB   avgRI_MNR   avgRI_GNR  avgRI_DICE
+     0     1      16.876     220.902      177.44   0.0765973   0.0656607   0.0646606
+
+Correlation status saved!
+
+-------
+
+median tracking time: 0.238429
+mean tracking time: 0.237803
+
+Saving camera trajectory to result06.txt ...
+
+trajectory saved!
+
+========== Performance Summary (ms) ==========
+name                                mean      median        rmse         min         max       count
+Tracking                          12.580      11.380       4.717       4.312      26.990        1097
+Correlation                        0.323       0.281       0.159       0.097       1.149        1097
+Total Init                      1129.489    1129.489       0.000    1129.489    1129.489           1
+Pipeline                         237.793     238.413      27.136     172.453     539.357        1101
+KAZE Extract                     222.082     223.742      23.266     163.898     328.055        1101
+SIFT Extract                      66.056      59.552      24.965      36.956     285.755        1101
+[RUN 07/20] 2025-09-10 23:47:06
+Registering ORBextractor...
+Registering AKAZEextractor...
+Registering BRISKextractor...
+Registering SIFTextractor...
+Registering KAZEextractor...
+Registering SuperPointExtractor...
+
+ORB-SLAM2 Copyright (C) 2014-2016 Raul Mur-Artal, University of Zaragoza.
+This program comes with ABSOLUTELY NO WARRANTY;
+This is free software, and you are welcome to redistribute it
+under certain conditions. See LICENSE.txt.
+
+Input sensor was set to: Monocular
+
+Loading Vocabulary : /home/howard/PM-SLAM/Install/var/lib/orbslam2/voc/kaze_cv.fbow
+This could take a while...
+Loading KAZE Vocabulary in FBoW.
+KAZE Vocabulary loaded in 0.012623s
+
+
+Loading Vocabulary : /home/howard/PM-SLAM/Install/var/lib/orbslam2/voc/sift_cv.fbow
+This could take a while...
+Loading SIFT Vocabulary in FBoW.
+SIFT Vocabulary loaded in 0.026026s
+
+
+Camera Parameters: 
+- fx: 707.091
+- fy: 707.091
+- cx: 601.887
+- cy: 183.11
+- k1: 0
+- k2: 0
+- p1: 0
+- p2: 0
+- fps: 10
+- color order: RGB (ignored if grayscale)
+
+[Feature 0] KAZE Extractor Parameters: 
+ ( TH_LOW: 0.5, TH_HIGH: 1 )
+- Number of Features : 2000
+- Scale Levels       : 4
+- Scale Factor       : 1.2
+- Threshold          : 0.001
+- nOctaves           : 4
+- nOctaveLayers      : 4
+- Extended (128‑dim) : 0
+- Upright            : 0
+
+[Feature 1] SIFT Extractor Parameters: 
+ ( TH_LOW: 300, TH_HIGH: 500 )
+- Number of Features  : 2000
+- Scale Levels        : 1
+- Scale Factor        : 1
+- Contrast Threshold  : 0.01
+- Edge Threshold      : 5
+- nOctaves            : 3
+- Sigma               : 1.6
+
+-------
+Start processing sequence ...
+Images in the sequence: 1101
+
+Viewer started, waiting for thread.
+1
+New map created with 235 points for 0 Feature Type 
+New map created with 804 points for 1 Feature Type 
+Tracking Initlized in 5.19s
+The initlized frame ID: 3
+[LoopClosing] Sim3 choosed on channel 0
+Loop detected!
+Local Mapping STOP
+Local Mapping RELEASE
+Starting Global Bundle Adjustment
+Global Bundle Adjustment finished
+Updating map ...
+Local Mapping STOP
+Local Mapping RELEASE
+Map updated!
+System::StopViewer()
+System::StopViewer() done
+System::StopViewer()
+System::StopViewer() done
+Tracking thread joined...
+
+Saving correlation status...
+
+========== Global Summary ==========
+Frames: 1097
+avg_CorrEdges: 14.6636
+avg_match_A: 221.045
+avg_match_B: 177.255
+global_RI_MNR: 0.0827261
+global_RI_GNR: 0.0740802
+global_RI_DICE: 0.0736311
+
+========== Per-Channel Summary ==========
+   chA   chB     avgCorr        avgA        avgB   avgRI_MNR   avgRI_GNR  avgRI_DICE
+     0     1     14.6636     221.045     177.255   0.0715646   0.0613487   0.0604088
+
+Correlation status saved!
+
+-------
+
+median tracking time: 0.220038
+mean tracking time: 0.229285
+
+Saving camera trajectory to result07.txt ...
+
+trajectory saved!
+
+========== Performance Summary (ms) ==========
+name                                mean      median        rmse         min         max       count
+Tracking                          12.408      11.348       4.637       4.431      33.984        1097
+Correlation                        0.308       0.267       0.148       0.081       1.054        1097
+Total Init                      1414.154    1414.154       0.000    1414.154    1414.154           1
+Pipeline                         229.276     220.031      33.909     174.260     532.847        1101
+KAZE Extract                     213.947     206.533      27.975     164.212     317.586        1101
+SIFT Extract                      63.586      54.090      24.892      38.616     249.576        1101
+[RUN 08/20] 2025-09-10 23:51:28
+Registering ORBextractor...
+Registering AKAZEextractor...
+Registering BRISKextractor...
+Registering SIFTextractor...
+Registering KAZEextractor...
+Registering SuperPointExtractor...
+
+ORB-SLAM2 Copyright (C) 2014-2016 Raul Mur-Artal, University of Zaragoza.
+This program comes with ABSOLUTELY NO WARRANTY;
+This is free software, and you are welcome to redistribute it
+under certain conditions. See LICENSE.txt.
+
+Input sensor was set to: Monocular
+
+Loading Vocabulary : /home/howard/PM-SLAM/Install/var/lib/orbslam2/voc/kaze_cv.fbow
+This could take a while...
+Loading KAZE Vocabulary in FBoW.
+KAZE Vocabulary loaded in 0.006613s
+
+
+Loading Vocabulary : /home/howard/PM-SLAM/Install/var/lib/orbslam2/voc/sift_cv.fbow
+This could take a while...
+Loading SIFT Vocabulary in FBoW.
+SIFT Vocabulary loaded in 0.013047s
+
+
+Camera Parameters: 
+- fx: 707.091
+- fy: 707.091
+- cx: 601.887
+- cy: 183.11
+- k1: 0
+- k2: 0
+- p1: 0
+- p2: 0
+- fps: 10
+- color order: RGB (ignored if grayscale)
+
+[Feature 0] KAZE Extractor Parameters: 
+ ( TH_LOW: 0.5, TH_HIGH: 1 )
+- Number of Features : 2000
+- Scale Levels       : 4
+- Scale Factor       : 1.2
+- Threshold          : 0.001
+- nOctaves           : 4
+- nOctaveLayers      : 4
+- Extended (128‑dim) : 0
+- Upright            : 0
+
+[Feature 1] SIFT Extractor Parameters: 
+ ( TH_LOW: 300, TH_HIGH: 500 )
+- Number of Features  : 2000
+- Scale Levels        : 1
+- Scale Factor        : 1
+- Contrast Threshold  : 0.01
+- Edge Threshold      : 5
+- nOctaves            : 3
+- Sigma               : 1.6
+
+-------
+Start processing sequence ...
+Images in the sequence: 1101
+
+Viewer started, waiting for thread.
+1
+New map created with 235 points for 0 Feature Type 
+New map created with 804 points for 1 Feature Type 
+Tracking Initlized in 4.22s
+The initlized frame ID: 3
+[LoopClosing] Sim3 choosed on channel 0
+Loop detected!
+Local Mapping STOP
+Local Mapping RELEASE
+Starting Global Bundle Adjustment
+Global Bundle Adjustment finished
+Updating map ...
+Local Mapping STOP
+Local Mapping RELEASE
+Map updated!
+System::StopViewer()
+System::StopViewer() done
+System::StopViewer()
+System::StopViewer() done
+Tracking thread joined...
+
+Saving correlation status...
+
+========== Global Summary ==========
+Frames: 1097
+avg_CorrEdges: 14.7448
+avg_match_A: 218.244
+avg_match_B: 175.218
+global_RI_MNR: 0.084151
+global_RI_GNR: 0.075401
+global_RI_DICE: 0.0749488
+
+========== Per-Channel Summary ==========
+   chA   chB     avgCorr        avgA        avgB   avgRI_MNR   avgRI_GNR  avgRI_DICE
+     0     1     14.7448     218.244     175.218   0.0728246   0.0624465   0.0614997
+
+Correlation status saved!
+
+-------
+
+median tracking time: 0.212427
+mean tracking time: 0.216269
+
+Saving camera trajectory to result08.txt ...
+
+trajectory saved!
+
+========== Performance Summary (ms) ==========
+name                                mean      median        rmse         min         max       count
+Tracking                          11.037      10.213       4.019       4.180      32.515        1097
+Correlation                        0.275       0.251       0.123       0.079       1.124        1097
+Total Init                      1114.169    1114.169       0.000    1114.169    1114.169           1
+Pipeline                         216.261     212.418      22.603     174.936     445.752        1101
+KAZE Extract                     202.506     199.340      18.619     166.692     298.761        1101
+SIFT Extract                      56.229      49.574      18.518      39.189     205.845        1101
+[RUN 09/20] 2025-09-10 23:55:36
+Registering ORBextractor...
+Registering AKAZEextractor...
+Registering BRISKextractor...
+Registering SIFTextractor...
+Registering KAZEextractor...
+Registering SuperPointExtractor...
+
+ORB-SLAM2 Copyright (C) 2014-2016 Raul Mur-Artal, University of Zaragoza.
+This program comes with ABSOLUTELY NO WARRANTY;
+This is free software, and you are welcome to redistribute it
+under certain conditions. See LICENSE.txt.
+
+Input sensor was set to: Monocular
+
+Loading Vocabulary : /home/howard/PM-SLAM/Install/var/lib/orbslam2/voc/kaze_cv.fbow
+This could take a while...
+Loading KAZE Vocabulary in FBoW.
+KAZE Vocabulary loaded in 0.008218s
+
+
+Loading Vocabulary : /home/howard/PM-SLAM/Install/var/lib/orbslam2/voc/sift_cv.fbow
+This could take a while...
+Loading SIFT Vocabulary in FBoW.
+SIFT Vocabulary loaded in 0.015283s
+
+
+Camera Parameters: 
+- fx: 707.091
+- fy: 707.091
+- cx: 601.887
+- cy: 183.11
+- k1: 0
+- k2: 0
+- p1: 0
+- p2: 0
+- fps: 10
+- color order: RGB (ignored if grayscale)
+
+[Feature 0] KAZE Extractor Parameters: 
+ ( TH_LOW: 0.5, TH_HIGH: 1 )
+- Number of Features : 2000
+- Scale Levels       : 4
+- Scale Factor       : 1.2
+- Threshold          : 0.001
+- nOctaves           : 4
+- nOctaveLayers      : 4
+- Extended (128‑dim) : 0
+- Upright            : 0
+
+[Feature 1] SIFT Extractor Parameters: 
+ ( TH_LOW: 300, TH_HIGH: 500 )
+- Number of Features  : 2000
+- Scale Levels        : 1
+- Scale Factor        : 1
+- Contrast Threshold  : 0.01
+- Edge Threshold      : 5
+- nOctaves            : 3
+- Sigma               : 1.6
+
+-------
+Start processing sequence ...
+Images in the sequence: 1101
+
+Viewer started, waiting for thread.
+1
+New map created with 235 points for 0 Feature Type 
+New map created with 804 points for 1 Feature Type 
+Tracking Initlized in 4.16s
+The initlized frame ID: 3
+[LoopClosing] Sim3 choosed on channel 0
+Loop detected!
+Local Mapping STOP
+Local Mapping RELEASE
+Starting Global Bundle Adjustment
+Global Bundle Adjustment finished
+Updating map ...
+Local Mapping STOP
+Local Mapping RELEASE
+Map updated!
+System::StopViewer()
+System::StopViewer() done
+System::StopViewer()
+System::StopViewer() done
+Tracking thread joined...
+
+Saving correlation status...
+
+========== Global Summary ==========
+Frames: 1097
+avg_CorrEdges: 14.0155
+avg_match_A: 213.461
+avg_match_B: 169.869
+global_RI_MNR: 0.0825078
+global_RI_GNR: 0.0736024
+global_RI_DICE: 0.073125
+
+========== Per-Channel Summary ==========
+   chA   chB     avgCorr        avgA        avgB   avgRI_MNR   avgRI_GNR  avgRI_DICE
+     0     1     14.0155     213.461     169.869   0.0771905   0.0647512   0.0635266
+
+Correlation status saved!
+
+-------
+
+median tracking time: 0.222716
+mean tracking time: 0.229144
 
 Saving camera trajectory to result09.txt ...
 
 trajectory saved!
-All done
 
 ========== Performance Summary (ms) ==========
 name                                mean      median        rmse         min         max       count
-Lost Count                         1.000       1.000       0.000       1.000       1.000           5
-Tracking                          15.276      13.667      10.044       1.916     374.499        7334
-Reset Count                        1.000       1.000       0.000       1.000       1.000           7
-Correlation                        0.001       0.001       0.002       0.000       0.127        7236
-Total Init                     96821.787   96821.787       0.000   96821.787   96821.787           1
-Pipeline                         754.510     749.640     110.219     410.213    1181.168        7513
-KAZE Extract                     729.966     725.222     107.740     391.918    1124.086        7513
-[WARN] Per-Channel Summary not found in run 09 (exit 0)
-[RUN 10/20] 2025-09-10 04:31:55
+Tracking                          11.518      10.671       3.854       4.427      37.590        1097
+Correlation                        0.290       0.270       0.114       0.085       1.011        1097
+Total Init                      1101.480    1101.480       0.000    1101.480    1101.480           1
+Pipeline                         229.135     222.711      29.627     174.159     644.759        1101
+KAZE Extract                     214.489     210.155      23.838     166.361     345.735        1101
+SIFT Extract                      58.483      51.682      20.380      38.459     208.619        1101
+[RUN 10/20] 2025-09-10 23:59:58
 Registering ORBextractor...
 Registering AKAZEextractor...
 Registering BRISKextractor...
@@ -289,22 +1163,28 @@ under certain conditions. See LICENSE.txt.
 
 Input sensor was set to: Monocular
 
-Loading Vocabulary : /home/howard/Refactored_ORB_SLAM2/Install/var/lib/orbslam2/voc/kaze_cv.fbow
+Loading Vocabulary : /home/howard/PM-SLAM/Install/var/lib/orbslam2/voc/kaze_cv.fbow
 This could take a while...
 Loading KAZE Vocabulary in FBoW.
-KAZE Vocabulary loaded in 0.015762s
+KAZE Vocabulary loaded in 0.005389s
+
+
+Loading Vocabulary : /home/howard/PM-SLAM/Install/var/lib/orbslam2/voc/sift_cv.fbow
+This could take a while...
+Loading SIFT Vocabulary in FBoW.
+SIFT Vocabulary loaded in 0.010762s
 
 
 Camera Parameters: 
-- fx: 983.044
-- fy: 983.044
-- cx: 643.647
-- cy: 493.379
+- fx: 707.091
+- fy: 707.091
+- cx: 601.887
+- cy: 183.11
 - k1: 0
 - k2: 0
 - p1: 0
 - p2: 0
-- fps: 16
+- fps: 10
 - color order: RGB (ignored if grayscale)
 
 [Feature 0] KAZE Extractor Parameters: 
@@ -318,345 +1198,77 @@ Camera Parameters:
 - Extended (128‑dim) : 0
 - Upright            : 0
 
+[Feature 1] SIFT Extractor Parameters: 
+ ( TH_LOW: 300, TH_HIGH: 500 )
+- Number of Features  : 2000
+- Scale Levels        : 1
+- Scale Factor        : 1
+- Contrast Threshold  : 0.01
+- Edge Threshold      : 5
+- nOctaves            : 3
+- Sigma               : 1.6
+
 -------
 Start processing sequence ...
-Images in the sequence: 7513
+Images in the sequence: 1101
 
-0
-New map created with 885 points for 0 Feature Type 
-Tracking Initlized in 394.22s
-The initlized frame ID: 153
-The lost frame ID: 831
-The lost frame ID: 832
-The lost frame ID: 833
-The lost frame ID: 834
-The lost frame ID: 835
-The lost frame ID: 836
-The lost frame ID: 837
-The lost frame ID: 1480
-The lost frame ID: 1481
-The lost frame ID: 1482
-The lost frame ID: 1483
-The lost frame ID: 1484
-The lost frame ID: 1485
-The lost frame ID: 1489
-The lost frame ID: 1490
-The lost frame ID: 1491
-The lost frame ID: 1492
-The lost frame ID: 1494
-The lost frame ID: 1495
-The lost frame ID: 1496
-The lost frame ID: 1497
-The lost frame ID: 1498
-The lost frame ID: 1499
-The lost frame ID: 1500
-The lost frame ID: 1501
-The lost frame ID: 1502
-
-Saving camera trajectory to TrajectoryBeforeReset_oxf_kaz_r10_seg01_pid3877847_1757476179985.txt ...
-
-trajectory saved!
-[Tracking] wrote pre-reset trajectory to TrajectoryBeforeReset_oxf_kaz_r10_seg01_pid3877847_1757476179985.txt
-[Tracking] LOST for 10 consecutive frames -> reset
-System Reseting
-Reseting Local Mapper... done
-Reseting Loop Closing... done
-Reseting Database... done
-0
-New map created with 933 points for 0 Feature Type 
-Tracking Initlized in 7.81s
+Viewer started, waiting for thread.
+1
+New map created with 235 points for 0 Feature Type 
+New map created with 804 points for 1 Feature Type 
+Tracking Initlized in 4.77s
 The initlized frame ID: 3
-The lost frame ID: 237
-The lost frame ID: 238
-The lost frame ID: 240
-The lost frame ID: 247
-The lost frame ID: 257
-The lost frame ID: 259
-The lost frame ID: 260
-The lost frame ID: 262
-The lost frame ID: 272
-The lost frame ID: 276
-The lost frame ID: 279
-The lost frame ID: 280
-The lost frame ID: 281
-The lost frame ID: 282
-The lost frame ID: 285
-The lost frame ID: 288
-The lost frame ID: 289
-The lost frame ID: 290
-The lost frame ID: 302
-The lost frame ID: 303
-The lost frame ID: 304
-The lost frame ID: 307
-The lost frame ID: 309
-The lost frame ID: 315
-The lost frame ID: 316
-The lost frame ID: 317
-The lost frame ID: 319
-The lost frame ID: 322
-The lost frame ID: 332
-The lost frame ID: 341
-The lost frame ID: 351
-The lost frame ID: 352
-The lost frame ID: 354
-The lost frame ID: 355
-The lost frame ID: 357
-The lost frame ID: 365
-The lost frame ID: 366
-The lost frame ID: 368
-The lost frame ID: 369
-The lost frame ID: 370
-The lost frame ID: 371
-The lost frame ID: 372
-The lost frame ID: 375
-The lost frame ID: 376
-The lost frame ID: 377
-The lost frame ID: 378
-The lost frame ID: 379
-The lost frame ID: 380
-The lost frame ID: 381
-The lost frame ID: 382
-The lost frame ID: 383
-
-Saving camera trajectory to TrajectoryBeforeReset_oxf_kaz_r10_seg02_pid3877847_1757476452483.txt ...
-
-trajectory saved!
-[Tracking] wrote pre-reset trajectory to TrajectoryBeforeReset_oxf_kaz_r10_seg02_pid3877847_1757476452483.txt
-[Tracking] LOST for 10 consecutive frames -> reset
-System Reseting
-Reseting Local Mapper... done
-Reseting Loop Closing... done
-Reseting Database... done
-0
-New map created with 576 points for 0 Feature Type 
-Tracking Initlized in 4.55s
-The initlized frame ID: 2
-The lost frame ID: 1121
-The lost frame ID: 1122
-The lost frame ID: 1130
-The lost frame ID: 1132
-The lost frame ID: 1285
-The lost frame ID: 1286
-The lost frame ID: 1287
-The lost frame ID: 1288
-The lost frame ID: 1289
-The lost frame ID: 1290
-The lost frame ID: 1291
-The lost frame ID: 1293
-The lost frame ID: 1294
-The lost frame ID: 1296
-The lost frame ID: 1297
-The lost frame ID: 1298
-The lost frame ID: 1300
-The lost frame ID: 1484
-The lost frame ID: 1485
-The lost frame ID: 1486
-The lost frame ID: 1487
-The lost frame ID: 1488
-The lost frame ID: 1489
-The lost frame ID: 1490
-The lost frame ID: 1492
-The lost frame ID: 1494
-The lost frame ID: 1495
-The lost frame ID: 1496
-The lost frame ID: 1497
-The lost frame ID: 1498
-The lost frame ID: 1500
-The lost frame ID: 1501
-The lost frame ID: 1503
-The lost frame ID: 1504
-The lost frame ID: 1505
-The lost frame ID: 1506
-The lost frame ID: 1507
-The lost frame ID: 1509
-The lost frame ID: 1511
-The lost frame ID: 1512
-The lost frame ID: 1513
-The lost frame ID: 1514
-The lost frame ID: 1515
-The lost frame ID: 1516
-The lost frame ID: 1517
-The lost frame ID: 1518
-The lost frame ID: 1519
-
-Saving camera trajectory to TrajectoryBeforeReset_oxf_kaz_r10_seg03_pid3877847_1757477729247.txt ...
-
-trajectory saved!
-[Tracking] wrote pre-reset trajectory to TrajectoryBeforeReset_oxf_kaz_r10_seg03_pid3877847_1757477729247.txt
-[Tracking] LOST for 10 consecutive frames -> reset
-System Reseting
-Reseting Local Mapper... done
-Reseting Loop Closing... done
-Reseting Database... done
-0
-New map created with 318 points for 0 Feature Type 
-Tracking Initlized in 5.50s
-The initlized frame ID: 2
-The lost frame ID: 142
-The lost frame ID: 144
-The lost frame ID: 145
-The lost frame ID: 146
-The lost frame ID: 147
-The lost frame ID: 148
-The lost frame ID: 149
-The lost frame ID: 150
-The lost frame ID: 151
-The lost frame ID: 152
-
-Saving camera trajectory to TrajectoryBeforeReset_oxf_kaz_r10_seg04_pid3877847_1757477840966.txt ...
-
-trajectory saved!
-[Tracking] wrote pre-reset trajectory to TrajectoryBeforeReset_oxf_kaz_r10_seg04_pid3877847_1757477840966.txt
-[Tracking] LOST for 10 consecutive frames -> reset
-System Reseting
-Reseting Local Mapper... done
-Reseting Loop Closing... done
-Reseting Database... done
-0
-New map created with 631 points for 0 Feature Type 
-Tracking Initlized in 5.08s
-The initlized frame ID: 2
-The lost frame ID: 1409
-The lost frame ID: 1410
-The lost frame ID: 1411
-The lost frame ID: 1412
-The lost frame ID: 1413
-The lost frame ID: 1414
-The lost frame ID: 1415
-The lost frame ID: 1418
-The lost frame ID: 1419
-The lost frame ID: 1420
-The lost frame ID: 1421
-The lost frame ID: 1422
-The lost frame ID: 1423
-The lost frame ID: 1424
-The lost frame ID: 1425
-The lost frame ID: 1426
-
-Saving camera trajectory to TrajectoryBeforeReset_oxf_kaz_r10_seg05_pid3877847_1757479167257.txt ...
-
-trajectory saved!
-[Tracking] wrote pre-reset trajectory to TrajectoryBeforeReset_oxf_kaz_r10_seg05_pid3877847_1757479167257.txt
-[Tracking] LOST for 10 consecutive frames -> reset
-System Reseting
-Reseting Local Mapper... done
-Reseting Loop Closing... done
-Reseting Database... done
-0
-New map created with 371 points for 0 Feature Type 
-Tracking Initlized in 5.17s
-The initlized frame ID: 2
-Track lost soon after initialisation, reseting...
-System Reseting
-Reseting Local Mapper... done
-Reseting Loop Closing... done
-Reseting Database... done
-0
-New map created with 307 points for 0 Feature Type 
-Tracking Initlized in 2.78s
-The initlized frame ID: 1
-Track lost soon after initialisation, reseting...
-System Reseting
-Reseting Local Mapper... done
-Reseting Loop Closing... done
-Reseting Database... done
-0
-New map created with 514 points for 0 Feature Type 
-Tracking Initlized in 2.26s
-The initlized frame ID: 1
-Track lost soon after initialisation, reseting...
-System Reseting
-Reseting Local Mapper... done
-Reseting Loop Closing... done
-Reseting Database... done
-0
-New map created with 577 points for 0 Feature Type 
-Tracking Initlized in 2.39s
-The initlized frame ID: 1
-The lost frame ID: 2225
-The lost frame ID: 2226
-The lost frame ID: 2227
-The lost frame ID: 2228
-The lost frame ID: 2229
-The lost frame ID: 2230
-The lost frame ID: 2231
-The lost frame ID: 2232
-The lost frame ID: 2233
-
-Saving camera trajectory to TrajectoryBeforeReset_oxf_kaz_r10_seg06_pid3877847_1757480858560.txt ...
-
-trajectory saved!
-[Tracking] wrote pre-reset trajectory to TrajectoryBeforeReset_oxf_kaz_r10_seg06_pid3877847_1757480858560.txt
-[Tracking] LOST for 10 consecutive frames -> reset
-System Reseting
-Reseting Local Mapper... done
-Reseting Loop Closing... done
-Reseting Database... done
-0
-New map created with 329 points for 0 Feature Type 
-Tracking Initlized in 24.08s
-The initlized frame ID: 10
-The lost frame ID: 154
-The lost frame ID: 156
-The lost frame ID: 157
-The lost frame ID: 158
-The lost frame ID: 159
-The lost frame ID: 160
-The lost frame ID: 161
-The lost frame ID: 163
-The lost frame ID: 165
-The lost frame ID: 167
-The lost frame ID: 168
-The lost frame ID: 169
-The lost frame ID: 170
-The lost frame ID: 171
-The lost frame ID: 172
-The lost frame ID: 173
-The lost frame ID: 174
-The lost frame ID: 175
-
-Saving camera trajectory to TrajectoryBeforeReset_oxf_kaz_r10_seg07_pid3877847_1757481012283.txt ...
-
-trajectory saved!
-[Tracking] wrote pre-reset trajectory to TrajectoryBeforeReset_oxf_kaz_r10_seg07_pid3877847_1757481012283.txt
-[Tracking] LOST for 10 consecutive frames -> reset
-System Reseting
-Reseting Local Mapper... done
-Reseting Loop Closing... done
-Reseting Database... done
-0
-New map created with 677 points for 0 Feature Type 
-Tracking Initlized in 2.96s
-The initlized frame ID: 1
+[LoopClosing] Sim3 choosed on channel 0
+Loop detected!
+Local Mapping STOP
+Local Mapping RELEASE
+Starting Global Bundle Adjustment
+Global Bundle Adjustment finished
+Updating map ...
+Local Mapping STOP
+Local Mapping RELEASE
+Map updated!
 System::StopViewer()
 System::StopViewer() done
+System::StopViewer()
+System::StopViewer() done
+Tracking thread joined...
 
 Saving correlation status...
 
+========== Global Summary ==========
+Frames: 1097
+avg_CorrEdges: 15.4057
+avg_match_A: 215.691
+avg_match_B: 174.632
+global_RI_MNR: 0.0882179
+global_RI_GNR: 0.0793784
+global_RI_DICE: 0.078938
+
+========== Per-Channel Summary ==========
+   chA   chB     avgCorr        avgA        avgB   avgRI_MNR   avgRI_GNR  avgRI_DICE
+     0     1     15.4057     215.691     174.632   0.0756439   0.0649146   0.0639552
+
 Correlation status saved!
 
-System Shutdown
 -------
 
-median tracking time: 0.794546
-mean tracking time: 0.814118
+median tracking time: 0.210641
+mean tracking time: 0.217525
 
 Saving camera trajectory to result10.txt ...
 
 trajectory saved!
-All done
 
 ========== Performance Summary (ms) ==========
 name                                mean      median        rmse         min         max       count
-Lost Count                         1.000       1.000       0.000       1.000       1.000           7
-Tracking                          17.733      15.375      11.401       2.691     171.541        7324
-Reset Count                        1.000       1.000       0.000       1.000       1.000          10
-Correlation                        0.001       0.001       0.001       0.000       0.028        7137
-Total Init                    127734.596  127734.596       0.000  127734.596  127734.596           1
-Pipeline                         813.216     794.285     135.156     452.415    1318.688        7513
-KAZE Extract                     787.890     770.122     131.902     438.655    1279.046        7513
-[WARN] Per-Channel Summary not found in run 10 (exit 0)
-[RUN 11/20] 2025-09-10 06:11:47
+Tracking                          10.918      10.450       3.429       4.057      25.111        1097
+Correlation                        0.276       0.250       0.116       0.077       0.898        1097
+Total Init                      1236.026    1236.026       0.000    1236.026    1236.026           1
+Pipeline                         217.517     210.632      27.460     176.954     526.848        1101
+KAZE Extract                     203.675     198.194      22.718     166.537     318.369        1101
+SIFT Extract                      58.789      50.596      23.504      38.358     263.077        1101
+[RUN 11/20] 2025-09-11 00:04:06
 Registering ORBextractor...
 Registering AKAZEextractor...
 Registering BRISKextractor...
@@ -671,22 +1283,28 @@ under certain conditions. See LICENSE.txt.
 
 Input sensor was set to: Monocular
 
-Loading Vocabulary : /home/howard/Refactored_ORB_SLAM2/Install/var/lib/orbslam2/voc/kaze_cv.fbow
+Loading Vocabulary : /home/howard/PM-SLAM/Install/var/lib/orbslam2/voc/kaze_cv.fbow
 This could take a while...
 Loading KAZE Vocabulary in FBoW.
-KAZE Vocabulary loaded in 0.025160s
+KAZE Vocabulary loaded in 0.009004s
+
+
+Loading Vocabulary : /home/howard/PM-SLAM/Install/var/lib/orbslam2/voc/sift_cv.fbow
+This could take a while...
+Loading SIFT Vocabulary in FBoW.
+SIFT Vocabulary loaded in 0.016396s
 
 
 Camera Parameters: 
-- fx: 983.044
-- fy: 983.044
-- cx: 643.647
-- cy: 493.379
+- fx: 707.091
+- fy: 707.091
+- cx: 601.887
+- cy: 183.11
 - k1: 0
 - k2: 0
 - p1: 0
 - p2: 0
-- fps: 16
+- fps: 10
 - color order: RGB (ignored if grayscale)
 
 [Feature 0] KAZE Extractor Parameters: 
@@ -700,11 +1318,1166 @@ Camera Parameters:
 - Extended (128‑dim) : 0
 - Upright            : 0
 
+[Feature 1] SIFT Extractor Parameters: 
+ ( TH_LOW: 300, TH_HIGH: 500 )
+- Number of Features  : 2000
+- Scale Levels        : 1
+- Scale Factor        : 1
+- Contrast Threshold  : 0.01
+- Edge Threshold      : 5
+- nOctaves            : 3
+- Sigma               : 1.6
+
 -------
 Start processing sequence ...
-Images in the sequence: 7513
+Images in the sequence: 1101
 
-0
-New map created with 885 points for 0 Feature Type 
-Tracking Initlized in 388.59s
-The initlized frame ID: 153
+Viewer started, waiting for thread.
+1
+New map created with 235 points for 0 Feature Type 
+New map created with 804 points for 1 Feature Type 
+Tracking Initlized in 4.89s
+The initlized frame ID: 3
+[LoopClosing] Sim3 choosed on channel 0
+Loop detected!
+Local Mapping STOP
+Local Mapping RELEASE
+Starting Global Bundle Adjustment
+Global Bundle Adjustment finished
+Updating map ...
+Local Mapping STOP
+Local Mapping RELEASE
+Map updated!
+System::StopViewer()
+System::StopViewer() done
+System::StopViewer()
+System::StopViewer() done
+Tracking thread joined...
+
+Saving correlation status...
+
+========== Global Summary ==========
+Frames: 1097
+avg_CorrEdges: 11.6062
+avg_match_A: 206.517
+avg_match_B: 164.892
+global_RI_MNR: 0.0703869
+global_RI_GNR: 0.0628946
+global_RI_DICE: 0.0624983
+
+========== Per-Channel Summary ==========
+   chA   chB     avgCorr        avgA        avgB   avgRI_MNR   avgRI_GNR  avgRI_DICE
+     0     1     11.6062     206.517     164.892   0.0671166   0.0567681   0.0557523
+
+Correlation status saved!
+
+-------
+
+median tracking time: 0.214233
+mean tracking time: 0.220008
+
+Saving camera trajectory to result11.txt ...
+
+trajectory saved!
+
+========== Performance Summary (ms) ==========
+name                                mean      median        rmse         min         max       count
+Tracking                          10.443       9.893       3.533       3.948      27.900        1097
+Correlation                        0.264       0.250       0.111       0.070       1.119        1097
+Total Init                      1338.333    1338.333       0.000    1338.333    1338.333           1
+Pipeline                         220.001     214.222      29.127     174.293     596.162        1101
+KAZE Extract                     206.883     201.955      23.513     165.147     328.262        1101
+SIFT Extract                      57.362      49.745      19.837      37.771     223.645        1101
+[RUN 12/20] 2025-09-11 00:08:18
+Registering ORBextractor...
+Registering AKAZEextractor...
+Registering BRISKextractor...
+Registering SIFTextractor...
+Registering KAZEextractor...
+Registering SuperPointExtractor...
+
+ORB-SLAM2 Copyright (C) 2014-2016 Raul Mur-Artal, University of Zaragoza.
+This program comes with ABSOLUTELY NO WARRANTY;
+This is free software, and you are welcome to redistribute it
+under certain conditions. See LICENSE.txt.
+
+Input sensor was set to: Monocular
+
+Loading Vocabulary : /home/howard/PM-SLAM/Install/var/lib/orbslam2/voc/kaze_cv.fbow
+This could take a while...
+Loading KAZE Vocabulary in FBoW.
+KAZE Vocabulary loaded in 0.008291s
+
+
+Loading Vocabulary : /home/howard/PM-SLAM/Install/var/lib/orbslam2/voc/sift_cv.fbow
+This could take a while...
+Loading SIFT Vocabulary in FBoW.
+SIFT Vocabulary loaded in 0.015417s
+
+
+Camera Parameters: 
+- fx: 707.091
+- fy: 707.091
+- cx: 601.887
+- cy: 183.11
+- k1: 0
+- k2: 0
+- p1: 0
+- p2: 0
+- fps: 10
+- color order: RGB (ignored if grayscale)
+
+[Feature 0] KAZE Extractor Parameters: 
+ ( TH_LOW: 0.5, TH_HIGH: 1 )
+- Number of Features : 2000
+- Scale Levels       : 4
+- Scale Factor       : 1.2
+- Threshold          : 0.001
+- nOctaves           : 4
+- nOctaveLayers      : 4
+- Extended (128‑dim) : 0
+- Upright            : 0
+
+[Feature 1] SIFT Extractor Parameters: 
+ ( TH_LOW: 300, TH_HIGH: 500 )
+- Number of Features  : 2000
+- Scale Levels        : 1
+- Scale Factor        : 1
+- Contrast Threshold  : 0.01
+- Edge Threshold      : 5
+- nOctaves            : 3
+- Sigma               : 1.6
+
+-------
+Start processing sequence ...
+Images in the sequence: 1101
+
+Viewer started, waiting for thread.
+1
+New map created with 235 points for 0 Feature Type 
+New map created with 804 points for 1 Feature Type 
+Tracking Initlized in 5.17s
+The initlized frame ID: 3
+[LoopClosing] Sim3 choosed on channel 0
+Loop detected!
+Local Mapping STOP
+Local Mapping RELEASE
+Starting Global Bundle Adjustment
+Global Bundle Adjustment finished
+Updating map ...
+Local Mapping STOP
+Local Mapping RELEASE
+Map updated!
+System::StopViewer()
+System::StopViewer() done
+System::StopViewer()
+System::StopViewer() done
+Tracking thread joined...
+
+Saving correlation status...
+
+========== Global Summary ==========
+Frames: 1097
+avg_CorrEdges: 14.5087
+avg_match_A: 211.379
+avg_match_B: 171.37
+global_RI_MNR: 0.0846627
+global_RI_GNR: 0.0762305
+global_RI_DICE: 0.0758129
+
+========== Per-Channel Summary ==========
+   chA   chB     avgCorr        avgA        avgB   avgRI_MNR   avgRI_GNR  avgRI_DICE
+     0     1     14.5087     211.379      171.37   0.0744272   0.0642101   0.0632759
+
+Correlation status saved!
+
+-------
+
+median tracking time: 0.22123
+mean tracking time: 0.227997
+
+Saving camera trajectory to result12.txt ...
+
+trajectory saved!
+
+========== Performance Summary (ms) ==========
+name                                mean      median        rmse         min         max       count
+Tracking                          11.601      10.709       4.297       4.153      39.126        1097
+Correlation                        0.287       0.259       0.147       0.078       1.811        1097
+Total Init                      1366.703    1366.703       0.000    1366.703    1366.703           1
+Pipeline                         227.988     221.223      31.516     174.597     523.180        1101
+KAZE Extract                     213.474     207.969      26.448     157.929     346.203        1101
+SIFT Extract                      60.414      52.408      21.281      36.980     203.722        1101
+[RUN 13/20] 2025-09-11 00:12:39
+Registering ORBextractor...
+Registering AKAZEextractor...
+Registering BRISKextractor...
+Registering SIFTextractor...
+Registering KAZEextractor...
+Registering SuperPointExtractor...
+
+ORB-SLAM2 Copyright (C) 2014-2016 Raul Mur-Artal, University of Zaragoza.
+This program comes with ABSOLUTELY NO WARRANTY;
+This is free software, and you are welcome to redistribute it
+under certain conditions. See LICENSE.txt.
+
+Input sensor was set to: Monocular
+
+Loading Vocabulary : /home/howard/PM-SLAM/Install/var/lib/orbslam2/voc/kaze_cv.fbow
+This could take a while...
+Loading KAZE Vocabulary in FBoW.
+KAZE Vocabulary loaded in 0.009349s
+
+
+Loading Vocabulary : /home/howard/PM-SLAM/Install/var/lib/orbslam2/voc/sift_cv.fbow
+This could take a while...
+Loading SIFT Vocabulary in FBoW.
+SIFT Vocabulary loaded in 0.015233s
+
+
+Camera Parameters: 
+- fx: 707.091
+- fy: 707.091
+- cx: 601.887
+- cy: 183.11
+- k1: 0
+- k2: 0
+- p1: 0
+- p2: 0
+- fps: 10
+- color order: RGB (ignored if grayscale)
+
+[Feature 0] KAZE Extractor Parameters: 
+ ( TH_LOW: 0.5, TH_HIGH: 1 )
+- Number of Features : 2000
+- Scale Levels       : 4
+- Scale Factor       : 1.2
+- Threshold          : 0.001
+- nOctaves           : 4
+- nOctaveLayers      : 4
+- Extended (128‑dim) : 0
+- Upright            : 0
+
+[Feature 1] SIFT Extractor Parameters: 
+ ( TH_LOW: 300, TH_HIGH: 500 )
+- Number of Features  : 2000
+- Scale Levels        : 1
+- Scale Factor        : 1
+- Contrast Threshold  : 0.01
+- Edge Threshold      : 5
+- nOctaves            : 3
+- Sigma               : 1.6
+
+-------
+Start processing sequence ...
+Images in the sequence: 1101
+
+Viewer started, waiting for thread.
+1
+New map created with 235 points for 0 Feature Type 
+New map created with 804 points for 1 Feature Type 
+Tracking Initlized in 4.18s
+The initlized frame ID: 3
+[LoopClosing] Sim3 choosed on channel 0
+Loop detected!
+Local Mapping STOP
+Local Mapping RELEASE
+Starting Global Bundle Adjustment
+Global Bundle Adjustment finished
+Updating map ...
+Local Mapping STOP
+Local Mapping RELEASE
+Map updated!
+System::StopViewer()
+System::StopViewer() done
+System::StopViewer()
+System::StopViewer() done
+Tracking thread joined...
+
+Saving correlation status...
+
+========== Global Summary ==========
+Frames: 1097
+avg_CorrEdges: 16.0811
+avg_match_A: 219.574
+avg_match_B: 177.196
+global_RI_MNR: 0.0907534
+global_RI_GNR: 0.0815265
+global_RI_DICE: 0.0810602
+
+========== Per-Channel Summary ==========
+   chA   chB     avgCorr        avgA        avgB   avgRI_MNR   avgRI_GNR  avgRI_DICE
+     0     1     16.0811     219.574     177.196   0.0764193   0.0658171   0.0648739
+
+Correlation status saved!
+
+-------
+
+median tracking time: 0.217287
+mean tracking time: 0.221674
+
+Saving camera trajectory to result13.txt ...
+
+trajectory saved!
+
+========== Performance Summary (ms) ==========
+name                                mean      median        rmse         min         max       count
+Tracking                          11.233      10.456       3.964       4.506      47.005        1097
+Correlation                        0.291       0.263       0.127       0.085       1.238        1097
+Total Init                      1162.538    1162.538       0.000    1162.538    1162.538           1
+Pipeline                         221.666     217.280      27.930     174.768     578.157        1101
+KAZE Extract                     207.489     203.218      22.603     166.660     331.084        1101
+SIFT Extract                      59.546      51.951      21.917      37.050     232.273        1101
+[RUN 14/20] 2025-09-11 00:16:53
+Registering ORBextractor...
+Registering AKAZEextractor...
+Registering BRISKextractor...
+Registering SIFTextractor...
+Registering KAZEextractor...
+Registering SuperPointExtractor...
+
+ORB-SLAM2 Copyright (C) 2014-2016 Raul Mur-Artal, University of Zaragoza.
+This program comes with ABSOLUTELY NO WARRANTY;
+This is free software, and you are welcome to redistribute it
+under certain conditions. See LICENSE.txt.
+
+Input sensor was set to: Monocular
+
+Loading Vocabulary : /home/howard/PM-SLAM/Install/var/lib/orbslam2/voc/kaze_cv.fbow
+This could take a while...
+Loading KAZE Vocabulary in FBoW.
+KAZE Vocabulary loaded in 0.012513s
+
+
+Loading Vocabulary : /home/howard/PM-SLAM/Install/var/lib/orbslam2/voc/sift_cv.fbow
+This could take a while...
+Loading SIFT Vocabulary in FBoW.
+SIFT Vocabulary loaded in 0.019281s
+
+
+Camera Parameters: 
+- fx: 707.091
+- fy: 707.091
+- cx: 601.887
+- cy: 183.11
+- k1: 0
+- k2: 0
+- p1: 0
+- p2: 0
+- fps: 10
+- color order: RGB (ignored if grayscale)
+
+[Feature 0] KAZE Extractor Parameters: 
+ ( TH_LOW: 0.5, TH_HIGH: 1 )
+- Number of Features : 2000
+- Scale Levels       : 4
+- Scale Factor       : 1.2
+- Threshold          : 0.001
+- nOctaves           : 4
+- nOctaveLayers      : 4
+- Extended (128‑dim) : 0
+- Upright            : 0
+
+[Feature 1] SIFT Extractor Parameters: 
+ ( TH_LOW: 300, TH_HIGH: 500 )
+- Number of Features  : 2000
+- Scale Levels        : 1
+- Scale Factor        : 1
+- Contrast Threshold  : 0.01
+- Edge Threshold      : 5
+- nOctaves            : 3
+- Sigma               : 1.6
+
+-------
+Start processing sequence ...
+Images in the sequence: 1101
+
+Viewer started, waiting for thread.
+1
+New map created with 235 points for 0 Feature Type 
+New map created with 804 points for 1 Feature Type 
+Tracking Initlized in 4.63s
+The initlized frame ID: 3
+[LoopClosing] Sim3 choosed on channel 0
+Loop detected!
+Local Mapping STOP
+Local Mapping RELEASE
+Starting Global Bundle Adjustment
+Global Bundle Adjustment finished
+Updating map ...
+Local Mapping STOP
+Local Mapping RELEASE
+Map updated!
+System::StopViewer()
+System::StopViewer() done
+System::StopViewer()
+System::StopViewer() done
+Tracking thread joined...
+
+Saving correlation status...
+
+========== Global Summary ==========
+Frames: 1097
+avg_CorrEdges: 15.0474
+avg_match_A: 222.152
+avg_match_B: 178.72
+global_RI_MNR: 0.0841953
+global_RI_GNR: 0.0755178
+global_RI_DICE: 0.0750733
+
+========== Per-Channel Summary ==========
+   chA   chB     avgCorr        avgA        avgB   avgRI_MNR   avgRI_GNR  avgRI_DICE
+     0     1     15.0474     222.152      178.72   0.0726879   0.0623918   0.0614478
+
+Correlation status saved!
+
+-------
+
+median tracking time: 0.232895
+mean tracking time: 0.239541
+
+Saving camera trajectory to result14.txt ...
+
+trajectory saved!
+
+========== Performance Summary (ms) ==========
+name                                mean      median        rmse         min         max       count
+Tracking                          11.924      10.901       4.944       3.815      72.595        1097
+Correlation                        0.298       0.263       0.136       0.077       1.148        1097
+Total Init                      1262.399    1262.399       0.000    1262.399    1262.399           1
+Pipeline                         239.532     232.888      36.087     178.901     700.505        1101
+KAZE Extract                     224.561     219.321      30.898     163.560     370.276        1101
+SIFT Extract                      63.263      52.795      27.705      39.113     219.847        1101
+[RUN 15/20] 2025-09-11 00:21:27
+Registering ORBextractor...
+Registering AKAZEextractor...
+Registering BRISKextractor...
+Registering SIFTextractor...
+Registering KAZEextractor...
+Registering SuperPointExtractor...
+
+ORB-SLAM2 Copyright (C) 2014-2016 Raul Mur-Artal, University of Zaragoza.
+This program comes with ABSOLUTELY NO WARRANTY;
+This is free software, and you are welcome to redistribute it
+under certain conditions. See LICENSE.txt.
+
+Input sensor was set to: Monocular
+
+Loading Vocabulary : /home/howard/PM-SLAM/Install/var/lib/orbslam2/voc/kaze_cv.fbow
+This could take a while...
+Loading KAZE Vocabulary in FBoW.
+KAZE Vocabulary loaded in 0.012401s
+
+
+Loading Vocabulary : /home/howard/PM-SLAM/Install/var/lib/orbslam2/voc/sift_cv.fbow
+This could take a while...
+Loading SIFT Vocabulary in FBoW.
+SIFT Vocabulary loaded in 0.018931s
+
+
+Camera Parameters: 
+- fx: 707.091
+- fy: 707.091
+- cx: 601.887
+- cy: 183.11
+- k1: 0
+- k2: 0
+- p1: 0
+- p2: 0
+- fps: 10
+- color order: RGB (ignored if grayscale)
+
+[Feature 0] KAZE Extractor Parameters: 
+ ( TH_LOW: 0.5, TH_HIGH: 1 )
+- Number of Features : 2000
+- Scale Levels       : 4
+- Scale Factor       : 1.2
+- Threshold          : 0.001
+- nOctaves           : 4
+- nOctaveLayers      : 4
+- Extended (128‑dim) : 0
+- Upright            : 0
+
+[Feature 1] SIFT Extractor Parameters: 
+ ( TH_LOW: 300, TH_HIGH: 500 )
+- Number of Features  : 2000
+- Scale Levels        : 1
+- Scale Factor        : 1
+- Contrast Threshold  : 0.01
+- Edge Threshold      : 5
+- nOctaves            : 3
+- Sigma               : 1.6
+
+-------
+Start processing sequence ...
+Images in the sequence: 1101
+
+Viewer started, waiting for thread.
+1
+New map created with 235 points for 0 Feature Type 
+New map created with 804 points for 1 Feature Type 
+Tracking Initlized in 4.87s
+The initlized frame ID: 3
+[LoopClosing] Sim3 choosed on channel 0
+Loop detected!
+Local Mapping STOP
+Local Mapping RELEASE
+Starting Global Bundle Adjustment
+Global Bundle Adjustment finished
+Updating map ...
+Local Mapping STOP
+Local Mapping RELEASE
+Map updated!
+System::StopViewer()
+System::StopViewer() done
+System::StopViewer()
+System::StopViewer() done
+Tracking thread joined...
+
+Saving correlation status...
+
+========== Global Summary ==========
+Frames: 1097
+avg_CorrEdges: 12.7457
+avg_match_A: 206.01
+avg_match_B: 166.389
+global_RI_MNR: 0.0766015
+global_RI_GNR: 0.0688424
+global_RI_DICE: 0.0684516
+
+========== Per-Channel Summary ==========
+   chA   chB     avgCorr        avgA        avgB   avgRI_MNR   avgRI_GNR  avgRI_DICE
+     0     1     12.7457      206.01     166.389    0.069745   0.0599604   0.0590369
+
+Correlation status saved!
+
+-------
+
+median tracking time: 0.235703
+mean tracking time: 0.23987
+
+Saving camera trajectory to result15.txt ...
+
+trajectory saved!
+
+========== Performance Summary (ms) ==========
+name                                mean      median        rmse         min         max       count
+Tracking                          11.976      11.207       4.453       4.513      39.674        1097
+Correlation                        0.304       0.283       0.132       0.088       1.071        1097
+Total Init                      1290.361    1290.361       0.000    1290.361    1290.361           1
+Pipeline                         239.860     235.695      27.722     186.187     556.209        1101
+KAZE Extract                     225.048     222.455      22.393     179.237     336.302        1101
+SIFT Extract                      68.679      59.416      25.622      41.018     244.924        1101
+[RUN 16/20] 2025-09-11 00:26:01
+Registering ORBextractor...
+Registering AKAZEextractor...
+Registering BRISKextractor...
+Registering SIFTextractor...
+Registering KAZEextractor...
+Registering SuperPointExtractor...
+
+ORB-SLAM2 Copyright (C) 2014-2016 Raul Mur-Artal, University of Zaragoza.
+This program comes with ABSOLUTELY NO WARRANTY;
+This is free software, and you are welcome to redistribute it
+under certain conditions. See LICENSE.txt.
+
+Input sensor was set to: Monocular
+
+Loading Vocabulary : /home/howard/PM-SLAM/Install/var/lib/orbslam2/voc/kaze_cv.fbow
+This could take a while...
+Loading KAZE Vocabulary in FBoW.
+KAZE Vocabulary loaded in 0.011273s
+
+
+Loading Vocabulary : /home/howard/PM-SLAM/Install/var/lib/orbslam2/voc/sift_cv.fbow
+This could take a while...
+Loading SIFT Vocabulary in FBoW.
+SIFT Vocabulary loaded in 0.019120s
+
+
+Camera Parameters: 
+- fx: 707.091
+- fy: 707.091
+- cx: 601.887
+- cy: 183.11
+- k1: 0
+- k2: 0
+- p1: 0
+- p2: 0
+- fps: 10
+- color order: RGB (ignored if grayscale)
+
+[Feature 0] KAZE Extractor Parameters: 
+ ( TH_LOW: 0.5, TH_HIGH: 1 )
+- Number of Features : 2000
+- Scale Levels       : 4
+- Scale Factor       : 1.2
+- Threshold          : 0.001
+- nOctaves           : 4
+- nOctaveLayers      : 4
+- Extended (128‑dim) : 0
+- Upright            : 0
+
+[Feature 1] SIFT Extractor Parameters: 
+ ( TH_LOW: 300, TH_HIGH: 500 )
+- Number of Features  : 2000
+- Scale Levels        : 1
+- Scale Factor        : 1
+- Contrast Threshold  : 0.01
+- Edge Threshold      : 5
+- nOctaves            : 3
+- Sigma               : 1.6
+
+-------
+Start processing sequence ...
+Images in the sequence: 1101
+
+Viewer started, waiting for thread.
+1
+New map created with 235 points for 0 Feature Type 
+New map created with 804 points for 1 Feature Type 
+Tracking Initlized in 4.92s
+The initlized frame ID: 3
+[LoopClosing] Sim3 choosed on channel 0
+Loop detected!
+Local Mapping STOP
+Local Mapping RELEASE
+Starting Global Bundle Adjustment
+Global Bundle Adjustment finished
+Updating map ...
+Local Mapping STOP
+Local Mapping RELEASE
+Map updated!
+System::StopViewer()
+System::StopViewer() done
+System::StopViewer()
+System::StopViewer() done
+Tracking thread joined...
+
+Saving correlation status...
+
+========== Global Summary ==========
+Frames: 1097
+avg_CorrEdges: 11.8778
+avg_match_A: 198.421
+avg_match_B: 159.27
+global_RI_MNR: 0.0745769
+global_RI_GNR: 0.0668155
+global_RI_DICE: 0.066414
+
+========== Per-Channel Summary ==========
+   chA   chB     avgCorr        avgA        avgB   avgRI_MNR   avgRI_GNR  avgRI_DICE
+     0     1     11.8778     198.421      159.27   0.0715591   0.0608829   0.0598491
+
+Correlation status saved!
+
+-------
+
+median tracking time: 0.234463
+mean tracking time: 0.238993
+
+Saving camera trajectory to result16.txt ...
+
+trajectory saved!
+
+========== Performance Summary (ms) ==========
+name                                mean      median        rmse         min         max       count
+Tracking                          11.566      10.854       4.268       4.038      34.611        1097
+Correlation                        0.293       0.274       0.124       0.078       1.348        1097
+Total Init                      1251.331    1251.331       0.000    1251.331    1251.331           1
+Pipeline                         238.983     234.455      29.027     185.855     545.874        1101
+KAZE Extract                     224.508     221.101      23.920     174.330     414.077        1101
+SIFT Extract                      66.618      58.675      22.686      41.224     198.225        1101
+[RUN 17/20] 2025-09-11 00:30:35
+Registering ORBextractor...
+Registering AKAZEextractor...
+Registering BRISKextractor...
+Registering SIFTextractor...
+Registering KAZEextractor...
+Registering SuperPointExtractor...
+
+ORB-SLAM2 Copyright (C) 2014-2016 Raul Mur-Artal, University of Zaragoza.
+This program comes with ABSOLUTELY NO WARRANTY;
+This is free software, and you are welcome to redistribute it
+under certain conditions. See LICENSE.txt.
+
+Input sensor was set to: Monocular
+
+Loading Vocabulary : /home/howard/PM-SLAM/Install/var/lib/orbslam2/voc/kaze_cv.fbow
+This could take a while...
+Loading KAZE Vocabulary in FBoW.
+KAZE Vocabulary loaded in 0.010363s
+
+
+Loading Vocabulary : /home/howard/PM-SLAM/Install/var/lib/orbslam2/voc/sift_cv.fbow
+This could take a while...
+Loading SIFT Vocabulary in FBoW.
+SIFT Vocabulary loaded in 0.020677s
+
+
+Camera Parameters: 
+- fx: 707.091
+- fy: 707.091
+- cx: 601.887
+- cy: 183.11
+- k1: 0
+- k2: 0
+- p1: 0
+- p2: 0
+- fps: 10
+- color order: RGB (ignored if grayscale)
+
+[Feature 0] KAZE Extractor Parameters: 
+ ( TH_LOW: 0.5, TH_HIGH: 1 )
+- Number of Features : 2000
+- Scale Levels       : 4
+- Scale Factor       : 1.2
+- Threshold          : 0.001
+- nOctaves           : 4
+- nOctaveLayers      : 4
+- Extended (128‑dim) : 0
+- Upright            : 0
+
+[Feature 1] SIFT Extractor Parameters: 
+ ( TH_LOW: 300, TH_HIGH: 500 )
+- Number of Features  : 2000
+- Scale Levels        : 1
+- Scale Factor        : 1
+- Contrast Threshold  : 0.01
+- Edge Threshold      : 5
+- nOctaves            : 3
+- Sigma               : 1.6
+
+-------
+Start processing sequence ...
+Images in the sequence: 1101
+
+Viewer started, waiting for thread.
+1
+New map created with 235 points for 0 Feature Type 
+New map created with 804 points for 1 Feature Type 
+Tracking Initlized in 4.81s
+The initlized frame ID: 3
+[LoopClosing] Sim3 choosed on channel 0
+Loop detected!
+Local Mapping STOP
+Local Mapping RELEASE
+Starting Global Bundle Adjustment
+Global Bundle Adjustment finished
+Updating map ...
+Local Mapping STOP
+Local Mapping RELEASE
+Map updated!
+System::StopViewer()
+System::StopViewer() done
+System::StopViewer()
+System::StopViewer() done
+Tracking thread joined...
+
+Saving correlation status...
+
+========== Global Summary ==========
+Frames: 1097
+avg_CorrEdges: 12.3072
+avg_match_A: 206.972
+avg_match_B: 165.72
+global_RI_MNR: 0.074265
+global_RI_GNR: 0.0664532
+global_RI_DICE: 0.0660449
+
+========== Per-Channel Summary ==========
+   chA   chB     avgCorr        avgA        avgB   avgRI_MNR   avgRI_GNR  avgRI_DICE
+     0     1     12.3072     206.972      165.72   0.0695303   0.0589852   0.0579755
+
+Correlation status saved!
+
+-------
+
+median tracking time: 0.225883
+mean tracking time: 0.230909
+
+Saving camera trajectory to result17.txt ...
+
+trajectory saved!
+
+========== Performance Summary (ms) ==========
+name                                mean      median        rmse         min         max       count
+Tracking                          11.344      10.620       3.929       4.391      29.626        1097
+Correlation                        0.289       0.270       0.125       0.073       1.083        1097
+Total Init                      1230.575    1230.575       0.000    1230.575    1230.575           1
+Pipeline                         230.900     225.876      28.738     173.996     459.749        1101
+KAZE Extract                     216.712     212.918      24.717     163.075     366.161        1101
+SIFT Extract                      59.706      53.480      20.134      36.963     225.610        1101
+[RUN 18/20] 2025-09-11 00:35:00
+Registering ORBextractor...
+Registering AKAZEextractor...
+Registering BRISKextractor...
+Registering SIFTextractor...
+Registering KAZEextractor...
+Registering SuperPointExtractor...
+
+ORB-SLAM2 Copyright (C) 2014-2016 Raul Mur-Artal, University of Zaragoza.
+This program comes with ABSOLUTELY NO WARRANTY;
+This is free software, and you are welcome to redistribute it
+under certain conditions. See LICENSE.txt.
+
+Input sensor was set to: Monocular
+
+Loading Vocabulary : /home/howard/PM-SLAM/Install/var/lib/orbslam2/voc/kaze_cv.fbow
+This could take a while...
+Loading KAZE Vocabulary in FBoW.
+KAZE Vocabulary loaded in 0.007308s
+
+
+Loading Vocabulary : /home/howard/PM-SLAM/Install/var/lib/orbslam2/voc/sift_cv.fbow
+This could take a while...
+Loading SIFT Vocabulary in FBoW.
+SIFT Vocabulary loaded in 0.014349s
+
+
+Camera Parameters: 
+- fx: 707.091
+- fy: 707.091
+- cx: 601.887
+- cy: 183.11
+- k1: 0
+- k2: 0
+- p1: 0
+- p2: 0
+- fps: 10
+- color order: RGB (ignored if grayscale)
+
+[Feature 0] KAZE Extractor Parameters: 
+ ( TH_LOW: 0.5, TH_HIGH: 1 )
+- Number of Features : 2000
+- Scale Levels       : 4
+- Scale Factor       : 1.2
+- Threshold          : 0.001
+- nOctaves           : 4
+- nOctaveLayers      : 4
+- Extended (128‑dim) : 0
+- Upright            : 0
+
+[Feature 1] SIFT Extractor Parameters: 
+ ( TH_LOW: 300, TH_HIGH: 500 )
+- Number of Features  : 2000
+- Scale Levels        : 1
+- Scale Factor        : 1
+- Contrast Threshold  : 0.01
+- Edge Threshold      : 5
+- nOctaves            : 3
+- Sigma               : 1.6
+
+-------
+Start processing sequence ...
+Images in the sequence: 1101
+
+Viewer started, waiting for thread.
+1
+New map created with 235 points for 0 Feature Type 
+New map created with 804 points for 1 Feature Type 
+Tracking Initlized in 4.45s
+The initlized frame ID: 3
+[LoopClosing] Sim3 choosed on channel 0
+Loop detected!
+Local Mapping STOP
+Local Mapping RELEASE
+Starting Global Bundle Adjustment
+Global Bundle Adjustment finished
+Updating map ...
+Local Mapping STOP
+Local Mapping RELEASE
+Map updated!
+System::StopViewer()
+System::StopViewer() done
+System::StopViewer()
+System::StopViewer() done
+Tracking thread joined...
+
+Saving correlation status...
+
+========== Global Summary ==========
+Frames: 1097
+avg_CorrEdges: 16.2233
+avg_match_A: 218.596
+avg_match_B: 175.957
+global_RI_MNR: 0.0922005
+global_RI_GNR: 0.0827209
+global_RI_DICE: 0.0822365
+
+========== Per-Channel Summary ==========
+   chA   chB     avgCorr        avgA        avgB   avgRI_MNR   avgRI_GNR  avgRI_DICE
+     0     1     16.2233     218.596     175.957   0.0774702   0.0666507    0.065693
+
+Correlation status saved!
+
+-------
+
+median tracking time: 0.214126
+mean tracking time: 0.219627
+
+Saving camera trajectory to result18.txt ...
+
+trajectory saved!
+
+========== Performance Summary (ms) ==========
+name                                mean      median        rmse         min         max       count
+Tracking                          11.724      10.858       4.046       4.384      39.888        1097
+Correlation                        0.302       0.271       0.130       0.086       0.846        1097
+Total Init                      1239.732    1239.732       0.000    1239.732    1239.732           1
+Pipeline                         219.619     214.117      28.384     166.005     509.945        1101
+KAZE Extract                     204.960     200.444      23.168     158.204     294.661        1101
+SIFT Extract                      58.884      52.777      19.555      36.326     232.027        1101
+[RUN 19/20] 2025-09-11 00:39:11
+Registering ORBextractor...
+Registering AKAZEextractor...
+Registering BRISKextractor...
+Registering SIFTextractor...
+Registering KAZEextractor...
+Registering SuperPointExtractor...
+
+ORB-SLAM2 Copyright (C) 2014-2016 Raul Mur-Artal, University of Zaragoza.
+This program comes with ABSOLUTELY NO WARRANTY;
+This is free software, and you are welcome to redistribute it
+under certain conditions. See LICENSE.txt.
+
+Input sensor was set to: Monocular
+
+Loading Vocabulary : /home/howard/PM-SLAM/Install/var/lib/orbslam2/voc/kaze_cv.fbow
+This could take a while...
+Loading KAZE Vocabulary in FBoW.
+KAZE Vocabulary loaded in 0.010681s
+
+
+Loading Vocabulary : /home/howard/PM-SLAM/Install/var/lib/orbslam2/voc/sift_cv.fbow
+This could take a while...
+Loading SIFT Vocabulary in FBoW.
+SIFT Vocabulary loaded in 0.016900s
+
+
+Camera Parameters: 
+- fx: 707.091
+- fy: 707.091
+- cx: 601.887
+- cy: 183.11
+- k1: 0
+- k2: 0
+- p1: 0
+- p2: 0
+- fps: 10
+- color order: RGB (ignored if grayscale)
+
+[Feature 0] KAZE Extractor Parameters: 
+ ( TH_LOW: 0.5, TH_HIGH: 1 )
+- Number of Features : 2000
+- Scale Levels       : 4
+- Scale Factor       : 1.2
+- Threshold          : 0.001
+- nOctaves           : 4
+- nOctaveLayers      : 4
+- Extended (128‑dim) : 0
+- Upright            : 0
+
+[Feature 1] SIFT Extractor Parameters: 
+ ( TH_LOW: 300, TH_HIGH: 500 )
+- Number of Features  : 2000
+- Scale Levels        : 1
+- Scale Factor        : 1
+- Contrast Threshold  : 0.01
+- Edge Threshold      : 5
+- nOctaves            : 3
+- Sigma               : 1.6
+
+-------
+Start processing sequence ...
+Images in the sequence: 1101
+
+Viewer started, waiting for thread.
+1
+New map created with 235 points for 0 Feature Type 
+New map created with 804 points for 1 Feature Type 
+Tracking Initlized in 4.09s
+The initlized frame ID: 3
+[LoopClosing] Sim3 choosed on channel 0
+Loop detected!
+Local Mapping STOP
+Local Mapping RELEASE
+Starting Global Bundle Adjustment
+Global Bundle Adjustment finished
+Updating map ...
+Local Mapping STOP
+Local Mapping RELEASE
+Map updated!
+System::StopViewer()
+System::StopViewer() done
+System::StopViewer()
+System::StopViewer() done
+Tracking thread joined...
+
+Saving correlation status...
+
+========== Global Summary ==========
+Frames: 1097
+avg_CorrEdges: 17.2078
+avg_match_A: 226.458
+avg_match_B: 183.707
+global_RI_MNR: 0.0936698
+global_RI_GNR: 0.0843664
+global_RI_DICE: 0.0839069
+
+========== Per-Channel Summary ==========
+   chA   chB     avgCorr        avgA        avgB   avgRI_MNR   avgRI_GNR  avgRI_DICE
+     0     1     17.2078     226.458     183.707   0.0750452   0.0646753   0.0637487
+
+Correlation status saved!
+
+-------
+
+median tracking time: 0.212159
+mean tracking time: 0.220501
+
+Saving camera trajectory to result19.txt ...
+
+trajectory saved!
+
+========== Performance Summary (ms) ==========
+name                                mean      median        rmse         min         max       count
+Tracking                          11.419      10.675       3.952       4.000      33.958        1097
+Correlation                        0.292       0.265       0.127       0.086       0.952        1097
+Total Init                      1136.258    1136.258       0.000    1136.258    1136.258           1
+Pipeline                         220.493     212.150      29.048     175.155     521.006        1101
+KAZE Extract                     206.413     198.582      25.237     165.636     310.219        1101
+SIFT Extract                      57.585      50.584      19.412      36.727     266.417        1101
+[RUN 20/20] 2025-09-11 00:43:24
+Registering ORBextractor...
+Registering AKAZEextractor...
+Registering BRISKextractor...
+Registering SIFTextractor...
+Registering KAZEextractor...
+Registering SuperPointExtractor...
+
+ORB-SLAM2 Copyright (C) 2014-2016 Raul Mur-Artal, University of Zaragoza.
+This program comes with ABSOLUTELY NO WARRANTY;
+This is free software, and you are welcome to redistribute it
+under certain conditions. See LICENSE.txt.
+
+Input sensor was set to: Monocular
+
+Loading Vocabulary : /home/howard/PM-SLAM/Install/var/lib/orbslam2/voc/kaze_cv.fbow
+This could take a while...
+Loading KAZE Vocabulary in FBoW.
+KAZE Vocabulary loaded in 0.008156s
+
+
+Loading Vocabulary : /home/howard/PM-SLAM/Install/var/lib/orbslam2/voc/sift_cv.fbow
+This could take a while...
+Loading SIFT Vocabulary in FBoW.
+SIFT Vocabulary loaded in 0.018033s
+
+
+Camera Parameters: 
+- fx: 707.091
+- fy: 707.091
+- cx: 601.887
+- cy: 183.11
+- k1: 0
+- k2: 0
+- p1: 0
+- p2: 0
+- fps: 10
+- color order: RGB (ignored if grayscale)
+
+[Feature 0] KAZE Extractor Parameters: 
+ ( TH_LOW: 0.5, TH_HIGH: 1 )
+- Number of Features : 2000
+- Scale Levels       : 4
+- Scale Factor       : 1.2
+- Threshold          : 0.001
+- nOctaves           : 4
+- nOctaveLayers      : 4
+- Extended (128‑dim) : 0
+- Upright            : 0
+
+[Feature 1] SIFT Extractor Parameters: 
+ ( TH_LOW: 300, TH_HIGH: 500 )
+- Number of Features  : 2000
+- Scale Levels        : 1
+- Scale Factor        : 1
+- Contrast Threshold  : 0.01
+- Edge Threshold      : 5
+- nOctaves            : 3
+- Sigma               : 1.6
+
+-------
+Start processing sequence ...
+Images in the sequence: 1101
+
+Viewer started, waiting for thread.
+1
+New map created with 235 points for 0 Feature Type 
+New map created with 804 points for 1 Feature Type 
+Tracking Initlized in 5.01s
+The initlized frame ID: 3
+[LoopClosing] Sim3 choosed on channel 0
+Loop detected!
+Local Mapping STOP
+Local Mapping RELEASE
+Starting Global Bundle Adjustment
+Global Bundle Adjustment finished
+Updating map ...
+Local Mapping STOP
+Local Mapping RELEASE
+Map updated!
+System::StopViewer()
+System::StopViewer() done
+System::StopViewer()
+System::StopViewer() done
+Tracking thread joined...
+
+Saving correlation status...
+
+========== Global Summary ==========
+Frames: 1097
+avg_CorrEdges: 13.7593
+avg_match_A: 213.32
+avg_match_B: 169.014
+global_RI_MNR: 0.0814096
+global_RI_GNR: 0.0724638
+global_RI_DICE: 0.0719756
+
+========== Per-Channel Summary ==========
+   chA   chB     avgCorr        avgA        avgB   avgRI_MNR   avgRI_GNR  avgRI_DICE
+     0     1     13.7593      213.32     169.014   0.0753447   0.0633251   0.0621451
+
+Correlation status saved!
+
+-------
+
+median tracking time: 0.225846
+mean tracking time: 0.231833
+
+Saving camera trajectory to result20.txt ...
+
+trajectory saved!
+
+========== Performance Summary (ms) ==========
+name                                mean      median        rmse         min         max       count
+Tracking                          11.762      11.211       3.869       4.738      35.045        1097
+Correlation                        0.292       0.277       0.116       0.097       0.970        1097
+Total Init                      1291.150    1291.150       0.000    1291.150    1291.150           1
+Pipeline                         231.824     225.839      31.314     174.591     460.858        1101
+KAZE Extract                     217.152     211.693      27.416     165.383     344.272        1101
+SIFT Extract                      59.354      52.452      20.523      38.583     262.347        1101
+[DONE] Summary: /home/howard/PM-SLAM/Experiments/Performances/kt07_kaz_sft_pref.txt
+[DONE] Correlations aggregate: /home/howard/PM-SLAM/Experiments/Correlations/corr_exp_kt07_kaz_sft.txt
+[DONE] Correlations per-run:   /home/howard/PM-SLAM/Experiments/Correlations/kt07_kaz_sft/XX.txt
+[DONE] Logs:    /home/howard/PM-SLAM/Experiments/Logs/kt07_kaz_sft
+[DONE] Results: /home/howard/PM-SLAM/Experiments/Poses/kt07_kaz_sft
+[SKIP] --noEvo set; skip APE/RPE for 'kt07_kaz_sft'.
+
+Total wall time: 1h 28m 59s
+All experiments finished.
+Performance -> ./Performances/<name>/<name>_pref.txt
+APE/RPE     -> ./PoseErrors/APE|RPE/<name>.txt
+Logs/Poses  -> ./Logs/<name>/, ./Poses/<name>/
+Correlations-> ./Correlations/<name>/ and ./Correlations/corr_exp_<name>.txt (if --withCorr)

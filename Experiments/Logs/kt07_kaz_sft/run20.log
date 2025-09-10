@@ -12,16 +12,16 @@ under certain conditions. See LICENSE.txt.
 
 Input sensor was set to: Monocular
 
-Loading Vocabulary : /home/howard/Refactored_ORB_SLAM2/Install/var/lib/orbslam2/voc/kaze_cv.fbow
+Loading Vocabulary : /home/howard/PM-SLAM/Install/var/lib/orbslam2/voc/kaze_cv.fbow
 This could take a while...
 Loading KAZE Vocabulary in FBoW.
-KAZE Vocabulary loaded in 0.006087s
+KAZE Vocabulary loaded in 0.008156s
 
 
-Loading Vocabulary : /home/howard/Refactored_ORB_SLAM2/Install/var/lib/orbslam2/voc/sift_cv.fbow
+Loading Vocabulary : /home/howard/PM-SLAM/Install/var/lib/orbslam2/voc/sift_cv.fbow
 This could take a while...
 Loading SIFT Vocabulary in FBoW.
-SIFT Vocabulary loaded in 0.012029s
+SIFT Vocabulary loaded in 0.018033s
 
 
 Camera Parameters: 
@@ -61,11 +61,59 @@ Camera Parameters:
 Start processing sequence ...
 Images in the sequence: 1101
 
+Viewer started, waiting for thread.
 1
 New map created with 235 points for 0 Feature Type 
 New map created with 804 points for 1 Feature Type 
-Tracking Initlized in 3.55s
+Tracking Initlized in 5.01s
 The initlized frame ID: 3
 [LoopClosing] Sim3 choosed on channel 0
 Loop detected!
 Local Mapping STOP
+Local Mapping RELEASE
+Starting Global Bundle Adjustment
+Global Bundle Adjustment finished
+Updating map ...
+Local Mapping STOP
+Local Mapping RELEASE
+Map updated!
+System::StopViewer()
+System::StopViewer() done
+System::StopViewer()
+System::StopViewer() done
+Tracking thread joined...
+
+Saving correlation status...
+
+========== Global Summary ==========
+Frames: 1097
+avg_CorrEdges: 13.7593
+avg_match_A: 213.32
+avg_match_B: 169.014
+global_RI_MNR: 0.0814096
+global_RI_GNR: 0.0724638
+global_RI_DICE: 0.0719756
+
+========== Per-Channel Summary ==========
+   chA   chB     avgCorr        avgA        avgB   avgRI_MNR   avgRI_GNR  avgRI_DICE
+     0     1     13.7593      213.32     169.014   0.0753447   0.0633251   0.0621451
+
+Correlation status saved!
+
+-------
+
+median tracking time: 0.225846
+mean tracking time: 0.231833
+
+Saving camera trajectory to result20.txt ...
+
+trajectory saved!
+
+========== Performance Summary (ms) ==========
+name                                mean      median        rmse         min         max       count
+Tracking                          11.762      11.211       3.869       4.738      35.045        1097
+Correlation                        0.292       0.277       0.116       0.097       0.970        1097
+Total Init                      1291.150    1291.150       0.000    1291.150    1291.150           1
+Pipeline                         231.824     225.839      31.314     174.591     460.858        1101
+KAZE Extract                     217.152     211.693      27.416     165.383     344.272        1101
+SIFT Extract                      59.354      52.452      20.523      38.583     262.347        1101

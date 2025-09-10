@@ -133,3 +133,48 @@ Pipeline                          33.277      32.494       6.618      28.377    
 SIFT Extract                      27.725      27.185       2.448      25.675      53.959        1101
 BRISK Extract                     19.969      18.320       6.564       5.977      34.455        1101
 
+========== 02 Performance Summary (ms) ==========
+name                                mean      median        rmse         min         max       count
+Tracking                          10.676       9.394       5.460       2.441      52.636        1097
+Correlation                        0.264       0.216       0.199       0.023       2.778        1097
+Total Init                       995.952     995.952       0.000     995.952     995.952           1
+Pipeline                         120.026     112.769      39.689      53.616     387.787        1101
+SIFT Extract                     105.684      99.686      35.493      45.397     311.144        1101
+BRISK Extract                     51.577      49.690      18.316      10.924     134.377        1101
+
+========== 03 Performance Summary (ms) ==========
+name                                mean      median        rmse         min         max       count
+Tracking                           7.473       7.023       2.905       2.883      36.685        1097
+Correlation                        0.192       0.172       0.100       0.054       1.888        1097
+Total Init                       822.201     822.201       0.000     822.201     822.201           1
+Pipeline                          72.186      71.201      14.476      46.476     290.779        1101
+SIFT Extract                      62.640      61.958      10.041      41.586     104.612        1101
+BRISK Extract                     39.749      38.184      12.970      10.291      78.327        1101
+
+========== 05 Performance Summary (ms) ==========
+name                                mean      median        rmse         min         max       count
+Tracking                           7.360       6.612       3.037       2.413      23.416        1097
+Correlation                        0.201       0.164       0.188       0.045       5.070        1097
+Total Init                       866.634     866.634       0.000     866.634     866.634           1
+Pipeline                          72.258      70.743      15.452      47.396     319.847        1101
+SIFT Extract                      62.652      60.880      11.198      40.123     116.950        1101
+BRISK Extract                     40.171      37.884      12.715      10.735      78.562        1101
+
+========== 07 Performance Summary (ms) ==========
+name                                mean      median        rmse         min         max       count
+Tracking                           7.551       7.030       2.976       2.675      35.504        1097
+Correlation                        0.208       0.176       0.203       0.059       5.012        1097
+Total Init                       935.971     935.971       0.000     935.971     935.971           1
+Pipeline                          76.249      74.119      17.403      48.647     332.502        1101
+SIFT Extract                      66.306      64.736      12.261      41.009     158.769        1101
+BRISK Extract                     42.337      40.314      14.299      11.244      90.023        1101
+
+========== 16 Performance Summary (ms) ==========
+name                                mean      median        rmse         min         max       count
+Tracking                           8.025       7.165       3.487       3.140      42.270        1097
+Correlation                        0.205       0.178       0.133       0.025       2.621        1097
+Total Init                       957.483     957.483       0.000     957.483     957.483           1
+Pipeline                          77.216      74.035      20.613      48.405     389.453        1101
+SIFT Extract                      66.692      64.366      14.799      41.833     149.547        1101
+BRISK Extract                     41.825      39.287      15.006      10.585     118.835        1101
+

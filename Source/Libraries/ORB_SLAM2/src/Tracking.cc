@@ -627,25 +627,25 @@ void Tracking::Track() {
         return;
       }
 
-      if (s_lost_streak >= 10) {
-        // Save trajectory segment before reset with a unique filename
-        const char* tag = ::getenv("RUN_TAG");
-        if (!tag) tag = "untagged";
-        ++s_seg_counter;
-        std::ostringstream oss;
-        auto now = std::chrono::system_clock::now();
-        auto ms  = std::chrono::duration_cast<std::chrono::milliseconds>(now.time_since_epoch()).count();
-        oss << "TrajectoryBeforeReset_" << tag
-            << "_seg" << std::setw(2) << std::setfill('0') << s_seg_counter
-            << "_pid" << ::getpid()
-            << "_" << ms << ".txt";
-        mpSystem->SaveTrajectoryTUM(oss.str());
-        std::cout << "[Tracking] wrote pre-reset trajectory to " << oss.str() << std::endl;
-        cout << "[Tracking] LOST for " << s_lost_streak << " consecutive frames -> reset" << endl;
-        mpSystem->Reset();
-        ORB_SLAM2::Perf::record("Lost Count", 1.0);
-        return;
-      }
+//      if (s_lost_streak >= 10) {
+//        // Save trajectory segment before reset with a unique filename
+//        const char* tag = ::getenv("RUN_TAG");
+//        if (!tag) tag = "untagged";
+//        ++s_seg_counter;
+//        std::ostringstream oss;
+//        auto now = std::chrono::system_clock::now();
+//        auto ms  = std::chrono::duration_cast<std::chrono::milliseconds>(now.time_since_epoch()).count();
+//        oss << "TrajectoryBeforeReset_" << tag
+//            << "_seg" << std::setw(2) << std::setfill('0') << s_seg_counter
+//            << "_pid" << ::getpid()
+//            << "_" << ms << ".txt";
+//        mpSystem->SaveTrajectoryTUM(oss.str());
+//        std::cout << "[Tracking] wrote pre-reset trajectory to " << oss.str() << std::endl;
+//        cout << "[Tracking] LOST for " << s_lost_streak << " consecutive frames -> reset" << endl;
+//        mpSystem->Reset();
+//        ORB_SLAM2::Perf::record("Lost Count", 1.0);
+//        return;
+//      }
     } else {
       s_lost_streak = 0;
     }

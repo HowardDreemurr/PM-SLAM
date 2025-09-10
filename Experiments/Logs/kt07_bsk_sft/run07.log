@@ -12,16 +12,16 @@ under certain conditions. See LICENSE.txt.
 
 Input sensor was set to: Monocular
 
-Loading Vocabulary : /home/howard/Refactored_ORB_SLAM2/Install/var/lib/orbslam2/voc/brisk_cv.fbow
+Loading Vocabulary : /home/howard/PM-SLAM/Install/var/lib/orbslam2/voc/brisk_cv.fbow
 This could take a while...
 Loading BRISK Vocabulary in FBoW.
-BRISK Vocabulary loaded in 0.001993s
+BRISK Vocabulary loaded in 0.002491s
 
 
-Loading Vocabulary : /home/howard/Refactored_ORB_SLAM2/Install/var/lib/orbslam2/voc/sift_cv.fbow
+Loading Vocabulary : /home/howard/PM-SLAM/Install/var/lib/orbslam2/voc/sift_cv.fbow
 This could take a while...
 Loading SIFT Vocabulary in FBoW.
-SIFT Vocabulary loaded in 0.012249s
+SIFT Vocabulary loaded in 0.017167s
 
 
 Camera Parameters: 
@@ -59,11 +59,49 @@ Camera Parameters:
 Start processing sequence ...
 Images in the sequence: 1101
 
+Viewer started, waiting for thread.
 1
 New map created with 119 points for 0 Feature Type 
 New map created with 804 points for 1 Feature Type 
-Tracking Initlized in 1.20s
+Tracking Initlized in 1.77s
 The initlized frame ID: 3
-[LoopClosing] Sim3 choosed on channel 1
-Loop detected!
-Local Mapping STOP
+System::StopViewer()
+System::StopViewer() done
+System::StopViewer()
+System::StopViewer() done
+Tracking thread joined...
+
+Saving correlation status...
+
+========== Global Summary ==========
+Frames: 1097
+avg_CorrEdges: 5.37284
+avg_match_A: 77.0182
+avg_match_B: 111.977
+global_RI_MNR: 0.0697606
+global_RI_GNR: 0.0578551
+global_RI_DICE: 0.0568568
+
+========== Per-Channel Summary ==========
+   chA   chB     avgCorr        avgA        avgB   avgRI_MNR   avgRI_GNR  avgRI_DICE
+     0     1     5.37284     77.0182     111.977    0.060465   0.0501419   0.0489882
+
+Correlation status saved!
+
+-------
+
+median tracking time: 0.0741362
+mean tracking time: 0.0762599
+
+Saving camera trajectory to result07.txt ...
+
+trajectory saved!
+
+========== Performance Summary (ms) ==========
+name                                mean      median        rmse         min         max       count
+Tracking                           7.551       7.030       2.976       2.675      35.504        1097
+Correlation                        0.208       0.176       0.203       0.059       5.012        1097
+Total Init                       935.971     935.971       0.000     935.971     935.971           1
+Pipeline                          76.249      74.119      17.403      48.647     332.502        1101
+SIFT Extract                      66.306      64.736      12.261      41.009     158.769        1101
+BRISK Extract                     42.337      40.314      14.299      11.244      90.023        1101
