@@ -124,14 +124,15 @@ KeyFrame *MapPoint::GetReferenceKeyFrame() {
 //TO-DO, will it have problems if I do not sepicfy the feature type on mObservations ?
 void MapPoint::AddObservation(KeyFrame *pKF, std::size_t idx) {
   unique_lock<mutex> lock(mMutexFeatures);
-  if (mObservations.count(pKF))
-    return;
-  mObservations[pKF] = idx;
+  if (mObservations.count(pKF)) return;
 
-  if (pKF->Channels[mFtype].mvuRight[idx] >= 0)
-    nObs += 2;
-  else
-    nObs++;
+  const int ft = mFtype;
+  if (idx >= pKF->Channels[ft].mvpMapPoints.size()) return;
+  if (pKF->Channels[ft].mDescriptors.rows == 0)     return;
+  if (idx >= static_cast<size_t>(pKF->Channels[ft].mDescriptors.rows)) return;
+
+  mObservations[pKF] = idx;
+  if (pKF->Channels[ft].mvuRight[idx] >= 0) nObs += 2; else nObs += 1;
 }
 
 void MapPoint::EraseObservation(KeyFrame *pKF) {

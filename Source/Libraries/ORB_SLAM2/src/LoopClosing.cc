@@ -698,12 +698,14 @@ void LoopClosing::CorrectLoop(const int Ftype) {
         if (pCurMP) {
           if (!pCurMP->isBad() && !pLoopMP->isBad() &&
               pCurMP->GetFeatureType() == pLoopMP->GetFeatureType()) {
-            pCurMP->Replace(pLoopMP);
-              }
+                pCurMP->Replace(pLoopMP);
+          }
         } else {
-          mpCurrentKF->AddMapPoint(pLoopMP, i, Ftype);
-          pLoopMP->AddObservation(mpCurrentKF, i);
-          pLoopMP->ComputeDistinctiveDescriptors();
+          if (pLoopMP->GetFeatureType() == Ftype) {
+            mpCurrentKF->AddMapPoint(pLoopMP, i, Ftype);
+            pLoopMP->AddObservation(mpCurrentKF, i);
+            pLoopMP->ComputeDistinctiveDescriptors();
+          }
         }
       }
     }

@@ -253,17 +253,19 @@ void KeyFrame::EraseMapPointMatch(const std::size_t &idx, const int Ftype) {
 }
 
 // Delete Ftype ? Ftype is useless because we have pMp ??
-void KeyFrame::EraseMapPointMatch(MapPoint *pMP, const int Ftype) {
-  int idx = pMP->GetIndexInKeyFrame(this);
-  int _Ftype = pMP->GetFeatureType();
-  if (idx >= 0)
-    Channels[Ftype].mvpMapPoints[idx] = static_cast<MapPoint *>(NULL);
+void KeyFrame::EraseMapPointMatch(MapPoint* pMP, const int /*Ftype*/) {
+  unique_lock<mutex> lock(mMutexFeatures);
+  const int idx = pMP->GetIndexInKeyFrame(this);
+  const int ft  = pMP->GetFeatureType();
+  if (idx >= 0) Channels[ft].mvpMapPoints[idx] = nullptr;
 }
 
 // Delete Ftype ? Ftype is useless because we have pMp ??
-void KeyFrame::ReplaceMapPointMatch(const std::size_t &idx, MapPoint *pMP, const int Ftype) {
-  int _Ftype = pMP->GetFeatureType();
-  Channels[Ftype].mvpMapPoints[idx] = pMP;
+void KeyFrame::ReplaceMapPointMatch(const std::size_t& idx, MapPoint* pMP, const int Ftype) {
+  unique_lock<mutex> lock(mMutexFeatures);
+  const int ft = pMP->GetFeatureType();
+  if (ft != Ftype) return;
+  Channels[ft].mvpMapPoints[idx] = pMP;
 }
 
 set<MapPoint *> KeyFrame::GetMapPoints(const int Ftype) {
