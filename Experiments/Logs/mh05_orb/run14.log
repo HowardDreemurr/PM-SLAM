@@ -17,7 +17,7 @@ Input sensor was set to: Monocular
 Loading Vocabulary : /home/ucacsjj/Proj/UCL/Projects/PM-SLAM/Install/var/lib/orbslam2/voc/orb_mur.fbow
 This could take a while...
 Loading ORB Vocabulary in FBoW.
-ORB Vocabulary loaded in 0.020179s
+ORB Vocabulary loaded in 0.020519s
 
 
 Camera Parameters: 
@@ -47,9 +47,11 @@ Images in the sequence: 2273
 Viewer started, waiting for thread.
 0
 New map created with 119 points for 0 Feature Type 
-Tracking Initlized in 12.37s
+Tracking Initlized in 12.46s
 The initlized frame ID: 81
-The lost frame ID: 2249
+The lost frame ID: 2248
+The lost frame ID: 2253
+The lost frame ID: 2254
 System::StopViewer()
 System::StopViewer() done
 Tracking thread joined...
@@ -60,8 +62,8 @@ Correlation status saved!
 
 -------
 
-median tracking time: 0.0383153
-mean tracking time: 0.039382
+median tracking time: 0.0383139
+mean tracking time: 0.0393655
 
 Saving camera trajectory to Trajectory.txt ...
 
@@ -69,8 +71,8 @@ trajectory saved!
 
 ========== Performance Summary (ms) ==========
 name                                mean      median        rmse         min         max       count
-Tracking                          11.479      10.625       4.946       1.840      46.959        2191
-Correlation                        0.000       0.000       0.000       0.000       0.001        2190
-Total Init                      5235.077    5235.077       0.000    5235.077    5235.077           1
-Pipeline                          39.377      38.312      11.731      16.415     117.400        2273
-ORB Extract                       23.823      24.035       7.399       9.121      47.491        2273
+Tracking                          11.517      10.792       5.056       1.931      42.781        2191
+Correlation                        0.000       0.000       0.000       0.000       0.009        2188
+Total Init                      5302.050    5302.050       0.000    5302.050    5302.050           1
+Pipeline                          39.360      38.309      11.749      16.321     117.121        2273
+ORB Extract                       23.861      23.992       7.273       8.929      44.791        2273

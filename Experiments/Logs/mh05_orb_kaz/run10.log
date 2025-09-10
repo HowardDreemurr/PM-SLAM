@@ -17,13 +17,13 @@ Input sensor was set to: Monocular
 Loading Vocabulary : /home/ucacsjj/Proj/UCL/Projects/PM-SLAM/Install/var/lib/orbslam2/voc/orb_mur.fbow
 This could take a while...
 Loading ORB Vocabulary in FBoW.
-ORB Vocabulary loaded in 0.036076s
+ORB Vocabulary loaded in 0.021470s
 
 
 Loading Vocabulary : /home/ucacsjj/Proj/UCL/Projects/PM-SLAM/Install/var/lib/orbslam2/voc/kaze_cv.fbow
 This could take a while...
 Loading KAZE Vocabulary in FBoW.
-KAZE Vocabulary loaded in 0.022673s
+KAZE Vocabulary loaded in 0.013170s
 
 
 Camera Parameters: 
@@ -62,11 +62,11 @@ Start processing sequence ...
 Images in the sequence: 2273
 
 Viewer started, waiting for thread.
-1
-New map created with 86 points for 0 Feature Type 
-New map created with 356 points for 1 Feature Type 
-Tracking Initlized in 488.48s
-The initlized frame ID: 196
+0
+New map created with 90 points for 0 Feature Type 
+New map created with 473 points for 1 Feature Type 
+Tracking Initlized in 202.98s
+The initlized frame ID: 81
 [LoopClosing] Sim3 choosed on channel 1
 Loop detected!
 Local Mapping STOP
@@ -84,24 +84,24 @@ Tracking thread joined...
 Saving correlation status...
 
 ========== Global Summary ==========
-Frames: 2076
-avg_CorrEdges: 41.6435
-avg_match_A: 181.578
-avg_match_B: 291.13
-global_RI_MNR: 0.229342
-global_RI_GNR: 0.181123
-global_RI_DICE: 0.176192
+Frames: 2191
+avg_CorrEdges: 41.9726
+avg_match_A: 175.546
+avg_match_B: 303.906
+global_RI_MNR: 0.239098
+global_RI_GNR: 0.181719
+global_RI_DICE: 0.175086
 
 ========== Per-Channel Summary ==========
    chA   chB     avgCorr        avgA        avgB   avgRI_MNR   avgRI_GNR  avgRI_DICE
-     0     1     41.6435     181.578      291.13     0.24833    0.194057    0.187135
+     0     1     41.9726     175.546     303.906     0.25536    0.184651    0.174439
 
 Correlation status saved!
 
 -------
 
-median tracking time: 0.383137
-mean tracking time: 0.388476
+median tracking time: 0.374771
+mean tracking time: 0.368177
 
 Saving camera trajectory to Trajectory.txt ...
 
@@ -109,9 +109,9 @@ trajectory saved!
 
 ========== Performance Summary (ms) ==========
 name                                mean      median        rmse         min         max       count
-Tracking                          28.195      26.891      13.162       4.263      81.142        2076
-Correlation                        0.488       0.435       0.217       0.122       1.973        2076
-Total Init                     84400.910   84400.910       0.000   84400.910   84400.910           1
-Pipeline                         388.471     383.133      42.853     283.311     671.440        2273
-KAZE Extract                     345.390     344.567      31.728     238.188     452.255        2273
-ORB Extract                       22.848      23.663       6.913       9.105      42.758        2273
+Tracking                          27.096      25.439      10.086       5.797      63.972        2191
+Correlation                        0.470       0.437       0.195       0.094       3.158        2191
+Total Init                     39609.792   39609.792       0.000   39609.792   39609.792           1
+Pipeline                         368.172     374.767      50.021     269.023     558.319        2273
+KAZE Extract                     329.271     337.547      41.059     239.235     435.511        2273
+ORB Extract                       23.262      24.379       6.158       9.141      43.795        2273
