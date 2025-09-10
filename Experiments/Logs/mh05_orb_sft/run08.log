@@ -17,13 +17,13 @@ Input sensor was set to: Monocular
 Loading Vocabulary : /home/ucacsjj/Proj/UCL/Projects/PM-SLAM/Install/var/lib/orbslam2/voc/orb_mur.fbow
 This could take a while...
 Loading ORB Vocabulary in FBoW.
-ORB Vocabulary loaded in 0.021172s
+ORB Vocabulary loaded in 0.021517s
 
 
 Loading Vocabulary : /home/ucacsjj/Proj/UCL/Projects/PM-SLAM/Install/var/lib/orbslam2/voc/sift_cv.fbow
 This could take a while...
 Loading SIFT Vocabulary in FBoW.
-SIFT Vocabulary loaded in 0.027457s
+SIFT Vocabulary loaded in 0.029367s
 
 
 Camera Parameters: 
@@ -61,11 +61,11 @@ Start processing sequence ...
 Images in the sequence: 2273
 
 Viewer started, waiting for thread.
-0
-New map created with 90 points for 0 Feature Type 
-New map created with 644 points for 1 Feature Type 
-Tracking Initlized in 68.10s
-The initlized frame ID: 81
+1
+New map created with 30 points for 0 Feature Type 
+New map created with 179 points for 1 Feature Type 
+Tracking Initlized in 69.56s
+The initlized frame ID: 82
 [LoopClosing] Sim3 choosed on channel 1
 Loop detected!
 Local Mapping STOP
@@ -76,7 +76,28 @@ Updating map ...
 Local Mapping STOP
 Local Mapping RELEASE
 Map updated!
+The lost frame ID: 2247
+The lost frame ID: 2248
 The lost frame ID: 2253
+The lost frame ID: 2254
+The lost frame ID: 2255
+The lost frame ID: 2256
+The lost frame ID: 2257
+The lost frame ID: 2258
+The lost frame ID: 2259
+The lost frame ID: 2260
+The lost frame ID: 2261
+The lost frame ID: 2262
+The lost frame ID: 2263
+The lost frame ID: 2264
+The lost frame ID: 2265
+The lost frame ID: 2266
+The lost frame ID: 2267
+The lost frame ID: 2268
+The lost frame ID: 2269
+The lost frame ID: 2270
+The lost frame ID: 2271
+The lost frame ID: 2272
 System::StopViewer()
 System::StopViewer() done
 Tracking thread joined...
@@ -84,24 +105,24 @@ Tracking thread joined...
 Saving correlation status...
 
 ========== Global Summary ==========
-Frames: 2190
-avg_CorrEdges: 19.0822
-avg_match_A: 137.907
-avg_match_B: 170.619
-global_RI_MNR: 0.13837
-global_RI_GNR: 0.1244
-global_RI_DICE: 0.123699
+Frames: 2167
+avg_CorrEdges: 17.0434
+avg_match_A: 138.747
+avg_match_B: 161.462
+global_RI_MNR: 0.122838
+global_RI_GNR: 0.11387
+global_RI_DICE: 0.113543
 
 ========== Per-Channel Summary ==========
    chA   chB     avgCorr        avgA        avgB   avgRI_MNR   avgRI_GNR  avgRI_DICE
-     0     1     19.0822     137.907     170.619    0.155597     0.12665     0.12344
+     0     1     17.0434     138.747     161.462    0.140845    0.108862    0.104859
 
 Correlation status saved!
 
 -------
 
-median tracking time: 0.0952352
-mean tracking time: 0.107382
+median tracking time: 0.0898693
+mean tracking time: 0.103641
 
 Saving camera trajectory to Trajectory.txt ...
 
@@ -109,9 +130,9 @@ trajectory saved!
 
 ========== Performance Summary (ms) ==========
 name                                mean      median        rmse         min         max       count
-Tracking                          19.511      18.599       8.727       2.949      76.734        2191
-Correlation                        0.377       0.333       0.196       0.065       1.660        2190
-Total Init                     31773.074   31773.074       0.000   31773.074   31773.074           1
-Pipeline                         107.376      95.230      59.490      53.232     540.640        2273
-SIFT Extract                      75.960      73.316      19.722      42.106     158.523        2273
-ORB Extract                       23.167      23.371       7.095       9.423      48.700        2273
+Tracking                          18.708      17.142       8.789       2.345      67.345        2190
+Correlation                        0.380       0.334       0.210       0.034       1.587        2167
+Total Init                     30957.852   30957.852       0.000   30957.852   30957.852           1
+Pipeline                         103.635      89.864      58.038      49.963     472.875        2273
+SIFT Extract                      73.242      69.770      19.007      41.461     163.190        2273
+ORB Extract                       23.681      23.942       7.222       8.804      47.384        2273

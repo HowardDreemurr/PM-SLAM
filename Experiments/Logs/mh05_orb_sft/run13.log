@@ -17,13 +17,13 @@ Input sensor was set to: Monocular
 Loading Vocabulary : /home/ucacsjj/Proj/UCL/Projects/PM-SLAM/Install/var/lib/orbslam2/voc/orb_mur.fbow
 This could take a while...
 Loading ORB Vocabulary in FBoW.
-ORB Vocabulary loaded in 0.021172s
+ORB Vocabulary loaded in 0.020816s
 
 
 Loading Vocabulary : /home/ucacsjj/Proj/UCL/Projects/PM-SLAM/Install/var/lib/orbslam2/voc/sift_cv.fbow
 This could take a while...
 Loading SIFT Vocabulary in FBoW.
-SIFT Vocabulary loaded in 0.027457s
+SIFT Vocabulary loaded in 0.057891s
 
 
 Camera Parameters: 
@@ -64,54 +64,8 @@ Viewer started, waiting for thread.
 0
 New map created with 90 points for 0 Feature Type 
 New map created with 644 points for 1 Feature Type 
-Tracking Initlized in 68.10s
+Tracking Initlized in 70.81s
 The initlized frame ID: 81
 [LoopClosing] Sim3 choosed on channel 1
 Loop detected!
 Local Mapping STOP
-Local Mapping RELEASE
-Starting Global Bundle Adjustment
-Global Bundle Adjustment finished
-Updating map ...
-Local Mapping STOP
-Local Mapping RELEASE
-Map updated!
-The lost frame ID: 2253
-System::StopViewer()
-System::StopViewer() done
-Tracking thread joined...
-
-Saving correlation status...
-
-========== Global Summary ==========
-Frames: 2190
-avg_CorrEdges: 19.0822
-avg_match_A: 137.907
-avg_match_B: 170.619
-global_RI_MNR: 0.13837
-global_RI_GNR: 0.1244
-global_RI_DICE: 0.123699
-
-========== Per-Channel Summary ==========
-   chA   chB     avgCorr        avgA        avgB   avgRI_MNR   avgRI_GNR  avgRI_DICE
-     0     1     19.0822     137.907     170.619    0.155597     0.12665     0.12344
-
-Correlation status saved!
-
--------
-
-median tracking time: 0.0952352
-mean tracking time: 0.107382
-
-Saving camera trajectory to Trajectory.txt ...
-
-trajectory saved!
-
-========== Performance Summary (ms) ==========
-name                                mean      median        rmse         min         max       count
-Tracking                          19.511      18.599       8.727       2.949      76.734        2191
-Correlation                        0.377       0.333       0.196       0.065       1.660        2190
-Total Init                     31773.074   31773.074       0.000   31773.074   31773.074           1
-Pipeline                         107.376      95.230      59.490      53.232     540.640        2273
-SIFT Extract                      75.960      73.316      19.722      42.106     158.523        2273
-ORB Extract                       23.167      23.371       7.095       9.423      48.700        2273
