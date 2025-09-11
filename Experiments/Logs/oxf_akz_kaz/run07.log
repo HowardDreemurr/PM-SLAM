@@ -1,0 +1,435 @@
+Registering ORBextractor...
+Registering AKAZEextractor...
+Registering BRISKextractor...
+Registering SIFTextractor...
+Registering KAZEextractor...
+Registering SuperPointExtractor...
+
+ORB-SLAM2 Copyright (C) 2014-2016 Raul Mur-Artal, University of Zaragoza.
+This program comes with ABSOLUTELY NO WARRANTY;
+This is free software, and you are welcome to redistribute it
+under certain conditions. See LICENSE.txt.
+
+Input sensor was set to: Monocular
+
+Loading Vocabulary : /home/howard/Refactored_ORB_SLAM2/Install/var/lib/orbslam2/voc/akaze_cv.fbow
+This could take a while...
+Loading AKAZE Vocabulary in FBoW.
+AKAZE Vocabulary loaded in 0.003063s
+
+
+Loading Vocabulary : /home/howard/Refactored_ORB_SLAM2/Install/var/lib/orbslam2/voc/kaze_cv.fbow
+This could take a while...
+Loading KAZE Vocabulary in FBoW.
+KAZE Vocabulary loaded in 0.011161s
+
+
+Camera Parameters: 
+- fx: 983.044
+- fy: 983.044
+- cx: 643.647
+- cy: 493.379
+- k1: 0
+- k2: 0
+- p1: 0
+- p2: 0
+- fps: 16
+- color order: RGB (ignored if grayscale)
+
+[Feature 0] AKAZE Extractor Parameters: 
+ ( TH_LOW: 100, TH_HIGH: 200 )
+- Number of Features: 2000
+- Scale Levels: 4
+- Scale Factor: 1.2
+- Threshold: 0.0001
+- Num of Octaves: 4
+- Num of Octave Layers: 4
+
+[Feature 1] KAZE Extractor Parameters: 
+ ( TH_LOW: 0.5, TH_HIGH: 1 )
+- Number of Features : 2000
+- Scale Levels       : 4
+- Scale Factor       : 1.2
+- Threshold          : 0.001
+- nOctaves           : 4
+- nOctaveLayers      : 4
+- Extended (128‑dim) : 0
+- Upright            : 0
+
+-------
+Start processing sequence ...
+Images in the sequence: 7513
+
+1
+New map created with 441 points for 0 Feature Type 
+New map created with 301 points for 1 Feature Type 
+Tracking Initlized in 429.03s
+The initlized frame ID: 139
+The lost frame ID: 831
+The lost frame ID: 832
+The lost frame ID: 833
+The lost frame ID: 834
+The lost frame ID: 835
+The lost frame ID: 836
+The lost frame ID: 837
+The lost frame ID: 1479
+The lost frame ID: 1480
+The lost frame ID: 1481
+The lost frame ID: 1482
+The lost frame ID: 1483
+The lost frame ID: 1484
+The lost frame ID: 1485
+The lost frame ID: 1486
+The lost frame ID: 1487
+
+Saving camera trajectory to TrajectoryBeforeReset_oxf_akz_kaz_r07_seg01_pid2000034_1757523636900.txt ...
+
+trajectory saved!
+[Tracking] wrote pre-reset trajectory to TrajectoryBeforeReset_oxf_akz_kaz_r07_seg01_pid2000034_1757523636900.txt
+[Tracking] LOST for 10 consecutive frames -> reset
+System Reseting
+Reseting Local Mapper... done
+Reseting Loop Closing... done
+Reseting Database... done
+0
+New map created with 534 points for 0 Feature Type 
+New map created with 358 points for 1 Feature Type 
+Tracking Initlized in 8.88s
+The initlized frame ID: 3
+The lost frame ID: 256
+The lost frame ID: 260
+The lost frame ID: 262
+The lost frame ID: 266
+The lost frame ID: 268
+The lost frame ID: 272
+The lost frame ID: 273
+The lost frame ID: 274
+The lost frame ID: 276
+The lost frame ID: 277
+The lost frame ID: 278
+The lost frame ID: 280
+The lost frame ID: 285
+The lost frame ID: 287
+The lost frame ID: 290
+The lost frame ID: 292
+The lost frame ID: 295
+The lost frame ID: 305
+The lost frame ID: 306
+The lost frame ID: 320
+The lost frame ID: 321
+The lost frame ID: 322
+The lost frame ID: 324
+The lost frame ID: 1326
+The lost frame ID: 1675
+The lost frame ID: 1883
+The lost frame ID: 1884
+The lost frame ID: 1885
+The lost frame ID: 1886
+The lost frame ID: 1888
+The lost frame ID: 2045
+The lost frame ID: 2055
+The lost frame ID: 2057
+The lost frame ID: 2059
+The lost frame ID: 2060
+The lost frame ID: 2061
+The lost frame ID: 2065
+The lost frame ID: 2066
+The lost frame ID: 2068
+The lost frame ID: 2072
+The lost frame ID: 2073
+The lost frame ID: 2078
+The lost frame ID: 2139
+The lost frame ID: 2151
+The lost frame ID: 2153
+The lost frame ID: 2156
+The lost frame ID: 2159
+The lost frame ID: 2202
+The lost frame ID: 2208
+The lost frame ID: 2212
+The lost frame ID: 2223
+The lost frame ID: 2285
+The lost frame ID: 2301
+The lost frame ID: 2302
+The lost frame ID: 2307
+The lost frame ID: 2308
+The lost frame ID: 2309
+The lost frame ID: 2310
+The lost frame ID: 2311
+The lost frame ID: 2314
+The lost frame ID: 2315
+The lost frame ID: 2316
+The lost frame ID: 2317
+The lost frame ID: 2319
+The lost frame ID: 2320
+The lost frame ID: 2335
+The lost frame ID: 2336
+The lost frame ID: 2338
+The lost frame ID: 2348
+The lost frame ID: 2349
+The lost frame ID: 2352
+The lost frame ID: 2506
+The lost frame ID: 2509
+The lost frame ID: 2511
+The lost frame ID: 2512
+The lost frame ID: 2515
+The lost frame ID: 2516
+The lost frame ID: 2552
+The lost frame ID: 2554
+The lost frame ID: 2558
+The lost frame ID: 2561
+The lost frame ID: 2565
+The lost frame ID: 2571
+The lost frame ID: 2626
+The lost frame ID: 2627
+The lost frame ID: 2642
+The lost frame ID: 2643
+The lost frame ID: 2645
+The lost frame ID: 2646
+The lost frame ID: 2647
+The lost frame ID: 2653
+The lost frame ID: 2742
+The lost frame ID: 2775
+The lost frame ID: 2806
+The lost frame ID: 2812
+The lost frame ID: 2813
+The lost frame ID: 2837
+The lost frame ID: 2888
+The lost frame ID: 2968
+The lost frame ID: 3209
+The lost frame ID: 3212
+The lost frame ID: 3213
+The lost frame ID: 3214
+The lost frame ID: 3216
+The lost frame ID: 3217
+The lost frame ID: 3222
+The lost frame ID: 3224
+The lost frame ID: 3225
+The lost frame ID: 3226
+The lost frame ID: 3227
+The lost frame ID: 3230
+The lost frame ID: 3234
+The lost frame ID: 3238
+The lost frame ID: 3239
+The lost frame ID: 3249
+The lost frame ID: 3252
+The lost frame ID: 3254
+The lost frame ID: 3255
+The lost frame ID: 3258
+The lost frame ID: 3260
+The lost frame ID: 3261
+The lost frame ID: 3262
+The lost frame ID: 3264
+The lost frame ID: 3266
+The lost frame ID: 3270
+The lost frame ID: 3271
+The lost frame ID: 3273
+The lost frame ID: 3274
+The lost frame ID: 3277
+The lost frame ID: 3284
+The lost frame ID: 3287
+The lost frame ID: 3288
+The lost frame ID: 3319
+The lost frame ID: 3320
+The lost frame ID: 3339
+The lost frame ID: 3341
+The lost frame ID: 3343
+The lost frame ID: 3346
+The lost frame ID: 3348
+The lost frame ID: 3350
+The lost frame ID: 3352
+The lost frame ID: 3358
+The lost frame ID: 3402
+The lost frame ID: 3407
+The lost frame ID: 3410
+The lost frame ID: 3435
+The lost frame ID: 3475
+The lost frame ID: 3483
+The lost frame ID: 3484
+The lost frame ID: 3485
+The lost frame ID: 3486
+The lost frame ID: 3487
+The lost frame ID: 3490
+The lost frame ID: 3491
+The lost frame ID: 3492
+The lost frame ID: 3493
+The lost frame ID: 3498
+The lost frame ID: 3499
+The lost frame ID: 3500
+The lost frame ID: 3502
+The lost frame ID: 3505
+The lost frame ID: 3564
+The lost frame ID: 3573
+The lost frame ID: 3581
+The lost frame ID: 3586
+The lost frame ID: 3593
+The lost frame ID: 3594
+The lost frame ID: 3595
+The lost frame ID: 3597
+The lost frame ID: 3599
+The lost frame ID: 3604
+The lost frame ID: 3605
+The lost frame ID: 3607
+The lost frame ID: 3611
+The lost frame ID: 3621
+The lost frame ID: 3623
+The lost frame ID: 3631
+The lost frame ID: 3637
+The lost frame ID: 3687
+The lost frame ID: 3688
+The lost frame ID: 3689
+The lost frame ID: 3703
+The lost frame ID: 3706
+The lost frame ID: 3712
+The lost frame ID: 3713
+The lost frame ID: 3719
+The lost frame ID: 3730
+The lost frame ID: 3731
+The lost frame ID: 3734
+The lost frame ID: 3736
+The lost frame ID: 3738
+The lost frame ID: 3743
+The lost frame ID: 3761
+The lost frame ID: 3772
+The lost frame ID: 3775
+The lost frame ID: 3782
+The lost frame ID: 3793
+The lost frame ID: 3795
+The lost frame ID: 3799
+The lost frame ID: 3800
+The lost frame ID: 3816
+The lost frame ID: 3820
+The lost frame ID: 3821
+The lost frame ID: 3823
+The lost frame ID: 3836
+The lost frame ID: 3840
+The lost frame ID: 3868
+The lost frame ID: 3884
+The lost frame ID: 3893
+The lost frame ID: 3912
+The lost frame ID: 3925
+The lost frame ID: 3938
+The lost frame ID: 3940
+The lost frame ID: 3941
+The lost frame ID: 3943
+The lost frame ID: 3944
+The lost frame ID: 3947
+The lost frame ID: 3949
+The lost frame ID: 3952
+The lost frame ID: 3954
+The lost frame ID: 3956
+The lost frame ID: 3957
+The lost frame ID: 3958
+The lost frame ID: 3960
+The lost frame ID: 3963
+The lost frame ID: 3964
+The lost frame ID: 3965
+The lost frame ID: 3966
+The lost frame ID: 3967
+The lost frame ID: 3968
+The lost frame ID: 3969
+The lost frame ID: 3970
+The lost frame ID: 3971
+
+Saving camera trajectory to TrajectoryBeforeReset_oxf_akz_kaz_r07_seg02_pid2000034_1757525886993.txt ...
+
+trajectory saved!
+[Tracking] wrote pre-reset trajectory to TrajectoryBeforeReset_oxf_akz_kaz_r07_seg02_pid2000034_1757525886993.txt
+[Tracking] LOST for 10 consecutive frames -> reset
+System Reseting
+Reseting Local Mapper... done
+Reseting Loop Closing... done
+Reseting Database... done
+0
+New map created with 527 points for 0 Feature Type 
+New map created with 301 points for 1 Feature Type 
+Tracking Initlized in 5.63s
+The initlized frame ID: 2
+The lost frame ID: 1762
+The lost frame ID: 1763
+The lost frame ID: 1764
+The lost frame ID: 1765
+The lost frame ID: 1766
+The lost frame ID: 1767
+The lost frame ID: 1768
+The lost frame ID: 1769
+The lost frame ID: 1770
+
+Saving camera trajectory to TrajectoryBeforeReset_oxf_akz_kaz_r07_seg03_pid2000034_1757526809567.txt ...
+
+trajectory saved!
+[Tracking] wrote pre-reset trajectory to TrajectoryBeforeReset_oxf_akz_kaz_r07_seg03_pid2000034_1757526809567.txt
+[Tracking] LOST for 10 consecutive frames -> reset
+System Reseting
+Reseting Local Mapper... done
+Reseting Loop Closing... done
+Reseting Database... done
+0
+New map created with 765 points for 0 Feature Type 
+New map created with 553 points for 1 Feature Type 
+Tracking Initlized in 21.15s
+The initlized frame ID: 8
+The lost frame ID: 156
+The lost frame ID: 157
+The lost frame ID: 158
+The lost frame ID: 159
+The lost frame ID: 160
+The lost frame ID: 161
+The lost frame ID: 162
+The lost frame ID: 163
+The lost frame ID: 164
+
+Saving camera trajectory to TrajectoryBeforeReset_oxf_akz_kaz_r07_seg04_pid2000034_1757526900849.txt ...
+
+trajectory saved!
+[Tracking] wrote pre-reset trajectory to TrajectoryBeforeReset_oxf_akz_kaz_r07_seg04_pid2000034_1757526900849.txt
+[Tracking] LOST for 10 consecutive frames -> reset
+System Reseting
+Reseting Local Mapper... done
+Reseting Loop Closing... done
+Reseting Database... done
+0
+New map created with 780 points for 0 Feature Type 
+New map created with 613 points for 1 Feature Type 
+Tracking Initlized in 3.32s
+The initlized frame ID: 1
+System::StopViewer()
+System::StopViewer() done
+
+Saving correlation status...
+
+========== Global Summary ==========
+Frames: 6336
+avg_CorrEdges: 49.2683
+avg_match_A: 123.866
+avg_match_B: 210.028
+global_RI_MNR: 0.397755
+global_RI_GNR: 0.305459
+global_RI_DICE: 0.295113
+
+========== Per-Channel Summary ==========
+   chA   chB     avgCorr        avgA        avgB   avgRI_MNR   avgRI_GNR  avgRI_DICE
+     0     1     49.2683     123.866     210.028    0.276758    0.208071    0.199215
+
+Correlation status saved!
+
+System Shutdown
+-------
+
+median tracking time: 0.544873
+mean tracking time: 0.548992
+
+Saving camera trajectory to result07.txt ...
+
+trajectory saved!
+All done
+
+========== Performance Summary (ms) ==========
+name                                mean      median        rmse         min         max       count
+Lost Count                         1.000       1.000       0.000       1.000       1.000           4
+Tracking                          24.517      20.391      21.748       2.370    1163.865        7355
+Total Init                    103486.809  103486.809       0.000  103486.809  103486.809           1
+Pipeline                         547.900     544.829      61.375     329.981    1606.054        7513
+KAZE Extract                     514.363     516.040      51.432     300.326     829.870        7513
+Reset Count                        1.000       1.000       0.000       1.000       1.000           4
+Correlation                        0.291       0.238       0.289       0.003       4.177        7084
+AKAZE Extract                    149.088     145.644      36.232      65.117     331.215        7513

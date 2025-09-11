@@ -1,0 +1,584 @@
+Registering ORBextractor...
+Registering AKAZEextractor...
+Registering BRISKextractor...
+Registering SIFTextractor...
+Registering KAZEextractor...
+Registering SuperPointExtractor...
+
+ORB-SLAM2 Copyright (C) 2014-2016 Raul Mur-Artal, University of Zaragoza.
+This program comes with ABSOLUTELY NO WARRANTY;
+This is free software, and you are welcome to redistribute it
+under certain conditions. See LICENSE.txt.
+
+Input sensor was set to: Monocular
+
+Loading Vocabulary : /home/howard/Refactored_ORB_SLAM2/Install/var/lib/orbslam2/voc/akaze_cv.fbow
+This could take a while...
+Loading AKAZE Vocabulary in FBoW.
+AKAZE Vocabulary loaded in 0.007251s
+
+
+Loading Vocabulary : /home/howard/Refactored_ORB_SLAM2/Install/var/lib/orbslam2/voc/superpoint.fbow
+This could take a while...
+Loading SuperPoint Vocabulary in FBoW.
+SuperPoint Vocabulary loaded in 0.032556s
+
+
+Camera Parameters: 
+- fx: 983.044
+- fy: 983.044
+- cx: 643.647
+- cy: 493.379
+- k1: 0
+- k2: 0
+- p1: 0
+- p2: 0
+- fps: 16
+- color order: RGB (ignored if grayscale)
+
+[Feature 0] AKAZE Extractor Parameters: 
+ ( TH_LOW: 100, TH_HIGH: 200 )
+- Number of Features: 2000
+- Scale Levels: 4
+- Scale Factor: 1.2
+- Threshold: 0.0001
+- Num of Octaves: 4
+- Num of Octave Layers: 4
+
+[Feature 1] SuperPoint Extractor Parameters: 
+ ( TH_LOW: 0.7, TH_HIGH: 0.9 )
+- Number of Features: 2000
+- Scale Levels: 4
+- Scale Factor: 1.2
+- Use CUDA: 1
+- Use NMS: 1
+- iniTh: 0.08
+- minTh: 0.04
+
+-------
+Start processing sequence ...
+Images in the sequence: 7513
+
+0
+New map created with 1101 points for 0 Feature Type 
+New map created with 426 points for 1 Feature Type 
+Tracking Initlized in 444.69s
+The initlized frame ID: 218
+The lost frame ID: 833
+The lost frame ID: 834
+The lost frame ID: 835
+The lost frame ID: 836
+The lost frame ID: 837
+The lost frame ID: 838
+The lost frame ID: 839
+The lost frame ID: 1467
+The lost frame ID: 1468
+The lost frame ID: 1469
+The lost frame ID: 1470
+The lost frame ID: 1471
+The lost frame ID: 1472
+The lost frame ID: 1473
+The lost frame ID: 1474
+The lost frame ID: 1475
+
+Saving camera trajectory to TrajectoryBeforeReset_oxf_akz_spp_r13_seg01_pid483520_1757500834754.txt ...
+
+trajectory saved!
+[Tracking] wrote pre-reset trajectory to TrajectoryBeforeReset_oxf_akz_spp_r13_seg01_pid483520_1757500834754.txt
+[Tracking] LOST for 10 consecutive frames -> reset
+System Reseting
+Reseting Local Mapper... done
+Reseting Loop Closing... done
+Reseting Database... done
+0
+New map created with 293 points for 0 Feature Type 
+New map created with 171 points for 1 Feature Type 
+Tracking Initlized in 4.48s
+The initlized frame ID: 2
+The lost frame ID: 2075
+The lost frame ID: 2076
+The lost frame ID: 2077
+The lost frame ID: 2078
+The lost frame ID: 2079
+The lost frame ID: 2080
+The lost frame ID: 2081
+The lost frame ID: 2082
+The lost frame ID: 2083
+
+Saving camera trajectory to TrajectoryBeforeReset_oxf_akz_spp_r13_seg02_pid483520_1757501688648.txt ...
+
+trajectory saved!
+[Tracking] wrote pre-reset trajectory to TrajectoryBeforeReset_oxf_akz_spp_r13_seg02_pid483520_1757501688648.txt
+[Tracking] LOST for 10 consecutive frames -> reset
+System Reseting
+Reseting Local Mapper... done
+Reseting Loop Closing... done
+Reseting Database... done
+0
+New map created with 617 points for 0 Feature Type 
+New map created with 222 points for 1 Feature Type 
+Tracking Initlized in 2.30s
+The initlized frame ID: 1
+Track lost soon after initialisation, reseting...
+System Reseting
+Reseting Local Mapper... done
+Reseting Loop Closing... done
+Reseting Database... done
+0
+New map created with 713 points for 0 Feature Type 
+New map created with 295 points for 1 Feature Type 
+Tracking Initlized in 1.86s
+The initlized frame ID: 1
+Track lost soon after initialisation, reseting...
+System Reseting
+Reseting Local Mapper... done
+Reseting Loop Closing... done
+Reseting Database... done
+0
+New map created with 842 points for 0 Feature Type 
+New map created with 305 points for 1 Feature Type 
+Tracking Initlized in 2.34s
+The initlized frame ID: 1
+Track lost soon after initialisation, reseting...
+System Reseting
+Reseting Local Mapper... done
+Reseting Loop Closing... done
+Reseting Database... done
+0
+New map created with 915 points for 0 Feature Type 
+New map created with 338 points for 1 Feature Type 
+Tracking Initlized in 1.99s
+The initlized frame ID: 1
+Track lost soon after initialisation, reseting...
+System Reseting
+Reseting Local Mapper... done
+Reseting Loop Closing... done
+Reseting Database... done
+0
+New map created with 1034 points for 0 Feature Type 
+New map created with 411 points for 1 Feature Type 
+Tracking Initlized in 1.69s
+The initlized frame ID: 1
+Track lost soon after initialisation, reseting...
+System Reseting
+Reseting Local Mapper... done
+Reseting Loop Closing... done
+Reseting Database... done
+0
+New map created with 937 points for 0 Feature Type 
+New map created with 403 points for 1 Feature Type 
+Tracking Initlized in 2.50s
+The initlized frame ID: 1
+Track lost soon after initialisation, reseting...
+System Reseting
+Reseting Local Mapper... done
+Reseting Loop Closing... done
+Reseting Database... done
+0
+New map created with 1078 points for 0 Feature Type 
+New map created with 417 points for 1 Feature Type 
+Tracking Initlized in 2.11s
+The initlized frame ID: 1
+Track lost soon after initialisation, reseting...
+System Reseting
+Reseting Local Mapper... done
+Reseting Loop Closing... done
+Reseting Database... done
+0
+New map created with 1027 points for 0 Feature Type 
+New map created with 370 points for 1 Feature Type 
+Tracking Initlized in 2.10s
+The initlized frame ID: 1
+Track lost soon after initialisation, reseting...
+System Reseting
+Reseting Local Mapper... done
+Reseting Loop Closing... done
+Reseting Database... done
+0
+New map created with 1012 points for 0 Feature Type 
+New map created with 382 points for 1 Feature Type 
+Tracking Initlized in 1.82s
+The initlized frame ID: 1
+Track lost soon after initialisation, reseting...
+System Reseting
+Reseting Local Mapper... done
+Reseting Loop Closing... done
+Reseting Database... done
+0
+New map created with 1033 points for 0 Feature Type 
+New map created with 378 points for 1 Feature Type 
+Tracking Initlized in 2.36s
+The initlized frame ID: 1
+Track lost soon after initialisation, reseting...
+System Reseting
+Reseting Local Mapper... done
+Reseting Loop Closing... done
+Reseting Database... done
+0
+New map created with 1056 points for 0 Feature Type 
+New map created with 385 points for 1 Feature Type 
+Tracking Initlized in 2.33s
+The initlized frame ID: 1
+Track lost soon after initialisation, reseting...
+System Reseting
+Reseting Local Mapper... done
+Reseting Loop Closing... done
+Reseting Database... done
+0
+New map created with 983 points for 0 Feature Type 
+New map created with 337 points for 1 Feature Type 
+Tracking Initlized in 2.32s
+The initlized frame ID: 1
+Track lost soon after initialisation, reseting...
+System Reseting
+Reseting Local Mapper... done
+Reseting Loop Closing... done
+Reseting Database... done
+0
+New map created with 1028 points for 0 Feature Type 
+New map created with 426 points for 1 Feature Type 
+Tracking Initlized in 2.13s
+The initlized frame ID: 1
+Track lost soon after initialisation, reseting...
+System Reseting
+Reseting Local Mapper... done
+Reseting Loop Closing... done
+Reseting Database... done
+0
+New map created with 1090 points for 0 Feature Type 
+New map created with 326 points for 1 Feature Type 
+Tracking Initlized in 2.14s
+The initlized frame ID: 1
+Track lost soon after initialisation, reseting...
+System Reseting
+Reseting Local Mapper... done
+Reseting Loop Closing... done
+Reseting Database... done
+0
+New map created with 1043 points for 0 Feature Type 
+New map created with 330 points for 1 Feature Type 
+Tracking Initlized in 2.49s
+The initlized frame ID: 1
+Track lost soon after initialisation, reseting...
+System Reseting
+Reseting Local Mapper... done
+Reseting Loop Closing... done
+Reseting Database... done
+0
+New map created with 1057 points for 0 Feature Type 
+New map created with 324 points for 1 Feature Type 
+Tracking Initlized in 2.02s
+The initlized frame ID: 1
+Track lost soon after initialisation, reseting...
+System Reseting
+Reseting Local Mapper... done
+Reseting Loop Closing... done
+Reseting Database... done
+0
+New map created with 1106 points for 0 Feature Type 
+New map created with 293 points for 1 Feature Type 
+Tracking Initlized in 2.14s
+The initlized frame ID: 1
+Track lost soon after initialisation, reseting...
+System Reseting
+Reseting Local Mapper... done
+Reseting Loop Closing... done
+Reseting Database... done
+0
+New map created with 1045 points for 0 Feature Type 
+New map created with 293 points for 1 Feature Type 
+Tracking Initlized in 2.39s
+The initlized frame ID: 1
+Track lost soon after initialisation, reseting...
+System Reseting
+Reseting Local Mapper... done
+Reseting Loop Closing... done
+Reseting Database... done
+0
+New map created with 974 points for 0 Feature Type 
+New map created with 237 points for 1 Feature Type 
+Tracking Initlized in 1.98s
+The initlized frame ID: 1
+Track lost soon after initialisation, reseting...
+System Reseting
+Reseting Local Mapper... done
+Reseting Loop Closing... done
+Reseting Database... done
+0
+New map created with 911 points for 0 Feature Type 
+New map created with 247 points for 1 Feature Type 
+Tracking Initlized in 2.02s
+The initlized frame ID: 1
+Track lost soon after initialisation, reseting...
+System Reseting
+Reseting Local Mapper... done
+Reseting Loop Closing... done
+Reseting Database... done
+0
+New map created with 926 points for 0 Feature Type 
+New map created with 236 points for 1 Feature Type 
+Tracking Initlized in 1.75s
+The initlized frame ID: 1
+Track lost soon after initialisation, reseting...
+System Reseting
+Reseting Local Mapper... done
+Reseting Loop Closing... done
+Reseting Database... done
+0
+New map created with 999 points for 0 Feature Type 
+New map created with 273 points for 1 Feature Type 
+Tracking Initlized in 2.27s
+The initlized frame ID: 1
+Track lost soon after initialisation, reseting...
+System Reseting
+Reseting Local Mapper... done
+Reseting Loop Closing... done
+Reseting Database... done
+0
+New map created with 1048 points for 0 Feature Type 
+New map created with 265 points for 1 Feature Type 
+Tracking Initlized in 1.98s
+The initlized frame ID: 1
+Track lost soon after initialisation, reseting...
+System Reseting
+Reseting Local Mapper... done
+Reseting Loop Closing... done
+Reseting Database... done
+0
+New map created with 1120 points for 0 Feature Type 
+New map created with 297 points for 1 Feature Type 
+Tracking Initlized in 1.91s
+The initlized frame ID: 1
+Track lost soon after initialisation, reseting...
+System Reseting
+Reseting Local Mapper... done
+Reseting Loop Closing... done
+Reseting Database... done
+0
+New map created with 1205 points for 0 Feature Type 
+New map created with 325 points for 1 Feature Type 
+Tracking Initlized in 2.64s
+The initlized frame ID: 1
+Track lost soon after initialisation, reseting...
+System Reseting
+Reseting Local Mapper... done
+Reseting Loop Closing... done
+Reseting Database... done
+0
+New map created with 1163 points for 0 Feature Type 
+New map created with 337 points for 1 Feature Type 
+Tracking Initlized in 2.04s
+The initlized frame ID: 1
+Track lost soon after initialisation, reseting...
+System Reseting
+Reseting Local Mapper... done
+Reseting Loop Closing... done
+Reseting Database... done
+0
+New map created with 1179 points for 0 Feature Type 
+New map created with 364 points for 1 Feature Type 
+Tracking Initlized in 2.39s
+The initlized frame ID: 1
+Track lost soon after initialisation, reseting...
+System Reseting
+Reseting Local Mapper... done
+Reseting Loop Closing... done
+Reseting Database... done
+0
+New map created with 1060 points for 0 Feature Type 
+New map created with 329 points for 1 Feature Type 
+Tracking Initlized in 2.01s
+The initlized frame ID: 1
+Track lost soon after initialisation, reseting...
+System Reseting
+Reseting Local Mapper... done
+Reseting Loop Closing... done
+Reseting Database... done
+0
+New map created with 1000 points for 0 Feature Type 
+New map created with 350 points for 1 Feature Type 
+Tracking Initlized in 1.81s
+The initlized frame ID: 1
+Track lost soon after initialisation, reseting...
+System Reseting
+Reseting Local Mapper... done
+Reseting Loop Closing... done
+Reseting Database... done
+0
+New map created with 911 points for 0 Feature Type 
+New map created with 327 points for 1 Feature Type 
+Tracking Initlized in 1.93s
+The initlized frame ID: 1
+Track lost soon after initialisation, reseting...
+System Reseting
+Reseting Local Mapper... done
+Reseting Loop Closing... done
+Reseting Database... done
+0
+New map created with 835 points for 0 Feature Type 
+New map created with 244 points for 1 Feature Type 
+Tracking Initlized in 1.68s
+The initlized frame ID: 1
+Track lost soon after initialisation, reseting...
+System Reseting
+Reseting Local Mapper... done
+Reseting Loop Closing... done
+Reseting Database... done
+0
+New map created with 770 points for 0 Feature Type 
+New map created with 268 points for 1 Feature Type 
+Tracking Initlized in 1.81s
+The initlized frame ID: 1
+Track lost soon after initialisation, reseting...
+System Reseting
+Reseting Local Mapper... done
+Reseting Loop Closing... done
+Reseting Database... done
+0
+New map created with 733 points for 0 Feature Type 
+New map created with 230 points for 1 Feature Type 
+Tracking Initlized in 2.23s
+The initlized frame ID: 1
+Track lost soon after initialisation, reseting...
+System Reseting
+Reseting Local Mapper... done
+Reseting Loop Closing... done
+Reseting Database... done
+0
+New map created with 816 points for 0 Feature Type 
+New map created with 287 points for 1 Feature Type 
+Tracking Initlized in 1.72s
+The initlized frame ID: 1
+Track lost soon after initialisation, reseting...
+System Reseting
+Reseting Local Mapper... done
+Reseting Loop Closing... done
+Reseting Database... done
+0
+New map created with 889 points for 0 Feature Type 
+New map created with 296 points for 1 Feature Type 
+Tracking Initlized in 2.44s
+The initlized frame ID: 1
+The lost frame ID: 1309
+The lost frame ID: 1310
+The lost frame ID: 1311
+The lost frame ID: 1312
+The lost frame ID: 1313
+The lost frame ID: 1314
+The lost frame ID: 1315
+The lost frame ID: 1316
+The lost frame ID: 1317
+
+Saving camera trajectory to TrajectoryBeforeReset_oxf_akz_spp_r13_seg03_pid483520_1757502262322.txt ...
+
+trajectory saved!
+[Tracking] wrote pre-reset trajectory to TrajectoryBeforeReset_oxf_akz_spp_r13_seg03_pid483520_1757502262322.txt
+[Tracking] LOST for 10 consecutive frames -> reset
+System Reseting
+Reseting Local Mapper... done
+Reseting Loop Closing... done
+Reseting Database... done
+0
+New map created with 1194 points for 0 Feature Type 
+New map created with 359 points for 1 Feature Type 
+Tracking Initlized in 2.68s
+The initlized frame ID: 1
+The lost frame ID: 2242
+The lost frame ID: 2243
+The lost frame ID: 2244
+The lost frame ID: 2245
+The lost frame ID: 2246
+The lost frame ID: 2247
+The lost frame ID: 2248
+The lost frame ID: 2249
+The lost frame ID: 2250
+
+Saving camera trajectory to TrajectoryBeforeReset_oxf_akz_spp_r13_seg04_pid483520_1757503236467.txt ...
+
+trajectory saved!
+[Tracking] wrote pre-reset trajectory to TrajectoryBeforeReset_oxf_akz_spp_r13_seg04_pid483520_1757503236467.txt
+[Tracking] LOST for 10 consecutive frames -> reset
+System Reseting
+Reseting Local Mapper... done
+Reseting Loop Closing... done
+Reseting Database... done
+0
+New map created with 806 points for 0 Feature Type 
+New map created with 144 points for 1 Feature Type 
+Tracking Initlized in 9.08s
+The initlized frame ID: 5
+Track lost soon after initialisation, reseting...
+System Reseting
+Reseting Local Mapper... done
+Reseting Loop Closing... done
+Reseting Database... done
+0
+New map created with 755 points for 0 Feature Type 
+New map created with 270 points for 1 Feature Type 
+Tracking Initlized in 2.62s
+The initlized frame ID: 1
+The lost frame ID: 149
+The lost frame ID: 150
+The lost frame ID: 151
+The lost frame ID: 152
+The lost frame ID: 153
+The lost frame ID: 154
+The lost frame ID: 155
+The lost frame ID: 156
+The lost frame ID: 157
+
+Saving camera trajectory to TrajectoryBeforeReset_oxf_akz_spp_r13_seg05_pid483520_1757503308702.txt ...
+
+trajectory saved!
+[Tracking] wrote pre-reset trajectory to TrajectoryBeforeReset_oxf_akz_spp_r13_seg05_pid483520_1757503308702.txt
+[Tracking] LOST for 10 consecutive frames -> reset
+System Reseting
+Reseting Local Mapper... done
+Reseting Loop Closing... done
+Reseting Database... done
+0
+New map created with 770 points for 0 Feature Type 
+New map created with 332 points for 1 Feature Type 
+Tracking Initlized in 2.26s
+The initlized frame ID: 1
+System::StopViewer()
+System::StopViewer() done
+
+Saving correlation status...
+
+========== Global Summary ==========
+Frames: 7114
+avg_CorrEdges: 1.42395
+avg_match_A: 133.083
+avg_match_B: 279.118
+global_RI_MNR: 0.0106998
+global_RI_GNR: 0.00738824
+global_RI_DICE: 0.00690903
+
+========== Per-Channel Summary ==========
+   chA   chB     avgCorr        avgA        avgB   avgRI_MNR   avgRI_GNR  avgRI_DICE
+     0     1     1.42395     133.083     279.118   0.0120053  0.00710105  0.00621216
+
+Correlation status saved!
+
+System Shutdown
+-------
+
+median tracking time: 0.387756
+mean tracking time: 0.39341
+
+Saving camera trajectory to result13.txt ...
+
+trajectory saved!
+All done
+
+========== Performance Summary (ms) ==========
+name                                mean      median        rmse         min         max       count
+Lost Count                         1.000       1.000       0.000       1.000       1.000           5
+Tracking                          23.512      22.279      18.157       2.733     967.205        7209
+Total Init                    108951.296  108951.296       0.000  108951.296  108951.296           1
+Pipeline                         392.208     387.533      55.715     207.902    1341.218        7513
+SuperPoint Extract               356.453     355.190      42.894     177.918     846.833        7513
+Reset Count                        1.000       1.000       0.000       1.000       1.000          40
+Correlation                        0.372       0.317       0.312       0.007      11.367        7117
+AKAZE Extract                    209.149     208.798      35.866      90.798     344.645        7513
