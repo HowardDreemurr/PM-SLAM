@@ -3,6 +3,7 @@ Registering AKAZEextractor...
 Registering BRISKextractor...
 Registering SIFTextractor...
 Registering KAZEextractor...
+Registering SuperPointExtractor...
 Loading images...
 Loaded 2273 images.
 Creating SLAM system...
@@ -14,16 +15,16 @@ under certain conditions. See LICENSE.txt.
 
 Input sensor was set to: Monocular
 
-Loading Vocabulary : /home/ucacsjj/Proj/UCL/Projects/PM-SLAM/Install/var/lib/orbslam2/voc/brisk_cv.fbow
+Loading Vocabulary : /home/howard/PM-SLAM/Install/var/lib/orbslam2/voc/brisk_cv.fbow
 This could take a while...
 Loading BRISK Vocabulary in FBoW.
-BRISK Vocabulary loaded in 0.008532s
+BRISK Vocabulary loaded in 0.005188s
 
 
-Loading Vocabulary : /home/ucacsjj/Proj/UCL/Projects/PM-SLAM/Install/var/lib/orbslam2/voc/sift_cv.fbow
+Loading Vocabulary : /home/howard/PM-SLAM/Install/var/lib/orbslam2/voc/sift_cv.fbow
 This could take a while...
 Loading SIFT Vocabulary in FBoW.
-SIFT Vocabulary loaded in 0.042546s
+SIFT Vocabulary loaded in 0.028711s
 
 
 Camera Parameters: 
@@ -65,8 +66,63 @@ Viewer started, waiting for thread.
 1
 New map created with 110 points for 0 Feature Type 
 New map created with 179 points for 1 Feature Type 
-Tracking Initlized in 82.85s
+Tracking Initlized in 82.86s
 The initlized frame ID: 82
 [LoopClosing] Sim3 choosed on channel 1
 Loop detected!
 Local Mapping STOP
+Local Mapping RELEASE
+Starting Global Bundle Adjustment
+Global Bundle Adjustment finished
+Updating map ...
+Local Mapping STOP
+Local Mapping RELEASE
+Map updated!
+[LoopClosing] Sim3 choosed on channel 1
+Loop detected!
+Local Mapping STOP
+Local Mapping RELEASE
+Starting Global Bundle Adjustment
+Global Bundle Adjustment finished
+Updating map ...
+Local Mapping STOP
+Local Mapping RELEASE
+Map updated!
+System::StopViewer()
+System::StopViewer() done
+Tracking thread joined...
+
+Saving correlation status...
+
+========== Global Summary ==========
+Frames: 2190
+avg_CorrEdges: 27.2543
+avg_match_A: 163.976
+avg_match_B: 180.137
+global_RI_MNR: 0.16621
+global_RI_GNR: 0.158578
+global_RI_DICE: 0.158404
+
+========== Per-Channel Summary ==========
+   chA   chB     avgCorr        avgA        avgB   avgRI_MNR   avgRI_GNR  avgRI_DICE
+     0     1     27.2543     163.976     180.137    0.165669    0.148584    0.147213
+
+Correlation status saved!
+
+-------
+
+median tracking time: 0.176661
+mean tracking time: 0.197427
+
+Saving camera trajectory to Trajectory.txt ...
+
+trajectory saved!
+
+========== Performance Summary (ms) ==========
+name                                mean      median        rmse         min         max       count
+Tracking                          24.061      22.146      10.174       3.125      74.345        2190
+Correlation                        0.628       0.536       0.562       0.074      12.240        2190
+Total Init                     49158.915   49158.915       0.000   49158.915   49158.915           1
+Pipeline                         197.411     176.651      98.595      74.749     728.831        2273
+BRISK Extract                    146.111     151.512      67.853      12.928     431.930        2273
+SIFT Extract                      92.699      89.419      21.749      46.191     229.908        2273

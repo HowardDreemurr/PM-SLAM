@@ -3,6 +3,7 @@ Registering AKAZEextractor...
 Registering BRISKextractor...
 Registering SIFTextractor...
 Registering KAZEextractor...
+Registering SuperPointExtractor...
 Loading images...
 Loaded 2273 images.
 Creating SLAM system...
@@ -14,16 +15,16 @@ under certain conditions. See LICENSE.txt.
 
 Input sensor was set to: Monocular
 
-Loading Vocabulary : /home/ucacsjj/Proj/UCL/Projects/PM-SLAM/Install/var/lib/orbslam2/voc/akaze_cv.fbow
+Loading Vocabulary : /home/howard/PM-SLAM/Install/var/lib/orbslam2/voc/akaze_cv.fbow
 This could take a while...
 Loading AKAZE Vocabulary in FBoW.
-AKAZE Vocabulary loaded in 0.003595s
+AKAZE Vocabulary loaded in 0.002928s
 
 
-Loading Vocabulary : /home/ucacsjj/Proj/UCL/Projects/PM-SLAM/Install/var/lib/orbslam2/voc/sift_cv.fbow
+Loading Vocabulary : /home/howard/PM-SLAM/Install/var/lib/orbslam2/voc/sift_cv.fbow
 This could take a while...
 Loading SIFT Vocabulary in FBoW.
-SIFT Vocabulary loaded in 0.029663s
+SIFT Vocabulary loaded in 0.030452s
 
 
 Camera Parameters: 
@@ -65,11 +66,8 @@ Viewer started, waiting for thread.
 1
 New map created with 235 points for 0 Feature Type 
 New map created with 179 points for 1 Feature Type 
-Tracking Initlized in 96.35s
+Tracking Initlized in 49.30s
 The initlized frame ID: 82
-The lost frame ID: 101
-The lost frame ID: 102
-The lost frame ID: 103
 The lost frame ID: 104
 The lost frame ID: 105
 The lost frame ID: 106
@@ -80,3 +78,69 @@ The lost frame ID: 110
 [LoopClosing] Sim3 choosed on channel 1
 Loop detected!
 Local Mapping STOP
+Local Mapping RELEASE
+Starting Global Bundle Adjustment
+Global Bundle Adjustment finished
+Updating map ...
+Local Mapping STOP
+Local Mapping RELEASE
+Map updated!
+[LoopClosing] Sim3 choosed on channel 1
+Loop detected!
+Local Mapping STOP
+Local Mapping RELEASE
+Starting Global Bundle Adjustment
+Global Bundle Adjustment finished
+Updating map ...
+Local Mapping STOP
+Local Mapping RELEASE
+Map updated!
+The lost frame ID: 2247
+The lost frame ID: 2249
+The lost frame ID: 2253
+The lost frame ID: 2254
+The lost frame ID: 2255
+The lost frame ID: 2256
+The lost frame ID: 2257
+The lost frame ID: 2258
+The lost frame ID: 2259
+The lost frame ID: 2260
+The lost frame ID: 2261
+System::StopViewer()
+System::StopViewer() done
+Tracking thread joined...
+
+Saving correlation status...
+
+========== Global Summary ==========
+Frames: 2171
+avg_CorrEdges: 28.8006
+avg_match_A: 150.72
+avg_match_B: 179.946
+global_RI_MNR: 0.191087
+global_RI_GNR: 0.174882
+global_RI_DICE: 0.174197
+
+========== Per-Channel Summary ==========
+   chA   chB     avgCorr        avgA        avgB   avgRI_MNR   avgRI_GNR  avgRI_DICE
+     0     1     28.8006      150.72     179.946    0.182386    0.155135    0.151918
+
+Correlation status saved!
+
+-------
+
+median tracking time: 0.0748727
+mean tracking time: 0.0829977
+
+Saving camera trajectory to Trajectory.txt ...
+
+trajectory saved!
+
+========== Performance Summary (ms) ==========
+name                                mean      median        rmse         min         max       count
+Tracking                          13.131      11.650       7.750       2.222     124.380        2190
+Total Init                     22720.167   22720.167       0.000   22720.167   22720.167           1
+Pipeline                          82.991      74.868      40.419      43.661     351.929        2273
+Correlation                        0.322       0.288       0.220       0.006       3.179        2172
+AKAZE Extract                     44.652      41.923      13.048      22.543     115.989        2273
+SIFT Extract                      58.836      57.572      12.617      32.986     125.809        2273

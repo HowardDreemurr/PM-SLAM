@@ -3,6 +3,7 @@ Registering AKAZEextractor...
 Registering BRISKextractor...
 Registering SIFTextractor...
 Registering KAZEextractor...
+Registering SuperPointExtractor...
 Loading images...
 Loaded 2273 images.
 Creating SLAM system...
@@ -14,16 +15,16 @@ under certain conditions. See LICENSE.txt.
 
 Input sensor was set to: Monocular
 
-Loading Vocabulary : /home/ucacsjj/Proj/UCL/Projects/PM-SLAM/Install/var/lib/orbslam2/voc/orb_mur.fbow
+Loading Vocabulary : /home/howard/PM-SLAM/Install/var/lib/orbslam2/voc/orb_mur.fbow
 This could take a while...
 Loading ORB Vocabulary in FBoW.
-ORB Vocabulary loaded in 0.020816s
+ORB Vocabulary loaded in 0.028103s
 
 
-Loading Vocabulary : /home/ucacsjj/Proj/UCL/Projects/PM-SLAM/Install/var/lib/orbslam2/voc/sift_cv.fbow
+Loading Vocabulary : /home/howard/PM-SLAM/Install/var/lib/orbslam2/voc/sift_cv.fbow
 This could take a while...
 Loading SIFT Vocabulary in FBoW.
-SIFT Vocabulary loaded in 0.057891s
+SIFT Vocabulary loaded in 0.049209s
 
 
 Camera Parameters: 
@@ -62,10 +63,56 @@ Images in the sequence: 2273
 
 Viewer started, waiting for thread.
 0
-New map created with 90 points for 0 Feature Type 
+New map created with 89 points for 0 Feature Type 
 New map created with 644 points for 1 Feature Type 
-Tracking Initlized in 70.81s
+Tracking Initlized in 77.63s
 The initlized frame ID: 81
 [LoopClosing] Sim3 choosed on channel 1
 Loop detected!
 Local Mapping STOP
+Local Mapping RELEASE
+Starting Global Bundle Adjustment
+Global Bundle Adjustment finished
+Updating map ...
+Local Mapping STOP
+Local Mapping RELEASE
+Map updated!
+The lost frame ID: 2253
+System::StopViewer()
+System::StopViewer() done
+Tracking thread joined...
+
+Saving correlation status...
+
+========== Global Summary ==========
+Frames: 2190
+avg_CorrEdges: 20.7502
+avg_match_A: 137.97
+avg_match_B: 171.909
+global_RI_MNR: 0.150396
+global_RI_GNR: 0.134735
+global_RI_DICE: 0.133925
+
+========== Per-Channel Summary ==========
+   chA   chB     avgCorr        avgA        avgB   avgRI_MNR   avgRI_GNR  avgRI_DICE
+     0     1     20.7502      137.97     171.909    0.170725    0.139333    0.135768
+
+Correlation status saved!
+
+-------
+
+median tracking time: 0.153698
+mean tracking time: 0.170382
+
+Saving camera trajectory to Trajectory.txt ...
+
+trajectory saved!
+
+========== Performance Summary (ms) ==========
+name                                mean      median        rmse         min         max       count
+Tracking                          28.006      24.498      16.292       3.373     112.803        2191
+Correlation                        0.640       0.504       0.785       0.076      15.354        2190
+Total Init                     39948.543   39948.543       0.000   39948.543   39948.543           1
+Pipeline                         170.365     153.687      79.897      62.916     727.816        2273
+SIFT Extract                     126.804     120.503      40.061      52.040     311.204        2273
+ORB Extract                       33.084      26.090      18.329       9.976     124.877        2273

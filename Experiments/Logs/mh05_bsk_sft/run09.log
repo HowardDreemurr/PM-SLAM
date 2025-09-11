@@ -3,6 +3,7 @@ Registering AKAZEextractor...
 Registering BRISKextractor...
 Registering SIFTextractor...
 Registering KAZEextractor...
+Registering SuperPointExtractor...
 Loading images...
 Loaded 2273 images.
 Creating SLAM system...
@@ -14,16 +15,16 @@ under certain conditions. See LICENSE.txt.
 
 Input sensor was set to: Monocular
 
-Loading Vocabulary : /home/ucacsjj/Proj/UCL/Projects/PM-SLAM/Install/var/lib/orbslam2/voc/brisk_cv.fbow
+Loading Vocabulary : /home/howard/PM-SLAM/Install/var/lib/orbslam2/voc/brisk_cv.fbow
 This could take a while...
 Loading BRISK Vocabulary in FBoW.
-BRISK Vocabulary loaded in 0.004090s
+BRISK Vocabulary loaded in 0.006480s
 
 
-Loading Vocabulary : /home/ucacsjj/Proj/UCL/Projects/PM-SLAM/Install/var/lib/orbslam2/voc/sift_cv.fbow
+Loading Vocabulary : /home/howard/PM-SLAM/Install/var/lib/orbslam2/voc/sift_cv.fbow
 This could take a while...
 Loading SIFT Vocabulary in FBoW.
-SIFT Vocabulary loaded in 0.037863s
+SIFT Vocabulary loaded in 0.041190s
 
 
 Camera Parameters: 
@@ -65,8 +66,54 @@ Viewer started, waiting for thread.
 1
 New map created with 110 points for 0 Feature Type 
 New map created with 179 points for 1 Feature Type 
-Tracking Initlized in 83.35s
+Tracking Initlized in 82.96s
 The initlized frame ID: 82
 [LoopClosing] Sim3 choosed on channel 1
 Loop detected!
 Local Mapping STOP
+Local Mapping RELEASE
+Starting Global Bundle Adjustment
+Global Bundle Adjustment finished
+Updating map ...
+Local Mapping STOP
+Local Mapping RELEASE
+Map updated!
+The lost frame ID: 2253
+System::StopViewer()
+System::StopViewer() done
+Tracking thread joined...
+
+Saving correlation status...
+
+========== Global Summary ==========
+Frames: 2189
+avg_CorrEdges: 32.164
+avg_match_A: 174.184
+avg_match_B: 186.686
+global_RI_MNR: 0.184655
+global_RI_GNR: 0.178365
+global_RI_DICE: 0.178258
+
+========== Per-Channel Summary ==========
+   chA   chB     avgCorr        avgA        avgB   avgRI_MNR   avgRI_GNR  avgRI_DICE
+     0     1      32.164     174.184     186.686    0.183552    0.166468    0.165248
+
+Correlation status saved!
+
+-------
+
+median tracking time: 0.163989
+mean tracking time: 0.181972
+
+Saving camera trajectory to Trajectory.txt ...
+
+trajectory saved!
+
+========== Performance Summary (ms) ==========
+name                                mean      median        rmse         min         max       count
+Tracking                          22.454      19.936      10.849       2.361      96.383        2190
+Correlation                        0.582       0.488       0.424       0.060       7.205        2189
+Total Init                     50804.883   50804.883       0.000   50804.883   50804.883           1
+Pipeline                         181.958     163.980      99.523      62.307     731.952        2273
+BRISK Extract                    132.189     140.814      59.903      12.630     337.737        2273
+SIFT Extract                      83.148      79.730      24.850      33.916     304.049        2273

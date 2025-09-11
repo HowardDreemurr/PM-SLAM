@@ -3,6 +3,7 @@ Registering AKAZEextractor...
 Registering BRISKextractor...
 Registering SIFTextractor...
 Registering KAZEextractor...
+Registering SuperPointExtractor...
 Loading images...
 Loaded 2273 images.
 Creating SLAM system...
@@ -14,16 +15,16 @@ under certain conditions. See LICENSE.txt.
 
 Input sensor was set to: Monocular
 
-Loading Vocabulary : /home/ucacsjj/Proj/UCL/Projects/PM-SLAM/Install/var/lib/orbslam2/voc/akaze_cv.fbow
+Loading Vocabulary : /home/howard/PM-SLAM/Install/var/lib/orbslam2/voc/akaze_cv.fbow
 This could take a while...
 Loading AKAZE Vocabulary in FBoW.
-AKAZE Vocabulary loaded in 0.003516s
+AKAZE Vocabulary loaded in 0.003324s
 
 
-Loading Vocabulary : /home/ucacsjj/Proj/UCL/Projects/PM-SLAM/Install/var/lib/orbslam2/voc/sift_cv.fbow
+Loading Vocabulary : /home/howard/PM-SLAM/Install/var/lib/orbslam2/voc/sift_cv.fbow
 This could take a while...
 Loading SIFT Vocabulary in FBoW.
-SIFT Vocabulary loaded in 0.027257s
+SIFT Vocabulary loaded in 0.021996s
 
 
 Camera Parameters: 
@@ -65,9 +66,86 @@ Viewer started, waiting for thread.
 1
 New map created with 235 points for 0 Feature Type 
 New map created with 179 points for 1 Feature Type 
-Tracking Initlized in 99.67s
+Tracking Initlized in 49.62s
 The initlized frame ID: 82
-The lost frame ID: 109
 [LoopClosing] Sim3 choosed on channel 1
 Loop detected!
 Local Mapping STOP
+Local Mapping RELEASE
+Starting Global Bundle Adjustment
+Global Bundle Adjustment finished
+Updating map ...
+Local Mapping STOP
+Local Mapping RELEASE
+Map updated!
+[LoopClosing] Sim3 choosed on channel 1
+Loop detected!
+Local Mapping STOP
+Local Mapping RELEASE
+Starting Global Bundle Adjustment
+Global Bundle Adjustment finished
+Updating map ...
+Local Mapping STOP
+Local Mapping RELEASE
+Map updated!
+[LoopClosing] Sim3 choosed on channel 1
+Loop detected!
+Local Mapping STOP
+Local Mapping RELEASE
+Starting Global Bundle Adjustment
+Global Bundle Adjustment finished
+Updating map ...
+Local Mapping STOP
+Local Mapping RELEASE
+Map updated!
+[LoopClosing] Sim3 choosed on channel 1
+Loop detected!
+Local Mapping STOP
+Local Mapping RELEASE
+Starting Global Bundle Adjustment
+Global Bundle Adjustment finished
+Updating map ...
+Local Mapping STOP
+Local Mapping RELEASE
+Map updated!
+The lost frame ID: 2248
+The lost frame ID: 2253
+The lost frame ID: 2254
+System::StopViewer()
+System::StopViewer() done
+Tracking thread joined...
+
+Saving correlation status...
+
+========== Global Summary ==========
+Frames: 2187
+avg_CorrEdges: 28.1513
+avg_match_A: 153.796
+avg_match_B: 187.083
+global_RI_MNR: 0.183044
+global_RI_GNR: 0.165962
+global_RI_DICE: 0.165169
+
+========== Per-Channel Summary ==========
+   chA   chB     avgCorr        avgA        avgB   avgRI_MNR   avgRI_GNR  avgRI_DICE
+     0     1     28.1513     153.796     187.083     0.17646    0.150436    0.147216
+
+Correlation status saved!
+
+-------
+
+median tracking time: 0.0851845
+mean tracking time: 0.094385
+
+Saving camera trajectory to Trajectory.txt ...
+
+trajectory saved!
+
+========== Performance Summary (ms) ==========
+name                                mean      median        rmse         min         max       count
+Tracking                          14.494      12.656       7.409       1.930     105.922        2190
+Total Init                     22572.897   22572.897       0.000   22572.897   22572.897           1
+Pipeline                          94.378      85.180      39.548      53.713     321.662        2273
+Correlation                        0.380       0.338       0.271       0.043       3.834        2187
+AKAZE Extract                     51.792      48.956      15.620      27.217     114.154        2273
+SIFT Extract                      68.556      66.961      14.684      42.511     243.998        2273

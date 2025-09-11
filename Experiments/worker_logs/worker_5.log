@@ -1,67 +1,68 @@
 numLines=15
 >>> Experiments to run: 15 (withCorr=0, noEvo=1, start=5,skip=6)
-line=name=kt07_akz_bsk seq=~/dataset/kitti/07 yaml=../Install/etc/orbslam2/Monocular/KITTI04-12.yaml runs=20 exe=../Install/bin mode=kitti features=[AKAZE,BRISK]
-[INFO] YAML for kt07_akz_bsk: KITTI04-12.yaml -> kt07_akz_bsk.yaml  [AKAZE BRISK]
+line=name=mh05_akz_bsk seq=~/dataset/euroc/MH_05/cam0/data yaml=../Install/etc/orbslam2/Monocular/EuRoC.yaml exe=../Install/bin mode=euroc features=[AKAZE,BRISK] times=MH05.txt
+[INFO] YAML for mh05_akz_bsk: EuRoC.yaml -> mh05_akz_bsk.yaml  [AKAZE BRISK]
 
-===== RUN: kt07_akz_bsk =====
-[bench] seq=/home/howard/dataset/kitti/07  yaml=../../../../Experiments/kt07_akz_bsk.yaml  runs=20  exe_dir=../Install/bin  mode=kitti times=
-[INFO] name=kt07_akz_bsk  seq=/home/howard/dataset/kitti/07  runs=20  yaml=../../../../Experiments/kt07_akz_bsk.yaml  withCorr=1  mode=kitti  times=
-[RESUME] Skip run 01; found /home/howard/PM-SLAM/Experiments/Poses/kt07_akz_bsk/result01.txt
-[RESUME] Skip run 02; found /home/howard/PM-SLAM/Experiments/Poses/kt07_akz_bsk/result02.txt
-[RESUME] Skip run 03; found /home/howard/PM-SLAM/Experiments/Poses/kt07_akz_bsk/result03.txt
-[RESUME] Skip run 04; found /home/howard/PM-SLAM/Experiments/Poses/kt07_akz_bsk/result04.txt
-[RESUME] Skip run 05; found /home/howard/PM-SLAM/Experiments/Poses/kt07_akz_bsk/result05.txt
-[RESUME] Skip run 06; found /home/howard/PM-SLAM/Experiments/Poses/kt07_akz_bsk/result06.txt
-[RESUME] Skip run 07; found /home/howard/PM-SLAM/Experiments/Poses/kt07_akz_bsk/result07.txt
-[RESUME] Skip run 08; found /home/howard/PM-SLAM/Experiments/Poses/kt07_akz_bsk/result08.txt
-[RESUME] Skip run 09; found /home/howard/PM-SLAM/Experiments/Poses/kt07_akz_bsk/result09.txt
-[RESUME] Skip run 10; found /home/howard/PM-SLAM/Experiments/Poses/kt07_akz_bsk/result10.txt
-[RESUME] Skip run 11; found /home/howard/PM-SLAM/Experiments/Poses/kt07_akz_bsk/result11.txt
-[RESUME] Skip run 12; found /home/howard/PM-SLAM/Experiments/Poses/kt07_akz_bsk/result12.txt
-[RESUME] Skip run 13; found /home/howard/PM-SLAM/Experiments/Poses/kt07_akz_bsk/result13.txt
-[RESUME] Skip run 14; found /home/howard/PM-SLAM/Experiments/Poses/kt07_akz_bsk/result14.txt
-[RESUME] Skip run 15; found /home/howard/PM-SLAM/Experiments/Poses/kt07_akz_bsk/result15.txt
-[RESUME] Skip run 16; found /home/howard/PM-SLAM/Experiments/Poses/kt07_akz_bsk/result16.txt
-[RESUME] Skip run 17; found /home/howard/PM-SLAM/Experiments/Poses/kt07_akz_bsk/result17.txt
-[RESUME] Skip run 18; found /home/howard/PM-SLAM/Experiments/Poses/kt07_akz_bsk/result18.txt
-[RESUME] Skip run 19; found /home/howard/PM-SLAM/Experiments/Poses/kt07_akz_bsk/result19.txt
-[RESUME] Skip run 20; found /home/howard/PM-SLAM/Experiments/Poses/kt07_akz_bsk/result20.txt
-[DONE] Summary: /home/howard/PM-SLAM/Experiments/Performances/kt07_akz_bsk_pref.txt
+===== RUN: mh05_akz_bsk =====
+[bench] seq=/home/howard/dataset/euroc/MH_05/cam0/data  yaml=../../../../Experiments/mh05_akz_bsk.yaml  runs=20  exe_dir=../Install/bin  mode=euroc times=MH05.txt
+[RESUME] Reusing existing tmp summary: /home/howard/PM-SLAM/Experiments/Performances/mh05_akz_bsk_pref.txt.tmp
+[INFO] name=mh05_akz_bsk  seq=/home/howard/dataset/euroc/MH_05/cam0/data  runs=20  yaml=../../../../Experiments/mh05_akz_bsk.yaml  withCorr=1  mode=euroc  times=MH05.txt
+[RESUME] Skip run 01; found /home/howard/PM-SLAM/Experiments/Poses/mh05_akz_bsk/result01.txt
+[RESUME] Skip run 02; found /home/howard/PM-SLAM/Experiments/Poses/mh05_akz_bsk/result02.txt
+[RESUME] Skip run 03; found /home/howard/PM-SLAM/Experiments/Poses/mh05_akz_bsk/result03.txt
+[RESUME] Skip run 04; found /home/howard/PM-SLAM/Experiments/Poses/mh05_akz_bsk/result04.txt
+[RESUME] Skip run 05; found /home/howard/PM-SLAM/Experiments/Poses/mh05_akz_bsk/result05.txt
+[RESUME] Skip run 06; found /home/howard/PM-SLAM/Experiments/Poses/mh05_akz_bsk/result06.txt
+[RESUME] Skip run 07; found /home/howard/PM-SLAM/Experiments/Poses/mh05_akz_bsk/result07.txt
+[RESUME] Skip run 08; found /home/howard/PM-SLAM/Experiments/Poses/mh05_akz_bsk/result08.txt
+[RESUME] Skip run 09; found /home/howard/PM-SLAM/Experiments/Poses/mh05_akz_bsk/result09.txt
+[RESUME] Skip run 10; found /home/howard/PM-SLAM/Experiments/Poses/mh05_akz_bsk/result10.txt
+[RESUME] Skip run 11; found /home/howard/PM-SLAM/Experiments/Poses/mh05_akz_bsk/result11.txt
+[RESUME] Skip run 12; found /home/howard/PM-SLAM/Experiments/Poses/mh05_akz_bsk/result12.txt
+[RESUME] Skip run 13; found /home/howard/PM-SLAM/Experiments/Poses/mh05_akz_bsk/result13.txt
+[RESUME] Skip run 14; found /home/howard/PM-SLAM/Experiments/Poses/mh05_akz_bsk/result14.txt
+[RESUME] Skip run 15; found /home/howard/PM-SLAM/Experiments/Poses/mh05_akz_bsk/result15.txt
+[RESUME] Skip run 16; found /home/howard/PM-SLAM/Experiments/Poses/mh05_akz_bsk/result16.txt
+[RESUME] Skip run 17; found /home/howard/PM-SLAM/Experiments/Poses/mh05_akz_bsk/result17.txt
+[RESUME] Skip run 18; found /home/howard/PM-SLAM/Experiments/Poses/mh05_akz_bsk/result18.txt
+[RESUME] Skip run 19; found /home/howard/PM-SLAM/Experiments/Poses/mh05_akz_bsk/result19.txt
+[RESUME] Skip run 20; found /home/howard/PM-SLAM/Experiments/Poses/mh05_akz_bsk/result20.txt
+[DONE] Summary: /home/howard/PM-SLAM/Experiments/Performances/mh05_akz_bsk_pref.txt
 [SKIP] No Per-Channel summaries captured; no correlation files created.
-[DONE] Logs:    /home/howard/PM-SLAM/Experiments/Logs/kt07_akz_bsk
-[DONE] Results: /home/howard/PM-SLAM/Experiments/Poses/kt07_akz_bsk
-[SKIP] --noEvo set; skip APE/RPE for 'kt07_akz_bsk'.
-line=name=kt07_bsk_spp seq=~/dataset/kitti/07 yaml=../Install/etc/orbslam2/Monocular/KITTI04-12.yaml runs=20 exe=../Install/bin mode=kitti features=[BRISK,SuperPoint]
-[INFO] YAML for kt07_bsk_spp: KITTI04-12.yaml -> kt07_bsk_spp.yaml  [BRISK SuperPoint]
+[DONE] Logs:    /home/howard/PM-SLAM/Experiments/Logs/mh05_akz_bsk
+[DONE] Results: /home/howard/PM-SLAM/Experiments/Poses/mh05_akz_bsk
+[SKIP] --noEvo set; skip APE/RPE for 'mh05_akz_bsk'.
+line=name=mh05_bsk_spp seq=~/dataset/euroc/MH_05/cam0/data yaml=../Install/etc/orbslam2/Monocular/EuRoC.yaml exe=../Install/bin mode=euroc features=[BRISK,SuperPoint] times=MH05.txt
+[INFO] YAML for mh05_bsk_spp: EuRoC.yaml -> mh05_bsk_spp.yaml  [BRISK SuperPoint]
 
-===== RUN: kt07_bsk_spp =====
-[bench] seq=/home/howard/dataset/kitti/07  yaml=../../../../Experiments/kt07_bsk_spp.yaml  runs=20  exe_dir=../Install/bin  mode=kitti times=
-[INFO] name=kt07_bsk_spp  seq=/home/howard/dataset/kitti/07  runs=20  yaml=../../../../Experiments/kt07_bsk_spp.yaml  withCorr=1  mode=kitti  times=
-[RESUME] Skip run 01; found /home/howard/PM-SLAM/Experiments/Poses/kt07_bsk_spp/result01.txt
-[RESUME] Skip run 02; found /home/howard/PM-SLAM/Experiments/Poses/kt07_bsk_spp/result02.txt
-[RESUME] Skip run 03; found /home/howard/PM-SLAM/Experiments/Poses/kt07_bsk_spp/result03.txt
-[RESUME] Skip run 04; found /home/howard/PM-SLAM/Experiments/Poses/kt07_bsk_spp/result04.txt
-[RESUME] Skip run 05; found /home/howard/PM-SLAM/Experiments/Poses/kt07_bsk_spp/result05.txt
-[RESUME] Skip run 06; found /home/howard/PM-SLAM/Experiments/Poses/kt07_bsk_spp/result06.txt
-[RESUME] Skip run 07; found /home/howard/PM-SLAM/Experiments/Poses/kt07_bsk_spp/result07.txt
-[RESUME] Skip run 08; found /home/howard/PM-SLAM/Experiments/Poses/kt07_bsk_spp/result08.txt
-[RESUME] Skip run 09; found /home/howard/PM-SLAM/Experiments/Poses/kt07_bsk_spp/result09.txt
-[RESUME] Skip run 10; found /home/howard/PM-SLAM/Experiments/Poses/kt07_bsk_spp/result10.txt
-[RESUME] Skip run 11; found /home/howard/PM-SLAM/Experiments/Poses/kt07_bsk_spp/result11.txt
-[RESUME] Skip run 12; found /home/howard/PM-SLAM/Experiments/Poses/kt07_bsk_spp/result12.txt
-[RESUME] Skip run 13; found /home/howard/PM-SLAM/Experiments/Poses/kt07_bsk_spp/result13.txt
-[RESUME] Skip run 14; found /home/howard/PM-SLAM/Experiments/Poses/kt07_bsk_spp/result14.txt
-[RESUME] Skip run 15; found /home/howard/PM-SLAM/Experiments/Poses/kt07_bsk_spp/result15.txt
-[RESUME] Skip run 16; found /home/howard/PM-SLAM/Experiments/Poses/kt07_bsk_spp/result16.txt
-[RESUME] Skip run 17; found /home/howard/PM-SLAM/Experiments/Poses/kt07_bsk_spp/result17.txt
-[RESUME] Skip run 18; found /home/howard/PM-SLAM/Experiments/Poses/kt07_bsk_spp/result18.txt
-[RESUME] Skip run 19; found /home/howard/PM-SLAM/Experiments/Poses/kt07_bsk_spp/result19.txt
-[RESUME] Skip run 20; found /home/howard/PM-SLAM/Experiments/Poses/kt07_bsk_spp/result20.txt
-[DONE] Summary: /home/howard/PM-SLAM/Experiments/Performances/kt07_bsk_spp_pref.txt
+===== RUN: mh05_bsk_spp =====
+[bench] seq=/home/howard/dataset/euroc/MH_05/cam0/data  yaml=../../../../Experiments/mh05_bsk_spp.yaml  runs=20  exe_dir=../Install/bin  mode=euroc times=MH05.txt
+[INFO] name=mh05_bsk_spp  seq=/home/howard/dataset/euroc/MH_05/cam0/data  runs=20  yaml=../../../../Experiments/mh05_bsk_spp.yaml  withCorr=1  mode=euroc  times=MH05.txt
+[RESUME] Skip run 01; found /home/howard/PM-SLAM/Experiments/Poses/mh05_bsk_spp/result01.txt
+[RESUME] Skip run 02; found /home/howard/PM-SLAM/Experiments/Poses/mh05_bsk_spp/result02.txt
+[RESUME] Skip run 03; found /home/howard/PM-SLAM/Experiments/Poses/mh05_bsk_spp/result03.txt
+[RESUME] Skip run 04; found /home/howard/PM-SLAM/Experiments/Poses/mh05_bsk_spp/result04.txt
+[RESUME] Skip run 05; found /home/howard/PM-SLAM/Experiments/Poses/mh05_bsk_spp/result05.txt
+[RESUME] Skip run 06; found /home/howard/PM-SLAM/Experiments/Poses/mh05_bsk_spp/result06.txt
+[RESUME] Skip run 07; found /home/howard/PM-SLAM/Experiments/Poses/mh05_bsk_spp/result07.txt
+[RESUME] Skip run 08; found /home/howard/PM-SLAM/Experiments/Poses/mh05_bsk_spp/result08.txt
+[RESUME] Skip run 09; found /home/howard/PM-SLAM/Experiments/Poses/mh05_bsk_spp/result09.txt
+[RESUME] Skip run 10; found /home/howard/PM-SLAM/Experiments/Poses/mh05_bsk_spp/result10.txt
+[RESUME] Skip run 11; found /home/howard/PM-SLAM/Experiments/Poses/mh05_bsk_spp/result11.txt
+[RESUME] Skip run 12; found /home/howard/PM-SLAM/Experiments/Poses/mh05_bsk_spp/result12.txt
+[RESUME] Skip run 13; found /home/howard/PM-SLAM/Experiments/Poses/mh05_bsk_spp/result13.txt
+[RESUME] Skip run 14; found /home/howard/PM-SLAM/Experiments/Poses/mh05_bsk_spp/result14.txt
+[RESUME] Skip run 15; found /home/howard/PM-SLAM/Experiments/Poses/mh05_bsk_spp/result15.txt
+[RESUME] Skip run 16; found /home/howard/PM-SLAM/Experiments/Poses/mh05_bsk_spp/result16.txt
+[RESUME] Skip run 17; found /home/howard/PM-SLAM/Experiments/Poses/mh05_bsk_spp/result17.txt
+[RESUME] Skip run 18; found /home/howard/PM-SLAM/Experiments/Poses/mh05_bsk_spp/result18.txt
+[RESUME] Skip run 19; found /home/howard/PM-SLAM/Experiments/Poses/mh05_bsk_spp/result19.txt
+[RESUME] Skip run 20; found /home/howard/PM-SLAM/Experiments/Poses/mh05_bsk_spp/result20.txt
+[DONE] Summary: /home/howard/PM-SLAM/Experiments/Performances/mh05_bsk_spp_pref.txt
 [SKIP] No Per-Channel summaries captured; no correlation files created.
-[DONE] Logs:    /home/howard/PM-SLAM/Experiments/Logs/kt07_bsk_spp
-[DONE] Results: /home/howard/PM-SLAM/Experiments/Poses/kt07_bsk_spp
-[SKIP] --noEvo set; skip APE/RPE for 'kt07_bsk_spp'.
+[DONE] Logs:    /home/howard/PM-SLAM/Experiments/Logs/mh05_bsk_spp
+[DONE] Results: /home/howard/PM-SLAM/Experiments/Poses/mh05_bsk_spp
+[SKIP] --noEvo set; skip APE/RPE for 'mh05_bsk_spp'.
 
 Total wall time: 0h 0m 0s
 All experiments finished.
