@@ -1,0 +1,265 @@
+Registering ORBextractor...
+Registering AKAZEextractor...
+Registering BRISKextractor...
+Registering SIFTextractor...
+Registering KAZEextractor...
+Registering SuperPointExtractor...
+
+ORB-SLAM2 Copyright (C) 2014-2016 Raul Mur-Artal, University of Zaragoza.
+This program comes with ABSOLUTELY NO WARRANTY;
+This is free software, and you are welcome to redistribute it
+under certain conditions. See LICENSE.txt.
+
+Input sensor was set to: Monocular
+
+Loading Vocabulary : /home/howard/Refactored_ORB_SLAM2/Install/var/lib/orbslam2/voc/kaze_cv.fbow
+This could take a while...
+Loading KAZE Vocabulary in FBoW.
+KAZE Vocabulary loaded in 0.032320s
+
+
+Loading Vocabulary : /home/howard/Refactored_ORB_SLAM2/Install/var/lib/orbslam2/voc/sift_cv.fbow
+This could take a while...
+Loading SIFT Vocabulary in FBoW.
+SIFT Vocabulary loaded in 0.047851s
+
+
+Camera Parameters: 
+- fx: 983.044
+- fy: 983.044
+- cx: 643.647
+- cy: 493.379
+- k1: 0
+- k2: 0
+- p1: 0
+- p2: 0
+- fps: 16
+- color order: RGB (ignored if grayscale)
+
+[Feature 0] KAZE Extractor Parameters: 
+ ( TH_LOW: 0.5, TH_HIGH: 1 )
+- Number of Features : 2000
+- Scale Levels       : 4
+- Scale Factor       : 1.2
+- Threshold          : 0.001
+- nOctaves           : 4
+- nOctaveLayers      : 4
+- Extended (128‑dim) : 0
+- Upright            : 0
+
+[Feature 1] SIFT Extractor Parameters: 
+ ( TH_LOW: 300, TH_HIGH: 500 )
+- Number of Features  : 2000
+- Scale Levels        : 1
+- Scale Factor        : 1
+- Contrast Threshold  : 0.01
+- Edge Threshold      : 5
+- nOctaves            : 3
+- Sigma               : 1.6
+
+-------
+Start processing sequence ...
+Images in the sequence: 7513
+
+1
+New map created with 180 points for 0 Feature Type 
+New map created with 265 points for 1 Feature Type 
+Tracking Initlized in 415.81s
+The initlized frame ID: 142
+The lost frame ID: 831
+The lost frame ID: 832
+The lost frame ID: 833
+The lost frame ID: 834
+The lost frame ID: 835
+The lost frame ID: 836
+The lost frame ID: 837
+The lost frame ID: 839
+The lost frame ID: 1731
+The lost frame ID: 1732
+The lost frame ID: 1734
+The lost frame ID: 1735
+The lost frame ID: 1736
+The lost frame ID: 1737
+The lost frame ID: 1738
+The lost frame ID: 1739
+The lost frame ID: 1740
+The lost frame ID: 1741
+The lost frame ID: 1742
+
+Saving camera trajectory to TrajectoryBeforeReset_oxf_kaz_sft_r03_seg01_pid2566384_1757594181403.txt ...
+
+trajectory saved!
+[Tracking] wrote pre-reset trajectory to TrajectoryBeforeReset_oxf_kaz_sft_r03_seg01_pid2566384_1757594181403.txt
+[Tracking] LOST for 10 consecutive frames -> reset
+System Reseting
+Reseting Local Mapper... done
+Reseting Loop Closing... done
+Reseting Database... done
+0
+New map created with 472 points for 0 Feature Type 
+New map created with 672 points for 1 Feature Type 
+Tracking Initlized in 6.53s
+The initlized frame ID: 2
+The lost frame ID: 1076
+The lost frame ID: 1807
+The lost frame ID: 1808
+The lost frame ID: 1809
+The lost frame ID: 1810
+The lost frame ID: 1811
+The lost frame ID: 1812
+The lost frame ID: 1813
+The lost frame ID: 1814
+The lost frame ID: 1815
+
+Saving camera trajectory to TrajectoryBeforeReset_oxf_kaz_sft_r03_seg02_pid2566384_1757595283303.txt ...
+
+trajectory saved!
+[Tracking] wrote pre-reset trajectory to TrajectoryBeforeReset_oxf_kaz_sft_r03_seg02_pid2566384_1757595283303.txt
+[Tracking] LOST for 10 consecutive frames -> reset
+System Reseting
+Reseting Local Mapper... done
+Reseting Loop Closing... done
+Reseting Database... done
+1
+New map created with 353 points for 0 Feature Type 
+New map created with 671 points for 1 Feature Type 
+Tracking Initlized in 3.21s
+The initlized frame ID: 1
+Track lost soon after initialisation, reseting...
+System Reseting
+Reseting Local Mapper... done
+Reseting Loop Closing... done
+Reseting Database... done
+1
+New map created with 370 points for 0 Feature Type 
+New map created with 651 points for 1 Feature Type 
+Tracking Initlized in 3.16s
+The initlized frame ID: 1
+The lost frame ID: 1407
+The lost frame ID: 1408
+The lost frame ID: 1409
+The lost frame ID: 1410
+The lost frame ID: 1411
+The lost frame ID: 1412
+The lost frame ID: 1413
+The lost frame ID: 1415
+The lost frame ID: 1416
+The lost frame ID: 1417
+The lost frame ID: 1418
+The lost frame ID: 1419
+The lost frame ID: 1420
+The lost frame ID: 1421
+The lost frame ID: 1422
+The lost frame ID: 1423
+
+Saving camera trajectory to TrajectoryBeforeReset_oxf_kaz_sft_r03_seg03_pid2566384_1757596125193.txt ...
+
+trajectory saved!
+[Tracking] wrote pre-reset trajectory to TrajectoryBeforeReset_oxf_kaz_sft_r03_seg03_pid2566384_1757596125193.txt
+[Tracking] LOST for 10 consecutive frames -> reset
+System Reseting
+Reseting Local Mapper... done
+Reseting Loop Closing... done
+Reseting Database... done
+1
+New map created with 322 points for 0 Feature Type 
+New map created with 1361 points for 1 Feature Type 
+Tracking Initlized in 2.96s
+The initlized frame ID: 1
+The lost frame ID: 2236
+The lost frame ID: 2237
+The lost frame ID: 2238
+The lost frame ID: 2239
+The lost frame ID: 2240
+The lost frame ID: 2241
+The lost frame ID: 2242
+The lost frame ID: 2243
+The lost frame ID: 2244
+
+Saving camera trajectory to TrajectoryBeforeReset_oxf_kaz_sft_r03_seg04_pid2566384_1757597445715.txt ...
+
+trajectory saved!
+[Tracking] wrote pre-reset trajectory to TrajectoryBeforeReset_oxf_kaz_sft_r03_seg04_pid2566384_1757597445715.txt
+[Tracking] LOST for 10 consecutive frames -> reset
+System Reseting
+Reseting Local Mapper... done
+Reseting Loop Closing... done
+Reseting Database... done
+0
+New map created with 544 points for 0 Feature Type 
+New map created with 595 points for 1 Feature Type 
+Tracking Initlized in 32.81s
+The initlized frame ID: 11
+The lost frame ID: 154
+The lost frame ID: 156
+The lost frame ID: 157
+The lost frame ID: 158
+The lost frame ID: 159
+The lost frame ID: 160
+The lost frame ID: 161
+The lost frame ID: 162
+The lost frame ID: 164
+The lost frame ID: 165
+The lost frame ID: 166
+The lost frame ID: 167
+The lost frame ID: 168
+The lost frame ID: 169
+The lost frame ID: 170
+The lost frame ID: 171
+The lost frame ID: 172
+
+Saving camera trajectory to TrajectoryBeforeReset_oxf_kaz_sft_r03_seg05_pid2566384_1757597558164.txt ...
+
+trajectory saved!
+[Tracking] wrote pre-reset trajectory to TrajectoryBeforeReset_oxf_kaz_sft_r03_seg05_pid2566384_1757597558164.txt
+[Tracking] LOST for 10 consecutive frames -> reset
+System Reseting
+Reseting Local Mapper... done
+Reseting Loop Closing... done
+Reseting Database... done
+0
+New map created with 685 points for 0 Feature Type 
+New map created with 599 points for 1 Feature Type 
+Tracking Initlized in 3.19s
+The initlized frame ID: 1
+System::StopViewer()
+System::StopViewer() done
+
+Saving correlation status...
+
+========== Global Summary ==========
+Frames: 7232
+avg_CorrEdges: 26.6829
+avg_match_A: 229.457
+avg_match_B: 207.934
+global_RI_MNR: 0.128324
+global_RI_GNR: 0.122158
+global_RI_DICE: 0.12201
+
+========== Per-Channel Summary ==========
+   chA   chB     avgCorr        avgA        avgB   avgRI_MNR   avgRI_GNR  avgRI_DICE
+     0     1     26.6829     229.457     207.934    0.119838    0.107604    0.106635
+
+Correlation status saved!
+
+System Shutdown
+-------
+
+median tracking time: 0.610186
+mean tracking time: 0.61332
+
+Saving camera trajectory to result03.txt ...
+
+trajectory saved!
+All done
+
+========== Performance Summary (ms) ==========
+name                                mean      median        rmse         min         max       count
+Lost Count                         1.000       1.000       0.000       1.000       1.000           5
+Tracking                          24.175      21.741      14.203       2.494     534.992        7347
+Reset Count                        1.000       1.000       0.000       1.000       1.000           6
+Correlation                        0.454       0.396       0.378       0.004      10.649        7270
+Total Init                    109804.696  109804.696       0.000  109804.696  109804.696           1
+Pipeline                         611.429     610.147      64.156     367.628    1215.534        7513
+KAZE Extract                     577.983     578.292      56.693     347.075     985.570        7513
+SIFT Extract                     164.564     156.630      37.691      87.507     401.417        7513
