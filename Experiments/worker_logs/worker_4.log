@@ -1,9 +1,75 @@
-numLines=3
->>> Experiments to run: 3 (withCorr=0, noEvo=1, start=4,skip=6)
+numLines=10
+>>> Experiments to run: 10 (withCorr=0, noEvo=1, start=4,skip=6)
+line=name=kt00_akz_bsk seq=~/dataset/kitti/00 yaml=../Install/etc/orbslam2/Monocular/KITTI00-02.yaml runs=20 exe=../Install/bin mode=kitti features=[AKAZE,BRISK]
+[INFO] YAML for kt00_akz_bsk: KITTI00-02.yaml -> kt00_akz_bsk.yaml  [AKAZE BRISK]
 
-Total wall time: 0h 0m 0s
-All experiments finished.
-Performance -> ./Performances/<name>/<name>_pref.txt
-APE/RPE     -> ./PoseErrors/APE|RPE/<name>.txt
-Logs/Poses  -> ./Logs/<name>/, ./Poses/<name>/
-Correlations-> ./Correlations/<name>/ and ./Correlations/corr_exp_<name>.txt (if --withCorr)
+===== RUN: kt00_akz_bsk =====
+[bench] seq=/home/howard/dataset/kitti/00  yaml=../../../../Experiments/kt00_akz_bsk.yaml  runs=20  exe_dir=../Install/bin  mode=kitti times=
+[INFO] name=kt00_akz_bsk  seq=/home/howard/dataset/kitti/00  runs=20  yaml=../../../../Experiments/kt00_akz_bsk.yaml  withCorr=1  mode=kitti  times=
+[RUN 01/20] 2025-09-12 16:02:20
+Registering ORBextractor...
+Registering AKAZEextractor...
+Registering BRISKextractor...
+Registering SIFTextractor...
+Registering KAZEextractor...
+Registering SuperPointExtractor...
+
+ORB-SLAM2 Copyright (C) 2014-2016 Raul Mur-Artal, University of Zaragoza.
+This program comes with ABSOLUTELY NO WARRANTY;
+This is free software, and you are welcome to redistribute it
+under certain conditions. See LICENSE.txt.
+
+Input sensor was set to: Monocular
+
+Loading Vocabulary : /home/howard/Refactored_ORB_SLAM2/Install/var/lib/orbslam2/voc/akaze_cv.fbow
+This could take a while...
+Loading AKAZE Vocabulary in FBoW.
+AKAZE Vocabulary loaded in 0.007892s
+
+
+Loading Vocabulary : /home/howard/Refactored_ORB_SLAM2/Install/var/lib/orbslam2/voc/brisk_cv.fbow
+This could take a while...
+Loading BRISK Vocabulary in FBoW.
+BRISK Vocabulary loaded in 0.010639s
+
+
+Camera Parameters: 
+- fx: 718.856
+- fy: 718.856
+- cx: 607.193
+- cy: 185.216
+- k1: 0
+- k2: 0
+- p1: 0
+- p2: 0
+- fps: 10
+- color order: RGB (ignored if grayscale)
+
+[Feature 0] AKAZE Extractor Parameters: 
+ ( TH_LOW: 100, TH_HIGH: 200 )
+- Number of Features: 2000
+- Scale Levels: 4
+- Scale Factor: 1.2
+- Threshold: 0.0001
+- Num of Octaves: 4
+- Num of Octave Layers: 4
+
+[Feature 1] BRISK Extractor Parameters: 
+ ( TH_LOW: 150, TH_HIGH: 250 )
+- Number of Features: 2000
+- Scale Levels: 6
+- Scale Factor: 1.414
+- Threshold: 50
+- Num of Octaves: 3
+- Pattern Scale: 1
+
+-------
+Start processing sequence ...
+Images in the sequence: 4541
+
+0
+QStandardPaths: wrong permissions on runtime directory /run/user/1000/, 0755 instead of 0700
+New map created with 1483 points for 0 Feature Type 
+New map created with 443 points for 1 Feature Type 
+Tracking Initlized in 0.95s
+The initlized frame ID: 1

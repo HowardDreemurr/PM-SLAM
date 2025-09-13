@@ -61,7 +61,7 @@ int main(int argc, char **argv) {
 
   // Create SLAM system. It initializes all system threads and gets ready to
   // process frames.
-  ORB_SLAM2::System SLAM(settingsFile, ORB_SLAM2::System::MONOCULAR, false);
+  ORB_SLAM2::System SLAM(settingsFile, ORB_SLAM2::System::MONOCULAR, true);
 
   // Vector for tracking time statistics
   vector<float> vTimesTrack;
@@ -109,7 +109,6 @@ int main(int argc, char **argv) {
       vTimesTrack[ni] = ttrack;
 
       // Wait to load the next frame
-      #if 0
       double T = 0;
       if (ni < nImages - 1)
         T = vTimestamps[ni + 1] - tframe;
@@ -118,7 +117,6 @@ int main(int argc, char **argv) {
 
       if (ttrack < T)
         this_thread::sleep_for(chrono::duration<double>(T - ttrack));
-      #endif
     }
     SLAM.StopViewer();
   });

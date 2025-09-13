@@ -1,9 +1,75 @@
-numLines=3
->>> Experiments to run: 3 (withCorr=0, noEvo=1, start=3,skip=6)
+numLines=10
+>>> Experiments to run: 10 (withCorr=0, noEvo=1, start=3,skip=6)
+line=name=kt00_orb_sft seq=~/dataset/kitti/00 yaml=../Install/etc/orbslam2/Monocular/KITTI00-02.yaml runs=20 exe=../Install/bin mode=kitti features=[ORB,SIFT]
+[INFO] YAML for kt00_orb_sft: KITTI00-02.yaml -> kt00_orb_sft.yaml  [ORB SIFT]
 
-Total wall time: 0h 0m 0s
-All experiments finished.
-Performance -> ./Performances/<name>/<name>_pref.txt
-APE/RPE     -> ./PoseErrors/APE|RPE/<name>.txt
-Logs/Poses  -> ./Logs/<name>/, ./Poses/<name>/
-Correlations-> ./Correlations/<name>/ and ./Correlations/corr_exp_<name>.txt (if --withCorr)
+===== RUN: kt00_orb_sft =====
+[bench] seq=/home/howard/dataset/kitti/00  yaml=../../../../Experiments/kt00_orb_sft.yaml  runs=20  exe_dir=../Install/bin  mode=kitti times=
+[INFO] name=kt00_orb_sft  seq=/home/howard/dataset/kitti/00  runs=20  yaml=../../../../Experiments/kt00_orb_sft.yaml  withCorr=1  mode=kitti  times=
+[RUN 01/20] 2025-09-12 16:02:20
+Registering ORBextractor...
+Registering AKAZEextractor...
+Registering BRISKextractor...
+Registering SIFTextractor...
+Registering KAZEextractor...
+Registering SuperPointExtractor...
+
+ORB-SLAM2 Copyright (C) 2014-2016 Raul Mur-Artal, University of Zaragoza.
+This program comes with ABSOLUTELY NO WARRANTY;
+This is free software, and you are welcome to redistribute it
+under certain conditions. See LICENSE.txt.
+
+Input sensor was set to: Monocular
+
+Loading Vocabulary : /home/howard/Refactored_ORB_SLAM2/Install/var/lib/orbslam2/voc/orb_mur.fbow
+This could take a while...
+Loading ORB Vocabulary in FBoW.
+ORB Vocabulary loaded in 0.041226s
+
+
+Loading Vocabulary : /home/howard/Refactored_ORB_SLAM2/Install/var/lib/orbslam2/voc/sift_cv.fbow
+This could take a while...
+Loading SIFT Vocabulary in FBoW.
+SIFT Vocabulary loaded in 0.065436s
+
+
+Camera Parameters: 
+- fx: 718.856
+- fy: 718.856
+- cx: 607.193
+- cy: 185.216
+- k1: 0
+- k2: 0
+- p1: 0
+- p2: 0
+- fps: 10
+- color order: RGB (ignored if grayscale)
+
+[Feature 0] ORB Extractor Parameters: 
+ ( TH_LOW: 50, TH_HIGH: 100 )
+- Number of Features: 2000
+- Scale Levels: 8
+- Scale Factor: 1.2
+- Initial Fast Threshold: 20
+- Minimum Fast Threshold: 7
+
+[Feature 1] SIFT Extractor Parameters: 
+ ( TH_LOW: 300, TH_HIGH: 500 )
+- Number of Features  : 2000
+- Scale Levels        : 1
+- Scale Factor        : 1
+- Contrast Threshold  : 0.01
+- Edge Threshold      : 5
+- nOctaves            : 3
+- Sigma               : 1.6
+
+-------
+Start processing sequence ...
+Images in the sequence: 4541
+
+0
+New map created with 174 points for 0 Feature Type 
+New map created with 1058 points for 1 Feature Type 
+Tracking Initlized in 0.78s
+The initlized frame ID: 1
+QStandardPaths: wrong permissions on runtime directory /run/user/1000/, 0755 instead of 0700

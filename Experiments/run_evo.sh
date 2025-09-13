@@ -101,7 +101,7 @@ fi
 [[ -d "$POSES_DIR" ]] || { echo "ERROR: poses_dir not found: $POSES_DIR" >&2; exit 4; }
 
 shopt -s nullglob
-mapfile -t FILES < <(ls -1 "$POSES_DIR"/result*.txt 2>/dev/null | sort -V)
+mapfile -t FILES < <(ls -1 "$POSES_DIR"/result[0-9][0-9].txt 2>/dev/null | sort -V)
 shopt -u nullglob
 if [[ ${#FILES[@]} -eq 0 ]]; then
   echo "[SKIP] No result*.txt in $POSES_DIR ; no metrics file will be created."

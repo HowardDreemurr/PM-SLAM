@@ -1,0 +1,326 @@
+Registering ORBextractor...
+Registering AKAZEextractor...
+Registering BRISKextractor...
+Registering SIFTextractor...
+Registering KAZEextractor...
+Registering SuperPointExtractor...
+
+ORB-SLAM2 Copyright (C) 2014-2016 Raul Mur-Artal, University of Zaragoza.
+This program comes with ABSOLUTELY NO WARRANTY;
+This is free software, and you are welcome to redistribute it
+under certain conditions. See LICENSE.txt.
+
+Input sensor was set to: Monocular
+
+Loading Vocabulary : /home/howard/Refactored_ORB_SLAM2/Install/var/lib/orbslam2/voc/orb_mur.fbow
+This could take a while...
+Loading ORB Vocabulary in FBoW.
+ORB Vocabulary loaded in 0.013012s
+
+
+Loading Vocabulary : /home/howard/Refactored_ORB_SLAM2/Install/var/lib/orbslam2/voc/sift_cv.fbow
+This could take a while...
+Loading SIFT Vocabulary in FBoW.
+SIFT Vocabulary loaded in 0.015179s
+
+
+Camera Parameters: 
+- fx: 718.856
+- fy: 718.856
+- cx: 607.193
+- cy: 185.216
+- k1: 0
+- k2: 0
+- p1: 0
+- p2: 0
+- fps: 10
+- color order: RGB (ignored if grayscale)
+
+[Feature 0] ORB Extractor Parameters: 
+ ( TH_LOW: 50, TH_HIGH: 100 )
+- Number of Features: 2000
+- Scale Levels: 8
+- Scale Factor: 1.2
+- Initial Fast Threshold: 20
+- Minimum Fast Threshold: 7
+
+[Feature 1] SIFT Extractor Parameters: 
+ ( TH_LOW: 300, TH_HIGH: 500 )
+- Number of Features  : 2000
+- Scale Levels        : 1
+- Scale Factor        : 1
+- Contrast Threshold  : 0.01
+- Edge Threshold      : 5
+- nOctaves            : 3
+- Sigma               : 1.6
+
+-------
+Start processing sequence ...
+Images in the sequence: 4541
+
+0
+New map created with 180 points for 0 Feature Type 
+New map created with 1048 points for 1 Feature Type 
+Tracking Initlized in 0.62s
+The initlized frame ID: 1
+[LoopClosing] Sim3 choosed on channel 1
+Loop detected!
+Local Mapping STOP
+Local Mapping RELEASE
+Starting Global Bundle Adjustment
+Global Bundle Adjustment finished
+Updating map ...
+Local Mapping STOP
+Local Mapping RELEASE
+Map updated!
+[LoopClosing] Sim3 choosed on channel 0
+Loop detected!
+Local Mapping STOP
+Local Mapping RELEASE
+Starting Global Bundle Adjustment
+Global Bundle Adjustment finished
+Updating map ...
+Local Mapping STOP
+Local Mapping RELEASE
+Map updated!
+The lost frame ID: 3110
+The lost frame ID: 3111
+The lost frame ID: 3112
+The lost frame ID: 3113
+The lost frame ID: 3114
+The lost frame ID: 3115
+The lost frame ID: 3116
+The lost frame ID: 3117
+The lost frame ID: 3118
+The lost frame ID: 3119
+The lost frame ID: 3120
+The lost frame ID: 3121
+The lost frame ID: 3122
+The lost frame ID: 3123
+The lost frame ID: 3124
+The lost frame ID: 3125
+The lost frame ID: 3126
+The lost frame ID: 3127
+The lost frame ID: 3128
+The lost frame ID: 3129
+The lost frame ID: 3130
+The lost frame ID: 3131
+The lost frame ID: 3132
+The lost frame ID: 3133
+The lost frame ID: 3134
+The lost frame ID: 3135
+The lost frame ID: 3136
+The lost frame ID: 3137
+The lost frame ID: 3138
+The lost frame ID: 3139
+The lost frame ID: 3140
+The lost frame ID: 3141
+The lost frame ID: 3142
+The lost frame ID: 3143
+The lost frame ID: 3144
+The lost frame ID: 3145
+The lost frame ID: 3146
+The lost frame ID: 3147
+The lost frame ID: 3148
+The lost frame ID: 3149
+The lost frame ID: 3150
+The lost frame ID: 3151
+The lost frame ID: 3152
+The lost frame ID: 3153
+The lost frame ID: 3154
+The lost frame ID: 3155
+The lost frame ID: 3156
+The lost frame ID: 3157
+The lost frame ID: 3158
+The lost frame ID: 3159
+The lost frame ID: 3160
+The lost frame ID: 3161
+The lost frame ID: 3162
+The lost frame ID: 3163
+The lost frame ID: 3164
+The lost frame ID: 3165
+The lost frame ID: 3166
+The lost frame ID: 3167
+The lost frame ID: 3168
+The lost frame ID: 3169
+The lost frame ID: 3170
+The lost frame ID: 3171
+The lost frame ID: 3172
+The lost frame ID: 3173
+The lost frame ID: 3174
+The lost frame ID: 3175
+The lost frame ID: 3176
+The lost frame ID: 3177
+The lost frame ID: 3178
+The lost frame ID: 3179
+The lost frame ID: 3180
+The lost frame ID: 3181
+The lost frame ID: 3182
+The lost frame ID: 3183
+The lost frame ID: 3184
+The lost frame ID: 3185
+The lost frame ID: 3186
+The lost frame ID: 3187
+The lost frame ID: 3188
+The lost frame ID: 3189
+The lost frame ID: 3190
+The lost frame ID: 3191
+The lost frame ID: 3192
+The lost frame ID: 3193
+The lost frame ID: 3194
+The lost frame ID: 3195
+The lost frame ID: 3196
+The lost frame ID: 3197
+The lost frame ID: 3198
+The lost frame ID: 3199
+The lost frame ID: 3200
+The lost frame ID: 3201
+The lost frame ID: 3202
+The lost frame ID: 3203
+The lost frame ID: 3204
+The lost frame ID: 3205
+The lost frame ID: 3206
+The lost frame ID: 3207
+The lost frame ID: 3208
+The lost frame ID: 3209
+The lost frame ID: 3210
+The lost frame ID: 3211
+The lost frame ID: 3212
+The lost frame ID: 3213
+The lost frame ID: 3214
+The lost frame ID: 3215
+The lost frame ID: 3216
+The lost frame ID: 3217
+The lost frame ID: 3218
+The lost frame ID: 3219
+The lost frame ID: 3220
+The lost frame ID: 3221
+The lost frame ID: 3222
+The lost frame ID: 3223
+The lost frame ID: 3224
+The lost frame ID: 3225
+The lost frame ID: 3226
+The lost frame ID: 3227
+The lost frame ID: 3228
+The lost frame ID: 3229
+The lost frame ID: 3230
+The lost frame ID: 3231
+The lost frame ID: 3232
+The lost frame ID: 3233
+The lost frame ID: 3234
+The lost frame ID: 3235
+The lost frame ID: 3236
+The lost frame ID: 3237
+The lost frame ID: 3238
+The lost frame ID: 3239
+The lost frame ID: 3240
+The lost frame ID: 3241
+The lost frame ID: 3242
+The lost frame ID: 3243
+The lost frame ID: 3244
+The lost frame ID: 3245
+The lost frame ID: 3246
+The lost frame ID: 3247
+The lost frame ID: 3248
+The lost frame ID: 3249
+The lost frame ID: 3250
+The lost frame ID: 3251
+The lost frame ID: 3252
+The lost frame ID: 3253
+The lost frame ID: 3254
+The lost frame ID: 3255
+The lost frame ID: 3256
+The lost frame ID: 3257
+The lost frame ID: 3258
+The lost frame ID: 3259
+The lost frame ID: 3260
+The lost frame ID: 3261
+The lost frame ID: 3262
+The lost frame ID: 3263
+The lost frame ID: 3264
+The lost frame ID: 3265
+The lost frame ID: 3266
+The lost frame ID: 3267
+The lost frame ID: 3268
+The lost frame ID: 3269
+The lost frame ID: 3270
+The lost frame ID: 3271
+The lost frame ID: 3272
+The lost frame ID: 3273
+The lost frame ID: 3274
+The lost frame ID: 3275
+The lost frame ID: 3276
+The lost frame ID: 3277
+The lost frame ID: 3278
+The lost frame ID: 3279
+The lost frame ID: 3280
+The lost frame ID: 3281
+The lost frame ID: 3282
+The lost frame ID: 3283
+The lost frame ID: 3284
+The lost frame ID: 3285
+The lost frame ID: 3286
+The lost frame ID: 3287
+The lost frame ID: 3288
+The lost frame ID: 3289
+The lost frame ID: 3290
+The lost frame ID: 3291
+The lost frame ID: 3292
+The lost frame ID: 3293
+The lost frame ID: 3294
+The lost frame ID: 3295
+The lost frame ID: 3296
+The lost frame ID: 3297
+The lost frame ID: 3298
+[LoopClosing] Sim3 choosed on channel 1
+Loop detected!
+Local Mapping STOP
+Local Mapping RELEASE
+Starting Global Bundle Adjustment
+Global Bundle Adjustment finished
+Updating map ...
+Local Mapping STOP
+Local Mapping RELEASE
+Map updated!
+System::StopViewer()
+System::StopViewer() done
+Viewer thread finished.
+Viewer started, waiting for thread.
+System::StopViewer()
+System::StopViewer() done
+Tracking thread joined...
+
+Saving correlation status...
+
+========== Global Summary ==========
+Frames: 4349
+avg_CorrEdges: 3.16946
+avg_match_A: 74.4893
+avg_match_B: 78.499
+global_RI_MNR: 0.0425492
+global_RI_GNR: 0.0414483
+global_RI_DICE: 0.0414341
+
+========== Per-Channel Summary ==========
+   chA   chB     avgCorr        avgA        avgB   avgRI_MNR   avgRI_GNR  avgRI_DICE
+     0     1     3.16946     74.4893      78.499   0.0393368   0.0322952    0.031417
+
+Correlation status saved!
+
+-------
+
+median tracking time: 0.0302274
+mean tracking time: 0.0324804
+
+Saving camera trajectory to result12.txt ...
+
+trajectory saved!
+
+========== Performance Summary (ms) ==========
+name                                mean      median        rmse         min         max       count
+Tracking                           4.515       2.791       5.890       0.954      58.353        4539
+Correlation                        0.083       0.070       0.045       0.003       1.346        4350
+Total Init                       267.178     267.178       0.000     267.178     267.178           1
+Pipeline                          32.476      30.223       8.037      26.399     274.754        4541
+SIFT Extract                      26.966      26.143       2.858      23.890      63.218        4541
+ORB Extract                        8.213       8.107       1.053       5.505      13.502        4541

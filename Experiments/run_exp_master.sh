@@ -303,9 +303,9 @@ read_config_lines() {
 #        'name=oxf_akz_spp     seq=~/dataset/tum/oxf_car yaml=../Install/etc/orbslam2/Monocular/TUM_OC.yaml runs=20 exe=../Install/bin features=[AKAZE,SuperPoint]'
 #        'name=oxf_bsk_kaz     seq=~/dataset/tum/oxf_car yaml=../Install/etc/orbslam2/Monocular/TUM_OC.yaml runs=20 exe=../Install/bin features=[BRISK,KAZE]'
 #        'name=oxf_bsk_sft     seq=~/dataset/tum/oxf_car yaml=../Install/etc/orbslam2/Monocular/TUM_OC.yaml runs=20 exe=../Install/bin features=[BRISK,SIFT]'
-        'name=oxf_bsk_spp     seq=~/dataset/tum/oxf_car yaml=../Install/etc/orbslam2/Monocular/TUM_OC.yaml runs=20 exe=../Install/bin features=[BRISK,SuperPoint]'
-        'name=oxf_kaz_sft     seq=~/dataset/tum/oxf_car yaml=../Install/etc/orbslam2/Monocular/TUM_OC.yaml runs=20 exe=../Install/bin features=[KAZE,SIFT]'
-        'name=oxf_kaz_spp     seq=~/dataset/tum/oxf_car yaml=../Install/etc/orbslam2/Monocular/TUM_OC.yaml runs=20 exe=../Install/bin features=[KAZE,SuperPoint]'
+#        'name=oxf_bsk_spp     seq=~/dataset/tum/oxf_car yaml=../Install/etc/orbslam2/Monocular/TUM_OC.yaml runs=20 exe=../Install/bin features=[BRISK,SuperPoint]'
+#        'name=oxf_kaz_sft     seq=~/dataset/tum/oxf_car yaml=../Install/etc/orbslam2/Monocular/TUM_OC.yaml runs=20 exe=../Install/bin features=[KAZE,SIFT]'
+#        'name=oxf_kaz_spp     seq=~/dataset/tum/oxf_car yaml=../Install/etc/orbslam2/Monocular/TUM_OC.yaml runs=20 exe=../Install/bin features=[KAZE,SuperPoint]'
 #        'name=oxf_sft_spp     seq=~/dataset/tum/oxf_car yaml=../Install/etc/orbslam2/Monocular/TUM_OC.yaml runs=20 exe=../Install/bin features=[SIFT,SuperPoint]'
 
 

@@ -1,0 +1,495 @@
+Registering ORBextractor...
+Registering AKAZEextractor...
+Registering BRISKextractor...
+Registering SIFTextractor...
+Registering KAZEextractor...
+Registering SuperPointExtractor...
+
+ORB-SLAM2 Copyright (C) 2014-2016 Raul Mur-Artal, University of Zaragoza.
+This program comes with ABSOLUTELY NO WARRANTY;
+This is free software, and you are welcome to redistribute it
+under certain conditions. See LICENSE.txt.
+
+Input sensor was set to: Monocular
+
+Loading Vocabulary : /home/howard/Refactored_ORB_SLAM2/Install/var/lib/orbslam2/voc/orb_mur.fbow
+This could take a while...
+Loading ORB Vocabulary in FBoW.
+ORB Vocabulary loaded in 0.012423s
+
+
+Loading Vocabulary : /home/howard/Refactored_ORB_SLAM2/Install/var/lib/orbslam2/voc/sift_cv.fbow
+This could take a while...
+Loading SIFT Vocabulary in FBoW.
+SIFT Vocabulary loaded in 0.014656s
+
+
+Camera Parameters: 
+- fx: 718.856
+- fy: 718.856
+- cx: 607.193
+- cy: 185.216
+- k1: 0
+- k2: 0
+- p1: 0
+- p2: 0
+- fps: 10
+- color order: RGB (ignored if grayscale)
+
+[Feature 0] ORB Extractor Parameters: 
+ ( TH_LOW: 50, TH_HIGH: 100 )
+- Number of Features: 2000
+- Scale Levels: 8
+- Scale Factor: 1.2
+- Initial Fast Threshold: 20
+- Minimum Fast Threshold: 7
+
+[Feature 1] SIFT Extractor Parameters: 
+ ( TH_LOW: 300, TH_HIGH: 500 )
+- Number of Features  : 2000
+- Scale Levels        : 1
+- Scale Factor        : 1
+- Contrast Threshold  : 0.01
+- Edge Threshold      : 5
+- nOctaves            : 3
+- Sigma               : 1.6
+
+-------
+Start processing sequence ...
+Images in the sequence: 4541
+
+1
+New map created with 151 points for 0 Feature Type 
+New map created with 949 points for 1 Feature Type 
+Tracking Initlized in 0.64s
+The initlized frame ID: 1
+[LoopClosing] Sim3 choosed on channel 1
+Loop detected!
+Local Mapping STOP
+Local Mapping RELEASE
+Starting Global Bundle Adjustment
+Global Bundle Adjustment finished
+Updating map ...
+Local Mapping STOP
+Local Mapping RELEASE
+Map updated!
+The lost frame ID: 2075
+The lost frame ID: 2076
+The lost frame ID: 2077
+The lost frame ID: 2078
+The lost frame ID: 2079
+The lost frame ID: 2080
+The lost frame ID: 2081
+The lost frame ID: 2082
+The lost frame ID: 2083
+The lost frame ID: 2084
+The lost frame ID: 2085
+The lost frame ID: 2086
+The lost frame ID: 2087
+The lost frame ID: 2088
+The lost frame ID: 2089
+The lost frame ID: 2090
+The lost frame ID: 2091
+The lost frame ID: 2092
+The lost frame ID: 2093
+The lost frame ID: 2094
+The lost frame ID: 2095
+The lost frame ID: 2096
+The lost frame ID: 2097
+The lost frame ID: 2098
+The lost frame ID: 2099
+The lost frame ID: 2100
+The lost frame ID: 2101
+The lost frame ID: 2102
+The lost frame ID: 2103
+The lost frame ID: 2104
+The lost frame ID: 2105
+The lost frame ID: 2106
+The lost frame ID: 2107
+The lost frame ID: 2108
+The lost frame ID: 2109
+The lost frame ID: 2110
+The lost frame ID: 2111
+The lost frame ID: 2112
+The lost frame ID: 2113
+The lost frame ID: 2114
+The lost frame ID: 2115
+The lost frame ID: 2116
+The lost frame ID: 2117
+The lost frame ID: 2118
+The lost frame ID: 2119
+The lost frame ID: 2120
+The lost frame ID: 2121
+The lost frame ID: 2122
+The lost frame ID: 2123
+The lost frame ID: 2124
+The lost frame ID: 2125
+The lost frame ID: 2126
+The lost frame ID: 2127
+The lost frame ID: 2128
+The lost frame ID: 2129
+The lost frame ID: 2130
+The lost frame ID: 2131
+The lost frame ID: 2132
+The lost frame ID: 2133
+The lost frame ID: 2134
+The lost frame ID: 2135
+The lost frame ID: 2136
+The lost frame ID: 2137
+The lost frame ID: 2138
+The lost frame ID: 2139
+The lost frame ID: 2140
+The lost frame ID: 2141
+The lost frame ID: 2142
+The lost frame ID: 2143
+The lost frame ID: 2144
+The lost frame ID: 2145
+The lost frame ID: 2146
+The lost frame ID: 2147
+The lost frame ID: 2148
+The lost frame ID: 2149
+The lost frame ID: 2150
+The lost frame ID: 2151
+The lost frame ID: 2152
+The lost frame ID: 2153
+The lost frame ID: 2154
+The lost frame ID: 2155
+The lost frame ID: 2156
+The lost frame ID: 2157
+The lost frame ID: 2158
+The lost frame ID: 2159
+The lost frame ID: 2160
+The lost frame ID: 2161
+The lost frame ID: 2162
+The lost frame ID: 2163
+The lost frame ID: 2164
+The lost frame ID: 2165
+The lost frame ID: 2166
+The lost frame ID: 2167
+The lost frame ID: 2168
+The lost frame ID: 2169
+The lost frame ID: 2170
+The lost frame ID: 2171
+The lost frame ID: 2172
+The lost frame ID: 2173
+The lost frame ID: 2174
+The lost frame ID: 2175
+The lost frame ID: 2176
+The lost frame ID: 2177
+The lost frame ID: 2178
+The lost frame ID: 2179
+The lost frame ID: 2180
+The lost frame ID: 2181
+The lost frame ID: 2182
+The lost frame ID: 2183
+The lost frame ID: 2184
+The lost frame ID: 2185
+The lost frame ID: 2186
+The lost frame ID: 2187
+The lost frame ID: 2188
+The lost frame ID: 2189
+The lost frame ID: 2190
+The lost frame ID: 2191
+The lost frame ID: 2192
+The lost frame ID: 2193
+The lost frame ID: 2194
+The lost frame ID: 2195
+The lost frame ID: 2196
+The lost frame ID: 2197
+The lost frame ID: 2198
+The lost frame ID: 2199
+The lost frame ID: 2200
+The lost frame ID: 2201
+The lost frame ID: 2202
+The lost frame ID: 2203
+The lost frame ID: 2204
+The lost frame ID: 2205
+The lost frame ID: 2206
+The lost frame ID: 2207
+The lost frame ID: 2208
+The lost frame ID: 2209
+The lost frame ID: 2210
+The lost frame ID: 2211
+The lost frame ID: 2212
+The lost frame ID: 2213
+The lost frame ID: 2214
+The lost frame ID: 2215
+The lost frame ID: 2216
+The lost frame ID: 2217
+The lost frame ID: 2218
+The lost frame ID: 2219
+The lost frame ID: 2220
+The lost frame ID: 2221
+The lost frame ID: 2222
+The lost frame ID: 2223
+The lost frame ID: 2224
+The lost frame ID: 2225
+The lost frame ID: 2226
+The lost frame ID: 2227
+The lost frame ID: 2228
+The lost frame ID: 2229
+The lost frame ID: 2230
+The lost frame ID: 2231
+The lost frame ID: 2232
+The lost frame ID: 2233
+The lost frame ID: 2234
+The lost frame ID: 2235
+The lost frame ID: 2236
+The lost frame ID: 2237
+The lost frame ID: 2238
+The lost frame ID: 2239
+The lost frame ID: 2240
+The lost frame ID: 2241
+The lost frame ID: 2242
+The lost frame ID: 2243
+The lost frame ID: 2244
+The lost frame ID: 2245
+The lost frame ID: 2246
+The lost frame ID: 2247
+The lost frame ID: 2248
+The lost frame ID: 2249
+The lost frame ID: 2250
+The lost frame ID: 2251
+The lost frame ID: 2252
+The lost frame ID: 2253
+The lost frame ID: 2254
+The lost frame ID: 2255
+The lost frame ID: 2256
+The lost frame ID: 2257
+The lost frame ID: 2258
+The lost frame ID: 2259
+The lost frame ID: 2260
+The lost frame ID: 2261
+The lost frame ID: 2262
+The lost frame ID: 2263
+The lost frame ID: 2264
+The lost frame ID: 2265
+The lost frame ID: 2266
+The lost frame ID: 2267
+The lost frame ID: 2268
+The lost frame ID: 2269
+The lost frame ID: 2270
+The lost frame ID: 2271
+The lost frame ID: 2272
+The lost frame ID: 2273
+The lost frame ID: 2274
+The lost frame ID: 2275
+The lost frame ID: 2276
+The lost frame ID: 2277
+The lost frame ID: 2278
+The lost frame ID: 2279
+The lost frame ID: 2280
+The lost frame ID: 2281
+The lost frame ID: 2282
+The lost frame ID: 2283
+The lost frame ID: 2284
+The lost frame ID: 2285
+The lost frame ID: 2286
+The lost frame ID: 2287
+The lost frame ID: 2288
+The lost frame ID: 2289
+The lost frame ID: 2290
+The lost frame ID: 2291
+The lost frame ID: 2292
+The lost frame ID: 2293
+The lost frame ID: 2294
+The lost frame ID: 2295
+The lost frame ID: 2296
+The lost frame ID: 2297
+The lost frame ID: 2298
+The lost frame ID: 2299
+The lost frame ID: 2300
+The lost frame ID: 2301
+The lost frame ID: 2302
+The lost frame ID: 2303
+The lost frame ID: 2304
+The lost frame ID: 2305
+The lost frame ID: 2306
+The lost frame ID: 2307
+The lost frame ID: 2308
+The lost frame ID: 2309
+The lost frame ID: 2310
+The lost frame ID: 2311
+The lost frame ID: 2312
+The lost frame ID: 2313
+The lost frame ID: 2314
+The lost frame ID: 2315
+The lost frame ID: 2316
+The lost frame ID: 2317
+The lost frame ID: 2318
+The lost frame ID: 2319
+The lost frame ID: 2320
+The lost frame ID: 2321
+The lost frame ID: 2322
+The lost frame ID: 2323
+The lost frame ID: 2324
+The lost frame ID: 2325
+The lost frame ID: 2326
+The lost frame ID: 2327
+The lost frame ID: 2328
+The lost frame ID: 2329
+The lost frame ID: 2330
+The lost frame ID: 2331
+The lost frame ID: 2332
+The lost frame ID: 2333
+The lost frame ID: 2334
+The lost frame ID: 2335
+The lost frame ID: 2336
+The lost frame ID: 2337
+The lost frame ID: 2338
+The lost frame ID: 2339
+The lost frame ID: 2340
+The lost frame ID: 2341
+The lost frame ID: 2342
+The lost frame ID: 2343
+The lost frame ID: 2344
+The lost frame ID: 2345
+The lost frame ID: 2346
+The lost frame ID: 2347
+The lost frame ID: 2348
+The lost frame ID: 2349
+The lost frame ID: 2350
+The lost frame ID: 2351
+The lost frame ID: 2352
+The lost frame ID: 2353
+The lost frame ID: 2354
+The lost frame ID: 2355
+The lost frame ID: 2356
+The lost frame ID: 2357
+The lost frame ID: 2358
+The lost frame ID: 2359
+The lost frame ID: 2360
+The lost frame ID: 2361
+The lost frame ID: 2362
+The lost frame ID: 2363
+The lost frame ID: 2364
+The lost frame ID: 2365
+The lost frame ID: 2366
+The lost frame ID: 2367
+The lost frame ID: 2368
+The lost frame ID: 2369
+The lost frame ID: 2370
+The lost frame ID: 2371
+The lost frame ID: 2372
+The lost frame ID: 2373
+The lost frame ID: 2374
+The lost frame ID: 2375
+The lost frame ID: 2376
+The lost frame ID: 2377
+The lost frame ID: 2378
+The lost frame ID: 2379
+The lost frame ID: 2380
+The lost frame ID: 2381
+The lost frame ID: 2382
+The lost frame ID: 2383
+The lost frame ID: 2384
+The lost frame ID: 2385
+The lost frame ID: 2386
+The lost frame ID: 2387
+The lost frame ID: 2388
+The lost frame ID: 2389
+The lost frame ID: 2390
+The lost frame ID: 2391
+The lost frame ID: 2392
+The lost frame ID: 2393
+The lost frame ID: 2394
+The lost frame ID: 2395
+The lost frame ID: 2396
+The lost frame ID: 2397
+The lost frame ID: 2398
+The lost frame ID: 2399
+The lost frame ID: 2400
+The lost frame ID: 2401
+The lost frame ID: 2402
+The lost frame ID: 2403
+The lost frame ID: 2404
+The lost frame ID: 2405
+The lost frame ID: 2406
+The lost frame ID: 2407
+The lost frame ID: 2408
+The lost frame ID: 2409
+The lost frame ID: 2410
+The lost frame ID: 2411
+The lost frame ID: 2412
+The lost frame ID: 2413
+The lost frame ID: 2414
+The lost frame ID: 2415
+The lost frame ID: 2416
+The lost frame ID: 2417
+The lost frame ID: 2418
+The lost frame ID: 2419
+The lost frame ID: 2420
+The lost frame ID: 2421
+The lost frame ID: 2422
+The lost frame ID: 2423
+The lost frame ID: 2424
+The lost frame ID: 2425
+The lost frame ID: 2426
+The lost frame ID: 2427
+The lost frame ID: 2428
+The lost frame ID: 2429
+The lost frame ID: 2430
+The lost frame ID: 2431
+The lost frame ID: 2432
+[LoopClosing] Sim3 choosed on channel 0
+Loop detected!
+Local Mapping STOP
+Local Mapping RELEASE
+Starting Global Bundle Adjustment
+Global Bundle Adjustment finished
+Updating map ...
+Local Mapping STOP
+Local Mapping RELEASE
+Map updated!
+[LoopClosing] Sim3 choosed on channel 1
+Loop detected!
+Local Mapping STOP
+Local Mapping RELEASE
+Starting Global Bundle Adjustment
+Global Bundle Adjustment finished
+Updating map ...
+Local Mapping STOP
+Local Mapping RELEASE
+Map updated!
+System::StopViewer()
+System::StopViewer() done
+Viewer thread finished.
+Viewer started, waiting for thread.
+System::StopViewer()
+System::StopViewer() done
+Tracking thread joined...
+
+Saving correlation status...
+
+========== Global Summary ==========
+Frames: 4181
+avg_CorrEdges: 3.02392
+avg_match_A: 77.1452
+avg_match_B: 81.5071
+global_RI_MNR: 0.0391978
+global_RI_GNR: 0.0381345
+global_RI_DICE: 0.0381201
+
+========== Per-Channel Summary ==========
+   chA   chB     avgCorr        avgA        avgB   avgRI_MNR   avgRI_GNR  avgRI_DICE
+     0     1     3.02392     77.1452     81.5071   0.0364178   0.0302053   0.0294555
+
+Correlation status saved!
+
+-------
+
+median tracking time: 0.0310122
+mean tracking time: 0.0343843
+
+Saving camera trajectory to result09.txt ...
+
+trajectory saved!
+
+========== Performance Summary (ms) ==========
+name                                mean      median        rmse         min         max       count
+Tracking                           5.454       2.963       7.181       1.104      61.820        4539
+Correlation                        0.085       0.073       0.040       0.030       0.560        4181
+Total Init                       260.547     260.547       0.000     260.547     260.547           1
+Pipeline                          34.380      31.008      10.007      26.609     263.317        4541
+SIFT Extract                      27.865      26.624       3.519      24.143      59.736        4541
+ORB Extract                        8.337       8.235       1.115       5.616      15.979        4541
