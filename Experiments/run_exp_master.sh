@@ -279,10 +279,10 @@ read_config_lines() {
 #         'name=kt00_akz_kaz  seq=~/dataset/kitti/00 yaml=../Install/etc/orbslam2/Monocular/KITTI00-02.yaml runs=20 exe=../Install/bin mode=kitti features=[AKAZE,KAZE]'
 #         'name=kt00_akz_sft  seq=~/dataset/kitti/00 yaml=../Install/etc/orbslam2/Monocular/KITTI00-02.yaml runs=20 exe=../Install/bin mode=kitti features=[AKAZE,SIFT]'
 #         'name=kt00_akz_spp  seq=~/dataset/kitti/00 yaml=../Install/etc/orbslam2/Monocular/KITTI00-02.yaml runs=20 exe=../Install/bin mode=kitti features=[AKAZE,SuperPoint]'
-#         'name=kt00_bsk_kaz  seq=~/dataset/kitti/00 yaml=../Install/etc/orbslam2/Monocular/KITTI00-02.yaml runs=20 exe=../Install/bin mode=kitti features=[BRISK,KAZE]'
-#         'name=kt00_bsk_sft  seq=~/dataset/kitti/00 yaml=../Install/etc/orbslam2/Monocular/KITTI00-02.yaml runs=20 exe=../Install/bin mode=kitti features=[BRISK,SIFT]'
+         'name=kt00_bsk_kaz  seq=~/dataset/kitti/00 yaml=../Install/etc/orbslam2/Monocular/KITTI00-02.yaml runs=20 exe=../Install/bin mode=kitti features=[BRISK,KAZE]'
+         'name=kt00_bsk_sft  seq=~/dataset/kitti/00 yaml=../Install/etc/orbslam2/Monocular/KITTI00-02.yaml runs=20 exe=../Install/bin mode=kitti features=[BRISK,SIFT]'
 #         'name=kt00_bsk_spp  seq=~/dataset/kitti/00 yaml=../Install/etc/orbslam2/Monocular/KITTI00-02.yaml runs=20 exe=../Install/bin mode=kitti features=[BRISK,SuperPoint]'
-#         'name=kt00_kaz_sft  seq=~/dataset/kitti/00 yaml=../Install/etc/orbslam2/Monocular/KITTI00-02.yaml runs=20 exe=../Install/bin mode=kitti features=[KAZE,SIFT]'
+         'name=kt00_kaz_sft  seq=~/dataset/kitti/00 yaml=../Install/etc/orbslam2/Monocular/KITTI00-02.yaml runs=20 exe=../Install/bin mode=kitti features=[KAZE,SIFT]'
 #         'name=kt00_kaz_spp  seq=~/dataset/kitti/00 yaml=../Install/etc/orbslam2/Monocular/KITTI00-02.yaml runs=20 exe=../Install/bin mode=kitti features=[KAZE,SuperPoint]'
 #         'name=kt00_sft_spp  seq=~/dataset/kitti/00 yaml=../Install/etc/orbslam2/Monocular/KITTI00-02.yaml runs=20 exe=../Install/bin mode=kitti features=[SIFT,SuperPoint]'
 

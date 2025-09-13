@@ -1,0 +1,33 @@
+\begin{table}[hbp]
+\centering
+\caption{APE/RPE(trans/rot) on fr3 sequence of 20 runs for all feature combinations}
+\footnotesize
+\label{tab:fr3_ape_rpe}\
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{lcccccc}
+\toprule
+\textbf{Extractor(s)}
+& \multicolumn{2}{c}{\textbf{APE (cm)}}
+& \multicolumn{2}{c}{\textbf{RPEt (cm/f)}}
+& \multicolumn{2}{c}{\textbf{RPEr (deg/f)}} \\
+\cmidrule(lr){2-3} \cmidrule(lr){4-5} \cmidrule(lr){6-7}
+& Mean $\downarrow$ & RMSE $\downarrow$
+& Mean $\downarrow$ & RMSE $\downarrow$
+& Mean $\downarrow$ & RMSE $\downarrow$ \\
+\midrule
+AKZ & 10.10 $\pm$ 16.76 & 11.70 $\pm$ 19.74 & 3.39 $\pm$ 2.32 & 4.78 $\pm$ 4.16 & 0.848 $\pm$ 0.242 & 1.096 $\pm$ 0.484 \\
+KAZ & 37.62 $\pm$ 22.66 & 43.06 $\pm$ 25.45 & 2.98 $\pm$ 0.76 & 6.02 $\pm$ 2.64 & 0.629 $\pm$ 0.106 & 0.837 $\pm$ 0.188 \\
+AKZ + BSK & 42.87 $\pm$ 23.07 & 47.93 $\pm$ 25.41 & 3.66 $\pm$ 1.00 & 6.32 $\pm$ 3.15 & 0.696 $\pm$ 0.086 & 0.988 $\pm$ 0.280 \\
+AKZ + KAZ & 21.43 $\pm$ 23.69 & 25.51 $\pm$ 27.31 & 2.74 $\pm$ 0.47 & 5.37 $\pm$ 3.23 & 0.679 $\pm$ 0.107 & 1.016 $\pm$ 0.549 \\
+AKZ + SFT & 25.95 $\pm$ 26.96 & 30.11 $\pm$ 29.09 & 3.59 $\pm$ 1.38 & 5.92 $\pm$ 2.64 & 0.787 $\pm$ 0.077 & 1.103 $\pm$ 0.193 \\
+AKZ + SPP & 1.99 $\pm$ 0.20 & 2.43 $\pm$ 0.46 & 2.46 $\pm$ 0.06 & 2.90 $\pm$ 0.19 & 0.741 $\pm$ 0.018 & 0.879 $\pm$ 0.060 \\
+BSK + KAZ & 41.42 $\pm$ 23.72 & 48.36 $\pm$ 27.17 & 2.58 $\pm$ 0.46 & 4.72 $\pm$ 1.42 & 0.551 $\pm$ 0.114 & 0.688 $\pm$ 0.148 \\
+BSK + SFT & 59.83 $\pm$ 8.03 & 67.09 $\pm$ 9.43 & 4.67 $\pm$ 1.45 & 12.34 $\pm$ 6.13 & 0.628 $\pm$ 0.063 & 0.745 $\pm$ 0.120 \\
+BSK + SPP & \textbf{1.85 $\pm$ 0.10} & \textbf{2.13 $\pm$ 0.12} & \textbf{1.94 $\pm$ 0.13} & \textbf{2.19 $\pm$ 0.17} & 0.573 $\pm$ 0.044 & \textbf{0.639 $\pm$ 0.042} \\
+KAZ + SFT & 49.46 $\pm$ 17.49 & 57.56 $\pm$ 20.10 & 2.62 $\pm$ 0.24 & 5.07 $\pm$ 1.21 & \textbf{0.536 $\pm$ 0.076} & 0.670 $\pm$ 0.094 \\
+KAZ + SPP & 41.33 $\pm$ 26.37 & 46.38 $\pm$ 28.81 & 3.83 $\pm$ 1.35 & 8.86 $\pm$ 3.73 & 0.648 $\pm$ 0.062 & 1.024 $\pm$ 0.251 \\
+ORB + AKZ & 20.90 $\pm$ 25.69 & 24.10 $\pm$ 29.04 & 3.97 $\pm$ 2.13 & 5.67 $\pm$ 3.57 & 0.821 $\pm$ 0.120 & 1.053 $\pm$ 0.226 \\
+ORB + KAZ & 24.54 $\pm$ 22.45 & 29.58 $\pm$ 26.86 & 3.08 $\pm$ 1.08 & 6.07 $\pm$ 3.65 & 0.671 $\pm$ 0.100 & 0.897 $\pm$ 0.189 \\
+\bottomrule
+\end{tabular}
+\end{table}
