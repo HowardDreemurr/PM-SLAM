@@ -37,11 +37,12 @@ POSES_DIR="${ROOT}/Poses"
 #GT_PATHS=(${POSES_DIR}/kitti_gt/01_tum.txt ${POSES_DIR}/kitti_gt/04_tum.txt ${POSES_DIR}/kitti_gt/07_tum.txt)
 #DATASETS=(mh01 mh03 mh05)
 #GT_PATHS=(~/dataset/euroc/MH_01/state_groundtruth_estimate0/data.csv ~/dataset/euroc/MH_03/state_groundtruth_estimate0/data.csv ~/dataset/euroc/MH_05/state_groundtruth_estimate0/data.csv)
-DATASETS=(oxf)
-GT_PATHS=(${POSES_DIR}/oxf_gt_ip.txt)
-DATASETS=(fr1 fr2 fr3 kt01 kt04 kt07 mh01 mh03 mh05)
-GT_PATHS=(~/dataset/tum/fr1/groundtruth.txt ~/dataset/tum/fr2/groundtruth.txt ~/dataset/tum/fr3/groundtruth.txt ${POSES_DIR}/kitti_gt/01_tum.txt ${POSES_DIR}/kitti_gt/04_tum.txt ${POSES_DIR}/kitti_gt/07_tum.txt ~/dataset/euroc/MH_01/state_groundtruth_estimate0/data.csv ~/dataset/euroc/MH_03/state_groundtruth_estimate0/data.csv ~/dataset/euroc/MH_05/state_groundtruth_estimate0/data.csv)
-
+#DATASETS=(oxf)
+#GT_PATHS=(${POSES_DIR}/oxf_gt_ip.txt)
+#DATASETS=(fr1 fr2 fr3 kt01 kt04 kt07 mh01 mh03 mh05)
+#GT_PATHS=(~/dataset/tum/fr1/groundtruth.txt ~/dataset/tum/fr2/groundtruth.txt ~/dataset/tum/fr3/groundtruth.txt ${POSES_DIR}/kitti_gt/01_tum.txt ${POSES_DIR}/kitti_gt/04_tum.txt ${POSES_DIR}/kitti_gt/07_tum.txt ~/dataset/euroc/MH_01/state_groundtruth_estimate0/data.csv ~/dataset/euroc/MH_03/state_groundtruth_estimate0/data.csv ~/dataset/euroc/MH_05/state_groundtruth_estimate0/data.csv)
+DATASETS=(kt00)
+GT_PATHS=(${POSES_DIR}/kitti_gt/00_tum.txt)
 # --------------- helpers ---------------
 
 maybe_activate_venv() {
