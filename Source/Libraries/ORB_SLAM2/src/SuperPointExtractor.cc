@@ -333,9 +333,11 @@ void SuperPointExtractor::operator()(cv::InputArray image,
     }
 
     // Current layer's descriptors (order corresponds to keypointsL)
-    cv::Mat descL;
-    detector.computeDescriptors(keypointsL, descL);
-    vDesc.emplace_back(std::move(descL));
+    if (!keypointsL.empty()) {
+      cv::Mat descL;
+      detector.computeDescriptors(keypointsL, descL);
+      if (!descL.empty()) vDesc.emplace_back(std::move(descL));
+    }
   }
 
   // Merge descriptors of all layers

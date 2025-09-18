@@ -68,6 +68,7 @@ endif()
 target_include_directories(${PROJECT_NAME} PUBLIC
   /opt/libtorch/include
   /opt/libtorch/include/torch/csrc/api/include
+  realsense2::realsense2
   $<BUILD_INTERFACE:${THIRD_PARTY_BUILT_LIBRARY_PREFIX}/include/fbow>
   $<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}/include>
   $<INSTALL_INTERFACE:include>
